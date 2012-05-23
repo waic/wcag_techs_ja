@@ -1,0 +1,110 @@
+すっかり遅くなってしまいましたが、Techniques日本語版のXML化についてご連
+絡します。
+
+まず、添付のWCAG-TECHS_20101208.zip が、日本語訳のHTMLファイルです。
+
+また、 sources.zip に、英語版の (たぶん日本語版の元になったのよりちょっ
+と古い) XMLが入っていますが、このファイルは本来テクノロジーごとに別れ
+ているべきファイルを一つにまとめた物です。ただ、以下で説明する
+technique 要素の使われ方などはこれで充分に分かると思います。
+
+以下、メモ的に作業が必要な内容をまとめました。
+
+1. XMLのソースは、以下の9ファイルからなります。 HTMLでは1テクニックごと
+  に別れているファイルを、これらのファイルにまとめる必要があります。
+
+  ARIA-tech-src.xml (ARIA)
+  SMIL-tech-src.xml (SM)
+  css-tech.xml (C)
+  failure-tech-src.xml (F)
+  general-tech-src.xml (G)
+  html-tech-src.xml (H)
+  plain-text-tech-src.xml (T)
+  script-tech-src.xml (SCR)
+  server-tech-src.xml (SVR)
+
+2. ファイルの中での順序は、ID (Hnnなど) 順です。
+
+3. 各ファイルについて、テクニック一つを一つのtechnique要素に入れるとい
+   う作業をお願いできると助かります。だいたい以下の通りの形式です。
+
+<technique id="id"> (HTMLファイルの名前の .htmlを省略したものがIDです)
+  <short-name>実装方法のタイトル</short-name>
+  <applicability>
+    <p>「適用（対象）」の内容</p>
+  </applicability>
+  <applies-to>
+    <!-- 達成基準のリスト。 IDは、WCAGの達成基準のIDで、HTMLの中の達成基
+準へのリンクで使われている、Overview.htmlの中のID部分です。 -->
+    <success-criterion idref="ID" />
+    <success-criterion idref="ID" />
+    ....
+    ....
+  </applies-to>
+  <ua-issues>
+    <!-- 「ユーザーエージェント及び支援技術によるサポート」の内容。だい
+たい、1パラグラフが一つの ua-issue 要素になっていることが多い。 -->
+    <ua-issue name="" version=""> <!-- name, versionは空の場合が多いです
+が、一部記述がある場合もあります。おそらくオリジナルのXMLを見ないと確認
+できないと思います。 -->
+      <p>...</p>
+    </ua-issue>
+    ....
+  </ua-issues>
+
+  <description>
+    <p>「解説」の内容。</p>
+  </description>
+
+  <examples> <!-- 事例一つにつき一つの eg-group 要素 -->
+    <eg-group>
+      <description><p>事例1の説明</p></description>
+      <code role="html401"> <!-- role属性には、html401とかxhtml10とかが
+ありますが、実際にはコード例で示されているDTDと一致していないようなの
+で、とりあえず適当で良いです。 (後でオリジナルを観ながら合わせる作業を気
+が向いたらやります。) -->
+事例1のコード例 (cdataセクションで書いているものもあれば、 &lt;とかを
+使っているものもありばらばらです。)
+      </code>
+    </eg-group>
+    <eg-group>....</eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      「参考リソース」の箇条書き部分 (ulist, item要素で記述)
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="ID" /> <!-- IDは H1 など -->
+    ....
+  </related-techniques>
+
+  <tests>
+    <procedure>
+      「チェックポイント」の内容。
+    </procedure>
+    <expected-results>
+      「判定基準」の内容。
+    </expected-results>
+  </tests>
+</technique>
+
+
+解説文などのHTMLとの違いは、私が気づいた範囲だと以下のような感じです。
+
+ul -> ulist
+ol -> olist
+li -> item
+a href -> loc href
+
+文中の属性名は att 要素に入れる。
+文中の要素名は el 要素に入れる。
+
+
+----
+
+日本語HTMLファイルには、テクニックごとに翻訳担当者が記述されています。
+これについては後でXSLTでどう処理するか考えますので、適当な要素を作って
+(translationcreditとかで良いかと思います) 、technique 要素の終了タグの
+直前に入れておいてください。HTMLはそのままでかまいません。
+
