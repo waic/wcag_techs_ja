@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>SCR30: スクリプトを用いて、リンクのラベルを変更する</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+		<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+		<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+		</div>
+<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="SCR29.html"><strong>前：</strong>実装方法 SCR29</a></li>
+			<li><a href="SCR31.html"><strong>次：</strong>実装方法 SCR31</a></li>
+		</ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：:</p>
+		<ul id="navbar">
+				<li><a href="#SCR30-applicability">適用（対象）</a></li>
+				<li><a href="#SCR30-description">解説</a></li>
+				<li><a href="#SCR30-examples">事例</a></li>
+				<li><a href="#SCR30-related-techs">関連する実装方法</a></li>
+				<li><a href="#SCR30-tests">検証</a></li>
+		</ul>
+</div>
+<div class="skiptarget"><a id="maincontent">-</a></div>
+<h1><a name="SCR30" id="SCR30"> </a>SCR30: スクリプトを用いて、リンクのラベルを変更する</h1>
+<div class="applicability">
+		<h2 id="SCR30-applicability">適用（対象）</h2>
+		<div class="textbody">
+				<p>HTML及びXHTMLで使用されるクライアントサイドスクリプト</p>
+		</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+		<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-refs">達成基準 2.4.4 (文脈におけるリンクの目的)</a>
+				<ul>
+						<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-refs"> How to Meet 2.4.4 (Link Purpose (In Context))：英語 </a></li>
+						<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html">達成基準 2.4.4 (文脈におけるリンクの目的) を理解する </a></li>
+				</ul>
+		</li>
+		<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-link">達成基準 2.4.9 (リンクの目的)</a>
+				<ul>
+						<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-link"> How to Meet 2.4.9 (Link Purpose (Link Only))：英語 </a></li>
+						<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-link.html">達成基準 2.4.9 (リンクの目的) を理解する </a></li>
+				</ul>
+		</li>
+</ul>
+<h2 id="SCR30-description">解説</h2>
+<div class="textbody">
+		<p>この実装方法の目的は、リンクが文脈以外でも理解可能になるように、追加情報をリンクテキストに加えることを利用者が選択できるようにすることである。</p>
+		<p>一部の利用者は、リンクの文脈を参照する必要がないように、リンクがすべてを含んでいることを好む。別の利用者は、それぞれのリンクに文脈に関する情報が含まれていると、反復されてサイトの使い勝手が低下すると感じている。支援技術の利用者の間では、どちらが好ましいかに関して、ワーキンググループへのフィードバックは分かれている。この実装方法は、利用者自身にとって良い方法を選ぶことを可能にする。</p>
+		<p>どのようなリンクの目的を理解する場合でも追加の文脈が必要とならないようにするため、そのページのリンクのリンクテキストを展開するページの先頭近くにリンクが提供される。展開されるリンクの目的がそのリンクテキストから、常に直接理解可能でなければならない。</p>
+		<p>この実装方法では、現在表示されているページのリンクだけを展開する。利用者がそのサイトに対して1度だけ設定を行えば良いようにするために、設定情報をCookie又はサーバーサイドの利用者プロファイルに保存することも可能であり、場合によってはそれが望ましい。</p>
+</div>
+<h2 class="small-head" id="SCR30-examples">事例</h2>
+<h3 class="small-head" id="SCR30-ex1">事例 1</h3>
+<div class="example">
+		<div class="textbody">
+				<p>この例では、JavaScript を用いて直接リンクのテキストに文脈上の情報を追加する。linkクラスはどのテキストを追加するかを決定する。「リンクを展開する」リンクが選択されたとき、ページ内のそれぞれのリンクにテキストを追加すべきかがテストされる。</p>
+		</div>
+
+		<div class="code">
+				<p><strong>コード例：</strong></p>
+				<pre><code>
+...
+&lt;script&gt;
+ var linkContext = {
+   "hist":" 版　Webの歴史",
+   "cook":" 版　Cooking for Nerds"
+ };
+
+ function doExpand() {
+   var links = document.links;
+   var link;
+
+   for (link in links) {
+     var cn = links[link].className;
+     if (linkContext[cn]) {
+       links[link].appendChild(document.createTextNode(linkContext[cn]));
+     }
+   }
+ }
+&lt;/script&gt;
+
+&lt;h1&gt;本のダウンロード&lt;/h1&gt;
+&lt;p&gt;&lt;a href="#" onclick="doExpand();"&gt;リンクを展開する&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Webの歴史：
+&lt;a href="history.docx" class="hist"&gt;Word&lt;/a&gt;, 
+&lt;a href="history.pdf" class="hist"&gt;PDF&lt;/a&gt;, 
+&lt;a href="history.html" class="hist"&gt;HTML&lt;/a&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Cooking for Nerds：
+&lt;a href="history.docx" class="cook"&gt;Word&lt;/a&gt;, 
+&lt;a href="history.pdf" class="cook"&gt;PDF&lt;/a&gt;, 
+&lt;a href="history.html" class="cook"&gt;HTML&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+...
+</code></pre>
+		</div>
+</div>
+<h2 id="SCR30-related-techs">関連する実装方法</h2>
+<div class="textbody">
+		<ul>
+				<li><a href="G91.html">G91： リンクの目的を説明したリンクのラベルを提供する</a></li>
+				<li><a href="H30.html">H30： a 要素のリンクの目的を説明するテキストリンクを提供する</a></li>
+				<li><a href="H33.html">H33： title属性を用いて、リンクテキストの文言を補足する</a></li>
+				<li><a href="C7.html">C7： CSSを用いて、リンクテキストの一部を非表示にする </a></li>
+		</ul>
+</div>
+<h2 id="SCR30-tests">検証</h2>
+<div class="textbody">
+		<h3 class="small-head" id="SCR30-procedure">チェックポイント</h3>
+		<ol class="enumar">
+				<li>
+						<p>ページの先頭近くに、リンクを展開するリンクがある。</p>
+				</li>
+				<li>
+						<p>1で確認したリンクがリンクテキストだけで見つけられる。</p>
+				</li>
+				<li>
+						<p>リンクテキストだけで識別できないリンクをページ中から探す。</p>
+				</li>
+				<li>
+						<p>1.のコントロールを有効にする</p>
+				</li>
+				<li>
+						<p>3.で見つけたリンクの目的が、リンクテキストだけで確認できる。</p>
+				</li>
+		</ol>
+		<h3 class="small-head" id="SCR30-results">判定基準</h3>
+		<ul>
+				<li>
+						<p>1., 2.及び5.を満たしている。</p>
+				</li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="SCR29.html"><strong>前：</strong>実装方法 SCR29</a></li>
+			<li><a href="SCR31.html"><strong>次：</strong>実装方法 SCR31</a></li>
+		</ul>
+<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR30.html">SCR30: Using scripts to change the link text（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</li>
+			</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>F89: 達成基準 2.4.4、達成基準 2.4.9、及び 達成基準 4.1.2 の不適合事例 － 画像だけがリンクのコンテンツである際に、img要素のalt属性値が空になっている</title>
+	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css">
+	<link rel="stylesheet" type="text/css" href="css/additional.css">
+	<link rel="stylesheet" type="text/css" href="css/slicenav.css">
+	<link rel="stylesheet" type="text/css" href="css/waic-wg2.css">
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48"></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="F88.html"><strong>前：</strong>不適合事例 F88</a></li>
+	<li><a href="appendixA.html"><strong>次：</strong>附録 A</a></li>
+</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：<br /></p>
+	<ul id="navbar">
+		<li><a href="#F89-applicability">適用（対象）</a></li>
+		<li><a href="#F89-description">解説</a></li>
+		<li><a href="#F89-examples">事例</a></li>
+		<li><a href="#F89-resources">参考リソース</a></li>
+		<li><a href="#F89-related-techs">関連する実装方法</a></li>
+		<li><a href="#F89-tests">検証</a></li>
+	</ul>
+</div>
+
+<div class="skiptarget">
+	<a id="maincontent">-</a>
+</div>
+<h1><a name="F89" id="F89"> </a>F89: 達成基準 2.4.4、達成基準 2.4.9、及び 達成基準 4.1.2 の不適合事例 － 画像だけがリンクのコンテンツである際に、img要素のalt属性値が空になっている</h1>
+
+<div class="applicability">
+	<h2 id="F89-applicability">適用（対象）</h2>
+	<div class="textbody">
+		<p>リンクを提供するコンテンツ</p>
+	</div>
+</div>
+
+<p class="referenced">これは、次の達成基準に関連する不適合事例である：</p>
+<ul>
+	<li>
+		<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-refs">達成基準 2.4.4 (文脈におけるリンクの目的)</a>
+		<ul>
+			<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-refs">How to Meet 2.4.4 (Link Purpose (In Context))：英語</a></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html">達成基準 2.4.4 (文脈におけるリンクの目的) を理解する</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-link">達成基準 2.4.9 (リンクの目的)</a>
+		<ul>
+			<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-link">How to Meet 2.4.9 (Link Purpose (Link Only))：英語</a></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-link.html">達成基準 2.4.9 (リンクの目的) を理解する</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-rsv">達成基準 4.1.2 (プログラムが解釈可能な識別名・役割及び設定可能な値)</a>
+		<ul>
+			<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#ensure-compat-rsv">How to Meet 4.1.2 (Name, Role, Value)：英語</a></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">達成基準 4.1.2 (プログラムが解釈可能な識別名・役割及び設定可能な値) を理解する</a></li>
+		</ul>
+	</li>
+</ul>
+
+<div class="ua-issues">
+	<h2 class="small-head" id="ua9.74.1">ユーザーエージェント及び支援技術のサポートに関するメモ</h2>
+	<div class="ua-issue">
+		<p>代替テキストがないリンクに対しては、支援技術によってさまざまな修復方法が用いられる。例えばHTMLの場合、支援技術は、<code>a</code>要素の <code>title</code> 属性、又は <code>img</code> 要素の <code>src</code> 属性の値を代替テキストの代わりとして用いることがある。</p>
+	</div>
+</div>
+
+<h2 id="F89-description">解説</h2>
+<div class="textbody">
+	<p>この文書は、画像のような非テキストコンテンツのみで提供されているリンクに対して、その非テキストコンテンツが支援技術によって無視される方法で実装されている不適合事例について述べている。
+リンクはインタラクティブなコントロールであるため、利用者はリンクにタブ移動し、リンクを起動することができる。識別名として用いられるテキストコンテンツがリンク内にない場合、支援技術はリンクに使用する何らかの識別名を見つけるために様々な修復方法を用いる。</p>
+	<p>ページ上でテキスト及び画像の両方が、同じリンク先にリンクするために用いられることがよくある。 これによって、2つの隣接したリンクが同じ識別名を持つときに音声読み上げでは同じ読み上げが繰り返されるため、コンテンツ制作者は画像に対して空のalt属性を提供することによりその冗長性を排除しようとする。困ったことに、この対応が往々にして問題を悪化させることがある。「<a href="H2.html">H2: 隣り合った画像とテキストリンクを同じリンクの中に入れる</a>」(HTML)は、別々のリンク及び望ましくない冗長性を減少させるのに推奨される方法である。</p>
+</div>
+
+<h2 class="small-head" id="F89-examples">事例</h2>
+<div class="failure">
+	<h3 class="small-head" id="F89-failex1">
+	不適合事例 1: HTML検索結果</h3>
+	<div class="example">
+		<div class="textbody">
+			<p>検索サイトは、試合のサイトへのテキストリンク及びイメージリンクの両方を含んだ検索結果を返す。 検索結果には既にテキストリンクがあるため、画像の <code>alt</code> 属性は空になっている。 しかし、スクリーンリーダーは画像リンクを無視しないで、リンクの目的が説明されていそうなテキストを見つけるための推測に基づいた修復を試みる。 例えば、スクリーンリーダーは「フットボール ドット ジフ フットボール スコアカード」と読み上げるかもしれない。</p>
+		</div>
+		<div class="code">
+			<p><strong>コード例:</strong></p>
+			<pre><code>
+ &lt;a href="scores.html"&gt;
+   &lt;img src="football.gif" alt="" /&gt;
+ &lt;/a&gt;
+ &lt;a href="scores.html"&gt;
+   フットボールのスコアボード
+ &lt;/a&gt;
+}
+			</code></pre>
+		</div>
+
+	</div>
+</div>
+
+<h2 id="F89-resources">参考リソース</h2>
+<div class="textbody">
+	<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+	<ul>
+		<li>
+			<p><a href="http://www.webaim.org/techniques/alttext/">Appropriate Use of Alternative Text, Functional Images</a></p>
+		</li>
+		<li>
+			<p><a href="http://jimthatcher.com/webcourse2.htm">Text Alternatives for Images (alt-text)</a></p>
+		</li>
+	</ul>
+</div>
+
+<h2 id="F89-related-techs">関連する実装方法</h2>
+<div class="textbody">
+	<ul>
+		<li><a href="H2.html">H2： 隣り合った画像とテキストリンクを同じリンクの中に入れる</a></li>
+		<li><a href="H30.html">H30： a 要素のリンクの目的を説明するテキストリンクを提供する</a></li>
+	</ul>
+</div>
+
+<h2 id="F89-tests">検証</h2>
+<div class="textbody">
+	<h3 class="small-head" id="F89-procedure">チェックポイント</h3>
+	<ol class="enumar">
+		<li>
+			<p>リンクが非テキストコンテンツのみを提供している。</p>
+		</li>
+		<li>
+			<p>非テキストコンテンツが支援技術により無視される方法で実装されている。</p>
+		</li>
+	</ol>
+	<h3 class="small-head" id="F89-results">判定基準</h3>
+	<ul>
+		<li>
+			<p>全てを満たしているならば、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+		</li>
+	</ul>
+</div>
+
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+	<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="F88.html"><strong>前：</strong>不適合事例 F88</a></li>
+	<li><a href="appendixA.html"><strong>次：</strong>附録 A</a></li>
+</ul>
+<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+	<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+		<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F89.html">F89: Failure of 2.4.4, 2.4.9 and 4.1.2 due to using null alt on an image where the image is the only content in a link（英語）</a></li>
+		<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+		<li>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</li>
+	</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+<title>G54: 映像ストリームに手話通訳を含める </title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div><div id="skipnav"><p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p></div><a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G53.html"><strong>前: </strong> 実装方法 G53</a></li>
+	<li><a href="G55.html"><strong>次: </strong> 実装方法 G55</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：</p><ul id="navbar">
+<li><a href="#G54-applicability">適用（対象）</a></li>
+<li><a href="#G54-description">解説</a></li>
+<li><a href="#G54-examples">事例</a></li>
+<li><a href="#G54-resources">参考リソース</a></li>
+<li><a href="#G54-related-techs">関連する実装方法</a></li>
+<li><a href="#G54-tests">検証</a></li>
+</ul>
+</div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G54" id="G54"> </a>G54: 映像ストリームに手話通訳を含める </h1>
+        
+            <div class="applicability"><h2 id="G54-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>同期したメディア情報を提示する全てのウェブコンテンツ技術
+                    </p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-sign">達成基準 1.2.6（収録済の音声コンテンツの手話通訳）</a>
+<ul>
+	<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#media-equiv-sign">How to Meet 1.2.6 (Sign Language (Prerecorded))：英語</a></li>
+    <li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/media-equiv-sign.html">達成基準 1.2.6（収録済の音声コンテンツの手話通訳）を理解する</a></li>
+    </ul></li></ul>
+        
+            <h2 id="G54-description">解説</h2><div class="textbody">
+          
+               <p>この実装方法の目的は、耳の聞こえない又は、テキストを速く読むことができない利用者が同期したメディア情報にアクセスできるようにすることである。 
+                    </p>
+          
+               <p>主に手話でコミュニケーションをする利用者にとって、キャプションで提示されている速度ではテキストを読んで理解するのが難しかったり、場合によっては不可能であったりする。そういった利用者に対しては、聴覚情報に手話を提供することが有効である。
+                    </p>
+          
+               <p>キャプションと手話とを両立できる一般的な方法は、単純に映像ストリームに手話通訳の映像を含めることである。ただし、この方法には、映像全体を拡大する以外には容易に拡大できない低解像度の映像になってしまうという欠点がある。
+                    </p>
+          
+               <div class="note"><p class="prefix"><em>注記 1：</em>映像ストリームが小さすぎる場合は、手話通訳が見にくくなる。手話通訳を含む映像ストリームを制作する場合は、映像ストリームをアクセシビリティ・サポーテッドなウェブコンテンツ技術でフルスクリーンで再生するメカニズムがあることを確認する。そうでない場合は、映像の中の手話通訳の部分が、映像ストリームがフルスクリーンになった際のサイズまで調節可能にする。</p>
+               <p class="prefix"><em>注記 2：</em>一般的に、手話は単に墨字を符号化したものではないため、コンテンツ制作者は複数種類あるうちのどの手話を用いるかを決めなければならない。通常は主な利用者が使用している手話を用いる。さまざまな利用者を想定する場合は、複数の手話を用いる。複数の手話のための推奨実装方法を参照のこと【訳注：まだ文書化されていない。】。</p></div>
+        
+            </div>
+        
+            <h2 class="small-head" id="G54-examples">事例</h2>
+          	<h3 class="small-head" id="G54-ex1">事例 1：</h3>
+               <ul><li>
+              
+                     <p>あるテレビ局が、オンラインニュース映像の角の方で手話通訳を提供している。</p>
+            
+                  </li></ul>
+        
+            
+        
+            <h2 id="G54-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>手話を作成するための指針</p>
+                
+                        <ul><li>
+                    
+                              <p><a href="http://www.sign-lang.uni-hamburg.de/SigningBooks/deliver/d31/deliv_31_part3-2.html#3.2.2.6">"Sign Language presentation"</a>では、手話通訳者を撮影する際の留意点の概要を知ることができる。元の素材が書き言葉の場合と話し言葉の場合の両方についての議論も含まれている。</p>
+                  
+                           </li><li>
+                    
+                              <p>撮影のテクニックについては <a href="http://www.sign-lang.uni-hamburg.de/SigningBooks/SBRC/Grid/d71/guide12.htm">chapter 12,“Filming the Signer(s)"</a>で考察されている。</p>
+                  
+                           </li><li>
+                    
+                              <p>オリジナルの同期したメディアコンテンツに関連して手話通訳を表示させる方法についての有益な情報は<a href="http://www.sign-lang.uni-hamburg.de/SigningBooks/SBRC/Grid/d71/guide13.htm">Chapter 13, "Editing"</a>で提供されている。</a>
+                    
+                              </p>
+                    
+                              <div class="note"><p class="prefix"><em>注記：</em>これらの実装方法はウェブベースのプレゼンテーションにも適用される必要がある。</p></div>
+                  
+                           </li></ul>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="G54-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+            
+               <li><a href="G81.html">G81： プレーヤーによって別のビューポートに表示する、又は画像上に重ねることのできる、手話通訳の同期した映像を提供する</a></li>
+            
+               <li><a href="SM13.html">SM13： SMIL 1.0で、同期した映像ストリームを通じて手話通訳を提供する</a></li>
+            
+               <li><a href="SM14.html">SM14： SMIL 2.0で、同期した映像ストリームを通じて手話通訳を提供する</a></li>
+        
+            </ul></div>
+        
+            <h2 id="G54-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G54-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>耳が聞こえて、使用されている手話に精通した人に映像を見せる。
+                                </p>
+              
+                     </li><li>
+                
+                        <p>手話通訳が画面上に表示されている。
+                                </p>
+              
+                     </li><li>
+                
+                        <p>会話と重要な音が、画面に映っている手話通訳によって伝達されている。
+                                </p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G54-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>2.及び 3.を満たしている。
+                                </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+         <!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G53.html"><strong>前: </strong> 実装方法 G53</a></li>
+	<li><a href="G55.html"><strong>次: </strong> 実装方法 G55</a></li>
+	</ul>
+				
+				<div class="footer">
+                		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G54.html">G54: Including a sign language interpreter in the video stream （英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+	</ul>
+</div>
+</body></html>

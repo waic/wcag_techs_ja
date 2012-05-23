@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G99: 消去した情報を元に戻せるようにする</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+	<li><strong><a href="Overview.html">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G98.html"><strong>前: </strong> 実装方法 G98</a></li>
+	<li><a href="G100.html"><strong>次: </strong> 実装方法 G100</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ:</p><ul id="navbar">
+<li><a href="#G99-applicability">適用（対象）</a></li>
+<li><a href="#G99-description">解説</a></li>
+<li><a href="#G99-examples">事例</a></li>
+<li><a href="#G99-tests">検証</a></li></ul></div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a>
+</div>
+ <h1><a name="G99" id="G99"> </a>G99: 消去した情報を元に戻せるようにする</h1>
+        
+            <div class="applicability"><h2 id="G99-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>利用者の操作によって削除されるコンテンツ</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p><ul>
+            <li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#minimize-error-reversible">達成基準 3.3.4 (法的義務・金銭的取引・データ変更・回答送信のエラー回避)</a><ul>
+            <li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#minimize-error-reversible">How to Meet 3.3.4 (Error Prevention (Legal, Financial, Data))：英語</a></li>
+            <li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/minimize-error-reversible.html">達成基準 3.3.4 (法的義務・金銭的取引・データ変更・回答送信のエラー回避) を理解する</a></li></ul></li>
+            <li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#minimize-error-reversible-all">達成基準 3.3.6 (エラー回避に関する例外なし)</a><ul>
+            <li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#minimize-error-reversible-all">How to Meet 3.3.6 (Error Prevention (All))：英語</a></li>
+            <li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html">達成基準 3.3.6 (エラー回避に関する例外なし) を理解する</a></li></ul></li></ul>
+        
+            <h2 id="G99-description">解説</h2><div class="textbody">
+          
+               <p>この実装方法の目的は、ウェブアプリケーションで情報を削除できる場合、利用者によって誤って削除された情報を復元する手段をサーバーが提供することである。一つの方法として、削除をするものにマークを付けるだけにする、又は（ゴミ箱のように）情報を保持する領域に移動させるなど、データの削除に時間差を設けて、実際に削除するまでにしばらくの間待機することが考えられる。この間、利用者はデータを復元したり、一時的な保持領域から取り出したりすることができる。他には、wiki及びソースコントロールアプリケーションで編集履歴が保持されているように、利用者が必要なときにデータを復元できるように全ての削除操作を記録しておく方法がある。トランザクションの修正が必要となる情報は保存し、利用者が取り出し可能なようにしておくべきである。
+            
+          </p>
+        
+            </div>
+        
+            <h2 class="small-head" id="G99-examples">事例</h2>
+          
+               <ul><li>
+              
+                     <p>ウェブアプリケーションで、利用者がフォルダを作成してデータをその中に保存しておくことができる。フォルダとデータのアイテムには操作をその項目に適用するためのチェックボックスと移動と削除の二つの操作のためのボタンがついている。利用者が削除ボタンを間違って選択した場合は、多量のデータが失われてしまうかもしれない。そのアプリケーションは、利用者にデータが削除されたことをすぐに表示するが、実際の削除は一週間後に設定されている。一週間の間、利用者は「削除されたアイテム」フォルダを開き、実際に削除されるのを待っているフォルダやデータの復元を要求することができる。</p>
+            
+                  </li></ul>
+        
+            
+        
+            <h2 id="G99-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G99-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>コンテンツを削除する機能を特定する。</p>
+              
+                     </li><li>
+                
+                        <p>コンテンツを削除して、復元してみる。</p>
+              
+                     </li><li>
+                
+                        <p>削除された情報が復元されている。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G99-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>3.を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+         <!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G98.html"><strong>前: </strong> 実装方法 G98</a></li>
+	<li><a href="G100.html"><strong>次: </strong> 実装方法 G100</a></li>
+	</ul>
+				
+				<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G99.html">G99: Providing the ability to recover deleted information（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+	</ul>
+</div>
+</body>
+</html>

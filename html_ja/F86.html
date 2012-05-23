@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="ja" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>F86: 達成基準 4.1.2 の不適合事例 － 例えば電話番号にように、複数に分けられたテキストフィールドのそれぞれに対して、識別名が提供されていない</title>
+    <link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+	<link rel="stylesheet" type="text/css" href="css/additional.css" />
+	<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+	<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+	<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+	<ul id="navigation">
+		<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+		<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+		<li><a href="F85.html"><strong>前：</strong> 不適合事例 F85</a></li>
+		<li><a href="F87.html"><strong>次：</strong> 不適合事例 F87</a></li>
+	</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：</p>
+	<ul id="navbar">
+		<li><a href="#F86-applicability">適用（対象）</a></li>
+		<li><a href="#F86-description">解説</a></li>
+		<li><a href="#F86-examples">事例</a></li>
+		<li><a href="#F86-resources">参考リソース</a></li>
+		<li><a href="#F86-related-techs">関連する実装方法</a></li>
+		<li><a href="#F86-tests">検証</a></li>
+	</ul>
+</div>
+<div class="skiptarget">
+	<a id="maincontent">-</a>
+</div>
+	<a name="F86" id="F86"> </a>
+	<h1>F86: 達成基準 4.1.2 の不適合事例 － 例えば電話番号にように、複数に分けられたテキストフィールドのそれぞれに対して、識別名が提供されていない</h1>
+<div class="applicability">
+	<h2 id="F86-applicability">適用（対象）</h2>
+<div class="textbody">
+		<p>全般</p>
+</div>
+</div>
+		<p class="referenced">これは、次の達成基準に関連する不適合事例である：</p>
+		<ul>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-rsv">達成基準 4.1.2 (プログラムが解釈可能な識別名・役割及び設定可能な値)</a>
+				<ul>
+					<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#ensure-compat-rsv">How to Meet 4.1.2 (Name, Role, Value)：英語</a></li>
+					<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">達成基準 4.1.2 (プログラムが解釈可能な識別名・役割及び設定可能な値) を理解する</a></li>
+				</ul></li>
+		</ul>
+	<h2 id="F86-description">解説</h2>
+<div class="textbody">
+		<p>これは、複数のテキストフィールドから成るフォームの入力項目で、その一部又は全部に識別名がないことによる達成基準4.1.2の不適合事例について述べている。多くの場合、複数のテキストフィールドから成るフォームの入力項目の全体に対してラベルが1つあり、そのラベルが最初のテキストフィールドに対してプログラム的に関連付けられているか、又はどのテキストフィールドに対してもプログラム的に関連付けられていない必要がある。</p>
+<div class="note">
+		<p class="prefix"><em>注記： </em>識別名は、必ずしも視覚的に表示しなければならないわけではないが、支援技術に対しては明示されている必要がある。</p>
+</div>
+</div>
+	<h2 class="small-head" id="F86-examples">事例</h2>
+<div class="failure">
+	<h3 class="small-head" id="F86-failex1">不適合となる事例 1</h3>
+<div class="example">
+<div class="textbody">
+		<p>米国の電話番号は、3桁の市外局番、3桁の市内局番、それに続く4桁の番号で構成されている。通常はこれが、例えば（206）555-1212のように、（市外局番）市内局番-番号というフォーマットで示される。多くの場合、電話番号の記入を求めるフォームは3つのテキストフィールドに分かれているが、次の例ではラベルが1つしかない。</p>
+</div>
+
+<div class="code">
+		<p><strong>コード例：</strong></p>
+		<pre><code>
+電話番号： 
+(&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;
+		</code></pre>
+</div>
+<div class="textbody">
+		<p>この不適合となる事例は、アクセシビリティAPIに3つのテキストフィールドそれぞれに対する識別名（name）がない場合に生じる。支援技術を使っている利用者は、3つの不明確なテキストフィールドを提示されることになる。また、3つのテキストフィールドから成る米国の電話番号の場合、一部の支援技術は、1つ目のフィールドを「（」、2つ目のフィールドを「）」、3つ目のフィールドを「-」とラベル付けすることがあり、これも決して利用者の役に立つものではない。</p>
+</div>
+</div>
+</div>
+<div class="failure">
+	<h3 class="small-head" id="F86-failex2">不適合となる事例 2</h3>
+<div class="example">
+<div class="textbody">
+		<p>同じく米国の電話番号で、この事例では、ラベルがプログラム的にどの部分にも関連付けられていない。</p>
+</div>
+<div class="code">
+		<p><strong>コード例：</strong></p>
+		<pre><code>
+電話番号：
+(&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;
+		</code></pre>
+</div>
+<div class="textbody">
+		<p>支援技術を使っている利用者は、3つの不明確なテキストフィールドを提示されることになる。</p>
+</div>
+</div>
+</div>
+<div class="failure">
+	<h3 class="small-head" id="F86-failex3">不適合となる事例 3</h3>
+<div class="example">
+<div class="textbody">
+		<p>同じく米国の電話番号で、この例では、ラベルが1つめのテキストフィールドにプログラム的に関連付けられている。</p>
+</div>
+
+<div class="code">
+		<p><strong>コード例：</strong></p>
+		<pre><code>
+&lt;label for="area"&gt;電話番号：&lt;/label&gt; 
+(&lt;input id="area" type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;
+		</code></pre>
+</div>
+<div class="textbody">
+		<p>支援技術を使っている利用者は、1つめのテキストフィールドが電話番号全体のためのテキストフィールドであると理解し、2つめと3つめは不明確なテキストフィールドとして認識することになる。</p>
+</div>
+</div>
+</div>
+	<h2 id="F86-resources">参考リソース</h2>
+<div class="textbody">
+		<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+		<ul>
+			<li><p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=3755582A-A707-460A-BF21-1373316E13F0&amp;displaylang=en">Microsoft Active Accessibility 2.0 SDK</a>. Includes Inspect32.exe and other MSAA tools.</p></li>
+			<li><p><a href="http://library.gnome.org/devel/atk/unstable/">Gnome Accessibility Toolkit documentation</a></p></li>
+			<li><p><a href="http://developer.gnome.org/projects/gap/testing/index.html">Gnome Accessibility QA documentation and tools</a></p></li>
+			<li><p><a href="http://www.microsoft.com/downloads/details.aspx?familyid=E59C3964-672D-4511-BB3E-2D5E1DB91038&amp;displaylang=en">Microsoft Internet Explorer Developer Toolbar</a>. Allows examination of script-generated DOM in Microsoft Internet Explorer.</p></li>
+			<li><p><a href="http://getfirebug.com/">Firebug</a>. Allows examination of script-generated DOM in Firefox.</p></li>
+		</ul>
+</div>
+	<h2 id="F86-related-techs">関連する実装方法</h2>
+<div class="textbody">
+		<ul>
+			<li><a href="H44.html">H44： label要素を用いて、テキストのラベルとフォーム・コントロールを関連付ける</a></li>
+			<li><a href="H71.html">H71： fieldset 要素及び legend 要素を用いて、フォーム・コントロールのグループに関する説明を提供する </a></li>
+			<li><a href="H65.html">H65： label要素を用いることができないとき、title属性を用いてフォーム・コントロールを特定する</a></li>
+		</ul>
+</div>
+	<h2 id="F86-tests">検証</h2>
+<div class="textbody">
+	<h3 class="small-head" id="F86-procedure">チェックポイント</h3>
+		<p><strong>一般的な手順：</strong></p>
+		<ol class="enumar">
+			<li><p>自分の使用しているプラットフォームのアクセシビリティAPIを確認できるツールをインストールする（「参考リソース」を参照）。</p></li>
+			<li><p>フォームにあるコントロールそれぞれをチェックする。</p></li>
+			<li><p>各コントロールに対して、識別名（name）のプロパティがある。</p></li>
+		</ol>
+		<p><strong>HTML及びXHTMLの場合の手順：</strong></p>
+		<ol class="enumar">
+			<li><p>HTMLソースにある<code>input</code>、<code>select</code>、及び<code>textarea</code>要素をチェックする。</p></li>
+			<li><p>要素に<code>title</code>属性がある。</p></li>
+			<li><p>関連付けられた<code>label</code>要素がある。</p></li>
+		</ol>
+	<h3 class="small-head" id="F86-results">判定基準</h3>
+		<p><strong>一般的な判定基準：</strong></p>
+		<ul>
+			<li><p>3. を満たしていなければ、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p></li>
+		</ul>
+		<p><strong>HTML及びXHTMLの場合の判定基準：</strong></p>
+		<ul>
+			<li><p>2. 及び 3. を満たしていなければ、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p></li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+            <li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="F85.html"><strong>前：</strong> 不適合事例 F85</a></li>
+			<li><a href="F87.html"><strong>次：</strong> 不適合事例 F87</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+		<p><strong>日本語訳における注記：</strong></p>
+		<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+		<ul>
+			<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F86.html">F86: Failure of Success Criterion 4.1.2 due to not providing names for each part of a multi-part form field, such as a US telephone number（英語）</a></li>
+			<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+			<li>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+		</ul>
+</div>
+</body>
+</html>

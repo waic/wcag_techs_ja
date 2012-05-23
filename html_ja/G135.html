@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>G135: ウェブコンテンツ技術のアクセシビリティAPIを用いて、名前及び役割をUAに提供し、利用者が設定可能なプロパティを直接設定可能にし、変化を通知する</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" />
+</a></p><p class="collectiontitle">
+<a href="./">WCAG 2.0 実装方法集</a></p></div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p></div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G134.html"><strong>前：</strong>実装方法 G134</a></li>
+			<li><a href="G136.html"><strong>次：</strong>実装方法 G136</a></li>
+		</ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#G135-applicability">適用（対象）</a></li>
+			<li><a href="#G135-description">解説</a></li>
+			<li><a href="#G135-examples">事例</a></li>
+			<li><a href="#G135-resources">参考リソース</a></li>
+			<li><a href="#G135-related-techs">関連する実装方法</a></li>
+			<li><a href="#G135-tests">検証</a></li>
+		</ul>
+</div>
+<h1><a name="G135" id="G135"> </a>G135: ウェブコンテンツ技術のアクセシビリティAPIを用いて、名前及び役割をUAに提供し、利用者が設定可能なプロパティを直接設定可能にし、変化を通知する</h1>
+        
+            <div class="applicability"><h2 id="G135-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>アクセシビリティAPIと連動するようにプログラムされた標準コンポーネントを持つプログラミング・ウェブコンテンツ技術。</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+            <ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-rsv">達成基準 4.1.2 (プログラムが解釈可能な識別名・役割及び設定可能な値)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#ensure-compat-rsv">
+						How to Meet 4.1.2 (Name, Role, Value)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">達成基準 4.1.2 (プログラムが解釈可能な識別名・役割及び設定可能な値) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="G135-description">解説</h2><div class="textbody">
+          
+               <p>この実装方法の目的は、支援技術が代替のユーザーインタフェースを通して利用者に等価の情報を伝えることができるように、支援技術がウェブコンテンツを理解できるようにすることである。</p>
+          
+               <p>コンテンツは、マークアップ言語を用いず、プログラミング言語又はツールを用いて制作されることがある。多くの場合、これらのウェブコンテンツ技術には、既にアクセシビリティAPIと連動するようにプログラムされたインタフェース・コンポーネントがある。コンテンツ制作者がそういったコンポーネントを使用して、プロパティ（例えば名前など）を記述すれば、生成されたコンテンツのユーザーインタフェース・コンポーネントは支援技術に対してアクセシブルとなる。</p>
+        
+            </div>
+        
+            <h2 class="small-head" id="G135-examples">事例</h2>
+          
+               <h3 class="small-head" id="G135-ex1">事例 1</h3>
+               <div class="example">
+            
+                  <div class="textbody">
+              
+                     <ul><li>
+                  
+                           <p> ウェブページがアプレットを作るためにJavaを使用している。Java Swingオブジェクト（例えばプッシュボタン）が使われているのは、Javaで書かれた支援技術からアクセスできる標準搭載のアクセシビリティ・プロパティ、及びJava Access BridgeとともにOSのアクセシビリティAPIを用いる他の言語で書かれたアクセシビリティプロパティを持っているためである。コンテンツ制作者がそのコンポーネントに対して値を記述することによって、そのコンポーネントは支援技術にとってアクセシブルなものとなる。</p>
+                
+                        </li></ul>
+            
+                 </div>
+          
+               </div>
+        
+            
+        
+            <h2 id="G135-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+                
+        
+            </div>
+        
+            <h2 id="G135-related-techs">関連する実装方法</h2><div class="textbody"><p>（現在リストされているものはありません）</p>
+            </div>
+        
+            <h2 id="G135-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G135-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p> アクセシブルなユーザーエージェントを用いてコンテンツを描画する。</p>
+              
+                     </li><li>
+                
+                        <p> 各ユーザーインタフェース・コンポーネントを評価するために、ユーザーエージェントのアクセシビリティAPIに対応して設計されたアクセシビリティツールを使用する。</p>
+              
+                     </li><li>
+                
+                        <p> 各インタフェース・コンポーネントの名前（name）及び役割（role）が、そのツールによって確認できる。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G135-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p> 各インターフェース要素について、3.を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G134.html"><strong>前：</strong>実装方法 G134</a></li>
+			<li><a href="G136.html"><strong>次：</strong>実装方法 G136</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+                <p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G135.html">G135: Using the accessibility API features of a technology to expose names and roles, to allow user-settable properties to be directly set, and to provide notification of changes
+（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：<a href=http://jp.fujitsu.com>富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></li>
+			</ul>
+</div></body></html>

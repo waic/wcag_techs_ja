@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<head>
+	<title>F62: 達成基準 1.3.1 及び 達成基準 4.1.1 の不適合事例 － XMLで特定の関係性を示すためのDOMにおける情報が不十分である</title>
+	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+	<link rel="stylesheet" type="text/css" href="css/additional.css" />
+	<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+	<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+	<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+	<ul id="navigation">
+		<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+		<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+		<li><a href="F61.html"><strong>前：</strong>不適合事例 F61</a></li>
+		<li><a href="F63.html"><strong>次：</strong>不適合事例 F63</a></li>
+	</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：<br /></p>
+	<ul id="navbar">
+		<li><a href="#F62-applicability">適用（対象）</a></li>
+		<li><a href="#F62-description">解説</a></li>
+		<li><a href="#F62-examples">事例</a></li>
+		<li><a href="#F62-resources">参考リソース</a></li>
+		<li><a href="#F62-related-techs">関連する実装方法</a></li>
+		<li><a href="#F62-tests">検証</a></li>
+	</ul>
+</div>
+<div class="skiptarget">
+	<a id="maincontent">-</a>
+</div>
+	<h1><a name="F62" id="F62"> </a>F62: 達成基準 1.3.1 及び 達成基準 4.1.1 の不適合事例 － XMLで特定の関係性を示すためのDOMにおける情報が不十分である</h1>
+<div class="applicability">
+	<h2 id="F62-applicability">適用（対象）</h2>
+<div class="textbody">
+		<p> XMLに対するDocument Object Model (DOM)</p>
+</div>
+</div>
+		<p class="referenced">これは、次の達成基準に関連する不適合事例である：</p>
+		<ul>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#content-structure-separation-programmatic">達成基準 1.3.1 (情報及び関係性)</a>
+			<ul>
+				<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#content-structure-separation-programmatic">How to Meet 1.3.1 (Info and Relationships)：英語</a></li>
+				<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">達成基準 1.3.1 (情報及び関係性) を理解する</a></li>
+			</ul></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-parses">達成基準 4.1.1 (構文解析)</a>
+			<ul>
+				<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#ensure-compat-parses">How to Meet 4.1.1 (Parsing)：英語</a></li>
+				<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/ensure-compat-parses.html">達成基準 4.1.1 (構文解析) を理解する</a></li>
+			</ul></li>
+		</ul>
+	<h2 id="F62-description">解説</h2>
+<div class="textbody">
+		<p>この文書は、支援技術を含むユーザーエージェントが一貫性をもってウェブページを解釈できないことによる不適合事例について述べている。ウェブページにおける特定の関係性が曖昧な場合、支援技術を含めて、さまざまなユーザーエージェントは異なる情報を利用者に提示してしまう恐れがある。例えば、支援技術の利用者は、他の主流なユーザーエージェントの利用者とは異なる形で情報を受け取ってしまうかもしれない。マークアップ言語の要素及び属性の中には、一意的な値を持つことが必須とされているものがあり、もし値が一意的ではなかった場合には、その結果としてコンテンツがきちんと提示されなかったり、一意的に解釈できなくなったりする恐れがある。</p>
+</div>
+	<h2 class="small-head" id="F62-examples">事例</h2>
+<div class="failure">
+	<h3 class="small-head" id="F62-failex1">不適合となる例</h3>
+<div class="example">
+<div class="textbody">
+		<ul>
+			<li><p>一意的ではないid属性の値。</p></li>
+			<li><p>SVGドキュメントが、（代替テキストを提供するための）title要素をドキュメント内の他の場所で再び用いるために、すべてのtitle要素にid属性を付けている。しかし、あるtitle要素のid属性値がドキュメント内の他の場所でも用いられているため、曖昧なドキュメントになってしまっている。</p></li>
+			<li><p>DAISYドキュメントが、caption要素のimgref属性を用いて、画像のキャプションを示している。しかし、imgref属性値がそのキャプションが関連付けられるべき画像のimg要素のid属性を参照していないため、ユーザーエージェントはその画像のキャプションを見つけることができない。</p></li>
+		</ul>
+</div>
+</div>
+</div>
+	<h2 id="F62-resources">参考リソース</h2>
+<div class="textbody">
+		<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+</div>
+	<h2 id="F62-related-techs">関連する実装方法</h2>
+<div class="textbody">
+		<p>（今のところ、なし。）</p>
+</div>
+	<h2 id="F62-tests">検証</h2>
+<div class="textbody">
+	<h3 class="small-head" id="F62-procedure">チェックポイント</h3>
+		<ol class="enumar">
+			<li><p>ドキュメント内にあるすべてのid属性値が（スキーマによって定義されているように）一意的である。</p></li>
+			<li><p>同一のドキュメント内にある一意的な識別子を参照する要素又は属性に、対応するid属性値がある。</p></li>
+		</ol>
+		<p>DTDによって定義されたXML文書型においては、type ID、IDREF、又はIDREFSの属性が該当する。また、W3CのXMLスキーマによって定義されるXML文書型においては、type ID、IDREF、又はIDREFSの要素又は属性が該当する。（type ID、IDREF、及びIDREFSは、属性にのみ用いるべきだが、<a href="http://www.w3.org/TR/xmlschema-2/#terminology">XML Schema Part 2: Datatypes Second Edition</a>では、要素で用いることも可能である。）その他のスキーマ言語においては、これに対応した、ID及びIDの参照を特定するためのメカニズムをチェックすること。</p>
+	<h3 class="small-head" id="F62-results">判定基準</h3>
+		<ul>
+			<li><p>1.でid属性値が一意的ではない、又は2.でid属性値がない場合、この不適合事例が適用され、そのコンテンツは達成基準を満たしていないことになる。</p></li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="F61.html"><strong>前：</strong>不適合事例 F61</a></li>
+			<li><a href="F63.html"><strong>次：</strong>不適合事例 F63</a></li>
+		</ul>
+<div class=footer>
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+	<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+		<p><strong>日本語訳における注記：</strong></p>
+		<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+		<ul>
+			<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F62.html">F62: Failure of Success Criterion 1.3.1 and 4.1.1 due to insufficient information in DOM to determine specific relationships in XML（英語）</a></li>
+			<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+			<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+		</ul>
+</div>
+</body>
+</html>

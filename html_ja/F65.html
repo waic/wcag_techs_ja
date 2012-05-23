@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>F65: 達成基準 1.1.1 の不適合事例 － img要素、area要素、及び type "image" のinput要素のalt属性を省略している</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+	<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+	<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="F63.html"><strong>前：</strong>不適合事例 F63</a></li>
+			<li><a href="F66.html"><strong>次：</strong>不適合事例 F66</a></li>
+	</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：</p>
+	<ul id="navbar">
+			<li><a href="#F65-applicability">適用（対象）</a></li>
+			<li><a href="#F65-description">解説</a></li>
+			<li><a href="#F65-examples">事例</a></li>
+			<li><a href="#F65-resources">参考リソース</a></li>
+			<li><a href="#F65-related-techs">関連する実装方法</a></li>
+			<li><a href="#F65-tests">検証</a></li>
+	</ul>
+</div>
+<div class="skiptarget">
+	<a id="maincontent">-</a>
+</div>
+	<h1><a name="F65" id="F65"> </a>F65: 達成基準 1.1.1 の不適合事例 － <code>img</code>要素、<code>area</code>要素、及び <code>type "image"</code> の<code>input</code>要素の<code>alt</code>属性を省略している</h1>
+<div class="applicability">
+	<h2 id="F65-applicability">適用（対象）</h2>
+<div class="textbody">
+		<p>HTML 及び XHTML</p>
+</div>
+</div>
+		<p class="referenced">これは次の達成基準に関する不適合事例である：</p>
+		<ul>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#text-equiv-all">達成基準 1.1.1 (非テキストコンテンツ)</a>
+			<ul>
+				<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#text-equiv-all">How to Meet 1.1.1 (Non-text Content)：英語</a></li>
+				<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/text-equiv-all.html">達成基準 1.1.1 (非テキストコンテンツ) を理解する</a></li>
+			</ul></li>
+		</ul>
+	<h2 id="F65-description">解説</h2>
+<div class="textbody">
+		<p>この文書では、画像の代替テキストに関する不適合条件について解説する。画像に対して<code>alt</code>属性が指定されていない場合、支援技術はその画像を識別するための情報やその画像の目的を利用者に対して伝えることができない。</p>
+		<p>支援技術の中には、altテキストが指定されていない場合に画像のファイル名を読み上げて情報を補おうとするものもあるだろう。しかし、多くの理由から単にファイル名に依存するだけでは不十分である。たとえば、画像ファイルにその目的が分かるような分かりやすい名前がついているとは限らず（例：images/nav01.gif）、また技術仕様上もそういった分かりやすいファイル名をつける必要はない。また、altテキストが指定されていない場合でもその画像ファイル名を読み上げない支援技術もあるだろう。</p>
+</div>
+	<h2 class="small-head" id="F65-examples">事例</h2>
+	<h3 class="small-head" id="F65-ex1">不適合となる事例 1: altテキストが存在しない場合</h3>
+<div class="example">
+<div class="textbody">
+		<p>以下のコード例において、スクリーンリーダーを使っている人は画像の目的を知ることはできない。（訳注：スクリーンリーダーを利用しているユーザーに限らず、ブラウザの設定を変更して画像を非表示にしている場合や点字ディスプレイを利用しているユーザーなども同様である。）</p>
+</div>
+<div class="code">
+		<p><strong>コード例:</strong></p>
+		<pre><code>
+&lt;img src="../images/animal.jpg" /&gt;
+		</code></pre>
+</div>
+</div>
+	<h2 id="F65-resources">参考リソース</h2>
+<div class="textbody">
+		<p>この不適合事例に関するリソースは、今のところない。</p>
+</div>
+	<h2 id="F65-related-techs">関連する実装方法</h2>
+<div class="textbody">
+		<ul>
+			<li><a href="H67.html">H67： 支援技術が無視すべき画像の img 要素で、alt属性値を空にして、title 属性を付与しない</a></li>
+		</ul>
+</div>
+	<h2 id="F65-tests">検証</h2>
+<div class="textbody">
+	<h3 class="small-head" id="F65-procedure">チェックポイント</h3>
+		<ol class="enumar">
+			<li><p>すべての<code>img</code>要素、<code>area</code>要素および<code>type</code>属性の値が<code>"image"</code>の<code>input</code>要素を特定する</p></li>
+			<li><p>これらの要素に対して<code>alt</code>属性が指定されている</p></li>
+		</ol>
+	<h3 class="small-head" id="F65-results">判定基準</h3>
+		<ul>
+			<li><p>2.を満たしていない場合、この不適合条件が適用され、達成基準に不適合となる。</p></li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="F63.html"><strong>前：</strong>不適合事例 F63</a></li>
+			<li><a href="F66.html"><strong>次：</strong>不適合事例 F66</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F65.html">F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type "image"（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳： <a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></li>
+			</ul>
+	</div>
+</body>
+</html>

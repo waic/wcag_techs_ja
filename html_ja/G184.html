@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G184: フォーム又はテキスト・フィールド一式の先頭に、必要とされる入力フォーマットを説明するテキストの説明文を提供する</title>　<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+	<link rel="stylesheet" type="text/css" href="css/additional.css" />
+	<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+	<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div><div id="skipnav"><p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p></div><a name="top"> </a>
+<!-- TOP NAVIGATION BAR --><ul id="navigation">
+		<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+		<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+		<li><a href="G183.html"><strong>前：</strong>実装方法 G183</a></li>
+		<li><a href="G185.html"><strong>次：</strong>実装方法 G185</a></li>
+</ul>
+
+<div class="navtoc">
+	<p>このページのコンテンツ：<br /></p>
+	<ul id="navbar">
+		<li><a href="#G184-applicability">適用（対象）</a></li>
+		<li><a href="#G184-description">解説</a></li>
+		<li><a href="#G184-examples">事例</a></li>
+		<li><a href="#G184-resources">参考リソース</a></li>
+		<li><a href="#G184-related-techs">関連する実装方法</a></li>
+		<li><a href="#G184-tests">検証</a></li>
+	</ul>
+</div>
+            
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G184" id="G184"> </a>G184: フォーム又はテキスト・フィールド一式の先頭に、必要とされる入力フォーマットを説明するテキストの説明文を提供する</h1>
+            
+            <div class="applicability"><h2 id="G184-applicability">適用（対象）</h2><div class="textbody">
+               <p>全てのウェブコンテンツ技術</p>
+            </div></div>
+            
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p><ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#minimize-error-cues">達成基準 3.3.2 (ラベル又は説明文)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#minimize-error-cues">
+						How to Meet 3.3.2 (Labels or Instructions)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html">達成基準 3.3.2 (ラベル又は説明文) を理解する
+					</a></li></ul></li><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#minimize-error-context-help">達成基準 3.3.5 (ヘルプ)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#minimize-error-context-help">
+						How to Meet 3.3.5 (Help)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/minimize-error-context-help.html">達成基準 3.3.5 (ヘルプ) を理解する</a></li></ul></li></ul>
+            
+            <h2 id="G184-description">解説</h2><div class="textbody">
+                
+               <p>この実装方法の目的は、利用者が入力しなければならないデータのフォーマットに関する制限を事前に知らせることによって、利用者が入力エラーを回避するのを助けることである。そのような制限に関する情報を一連のフォームの先頭で提示する。この方法は、少数のフィールドからなるフォーム、又は複数のフィールドが同じフォーマットのデータを要求するようなフォームにおいて最も有効である。このようなケースでは、フォーマットの説明をフォームの先頭に置く説明文で一度だけ提示するほうが、同じ説明を同一のフォーマット制限が要求されるフィールドすべてについて繰り返すよりも効果的である。</p>
+            
+            </div>
+            
+            <h2 class="small-head" id="G184-examples">事例</h2>
+                
+               <h3 class="small-head" id="G184-ex1">事例 1</h3><div class="example">
+                    
+                  <div class="textbody">
+                        
+                     <p>あるビジネスネットワーキングのサイトでは、利用者が自分の職歴に関する説明を投稿することができる。情報を入力するフォームには、企業名、役職、業務開始及び終了年月日、そして業務の説明などのフィールドがある。フォームの先頭には以下のような指示がある:</p>
+                        
+                     <ul><li>
+                           <p>「あなたのプロフィールに追加したい職歴について、必要事項を入力してください。
+日付はyyyy/mm/ddの形式(例: 2009/01/01)で入力してください。」</p>
+                        </li></ul>
+                    
+                  </div>
+                
+               </div>
+                
+               <h3 class="small-head" id="G184-ex2">事例 2</h3><div class="example">
+                   
+                  <div class="textbody"> 
+                     <p>ある企業内アドレス帳では、利用者が自分のプロフィールを編集して、電話番号や職務内容をカスタマイズできるようになっている。フォームの先頭には以下のような指示がある:</p>
+                       
+                     <ul><li>
+                           <p>入力欄に表示された任意の情報を変更することができます。「終了」を選択すると情報が記録され、プロフィールを公開することができます。変更を破棄したい場合は「中断」を選択してください。</p>
+                        </li><li>
+                           <p>プロフィール中で、入力欄外にシステムのテキストとして表示された情報は変更できません。これらの情報は企業内人事情報から取得しています。編集できない部分に誤りや更新すべき情報がある場合は、表示情報の隣にあるヘルプアイコンを選択すると修正方法を確認できます。</p>
+                        </li><li>
+                           <p>電話番号は半角の数字とハイフン(-)のみ入力できます。</p>
+                        </li><li>
+                           <p>必須の入力欄はアスタリスク(*)で示されており、入力しなければフォームを完了できません。</p>
+                        </li></ul>
+                       
+                    
+                  </div>
+                
+               </div>
+            
+            
+            
+            <h2 id="G184-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+                
+               <li><a href="G89.html">G89： 所定のデータ・フォーマット及び入力例を提供する</a></li>
+            
+            </ul></div>
+            
+            <h2 id="G184-tests">検証</h2><div class="textbody">
+                
+               <h3 class="small-head" id="G184-procedure">チェックポイント</h3>
+                    
+                  <ol class="enumar"><li>
+                        <p>利用者の入力データを所定のフォーマットでのみ受け付けるフォームコントロールを特定する</p>
+                     </li><li>
+                        <p>フォームの先頭に、1.で特定したフォームコントロールすべての所定のフォーマットに関する説明文がある。</p>
+                     </li></ol>
+                
+               
+                
+               <h3 class="small-head" id="G184-results">判定基準</h3>
+                    
+                  <ul><li>
+                        <p>2.を満たしている。</p>
+                     </li></ul>
+                
+               
+            
+            </div>
+        
+         <!-- BOTTOM NAVIGATION BAR --><ul id="navigationbottom">
+<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+		<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+		<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+		<li><a href="G183.html"><strong>前：</strong>実装方法 G183</a></li>
+		<li><a href="G185.html"><strong>次：</strong>実装方法 G185</a></li>
+</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+			<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G184.html">G184: Providing text instructions at the beginning of a form or set of fields that describes the necessary input（英語）</a></li>
+			<li>日本語訳監修：<a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></li>
+			<li>日本語訳：<a href="http://www.argv.org/">井上浩一（ARGV）</a></li>
+		</ul>
+</div>
+</body></html>

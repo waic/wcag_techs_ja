@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G17: テキスト（及び画像化された文字）とその背景の間に、少なくとも7:1以上のコントラスト比をもたせる</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" />
+</a></p>
+<p class="collectiontitle">
+<a href="./">WCAG 2.0 実装方法集</a></p></div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+
+<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G15.html"><strong>前：</strong>実装方法 G15</a></li>
+			<li><a href="G18.html"><strong>次：</strong>実装方法 G18</a></li>
+		</ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#G17-applicability">適用（対象）</a></li>
+			<li><a href="#G17-description">解説</a></li>
+			<li><a href="#G17-examples">事例</a></li>
+			<li><a href="#G17-resources">参考リソース</a></li>
+			<li><a href="#G17-related-techs">関連する実装方法</a></li>
+			<li><a href="#G17-tests">検証</a></li>
+		</ul>
+</div>      
+            <div class="skiptarget"><a id="maincontent">-</a></div>
+ <h1><a name="G17" id="G17"> </a>G17: テキスト（及び画像化された文字）とその背景の間に、少なくとも7:1以上のコントラスト比をもたせる</h1>
+            <div class="applicability"><h2 id="G17-applicability">適用（対象）</h2>
+<div class="textbody">         
+               <p> 視覚的なアウトプットを生成するウェブコンテンツ技術。</p>
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#visual-audio-contrast7">達成基準 1.4.6（より十分なコントラスト）</a>
+<ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#visual-audio-contrast7">How to Meet 1.4.6 (Contrast (Enhanced))：英語</a></li>
+<li><a href="http://www.w3.org/TR/2008/NOTE-UNDERSTANDING-WCAG20-20081211/visual-audio-contrast7.html">達成基準 1.4.6（より十分なコントラスト）を理解する</a></li></ul></li></ul>
+        
+            <h2 id="G17-description">解説</h2>
+<div class="textbody">
+          
+               <p>この実装方法の目的は、利用者が背景の上にあるテキストを読めるようにすることである。この実装方法は、4.5:1のコントラストをもたせる実装方法よりも基準が上回るもので、さらに高いレベルのコントラストを提供することでロービジョンの利用者が読みやすくする。</p>
+          
+               <p> もし背景が無地の色（又は真っ黒、真白）の場合、個々のテキストの文字が背景とのコントラスト比を7:1で保持することによってテキストのコントラスト比を維持することができる。</p>
+          
+               <p> 背景または文字が相対輝度において変化する（またはパターン化されている）場合、たとえ背景全体とのコントラスト比を 7:1で保持していなくとも、文字の周囲の背景、又は陰影によって、文字と背景のコントラスト比を維持することができる。</p>
+          
+               <p> 背景の相対輝度がページの中で変化する場合は、文字の相対輝度も変化させることによってコントラスト比が維持されることもある。</p>
+          
+               <p> もし通常では背景画像又は背景色の相対輝度が十分でない場合は、他の方法として、テキストの周りに後光を付けて必要なコントラスト比をもたせる方法もある。 
+</p>
+        
+</div>
+        
+            <h2 class="small-head" id="G17-examples">事例</h2>
+
+          
+               <ul><li>
+              
+                     <p>企業ロゴに合った明るい色の文字を使うことができるように、背景には黒が使用されている。</p>
+            
+                  </li><li>
+              
+                     <p>テキストが大学のキャンパスの写真の上に書かれている。写真には、さまざまな色や明暗があるので、テキストの下のエリアを白っぽくぼやけさせることで、淡い色調になり一番暗い所でも写真の上に書かれている黒いテキストとの7：1のコントラスト比を維持するのに十分に明るくなっている。</p>
+            
+                  </li></ul>
+
+        
+            <h2 id="G17-resources">参考リソース</h2>
+<div class="textbody">
+  <p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+  <ul><li>
+                <p><a href="http://www.paciellogroup.com/resources/contrast-analyser.html">Contrast Analyser - Application</a></p>
+                <ul>
+<li>
+<p>
+<a href="http://www.infoaxia.com/tools/cca/index.html">カラーコントラストアナライザー 日本語版</a></p></li></ul>
+              </li><li>
+                <p>
+                  <a href="http://juicystudio.com/services/luminositycontrastratio.php">Contrast Ratio Analyser - online service</a></p>
+              </li><li>
+<p><a href="http://juicystudio.com/article/colour-contrast-analyser-firefox-extension.php">Colour Contrast Analyser - Firefox Extension</a>
+                </p></li>
+<li>
+                
+                        <p><a href="http://trace.wisc.edu/contrast-ratio-examples/">Color Contrast Samples</a>
+                </p></li>
+<li><p><a href="http://www.w3.org/Graphics/atypical-color-response">Atypical colour response</a></p></li>
+<li><p><a href="http://www.colorsontheweb.com/colorcontrast.asp">Colors On the Web Color Contrast Analyzer</a></p></li>
+<li><p><a href="http://www.vischeck.com/daltonize/runDaltonize.php">Tool to convert images based on color loss so that contrast is restored as luminance contrast when there was only color contrast (that was lost due to color deficiency)</a>
+                 </p></li>
+<li><p>
+<a href="http://www.456bereastreet.com/archive/200709/10_colour_contrast_checking_tools_to_improve_the_accessibility_of_your_design/">List of color contrast tools</a>
+</p></li></ul></div>
+        
+            <h2 id="G17-related-techs">関連する実装方法</h2>
+<div class="textbody"><ul>
+            
+               <li><a href="G148.html">G148： 背景色及びテキストの色を指定せず、その初期設定を変更するウェブコンテンツ技術の機能を用いない</a></li>
+            
+               <li><a href="G174.html">G174: 十分なコントラスト比のあるコントロールを提供して、利用者が十分なコントラストのある表現に変換できるようにする</a></li>
+        
+            </ul></div>
+        
+            <h2 id="G17-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="G17-procedure">チェックポイント</h3>
+<ol class="enumar"><li>
+<p> 以下の公式を用いて、各文字（すべて同一ではない限り）の相対輝度を測る： </p>
+
+<ul><li><p>色の相対輝度 L = 0.2126 * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> と定義されている。この場合の<strong>R</strong>, <strong>G</strong> 及び <strong>B</strong> は：</p>
+
+<ul><li>
+<p>R<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>R</strong> = R<sub>sRGB</sub>/12.92、それ以外の場合： <strong>R</strong> = ((R<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+<li><p>G<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>G</strong> = G<sub>sRGB</sub>/12.92、それ以外の場合：<strong>G</strong> = ((G<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+
+<li><p>B<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>B</strong> = B<sub>sRGB</sub>/12.92、それ以外の場合：<strong>B</strong> = ((B<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li></ul>
+                    
+<div class="note">
+
+<p class="prefix">また、R<sub>sRGB</sub>, G<sub>sRGB</sub>, 及び B<sub>sRGB</sub>は以下のように定義される：</p></div>
+<ul>
+<li><p>R<sub>sRGB</sub> = R<sub>8bit</sub>/255</p></li>
+<li><p>G<sub>sRGB</sub> = G<sub>8bit</sub>/255</p></li>
+
+<li><p>B<sub>sRGB</sub> = B<sub>8bit</sub>/255</p></li>
+</ul>
+                    
+<div class="note">
+<p class="prefix">"^"記号は指数演算子である。</p></div></li></ul>
+                
+<div class="note">
+<p class="prefix"><em>注意：</em>エイリアス文字では文字の端から2ピクセルの部分の相対輝度の値を使用する。</p>
+
+</div>
+</li>
+<li><p> 同じ公式を用いて、文字のすぐ隣の背景のピクセルの相対輝度を測る。 </p></li>
+<li><p> 次の公式を用いて、コントラスト比を算出する。</p>
+<ul>
+<li><p>(L1 + 0.05) / (L2 + 0.05)</p>
+<ul>
+<li><p>L1は前景または背景色の明るい方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。及び、 </p></li>
+<li><p>L2は前景または背景色の暗い方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。 </p></li></ul>
+
+</li></ul></li>
+<li><p> コントラスト比が7：1と同じ、又はそれ以上である。【訳注：この計算式を用いているチェックツールで、コントラスト比が7：1以上であることを確認すればよい。】</p></li></ol>
+          
+
+
+<h3 class="small-head" id="G17-results">判定基準</h3>
+            <ul><li>
+                <p>4.を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+</div>
+      
+         <!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G15.html"><strong>前：</strong>実装方法 G15</a></li>
+			<li><a href="G18.html"><strong>次：</strong>実装方法 G18</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+ <p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div><div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G17.html">G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text
+（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+				<li>日本語訳：<a href=http://jp.fujitsu.com>富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></li>
+			</ul>
+</div></body></html>

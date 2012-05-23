@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="ja" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>G69: 時間の経過の伴い変化するメディアに対して代替コンテンツを提供する</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+	<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+	<ul id="navigation">
+		<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+		<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+		<li><a href="G68.html"><strong>前： </strong>実装方法 G68</a></li>
+		<li><a href="G70.html"><strong>次： </strong>実装方法 G70</a></li>
+	</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：</p>
+	<ul id="navbar">
+		<li><a href="#G69-applicability">適用（対象）</a></li>
+		<li><a href="#G69-description">解説</a></li>
+		<li><a href="#G69-examples">事例</a></li>
+		<li><a href="#G69-resources">参考リソース</a></li>
+		<li><a href="#G69-related-techs">関連する実装方法</a></li>
+		<li><a href="#G69-tests">検証</a></li>
+	</ul>
+</div>
+<div class="skiptarget">
+	<a id="maincontent">-</a>
+</div>
+	<h1><a name="G69" id="G69"> </a>G69: 時間の経過の伴い変化するメディアに対して代替コンテンツを提供する</h1>
+<div class="applicability">
+	<h2 id="G69-applicability">適用（対象）</h2>
+<div class="textbody">
+		<p>全てのウェブコンテンツ技術</p>
+</div>
+</div>
+		<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+		<ul>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-audio-desc">達成基準 1.2.3 (収録済の映像コンテンツの代替コンテンツ又は音声ガイド)</a>
+			<ul>
+				<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#media-equiv-audio-desc">How to Meet 1.2.3 (Audio Description or Media Alternative (Prerecorded))：英語</a></li>
+				<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html">達成基準 1.2.3 (収録済の映像コンテンツの代替コンテンツ又は音声ガイド) を理解する</a></li>
+			</ul></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-text-doc">達成基準 1.2.8 (収録済のメディアの代替コンテンツ)</a>
+			<ul>
+				<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#media-equiv-text-doc">How to Meet 1.2.8 (Media Alternative (Prerecorded))：英語</a></li>
+				<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/media-equiv-text-doc.html">達成基準 1.2.8 (収録済のメディアの代替コンテンツ) を理解する</a></li>
+			</ul></li>
+		</ul>
+	<h2 id="G69-description">解説</h2>
+<div class="textbody">
+		<p>この実装方法の目的は、同期したメディアのプレゼンテーションにより伝えられている情報を提示するアクセシブルな代替方法を提供することである。</p>
+		<p>同期したメディアの表現において、情報は次のようにさまざまな方法で提示される。</p>
+		<ul>
+			<li><p>発話（会話）</p></li>
+			<li><p>音（自然な音または人工的な音）</p></li>
+			<li><p>場面や背景</p></li>
+			<li><p>人や動物などの行動及び表情</p></li>
+			<li><p>テキスト又はグラフィック</p></li>
+			<li><p>その他</p></li>
+		</ul>
+		<p>これらと同じ情報をアクセシブルな形式で提示するために、この実装方法には、同期したメディアと同じ物語や同じ情報を伝える文書を作成することが含まれている。この種の文書は、脚本と呼ばれることがある。この文書には、重要な会話や行動のほか、物語の一部となっている背景などの説明が全て含まれる。</p>
+		<p>同期したメディアを最初に作成する際に実際の脚本が使われたのであれば、これが代替コンテンツの元素材となりうる。ただし、制作や編集の過程で、同期したメディアは通常、脚本とは異なるものに変更される。この実装方法では、同期したメディアの最終版での実際の会話や内容に合わせて、オリジナルの脚本を変えることになる。</p>
+		<p>さらに、同期したメディアのタイプによっては、同期したメディアの再生時に特定の個所で起きるインタラクションが含まれることがある。場合によっては、アクション（何かを購入する、送信する、実行するなど）が起きるなどして、同期したメディアの進行に影響すること（同期したメディアが、利用者の入力によって決まる複数のパスを持っている場合など）もある。このような場合は、時間の経過に伴って変化するメディアの代替コンテンツにもリンク又は何らかのメカニズムを提供して、その代替コンテンツの利用者が、同期したメディアの利用者と同じ選択肢から選べ、同じことができるようにする。</p>
+</div>
+	<h2 class="small-head" id="G69-examples">事例</h2>
+		<ul>
+			<li><p>新しい機器の使い方を従業員に示す研修フィルムで、1人の人が使い方を実演しながら、同時に説明している。この研修フィルムを制作した際に使った脚本が代替コンテンツの元素材として使用されていて、実際の発話内容などに合わせて編集・変更されている。研修ビデオと、時間の経過に伴って変化するメディアの代替コンテンツは、この会社のウェブサイトで公開されている。従業員は、機器の使い方を学ぶにあたって、このどちらか一方、あるいは両方を使うことができる。</p></li>
+			<li><p>インタラクティブなショッピング環境で、利用者がバーチャル店舗を操作して買い物できるようになっている。時間の経過に伴って変化するメディアの代替コンテンツでは、利用者がバーチャルショッピングカートに品物をドラッグするのではなく、リンクを含むテキストで提供された同じショッピングのコンテンツにアクセスして、商品陳列棚の列を選び、商品を購入できるようになっている。</p></li>
+		</ul>
+	<h2 id="G69-resources">参考リソース</h2>
+<div class="textbody">
+		<p>この実装方法に関するリソースは、今のところない。</p>
+</div>
+	 <h2 id="G69-related-techs">関連する実装方法</h2>
+<div class="textbody">
+		<ul>
+			<li><a href="G8.html">G8： 拡張した音声ガイド付のムービーを提供する</a></li>
+			<li><a href="G58.html">G58： 非テキストコンテンツのすぐ隣に、時間の経過に伴って変化するメディアの代替へのリンクを置く</a></li>
+			<li><a href="G78.html">G78： 音声ガイドを含んだ、利用者が選択可能な副音声トラックを提供する</a></li>
+			<li><a href="G158.html">G158： 時間の経過に伴って変化するメディアの音声しか含まないコンテンツに対して代替コンテンツを提供する</a></li>
+			<li><a href="G159.html">G159： 時間の経過に伴って変化するメディアの映像しか含まないコンテンツに対して代替コンテンツを提供する</a></li>
+		</ul>
+</div>
+	<h2 id="G69-tests">検証</h2>
+<div class="textbody">
+	<h3 class="small-head" id="G69-procedure">チェックポイント</h3>
+		<ol class="enumar">
+			<li><p>時間の経過に伴って変化するメディアに対する代替コンテンツを参照しながら、同期したメディアによるプレゼンテーションを閲覧する</p></li>
+			<li><p>時間の経過に伴って変化するメディアに対する代替コンテンツにある発話内容が、同期したメディアによるプレゼンテーションでの発話内容と一致している。</p></li>
+			<li><p>時間の経過に伴って変化するメディアに対する代替コンテンツに、音の説明がある。</p></li>
+			<li><p>時間の経過に伴って変化するメディアに対する代替コンテンツに、場面及び場面の変更の説明がある。</p></li>
+			<li><p>時間の経過に伴って変化するメディアに対する代替コンテンツに、あらゆる"登場人物"（人、動物など）の行動及び表情の説明がある。</p></li>
+			<li><p>代替コンテンツが別のページにある場合、その代替コンテンツへのリンクが提供されている。</p></li>
+		</ol>
+	<h3 class="small-head" id="G69-results">判定基準</h3>
+		<ul>
+			<li><p>2.、3.、4. 及び 5. を満たしている。</p></li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G68.html"><strong>前： </strong>実装方法 G68</a></li>
+			<li><a href="G70.html"><strong>次： </strong>実装方法 G70</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+		<p><strong>日本語訳における注記：</strong></p>
+		<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+		<ul>
+			<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G69.html">G69: Providing an alternative for time based media（英語）</a></li>
+			<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+			<li>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+		</ul>
+</div>
+</body>
+</html>

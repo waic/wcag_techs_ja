@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>H4: リンク、フォームのコントロール、およびオブジェクトには、論理的なタブ移動順序を作成する</title>
+	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css">
+	<link rel="stylesheet" type="text/css" href="css/additional.css">
+	<link rel="stylesheet" type="text/css" href="css/slicenav.css">
+	<link rel="stylesheet" type="text/css" href="css/waic-wg2.css">
+</head>
+<body class=slices>
+<div id=masthead>
+	<p class=logo><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48"></a></p>
+	<p class=collectiontitle><a href="http://www.w3.org/TR/WCAG20-TECHS/">Techniques for WCAG 2.0</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name=top></a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="H2.html"><strong>前：</strong>実装方法 H2</a></li>
+	<li><a href="H24.html"><strong>次：</strong>実装方法 H24</a></li>
+</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：<br /></p>
+	<ul id="navbar">
+		<li><a href="#H4-applicability">適用（対象）</a></li>
+		<li><a href="#H4-description">解説</a></li>
+		<li><a href="#H4-examples">事例</a></li>
+		<li><a href="#H4-resources">参考リソース</a></li>
+		<li><a href="#H4-related-techs">関連する実装方法</a></li>
+		<li><a href="#H4-tests">検証</a></li>
+	</ul>
+</div>
+
+<div class=skiptarget><a id=maincontent>-</a></div>
+<h1><a id=H4 name=H4></a>H4:リンク、フォームのコントロール、およびオブジェクトには、論理的なタブ移動順序を作成する</h1>
+
+<div class=applicability>
+	<h2 id="H4-applicability">適用（対象）</h2>
+	<div class=textbody>
+		<p>HTML 及び XHTML</p>
+	</div>
+</div>
+<p class=referenced>これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+	<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-focus-order">達成基準 2.4.3 (フォーカス順序)</a>
+		<ul>
+			<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-focus-order">How to Meet 2.4.3 (Focus Order)：英語 </a>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">達成基準 2.4.3 (フォーカス順序) を理解する </a>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h2 id="H4-description">解説</h2>
+<div class=textbody>
+	<p>この実装方法の目的は、初期設定のタブ順番が十分でない時に、論理的なタブ順番を提供することである。 多くの場合、「<a href="G59.html">G59: コンテンツ内の順番及び関係に従った順序で、インタラクティブな要素を配置する</a>」を用いることで十分であり、この実装方法は必要ではない。表示とは異なるタブ順番を設定すると、ユーザビリティ上の不具合を生じさせる可能性が高くなる。</p>
+	<p>場合によって、コンテンツ制作者はコード内のインタラクティブな要素の順番に従うことなく、コンテンツの関係をたどるタブ順番を指定しようとするかもしれない。この場合、インタラクティブな要素の <code>tabindex</code> 属性を使用することで選択肢の順番を指定できる。<code>tabindex</code> 属性には、0 から 32767 の間の値を付与する。</p>
+	<p>インタラクティブな要素がタブキーを使ってナビゲートされる時、要素は <code>tabindex</code> 属性の値の増える順にフォーカスが与えられる。0 よりも大きな <code>tabindex</code> 値を持つ要素は、<code>tabindex</code> がない又は 0 の <code>tabindex</code> の要素の前にフォーカスを受けることになる。0 よりも大きな tabindexを持つ全ての要素がフォーカスを受け取った後、残りのインタラクティブな要素はウェブページに現れる順番でフォーカスが与えられる。</p>
+</div>
+
+<h2 class="small-head" id="H4-examples">事例</h2>
+<h3 class="small-head" id="H4-ex1">事例 1</h3>
+<div class=example>
+	<div class=textbody>
+		<p>系図の検索フォームで結婚記録を検索する。検索フォームには花嫁及び花婿用のいくつかの入力フィールドがある。フォームは、データテーブルを用いてマークアップされ、1列目に花婿、2列目に花嫁のフィールドがある。コンテンツの順番は行ごとであるが、コンテンツ制作者はフォームを列ごとにナビゲートする方がより論理的であると感じている。この方法では、全ての花婿の条件は花嫁の条件へ移る前に記入できる。入力フィールドの <code>tabindex</code> 属性は、列ごとにナビゲートするタブ順番を指定するのに使用される。</p>
+	</div>
+	<div class=code>
+		<p><strong>コード例:</strong></p>
+		<pre><code>
+		&lt;form action="#" method="post"&gt;
+		   &lt;table summary="1列目に花婿の検索条件、2列目に花嫁の検索条件がある"&gt;
+		&lt;caption&gt;結婚記録の検索&lt;/caption&gt;
+		&lt;tr&gt;
+		   &lt;th&gt;検索基準&lt;/th&gt;
+	       &lt;th&gt;花婿&lt;/th&gt;
+		   &lt;th&gt;花嫁&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		   &lt;th&gt;名&lt;/th&gt;
+		   &lt;td&gt;&lt;input type="text" size="30" value="" name="groomfirst" 
+		     title="花婿の名" tabindex="1"&gt;&lt;/td&gt;
+		   &lt;td&gt;&lt;input type="text" size="30" value="" name="bridefirst" 
+		     title="花嫁の名" tabindex="4"&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		   &lt;th&gt;姓&lt;/th&gt;
+		   &lt;td&gt;&lt;input type="text" size="30" value="" name="groomlast" 
+		     title="花婿の姓" tabindex="2"&gt;&lt;/td&gt;
+		   &lt;td&gt;&lt;input type="text" size="30" value="" name="bridelast" 
+		     title="花嫁の姓" tabindex="5"&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+		   &lt;th&gt;出生地&lt;/th&gt;
+		   &lt;td&gt;&lt;input type="text" size="30" value="" name="groombirth" 
+		     title="花婿の出生地" tabindex="3"&gt;&lt;/td&gt;
+		   &lt;td&gt;&lt;input type="text" size="30" value="" name="bridebirth" 
+		     title="花嫁の出生地" tabindex="6"&gt;&lt;/td&gt;
+		   &lt;/tr&gt;
+		&lt;/table&gt;
+		&lt;/form&gt;
+		</code></pre>
+	</div>
+
+</div>
+
+<h3 class="small-head" id="H4-ex2">事例 2</h3>
+<div class=example>
+	<div class=textbody>
+		<p>ウェブページは上部の右端に検索フィールドを提供している。コンテンツの順番が最初ではないが、タブ順番が最初になるようにフィールドには tabindex="1" が与えられている。</p>
+	</div>
+</div>
+<h3 class="small-head" id="H4-ex3">事例 3</h3>
+<div class=example>
+	<div class=textbody>
+		<p><code>tabindex</code> 値は、連続した番号である必要はなく、特定の値で始まる必要もない。値は一意的である必要もない。同じ<code>tabindex</code> 値を持つ要素は、その文字の出現順にナビゲートされる。そのため、下記の事例ではタブ順番は1、3、2、4となる。</p>
+	</div>
+	<div class=code>
+		<p><strong>コード例:</strong></p>
+		<pre><code>
+		&lt;a href="" tabindex="1"&gt;1&lt;/a&gt;
+		&lt;a href="" tabindex="2"&gt;2&lt;/a&gt;
+		&lt;a href="" tabindex="1"&gt;3&lt;/a&gt;
+		&lt;a href="" tabindex="2"&gt;4&lt;/a&gt;
+		</code></pre>
+	</div>
+	<div class=textbody>
+		<p>タブ順番がコンテンツ順番に従っているコンテンツのセクションにおいて、個々の要素に異なる<code>tabindex</code>値を指定するよりも,
+		全ての要素に同じ値を与えることでエラーを起こりにくくすることが可能である。それらの要素を再配列する、又は新しい要素を加える、及び論理的なタブ順番を設定することは容易である。</p>
+	</div>
+	<div class=code>
+		<p><strong>コード例:</strong></p>
+		<pre><code>
+		&lt;a href="xxx" tabindex = "1"&gt;リストの1番目のリンク&lt;/a&gt;
+		&lt;a href="xxx" tabindex = "1"&gt;リストの2番目のリンク&lt;/a&gt;
+		&lt;a href="xxx" tabindex = "1"&gt;初めにリストが作られて大分たってから追加されたリンク&lt;/a&gt;
+		&lt;a href="xxx" tabindex = "1"&gt;リストの3番目のリンク&lt;/a&gt;
+		  ...
+		&lt;a href="xxx" tabindex = "1"&gt;リストの20番目のリンク&lt;/a&gt;
+		</code></pre>
+	</div>
+</div>
+
+<h2 id="H4-resources">参考リソース</h2>
+<div class=textbody>
+	<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+	<ul>
+		<li>
+			<p><a href="http://www.w3.org/TR/html4/interact/forms.html#adef-tabindex">Tabbing navigation in the HTML 4.01 specification</a></p>
+		</li>
+	</ul>
+</div>
+
+<h2 id="H4-related-techs">関連する実装方法</h2>
+<div class=textbody>
+	<ul>
+		<li><a href="G59.html">G59： コンテンツ内の順番及び関係に従った順序で、インタラクティブな要素を配置する</a> 
+		<li><a href="F44.html">F44： 達成基準 2.4.3 の不適合事例 － tabindex属性を用いて、意味及び操作性を保持しないタブ順序を指定している</a> 
+		<li><a href="F85.html">F85： 達成基準 2.4.3 の不適合事例 － 連続するナビゲーション順序において、トリガーとなるコントロールに隣接していないダイアログ又はメニューを用いている</a>
+		</li>
+	</ul>
+</div>
+
+<h2 id="H4-tests">検証</h2>
+<div class=textbody>
+	<h3 class="small-head" id="H4-procedure">チェックポイント</h3>
+	<ol class=enumar>
+		<li><p><code>tabindex</code> が使われている。</p>
+		<li><p><code>tabindex</code> が使われているならば、<code>tabindex</code> 属性により指定されたタブ順番がコンテンツの関係に従っている。</p></li>
+	</OL>
+	<h3 class="small-head" id="H2-results">判定基準</h3>
+	<ul>
+		<li>
+			<p>2.を満たしている。</p>
+		</li>
+	</ul>
+</div>
+
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+	<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="H2.html"><strong>前：</strong>実装方法 H2</a></li>
+	<li><a href="H24.html"><strong>次：</strong>実装方法 H24</a></li>
+</ul>
+
+<div class=footer>
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+	<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+		<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H4.html">H4: Creating a logical tab order through links, form controls, and objects（英語）</a></li>
+		<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+		<li>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</li>
+	</ul>
+</div>
+</body>
+</html>

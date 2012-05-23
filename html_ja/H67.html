@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>H67: 支援技術が無視すべき画像の img 要素で、alt属性値を空にして、title 属性を付与しない</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head><body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+		<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+		</div>
+<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="H65.html"><strong>前：</strong>実装方法 H65</a></li>
+			<li><a href="H69.html"><strong>次：</strong>実装方法 H69</a></li>
+		</ul>
+	<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#H67-applicability">適用（対象）</a></li>
+			<li><a href="#H67-description">解説</a></li>
+			<li><a href="#H67-examples">事例</a></li>
+			<li><a href="#H67-resources">参考リソース</a></li>
+			<li><a href="#H67-related-techs">関連する実装方法</a></li>
+			<li><a href="#H67-tests">検証</a></li>
+		</ul>
+	</div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="H67" id="H67"> </a>H67: 支援技術が無視すべき画像の img 要素で、alt属性値を空にして、title 属性を付与しない</h1>
+        
+            <div class="applicability"><h2 id="H67-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>画像を読み込むHTML及びXHTMLドキュメント</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p><ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#text-equiv-all">達成基準 1.1.1 (非テキストコンテンツ)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#text-equiv-all">
+						How to Meet 1.1.1 (Non-text Content)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/text-equiv-all.html">達成基準 1.1.1 (非テキストコンテンツ) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="H67-description">解説</h2><div class="textbody">
+          
+               <p>この実装方法の目的は、支援技術が無視できるように画像をマークアップする方法を示すことである。</p>
+          
+               <p> title 属性が使用されておらず、代替テキストが空に指定されているなら(例 <code>alt=""</code>)、それは画像を無視して差し支えないことを支援技術に示している。</p>
+
+          
+               <p>注記：<code>alt=" "</code> のように代替テキストとして空白を入れてもよいが、<code>alt=""</code> のように代替テキストを空にする方が望ましい。</p>
+          
+               <p>注記：alt属性の代替テキストを 「空」にするのと、alt属性が指定されていないことは同義ではない。</p>
+        
+            </div>
+        
+            <h2 class="small-head" id="H67-examples">事例</h2>
+
+          
+               <h3 class="small-head" id="H67-ex1">事例 1</h3><div class="example"> 
+              
+                  <div class="textbody">
+                  
+                     <p>次の画像は、ウェブページに装飾のための画像を挿入するのに使用される。</p>
+              
+                 </div>
+              
+                  <div class="code">
+                    <p><strong>コード例:</strong></p><pre><code>
+&lt;img src="squiggle.gif" width="20" height="20" alt="" /&gt;
+</code></pre></div>
+          
+               </div>
+
+        
+            
+        
+            <h2 id="H67-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>
+                  
+                           <a href="http://www.webaim.org/techniques/images/alt_text.php#null">'Null alt
+                    text' in WebAIM's 'Creating Accessible Images'</a> also shows how to do this
+                  in Dreamweaver. </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+
+        
+            <h2 id="H67-related-techs">関連する実装方法</h2><div class="textbody"><p>（現時点では何も示されていない。）</p>
+            </div>
+        
+            <h2 id="H67-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="H67-procedure">チェックポイント</h3>
+            
+                  <p>無視されるべき各画像に対して、</p>
+            
+                  <ol class="enumar"><li>
+                
+                        <p><code>title</code> 属性がない又は空である。</p>
+
+              
+                     </li><li>
+                
+                        <p> <code>alt</code> 属性が存在して、空である又は空白だけを含む(<code>&amp;nbsp;</code>は除く)。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="H67-results">判定基準</h3>
+            
+                  <ul><li>
+
+                
+                        <p>1.及び2.を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="H65.html"><strong>前：</strong>実装方法 H65</a></li>
+			<li><a href="H69.html"><strong>次：</strong>実装方法 H69</a></li>
+		</ul>
+
+        <div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H67.html">H67: Using null alt text and no title attribute on img elements for images that AT should ignore（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></li>
+			</ul>
+	</div>
+</body></html>

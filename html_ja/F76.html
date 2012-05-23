@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>F76: 達成基準 3.2.2 の不適合事例 － 利用者が見逃してしまうような位置に、ユーザーインタフェース要素の設定を変更することにより起こる状況の変化に関する説明文を提供している</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+
+	<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+	</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="F75.html"><strong>前: </strong> 不適合事例 F75</a></li>
+	<li><a href="F77.html"><strong>次: </strong> 不適合事例 F77</a></li>
+</ul>
+
+
+<div class="navtoc">
+<p>このページのコンテンツ：<br /></p>
+<ul id="navbar">
+<li><a href="#F76-applicability">適用（対象）</a></li>
+<li><a href="#F76-description">解説</a></li>
+<li><a href="#F76-tests">検証</a></li>
+</ul>
+</div> 
+            <div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+ <h1><a name="F76" id="F76"> </a>F76: 達成基準 3.2.2 の不適合事例 － 利用者が見逃してしまうような位置に、ユーザーインタフェース要素の設定を変更することにより起こる状況の変化に関する説明文を提供している</h1>
+        
+            <div class="applicability"><h2 id="F76-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>全てのウェブコンテンツ技術</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する不適合事例である：</p><ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#consistent-behavior-unpredictable-change">達成基準 3.2.2 (ユーザインタフェース・コンポーネントによる状況の変化)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#consistent-behavior-unpredictable-change">
+						How to Meet 3.2.2 (On Input)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html">達成基準 3.2.2 (ユーザインタフェース・コンポーネントによる状況の変化) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="F76-description">解説</h2><div class="textbody">
+          
+               <p>事前の説明がない場合、ユーザーインタフェース要素の設定を変更することによって起こる予期せぬ状況の変化が、利用者を混乱させてしまうことがある。そのような状況が起こる前に利用者が説明を受けられるようにしなければならない。見直す機会がないような方法で説明が提供されると、利用者が混乱してしまう恐れがある。</p>
+        
+               <p>不適合となる事例：</p>
+          
+               <ul><li>
+              
+                     <p>設定を変更することで状況の変化が発生するユーザーインタフェース要素よりも前に、ウェブページ上で説明が提供されていない。</p>
+            
+                  </li><li>
+              
+                     <p>複数のステップからなる処理で、設定の変更によって状況の変化が起きるユーザーインタフェース要素に達するまでに、利用者が特定のステップを通らなければならない場合に、このような状況の変化に直面するステップより前の処理の中で利用者に説明が提供されていない。</p>
+            
+                  </li><li>
+              
+                     <p>イントラネット上のウェブアプリケーションにおいて、状況の変化についての説明が提供されていない。</p>
+            
+                  </li></ul>
+        
+            </div>
+        
+            <h2 id="F76-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="F76-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>ユーザーインタフェースの設定の変更によって状況の変化が生じる。</p>
+              
+                     </li><li>
+                
+                        <p>全ての利用者が状況の変化に出くわす前に見直しができるような説明文がある。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="F76-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>1.を満たしていて、2.を満たしていない場合、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+         <!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+	<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="F75.html"><strong>前: </strong> 不適合事例 F75</a></li>
+	<li><a href="F77.html"><strong>次: </strong> 不適合事例 F77</a></li>
+</ul>
+
+<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F76.html">F76: Failure of 3.2.2 due to providing instruction material about the change of context by change of setting in a user interface element at a location that users may bypass（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+	</ul>
+</div>
+</body>
+</html>

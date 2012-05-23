@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G19: どの1秒間においても、コンテンツに3回よりも多く閃光を放つコンポーネントがないことを確認する</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/">
+<img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G18.html"><strong>前：</strong>実装方法 G18</a></li>
+			<li><a href="G21.html"><strong>次：</strong>実装方法 G21</a></li>
+		</ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#H25-applicability">適用（対象）</a></li>
+			<li><a href="#H25-description">解説</a></li>
+			<li><a href="#H25-examples">事例</a></li>
+			<li><a href="#H25-resources">参考リソース</a></li>
+			<li><a href="#H25-related-techs">関連する実装方法</a></li>
+			<li><a href="#H25-tests">検証</a></li>
+		</ul>
+</div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G19" id="G19"> </a>G19: どの1秒間においても、コンテンツに3回よりも多く閃光を放つコンポーネントがないことを確認する</h1>
+        
+            <div class="applicability"><h2 id="G19-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>あらゆるウェブコンテンツ技術</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+            <ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#seizure-does-not-violate">達成基準 2.3.1 (3回の閃光又は閾値以下)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#seizure-does-not-violate">
+						How to Meet 2.3.1 (Three Flashes or Below Threshold)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/seizure-does-not-violate.html">達成基準 2.3.1 (3回の閃光又は閾値以下) を理解する
+					</a></li></ul></li><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#seizure-three-times">達成基準 2.3.2 (3回の閃光)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#seizure-three-times">
+						How to Meet 2.3.2 (Three Flashes)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/seizure-three-times.html">達成基準 2.3.2 (3回の閃光) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="G19-description">解説</h2><div class="textbody">
+          
+               <p>この実装方法の目的は、明るく、その面積が大きいと発作を起こすといわれている速度で閃光を放つことを防ぐことである。
+			   面積を拡大して見ている利用者もいるので、この実装方法ではコンテンツのサイズの大きさに関係なく、1秒間に3回より少ない閃光しか
+			   用いてはいけないとしている。</p>
+          
+               <div class="note">
+                 <p class="prefix">注記１：</em>この実装方法は、等級 Aの達成基準より厳しくなっている。
+				 しかし、検証は簡単で、等級Aの達成基準を満たしていることの検証にも用いることができる。
+				 等級Aの達成基準に適合していない閾値の場合、1秒間に3.5回以上の閃光があるからである。多くのコンテンツには閃光を放つものはなく、
+				 点滅があるコンテンツでも一部稀な場合を除いてこれほど速く点滅しない。よって、達成基準で示されているより複雑な検証を実行しなくてもすむようにするために、
+				 この実装方法にあるようにコンテンツが1秒間に1、2回、あるいは最大でも3回までしか閃光を放たないようにしておくとよい。</p></div>
+          
+               <p>
+            
+                  <strong>3.5回の閃光又は7回の遷移の事例：</strong>
+          
+               </p>
+          
+               <ul><li>
+              
+                     <p>始まりが暗い色－明るい色－暗い色－明るい色－暗い色－明るい色－暗い色－明るい色で終わる、又は</p>
+            
+                  </li><li>
+              
+                     <p>始まりが明るい色－暗い色－明るい色－暗い色－明るい色－暗い色－明るい色－暗い色で終わる</p>
+            
+                  </li></ul>
+        
+            </div>
+        
+            <h2 class="small-head" id="G19-examples">事例</h2>
+          
+               <ul><li>
+              
+                     <p>
+
+コンテンツに閃光を放つものがある。コンテンツは、続けて2回又は3回しか光らないように設計されている。
+    </p>
+            
+                  </li></ul>
+        
+            
+        
+            <h2 id="G19-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>
+                  
+                           <a href="http://trace.wisc.edu/peat/">
+Trace Center Photosensitive Epilepsy Analysis Tool (PEAT)</a>
+                
+                        </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="G19-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+          
+               <li><a href="G15.html">G15： ツールを用いて、コンテンツが一般閃光閾値及び赤色閃光閾値を越えていないことを確認する</a></li>
+        
+            </ul></div>
+        
+            <h2 id="G19-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G19-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>どの1秒間においても3回よりも多い閃光がない。</p>
+              
+                     </li><li>
+                
+                        <p>3回の閃光がある場合、1秒間の最後の明／暗の状態が初めと同じである。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G19-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>1.及び2.の両方を満たしている。
+    </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G18.html"><strong>前：</strong>実装方法 G18</a></li>
+			<li><a href="G21.html"><strong>次：</strong>実装方法 G21</a></li>
+		</ul>
+		<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+ <div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G19.html">G19: Ensuring that no component of the content flashes more than three times in any 1-second period（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+			</ul>
+</div>
+</body>
+	</html>

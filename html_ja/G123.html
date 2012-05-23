@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G123: 繰り返しているコンテンツのブロックの開始位置に、そのブロックの終了位置へのリンクを追加する</title>
+<style type="text/css">
+body {max-width: 75em;}
+
+.description {margin-left: 0;}
+
+.textbody {padding-left: 2em;}
+
+div.code {
+font-family: 'Andale Mono', Courier, monospace; 
+font-size: 100%; 
+line-height: 120%; 
+display: block; 
+width: 95%; 
+border-style: solid; 
+border-width: 1px ; 
+border-left: 6px solid #000066;
+padding: 0em;
+color: #006;
+background: #f9f5de; 
+border-color: #000066;
+margin-left: 1em;
+}
+
+q:before { content: ""; } 
+q:after { content: ""; } /* two separate rules because combined rule is not supported by Opera 6 */ 
+
+.sorethumb {color: red; background: inherit;}
+.revnote {
+border-style : solid;
+border-width : thin;
+border-color : #A7ABBF;
+background-color: #F0F8F8 ;
+color : black;
+page-break-inside: avoid ;
+}
+p.revnote , div.revnote {
+padding : 0.5em; 
+margin : .25em 0 .25em 0; /* top, right, bottom, left */
+}
+	li p {
+		margin-top: 0;                  
+		margin-bottom: 0; 
+	}
+
+p {
+		margin-top: 0;                  
+		margin-bottom: .5em; 
+	}
+   
+		</style>
+	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+	<link rel="stylesheet" type="text/css" href="css/additional.css" />
+	<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+	<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="G122.html"><strong>前：</strong>実装方法 G122</a></li>
+<li><a href="G124.html"><strong>次：</strong>実装方法 G124</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：<br /></p>
+<ul id="navbar">
+<li><a href="#G123-applicability">適用（対象）</a></li>
+<li><a href="#G123-description">解説</a></li>
+<li><a href="#G123-examples">事例</a></li>
+<li><a href="#G123-resources">参考リソース</a></li>
+<li><a href="#G123-related-techs">関連する実装方法</a></li>
+<li><a href="#G123-tests">検証</a></li>
+</ul>
+</div>  
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G123" id="G123"> </a>G123: 繰り返しているコンテンツのブロックの開始位置に、そのブロックの終了位置へのリンクを追加する</h1>
+        
+            <div class="applicability"><h2 id="G123-applicability">適用（対象）</h2><div class="textbody">
+<p>リンクを実装できる全てのウェブコンテンツ技術</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p><ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-skip">達成基準 2.4.1 (ブロック・スキップ)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20080430/#navigation-mechanisms-skip">
+						How to Meet 2.4.1 (Bypass Blocks)：英語</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">達成基準 2.4.1 (ブロック・スキップ) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="G123-description">解説</h2><div class="textbody">
+          
+               <p>この実装方法の目的は、ブロックの終わりまで飛び越えることで、構成要素のブロックを回避するメカニズムを提供することである。ブロックの最初のリンク又はブロックの直前にあるリンクによって、フォーカスをそのブロックの直後にあるコンテンツに遷移させる。リンクを選択することでキーボードフォーカスはブロックを飛ばして進んでいく。複数のブロックを飛び越える場合は、利用者はこれらのリンクを使ってブロックを一つずつスキップしていく。</p>
+        
+            </div>
+        
+            <h2 class="small-head" id="G123-examples">事例</h2>
+          
+               <h3 class="small-head" id="G123-ex1">事例 1: ナビゲーションリンクをスキップする</h3><div class="example">
+            
+                  
+            
+                  <div class="textbody">
+              
+                     <p>ある組織のウェブサイトのページには、サイトの主なセクション、サイトマップ、組織についての情報、及び組織との連絡方法へのリンクを含むナビゲーションバー又はメインメニューがある。このエリアの最初のリンクは「ナビゲーションリンクをスキップする」で、利用者はそのリンクを選択してこれらのリンクをスキップする。</p>
+            
+                  </div>
+          
+               </div>
+          
+               <h3 class="small-head" id="G123-ex2">事例 2：本の索引</h3><div class="example">
+            
+                  
+            
+                  <div class="textbody">
+              
+                     <p>本の中に何ページかのセットになって区分されている索引がある。索引のそれぞれのページの冒頭にあるコンテンツの中には、アルファベットのそれぞれの文字に対するリンクがあり、その文字で始まる記載内容の索引にリンクしている。そのセットの中の最初のリンクは「リンクをスキップして索引へ」である。利用者は、このリンクを選択して他のリンクをスキップする。 </p>
+            
+                  </div>
+          
+               </div>
+          
+               <h3 class="small-head" id="G123-ex3">事例 3：複数のリンクの集合</h3><div class="example">
+            
+                  
+            
+                  <div class="textbody">
+              
+                     <p>ウェブサイト内の全てのページにはサイトマップ、組織に関する情報、及び組織との連絡方法へのリンクが含まれているセクションがある。サイトにある各セクションの全てのページには、同様にその下位の区分へのリンクの集合がある。1番目のブロックの最初のリンクは「ナビゲーション・リンクをスキップ」で、最初のリンクの集合をスキップする。2番目のブロックの最初のリンクは「セクションのリンクをスキップ」で、そのサブセクションのリンクをスキップする。</p>
+            
+                  </div>
+          
+               </div>
+          
+               <h3 class="small-head" id="G123-ex4">事例 4：ナビゲーション・リンクのブロックが複数あるHTMLページ </h3><div class="example">
+            
+                  
+            
+                  <div class="textbody">
+              
+                     <p>この事例では、各セクションの冒頭の見出し要素（<a href="H69.html">実装方法 H69</a>）、及びそれぞれのセクションの最後までスキップするリンクの両方が用いられている。利用するユーザーエージェントの能力に依存するが、これによってキーボード・ナビゲーション又は見出しナビゲーションを用いて、繰り返されるコンテンツのブロックをスキップすることができる。
+              </p>
+            
+                  </div>
+            
+                  <div class="code"><pre>
+&lt;p&gt;&lt;a href="#content"&gt;Content title&lt;/a&gt;&lt;/p&gt;
+    &lt;h2&gt;メイン･ナビゲーション&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#subnav"&gt;サブ・ナビゲーション&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/a/"&gt;リンク A&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/b/"&gt;リンク B&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/c/"&gt;リンク C&lt;/a&gt;&lt;/li&gt;
+...
+      &lt;li&gt;&lt;a href="/j/"&gt;リンク J&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="iekbfix"&gt;
+      &lt;h2 id="subnav"&gt;サブ・ナビゲーション&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#ultranav"&gt;ウルトラ･サブ・ナビゲーション&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/suba/"&gt;サブ A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/subb/"&gt;サブ B&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/subc/"&gt;サブ C&lt;/a&gt;&lt;/li&gt;
+...
+        &lt;li&gt;&lt;a href="/subj/"&gt;サブ J&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="iekbfix"&gt;
+      &lt;h2 id="ultranav"&gt;ウルトラ･サブ・ナビゲーション&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#content"&gt;Content title&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/ultraa/"&gt;ウルトラ A&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/ultrab/"&gt;ウルトラ B&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/ultrac/"&gt;ウルトラ C&lt;/a&gt;&lt;/li&gt;
+...
+        &lt;li&gt;&lt;a href="/ultraj/"&gt;ウルトラ J&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;h2 id="content"&gt;コンテンツのタイトル&lt;/h2&gt;
+      &lt;p&gt;さて、ちょっと聞いてください。...&lt;/p&gt;
+    &lt;/div&gt;
+</pre></div>
+            
+                  <div class="textbody">
+              
+                     <p>CSS：</p>
+            
+                  </div>
+            
+                  <div class="code"><pre>
+div.iekbfix {
+  width: 100%;
+} 
+  </pre></div>
+          
+
+            
+        
+            <h2 id="G123-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>
+                  
+                           <a href="http://www.jimthatcher.com/skipnav.htm">Skip Navigation Links</a>
+                
+                        </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="G123-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+          
+               <li><a href="G1.html">G1： メインコンテンツエリアへ直接移動するリンクを各ページの先頭に追加する</a></li>
+          
+               <li><a href="G124.html">G124： ページの先頭に、コンテンツの各エリアへのリンクを追加する</a></li>
+        
+            </ul></div>
+        
+            <h2 id="G123-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G123-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>リンクが、繰り返されるコンテンツのブロックの前にある最後のフォーカス可能なコントロールである、又はブロック内の最初のリンクである。</p>
+              
+                     </li><li>
+                
+                        <p>リンクテキストがブロックをスキップすることを伝えている。</p>
+              
+                     </li><li>
+                
+                        <p>リンクは常に表示されている、又はキーボード・フォーカスを受け取ったときに表示される。
+                </p>
+              
+                     </li><li>
+                
+                        <p>リンクを選択すると、そのブロックの直後のコンテンツにフォーカスが移動する。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G123-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>上記の全てを満たしている。</p>
+              
+                     </li></ul>            
+        
+            </div>     
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="G122.html"><strong>前：</strong>実装方法 G122</a></li>
+<li><a href="G124.html"><strong>次：</strong>実装方法 G124</a></li>
+</ul>
+<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+ <p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+<div class="annotation">
+<p><strong>日本語訳における注記：</strong></p>
+<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+<ul>
+	<li>原文：<a href="G123.html">G123： Adding a link at the beginning of a block of repeated content to go to the end of the block（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+	<li>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+</ul>
+</div>
+</body></html>

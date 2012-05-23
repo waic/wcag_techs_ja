@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="ja" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>F10: 達成基準 2.1.2 及び 適合要件 5 の不適合事例 － 利用者が一つのフォーマットの中に閉じ込められてしまうように、複数のコンテンツ・フォーマットを組み合わせている</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+	<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+	<ul id="navigation">
+		<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+		<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+		<li><a title="F9: Failure of Success Criterion 3.2.5 due to changing the context when the user removes&#xA; focus from a form element" href="F9.html"><strong>前： </strong>不適合事例 F9</a></li>
+		<li><a title="F12: Failure of Success Criterion 2.2.5 due to having a session time limit without a mechanism&#xA; for saving user's input and re-establishing that information upon&#xA; re-authentication" href="F12.html"><strong>次： </strong>不適合事例 F12</a></li>
+	</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：</p>
+	<ul id="navbar">
+		<li><a href="#F10-applicability">適用（対象）</a></li>
+		<li><a href="#F10-description">解説</a></li>
+		<li><a href="#F10-examples">事例</a></li>
+		<li><a href="#F10-resources">参考リソース</a></li>
+		<li><a href="#F10-related-techs">関連する実装方法</a></li>
+		<li><a href="#F10-tests">検証</a></li>
+	</ul>
+</div>
+<div class="skiptarget">
+	<a id="maincontent">-</a>
+</div>
+	<h1><a name="F10" id="F10"> </a>F10: 達成基準 2.1.2 及び 適合要件 5 の不適合事例 － 利用者が一つのフォーマットの中に閉じ込められてしまうように、複数のコンテンツ・フォーマットを組み合わせている</h1>
+<div class="applicability">
+	<h2 id="F10-applicability">適用（対象）</h2>
+<div class="textbody">
+		<p><br />
+        利用者がキーボードを使ってコンテンツに入ることができるが、キーボードでコンテンツから抜け出すことができない状況を作り出すコンテンツ</p>
+</div>
+</div>
+		<p class="referenced">これは、次の達成基準に関連する不適合事例である： </p>
+		<ul>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#keyboard-operation-trapping">達成基準 2.1.2 (フォーカス移動)</a>
+			<ul>
+				<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#keyboard-operation-trapping">How to Meet 2.1.2 (No Keyboard Trap)：英語</a></li>
+				<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html">達成基準 2.1.2 (フォーカス移動) を理解する</a></li>
+			</ul></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#cc5">適合要件 5 (非干渉)</a></li>
+		</ul>
+	<h2 id="F10-description">解説</h2>
+<div class="textbody">
+		<p>コンテンツに複数のフォーマットが含まれていると、そのコンテンツを利用者に正しく提示するのに、しばしば1つ又は複数のユーザーエージェントあるいはプラグインが必要となる。例えば、XHTML、SVG、SMIL、XFormsを含んだウェブページは、利用者がコンテンツと情報のやり取りを行えるように、ブラウザに最大3つのプラグインを要求することがある。この文書では、プラグインが、キーボードフォーカスをプラグイン内に「閉じ込めて」しまい、キーボードだけを使用している利用者にそれ以外のフォーマットのコンテンツに戻る手段を与えないという不適合事例について述べている。</p>
+</div>
+	<h2 class="small-head" id="F10-examples">事例</h2>
+		<ul>
+			<li><p><strong>利用者を閉じ込めるプラグイン</strong>：　利用者がTabキーを押してプラグインに入ると、プラグインの外のコンテンツにキーボードを使って戻ることができなくなる。元の状態に戻って、新しいウェブページにナビゲートするには、利用者はブラウザを再起動しなければならず、このプラグインのコンテンツの後に続くコンテンツへは、いっさいアクセスできない。</p></li>
+		</ul>
+	<h2 id="F10-resources">参考リソース</h2>
+<div class="textbody">
+		<p>この実装方法に関するリソースは、今のところない。</p>
+</div>
+	<h2 id="F10-related-techs">関連する実装方法</h2>
+<div class="textbody">
+		<ul>
+			<li><a href="G21.html">G21： ユーザーがコンテンツ内に閉じ込められないようにする</a></li>
+			<li><a href="SCR20.html">SCR20： キーボードとその他のデバイス特有の機能を両方とも用いる</a></li>
+		</ul>
+</div>
+	<h2 id="F10-tests">検証</h2>
+<div class="textbody">
+	<h3 class="small-head" id="F10-procedure">チェックポイント</h3>
+		<ol class="enumar">
+			<li><p>キーボードを使って、コンテンツ内を行き来する。</p></li>
+			<li><p>キーボードフォーカスが「閉じ込め」られることはなく、また、ユーザーエージェントを閉じたり、OSを再起動したりすることなく、キーボードフォーカスをプラグインのコンテンツの外に移動させることが可能である。</p></li>
+		</ol>
+	<h3 class="small-head" id="F10-results">判定基準</h3>
+		<ul>
+			<li><p>キーボードフォーカスが「閉じ込められている」場合、この不適合の条件が適用され、そのコンテンツは達成基準及び適合要件 5を満たしていないことになる。</p></li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a title="F9: Failure of Success Criterion 3.2.5 due to changing the context when the user removes&#xA; focus from a form element" href="F9.html"><strong>前： </strong>不適合事例 F9</a></li>
+			<li><a title="F12: Failure of Success Criterion 2.2.5 due to having a session time limit without a mechanism&#xA; for saving user's input and re-establishing that information upon&#xA; re-authentication" href="F12.html"><strong>次： </strong>不適合事例 F12</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+		<p><strong>日本語訳における注記：</strong></p>
+		<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+		<ul>
+			<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F10.html">F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type（英語）</a></li>
+			<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+			<li>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+		</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G146: リキッドレイアウトを用いる</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		</head>
+		<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+		
+		<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+		</div>
+		<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G145.html"><strong>前：</strong>実装方法 G145</a></li>
+			<li><a href="G148.html"><strong>次：</strong>実装方法 G148</a></li>
+		</ul>
+				
+	<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#G146-applicability">適用（対象）</a></li>
+			<li><a href="#G146-description">解説</a></li>
+			<li><a href="#G146-examples">事例</a></li>
+			<li><a href="#G146-resources">参考リソース</a></li>
+			<li><a href="#G146-related-techs">関連する実装方法</a></li>
+			<li><a href="#G146-tests">検証</a></li>
+		</ul>
+	</div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G146" id="G146"> </a>G146: リキッドレイアウトを用いる</h1>
+        
+            <div class="applicability"><h2 id="G146-applicability">適用（対象）</h2><div class="textbody">
+          
+					<p>全てのウェブコンテンツ技術</p>
+        
+            </div></div>
+        
+				<p class="referenced">これは、次の達成基準に関連する実装方法である：</p><ul>
+                <li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#visual-audio-contrast-scale">達成基準 1.4.4 (テキストのサイズ変更)</a><ul>
+                <li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#visual-audio-contrast-scale">How to Meet 1.4.4 (Resize text)：英語</a></li>
+                <li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">達成基準 1.4.4 (テキストのサイズ変更) を理解する</a></li></ul></li></ul>
+        
+            <h2 id="G146-description">解説</h2><div class="textbody">
+          
+					<p>
+							この実装方法の目的は、表示領域幅の広狭に順応するレイアウト手法を用いることで、横スクロールバーが挿入されることなしに、コンテンツを表示できるようにすることである。オンスクリーン・ディスプレイ【訳注：ディスプレイの本体側面などに調節用のつまみがついているのではなく、画面上で各種設定を行うディスプレイ】に対応できるように、必要に応じてテキストサイズが変更できること、テキストを流し込み直せることの両方が可能なレイアウト領域を、リキッドレイアウトによって定義する。したがって、きっちりと決まったレイアウトとはならないが、各要素の関係と描画の順序は同じままである。さまざまなデバイスで問題なく表示できたり、通常とは異なるフォントサイズに設定変更しているユーザーに対するデザイン制作という面で、リキッドレイアウトは効果的な手法である。</p>
+          
+					<p>リキッドレイアウトの基本原則は次のとおりである。</p>
+          
+               <ol class="enumar"><li>
+              
+							<p>レイアウト領域を、テキストに応じてサイズが変わるユニットを利用して定義する。つまり、テキストの拡大縮小と同じように、レイアウト領域が広まったり狭まったりする。</p>
+            
+                  </li><li>
+              
+							<p>レイアウト領域を、フロートボックスを隣り合わせで横に並べたように配置する。つまり、パラグラフの中の各単語とほぼ同じような方法で、必要に応じて行送りされる。</p>
+            
+                  </li></ol>
+          
+					<p>複雑なリキッドレイアウトの実現には、入れ子にしたレイアウト領域、つまり大きな領域の中に部分ごとの複数の領域を入れ込む方法を利用する場合がある。単純なリキッドレイアウトであっても、テキストサイズの違いに関わらず見た目のよさを損なわないようにデザインを工夫する必要があるとはいえ、十分に計画したリキッドレイアウトは最も効果的なページデザインとなるだろう。</p>
+        
+            </div>
+        
+            <h2 class="small-head" id="G146-examples">事例</h2>
+          
+					<h3 class="small-head" id="G146-ex1">事例 1：HTMLとCSSでの単純なリキッドレイアウト</h3><div class="example">
+            
+                  
+            
+                  <div class="textbody">
+              
+							<p>
+									以下は、リキッドレイアウトの実現にHTMLとCSSを利用した、かなり単純な事例である。3つの列はテキストサイズが変わるのと同じようにサイズ調整される。もし全ての列を足した幅が、3つの列で利用できる幅の合計を超えてしまった場合、最後の列は前の列の横に置かれるのではなく、下に送られる。列に含まれるテキストの中で最も長い単語が列の幅におさまっている限り、フォントサイズを大きくすることができ、ブラウザの横スクロールバーへの影響はない。この事例では列の幅指定にパーセントを利用しており、「float」プロパティを利用して列をフロート領域として定義している。</p>
+            
+                  </div>
+            
+
+
+                 <div class="code"><p><strong>コード例：</strong></p><pre><code>   
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+&lt;title&gt;単純なリキッドレイアウトの例&lt;/title&gt;
+&lt;style type="text/css"&gt;
+
+.column
+	{
+	border-left: 1px solid green;
+	padding-left:1%;
+	float: left;
+	width: 32%;
+	}
+#footer
+	{
+	border-top: 1px solid green;
+	clear: both;
+	}
+&lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;WCAGの例&lt;/h1&gt;
+   &lt;h2&gt;3つの列に含まれるテキスト&lt;/h2&gt;
+      &lt;div title="1列目" class="column"&gt;
+        &lt;h3&gt;Block 1&lt;/h3&gt;
+        &lt;p&gt; この実装方法の目的は、表示領域幅の広狭に順応するレイアウト手法を
+            用いることで、横スクロールバーが挿入されることなしに、コンテンツ
+            を表示できるようにすることである。
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;div title="2列目" class="column"&gt;
+        &lt;h3&gt;Block 2&lt;/h3&gt;
+        &lt;p&gt; これはとても簡単な例であり、テキストサイズの変化に順応するページ
+            レイアウトである。
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;div title="3列目" class="column"&gt;
+      &lt;h3&gt;Block 3&lt;/h3&gt;
+        &lt;p&gt; より複雑なページレイアウトに関する実装方法については、以下の参考
+            リソースを参照のこと。
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;p id="footer"&gt;Footer text&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt; </code></pre></div>
+
+
+               </div>
+        
+            
+        
+				<h2 id="G146-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>
+                  
+                           <a href="http://www.webreference.com/authoring/style/sheets/css_mastery2/">CSS Mastery: Fixed-Width, Liquid, and Elastic Layouts and Faux Columns</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://www.cssliquid.com/">Liquid Designs</a>
+                
+                        </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="G146-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+          
+               <li><a href="C12.html">C12： パーセントを用いてフォントサイズを指定する</a></li>
+          
+               <li><a href="C13.html">C13： キーワードを用いてフォントサイズを指定する</a></li>
+          
+               <li><a href="C14.html">C14： em単位を用いてフォントサイズを指定する</a></li>
+        
+            </ul></div>
+        
+            <h2 id="G146-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G146-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+								<p>ユーザーエージェントでコンテンツを表示する。</p>
+              
+                     </li><li>
+                
+								<p>テキストサイズを200%に拡大する。</p>
+								
+                     </li><li>
+                
+								<p>ブラウザの横スクロールバーが表示されることなしに、すべてのコンテンツが表示され、すべての機能が利用できるか確認する。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G146-results">判定基準</h3>
+            
+                  <ul><li>
+                
+								<p>3.を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+			<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G145.html"><strong>前：</strong>実装方法 G145</a></li>
+			<li><a href="G148.html"><strong>次：</strong>実装方法 G148</a></li>
+		</ul>
+				
+				<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+                        <p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+
+		<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G146.html">G146: Using liquid layout（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+				<li>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></li>
+			</ul>
+	</div>
+</body></html>

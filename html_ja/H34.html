@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>H34： UnicodeのRLM文字又はLRM文字を用いて、インラインでテキストの方向を混在させる</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" />
+</a></p>
+<p class="collectiontitle">
+<a href="./">WCAG 2.0 実装方法集</a></p></div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="H33.html"><strong>前：</strong>実装方法 H33</a></li>
+			<li><a href="H35.html"><strong>次：</strong>実装方法 H35</a></li></ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#H34-applicability">適用（対象）</a></li>
+			<li><a href="#H34-description">解説</a></li>
+			<li><a href="#H34-examples">事例</a></li>
+			<li><a href="#H34-resources">参考リソース</a></li>
+			<li><a href="#H34-related-techs">関連する実装方法</a></li>
+			<li><a href="#H34-tests">検証</a></li>
+		</ul></div>
+<div class="skiptarget"><a id="maincontent">-</a></div>
+ <h1><a name="H34" id="H34"> </a>H34： UnicodeのRLM文字又はLRM文字を用いて、インラインでテキストの方向を混在させる</h1>
+        
+            <div class="applicability">
+<h2 id="H34-applicability">適用（対象）</h2>
+<div class="textbody">
+          
+               <p>HTML 及び XHTML</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+			<ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#content-structure-separation-sequence">達成基準 1.3.2 (意味のある順序)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#content-structure-separation-sequence">
+						How to Meet 1.3.2 (Meaningful Sequence)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html">達成基準 1.3.2 (意味のある順序) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="H34-description">解説</h2>
+<div class="textbody">
+          
+               <p>この実装方法の目的は、HTMLの双方向性アルゴリズムが望ましくない結果を生じるとき時に、それを無効にするためにUnicode制御文字のright-to-left markとleft-to-right markを用いることである。たとえば、スペース又は句読点のようなニュートラルな文字が異なる方向性のテキストの間に置かれている
+時に必要となることがある。この実装方法で用いられているコンセプトは、W3C文書の「<a href="http://www.w3.org/International/articles/inline-bidi-markup/">
+What you need to know about the bidi algorithm and inline markup（双方向アルゴリズムとインラインマークアップを知るために必要なこと）</a>」に書かれている。</p>
+          
+               <p>Unicode 制御文字のright-to-left mark及びleft-to-right markは、以下に示すように、
+そのまま、又は文字符号か数字符号の参照によって挿入することが可能である。</p>
+          
+               <ul><li>
+              
+                     <p>left-to-right mark（LRM）: &amp;lrm; 又は &amp;#x200e; (U+200E)</p>
+            
+                  </li><li>
+              
+                     <p>right-to-left mark（RLM）: &amp;rlm; 又は &amp;#x200f; (U+200F)</p>
+            
+                  </li></ul>
+          
+               <p><acronym title="bidirectional">双方向性</acronym>のアルゴリズムが原因で、ソースコード編集者は期待通りに文字符号や数字符号の参照を表示できないことがある。</p>
+</div>
+        
+<h2 class="small-head" id="H34-examples">事例</h2>
+<h3 class="small-head" id="H34-ex1">事例 1</h3>
+<div class="example">
+<div class="textbody">
+              
+                     <p>この事例では、英語の文章の間にあるアラビア語のフレーズを示している。感嘆符はアラビア語のフレーズの一部であり、その左側にあるべきである。それはアラビア文字とラテン文字の間であり、段落全体の方向が<acronym title="left-to-right">LTR</acronym>（左から右）であるため、双方向性のアルゴリズムはアラビア語のフレーズの右側に感嘆符を置いている。</p>
+              
+                     <p>The title is "<span lang="ar" xml:lang="ar">مفتاح معايير الويب!</span>" in Arabic.</p>
+              
+                     <p>視覚的に並び替えられたASCIIバージョン（右から左へのテキストは大文字、左から右は小文字）：</p>
+              
+                     <p>the title is "HCTIWS SDRADNATS BEW!" in arabic.</p>
+              
+                     <p>表示されたテキスト（以下を参照）を見るとき、感嘆符の直後にUnicodeのright-to-left markを
+挿入することによって、感嘆符を正しい位置に置くことになる。right-to-left markを挿入するために、エスケープ文字又は（不可視の）制御文字を使用することができる。</p>
+              
+                     <p>The title is "<span lang="ar" xml:lang="ar">مفتاح معايير الويب!‏</span>" in Arabic.</p>
+              
+                     <p>視覚的に並び替えられたASCIIバージョン：</p>
+              
+                     <p>the title is "!HCTIWS SDRADNATS BEW" in arabic.</p>
+            
+                  </div></div>
+          
+<h2 id="H34-resources">参考リソース</h2>
+<div class="textbody">
+<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+<ul>
+<li><p><a href="http://www.w3.org/TR/i18n-html-tech-bidi/">Authoring Techniques for
+                    XHTML &amp; HTML Internationalization: Handling Bidirectional Text 1.0</a></p></li>
+<li><p><a href="http://www.w3.org/TR/i18n-html-tech-bidi/#ri20030218.135304584">Mixing
+                    text direction inline</a></p></li>
+<li><p><a href="http://www.w3.org/International/articles/inline-bidi-markup/">What you
+                    need to know about the bidi algorithm and inline markup</a>
+</p></li>
+<li><p><a href="http://www.w3.org/International/geo/html-tech/tech-bidi.html#bidisource">Problems with bidirectional source text</a>
+</p></li></ul>
+ </div>
+        
+            <h2 id="H34-related-techs">関連する実装方法</h2>
+<div class="textbody"><ul>
+          
+               <li><a href="H56.html">H56： インライン要素の dir 属性を用いて、入れ子になったテキストの表記方向に伴う問題を解決するs</a></li></ul></div>
+<h2 id="H34-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="H34-procedure">チェックポイント</h3>
+<ol class="enumar"><li>
+<p>テキストの方向が変わっている箇所のソースを調べる。</p></li>
+<li>
+<p>テキストの方向が変わっている際には、スペース又は句読点のようなニュートラルな文字が初期設定ではない方向で表示されたテキストに隣接している。</p></li>
+<li>
+<p>上記2.に該当し、かつHTMLの双方向性のアルゴリズムがニュートラルな文字の誤った配列を生み出している場合、ニュートラルな文字の直後にUnicode制御文字の right-to-left又はleft-to-right markがあり、ニュートラルな文字を前の文字列の一部として配置させている。</p></li></ol>
+<h3 class="small-head" id="H34-results">判定基準</h3>
+<ul><li>
+<p>3.を満たしている。</p></li></ul></div>
+      
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="H33.html"><strong>前：</strong>実装方法 H33</a></li>
+			<li><a href="H35.html"><strong>次：</strong>実装方法 H35</a></li>
+		</ul>
+<div class="footer">
+		<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright">
+<a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+ <div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H34.html">H34: Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction inline
+（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：<a href=http://jp.fujitsu.com>富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></li>
+			</ul>
+</div>
+</body></html>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G195: コンテンツ制作者が提供する視認性に優れたフォーカスインジケータを用いる
+              </title><link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G194.html"><strong>前：</strong>実装方法 G194</a></li>
+			<li><a href="G196.html"><strong>次：</strong>実装方法 G196</a></li>
+		</ul>
+	<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#G195-applicability">適用（対象）</a></li>
+			<li><a href="#G195-description">解説</a></li>
+			<li><a href="#G195-examples">事例</a></li>
+			<li><a href="#G195-related-techs">関連する実装方法</a></li>
+			<li><a href="#G195-tests">検証</a></li>
+		</ul>
+	</div> 
+   <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G195" id="G195"> </a>G195: コンテンツ制作者が提供する視認性に優れたフォーカスインジケータを用いる</h1>
+            
+            <div class="applicability"><h2 id="G195-applicability">適用（対象）</h2><div class="textbody">
+               <p>全てのウェブコンテンツ技術</p>
+            </div></div>
+            
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+            <ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-focus-visible">達成基準 2.4.7 (視覚的に認識可能なフォーカス)</a><ul>
+            <li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-focus-visible">How to Meet 2.4.7 (Focus Visible)：英語</a></li>
+            <li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html">達成基準 2.4.7 (視覚的に認識可能なフォーカス) を理解する</a></li></ul></li></ul>
+            
+            <h2 id="G195-description">解説</h2><div class="textbody">
+                
+               <p>この実装方法の目的は、視認性に優れたフォーカスを作ることによりブラウザのフォーカスインジケータを強調することである。多くのブラウザにおける初期値
+のフォーカスインジケータは、細いドットの黒い線になっている。アウトラインを既に持っているようなフォーム要素を囲っている場合、テーブルセルの中にフォーカス要素が入っている場合、フォーカスされた要素がとても小さい場合、もしくはページの背景の色が濃い色の場合は、そのフォーカスを見ることが困難である。</p>
+               <p>この実装方法において、利用者がマウス、タブキー、矢印キー、キーボードのショートカット、もしくは他の方法を用いて要素にフォーカスを置いている時、アプリケーションは高いコントラスト比を持った色、太字、そして光を放つような視覚的インジケータを用いることによってフォーカスをより視認性のあるものにしている。 </p>
+            
+            </div>
+            
+            <h2 class="small-head" id="G195-examples">事例</h2>
+                
+               <h3 class="small-head" id="G195-ex1">事例 1: リンク</h3><div class="example">
+                    
+                  
+                    
+                  <div class="textbody">
+                        
+                     <p>濃い背景色と明るい文字とリンクを持つウェブページがある。フォーカスがリンクにあたると、そのリンクは3ピクセルの明るい黄色のラインで囲まれる。</p>
+                    
+                 </div>
+                
+               </div>
+                
+               <h3 class="small-head" id="G195-ex2">事例 2: フォーム要素</h3><div class="example">
+                    
+                  
+                    
+                  <div class="textbody">
+                        
+                     <p>テーブルの中にフォームが書かれているウェブページがある。テーブルとフォームの要素の両方の境界は細くて黒い線になっている。フォーカスがフォーム要素に当たる時、その要素は部分的に透明になっている5ピクセルの赤い線で囲まれる。</p>
+                    
+                  </div>
+                
+               </div>
+                
+               <h3 class="small-head" id="G195-ex3">事例 3: メニュー</h3><div class="example">
+                    
+                  
+                    
+                  <div class="textbody">
+                        
+                     <p>サブメニューを持ったインタラクティブなメニューを含んだウェブページがある。利用者は矢印キーを使ってメニューの中でフォーカスを動かすことができる。フォーカスが動くと、フォーカスが当たっているメニュー項目はその背景を異なる色に変える。その色は周りの項目に対して3:1のコントラスト比を持ち、そのメニューのテキストの色と4.5:1のコントラスト比を持っている。</p>
+                    
+                  </div>
+                
+               </div>
+            
+            
+            
+            <h2 id="G195-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+                
+               <li><a href="G149.html">G149： フォーカスを受け取った際に、ユーザーエージェントによって強調されるユーザーインタフェースコンポーネントを用いる</a></li>
+                
+               <li><a href="G165.html">G165： 視認性に優れた標準のフォーカスインジケータが引き継がれるように、プラットフォーム標準のフォーカスインジケータを用いる</a></li>
+                
+               <li><a href="C15.html">C15： CSSを用いて、ユーザーインタフェースコンポーネントがフォーカスを受けとったときの表示を変更する</a></li>
+                
+               <li><a href="SCR31.html">SCR31： スクリプトを用いて、フォーカスのある要素の背景色又はボーダーを変更する</a></li>
+            
+            </ul></div>
+            
+            <h2 id="G195-tests">検証</h2><div class="textbody">
+                
+               <h3 class="small-head" id="G195-procedure">チェックポイント</h3>
+                    
+                  <ol class="enumar"><li>
+                        <p>マウスを用いてページ上のそれぞれのフォーカスできるユーザインターフェース要素にフォーカスを置く。</p>
+                     </li><li>
+                        <p>視認性に優れたフォーカスインジケータがある。</p>
+                     </li><li>
+                        <p>キーボードを用いてページ上のそれぞれのフォーカスできるユーザインターフェース要素にフォーカスを置く。</p>
+                     </li><li>
+                        <p>視認性に優れたフォーカスインジケータがある。</p>
+                     </li></ol>
+                    
+                
+               
+                
+               <h3 class="small-head" id="G195-results">判定基準</h3>
+                    
+                  <ul><li>
+                        <p>2.及び 4.を満たしている。</p>
+                     </li></ul>
+
+            </div>
+
+   <!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G194.html"><strong>前：</strong>実装方法 G194</a></li>
+			<li><a href="G196.html"><strong>次：</strong>実装方法 G196</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+ <p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G195.html">G195: Using an author-supplied, highly visible focus indicator（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+				<li>日本語訳：<a href=http://jp.fujitsu.com>富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></li>
+			</ul>
+</div></body></html>

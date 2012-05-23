@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>G9: ライブの同期したメディアに対してキャプションを作成する</title>
+	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css">
+	<link rel="stylesheet" type="text/css" href="css/additional.css">
+	<link rel="stylesheet" type="text/css" href="css/slicenav.css">
+	<link rel="stylesheet" type="text/css" href="css/waic-wg2.css">
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="images/w3c_home.png"/></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+	<li><strong><a href="Overview.html">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G8.html"><strong>前：</strong>実装方法 G8</a></li>
+	<li><a href="G10.html"><strong>次：</strong>実装方法 G10</a></li>
+</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：<br /></p>
+	<ul id="navbar">
+		<li><a href="#G9-applicability">適用（対象）</a></li>
+		<li><a href="#G9-description">解説</a></li>
+		<li><a href="#G9-examples">事例</a></li>
+		<li><a href="#G9-resources">参考リソース</a></li>
+		<li><a href="#G9-related-techs">関連する実装方法</a></li>
+		<li><a href="#G9-tests">検証</a></li>
+	</ul>
+</div>
+
+<div class="skiptarget"><a id="maincontent">-</a></div>
+<h1><a name="G9" id="G9"> </a>G9: ライブの同期したメディアに対してキャプションを作成する</h1>
+
+<div class="applicability">
+	<h2 id="G9-applicability">適用（対象）</h2>
+	<div class="textbody">
+		<p>視聴覚の情報を提示する全てのウェブコンテンツ技術</p>
+	</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+	<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-real-time-captions">達成基準 1.2.4 (ライブの音声コンテンツのキャプション)</a>
+		<ul>
+			<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#media-equiv-real-time-captions">How to Meet 1.2.4 (Captions (Live))：英語</a></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/media-equiv-real-time-captions.html">達成基準 1.2.4 (ライブの音声コンテンツのキャプション) を理解する</a></li>
+		</ul>
+	</li>
+</ul>
+
+<h2 id="G9-description">解説</h2>
+<div class="textbody">
+	<p>この実装方法の目的は、音声を聞くことができない利用者がリアルタイムに同期したメディア放送にアクセスできるようにすることである。間違いを訂正するか、二度聞き又は単語が正確に再現されていることを確認するため誰かに意見を聞く時間がほとんどないので、正確なリアルタイムのキャプションを作成することはより困難である。情報があまりに速く流れている時は、簡略化又は言い換えもさらに困難である。</p>
+	<p>リアルタイムのタイピングテキスト入力技術には、速記及び高速タイピング技術を使用するものが存在する。復唱による音声・テキスト変換（人が音声を聞き、彼らの音声を覚えこませたコンピューターへ慎重に復唱する）は、今日の電話リレーサービスで使用されており、将来的にはキャプション作成に使用されるかもしれない。ゆくゆくは補正機能を持つ音声・テキスト変換が可能になるだろう。</p>
+</div>
+
+<h2 class="small-head" id="G9-examples">事例</h2>
+<ul>
+	<li>
+		<p>事例 1：テレビスタジオでは、オンラインのイブニングニュースのキャプションを作成するために、リアルタイムのキャプションサービスを利用している。</p>
+	</li>
+</ul>
+
+<h2 id="G9-resources">参考リソース</h2>
+<div class="textbody">
+	<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+	<ul>
+		<li>
+			<p>
+				<a href="http://webaim.org/products/captioncaster/">CaptionCaster</a>
+			</p>
+		</li>
+	</ul>
+</div>
+
+<h2 id="G9-related-techs">関連する実装方法</h2>
+<div class="textbody">
+	<ul>
+		<li><a href="G87.html">G87： クローズド・キャプションを提供する</a></li>
+		<li><a href="G93.html">G93： オープン・キャプション（常に表示）を提供する</a></li>
+		<li><a href="G157.html">G157： ライブの音声キャプションサービスをウェブページに組み込む</a></li>
+	</ul>
+</div>
+
+<h2 id="G9-tests">検証</h2>
+<div class="textbody">
+	<h3 class="small-head" id="G9-procedure">チェックポイント</h3>
+	<ol class="enumar">
+		<li>
+			<p>キャプションがリアルタイムに配信されることを保証するため、手順及びポリシーが所定の位置にある。</p>
+		</li>
+	</ol>
+	
+	<h3 class="small-head" id="G9-results">判定基準</h3>
+	<ul>
+		<li>
+			<p>1．を満たしている。</p>
+		</li>
+	</ul>
+</div>
+
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+	<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+	<li><strong><a href="Overview.html">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G8.html"><strong>前：</strong>実装方法 G8</a></li>
+	<li><a href="G10.html"><strong>次：</strong>実装方法 G10</a></li>
+</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+	<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+		<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G9.html">G9: Creating captions for live synchronized media（英語）</a></li>
+		<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+		<li>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</li>
+	</ul>
+</div>
+</body>
+</html>

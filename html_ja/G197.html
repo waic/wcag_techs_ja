@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G197: 同じ機能を有するコンテンツに対して、一貫したラベル、識別名及び代替テキストを用いる</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css"/>
+<link rel="stylesheet" type="text/css" href="css/additional.css"/>
+<link rel="stylesheet" type="text/css" href="css/slicenav.css"/>
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="images/w3c_home.png"/></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div><div id="skipnav"><p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p></div><a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="G196.html"><strong>前： </strong>実装方法 G196</a></li>
+<li><a href="G198.html"><strong>次： </strong>実装方法 G198</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：</p>
+<ul id="navbar">
+<li><a href="#G197-applicability">適用（対象）</a></li>
+<li><a href="#G197-description">解説</a></li>
+<li><a href="#G197-examples">事例</a></li>
+<li><a href="#G197-related-techs">関連する実装方法</a></li>
+<li><a href="#G197-tests">検証</a></li>
+</ul>
+</div>
+            
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div> 
+<h1><a name="G197" id="G197"> </a>G197: 同じ機能を有するコンテンツに対して、一貫したラベル、識別名及び代替テキストを用いる</h1>
+            
+            <div class="applicability"><h2 id="G197-applicability">適用（対象）</h2><div class="textbody">
+                
+               <p>全てのウェブコンテンツ技術</p>
+            
+            </div></div>
+            
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#consistent-behavior-consistent-functionality">達成基準 3.2.4 (一貫した識別性)</a>
+<ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#consistent-behavior-consistent-functionality">How to Meet 3.2.4 (Consistent Identification)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/consistent-behavior-consistent-functionality.html">達成基準 3.2.4 (一貫した識別性) を理解する</a></li></ul></li></ul>
+            
+            <h2 id="G197-description">解説</h2><div class="textbody">
+                
+               <p>この実装方法の目的は、認識障害、全盲もしくは弱視の利用者に対して、ウェブページ内の機能にインタラクトしたときに何が起こるかを理解するのを助けることである。同じ機能を提供するユーザ・インターフェース・コンポーネント（要素、リンク、JavaScriptオブジェクトなど）に異なるラベルが付けられていると、利用者は同じ機能を持つコンポーネントに出会ったことに気づかず、何が起きるかを予測することができないだろう。これがたくさんの無用な操作ミスにつながるかもしれない。加えて、一貫したラベル付けに関するこのようなアプローチはウェブサイト全体に対して適用することを推奨する。</p>
+            
+            </div>
+            
+            <h2 class="small-head" id="G197-examples">事例</h2>
+                
+               <ul><li>
+                     <p>あるウェブページには冒頭に「検索」とラベル付けされたフォームフィールドがある。ページの最後にも同じ機能を果たすフォームフィールドがあり、そのフォームフィールドもまた「検索」とラベル付けされている。</p>
+                  </li><li>
+                     <p>追加の情報が記載されたページ中のセクションに利用者を誘導するため、疑問符の画像が用いられている。疑問符の画像が現れる個所すべてにおいて、同一の「詳細情報」という代替テキストが付けられている。</p>
+                  </li><li>
+                     <p>あるウェブサイトでは問い合わせページへのリンクには「問い合わせ」というリンクテキストが付けられている。ページ最下部にも問い合わせページへのリンクが設けられている。このリンクのリンクテキストも「問い合わせ」となっている。</p>
+                  </li></ul>
+            
+            
+            
+            <h2 id="G197-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+                
+               <li><a href="H44.html">H44： label要素を用いて、テキストのラベルとフォーム・コントロールを関連付ける</a></li>
+                
+               <li><a href="H65.html">H65： label要素を用いることができないとき、title属性を用いてフォーム・コントロールを特定する</a></li>
+            
+            </ul></div>
+            
+            <h2 id="G197-tests">検証</h2><div class="textbody">
+                
+               <h3 class="small-head" id="G197-procedure">チェックポイント</h3>
+                    
+                  <ol class="enumar"><li>
+                        <p>各コンポーネントにはそれを特定できるテキスト（ラベル、識別名、代替テキストなど）が関連付けられている。</p>
+                     </li><li>
+                        <p>このテキストは同じ機能を提供するコンポーネントに関しては同一である。</p>
+                     </li></ol>
+                    
+                
+               
+                
+               <h3 class="small-head" id="G197-results">判定基準</h3>
+                    
+                  <ul><li>
+                        <p>1.及び 2.を満たしている。</p>
+                     </li></ul>
+                    
+                
+               
+            
+            </div>
+        
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="G196.html"><strong>前： </strong>実装方法 G196</a></li>
+<li><a href="G198.html"><strong>次： </strong>実装方法 G198</a></li>
+</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G197.html">G197: Using labels, names, and text alternatives consistently for content that has the same functionality（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：<a href="http://www.argv.org/">井上浩一（ARGV）</a></li>
+
+			</ul>
+	</div>
+</body>
+</html>

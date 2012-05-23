@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>H49: セマンティックなマークアップを用いて、強調又は特別なテキストをマークアップする</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+	</head>
+	<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+	
+		<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+		</div>
+		<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="H48.html"><strong>前：</strong>実装方法 H48</a></li>
+			<li><a href="H50.html"><strong>次：</strong>実装方法 H50</a></li>
+		</ul>
+		
+	<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#H49-applicability">適用（対象）</a></li>
+			<li><a href="#H49-description">解説</a></li>
+			<li><a href="#H49-examples">事例</a></li>
+			<li><a href="#H49-resources">参考リソース</a></li>
+			<li><a href="#H49-related-techs">関連する実装方法</a></li>
+			<li><a href="#H49-tests">検証</a></li>
+		</ul>
+</div>
+
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="H49" id="H49"> </a>H49: セマンティックなマークアップを用いて、強調又は特別なテキストをマークアップする</h1>
+        
+            <div class="applicability"><h2 id="H49-applicability">適用（対象）</h2><div class="textbody">
+          
+					<p>HTML 及び XHTML</p>
+        
+            </div></div>
+        
+				<p class="referenced">これは、次の達成基準に関連する実装方法である：</p><ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#content-structure-separation-programmatic">達成基準 1.3.1 (情報及び関係性)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#content-structure-separation-programmatic">
+						How to Meet 1.3.1 (Info and Relationships)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">達成基準 1.3.1 (情報及び関係性) を理解する</a></li></ul></li></ul>
+        
+				<div class="ua-issues"><h2 class="small-head" id="ua2.22.1">ユーザーエージェント及び支援技術によるサポート</h2>
+          
+               <div class="ua-issue">
+              
+                  <ul><li>
+									<p>
+											セマンティックな要素の中には、支援技術によって十分にサポートされていないものもある。サポートが限られる要素として、<code>code</code>、<code>del</code>、<code>dfn</code>、<code>ins</code>、<code>kbd</code>、<code>s</code>、<code>sub</code>、<code>sup</code>、<code>tt</code>、<code>q</code>がよく知られている。これらの要素について、コンテンツ制作者には次を考慮することが推奨される。すなわち、利用者が内容を理解するために、またセマンティクスの理解が求められる部分ではその情報をテキストで提供するために、マークアップのセマンティックな意味に利用者がアクセスできる方法で、これらの要素を利用することである。</p>
+                     </li><li>
+										 <p>スクリーンリーダーの大部分が、<code>em</code>、<code>strong</code>、<code>b</code>、<code>i</code>について、自動的に通知をしない。</p>
+                     </li><li>
+										 <p>
+												JAWSは、<code>blockquote</code>及び<code>cite</code>をサポートしている。Window-Eyesは、<code>blockquote</code>、<code>q</code>及び<code>cite</code>をサポートしている。</p>
+                     </li><li>
+										 <p>Firefox 1.0以降、Opera 7.54以降、Mozilla 1.7.3以降（以上、Windows版）は、<code>q</code>要素の前後に自動的に引用符を生成するが、Windows用Internet Explorer 6は生成しない。</p>
+                     </li></ul>
+          
+               </div>        
+            </div>
+        
+            <h2 id="H49-description">解説</h2><div class="textbody">
+          
+					<p>
+							この実装方法の目的は、強調または特別なテキストのマークアップをするとき、プログラムで解釈可能なようにする方法を示すことである。また、強調または特別なテキストのマークアップにセマンティックなマークアップを用いることで、その文書に構造を与えることができる。例えば、ユーザーエージェントは、構造が異なるものは異なる視覚表現にしたり、聴覚表現で異なる声やピッチにしたりすることで、利用者の構造の理解を促すことができる。 </p>
+          
+					<p>
+							大部分のユーザーエージェントは、セマンティックなマークアップによって特定されたテキストを、ほかとは別の見た目にする。支援技術の中には、セマンティックなマークアップを適切に用いることで、コンテンツの特性を決定するためのメカニズムを提供するものもある。</p>
+        
+            </div>
+        
+            <h2 class="small-head" id="H49-examples">事例</h2>
+          
+					<p>この事例のサンプル：
+							<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/H49/semantictext.html">セマンティックなテキストの描画例</a></p>
+          
+					<h3 class="small-head" id="H49-ex1">事例 1：</h3><div class="example">
+            
+                  <div class="textbody">
+              
+							<p>
+									この事例では、テキストの強調に<code>em</code>要素と<code>strong</code>要素を利用する方法を示している。<code>em</code>要素と<code>strong</code>要素は、構造的な強調を示すのに用意されているものであり、さまざまな形式で描画されうる（フォントスタイルの変更、読み上げ時の抑揚の変更など）。</p>
+            
+                  </div>
+            
+                  <div class="code"><p><strong>コード例</strong></p><pre><code> ……彼女が&lt;em&gt;本当に&lt;/em&gt;言いたかったのは、&amp;quot;オーケーどころか、 
+ &lt;strong&gt;すばらしい&lt;/strong&gt;&amp;quot;ということでした！…… </code></pre></div> 
+
+ 
+                 
+ 
+               </div>
+          
+					<h3 class="small-head" id="H49-ex2">事例 2：</h3><div class="example">
+            
+                  <div class="textbody">
+              
+							<p>
+									この事例では、長い引用文をマークアップするのに<code>blockquote</code>要素を利用している。<code>blockquote</code>要素ではパラグラフ分けが必要となる場合もある。また、参考資料を示すのに<code>cite</code>要素も利用している。
+								</p>
+            
+                  </div>
+            
+                  
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code>&lt;p&gt;次の文章は、ヘレン・ケラーの&lt;cite&gt;The Story of my Life&lt;/cite&gt;からの引用である。&lt;/p&gt;
+ &lt;blockquote&gt;
+   &lt;p&gt;Even in the days before my teacher came, I used to feel along the square stiff boxwood
+   hedges, and, guided by the sense of smell, would find the first violets and lilies.  
+   There, too, after a fit of temper, I went to find comfort and to hide my hot face 
+   in the cool leaves and grass.&lt;/p&gt;
+ &lt;/blockquote&gt;</code></pre></div>
+
+ 
+ 
+               </div>
+          
+					<h3 class="small-head" id="H49-ex3">事例 3：</h3><div class="example">
+            
+                  <div class="textbody">
+              
+							<p>
+									この事例では、短い引用文のマークアップに<code>q</code>要素を利用している。<code>q</code>要素を引用符で囲んであるのは、ユーザーエージェントの多くがいまだにこの要素をサポートせず、適切に表示しないからである（前述「ユーザーエージェント及び支援技術によるサポート」を参照）。CSSで引用符を自動生成しないように設定し、<code>q</code>要素をサポートしているユーザーエージェントに適用することで、自動生成された引用符とコンテンツ制作者が付けた引用符が二重に表示されてしまう問題を避けている。将来、<code>q</code>要素が広くサポートされるようになれば、引用符を付けたり、ブラウザの引用符生成を避けたりする必要はなくなるだろう。</p>
+            
+                  </div>
+            
+
+           
+
+
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code>q:before { content: ""; } 
+q:after { content: ""; }  </code></pre></div>
+            
+                  <div class="code"><p><strong>コード例</strong></p><pre><code> &lt;p&gt;ヘレン・ケラーは、"&lt;q&gt;Self-pity is our worst enemy and if we yield to it, 
+we can never do anything good in the world.&lt;/q&gt;"と述べている。&lt;/p&gt;</code></pre></div>
+
+                  <div class="textbody"/>
+          
+               </div>
+          
+					<h3 class="small-head" id="H49-ex4">事例 4：</h3><div class="example">
+            
+                  <div class="textbody">
+              
+							<p>上付き文字と下付き文字を、<code>sup</code>要素と<code>sub</code>要素を使って生成している。</p>
+            
+                  </div>
+
+                  <div class="code"><p><strong>コード例：</strong><br />
+                  【訳注：1つめの例は、日本語訳すると、上付き文字でなくなるため原文のままとしています。】</p>
+<pre><code>
+&lt;p&gt;Beth received 1&lt;sup&gt;st&lt;/sup&gt; place in the 9&lt;sup&gt;th&lt;/sup&gt; grade science competition.&lt;/p&gt;
+&lt;p&gt;水の化学式は、H&lt;sub&gt;2&lt;/sub&gt;O です。&lt;/p&gt;</code></pre></div>
+
+               </div>
+        
+            
+        
+				<h2 id="H49-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>HTML 4.01 <a href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.1">Phrase
+                    elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>HTML 4.01 <a href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.2">Quotations: The BLOCKQUOTE and Q elements</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>HTML 4.01 <a href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.3">Subscripts and superscripts: the SUB and SUP elements</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://juicystudio.com/article/fixing-ie-quotes.php">Fixing Quotes in
+                    Internet Explorer</a>
+                
+                        </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="H49-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+          
+               <li><a href="G115.html">G115： セマンティックな要素を用いて、構造をマークアップする</a></li>
+        
+            </ul></div>
+        
+            <h2 id="H49-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="H49-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+								<p>
+										コンテンツにテキストの表現を変えることで伝達できる情報がある。
+								</p>
+              
+                     </li><li>
+                
+								<p>
+										（<code>em</code>、<code>strong</code>、<code>cite</code>、<code>blockquote</code>、<code>quote</code>、<code>sub</code>のような）適切なセマンティックなマークアップを、テキストを変えることで情報を伝達するテキストのマークアップに利用している。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="H49-results">判定基準</h3>
+            
+                  <ul><li>
+                
+								<p>2.を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+			<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="H48.html"><strong>前：</strong>実装方法 H48</a></li>
+			<li><a href="H50.html"><strong>次：</strong>実装方法 H50</a></li>
+		</ul>
+				
+				<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+
+	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H49.html">H49: Using semantic markup to mark emphasized or special text（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+				<li>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></li>
+			</ul>
+	</div>
+
+</body></html>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>F13: 達成基準 1.4.1 の不適合事例 － イメージ上の色の違いで伝えている情報が、代替テキストに含まれていない</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" />
+</a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="F12.html"><strong>前：</strong>不適合事例 F12</a></li>
+			<li><a href="F14.html"><strong>次：</strong>不適合事例 F14</a></li>
+		</ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#F13-applicability">適用（対象）</a></li>
+			<li><a href="#F13-description">解説</a></li>
+			<li><a href="#F13-examples">事例</a></li>
+			<li><a href="#F13-resources">参考リソース</a></li>
+			<li><a href="#F13-related-techs">関連する実装方法</a></li>
+			<li><a href="#F13-tests">検証</a></li>
+		</ul>
+</div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="F13" id="F13"> </a>F13: 達成基準 1.4.1 の不適合事例 － イメージ上の色の違いで伝えている情報が、代替テキストに含まれていない</h1>
+        
+            <div class="applicability"><h2 id="F13-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>全てのウェブコンテンツ技術</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する不適合事例である：</p>
+            <ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#visual-audio-contrast-without-color">達成基準 1.4.1 (色の使用)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#visual-audio-contrast-without-color">
+						How to Meet 1.4.1 (Use of Color)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">達成基準 1.4.1 (色の使用) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="F13-description">解説</h2><div class="textbody">
+          
+               <p>この文書は、画像が色の違いを用いて情報を伝えているが、その画像の代替テキストがその情報を伝えていないことによる不適合事例について述べている。
+			   全盲又は色弱の利用者は色の違いによって伝えられている情報を知覚することができないため、そのような利用者に対して問題を引き起こす恐れがある。</p>
+        
+            </div>
+        
+            <h2 class="small-head" id="F13-examples">事例</h2>
+          
+               <ul><li>
+              
+                     <p>売上データの棒グラフが画像で提供されている。そのグラフには、営業部4名の社員の年間売上が示されている。その画像の代替テキストには、
+					 「営業部の年間売上額を示す棒グラフ。メアリー 310万ドル、フレッド 260万ドル、ボブ 220万ドル、そしてアンドリュー 340万ドル。赤い棒は、年間のノルマを達成できなかったことを示している。」と書かれている。この代替テキストは、画像が赤色を使って伝えている情報を提供していない。
+					 代替テキストでは、色を説明するのではなく、誰が年間のノルマを達成できなかったのかを示すべきである。</p>
+            
+                  </li></ul>
+        
+            
+        
+            <h2 id="F13-resources">参考リソース</h2><div class="textbody"><p>この実装方法に関しては参考リソースが提供されていない。</p>
+            </div>
+        
+            <h2 id="F13-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+          
+               <li><a href="G94.html">G94： 非テキストコンテンツに対して、それと同じ目的を果たし、同じ情報を提供する、簡潔な代替テキストを提供する</a></li>
+        
+            </ul></div>
+        
+            <h2 id="F13-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="F13-procedure">チェックポイント</h3>
+            
+                  <p>コンテンツ内で、色の違いによって情報を伝えている画像すべてに対して：</p>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>色の違いによって伝えられている情報が、画像の代替テキストに含まれていることをチェックする。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="F13-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>手順 1.を満たしていない場合、この不適合事例が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="F12.html"><strong>前：</strong>不適合事例 F12</a></li>
+			<li><a href="F14.html"><strong>次：</strong>不適合事例 F14</a></li>
+		</ul>
+		 <div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+ <div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F13.html">F13: Failure of Success Criterion 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+			</ul>
+</div></body></html>

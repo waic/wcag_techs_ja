@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>SCR28: 展開可能及び折り畳み可能なメニューを用いて、コンテンツのブロックをバイパスする</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+		<p class="logo"><a href="http://www.w3.org/">		<img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+		<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+			</div>
+<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="SCR27.html"><strong>前：</strong>実装方法 SCR27</a></li>
+			<li><a href="SCR29.html"><strong>次：</strong>実装方法 SCR29</a></li>
+		</ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：</p>
+		<ul id="navbar">
+				<li><a href="#SCR28-applicability">適用（対象）</a></li>
+				<li><a href="#SCR28-description">解説</a></li>
+				<li><a href="#SCR28-examples">事例</a></li>
+				<li><a href="#SCR28-resources">参考リソース</a></li>
+				<li><a href="#SCR28-related-techs">関連する実装方法</a></li>
+				<li><a href="#SCR28-tests">検証</a></li>
+		</ul>
+</div>
+<div class="skiptarget"><a id="maincontent">-</a></div>
+<h1><a name="SCR28" id="SCR28"> </a>SCR28: 展開可能及び折り畳み可能なメニューを用いて、コンテンツのブロックをバイパスする</h1>
+<div class="applicability">
+		<h2 id="SCR28-applicability">適用（対象）</h2>
+		<div class="textbody">
+				<p>クライアントサイド・スクリプティングを提供するウェブコンテンツ技術</p>
+		</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+		<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-skip">達成基準 2.4.1 (ブロック・スキップ)</a>
+				<ul>
+						<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-skip"> How to Meet 2.4.1 (Bypass Blocks)：英語</a></li>
+						<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">達成基準 2.4.1 (ブロック・スキップ) を理解する </a></li>
+				</ul>
+		</li>
+</ul>
+<h2 id="SCR28-description">解説</h2>
+<div class="textbody">
+		<p>この実装方法は、繰り返される構成要素を利用者のコントロールの下でメニューを展開したり折りたたんだりできるメニューの中に置くことで、その構成要素をスキップできるようにする。利用者は、メニューを折りたたむことで繰り返される構成要素をスキップできる。利用者は、メニューの要素を隠したり削除したりするユーザーインターフェースを呼び出すことができる。関連情報には、ナビゲーションをスキップするメカニズムを提供するために利用できるメニュー、ツールバー及びツリーの実装方法をいくつか挙げている。</p>
+		<div class="note">
+				<p class="prefix"><em>注記： </em>類似の方法は、サーバーサイドスクリプティングを用いて修正後のウェブページを読み込むことでも実装できる。</p>
+		</div>
+</div>
+<h2 class="small-head" id="SCR28-examples">事例</h2>
+<h3 class="small-head" id="SCR28-ex1">事例 1</h3>
+<div class="example">
+		<div class="textbody">
+				<p>ウェブページの先頭にあるナビゲーションリンクは、すべてHTML、CSS及びJavaScriptを用いて実装されているメニュー項目である。ナビゲーションバーが展開しているとき、ナビゲーションのリンクは利用可能になっている。ナビゲーションバーがたたまれているとき、リンクは利用不可能である。</p>
+		</div>
+
+		<div class="code">
+				<p><strong>コード例：</strong></p>
+				<pre><code>
+...
+
+  &lt;script type="text/javascript"&gt;
+  function toggle(id){
+    var n = document.getElementById(id);
+    n.style.display =  (n.style.display != 'none' ? 'none' : '' );
+  }
+  &lt;/script&gt;
+
+...
+
+  &lt;a href="#" onclick="toggle("navbar")"&gt;ナビゲーションバー切り替え&lt;/a&gt;
+
+  &lt;ul&gt; id="navbar"&gt;
+  &lt;li&gt;&lt;a href="http://target1.html"&gt;リンク 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://target2.html"&gt;リンク 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://target3.html"&gt;リンク 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://target4.html"&gt;リンク 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+...
+</code></pre>
+		</div>
+		<div class="textbody">
+				<p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR28/toggle-navbar.html">ナビゲーションバーをリンクで切り替える</a></p>
+		</div>
+</div>
+<h3 class="small-head" id="SCR28-ex2">事例 2</h3>
+<div class="example">
+		<div class="textbody">
+				<p>一連のウェブページのための目次はそれぞれのページの先頭近くで繰り返される。目次の先頭にあるボタンで、利用者はそれを消したり復元したりできる。</p>
+		</div>
+
+				<div class="code">
+				<p><strong>コード例：</strong></p>
+				<pre><code>
+...
+
+   &lt;script type="text/javascript"&gt;
+  function toggle(id){
+    var n = document.getElementById(id);
+    n.style.display =  (n.style.display != 'none' ? 'none' : '' );
+  }
+  &lt;/script&gt;
+
+  ...
+
+  &lt;button onclick="return toggle('toc');"&gt;目次切り替え&lt;/button&gt;
+  &lt;div id="toc"&gt;
+    ...
+  &lt;/div&gt;
+
+...
+</code></pre>
+		</div>
+		<div class="textbody">
+				<p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR28/toggle-toc.html">目次をボタンで切り替える</a></p>
+		</div>
+</div>
+<h2 id="SCR28-resources">参考リソース</h2>
+<div class="textbody">
+		<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+		<ul>
+				<li>
+						<p> <a href="http://www.bobbyvandersluis.com/articles/unobtrusive_show_hide/index.html">Unobtrusive show/hide behavior reloaded</a> </p>
+				</li>
+				<li>
+						<p> <a href="http://www.dustindiaz.com/seven-togglers/">Seven ways to toggle an element with JavaScript</a> </p>
+				</li>
+		</ul>
+</div>
+<h2 id="SCR28-related-techs">関連する実装方法</h2>
+<div class="textbody">
+		<ul>
+				<li><a href="H69.html">H69： コンテンツの各セクションの開始位置に見出し要素を提供する</a></li>
+				<li><a href="H50.html">H50： 構造を示す要素を用いて、リンクをグループ化する</a></li>
+				<li><a href="H70.html">H70： フレームを用いて、繰り返されているコンテンツのブロックをグループ化する</a></li>
+		</ul>
+</div>
+<h2 id="SCR28-tests">検証</h2>
+<div class="textbody">
+		<h3 class="small-head" id="SCR28-procedure">チェックポイント</h3>
+		<ol class="enumar">
+				<li>
+						<p>ユーザーインタフェースコントロールで、繰り返されるコンテンツを展開したり折りたたんだりできるかをチェックする。</p>
+				</li>
+				<li>
+						<p>コンテンツが展開されたとき、それがプログラムで解釈可能なコンテンツに含まれていて、論理的な場所で読み上げ順序があるかをチェックする。</p>
+				</li>
+				<li>
+						<p>コンテンツが折りたたまれているとき、それがプログラムで解釈可能でない部分にあることをチェックする。</p>
+				</li>
+		</ol>
+		<h3 class="small-head" id="SCR28-results">判定基準</h3>
+		<ul>
+				<li>
+						<p>上記のすべての項目を満たしている。</p>
+				</li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="SCR28.html"><strong>前：</strong>実装方法 SCR28</a></li>
+			<li><a href="SCR29.html"><strong>次：</strong>実装方法 SCR29</a></li>
+		</ul>
+<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR28.html">SCR28: Using an expandable and collapsible menu to bypass block of content（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</li>
+			</ul>
+	</div>
+</body>
+</html>

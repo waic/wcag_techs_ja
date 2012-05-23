@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G177: テキストの修正候補を提示する</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css"/>
+<link rel="stylesheet" type="text/css" href="css/additional.css"/>
+<link rel="stylesheet" type="text/css" href="css/slicenav.css"/>
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="images/w3c_home.png"/></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div><div id="skipnav"><p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p></div><a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="G176.html"><strong>前： </strong>実装方法 G176</a></li>
+<li><a href="G178.html"><strong>次： </strong>実装方法 G178</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：</p>
+<ul id="navbar">
+<li><a href="#G177-applicability">適用（対象）</a></li>
+<li><a href="#G177-description">解説</a></li>
+<li><a href="#G177-examples">事例</a></li>
+<li><a href="#G177-related-techs">関連する実装方法</a></li>
+<li><a href="#G177-tests">検証</a></li>
+</ul>
+</div>
+            
+<div class="skiptarget"><a id="maincontent">-</a></div>
+<h1><a name="G177" id="G177"> </a>G177: テキストの修正候補を提示する</h1>
+            
+<div class="applicability">
+<h2 id="G177-applicability">適用（対象）</h2>
+<div class="textbody">
+               <p>フォーマット、値及び又は入力のタイプに制限があり、利用者のデータ入力を受け付けるコンテンツ</p>
+            </div></div>
+            
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#minimize-error-suggestions">達成基準 3.3.3 (入力エラー修正方法の提示)</a>
+<ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#minimize-error-suggestions">How to Meet 3.3.3 (Error Suggestion)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/minimize-error-suggestions.html">達成基準 3.3.3 (入力エラー修正方法の提示) を理解する</a></li>
+</ul></li>
+</ul>
+            
+            <h2 id="G177-description">解説</h2><div class="textbody">
+                
+               <p>この実装方法の目的は、利用者が入力した情報が受け付けられないとき、正しいと思われるテキストを推測できる場合には、そのテキストを提示することである。修正候補としては、正しい綴りのテキストや、あらかじめ蓄積されているテキスト群にある類似したテキストなどが含まれる。</p>
+                
+               <p>フォームによって修正候補の提示方法は異なるが、エラーが発生した入力欄の横、ページの他の部分に表示することもできるし、検索機能やリンクを用いて修正候補の一覧が掲載されている他のURIに誘導することもできる。可能であれば、修正候補は利用者にとって利用しやすい方法で提示すべきである。たとえば、誤った情報が送信されたとき、利用者が意図した内容をチェックボックスやラジオボタンを用いて選択できるような形式で修正候補の一覧を提示するような方法が考えられる。修正候補や修正候補へのリンクは、たとえば、フォームの先頭、エラーがあるフィールドの直前または直後など、エラーを含むしたフォーム・フィールドの近くに配置しなければならない。</p>
+            
+            </div>
+            
+            <h2 class="small-head" id="G177-examples">事例</h2>
+                
+               <ul><li>
+                     <p>あるフォーム・フィールドでは、日単位から年単位で時間の長さを入力することが求められている。利用者が"6"と入力してフォームを送信すると、サーバは利用者が入力した内容をそのまま残した上で、入力フィールドの横に「エラー: 6日、6週間、6ヶ月、6年のいずれかを入力してください」というテキストも返す。</p>
+                  </li><li>
+                     <p>利用者がスペルの誤った都市名を入力したとする。サーバは、利用者が入力した内容を保持した状態でフォームを返し、同時にフォームの先頭にはエラーを知らせるメッセージと、入力内容を都市名のデータベースと照合して得られた修正候補の一覧を提示するページへのリンクを配置する。</p>
+                  </li><li>
+                     <p>あるバスの経路検索のシステムでは、利用者は住所、交差点の名前、目印となる建物などを入力して出発地と目的地を指定することができる。利用者が"Kohl"と入力すると、入力された文字列に類似した候補が提示される。「"Kohl"の検索結果は以下の通りです」というテキストに続いて、"Kohl Center," "Kohl's Dept. Store-East" and "Kohl's Dept. Store-West"という候補がセレクト・ボックスとともに表示され、利用者はこの中から選択することができる。</p>
+                  </li><li>
+                     <p>検索を実行すると、入力されたテキストに対するスペルチェックが実行される。エラーが発見された場合には、修正候補へのリンクを表示する。利用者が修正候補から正しい綴りのテキストを選択してそのリンクをクリックすると、その単語が入力されたものとして検索フォームの内容が再送信される。</p>
+                  </li></ul>
+                
+            
+            
+            
+            <h2 id="G177-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+                
+               <li><a href="SCR18.html">SCR18： クライアントサイドのバリデーション及びアラートを提供する</a></li>
+                
+               <li><a href="G84.html">G84： 利用者が認められた値以外の情報を提供した際に、テキストの説明文を提供する</a></li>
+                
+               <li><a href="G85.html">G85： 利用者の入力が要求されたフォーマット又は値ではなかった際に、テキストの説明文を提供する  </a></li>
+            
+            </ul></div>
+            
+            <h2 id="G177-tests">検証</h2><div class="textbody">
+                
+               <h3 class="small-head" id="G177-procedure">チェックポイント</h3>
+                    
+                  <ol class="enumar"><li>
+                        <p>フォーム・フィールドのうち、誤ったテキスト入力から正しいテキストを推測可能なものを抽出する。</p>
+                     </li><li>
+                        <p>フォームに入力し、抽出したフィールドには意図的に誤ったテキストを入力する。</p>
+                     </li><li>
+                        <p>利用者に対して修正候補が提示される。</p>
+                     </li><li>
+                        <p>修正候補、もしくは修正候補へのリンクが、エラーを含むフィールドの近くに配置されている。</p>
+                     </li></ol>
+                    
+                
+               
+                
+               <h3 class="small-head" id="G177-results">判定基準</h3>
+                    
+                  <ul><li>
+                        <p>3. 及び 4.を満たしている。</p>
+                     </li></ul>
+                    
+                
+               
+            
+            </div>
+        
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="G176.html"><strong>前： </strong>実装方法 G176</a></li>
+<li><a href="G178.html"><strong>次： </strong>実装方法 G178</a></li>
+</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+ 	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F65.html">F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type "image"（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+
+				<li>日本語訳： <a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></li>
+			</ul>
+	</div>
+</body>
+</html>

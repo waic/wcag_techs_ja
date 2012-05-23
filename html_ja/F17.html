@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>F17: 達成基準 1.3.1 及び 達成基準 4.1.1 の不適合事例 － HTMLで1対1の関係性を示すためのDOMにおける情報が不十分である（例：同じIDを持つラベル間の関係性）</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css"/>
+		<link rel="stylesheet" type="text/css" href="css/additional.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css"/>
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css"/>
+			  </head>
+			  <body class="slices">
+			  
+<div id="masthead">
+			  
+<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+			  
+			  <div id="skipnav">
+			  
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div><a name="top"> </a>
+			  <!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="F16.html"><strong>前：</strong>不適合事例 F16</a></li>
+			<li><a href="F19.html"><strong>次：</strong>不適合事例 F19</a></li>
+		</ul>
+
+			  <div class="navtoc"><p>このページのコンテンツ：</p>
+			  <ul id="navbar">
+			  <li><a href="#F17-applicability">適用（対象）</a></li>
+			  <li><a href="#F17-description">解説</a></li>
+			  <li><a href="#F17-examples">事例</a></li>
+			  <li><a href="#F17-resources">参考リソース</a></li>
+			  <li><a href="#F17-related-techs">関連する実装方法</a></li>
+			  <li><a href="#F17-tests">検証</a></li>
+			  </ul>
+			  </div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div>
+			 <h1><a name="F17" id="F17"> </a>F17: 達成基準 1.3.1 及び 達成基準 4.1.1 の不適合事例 － HTMLで1対1の関係性を示すためのDOMにおける情報が不十分である（例：同じIDを持つラベル間の関係性）</h1>
+        
+            <div class="applicability"><h2 id="F17-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>HTML及びXHTMLに対するドキュメントオブジェクトモデル (DOM) </p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する不適合事例である：</p><ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#content-structure-separation-programmatic">達成基準 1.3.1 (情報及び関係性)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#content-structure-separation-programmatic">
+						How to Meet 1.3.1 (Info and Relationships)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">達成基準 1.3.1 (情報及び関係性) を理解する
+					</a></li></ul></li><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-parses">達成基準 4.1.1 (構文解析)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#ensure-compat-parses">
+						How to Meet 4.1.1 (Parsing)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/ensure-compat-parses.html">達成基準 4.1.1 (構文解析) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="F17-description">解説</h2>
+			<div class="textbody">
+               <p> この文書では、支援技術を含むユーザーエージェントがウェブページを一貫して解釈できるようにすることに対する不適合事例について述べている。曖昧になっていると、支援技術を含む異なるユーザーエージェントで異なった情報を提示してしまう。支援技術の利用者の場合、他のおもなユーザーエージェントの利用者が受け取る以上に異なった情報を受け取ることになる。マークアップ言語の要素や属性の中には一意的な値を持っていることが求められ、これが満たされない場合は結果が不規則であったり、コンテンツが一意的にならなくなる。例えば、ラベルやデータテーブルの見出しによって参照されている、又はフラグメント識別子として使用されている場合にid属性の値が一意的でないと、一般にユーザーエージェントが最も重要な関係（すなわち、どのラベルがどのアイテムに対応するといった場合）を決定するための情報を十分に得られないため問題となる。</p>
+            </div>
+        
+            <h2 class="small-head" id="F17-examples">事例</h2>
+          
+               <div class="failure"><h3 class="small-head" id="F17-failex1">
+					不適合事例</h3><div class="example">
+            
+                  <div class="textbody">
+              
+                     <ul><li>
+                  
+                       <p> 存在しないidを参照している、<code>for</code>属性値が<code>idref</code>である<code>label</code>要素</p>
+                     </li>
+                       <li>
+                  
+                          <p>一意的でない<code>id</code>属性値</p>
+                
+                        </li><li>
+                  
+                           <p>一意的でない<code>accesskey</code>属性値</p>
+                
+                        </li></ul>
+            
+                  </div>
+          
+               </div></div>
+        
+            
+        
+            <h2 id="F17-resources">参考リソース</h2>
+<div class="textbody"><p>この実装方法に関しては参考リソースが提供されていない。</p>
+</div>
+        
+            <h2 id="F17-related-techs">関連する実装方法</h2><div class="textbody">
+              <p>（現在何も示されていない。）</p>
+            </div>
+        
+            <h2 id="F17-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="F17-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p> ドキュメントの中で一意的になっていない<code>id</code>値、及び<code>accesskey</code>値がある。</p>
+              
+                     </li><li>
+                
+                        <p><code>idref</code>値を持つ属性値に、対応するid値がある。</p>
+              
+                     </li><li>
+                
+                        <p><code>axis</code>属性を使用しているテーブルで、<code>axis</code>属性に記載されている全ての値が同じテーブル内の見出しセルの中に対応する<code>id</code>値を持っている。</p>
+              
+                     </li><li>
+                
+                        <p>クライアントサイドのイメージマップで、<code>usemap</code>属性がURIではない場合に、<code>usemap</code>属性値が対応する<code>id</code>値を持っている。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="F17-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>1.、3.又は4.を満たしている、又は2.を満たしていない場合、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+         <!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+	<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="F16.html"><strong>前: </strong> 不適合事例 F16</a></li>
+	<li><a href="F19.html"><strong>次: </strong> 不適合事例 F19</a></li>
+</ul>
+
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+		<p><strong>日本語訳における注記：</strong></p>
+		<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+		<ul>
+			<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F17.html">F17: Failure of Success Criterion 1.3.1 and 4.1.1 due to insufficient information in DOM to determine one-to-one relationships (e.g., between labels with same id) in HTML
+（英語）</a></li>
+			<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+			<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+		</ul>
+</div>
+</body>
+</html>

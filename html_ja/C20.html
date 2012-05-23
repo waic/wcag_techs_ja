@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>C20: カラム幅に相対サイズを用いて、ブラウザの画面サイズを変更しても各行の文字数が平均80字（日本語は40字）以下を維持できるようにする</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head><body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="images/w3c_home.png"/></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div><div id="skipnav"><p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p></div><a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="C19.html"><strong>前：</strong>実装方法 C19</a></li>
+	<li><a href="C21.html"><strong>次：</strong>実装方法 C21</a></li>
+</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：<br /></p>
+	<ul id="navbar">
+		<li><a href="#C20-applicability">適用（対象）</a></li>
+		<li><a href="#C20-description">解説</a></li>
+		<li><a href="#C20-examples">事例</a></li>
+		<li><a href="#C20-resources">参考リソース</a></li>
+		<li><a href="#C20-tests">検証</a></li>
+	</ul>
+</div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="C20" id="C20"> </a>C20: カラム幅に相対サイズを用いて、ブラウザの画面サイズを変更しても各行の文字数が平均80字（日本語は40字）以下を維持できるようにする</h1>
+        
+            <div class="applicability"><h2 id="C20-applicability">適用（対象）</h2><div class="textbody">
+               <p>CSS</p>
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である： </p><ul>
+						<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#visual-audio-contrast-visual-presentation">達成基準 1.4.8（視覚的な表現）</a><ul>
+						<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#visual-audio-contrast-visual-presentation">How to Meet 1.4.8 (Visual Presentation)：英語</a></li>
+						<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html">達成基準 1.4.8（視覚的な表現）を理解する</a></li></ul></li></ul>
+        
+            <h2 id="C20-description">解説</h2><div class="textbody">
+          
+               <p>
+この実装方法の目的は、1行が平均80字(日本語なら40字)以下になるようにして利用者がコンテンツを見ることができるように、CSSで指定することである。
+こうすることで、テキストの長い行を読む際に、現在読んでいる位置を維持することが困難な読字障害や視覚障害のある利用者が、より効率よくコンテンツをを閲覧したり操作したりできるようになる。
+この実装方法はまた、文字サイズの拡大に合わせてカラム幅を広くすることにもなり、それによって、文字サイズが大きくなるに従ってテキストの一部が欠けて読めなくなるような事態も発生しにくくなる。</p>
+               <p>
+この実装方法は、コンテンツ制作者に対して、CSSを使ってデフォルトでテキストの各行の幅を80字(日本語は40字)以下に制限することを要求するものではない、という点に注意してほしい。
+それよりもむしろ、CSSレイアウトに相対サイズを用いることを推奨して、利用者が1行80字以下で読むことができないようなカラム幅には、設定しないようにする。 </p>
+        
+            </div>
+        
+            <h2 class="small-head" id="C20-examples">事例</h2>
+          
+               <h3 class="small-head" id="C20-ex1">事例 1 </h3><div class="example">
+            
+                  <div class="textbody">
+                     <p>
+この例では、<code>div</code>要素の幅はスタイルシートでem単位で指定されている。</p>
+            
+                     <div class="note"><p class="prefix">
+<em>注記：</em>CSSプロパティの<code>max-width</code>は、Internet Explorer 6 以前のバージョンではサポートされていない。</p></div>
+                  </div>
+            
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code>#main_content {max-width: 70em}</code></pre></div>
+            
+                  <div class="textbody">
+                     <p>
+テキストのブロックは、コンテンツ内の<code>div</code>要素の中に収められる。</p>
+                  </div>
+            
+                  <div class="code"><p><strong>コード例：<br />Example Code:</strong></p><pre><code>
+&lt;div id="main_content"&gt; 
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing ...&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+          
+               </div>
+            
+               <h3 class="small-head" id="C20-ex2">事例 2 </h3><div class="example">
+              
+                  <div class="textbody">
+                     <p>
+この例では、<code>div</code>要素の幅はスタイルシートでパーセントで指定されている。</p>
+                  </div>
+              
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code>#main_content {width: 90%}</code></pre></div>
+              
+                  <div class="textbody">
+                     <p>
+テキストのブロックは、コンテンツ内の<code>div</code>要素の中に収められる。
+</p>
+                  </div>
+              
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code>
+&lt;div id="main_content"&gt; 
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing ...&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+            
+               </div>
+        
+            
+        
+            <h2 id="C20-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>
+                  
+                           <a href="http://www.w3.org/TR/CSS2/box.html">CSS 2 Box Model</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://www.w3.org/TR/CSS2/visuren.html">CSS 2 Visual formatting Model</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://www.w3.org/TR/CSS2/visudet.html">CSS 2 Visual formatting Model Details</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://css-discuss.incutio.com/?page=CssLayouts">CssLayouts</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://www.456bereastreet.com/archive/200504/about_fluid_and_fixed_width_layouts/">About fluid and fixed width layouts</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://cookiecrook.com/AIR/2003/train/accessiblecss.php">Accessible CSS</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://www.maxdesign.com.au/presentation/em/">Ideal line length for content</a>
+                
+                        </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="C20-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="C20-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                        <p>カラム幅が、相対的な単位で定義されている。</p>
+                     </li><li>
+                        <p>行の長さが、ブラウザのウィンドウをリサイズしても80字（日本語は40字）以下を維持している。</p>
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="C20-results">判定基準</h3>
+            
+                  <ul><li>
+                        <p>1.及び2.を満たしている。</p>
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+	<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="C19.html"><strong>前：</strong>実装方法 C19</a></li>
+	<li><a href="C21.html"><strong>次：</strong>実装方法 C21</a></li>
+</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+		<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C20.html">C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized（英語）</a></li>
+		<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+		<li>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></li>
+	</ul>
+</div>
+</body></html>

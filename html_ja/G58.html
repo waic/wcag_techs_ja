@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G58： 非テキストコンテンツのすぐ隣に、時間の経過に伴って変化するメディアの代替へのリンクを置く</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top" id="top"></a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G57.html"><strong>前:</strong> 実装方法 G57</a></li>
+	<li><a href="G59.html"><strong>次:</strong> 実装方法 G59</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：<br /></p>
+<ul id="navbar">
+	<li><a href="#H58-applicability">適用（対象）</a></li>
+	<li><a href="#H58-description">解説</a></li>
+	<li><a href="#H58-examples">事例</a></li>
+	<li><a href="#H58-resources">参考リソース</a></li>
+	<li><a href="#H58-related-techs">関連する実装方法</a></li>
+	<li><a href="#H58-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget"> <a id="maincontent" name="maincontent">-</a> </div>
+<h1><a name="G58" id="G58"></a>G58: 非テキストコンテンツのすぐ隣に、時間の経過に伴って変化するメディアの代替へのリンクを置く</h1>
+<div class="applicability">
+	<h2 id="G58-applicability">適用（対象）</h2>
+	<div class="textbody">
+		<p>特定のウェブコンテンツ技術に依存しない。リンクをサポートする全てのウェブコンテンツ技術</p>
+	</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+	<li> <a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-audio-desc">達成基準 1.2.3 (収録済の映像コンテンツの代替コンテンツ又は音声ガイド)</a>
+		<ul>
+			<li><a href=
+        "http://www.w3.org/WAI/WCAG20/quickref/20081211/#media-equiv-audio-desc">How to Meet 1.2.3 (Audio Description or Media Alternative (Prerecorded))：英語</a></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html">達成基準 1.2.3 (収録済の映像コンテンツの代替コンテンツ又は音声ガイド) を理解する</a></li>
+		</ul>
+	</li>
+	<li> <a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-text-doc">達成基準 1.2.8 (収録済のメディアの代替コンテンツ)</a>
+		<ul>
+			<li><a href=
+        "http://www.w3.org/WAI/WCAG20/quickref/20081211/#media-equiv-text-doc">How to Meet 1.2.8 (Media Alternative (Prerecorded))：英語</a></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/media-equiv-text-doc.html">達成基準 1.2.8 (収録済のメディアの代替コンテンツ) を理解する</a></li>
+		</ul>
+	</li>
+</ul>
+<h2 id="G58-description">解説</h2>
+<div class="textbody">
+	<p>この実装方法によって、キャプションと音声ガイドが照合されたドキュメントへのリンクが提供できる。照合ドキュメントは同じウェブページ内の別の場所、又は別のURIに存在するかもしれない。
+		照合ドキュメントへのリンクは非テキストコンテンツに隣接する。そのリンクは同期したメディアコンテンツの直前、又は直後に配置される。照合ドキュメントが同一のウェブページに異なるコンテンツとして存在する場合、
+		「文章の終わり」と最後に記述し、利用者がいつそれを読むのを終え、元の場所に戻るかを知らせることができる。もし、「戻る」ボタンによって利用者が移動してきた元の場所に戻れない場合は非テキストコンテンツの場所へ戻るリンクが提供される。
+	</p>
+</div>
+<h2 class="small-head" id="G58-examples">事例</h2>
+<h3 class="small-head" id="G58-ex1">事例１：HTMLドキュメント内のMOVドキュメント</h3>
+<div class="example">
+	<div class="textbody">
+		<p>「Olympic_Sports.htm」という名のページ内のコード</p>
+	</div>
+	<div class="code">
+		<p><strong>例:</strong></p>
+		<pre>
+<code>
+&lt;a name="Olympic_Wrestling"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href="http://www.example.com/movies/olympic_wrestling.mov"&gt;オリンピックレスリング動画&lt;/a&gt;, 
+&lt;a href="http://www.example.com/transcripts/olympic_wrestling_transcript.htm&gt;オリンピックレスリングの照合されたトランスクリプト
+&lt;/a&gt;&lt;/p&gt;
+</code>
+</pre>
+	</div>
+	
+
+</div>
+<h3 class="small-head" id="G58-ex2">事例２：HTMLドキュメント内の.MOVドキュメントへ戻る</h3>
+<div class="example">
+	<div class="textbody">
+		<p>olympic_wrestling_transcript.htmのページ内のコード</p>
+	</div>
+
+<div class="code">
+		<p><strong>例：</strong></p>
+		<pre>
+<code>
+&lt;p&gt;スポーツアナウンサー １：これは、イングランドのウィルジョンソンと
+アルゼンチンのセオドル・デリンゴの今夜の最高の戦いです。&lt;/p&gt;
+
+&lt;p&gt;情景：スタンド内に500人の観衆が詰め掛けたスタジアムの中央に
+マットが設置されています。&lt;/p&gt;
+
+&lt;p&gt; ...更なる発話 ...&lt;p&gt;
+
+&lt;p&gt; ...更なる情景...&lt;/p&gt;
+
+&lt;p&gt; ...その他...&lt;/p&gt;
+
+&lt;p&gt;スポーツアナウンサー  ２：今夜はこれで最後となります。
+ウィル・ジョンソンが新たなゴールドメダリストになったこの場所から、
+今夜もお付き合い頂きありがとうございました。 
+&lt;a href="../movies/Olympic_Sports.htm#Olympic_Wrestling&gt;動画ページへ戻る&lt;/a&gt; &lt;/p&gt;
+</code>
+</pre>
+	</div>	
+	
+</div>
+<h2 id="G58-resources">参考リソース</h2>
+<div class="textbody">
+	<p>この実装方法に関するリソースは、今のところない。</p>
+</div>
+<h2 id="G58-related-techs">関連する実装方法</h2>
+<div class="textbody">
+	<ul>
+		<li><a href="G69.html">G69： 時間の経過の伴い変化するメディアに対して代替コンテンツを提供する</a></li>
+		<li><a href="G159.html">G159： 時間の経過に伴って変化するメディアの映像しか含まないコンテンツに対して代替コンテンツを提供する</a></li>
+		<li><a href="H46.html">H46: Using noembed with embed</a></li>
+		<li><a href="H53.html">H53： object 要素のボディに代替テキストを記述する</a></li>
+	</ul>
+</div>
+<h2 id="G58-tests">検証</h2>
+<div class="textbody">
+	<h3 class="small-head" id="G58-procedure">チェックポイント</h3>
+	<ol class="enumar">
+		<li>
+			<p>リンクが非テキストコンテンツの直前又は、直後にある。</p>
+		</li>
+		<li>
+			<p>そのリンクがこの同期したメディアの照合ドキュメントへ直接遷移する有効なリンクである。</p>
+		</li>
+		<li>
+			<p>その同期したメディアコンテンツの元の場所へ利用者が戻るためのリンク又は、復帰機能が利用可能である。</p>
+		</li>
+	</ol>
+	<h3 class="small-head" id="G58-results">判定基準</h3>
+	<ul>
+		<li>
+			<p>１.から３.の全てを満たしている。</p>
+		</li>
+	</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+	<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+	<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G57.html"><strong>前:</strong> 実装方法 G57</a></li>
+	<li><a href="G59.html"><strong>次: </strong> 実装方法 G59</a></li>
+</ul>
+<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+	<p class="copyright"><a href=
+    "http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> &Acirc;&copy;
+		2008 <a href="http://www.w3.org/"><acronym title=
+    "World Wide Web Consortium">W3C</acronym></a><sup>&Acirc;&reg;</sup> (<a href=
+    "http://www.csail.mit.edu/"><acronym title=
+    "Massachusetts Institute of Technology">MIT</acronym></a>, <a href=
+    "http://www.ercim.org/"><acronym title=
+    "European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href=
+    "http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+		<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G58.html">G58: Placing a link to the alternative for time-based media immediately next to the non-text content（英語）</a></li>
+		<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+		<li>日本語訳：田辺　丈士<a href="http://www.uniteair.co.jp/">（ユナイティア株式会社）</a></li>
+	</ul>
+</div>
+</body>
+</html>

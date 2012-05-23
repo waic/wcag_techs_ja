@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G115: セマンティックな要素を用いて、構造をマークアップする</title>
+<style type="text/css">
+body {max-width: 75em;}
+
+.description {margin-left: 0;}
+
+.textbody {padding-left: 2em;}
+
+div.code {
+font-family: 'Andale Mono', Courier, monospace; 
+font-size: 100%; 
+line-height: 120%; 
+display: block; 
+width: 95%; 
+border-style: solid; 
+border-width: 1px ; 
+border-left: 6px solid #000066;
+padding: 0em;
+color: #006;
+background: #f9f5de; 
+border-color: #000066;
+margin-left: 1em;
+}
+
+q:before { content: ""; } 
+q:after { content: ""; } /* two separate rules because combined rule is not supported by Opera 6 */ 
+
+.sorethumb {color: red; background: inherit;}
+.revnote {
+border-style : solid;
+border-width : thin;
+border-color : #A7ABBF;
+background-color: #F0F8F8 ;
+color : black;
+page-break-inside: avoid ;
+}
+p.revnote , div.revnote {
+padding : 0.5em; 
+margin : .25em 0 .25em 0; /* top, right, bottom, left */
+}
+	li p {
+		margin-top: 0;                  
+		margin-bottom: 0; 
+	}
+
+p {
+		margin-top: 0;                  
+		margin-bottom: .5em; 
+	}
+   
+		</style>
+	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+	<link rel="stylesheet" type="text/css" href="css/additional.css" />
+	<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+	<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="G112.html"><strong>前：</strong>実装方法 G112</a></li>
+<li><a href="G117.html"><strong>次：</strong>実装方法 G117</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：<br /></p>
+<ul id="navbar">
+<li><a href="#G115-applicability">適用（対象）</a></li>
+<li><a href="#G115-description">解説</a></li>
+<li><a href="#G115-examples">事例</a></li>
+<li><a href="#G115-resources">参考リソース</a></li>
+<li><a href="#G115-related-techs">関連する実装方法</a></li>
+<li><a href="#G115-tests">検証</a></li>
+</ul>
+</div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G115" id="G115"> </a>G115: セマンティックな要素を用いて、構造をマークアップする</h1>
+        
+            <div class="applicability"><h2 id="G115-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>HTML 4.01及び XHTML 1.xを含むマークアップ言語</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p><ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#content-structure-separation-programmatic">達成基準 1.3.1 (情報及び関係性)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20080430/#content-structure-separation-programmatic">
+						How to Meet 1.3.1 (Info and Relationships)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">達成基準 1.3.1 (情報及び関係性) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="G115-description">解説</h2><div class="textbody">
+          
+               <p>この実装方法の目的は、適切なセマンティックな要素を用いてウェブコンテンツの構造をマークアップすることである。つまり、要素を、視覚的な見えかたではなく、その意味に基づいて用いることである。</p>
+          
+               <p>適切なセマンティックな要素を用いることで、ユーザーエージェントが構造を利用できるようになる。この中には、コンテンツの意味を理解する際に、異なる構成要素が持っている役割（role）を明示することも含まれる。段落、見出し、強調されたテキスト、テーブルなどのコンテンツの構成要素の性質は、このようにして示すことができる。場合によっては、見出しと小見出し、テーブルとセルといった複数の構成要素間の関係も示されるべきである。そうすることで、ユーザーエージェントは、たとえば、異なる種類の構造に対しては異なる視覚表現にしたり、聴覚表現では、異なる声又は声の高さを用いたりして、利用者に構造を知覚させることができるようになる。</p>
+          
+               <p>例えば、HTMLにおいては、<code>em</code>、<code>abbr</code>及び<code>cite</code>といった語句レベルの要素は、それぞれ、強調させるため、略語及び引用であることを示すためにテキストをマークすることで、文の中でセマンティックな情報を付加する。 数学における構造と表現の重要な区別を保つために設計されたマークアップ言語であるMathMLには、数学的な概念を表すために用いられる複雑な記号のための特別な「表現」のマークアップも、数学的な概念自体のための「コンテンツ」（セマンティック）マークアップも含まれている。</p>
+        
+            </div>
+        
+            <h2 class="small-head" id="G115-examples">事例</h2>
+          
+               <h3 class="small-head" id="G115-ex1">事例 1</h3><div class="example">
+            
+                  <div class="textbody">
+              
+                     <p>段落には別のページへのハイパーリンクがある。ハイパーリンクは<code>a</code>要素を用いてマークアップされている。 </p>
+            
+                  </div>
+            
+<div class="code"><pre>
+&lt;p&gt;我々の新しいツールをご自身で試したいですか？ 
+&lt;a href="download.html"&gt;ダウンロードコーナー&lt;/a&gt;で無料の体験版が入手できます。&lt;/p&gt;
+</pre></div>
+          
+               </div>
+          
+               <h3 class="small-head" id="G115-ex2">事例 2</h3><div class="example">
+            
+                  <div class="textbody">
+              
+                     <p>結婚の歴史についてのページには、ジェーン・オースティンの小説「高慢と偏見」からの引用が事例として用いられている。本への参照は、<code>cite</code>要素を用いてマークアップされ、引用部分自体は<code>blockquote</code>要素を用いてマークアップされている。</p>
+            
+                  </div>
+
+                            <div class="code"><pre>
+&lt;p&gt;&lt;cite&gt;高慢と偏見&lt;/cite&gt;という小説の第1章にあるように、
+結婚は独身男性にとって必然的な段階と考えられていた:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;多くの財産を持った独身男性は妻を必要としているということは、
+広く認められた普遍的な真実である。&lt;/p&gt;
+&lt;p&gt;しかしながら、彼が初めて隣人となったばかりのころは、
+このような男性の気持ちやものの見方はほとんど知られてはいなかったが、
+この真実は周囲の家々の人の心に定着し、彼は隣人たちの娘の誰か
+の正当な所有物であると考えられるようになる。&lt;/p&gt;
+&lt;/blockquote&gt;
+</pre></div>
+               </div>
+          
+               <h3 class="small-head" id="G115-ex3">事例 3</h3><div class="example">
+            
+                  <div class="textbody">
+              
+                     <p>車の取扱説明書にエンジンのかけ方の説明がある。説明書きには、ギアがニュートラルになっていることを確かめるようにとの警告がある。筆者は、その警告は非常に重要で強調されるべきであると考えていたため、警告は<code>strong</code>要素を用いてマークアップされている。</p>
+            
+                  </div>
+            
+                  <div class="code"><pre>
+&lt;h1&gt;エンジンの始動法&lt;/h1&gt;
+&lt;p&gt;エンジンをかける前に&lt;strong&gt;ギアがニュートラルになっていることを確認する&lt;/strong&gt;。
+次にキーを点火の位置まで回しす。
+エンジンは始動する。&lt;/p&gt;
+</pre></div>
+          
+               </div>
+          
+               <h3 class="small-head" id="G115-ex4">事例 4</h3>
+               <div class="example">
+            
+                  <div class="textbody">
+              
+                     <p>この事例では、テキストを強調するために<code>em</code> 及び <code>strong</code>要素をどのように用いたらよいかを示している。</p>
+            
+                  </div>
+            
+
+                  <div class="code"><pre>
+&lt;p&gt;彼女が&lt;em&gt;本当に&lt;/em&gt; 言おうとしていたのは、
+「これは良いではない。それは &lt;strong&gt;すばらしいだ&lt;/strong&gt;!」&lt;/p&gt;
+</pre></div>
+          
+               </div>
+          
+               <h3 class="small-head" id="G115-ex5">事例 5: 強調及び背景色を用いて重要な情報を視覚的かつセマンティックに特定する。</h3><div class="example">
+            
+                  
+            
+
+
+<div class="code"><pre>
+&lt;style type="text/css"&gt;
+.vocab {
+background-color:cyan;
+font-style:normal;
+}
+&lt;/style&gt;
+.......
+&lt;p&gt;新出単語は強調され、背景色が空色になっている&lt;/p&gt;
+&lt;p&gt;その芝居への&lt;em class="vocab"&gt;痛烈な&lt;/em&gt; 批評はやや行きすぎのようであった。 &lt;/p&gt;
+</pre></div>
+          
+               </div>
+        
+            
+        
+            <h2 id="G115-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>
+                  
+                           <a href="http://www.w3.org/TR/html4/">HTML 4.01 specification</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://www.w3.org/TR/html4/struct/text.html#h-9.2">HTML 4.01 specification, using phrase elements</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://www.w3.org/TR/MathML2/">Mathematical Markup Language (MathML) Version 2.0, Second Edition</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>Jeffrey Zeldman's book         <a href="http://www.zeldman.com/dwws/">"Designing with Web standards"</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>Web Design Group's article         <a href="http://www.htmlhelp.com/design/style/docstyle-tags.html">"Document style: Use the right tag for the job"</a>
+                
+                        </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="G115-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+          
+               <li><a href="H39.html">H39： caption 要素を用いて、データテーブルの表題とデータテーブルを関連付ける</a></li>
+          
+               <li><a href="H42.html">H42： h1要素～h6要素を用いて、見出しを特定する</a></li>
+          
+               <li><a href="H44.html">H44： label要素を用いて、テキストのラベルとフォーム・コントロールを関連付ける</a></li>
+          
+               <li><a href="H48.html">H48： リストに、ol 要素、ul 要素、dl 要素を用いる</a></li>
+          
+               <li><a href="H51.html">H51： テーブルのマークアップを用いて、表の情報を提示する</a></li>
+          
+               <li><a href="H71.html">H71： fieldset 要素及び legend 要素を用いて、フォーム・コントロールのグループに関する説明を提供する </a></li>
+        
+            </ul></div>
+        
+            <h2 id="G115-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G115-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>セマンティックな機能を有するコンテンツがある。</p>
+              
+                     </li><li>
+                
+                        <p>セマンティックな機能がある部分に対応するセマンティックなマークアップがウェブコンテンツ技術に存在する場合、コンテンツがそのセマンティックなマークアップを用いてマークアップされている。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G115-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>2を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="G112.html"><strong>前：</strong>実装方法 G112</a></li>
+<li><a href="G117.html"><strong>次：</strong>実装方法 G117</a></li>
+</ul>
+<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+<div class="annotation">
+<p><strong>日本語訳における注記：</strong></p>
+<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G115.html">G115: Using semantic elements to mark up structure（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+	<li>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+</ul>
+</div>
+</body></html>

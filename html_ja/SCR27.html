@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>SCR27: DOMを用いて、ページ上にある複数のセクションを並び替える</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+		<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+		<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+		<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+		</div>
+<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="SCR26.html"><strong>前：</strong>実装方法 SCR26</a></li>
+			<li><a href="SCR28.html"><strong>次：</strong>実装方法 SCR28</a></li>
+		</ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+				<li><a href="#SCR27-applicability">適用（対象）</a></li>
+				<li><a href="#SCR27-description">解説</a></li>
+				<li><a href="#SCR27-examples">事例</a></li>
+				<li><a href="#SCR27-tests">検証</a></li>
+		</ul>
+</div>
+<div class="skiptarget"><a id="maincontent">-</a></div>
+<h1><a name="SCR27" id="SCR27"> </a>SCR27: DOMを用いて、ページ上にある複数のセクションを並び替える</h1>
+<div class="applicability">
+		<h2 id="SCR27-applicability">適用（対象）</h2>
+		<div class="textbody">
+				<p>HTMLおよびXHTML、スクリプト</p>
+		</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+		<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-focus-order">達成基準 2.4.3 (フォーカス順序)</a>
+				<ul>
+						<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-focus-order"> How to Meet 2.4.3 (Focus Order)：英語 </a></li>
+						<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">達成基準 2.4.3 (フォーカス順序) を理解する </a></li>
+				</ul>
+		</li>
+</ul>
+<h2 id="SCR27-description">解説</h2>
+<div class="textbody">
+		<p>この実装方法の目的は、コンポーネントを再配置するための極めてユーザブルかつアクセシブルなメカニズムを提供することである。再配置するためのメカニズムのうち、もっとも一般的なものは、コンポーネントに番号をつけることができる設定ページに利用者を送ること、又は、コンポーネントをドラッグアンドドロップして希望する位置へ移動できるようにすることのふたつである。ドラッグアンドドロップの方が、ひとつずつ項目を適当な位置に並べることができ、結果を感覚的に得られるため、はるかにユーザブルな方法である。残念なことに、ドラッグアンドドロップはマウスの利用に頼った方法である。この実装方法は、利用者がコンポーネントのメニューを使って、それらを機器に依存することなく適当な位置に再配置することを可能にする。ドラッグアンドドロップによる再配置機能の代替として、もしくはそれと併用して利用することができる。</p>
+		<p>メニューはリンクリストで、コンテンツを再配置するスクリプトのトリガーとなる、機器に依存しないonclickイベントを使用している。コンテンツは単に視覚的にだけでなく、Document Object Model (DOM)でも再配置されているので、すべての機器向けに正しい順序となっている。</p>
+</div>
+<h2 class="small-head" id="SCR27-examples">事例</h2>
+<h3 class="small-head" id="SCR27-ex1">事例 1</h3>
+<div class="example">
+		<div class="textbody">
+				<p>この例は上下間の再配置を行う。このアプローチはまた、右と左のオプションを追加することで、2次元での再配置にも利用できる。</p>
+				<p>この例のコンポーネントは順序無しリストのリスト項目である。順序無しリストは、こうしたコンポーネントのような類似項目のためのとてもよいセマンティックモデルである。メニューを使う方法も、他のタイプのグループ化に使用できる。</p>
+				<p>モジュールはリスト項目であり、それぞれのモジュールは、div要素内のコンテンツに加えて、入れ子になったリストとして表されたメニューを含んでいる。</p>
+		</div>
+
+				<div class="code">
+				<p><strong>コード例：</strong></p>
+				<pre><code>&lt;ul id="swapper"&gt;
+    &lt;li id="black"&gt;
+        &lt;div class="module"&gt;
+            &lt;div class="module_header"&gt;
+                &lt;!-- メニューへのリンク --&gt;
+                &lt;a href="#" onclick="ToggleMenu(event);"&gt;menu&lt;/a&gt;
+                &lt;!-- メニュー --&gt;
+                &lt;ul class="menu"&gt;
+                    &lt;li&gt;&lt;a href="#" onclick="OnMenuClick(event)" 
+                        onkeypress="OnMenuKeypress(event);"&gt;up&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" onclick="OnMenuClick(event)" 
+                        onkeypress="OnMenuKeypress(event);"&gt;down&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="module_body"&gt;
+                blackモジュールのテキスト
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;</code></pre>
+		</div>
+		<div class="textbody">
+				<p>ここまでは、簡単なツリーの例でメニューを出したり隠したりする方法をとりあげてきたので、モジュールを入れ替えるコードについても着目する。イベントを同期させてデフォルトのリンクアクションをキャンセルしてから、作業に移動する。最初に、これから作業する要素、メニュー、再配置されるモジュール、メニューリンクのための一連のローカル変数をセットする。それから、再配置の方向を確認した後に、入れ替えるノードの取得を試みる。ノードを見つけた場合、swapNode()を呼び出して二つのモジュールを入れ替え、 PositionElement()でモジュールと共に絶対配置されたメニューを移動し、すべてが完了したメニュー項目にフォーカスを設定する。</p>
+		</div>
+
+				<div class="code">
+				<p><strong>コード例:</strong></p>
+				<pre><code>MoveNode 関数(evt,dir)
+{
+    HarmonizeEvent(evt);
+    evt.preventDefault();
+
+    var src = evt.target;
+    var menu = src.parentNode.parentNode;
+    var module = menu.parentNode.parentNode.parentNode;
+    var menuLink = module.getElementsByTagName("a")[0];
+    var swap = null;
+    
+    switch(dir)
+    {
+        case 'up':
+        {
+            swap = module.previousSibling;
+            while (swap &amp;&amp; swap.nodeType != 1)
+            {
+                swap = swap.previousSibling;
+            }
+            break;
+        }
+        case 'down':
+        {
+            swap = module.nextSibling;
+            while (swap &amp;&amp; swap.nodeType != 1)
+            {
+                swap = swap.nextSibling;
+            }
+            break;
+        }
+    }
+    if (swap &amp;&amp; swap.tagName == node.tagName)
+    {
+        module.swapNode(swap);
+        PositionElement(menu,menuLink,false,true);
+    }
+    src.focus();
+}</code></pre>
+		</div>
+		<div class="textbody">
+				<p>ノード入れ替えのCSSは、モジュール及び小さなメニューのサイズや色の調整だけで、前のツリーの例と大きな違いはない。</p>
+		</div>
+
+		<div class="code">
+				<p><strong>コード例:</strong></p>
+				<pre><code>ul#swapper { margin:0px; padding:0px; list-item-style:none; }
+ul#swapper li { padding:0; margin:1em; list-style:none; height:5em; width:15em; 
+    border:1px solid black; }
+ul#swapper li a { color:white; text-decoration:none; font-size:90%; }
+
+ul#swapper li div.module_header { text-align:right; padding:0 0.2em; }
+ul#swapper li div.module_body { padding:0.2em; }
+
+ul#swapper ul.menu { padding:0; margin:0; list-style:none; background-color:#eeeeee; 
+    height:auto; position:absolute; text-align:left; border:1px solid gray; display:none; }
+ul#swapper ul.menu li { height:auto; border:none; margin:0; text-align:left; 
+    font-weight:normal; width:5em; }
+ul#swapper ul.menu li a { text-decoration:none; color:black; padding:0 0.1em; 
+    display:block; width:100%; }
+</code></pre>
+		</div>
+</div>
+<h2 id="SCR27-tests">検証</h2>
+<div class="textbody">
+		<h3 class="small-head" id="SCR27-procedure">チェックポイント</h3>
+		<ol class="enumar">
+				<li>
+						<p>ドラッグアンドドロップで再配置可能なウェブユニット内のすべてのコンポーネントを探す。</p>
+				</li>
+				<li>
+						<p>リンクのリストで構成されたメニューでも、それらが再配置可能なメカニズムがあるかどうかもチェックする。</p>
+				</li>
+				<li>
+						<p>メニューがDOM内の再配置可能な項目の中に含まれているかをチェックする。</p>
+				</li>
+				<li>
+						<p>再配置のスクリプトはリンクのonclickイベントだけをトリガーにしているかをチェックする。</p>
+				</li>
+				<li>
+						<p>視覚的にだけではなく、項目がDOMの中でも再配置されているかをチェックする。</p>
+				</li>
+		</ol>
+		<h3 class="small-head" id="SCR27-results">判定基準</h3>
+		<ul>
+				<li>
+						<p>2.～5.を満たしている。</p>
+				</li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="SCR26.html"><strong>前：</strong>実装方法 SCR26</a></li>
+			<li><a href="SCR28.html"><strong>次：</strong>実装方法 SCR28</a></li>
+		</ul>
+<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+
+</div>
+	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR27.html">SCR27: Reordering page sections using the Document Object Model（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</li>
+			</ul>
+	</div>
+</body>
+</html>

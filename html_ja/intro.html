@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>「WCAG 2.0 実装方法集」のイントロダクション｜WCAG 2.0 実装方法集</title>
+	<link rel="stylesheet" type="text/css" href="css/slicenav.css"/>
+	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css"/>
+	<link rel="stylesheet" type="text/css" href="css/additional.css"/>
+	<link rel="stylesheet" type="text/css" href="css/waic-wg2.css"/>
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="images/w3c_home.png"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">このページの本文へ</a></p></div><a name="top"> </a><!-- TOP NAVIGATION BAR --><ul id="navigation"><li><strong><a href="Overview.html#contents">目次</a></strong></li><li><strong><a href="intro.html">イントロダクション</a></strong></li><li><a href="G1.html"><strong>次: </strong>実装方法 G1</a></li></ul><div class="div1"><div class="skiptarget"><a id="maincontent">-</a></div> 
+<h1 class="guideline"><a name="intro" id="intro"> </a>「WCAG 2.0 実装方法集」のイントロダクション</h1>
+	<p>この文書は、W3C Web Accessibility Initiative (WAI)が提供する WCAG 2.0 関連文書群の一つである<a href="appendixA.html#WCAG20">[WCAG20]</a>。よりアクセシブルなウェブコンテンツを制作するための具体的な制作方法及び事例を含んだ、さまざまな実装法が紹介されている。同様に、WCAG 2.0の達成基準を満たしていないよくある失敗例を説明した不適合事例も挙げている。</p>
+	<p>この文書は、入門書ではなく、WCAG 2.0の要件に対処するために用いることのできる実装方法に関する詳細な技術解説である。WCAG やその関連技術文書、教育用素材などへのイントロダクションは、<a href="http://www.w3.org/WAI/intro/wcag.php">ウェブコンテンツ・アクセシビリティ・ガイドライン (WCAG) 概要</a>を参照のこと。</p>
+	<p>WCAGワーキンググループがメンテナンスする実装方法集をできるかぎり包括的なものにするために、WCAGワーキンググループは文書化されていない実装方法があれば、それを新しい実装方法としてこの文書に追加することの提案を奨励している。"<a href="/WAI/GL/WCAG20/TECHS-SUBMIT/">実装方法提案フォーム（英語）</a>" を使って、検討すべき実装方法を提案していただきたい。</p>
+<h3><a name="suff-adv-techs" id="suff-adv-techs"> </a>達成基準を満たすことのできる実装方法とさらに対応が望まれる実装方法</h3>
+	<p>WCAG 2.0に特定のウェブコンテンツ技術における実装方法を記述するのではなく、ガイドライン及び達成基準自体はウェブコンテンツ技術に依存しない中立的な書き方で記されている。特定のウェブコンテンツ技術（例えば、HTML）を用いてガイドラインを満たすためのガイダンス及び事例を提供するために、WCAGワーキンググループは各達成基準に対して「<strong><em>達成基準を満たすことのできる実装方法</em></strong>」を確認してきた。達成基準を満たすことのできる実装方法のリストは、"WCAG 2.0 解説書（Understanding WCAG 2.0）" (及び "How to Meet WCAG 2.0")でメンテナンスされている。こうすることによって、新しい実装方法が見つかった際やウェブコンテンツ技術及び支援技術が進化した際には、そのリストを更新することができる。</p>
+	<p>すべての実装方法は、<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#informativedef">参考情報</a>であることに注意してほしい。「達成基準を満たすことのできる実装方法」は、WCAGワーキンググループによって、その達成基準を満たすことができると判断されたものである。しかし、必ずしもそれらの実装方法を用いなくてもよい。ただし、ワーキンググループが挙げている実装方法以外のものを用いる場合には、それが達成基準を満たすことができることを何らかの方法で証明する必要がある。</p>
+	<p>ほとんどの達成基準には、複数の「達成基準を満たすことのできる実装方法」が挙げられている。挙げられている「達成基準を満たすことのできる実装方法」のどれもが、達成基準を満たすために用いることができる。ワーキンググループによって文書化されていないものの、達成基準を満たすことができる実装方法が他にもあるかもしれない。それが新しい「達成基準を満たすことのできる実装方法」として認めらた際には、リストに追加されることになる。</p>
+	<p>達成基準を満たすことのできる実装方法に加えて、数多くの「<strong><em>さらに対応が望まれる実装方法</em></strong>」がある。これは、アクセシビリティを向上させることはできるが、達成基準の要件を完全に満たすには不十分である、テスト可能ではない、及び/又はある環境に対しては効果的で有効な実装方法であってもその他の環境においてはそうではない、といった理由から「達成基準を満たすことのできる実装方法」としては認められなかったものである。そういった実装方法は、参考にすべき実装方法として、「達成基準を満たすことのできる実装方法」のすぐ後に挙げられている。ウェブコンテンツの制作者には、ウェブページのアクセシビリティを向上させるために、可能なかぎりそれらの実装方法を用いることを推奨する。</p>
+<!--
+	<h3><a name="intro-tech-types" id="intro-tech-types"> </a>実装方法のカテゴリ一覧</h3>
+	<p>以下のリストは、実装方法集の文書の各カテゴリへのリンクである。</p><ul><li>
+                  <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/complete.html">Techniques for WCAG 2.0 (includes all techniques and failures as a single file)</a>
+               </li><li>
+                  <p>
+                     <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/general.html">General Techniques</a>
+                  </p>
+               </li><li>
+                  <p>
+                     <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/html.html">HTML and XHTML Techniques</a>
+                  </p>
+               </li><li>
+                  <p>
+                     <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/css.html">CSS Techniques</a>
+                  </p>
+               </li><li>
+                  <p>
+                     <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/client-side-script.html">Client-side Scripting Techniques</a>
+                  </p>
+               </li><li>
+                  <p>
+                     <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/server-side-script.html">Server-side Scripting Techniques</a>
+                  </p>
+               </li><li>
+                  <p>
+                     <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/smil.html">SMIL Techniques</a>
+                  </p>
+               </li><li>
+                  <p>
+                     <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/text.html">Plain Text Techniques</a>
+                  </p>
+               </li><li>
+                  <p>
+                     <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/aria.html">ARIA Techniques</a>
+                  </p>
+               </li><li>
+                  <p>
+                     <a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/failures.html">Common Failures</a>
+                  </p>
+               </li></ul>
+-->
+</div><!-- BOTTOM NAVIGATION BAR --><ul id="navigationbottom"><li><strong><a href="#top">このページの先頭へ</a></strong></li><li><strong><a href="Overview.html#contents">目次</a></strong></li><li><strong><a href="intro.html">イントロダクション</a></strong></li><li><a href="G1.html"><strong>次: </strong>実装方法 G1</a></li></ul>
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集 WCAG 2.0の実装方法と不適合事例</a>」の一部であり、文書全体は1ページ版でも提供されている。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+						
+		<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/intro.html">Introduction to Techniques for WCAG 2.0（英語）</a></li>
+				<li>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+			</ul>
+	</div>
+
+</body></html>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>SCR26: 動的なコンテンツをDOMのそのトリガーとなる要素の直後に挿入する</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+		<p class="logo"><a href="http://www.w3.org/">
+		<img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+		<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="SCR24.html"><strong>前：</strong>実装方法 H24</a></li>
+			<li><a href="SCR27.html"><strong>次：</strong>実装方法 H26</a></li>
+		</ul>
+<div class="navtoc"><p>このページのコンテンツ：</p>
+		<ul id="navbar">
+				<li><a href="#SCR26-applicability">適用（対象）</a></li>
+				<li><a href="#SCR26-description">解説</a></li>
+				<li><a href="#SCR26-examples">事例</a></li>
+				<li><a href="#SCR26-tests">検証</a></li>
+		</ul>
+</div>
+<div class="skiptarget"><a id="maincontent">-</a></div>
+<h1><a name="SCR26" id="SCR26"> </a>SCR26: 動的なコンテンツをDOMのそのトリガーとなる要素の直後に挿入する</h1>
+<div class="applicability">
+		<h2 id="SCR26-applicability">適用（対象）</h2>
+		<div class="textbody">
+				<p>HTML及びXHTML、スクリプト</p>
+		</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+		<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#keyboard-operation-keyboard-operable">達成基準 2.1.1 (キーボード操作)</a>
+				<ul>
+						<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#keyboard-operation-keyboard-operable"> How to Meet 2.1.1 (Keyboard)：英語 </a></li>
+						<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html">達成基準 2.1.1 (キーボード操作) を理解する </a></li>
+				</ul>
+		</li>
+		<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-focus-order">達成基準 2.4.3 (フォーカス順序)</a>
+				<ul>
+						<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-focus-order"> How to Meet 2.4.3 (Focus Order)：英語 </a></li>
+						<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">達成基準 2.4.3 (フォーカス順序) を理解する </a></li>
+				</ul>
+		</li>
+		<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-focus-visible">達成基準 2.4.7 (視覚的に認識可能なフォーカス)</a>
+				<ul>
+						<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-focus-visible"> How to Meet 2.4.7 (Focus Visible)：英語 </a></li>
+						<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html">達成基準 2.4.7 (視覚的に認識可能なフォーカス) を理解する </a></li>
+				</ul>
+		</li>
+</ul>
+<h2 id="SCR26-description">解説</h2>
+<div class="textbody">
+		<p>この実装方法の目的は、Document Object Model（DOM）に挿入されたユーザーインタフェースの要素をタブ順序及びスクリーンリーダーの読み上げ順序がユーザーエージェント標準のふるまいによって正しく設定されるような方法で配置することである。この実装方法は、メニューやダイアログのように隠れているものと表示されているもの、全てのユーザーインタフェース要素に利用することができる。</p>
+		<p>スクリーンリーダーの読み上げ順序は、Document Object Model内のHTML又はXHTMLの要素の順序に基づいており、それはタブ順序についても同様である。この実装方法では、新しいコンテンツをDOMのそのトリガーとなる要素の直後に挿入する。トリガーとなる要素は、リンク又はボタンでなければならず、スクリプトはそのonclickイベントにより呼び出されなければならない。これらの要素はもともとフォーカス可能であり、そのonclickイベントはデバイスに依存しない。フォーカスは選択された要素に残り、その後に挿入された新しいコンテンツは、タブ順序及びスクリーンリーダーの読み上げ順序の両方において、次の順番となる。</p>
+		<p>この実装方法は同期された更新にも利用できることに注目して欲しい。（AJAXと呼ばれることのある）非同期の更新では、支援技術に非同期のコンテンツが挿入されたことを通知するために追加の実装方法が必要となる。</p>
+</div>
+<h2 class="small-head" id="SCR26-examples">事例</h2>
+<h3 class="small-head" id="SCR26-ex1">事例 1</h3>
+<div class="example">
+		<div class="textbody">
+				<p>この例では、リンクがクリックされた際にメニューを生成し、そのリンクの後に挿入する。リンクのonclickイベントは新しいメニューのためのIDをパラメータとして渡すShowHideスクリプトを呼び出すために使用される。</p>
+		</div>
+
+		<div class="code">
+				<p><strong>コード例：</strong></p>
+				<pre><code>&lt;a href="#" onclick="ShowHide('foo',this)"&gt;切り替え&lt;/a&gt;</code></pre>
+		</div>
+		<div class="textbody">
+				<p>ShowHideスクリプトは新しいメニューを含むdivを生成し、リンクを挿入する。最終行がスクリプトの核心となる。スクリプトのトリガーとなる要素の親を探し、新しい子として生成されたdivをそれに追加する。これにより、新しいdivはDOM内でリンクの次になる。利用者がタブを押したときには、フォーカスがメニュー内で最初のフォーカス可能な項目となる生成されたリンクに移動する。</p>
+		</div>
+
+		<div class="code">
+				<p><strong>コード例：</strong></p>
+				<pre><code>ShowHide関数(id,src)
+{
+	var el = document.getElementById(id);
+	if (!el)
+	{
+		el = document.createElement("div");
+		el.id = id;
+		var link = document.createElement("a");
+		link.href = "javascript:void(0)";
+		link.appendChild(document.createTextNode("Content"));
+		el.appendChild(link);
+		src.parentElement.appendChild(el);
+	}
+	else
+	{
+		el.style.display = ('none' == el.style.display ? 'block' : 'none');
+	}
+}</code></pre>
+		</div>
+		<div class="textbody">
+				<p>CSSはdivおよびリンクをメニューのように見せるために利用される。</p>
+		</div>
+</div>
+<h2 id="SCR26-tests">検証</h2>
+<div class="textbody">
+		<h3 class="small-head" id="SCR26-procedure">チェックポイント</h3>
+		<ol class="enumar">
+				<li>
+						<p>ポップアップではないダイアログのトリガーとなる全てのエリアを探す。</p>
+				</li>
+				<li>
+						<p>そのダイアログがボタン又はリンクのクリックイベントによりトリガーされる。</p>
+				</li>
+				<li>
+						<p>スクリプトによって生成されたDOMを調査できるツールを使って、ダイアログがDOM内で次の位置にきている。</p>
+				</li>
+		</ol>
+		<h3 class="small-head" id="SCR26-results">判定基準</h3>
+		<ul>
+				<li>
+						<p>2.及び3.を満たしている。</p>
+				</li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="SCR24.html"><strong>前：</strong>実装方法 SCR24</a></li>
+			<li><a href="SCR27.html"><strong>次：</strong>実装方法 SCR27</a></li>
+		</ul>
+<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> c 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>R</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+
+</div>
+	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR26.html">SCR26: Inserting dynamic content into the Document Object Model immediately following its trigger element（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：中村 精親（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</li>
+			</ul>
+	</div>
+	</body>
+</html>

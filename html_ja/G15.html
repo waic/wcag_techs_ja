@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G15: ツールを用いて、コンテンツが一般閃光閾値及び赤色閃光閾値を越えていないことを確認する</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead"><p class="logo"><a href="http://www.w3.org/">
+<img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G14.html"><strong>前：</strong>実装方法 G14</a></li>
+			<li><a href="G17.html"><strong>次：</strong>実装方法 G17</a></li>
+		</ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#G15-applicability">適用（対象）</a></li>
+			<li><a href="#G15-description">解説</a></li>
+			<li><a href="#G15-examples">事例</a></li>
+			<li><a href="#G15-resources">参考リソース</a></li>
+			<li><a href="#G15-related-techs">関連する実装方法</a></li>
+			<li><a href="#G15-tests">検証</a></li>
+		</ul>
+</div>
+          
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G15" id="G15"> </a>G15: ツールを用いて、コンテンツが一般閃光閾値及び赤色閃光閾値を越えていないことを確認する</h1>
+        
+            <div class="applicability"><h2 id="G15-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>あらゆるウェブコンテンツ技術</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+            <ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#seizure-does-not-violate">達成基準 2.3.1 (3回の閃光又は閾値以下)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#seizure-does-not-violate">
+						How to Meet 2.3.1 (Three Flashes or Below Threshold)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/seizure-does-not-violate.html">達成基準 2.3.1 (3回の閃光又は閾値以下) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="G15-description">解説</h2><div class="textbody">
+            
+               <p>一般閃光閾値と赤色閃光閾値を違反しているかどうかを検証する目的は、感光性の発作のある利用者が、発作を起こしそうなコンテンツに遭遇することなくウェブサイトを
+			   閲覧できるようにすることである。警告を示すという方法もあるが、見逃すことも考えられるし、また子どもたちは警告があっても読めなかったり、
+			   理解できなかったりするかもしれない。この実装方法を用いることによって、コンテンツのチェックができるので、一般閃光や赤色閃光の閾値を違反している場合は、
+			   サイト上で用いないことにするか、あるいは閾値に反しないように修正する。</p>
+            
+               <div class="note">
+                 <p class="prefix"><em>注記 1：</em>特定の単純な閃光であれば用いることができる検証がある。例えば：</p>
+                 <ul><li>
+                        <p>コンテンツが1秒間に3回あるいはそれよりも少ない回数の閃光を放つものであれば、<a href="G19.html">G19: どの1秒間においても、コンテンツに3回よりも多く閃光を放つコンポーネントがないことを確認する</a>を用いることができる。</p>
+                     </li><li>
+                        <p>コンテンツが画面上で一度に一箇所でだけ閃光を放ち、その面積が十分に小さいならば、実装方法<a href="G176.html">G176: 閃光を放つエリアを十分に小さくする</a>を用いることができる。</p>
+                     </li></ul>
+                 <p class="prefix"><em>注記 2：</em>その他の場合は、すべての要因を把握し、連続する時間単位で映像に適用するツールが必要である。</p>
+               </div>
+        
+            </div>
+        
+            <h2 class="small-head" id="G15-examples">事例</h2>
+          
+               <ul><li>
+                
+                     <p>雷のアニメーションにおいて、稲光が6回閃光を放つ。閃光はとても速く、大きく、閃光の解析ツールで検証したところ、一般閃光閾値に違反している。アニメーションは、稲妻閃光が2回続いた後に短い休止が入るように編集されている。
+					 変更後のアニメーションは、一般閃光閾値に違反していない。</p>
+            
+                  </li></ul>
+        
+            
+        
+            <h2 id="G15-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>
+                  
+                           <a href="http://www.hardingfpa.com/">Harding FPA Web Site</a>
+                
+                        </p>
+              
+                     </li><li>
+                
+                        <p>
+                  
+                           <a href="http://trace.wisc.edu/peat/">Trace Center Photosensitive Epilepsy Analysis Tool (PEAT)</a>
+                
+                        </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="G15-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+            
+               <li><a href="G19.html">G19： どの1秒間においても、コンテンツに3回よりも多く閃光を放つコンポーネントがないことを確認する</a></li>
+            
+               <li><a href="G176.html">G176： 閃光を放つエリアを十分に小さくする</a></li>
+        
+            </ul></div>
+        
+            <h2 id="G15-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G15-procedure">チェックポイント</h3>
+            
+                  <p>コンテンツが一般閃光閾値及び／又は赤色閃光閾値に違反していない。</p>
+            
+                  <ol class="enumar"><li>
+                        <p>ツールを使って、一般閃光閾値や赤色閃光閾値を超えていない。</p>
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G15-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>1. を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G14.html"><strong>前：</strong>実装方法 G14</a></li>
+			<li><a href="G17.html"><strong>次：</strong>実装方法 G17</a></li>
+		</ul>
+		<div class="footer">
+         <p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+ <p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+ <div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G15.html">G15: Using a tool to ensure that content does not violate the general flash threshold or red flash threshold（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+			</ul>
+</div>
+</body></html>

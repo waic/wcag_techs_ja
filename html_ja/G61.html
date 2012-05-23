@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<head><title>G61: 繰り返される一連のコンポーネントは毎回同じ相対的順序で提示する</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices"><div id="masthead">
+<p class="logo">
+<a href="http://www.w3.org/">
+<img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a>
+</p>
+<p class="collectiontitle">
+<a href="./">WCAG 2.0 実装方法集</a>
+</p>
+</div>
+<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+		</div>
+<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G60.html"><strong>前：</strong>実装方法 G60</a></li>
+			<li><a href="G62.html"><strong>次：</strong>実装方法 G62</a></li>
+		</ul>
+<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#H25-applicability">適用（対象）</a></li>
+			<li><a href="#H25-description">解説</a></li>
+			<li><a href="#H25-examples">事例</a></li>
+			<li><a href="#H25-resources">参考リソース</a></li>
+			<li><a href="#H25-tests">検証</a></li>
+		</ul>
+	</div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G61" id="G61"> </a>G61: 繰り返される一連のコンポーネントは毎回同じ相対的順序で提示する</h1>
+        
+            <div class="applicability"><h2 id="G61-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>全てのウェブコンテンツ技術</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p><ul>
+            <li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#consistent-behavior-consistent-locations">達成基準 3.2.3 (一貫したナビゲーション:)</a><ul>
+            <li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#consistent-behavior-consistent-locations">How to Meet 3.2.3 (Consistent Navigation)：英語</a></li>
+            <li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html">達成基準 3.2.3 (一貫したナビゲーション) を理解する</a></li></ul></li></ul>
+        
+            <h2 id="G61-description">解説</h2><div class="textbody">
+          
+               <p>この実装方法の目的は、繰り返し現れる一連のコンポーネント中での配置を予測可能にすることによって、コンテンツを使いやすくすることである。この実装方法は複数のウェブページについて、それらのページ中で繰り返される一連のコンポーネントを毎回同じ順序で提示することで、統一されたレイアウトや表現の記憶を容易にする。それらのコンポーネント間に別のコンポーネントを挿入することはあってもよいが、元のコンポーネント間の相対的順序は変更しない。</p>
+          
+               <p>この実装方法は、繰り返し出現するナビゲーションのためのコンポーネントについても当てはまる。
+ウェブページには利用者が他のページにジャンプできるよう、ナビゲーションのためのメニューやそのためのコンポーネントを置くことが多い。
+この実装方法は、ナビゲーションのためのコンポーネントが繰り返し用いられる度にその中に置かれるリンクやプログラム的参照を一定の順序で提示することにより、コンポーネント間の配置を予測しやすくする。リンク先のウェブページについてそれぞれのサブセクションに移動できるようにしたい場合など、リンクを削除したり、既存のリンクの間に他のリンクを挿入したりしてもよいが、リンク間の相対的位置は変更しない。 </p>
+        
+            </div>
+        
+            <h2 class="small-head" id="G61-examples">事例</h2>
+          
+               <ul><li>
+              
+                     <p>あるウェブサイトでは各ページの先頭に、ロゴ、タイトル、検索フォーム、ナビゲーションバーが置かれている。これらは同じ相対的順序で提示される。あるページには検索フォームがないが、その他のコンポーネントは繰り返し現れるどのページにおいてもやはり同じ順序で提示される。</p>
+            
+                  </li><li>
+              
+                     <p>あるウェブサイトでは左側にナビゲーションメニューがあり、サイト内の主要なセクションへのリンクが置かれている。利用者がサイト内の他のセクションへのリンクをたどると、移動先のページでも主要なセクションへのリンクが同じ相対的順序で提示される。ページによっては一部のリンクが省かれたり他のリンクが追加されたりするが、その他のリンクは必ず同じ相対的順序を保っている。たとえば製品とそのトレーニングサービスを提供する企業のウェブサイトでは、ナビゲーションリストには製品とトレーニングサービスが主要なセクションとして提示されている。また製品のページでは個別の製品へのリンクもナビゲーションリスト内に置かれている。利用者が製品のページからトレーニングのページに移動すると、ナビゲーションリストから個別の製品へのリンクが省かれ、個別のトレーニングサービスへのリンクが追加される。</p>
+            
+                  </li></ul>
+        
+            
+        
+            <h2 id="G61-resources">参考リソース</h2><div class="textbody"><p>参考リソースは案内目的のみであり、保障を意味するものではない。</p>
+          
+                
+        
+            </div>
+       
+        
+            <h2 id="G61-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G61-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>ウェブページの集合(たとえば一つのウェブサイト)中の全てのページで繰り返し提示されるコンポーネントをリストアップする。</p>
+              
+                     </li><li>
+                
+                        <p>それぞれのコンポーネントにおいて、そのコンポーネントが現れる全てのウェブページで他の繰り返し出現するコンポーネントとの相対的位置関係が一貫している。</p>
+              
+                     </li><li>
+                
+                        <p> それぞれのナビゲーションのためのコンポーネントにおいて、そこに含まれるリンクやプログラム的な参照が必ず同じ相対的順序で提示される。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G61-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>2.及び 3.を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G60.html"><strong>前：</strong>実装方法 G60</a></li>
+			<li><a href="G62.html"><strong>次：</strong>実装方法 G62</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+ <p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G61.html">G61: Presenting repeated components in the same relative order each time they appear（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+				<li>日本語訳：<a href="http://www.argv.org/">井上浩一（ARGV）</a></li>
+
+			</ul>
+	</div>
+    </body></html>

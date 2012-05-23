@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>F3: 達成基準 1.1.1 の不適合事例 － CSSを用いて、重要な情報を伝える画像を表示させている</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head><body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="images/w3c_home.png" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div><div id="skipnav"><p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p></div><a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="F2.html"><strong>前：</strong>不適合事例 F2</a></li>
+			<li><a href="F4.html"><strong>次：</strong>不適合事例 F4</a></li>
+		</ul>
+	<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#F3-applicability">適用（対象）</a></li>
+			<li><a href="#F3-description">解説</a></li>
+			<li><a href="#F3-examples">事例</a></li>
+			<li><a href="#F3-resources">参考リソース</a></li>
+			<li><a href="#F3-related-techs">関連する実装方法</a></li>
+			<li><a href="#F3-tests">検証</a></li>
+		</ul>
+	</div>
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="F3" id="F3"> </a>F3: 達成基準 1.1.1 の不適合事例 － CSSを用いて、重要な情報を伝える画像を表示させている</h1>
+        
+            <div class="applicability"><h2 id="F3-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>CSSに対応しているウェブコンテンツ技術全て</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する不適合事例である：</p><ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#text-equiv-all">達成基準 1.1.1 (非テキストコンテンツ)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#text-equiv-all">
+						How to Meet 1.1.1 (Non-text Content)：英語
+					</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/text-equiv-all.html">達成基準 1.1.1 (非テキストコンテンツ) を理解する
+					</a></li></ul></li></ul>
+        
+            <h2 id="F3-description">解説</h2><div class="textbody">
+          
+               <p>
+CSSのbackground-imageプロパティを使用すると、HTMLのコードとは無関係に、CSSでドキュメントに画像を組み込むことができる。
+しかし、CSSのbackground-imageプロパティは装飾のために使用するものであるため、CSSで組み込まれる画像に代替テキストを付けることはできない。
+代替テキストは、重要な情報を伝える画像を見ることのできない人にとって必須のものである。
+したがって、このプロパティを重要な情報を伝える画像を追加するために使用した場合は不適合となる。</p>
+          
+               <div class="note"><p class="prefix">
+<em>注記： </em>背景画像の中に情報を組み込むことは、読みやすくする目的で背景を変えている人や、OSのハイコントラスト・モードの利用者に対しても問題を引き起こす。これらの利用者は、代替テキストが存在しないことで背景画像に含まれている情報を失うことになる。</p></div>
+        
+            </div>
+        
+            <h2 class="small-head" id="F3-examples">事例</h2>
+          
+               <div class="failure"><h3 class="small-head" id="F3-failex1">
+					不適合事例 1: </h3><div class="example">
+            
+                  
+            
+                  <div class="textbody">
+              
+                     <p>
+以下の例では、コンテンツの一部としてCSSによってのみ表示させられている画像が含まれている。その画像(TopRate.png)は180×200ピクセルで「基準金利 年 19.3%」というテキストを含んでいる。</p>
+            
+                  </div>
+            
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code>
+
+CSS内: 
+p#bestinterest {
+  padding-left: 200px;
+  background: transparent url(/images/TopRate.png) no-repeat top left;
+}</code></pre></div>
+            
+                  <div class="textbody">
+              
+                     <p>上記コードの適用先: </p>
+            
+                  </div>
+            
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code> 
+&lt;p id="bestinterest"&gt;
+  これ以上の金利を発見できましたか？
+&lt;/p&gt;</code></pre></div>
+          
+               </div></div>
+          
+               <div class="failure"><h3 class="small-head" id="F3-failex2">
+					不適合事例 2: </h3><div class="example">
+            
+                  
+            
+                  <div class="textbody">
+              
+                     <p>
+ある書籍販売業者は、「新刊」「限定版」「在庫あり」「在庫なし」を示すためのアイコンとして背景画像を使用している。</p>
+              
+                     <p>CSS内： </p>
+            
+                  </div>
+            
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code>
+ul#booklist li {
+  padding-left: 20px;
+}
+
+ul#booklist li.new {
+  background: transparent url(new.png) no-repeat top left; 
+}
+                            
+ul#booklist li.limited {
+  background: transparent url(limited.png) no-repeat top left; 
+}
+                            
+ul#booklist li.instock {
+  background: transparent url(instock.png) no-repeat top left; 
+}
+
+ul#booklist li.outstock {
+  background: transparent url(outstock.png) no-repeat top left; 
+}</code></pre></div>
+            
+                  <div class="textbody">
+              
+                     <p>上記コードの適用先：</p>
+            
+                  </div>
+            
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code>
+&lt;ul id="booklist"&gt;
+  &lt;li class="new"&gt;ある書籍&lt;/li&gt;
+  &lt;li class="instock"&gt;他の書籍&lt;/li&gt;
+  &lt;li class="limited"&gt;オススメできない書籍&lt;/li&gt;
+  ...
+  &lt;li class="outstock"&gt;あなたの本当に欲しい書籍&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+          
+               </div></div>
+        
+            
+        
+            <h2 id="F3-resources">参考リソース</h2><div class="textbody"><p>なし</p></div>
+        
+            <h2 id="F3-related-techs">関連する実装方法</h2><div class="textbody"><ul>
+          
+               <li><a href="H37.html">H37： img 要素の alt 属性を用いる</a></li>
+        
+            </ul></div>
+        
+            <h2 id="F3-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="F3-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>CSSによってコンテンツに追加されているすべての画像を検査対象とする。</p>
+              
+                     </li><li>
+                
+                        <p>画像は重要な情報を伝えていない。</p>
+              
+                     </li><li>
+                        <p>画像が重要な情報を伝えている場合、その情報は支援技術にも伝えられ、かつCSSによる画像が表示されない場合でも伝えられるようになっている。</p>
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="F3-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>2と3の両方を満たさない場合は不適合となり、コンテンツは達成基準を満たさないことになる。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="F2.html"><strong>前：</strong>不適合事例 F2</a></li>
+			<li><a href="F4.html"><strong>次：</strong>不適合事例 F4</a></li>
+		</ul>
+
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p></div>
+
+	<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F3.html">F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+				<li>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></li>
+			</ul>
+	</div>
+
+</body></html>

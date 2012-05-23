@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>G149: フォーカスを受け取った際に、ユーザーエージェントによってハイライトされるユーザーインタフェースコンポーネントを用いる</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+	<li><strong><a href="Overview.html">目次</a></strong></li>
+	<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G148.html"><strong>前: </strong> 実装方法 G148</a></li>
+	<li><a href="G150.html"><strong>次: </strong> 実装方法 G150</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ:</p>
+<ul id="navbar">
+<li><a href="#G149-applicability">適用（対象）</a></li>
+<li><a href="#G149-description">解説</a></li>
+<li><a href="#G149-examples">事例</a></li>
+<li><a href="#G149-resources">参考リソース</a></li>
+<li><a href="#G149-tests">検証</a></li></ul></div>
+        
+            <div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+ <h1><a name="G149" id="G149"> </a>G149: フォーカスを受け取った際に、ユーザーエージェントによってハイライトされるユーザーインタフェースコンポーネントを用いる</h1>
+        
+            <div class="applicability"><h2 id="G149-applicability">適用（対象）</h2><div class="textbody">
+          
+               <p>ユーザーエージェントによって提供されるフォーカスのハイライトを用いる全てのウェブコンテンツ技術</p>
+        
+            </div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p><ul>
+            <li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-focus-visible">達成基準 2.4.7 (視覚的に認識可能なフォーカス)</a><ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#navigation-mechanisms-focus-visible">How to Meet 2.4.7 (Focus Visible)：英語</a></li><li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html">達成基準 2.4.7 (視覚的に認識可能なフォーカス) を理解する</a></li></ul></li></ul>
+        
+            <h2 id="G149-description">解説</h2><div class="textbody">
+          
+               <p>この実装方法の目的は、ユーザーエージェントのサポートにより、利用者が、フォーカス可能なコンポーネントを視覚的に識別できるようにすることである。フォーカスを受け取った際に、何らかの方法で標準的なコンポーネントを強調することはユーザーエージェントでは一般的である。<a href="http://www.w3.org/TR/WAI-USERAGENT/guidelines.html#tech-interaction-highlight">UAAGのチェックポイント　10.2「選択状態の強調、コンテンツのフォーカス、活性の要素、訪問済みリンク」（英語）</a>を満たす場合、UAAGに適合したユーザーエージェントでは標準的なコンポーネントは強調される。ユーザーエージェントがサポートしている標準的なコントロールをウェブ制作者が使用すれば、利用者は、フォーカスの置かれている場所を標準的で予測可能な方法で知ることができる。</p>
+        
+            </div>
+        
+            <h2 class="small-head" id="G149-examples">事例</h2>
+          
+               <ul><li>
+              
+                     <p>HTMLのテキスト入力フィールドがフォーカスを受け取ったとき、ブラウザーが、テキストフィールドの中の入力箇所に点滅する垂直なバーを表示する。</p>
+            
+                  </li><li>
+              
+                     <p>HTMLのリンクがフォーカスを受け取ったとき、フォーカスを強調する長方形の点線で囲まれる。</p>
+            
+                  </li></ul>
+        
+            
+        
+            <h2 id="G149-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                
+                        <p>
+                  
+                           <a href="http://www.w3.org/TR/UAAG10/guidelines.html#tech-interaction-highlight">User Agent Accessibility Guidelines 10.2: Highlight selection, content focus, enabled elements, visited links</a>
+                
+                        </p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="G149-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G149-procedure">チェックポイント</h3>
+            
+                  <p>ウェブページ上のフォーカス可能な各コンポーネントに対して：</p>
+            
+                  <ol class="enumar"><li>
+                
+                        <p>そのコントロールにフォーカスを設定する。</p>
+              
+                     </li><li>
+                
+                        <p>何らかの方法でユーザーエージェントがコントロールをハイライトしている。</p>
+              
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G149-results">判定基準</h3>
+            
+                  <ul><li>
+                
+                        <p>2.を満たしている。</p>
+              
+                     </li></ul>
+          
+               
+        
+            </div>
+      
+         <!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="G148.html"><strong>前: </strong> 実装方法 G148</a></li>
+	<li><a href="G150.html"><strong>次: </strong> 実装方法 G150</a></li>
+	</ul>
+				
+				<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G149.html">G149: Using user interface components that are highlighted by the user agent when they receive focus（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+	</ul>
+</div>
+</body>
+</html>

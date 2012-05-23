@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="ja" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<title>G84: 利用者が認められた値以外の情報を提供した際に、テキストの説明文を提供する</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+	<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+	<ul id="navigation">
+		<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+		<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+		<li><a href="G83.html"><strong>前： </strong>実装方法 G83</a></li>
+		<li><a href="G85.html"><strong>次： </strong>実装方法 G85</a></li>
+	</ul>
+<div class="navtoc">
+	<p>このページのコンテンツ：</p>
+	<ul id="navbar">
+		<li><a href="#G84-applicability">適用（対象）</a></li>
+		<li><a href="#G84-description">解説</a></li>
+		<li><a href="#G84-examples">事例</a></li>
+		<li><a href="#G84-tests">検証</a></li>
+	</ul>
+</div>
+<div class="skiptarget">
+	<a id="maincontent">-</a>
+</div>
+	<h1><a name="G84" id="G84"> </a>G84: 利用者が認められた値以外の情報を提供した際に、テキストの説明文を提供する</h1>
+<div class="applicability">
+	<h2 id="G84-applicability">適用（対象）</h2>
+<div class="textbody">
+		<p>限定された値の入力のみを受け付けるコンテンツ</p>
+</div>
+</div>
+		<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+		<ul>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#minimize-error-identified">達成基準 3.3.1 (入力エラー箇所の特定)</a>
+			<ul>
+				<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#minimize-error-identified">How to Meet 3.3.1 (Error Identification)：英語</a></li>
+				<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/minimize-error-identified.html">達成基準 3.3.1 (入力エラー箇所の特定) を理解する</a></li>
+			</ul></li>
+			<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#minimize-error-suggestions">達成基準 3.3.3 (入力エラー修正方法の提示)</a>
+			<ul>
+				<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#minimize-error-suggestions">How to Meet 3.3.3 (Error Suggestion)：英語</a></li>
+				<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/minimize-error-suggestions.html">達成基準 3.3.3 (入力エラー修正方法の提示) を理解する</a></li>
+			</ul></li>
+		</ul>
+	<h2 id="G84-description">解説</h2>
+<div class="textbody">
+		<p>この文書の目的は、利用者による入力がバリデートされた結果、エラーが検出された場合に、そのエラーの内容は、利用者がアクセスできる方法で説明することである。一つのアプローチとして、利用者がフォームを送信しようとするときに、エラーのある項目を説明したアラートのダイアログを提示する方法がある。また、もう一つのアプローチとしては、バリデーションがサーバサイドで行われるのであれば、（利用者が入力した項目のデータは残した状態で）フォームを再表示し、ページの上部にテキストでの説明文を表示して、バリデーションで問題が発見されたことを知らせるとともに、その問題の内容を説明して、利用者が問題のあった項目を簡単に見つけられる方法を提供することがある。達成基準に「テキストで」と書かれているのは、項目のラベルにアスタリスクを付けたり、ラベルのテキストを赤色に変えたりしてエラーがあることを示すだけでは十分でないことを強調している。つまり、エラーであることの説明文をテキストで提供すべきである。</p>
+		<p>利用者による入力内容が、許可された値のいずれかでなければならない場合は、テキストでの説明文によってそのことを示すべきである。そして、可能であれば、許可された値のリストを示す、又は入力値に最も近い許可値を提示するとよい。</p>
+</div>
+	<h2 class="small-head" id="G84-examples">事例</h2>
+		<ul>
+			<li><p>利用者がフォーム項目に無効なデータを入力している。そのフォームを送信しようとすると、アラートのダイアログが表示されて、エラーの内容が説明され、利用者はそのエラーを修正することができる。</p></li>
+			<li><p>利用者がフォーム項目に無効なデータを入力して、そのフォームを送信すると、サーバがフォームを利用者に再提示する。利用者の入力したデータはそのまま表示された状態で、ページの上部に入力エラーがあったことをテキストで明確に示している。このテキストは、エラーの内容を説明していて、どの項目に問題があったのかを明確に示しているため、利用者はその項目へ容易に移動し、問題を修正することができる。</p></li>
+		</ul>
+	<h2 id="G84-tests">検証</h2>
+<div class="textbody">
+	<h3 class="small-head" id="G84-procedure">チェックポイント</h3>
+		<ol class="enumar">
+			<li><p>フォーム項目に無効なデータを入力する。</p></li>
+			<li><p>エラーに関する情報がテキストで提供される。</p></li>
+		</ol>
+	<h3 class="small-head" id="G84-results">判定基準</h3>
+		<ul>
+			<li><p>2. を満たしている。</p> </li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G83.html"><strong>前： </strong>実装方法 G83</a></li>
+			<li><a href="G85.html"><strong>次： </strong>実装方法 G85</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+		<p><strong>日本語訳における注記：</strong></p>
+		<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+		<ul>
+			<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G84.html">G84: Providing a text description when the user provides information that is not in the list of allowed valuesa（英語）</a></li>
+			<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+			<li>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+		</ul>
+</div>
+</body>
+</html>

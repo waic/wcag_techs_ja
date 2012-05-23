@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+<title>G156: 一般に入手可能なユーザーエージェントで、テキストのブロックの前景及び背景を変更できるウェブコンテンツ技術を用いる</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		</head>
+		<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+
+		<div id="skipnav">
+			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+		</div>
+		<a name="top"> </a>
+	<!-- TOP NAVIGATION BAR -->
+		<ul id="navigation">
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G155.html"><strong>前：</strong>実装方法 G155</a></li>
+			<li><a href="G157.html"><strong>次：</strong>実装方法 G157</a></li>
+		</ul>
+				
+	<div class="navtoc">
+		<p>このページのコンテンツ：<br /></p>
+		<ul id="navbar">
+			<li><a href="#G156-applicability">適用（対象）</a></li>
+			<li><a href="#G156-description">解説</a></li>
+			<li><a href="#G156-examples">事例</a></li>
+			<li><a href="#G156-resources">参考リソース</a></li>
+			<li><a href="#G156-tests">検証</a></li>
+		</ul>
+	</div>
+        
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a
+ name="G156" id="G156"> </a>G156: 一般に入手可能なユーザーエージェントで、テキストのブロックの前景及び背景を変更できるウェブコンテンツ技術を用いる</h1>
+        
+            <div class="applicability"><h2 id="G156-applicability">適用（対象）</h2><div
+ class="textbody">
+ <p>全てのウェブコンテンツ技術</p>
+</div></div>
+        
+            <p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+            <ul><li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#visual-audio-contrast-visual-presentation">達成基準 1.4.8（視覚的な表現）</a>
+            <ul><li><a href="http://www.w3.org/WAI/WCAG20/quickref/20081211/#visual-audio-contrast-visual-presentation">How to Meet 1.4.8 (Visual Presentation)：英語</a></li>
+            <li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html">達成基準 1.4.8（視覚的な表現）を理解する</a></li></ul></li></ul>
+        
+            <div class="ua-issues"><h2 class="small-head" id="ua1.101.1">ユーザーエージェント及び支援技術によるサポート</h2>
+          
+               <div class="ua-issue">
+									 <p>IE、Firefoxの全てのバージョン、Mozilla、Operaのバージョン6以降を含む大部分のブラウザでは、利用者が色設定を変更することによって、コンテンツ制作者のCSSとHTMLのカラースキームを上書きできる。
+											</p>
+               </div>
+          
+               <div class="ua-issue">
+									 <p>FirefoxとNetscapeでは、特定の色を上書きした際、JavaScriptのポップアップボックスやドロップダウンメニューのほとんどが利用できなくなる問題がある。ポップアップボックスの背景が透明になり、そのボックスのテキストがページ上のテキストに重なってしまったり、ドロップダウンメニューが透明になるか、暗いグレーの背景になる。</p>
+               </div>
+          
+               <div class="ua-issue">
+									 <p>IE 6では、背景色がシステム設定上で選択されていない限り、その色でブラウザ画面の背景色を上書きできない。</p>
+               </div>
+        
+            </div>
+        
+        
+            <h2 id="G156-description">解説</h2><div 
+class="textbody">
+          
+					<p>認知障害のある利用者は、ウェブページのコンテンツをうまく理解するために、前景のテキストと背景を特定の色の組み合わせを必要としていることがある。一般に利用されるブラウザの大部分が、ブラウザ内部の機能として、色設定を変更するオプションを提供している。この機能によって、コンテンツ制作者が指定した前景色や背景色を、利用者が選択した色で上書きできる。</p>
+          
+					<p>この達成基準を満たすためには、コンテンツ制作者はこのようなコントロールを備えるブラウザでウェブページが利用できるようにデザインし、この機能を無効にするような実装を行なってはならない。</p>
+          
+					<p>ページ上の全てのテキストの前景色と背景色を上書きすると、ページのグループ化や組織化に関する視覚的な手がかりが失われ、かえって理解や利用が困難になる恐れがある。ページ上の各領域の境界を示すのに背景色を用いている場合、この実装方法が適切ではない可能性がある。背景色をページ上の各領域の境界を示すのに用いているならば、「<a href="C23.html">C23: メインコンテンツのテキスト及び背景の色を指定せず、バナー、特集記事及びナビゲーションなどのようにメインではないコンテンツのテキスト及び背景の色をCSSで指定する</a>」に基づき、ページの視覚的な構造は保ちつつ、利用者が主要なテキストの色をコントロールできるようにするとよい。</p>
+        
+            </div>
+        
+            <h2 class="small-head" id="G156-examples">事例</h2>
+          
+               <ul><li>
+							 <p>前景色と背景色の指定のために、HTMLとCSSを用いてデザインしているウェブページがある。利用者はInternet Explorer 7で自分の望む色に設定し、選択した前景色と背景色でコンテンツを見ることができる。
+									 </p>
+                  </li><li>
+									<p>HTMLとCSSを用いてデザインしているウェブページがある。さまざまなブラウザでどのように色を設定するかを説明したページへのリンクを設置している。</p>
+                  </li></ul>
+        
+            
+        
+				<h2 id="G156-resources">参考リソース</h2><div class="textbody">
+						<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+          
+               
+            
+                  <ul><li>
+                        <p>
+                           <a 
+href="http://www.bbc.co.uk/accessibility/win/seeing/colour/browser/sub_3.shtml">BBC's
+ Web page with instructions how to change the browser colors in most 
+browsers</a>
+                        </p>
+                     </li></ul>
+          
+               
+        
+            </div>
+        
+            <h2 id="G156-tests">検証</h2><div class="textbody">
+          
+               <h3 class="small-head" id="G156-procedure">チェックポイント</h3>
+            
+                  <ol class="enumar"><li>
+									<p>HTMLコンテンツの色を利用者が変更できるブラウザで、ウェブページを開く。</p>
+                     </li><li>
+										 <p>ブラウザ設定で、コンテンツに指定された色とは異なる前景色と背景色に変更する。
+												 </p>
+                     </li><li>
+										 <p>ページに戻ると、ブラウザで設定した別の前景色と背景色が、コンテンツに指定された色を上書きしている。
+												</p>
+                     </li></ol>
+          
+               
+          
+               <h3 class="small-head" id="G156-results">判定基準</h3>
+            
+                  <ul><li>
+									<p>3. を満たしている。</p>
+                     </li></ul>
+            
+          
+               
+        
+            </div>
+      
+			<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="G155.html"><strong>前：</strong>実装方法 G155</a></li>
+			<li><a href="G157.html"><strong>次：</strong>実装方法 G157</a></li>
+		</ul>
+ 
+ <div class="footer">
+                 		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a 
+href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+ © 2008 <a href="http://www.w3.org/"><acronym title="World Wide Web 
+Consortium">W3C</acronym></a><sup>®</sup> (<a 
+href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute
+ of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym
+ title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>,
+ <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a
+ href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+ <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
+ and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document
+ use</a> rules apply.</p></div>
+						
+		<div class="annotation">
+			<p><strong>日本語訳における注記：</strong></p>
+			<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+			<ul>
+				<li>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G156.html"> G156: Using a technology that has commonly-available user agents that can change the foreground and background of blocks of text
+（英語）</a></li>
+				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+				<li>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></li>
+			</ul>
+	</div>
+</body></html>
