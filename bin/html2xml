@@ -24,7 +24,14 @@ xml = Nokogiri::XML::Builder.new do |x|
 			x << (html / 'div.applicability div.textbody').inner_html
 		}
 		x.__send__( :'applies-to' ) {
-			x.__send__( :'success-criterion', idref: (html / 'p.referenced>ul li').text )
+			[].tap{|ids|
+				(html / 'p.referenced + ul > li a').each do |a|
+					next if a.attr( 'href' ) !~ /#/
+					ids << a.attr( 'href' ).sub( /\A.*#/, '' )
+				end
+			}.uniq.each do |id|
+				x.__send__( :'success-criterion', idref: id )
+			end
 		}
 		x.__send__( :'ua-issues' ) {
 			x.__send__( :'ua-issue' ) {
