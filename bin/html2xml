@@ -21,6 +21,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 			x.text (html / :h1)[0].text.strip.sub( /\A.*? /, '' )
 		}
 		x.applicability {
+			x << (html / 'div.applicability div.textbody').inner_html
 		}
 		x.__send__( :'applies-to' ) {
 			x.__send__( :'success-criterion' ) {
