@@ -56,4 +56,4 @@ xml = Nokogiri::XML::Builder.new do |x|
 	}
 end
 
-puts xml.to_xml
+puts Nokogiri::XML( xml.to_xml, nil, 'utf-8' )
