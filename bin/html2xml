@@ -12,11 +12,11 @@ end
 
 src = ARGV.shift
 dst = ARGV.shift
-
+tech_id = File.basename( src, '.html' )
 html = Nokogiri( open( src, 'r:utf-8', &:read ) )
 
 xml = Nokogiri::XML::Builder.new do |x|
-	x.technique( id: File.basename( src, '.html' ) ) {
+	x.technique( id: tech_id ) {
 		x.__send__( :"short-name" ) {
 			x.text (html / :h1)[0].text.strip.sub( /\A.*? /, '' )
 		}
@@ -38,6 +38,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 			}
 		}
 		x.description {
+			x << (html / "h2##{tech_id}-description + div.textbody").inner_html
 		}
 		x.examples {
 			x.__send__( :'eg-group' ) {
