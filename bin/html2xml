@@ -24,8 +24,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 			x << (html / 'div.applicability div.textbody').inner_html
 		}
 		x.__send__( :'applies-to' ) {
-			x.__send__( :'success-criterion' ) {
-			}
+			x.__send__( :'success-criterion', idref: (html / 'p.referenced>ul li').text )
 		}
 		x.__send__( :'ua-issues' ) {
 			x.__send__( :'ua-issue' ) {
