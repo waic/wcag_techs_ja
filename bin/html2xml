@@ -18,6 +18,7 @@ html = Nokogiri( open( src, 'r:utf-8', &:read ) )
 xml = Nokogiri::XML::Builder.new do |x|
 	x.technique( id: File.basename( src, '.html' ) ) {
 		x.__send__( :"short-name" ) {
+			x.text (html / :h1)[0].text.strip.sub( /\A.*? /, '' )
 		}
 		x.applicability {
 		}
