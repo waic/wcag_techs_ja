@@ -1,0 +1,58 @@
+#!/usr/bin/env ruby
+#
+# convert HTML to XML
+#
+require 'nokogiri'
+
+if ARGV.size != 2
+	$stderr.puts "usage: #{File.basename $0} <html> <dest>\n\thtml: HTML file name\n\tdest: destination path"
+	exit 1
+end
+
+src = ARGV.shift
+dst = ARGV.shift
+
+html = Nokogiri( open( src, 'r:utf-8', &:read ) )
+
+xml = Nokogiri::XML::Builder.new do |x|
+	x.technique {
+		x.__send__( :"short-name" ) {
+		}
+		x.applicability {
+		}
+		x.__send__( :'applies-to' ) {
+			x.__send__( :'success-criterion' ) {
+			}
+		}
+		x.__send__( :'ua-issues' ) {
+			x.__send__( :'ua-issue' ) {
+			}
+		}
+		x.description {
+		}
+		x.examples {
+			x.__send__( :'eg-group' ) {
+				x.description {
+				}
+				x.code {
+				}
+			}
+		}
+		x.resources {
+			x.__send__( :'see-also' ) {
+			}
+		}
+		x.__send__( :'related-techniques' ) {
+			x.relatedtech {
+			}
+		}
+		x.tests {
+			x.procedure {
+			}
+			x.__send__( :'expected-results' ) {
+			}
+		}
+	}
+end
+
+puts xml.to_xml
