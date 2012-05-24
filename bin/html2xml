@@ -16,7 +16,7 @@ dst = ARGV.shift
 html = Nokogiri( open( src, 'r:utf-8', &:read ) )
 
 xml = Nokogiri::XML::Builder.new do |x|
-	x.technique {
+	x.technique( id: File.basename( src, '.html' ) ) {
 		x.__send__( :"short-name" ) {
 		}
 		x.applicability {
