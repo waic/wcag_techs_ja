@@ -35,6 +35,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 		}
 		x.__send__( :'ua-issues' ) {
 			x.__send__( :'ua-issue' ) {
+				### CODE HERE ###
 			}
 		}
 		x.description {
