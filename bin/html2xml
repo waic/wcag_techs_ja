@@ -66,6 +66,20 @@ xml = Nokogiri::XML::Builder.new do |x|
 		}
 		x.resources {
 			x.__send__( :'see-also' ) {
+				x.ulist {
+					(html / "##{tech_id}-resources + div.textbody li").each{|li|
+						x.item {
+							x.p {
+								x.loc(
+									'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
+									'href' => (li / :a).attr( 'href' ),
+									'xlink:type' => 'simple',
+									'xlink:show' => 'replace',
+									'xlink:actuate' => 'onRequest' ) { x.text li.text.strip }
+							}
+						}
+					}
+				}
 			}
 		}
 		x.__send__( :'related-techniques' ) {
