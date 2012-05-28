@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8; -*-
 #
-# convert HTML to XML
+# WCAG2.0 Technicsの日本語訳HTMLを元のXMLフォーマットへ変換する
 #
 require 'nokogiri'
 
