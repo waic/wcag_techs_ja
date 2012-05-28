@@ -18,14 +18,14 @@ html = Nokogiri( open( src, 'r:utf-8', &:read ) )
 xml = Nokogiri::XML::Builder.new do |x|
 	x.technique( id: tech_id ) {
 		x.__send__( :"short-name" ) {
-			x.text (html / :h1)[0].text.strip.sub( /\A.*? /, '' )
+			x.text html.css( 'h1' )[0].text.strip.sub( /\A.*? /, '' )
 		}
 		x.applicability {
-			x << (html / 'div.applicability div.textbody').inner_html
+			x << html.css( 'div.applicability div.textbody' ).inner_html
 		}
 		x.__send__( :'applies-to' ) {
 			[].tap{|ids|
-				(html / 'p.referenced + ul > li a').each do |a|
+				html.css( 'p.referenced + ul > li a' ).each do |a|
 					next if a.attr( 'href' ) !~ /#/
 					ids << a.attr( 'href' ).sub( /\A.*#/, '' )
 				end
@@ -39,15 +39,15 @@ xml = Nokogiri::XML::Builder.new do |x|
 			}
 		}
 		x.description {
-			x << (html / "h2##{tech_id}-description + div.textbody").inner_html
+			x << html.css( "##{tech_id}-description + div.textbody" ).inner_html
 		}
 		x.examples {
-			(html / 'div.example').each_with_index do |example, idx|
+			html.css( 'div.example' ).each_with_index do |example, idx|
 				head = html.css( "##{tech_id}-ex#{idx+1}", "##{tech_id}-failex#{idx+1}" ).text.sub( /(不適合)?事例\s\d：?/, '' )
 				role = failure = $1 ? { role: 'failure' } : {}
 				x.head { x.text head } unless head.empty?
 				x.__send__( :'eg-group', role ) {
-					(example / :div).each{|div|
+					example.css( 'div' ).each{|div|
 						case div.attr( 'class' )
 						when 'textbody'
 							x.description {
@@ -55,7 +55,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 							}
 						when 'code'
 							x.code {
-								x << (div / :code).inner_html
+								x << div.css( 'code' ).inner_html
 							}
 						else
 							raise "Unknown class name #{div.attr 'class'}."
@@ -67,12 +67,12 @@ xml = Nokogiri::XML::Builder.new do |x|
 		x.resources {
 			x.__send__( :'see-also' ) {
 				x.ulist {
-					(html / "##{tech_id}-resources + div.textbody li").each{|li|
+					html.css( "##{tech_id}-resources + div.textbody li" ).each{|li|
 						x.item {
 							x.p {
 								x.loc(
 									'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
-									'href' => (li / :a).attr( 'href' ),
+									'href' => li.css( 'a' ).attr( 'href' ),
 									'xlink:type' => 'simple',
 									'xlink:show' => 'replace',
 									'xlink:actuate' => 'onRequest' ) { x.text li.text.strip }
