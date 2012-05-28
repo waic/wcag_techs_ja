@@ -58,6 +58,7 @@ technique 要素の使われ方などはこれで充分に分かると思いま�
 
   <examples> <!-- 事例一つにつき一つの eg-group 要素 -->
     <eg-group>
+      <head>事例のタイトル(h3.small-head)。なければ省略</head>
       <description><p>事例1の説明</p></description>
       <code role="html401"> <!-- role属性には、html401とかxhtml10とかが
 ありますが、実際にはコード例で示されているDTDと一致していないようなの

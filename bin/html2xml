@@ -41,12 +41,26 @@ xml = Nokogiri::XML::Builder.new do |x|
 			x << (html / "h2##{tech_id}-description + div.textbody").inner_html
 		}
 		x.examples {
-			x.__send__( :'eg-group' ) {
-				x.description {
+			(html / 'div.example').each_with_index do |example, idx|
+				head = (html / "##{tech_id}-ex#{idx+1}").text.sub( /事例\s\d：?/, '' )
+				x.head { x.text head } unless head.empty?
+				x.__send__( :'eg-group' ) {
+					(example / :div).each{|div|
+						case div.attr( 'class' )
+						when 'textbody'
+							x.description {
+								x << div.inner_html
+							}
+						when 'code'
+							x.code {
+								x << (div / :code).inner_html
+							}
+						else
+							raise "Unknown class name #{div.attr 'class'}."
+						end
+					}
 				}
-				x.code {
-				}
-			}
+			end
 		}
 		x.resources {
 			x.__send__( :'see-also' ) {
