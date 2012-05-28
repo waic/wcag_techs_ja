@@ -43,9 +43,10 @@ xml = Nokogiri::XML::Builder.new do |x|
 		}
 		x.examples {
 			(html / 'div.example').each_with_index do |example, idx|
-				head = (html / "##{tech_id}-ex#{idx+1}").text.sub( /事例\s\d：?/, '' )
+				head = html.css( "##{tech_id}-ex#{idx+1}", "##{tech_id}-failex#{idx+1}" ).text.sub( /(不適合)?事例\s\d：?/, '' )
+				role = failure = $1 ? { role: 'failure' } : {}
 				x.head { x.text head } unless head.empty?
-				x.__send__( :'eg-group' ) {
+				x.__send__( :'eg-group', role ) {
 					(example / :div).each{|div|
 						case div.attr( 'class' )
 						when 'textbody'
