@@ -88,9 +88,43 @@ xml = Nokogiri::XML::Builder.new do |x|
 			}
 		}
 		x.tests {
+			procedure = []
+			result = []
+			tmp = procedure
+			html.css( "##{tech_id}-tests + div.textbody > *" ).each{|e|
+				if e.node_name == 'h3'
+					tmp = result if e.attr( 'id' ) == "#{tech_id}-results"
+					next
+				end
+				tmp << e
+			}
 			x.procedure {
+				procedure.each{|e|
+					case e.node_name
+					when 'ol'
+						x.olist {
+							e.css( 'li' ).each{|li|
+								x.item { x << li.inner_html.strip }
+							}
+						}
+					else
+						x << e.to_html.strip
+					end
+				}
 			}
 			x.__send__( :'expected-results' ) {
+				result.each{|e|
+					case e.node_name
+					when 'ul'
+						x.ulist {
+							e.css( 'li' ).each{|li|
+								x.item { x << li.inner_html.strip }
+							}
+						}
+					else
+						x << e.to_html.strip
+					end
+				}
 			}
 		}
 	}
