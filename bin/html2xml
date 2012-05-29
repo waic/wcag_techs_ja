@@ -21,7 +21,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 			begin
 				x.text html.css( 'h1' )[0].text.strip.sub( /\A.*? /, '' )
 			rescue NoMethodError
-				$stderr.puts 'No h1 element in the html. Maybe invalid source.'
+				$stderr.puts "#{tech_id}: No h1 element in the html. Maybe invalid source."
 				exit
 			end
 		}
@@ -54,18 +54,33 @@ xml = Nokogiri::XML::Builder.new do |x|
 				role = $1 ? { role: 'failure' } : {}
 				x.head { x.text head } unless head.empty?
 				x.__send__( :'eg-group', role ) {
-					example.css( 'div' ).each{|div|
+					example.children.each{|div|
 						case div.attr( 'class' )
 						when 'textbody'
 							x.description {
-								x << div.inner_html.strip
+								div.children.each do |e|
+									case e.node_name
+									when 'div'
+										if e.attr( 'class' ) == 'note'
+											x.note {
+												x << e.inner_html.strip
+											}
+										else
+											$stderr.puts "#{tech_id}: Unknown div class name '#{e.attr "class"}' in eg-group.description."
+										end
+									when 'p'
+										x << e.to_html.strip + "\n"
+									else
+										$stderr.puts "#{tech_id}: Unknown node '#{e.node_name}' in eg-group.description." unless e.node_name == 'text'
+									end
+								end
 							}
 						when 'code'
 							x.code {
 								x << div.css( 'code' ).inner_html.strip
 							}
 						else
-							raise "Unknown class name #{div.attr 'class'}."
+							$stderr.puts "#{tech_id}: Unknown class name '#{div.node_name}.#{div.attr 'class'}', skipped." unless div.node_name == 'text'
 						end
 					}
 				}
