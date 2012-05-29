@@ -21,7 +21,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 			x.text html.css( 'h1' )[0].text.strip.sub( /\A.*? /, '' )
 		}
 		x.applicability {
-			x << html.css( 'div.applicability div.textbody' ).inner_html
+			x << html.css( 'div.applicability div.textbody' ).inner_html.strip
 		}
 		x.__send__( :'applies-to' ) {
 			[].tap{|ids|
@@ -39,7 +39,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 			}
 		}
 		x.description {
-			x << html.css( "##{tech_id}-description + div.textbody" ).inner_html
+			x << html.css( "##{tech_id}-description + div.textbody" ).inner_html.strip
 		}
 		x.examples {
 			html.css( 'div.example' ).each_with_index do |example, idx|
@@ -51,11 +51,11 @@ xml = Nokogiri::XML::Builder.new do |x|
 						case div.attr( 'class' )
 						when 'textbody'
 							x.description {
-								x << div.inner_html
+								x << div.inner_html.strip
 							}
 						when 'code'
 							x.code {
-								x << div.css( 'code' ).inner_html
+								x << div.css( 'code' ).inner_html.strip
 							}
 						else
 							raise "Unknown class name #{div.attr 'class'}."
