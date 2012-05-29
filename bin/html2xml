@@ -127,6 +127,13 @@ xml = Nokogiri::XML::Builder.new do |x|
 				}
 			}
 		}
+		x.translationcredit {
+			x.ulist {
+				html.css( 'div.annotation li' ).each{|li|
+					x.item { x << li.inner_html.strip  }
+				}
+			}
+		}
 	}
 end
 

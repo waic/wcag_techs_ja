@@ -88,6 +88,12 @@ technique 要素の使われ方などはこれで充分に分かると思いま�
       「判定基準」の内容。
     </expected-results>
   </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文、日本語訳監修、日本語訳など</item>
+      ....
+    </ulist>
+  </translationcredit>
 </technique>
 
 
@@ -100,12 +106,3 @@ a href -> loc href
 
 文中の属性名は att 要素に入れる。
 文中の要素名は el 要素に入れる。
-
-
-----
-
-日本語HTMLファイルには、テクニックごとに翻訳担当者が記述されています。
-これについては後でXSLTでどう処理するか考えますので、適当な要素を作って
-(translationcreditとかで良いかと思います) 、technique 要素の終了タグの
-直前に入れておいてください。HTMLはそのままでかまいません。
-
