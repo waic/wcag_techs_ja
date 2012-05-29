@@ -83,7 +83,8 @@ xml = Nokogiri::XML::Builder.new do |x|
 			}
 		}
 		x.__send__( :'related-techniques' ) {
-			x.relatedtech {
+			html.css( "##{tech_id}-related-techs + div.textbody li a" ).each{|a|
+				x.relatedtech( idref: a.attr( 'href' ).sub( /\.html$/, '' ))
 			}
 		}
 		x.tests {
