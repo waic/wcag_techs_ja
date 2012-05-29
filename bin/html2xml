@@ -44,7 +44,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 		x.examples {
 			html.css( 'div.example' ).each_with_index do |example, idx|
 				head = html.css( "##{tech_id}-ex#{idx+1}", "##{tech_id}-failex#{idx+1}" ).text.strip.sub( /(不適合)?事例\s\d：?/, '' )
-				role = failure = $1 ? { role: 'failure' } : {}
+				role = $1 ? { role: 'failure' } : {}
 				x.head { x.text head } unless head.empty?
 				x.__send__( :'eg-group', role ) {
 					example.css( 'div' ).each{|div|
