@@ -70,6 +70,12 @@ xml = Nokogiri::XML::Builder.new do |x|
 										end
 									when 'p'
 										x << e.to_html.strip + "\n"
+									when 'ul'
+										x.ulist {
+											e.css( 'li' ).each do |li|
+												x.item{ x << li.inner_html.strip }
+											end
+										}
 									else
 										$stderr.puts "#{tech_id}: Unknown node '#{e.node_name}' in eg-group.description." unless e.node_name == 'text'
 									end
