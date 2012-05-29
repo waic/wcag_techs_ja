@@ -18,7 +18,12 @@ html = Nokogiri( open( src, 'r:utf-8', &:read ) )
 xml = Nokogiri::XML::Builder.new do |x|
 	x.technique( id: tech_id ) {
 		x.__send__( :"short-name" ) {
-			x.text html.css( 'h1' )[0].text.strip.sub( /\A.*? /, '' )
+			begin
+				x.text html.css( 'h1' )[0].text.strip.sub( /\A.*? /, '' )
+			rescue NoMethodError
+				$stderr.puts 'No h1 element in the html. Maybe invalid source.'
+				exit
+			end
 		}
 		x.applicability {
 			x << html.css( 'div.applicability div.textbody' ).inner_html.strip
