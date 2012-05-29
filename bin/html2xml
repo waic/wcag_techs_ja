@@ -39,9 +39,11 @@ xml = Nokogiri::XML::Builder.new do |x|
 			end
 		}
 		x.__send__( :'ua-issues' ) {
-			x.__send__( :'ua-issue' ) {
-				### CODE HERE ###
-			}
+			html.css( 'div.ua-issue' ).each do |div|
+				x.__send__( :'ua-issue' ) { ### CODE HERE: add name and version attribute from original XML ###
+					x << div.inner_html.strip
+				}
+			end
 		}
 		x.description {
 			x << html.css( "##{tech_id}-description + div.textbody" ).inner_html.strip
