@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H43">
+  <short-name>id属性及びheaders属性を用いて、データテーブルのデータセルを見出しセルと関連付ける</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="content-structure-separation-programmatic"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>
+							この実装方法の目的は、（データテーブル内の）各データセルを適切な見出しセルと関連付けることである。まず、各データセル（<code>td</code>要素）に<code>headers</code>属性を付加する。次に、データセルの見出しとなるセルには<code>id</code>属性を指定する。データセルの<code>headers</code>属性で指定するのは、関連付けられる見出しセルの<code>id</code>属性値であり、2つ以上の<code>id</code>を含める場合はスペース区切りで列挙する。</p>
+          
+					<p>
+							この実装方法は、データセルを2つ以上の行見出し及び（又は）列見出しに関連付ける場合に利用する。こうすることで、<code>th</code>要素のみ、または<code>th</code>要素に<code>scope</code>属性を付けただけでは、データセルと見出しセルの関係が複雑すぎて定義できない場合でも、スクリーンリーダーは各データセルと関連付けられている見出しセルを読み上げることができる。また、表現形式が変わったとしても、これらの複雑な関係を知覚しやすくなる。</p>
+          
+					<p>
+							この実装方法を、レイアウトテーブルに利用することは推奨しない。なぜなら、レイアウトのためにテーブルを利用する際には、意味がないにも関らず何らかの関係性を示してしまうことになるからである。</p></description>
+  <examples>
+    <eg-group>
+      <head>行見出しが複数あるテーブル</head>
+      <code>&lt;table&gt;
+   &lt;tr&gt;
+     &lt;th rowspan="2" id="h"&gt;予習&lt;/th&gt;
+     &lt;th colspan="3" id="e"&gt;試験&lt;/th&gt;
+     &lt;th colspan="3" id="p"&gt;課題&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+     &lt;th id="e1" headers="e"&gt;1&lt;/th&gt;
+     &lt;th id="e2" headers="e"&gt;2&lt;/th&gt;
+     &lt;th id="ef" headers="e"&gt;最終&lt;/th&gt;
+     &lt;th id="p1" headers="p"&gt;1&lt;/th&gt;
+     &lt;th id="p2" headers="p"&gt;2&lt;/th&gt;
+     &lt;th id="pf" headers="p"&gt;最終&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td headers="h"&gt;15%&lt;/td&gt;
+    &lt;td headers="e e1"&gt;15%&lt;/td&gt;
+    &lt;td headers="e e2"&gt;15%&lt;/td&gt;
+    &lt;td headers="e ef"&gt;20%&lt;/td&gt;
+    &lt;td headers="p p1"&gt;10%&lt;/td&gt;
+    &lt;td headers="p p2"&gt;10%&lt;/td&gt;
+    &lt;td headers="p pf"&gt;15%&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.4.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 header information with data cells</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H39"/>
+    <relatedtech idref="H51"/>
+    <relatedtech idref="H63"/>
+    <relatedtech idref="H73"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>レイアウトテーブルかどうかを確認、テーブルのセルの内容が同じ行や列に含まれる他セルの内容と関係があるかどうか判断する。「いいえ」の場合、そのテーブルはレイアウトテーブルである。「はい」の場合、そのテーブルはデータテーブルである。</p>
+        </item>
+        <item>
+          <p>データテーブルである場合、2つ以上の行見出し及び（又は）列見出しと関連付けられているあらゆるデータセルの<code>headers</code>属性に、関連付けられている全ての見出しセルの<code>id</code>を指定している。</p>
+        </item>
+        <item><p>データテーブルでは、<code>id</code>属性または<code>headers</code>属性を指定しているあらゆるセルについて：</p>
+                
+                        <ol class="enumla">
+<li>
+                    
+										<p>データセルの<code>headers</code>属性で指定した各<code>id</code>が、見出しセルの<code>id</code>属性値と一致している。</p>
+                  
+                           </li>
+<li>
+                    
+										<p>データセルの<code>headers</code>属性で、そのデータセルと関連付けられた全ての見出しの<code>id</code>属性値を指定している。</p>
+                  
+                           </li>
+<li>
+                    
+										<p>全ての<code>id</code>が一意的であり、重複して使用していない（つまり、ページの中で2つ以上の要素が同じ<code>id</code>を持つことはできない）。</p>
+                  
+                           </li>
+</ol></item>
+        <item>
+          <p>データセルの<code>headers</code>属性で指定した各<code>id</code>が、見出しセルの<code>id</code>属性値と一致している。</p>
+        </item>
+        <item>
+          <p>データセルの<code>headers</code>属性で、そのデータセルと関連付けられた全ての見出しの<code>id</code>属性値を指定している。</p>
+        </item>
+        <item>
+          <p>全ての<code>id</code>が一意的であり、重複して使用していない（つまり、ページの中で2つ以上の要素が同じ<code>id</code>を持つことはできない）。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>レイアウトテーブルの場合、どのセルにも<code>headers</code>属性又は<code>id</code>属性がない。</p>
+        </item>
+        <item>
+          <p>データテーブルで、<code>id</code>属性を指定した全てのセルについて、3.a、3.b、3.cを満たしている。</p>
+        </item>
+        <item>
+          <p>データテーブルで、2つ以上の行見出し及び（又は）列見出しと関連付けられた全てのデータセルについて、2.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H43.html">H43: Using id and headers attributes to associate data cells with header cells in data tables（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

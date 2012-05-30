@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H37">
+  <short-name>img 要素の alt 属性を用いる</short-name>
+  <applicability>
+    <p>HTMLドキュメントで用いられている画像</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p><code>img</code> 要素を使用するときは、簡潔な代替テキストを <code>alt</code> 属性に指定する。<br/>&#13;
+               注記：この属性の値は「ALTテキスト」ともいう。</p>&#13;
+          &#13;
+               <p>画像がコンテンツを理解するために重要な文字を含むとき、代替テキストにはそれらの文字を含めなくてはならない。これにより、代替テキストはページ上で画像と同じ役割を果たすことができる。 代替テキストは、画像自体の視覚的な特徴を説明する必要はないが、画像と同じ意味を伝えなければらないことに注意する。</p></description>
+  <examples>
+    <eg-group>
+      <description><p>ウェブサイト上にある画像は、無料のニュースレターへのリンクである。画像は次のような文字を含んでいる：「無料のニュースレター：無料のレシピ、ニュースなどを入手しよう！　詳しくはこちら」　画像の代替テキストは、画像にある文字と一致している。</p>
+</description>
+      <code>&lt;img src="newsletter.gif" alt="無料のニュースレター：
+無料のレシピ、ニュースなどを入手しよう！　詳しくはこちら" /&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>ウェブサイト上にある画像は、ビルの間取り図を表現している。その画像は、各部屋の部分がインタラクティブに操作できるイメージマップである。代替テキストは「ビルの間取り図。各部屋の目的又は内容に関する詳しい情報は、部屋を選択してください」である。 「部屋を選択してください」という指示により、画像がインタラクティブであることを示している。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G82"/>
+    <relatedtech idref="H2"/>
+    <relatedtech idref="H24"/>
+    <relatedtech idref="H30"/>
+    <relatedtech idref="H45"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>コンテンツに含まれる <code>img</code> 要素それぞれを調べる。</p>
+        </item>
+        <item>
+          <p>意味を伝える <code>img</code> 要素それぞれが、<code>alt</code> 属性を含んでいる。</p>
+        </item>
+        <item>
+          <p>画像にコンテンツを理解するために重要な文字が含まれている場合、その文字が代替テキストに記述されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>2.及び3.を満たしている。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H37.html">H37: Using alt attributes on img elements（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

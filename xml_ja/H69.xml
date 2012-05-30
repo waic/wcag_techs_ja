@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H69">
+  <short-name>コンテンツの各セクションの開始位置に見出し要素を提供する</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-skip"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>JAWS及びWindows-Eyesは、見出し要素を用いたナビゲーション機能を提供しており、見出しレベルに関する情報も提供している。また、Operaは、見出し要素ごとに移動できるメカニズムを提供している。他のユーザーエージェントでも、追加的なプラグインが見出し要素を用いたナビゲーション機能をサポートしている。</p>
+    </ua-issue>
+  </ua-issues>
+  <description><p>
+							この実装方法の目的は、コンテンツの構造を伝達するために、セクションごとに見出しを指定することである。見出しのマークアップは、次のように利用されることがある。</p>
+            
+               <ul>
+<li>
+                    
+										<p>メインコンテンツの開始位置を示す</p>
+                
+                  </li>
+<li>
+                    
+										<p>メインコンテンツ領域にあるセクションの見出しをマークアップする</p>
+                
+                  </li>
+<li>
+                    
+										<p>上部又はメインのナビゲーション、左側又はサブのナビゲーション、そしてフッターのナビゲーションなど、さまざまなナビゲーションを含んだセクションを区別する</p>
+                
+                  </li>
+<li>
+                    
+										<p>視覚的に見出しのように見える画像（文字情報を含んだもの）をマークアップする</p>
+                
+                  </li>
+</ul>
+<p>いくつかのウェブコンテンツ技術において、見出しは論理的な階層を伝達することを目的としている。下位レベルの見出しを飛ばすと、文書構造がきちんと検討されなかったのではないか、又は一部の見出しが意味ではなく視覚的な表現を得るために選択されたのではないか、といった印象を与えてしまうかもしれない。したがって、コンテンツ制作者には見出しを階層的に入れ子にすることが推奨される。</p>
+            
+						<p>見出しは、コンテンツの中の重要なセクションの開始位置を示すものであるため、支援技術のユーザーが適切な見出しまで直接ジャンプしてから、コンテンツを読み始めることができる。つまり、そのコンテンツに到達するのに時間を要していたユーザーが、見出しのマークアップによってより早く到達できるようになる。</p>
+          
+					<p>CSSをサポートしているウェブコンテンツ技術では、スタイルを指定することによって、見出しの見た目又は読み上げを変えることができる。支援技術には見出しを提供しつつ、視覚的には非表示となるように、CSSを用いて見出しのスタイルを指定することも可能である。しかし、見出しを視覚的に見える状態にしておくことは、認知障害のある利用者を含む幅広い利用者にとって役に立つ。</p></description>
+  <examples>
+    <eg-group>
+      <description><p>この事例では、各セクションの見出しを<code>h2</code>要素でマークアップすることによって、検索ページ内の複数のセクションを構成している。</p>
+</description>
+      <code>&lt;h1&gt;技術関連の定期刊行物の検索&lt;/h1&gt;
+ &lt;h2&gt;検索&lt;/h2&gt;
+ &lt;form action="search.php"&gt;
+  &lt;p&gt;&lt;label for="searchInput"&gt;検索トピックスを入力：&lt;/label&gt;
+  &lt;input type="text" size="30" id="searchInput"&gt;
+  &lt;input type="submit" value="検索"&gt;&lt;/p&gt;
+ &lt;/form&gt;
+ &lt;h2&gt;検索可能な定期刊行物&lt;/h2&gt;
+ &lt;div class="jlinks"&gt;
+  &lt;a href="pcoder.com"&gt;プロフェッショナル・コーダー&lt;/a&gt; |
+  &lt;a href="algo.com"&gt;アルゴリズム&lt;/a&gt; |
+  &lt;a href="jse.com"&gt;ソフトウェア工学ジャーナル&lt;/a&gt;
+ &lt;/div&gt;
+ &lt;h2&gt;検索結果&lt;/h2&gt;
+ ……このセクションに検索結果を表示……</code>
+    </eg-group>
+    <eg-group>
+      <head>コンテンツ全体の構成を示している見出し</head>
+      <description><p>この事例では、ナビゲーションと主要コンテンツを知覚できるように、見出しマークアップを利用している。</p>
+</description>
+      <code>&lt;!-- ロゴ、バナー画像、検索フォームなど  --&gt;
+  &lt;h2&gt;ナビゲーション&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="about.htm"&gt;会社概要&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="contact.htm"&gt;お問い合わせ&lt;/a&gt;&lt;/li&gt;
+       ...
+    &lt;/ul&gt;
+  &lt;h2&gt;見出しに関する全て&lt;/h2&gt;
+   &lt;!-- メインコンテンツを構成するテキスト、画像、その他のもの…… --&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>メインコンテンツ部分にあるコンテンツの構成を示している見出し</head>
+      <description><p>
+									留意すべきは、HTML 4.01及びXHTML 1.xにおいては、見出し要素はセクションの開始位置をマークアップするためだけに用いる。つまり、見出し要素はそのコンテンツとして見出し要素を含むことはない。【訳注：WCAGワーキンググループに確認中です。】</p>
+</description>
+      <code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;title&gt;調理技法&lt;/title&gt;  
+  &lt;/head&gt;   
+  &lt;body&gt;     
+    &lt;h1&gt;調理技法&lt;/h1&gt;     
+    &lt;p&gt;       
+      ……ここにテキストが入ります……     
+    &lt;/p&gt;           
+    &lt;h2&gt;油を使った調理&lt;/h2&gt; 
+    &lt;p&gt; 
+        ……このセクションのテキスト……     
+    &lt;/p&gt;           
+    &lt;h2&gt;バターを使った調理&lt;/h2&gt;       
+    &lt;p&gt;
+        ……このセクションのテキスト……     
+    &lt;/p&gt;   
+  &lt;/body&gt; 
+&lt;/html&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/global.html#h-7.5.5" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    H1-H6 elements</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://meyerweb.com/eric/thoughts/2004/07/21/pick-a-heading/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pick a&#13;
+                    Heading Eric Meyer</loc> Eric Meyer</p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc>&#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H42"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>複数のセクションに分けられているコンテンツ全てに対して：</p>
+      <olist>
+        <item>
+          <p>各セクションの開始位置に、見出し要素でマークアップされた見出しがある。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H69.html">H69: Providing heading elements at the beginning of each section of content（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

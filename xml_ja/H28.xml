@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H28">
+  <short-name>abbr要素及びacronym要素を用いて、 略語の定義を提供する</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="meaning-located"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <ul>
+<li>
+									<p>
+											支援技術によって、<code>title</code>属性の音声読み上げのサポートレベルが異なる。支援技術の一部は、title属性を通じて提供される情報に利用者がアクセスする機能を実装していない。</p>
+                     </li>
+<li>
+										 <p>この実装方法に<code>title</code> 属性を組み合わせて実装する場合は、<code>title</code> 属性がアクセシビリティ・サポーテッドでなければらない。 <code>title</code>属性がアクセシビリティ・サポーテッドとなるためには、全てのキーボード利用者が（音声読み上げソフトウェアを利用しているかどうかに関わらず）<code>title</code>属性の内容を利用できなければならない。</p>
+                     </li>
+<li>
+										 <p>
+												 JAWS 6.2以降とWindow-Eyes 5.0以降は、<code>abbr</code>要素と<code>acronym</code>要素をサポートしている。これらの要素が現れるたびに、title属性を読み上げるように設定できるが、初期設定ではオフであり、利用者が設定をオンにすることも稀である。</p>
+                     </li>
+<li>
+										 <p>
+												 グラフィカルユーザーエージェントの多くは、<code>abbr</code>要素や<code>acronym</code>要素でマーク付けしたテキストに、点線で下線を引いたり点線で囲んで描画する。加えて、要素にマウスオーバーしたときは、元の語句をツールチップで表示する。
+                      </p>
+                     </li>
+<li>
+                        <p>
+												 Internet Explorer 7以前では、<code>abbr</code>要素でマーク付けした内容には、どのようなスタイルも追加されない。Internet Explorer 6以前では、その項目にマウスオーバーしても、元の語句はツールチップとして表示されない。
+										 		</p>
+                     </li>
+<li>
+                        <p>
+												 特定のユーザーエージェントや支援技術では、<code>abbr</code>要素と<code>acronym</code>要素が利用者に対して同じ方法で表現される。
+												
+                      </p>
+                     </li>
+</ul>
+    </ua-issue>
+  </ua-issues>
+  <description><p>
+							この実装方法の目的は、<code>abbr</code>要素と<code>acronym</code>要素を用いることで、略語に対して元の語又は定義を提供することである</p>
+          
+					<p>
+							<code>abbr</code>要素は、頭字語や頭文字語を含むあらゆる略語に用いてよい。HTML及びXHTMLでは、頭文字語や頭字語は<code>acronym</code>要素を用いてマークアップすることもできる。XHTML 2.0では、<code>acronym</code>要素を廃止し、より一般的な<code>abbr</code>要素の利用が提案されている。
+							</p></description>
+  <examples>
+    <eg-group>
+      <head>abbr要素を用いて略語の元の語を示す</head>
+      <code>&lt;p&gt;普通、砂糖は 5 &lt;abbr title="pound"&gt;lb.&lt;abbr&gt; の袋入りで売られている。&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="World Wide Web"&gt;WWW&lt;/abbr&gt; へようこそ！&lt;/p&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>abbr要素を用いて略語の定義を示す</head>
+      <code>&lt;p&gt;タシニ &lt;abbr title="及びその他"&gt;et al.&lt;/abbr&gt; &lt;abbr title="対"&gt;v.&lt;/abbr&gt;
+ニューヨーク・タイムズ紙 &lt;abbr title="及びその他"&gt;et al.&lt;/abbr&gt; は、全米著述業組合
+による象徴的な訴訟事件であり……&lt;/p&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>acronym要素を用いて頭字語の元の語を示す</head>
+      <code>&lt;p&gt;&lt;acronym title="Keep It Simple Stupid"&gt;KISS&lt;/acronym&gt;の使用が…の間で広まってきた。&lt;/p&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>acronym要素を用いて頭文字語の元の語を示す</head>
+      <code>&lt;p&gt;&lt;acronym title="World Wide Web"&gt;WWW&lt;/acronym&gt;&lt;/p&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/text.html#edef-ABBR" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 ABBR&#13;
+                    element</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/xhtml2/mod-text.html#sec_9.1." xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XHTML 2.0 abbr&#13;
+                    element</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G102"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>略語それぞれに、<code>abbr</code>要素又は<code>acronym</code>要素で元の語や定義を指定している。
+										</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H28.html">H28: Providing definitions for abbreviations by using the abbr and acronym elements（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

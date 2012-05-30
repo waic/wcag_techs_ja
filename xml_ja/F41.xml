@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F41">
+  <short-name>達成基準 2.2.1、達成基準 2.2.4、及び 達成基準 3.2.5 の不適合事例 － meta要素によるタイムアウト付きのリフレッシュを用いている</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="time-limits-required-behaviors"/>
+    <success-criterion idref="time-limits-postponed"/>
+    <success-criterion idref="consistent-behavior-no-extreme-changes-context"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p><code>meta</code> <code>http-equiv</code>のリフレッシュは、定期的にページを更新したり、利用者を別のページにリダイレクトしたりするためにしばしば用いられる。もし時間間隔が短すぎると、全盲の人はスクリーンリーダーでページを読み終わらないうちに、予期せずページが更新されてしまい、スクリーンリーダーがページの先頭から読み上げてしまう。目の見える利用者も、予期しないリフレッシュによって混乱させられる。</p>
+  </description>
+  <examples>
+    <eg-group role="failure">
+      <description><p>この非推奨例では、利用者ページが一定間隔で変化する。コンテンツ制作者はこの手法を「プッシュ」テクノロジーのシミュレートに用いるべきではない。制作者は、利用者がページを読むのにどれくらいの時間を必要とするかを予期することはできない。早すぎるリフレッシュは利用者を混乱させることになる。コンテンツ制作者は周期的なリフレッシュを避け、利用者自身にいつ最新の情報がほしいかを選択させるべきである。（<code>content</code>属性内の数字はリフレッシュまでの秒数である。）</p>
+</description>
+      <code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;   
+  &lt;head&gt;     
+    &lt;title&gt;WCAG 2.0のためのHTMLの実装方法&lt;/title&gt;     
+    &lt;meta http-equiv="refresh" content="60" /&gt;   
+  &lt;/head&gt;   
+  &lt;body&gt;
+    ...     
+  &lt;/body&gt; 
+&lt;/html&gt;</code>
+    </eg-group>
+    <eg-group role="failure">
+      <description><p>これは、利用者を数秒後に別のページにリダイレクトする非推奨例である。コンテンツ制作者はこの代わりに、サーバーサイドのリダイレクトを使用すべきである。（<code>content</code>属性内の数字はリフレッシュまでの秒数である。）</p>
+</description>
+      <code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;   
+  &lt;head&gt;     
+    &lt;title&gt;チューダー朝&lt;/title&gt;     
+    &lt;meta http-equiv="refresh" content="10;URL='http://example.com/'" /&gt;   
+  &lt;/head&gt;   
+  &lt;body&gt;
+    &lt;p&gt;このページは&lt;a href="http://example.com/"&gt;example.com&lt;/a&gt;へ移動します。
+    私たちは独自のドメイン名を取得しました。数秒後にリダイレクトします。 
+    みなさまのリンクとお気に入りのアップデートをお願いいたします。&lt;/p&gt;
+  &lt;/body&gt; 
+&lt;/html&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="SVR1"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>ドキュメント内の<code>meta</code>要素を探す。</p>
+        </item>
+        <item>
+          <p>それぞれの<code>meta</code>要素に関して、<code>http-equiv</code>属性の値に「refresh」（大文字小文字を区別しない）が含まれており、<code>content</code>属性に0より大きい（秒を表す）値がある。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしている場合、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F41.html">F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+    </ulist>
+  </translationcredit>
+</technique>

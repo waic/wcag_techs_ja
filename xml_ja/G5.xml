@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G5">
+  <short-name>利用者が制限時間なしでタスクを完了できるようにする</short-name>
+  <applicability>
+    <p>この実装方法は、機能性のための制限時間付きインタラクションを求めない操作方法をサポートする、あらゆる技術又は手法に適用される。</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="time-limits-no-exceptions"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、利用者が操作の完了に必要な時間を、利用者に提供することである。この実装方法は、制限時間付きインタラクションを必要としない操作方法を提供することにも関連する。利用者には、操作に必要なだけの時間が認められる。</p>
+  </description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www-128.ibm.com/developerworks/webservices/library/ws-restvsoap/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Resource-Oriented vs. Activity-Oriented Web Services</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.useit.com/alertbox/designmistakes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Top Ten Web Design Mistakes of 2005</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G75"/>
+    <relatedtech idref="G76"/>
+    <relatedtech idref="G80"/>
+    <relatedtech idref="G198"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>制限時間付きのインタラクションがある。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1. を満たしていない。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G5.html"> G5: Allowing users to complete an activity without any time limit（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

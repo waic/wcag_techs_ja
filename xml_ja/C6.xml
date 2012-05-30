@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="C6">
+  <short-name>構造を示すマークアップをした上で、コンテンツを配置する</short-name>
+  <applicability>
+    <p>CSSに対応しているウェブコンテンツ技術全て</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-skip"/>
+    <success-criterion idref="content-structure-separation-sequence"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、スタイルシートが適用されなくても意味の伝わる表現がなされるようにした上で、スタイルシートを使って見栄えをさらに良くする方法を示すことである。 CSS2の配置関連のプロパティを使用すれば、コンテンツを利用者のビューポート内の任意の位置に配置することができる。構造を示す要素を使っていれば、スタイルが適用されていない際でもコンテンツの意味は正しく伝えられる。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <description><p>
+この事例では、コンテンツに対して構造（定義リスト）を示すマークアップがなされている。そして、コンテンツを段組み形式で表示させるためにCSSが使用されている。コンテンツは各クラスの指定でそれぞれの段に絶対配置され、HTMLの定義リストを表示する際に<code>dd</code>要素をインデントするユーザーエージェントのデフォルト値を上書きするために、マージンの値を0にしている。</p>
+<p>表示させるコンテンツは以下の通り：</p>
+</description>
+      <code>&lt;div class="box"&gt;
+  &lt;dl&gt;
+    &lt;dt class="menu1"&gt;製品&lt;/dt&gt;
+    &lt;dd class="item1"&gt;電話&lt;/dd&gt;
+    &lt;dd class="item2"&gt;コンピューター&lt;/dd&gt;
+    &lt;dd class="item3"&gt;ポータブル　MP3　プレイヤー&lt;/dd&gt;
+    &lt;dt class="menu2"&gt;所在地&lt;/dt&gt;
+    &lt;dd class="item4"&gt;アイダホ&lt;/dd&gt;
+    &lt;dd class="item5"&gt;ウィスコンシン&lt;/dd&gt;
+    &lt;/dt&gt;
+  &lt;/dl&gt;
+ &lt;/div&gt;</code>
+      <description><p>上記要素の配置及び表示指定をするCSSは以下の通り：</p>
+</description>
+      <code>.item1 {
+   left: 0;
+   margin: 0;
+   position: absolute;
+   top: 7em;
+ }
+ .item2 {
+   left: 0;
+   margin: 0;
+   position: absolute;
+   top: 8em;
+ }
+ .item3 {
+   left: 0;
+   margin: 0;
+   position: absolute;
+   top: 9em;
+ }
+ .item4 {
+   left: 14em;
+   margin: 0;
+   position: absolute;
+   top: 7em;
+ }
+ .item5 {
+   left: 14em;
+   margin: 0;
+   position: absolute;
+   top: 8em;
+ }
+ .menu1 {
+   background-color: #FFFFFF;
+   color: #FF0000;
+   font-family: sans-serif;
+   font-size: 120%;
+   left: 0;
+   margin: 0;
+   position: absolute;
+   top: 3em;
+ }
+ .menu2 {
+   background-color: #FFFFFF;
+   color: #FF0000;
+   font-family: sans-serif;
+   font-size: 120%;
+   left: 10em;
+   margin: 0;
+   position: absolute;
+   top: 3em;
+ }
+ #box {
+   left: 5em;
+   position: absolute;
+   top: 5em;
+ }</code>
+      <description><p>
+スタイルシートが適用されると、データは「製品」と「所在地」の2段組みで表示される。スタイルシートが適用されない場合は、構造と読み上げ順序を保持した状態の定義リストとしてテキストが表示される。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://css-discuss.incutio.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS-Discuss Home Page</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://css-discuss.incutio.com/?page=CssLayouts" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS-Discuss on CSS Layouts</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="F1"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>CSSで表示位置を調整しているコンテンツに対して：</p>
+      <olist>
+        <item>
+          <p>文書からスタイル情報を取り除く、又はユーザーエージェントでスタイルシートを無効にする。</p>
+        </item>
+        <item>
+          <p>構造的な関係及びコンテンツの意味が保持されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C6.html">C6: Positioning content based on structural markup（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

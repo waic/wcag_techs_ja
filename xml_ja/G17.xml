@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G17">
+  <short-name>テキスト（及び画像化された文字）とその背景の間に、少なくとも7:1以上のコントラスト比をもたせる</short-name>
+  <applicability>
+    <p> 視覚的なアウトプットを生成するウェブコンテンツ技術。</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="visual-audio-contrast7"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、利用者が背景の上にあるテキストを読めるようにすることである。この実装方法は、4.5:1のコントラストをもたせる実装方法よりも基準が上回るもので、さらに高いレベルのコントラストを提供することでロービジョンの利用者が読みやすくする。</p>
+          
+               <p> もし背景が無地の色（又は真っ黒、真白）の場合、個々のテキストの文字が背景とのコントラスト比を7:1で保持することによってテキストのコントラスト比を維持することができる。</p>
+          
+               <p> 背景または文字が相対輝度において変化する（またはパターン化されている）場合、たとえ背景全体とのコントラスト比を 7:1で保持していなくとも、文字の周囲の背景、又は陰影によって、文字と背景のコントラスト比を維持することができる。</p>
+          
+               <p> 背景の相対輝度がページの中で変化する場合は、文字の相対輝度も変化させることによってコントラスト比が維持されることもある。</p>
+          
+               <p> もし通常では背景画像又は背景色の相対輝度が十分でない場合は、他の方法として、テキストの周りに後光を付けて必要なコントラスト比をもたせる方法もある。 
+</p></description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.paciellogroup.com/resources/contrast-analyser.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser - Application&#13;
+                &#13;
+&#13;
+カラーコントラストアナライザー 日本語版</loc>&#13;
+<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser - Application&#13;
+                &#13;
+&#13;
+カラーコントラストアナライザー 日本語版</loc></p>
+        </item>
+        <item>
+          <p>&#13;
+<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">カラーコントラストアナライザー 日本語版</loc></p>
+        </item>
+        <item>
+          <p>&#13;
+                  <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/services/luminositycontrastratio.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Ratio Analyser - online service</loc></p>
+        </item>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/colour-contrast-analyser-firefox-extension.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Colour Contrast Analyser - Firefox Extension</loc>&#13;
+                </p>
+        </item>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://trace.wisc.edu/contrast-ratio-examples/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Color Contrast Samples</loc>&#13;
+                </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/Graphics/atypical-color-response" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Atypical colour response</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.colorsontheweb.com/colorcontrast.asp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Colors On the Web Color Contrast Analyzer</loc>
+          </p>
+        </item>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.vischeck.com/daltonize/runDaltonize.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Tool to convert images based on color loss so that contrast is restored as luminance contrast when there was only color contrast (that was lost due to color deficiency)</loc>&#13;
+                 </p>
+        </item>
+        <item>
+          <p>&#13;
+<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/200709/10_colour_contrast_checking_tools_to_improve_the_accessibility_of_your_design/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">List of color contrast tools</loc>&#13;
+</p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G148"/>
+    <relatedtech idref="G174"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item><p> 以下の公式を用いて、各文字（すべて同一ではない限り）の相対輝度を測る： </p>
+
+<ul><li>
+<p>色の相対輝度 L = 0.2126 * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> と定義されている。この場合の<strong>R</strong>, <strong>G</strong> 及び <strong>B</strong> は：</p>
+
+<ul>
+<li>
+<p>R<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>R</strong> = R<sub>sRGB</sub>/12.92、それ以外の場合： <strong>R</strong> = ((R<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+</li>
+<li><p>G<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>G</strong> = G<sub>sRGB</sub>/12.92、それ以外の場合：<strong>G</strong> = ((G<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+
+<li><p>B<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>B</strong> = B<sub>sRGB</sub>/12.92、それ以外の場合：<strong>B</strong> = ((B<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+</ul>
+<div class="note">
+
+<p class="prefix">また、R<sub>sRGB</sub>, G<sub>sRGB</sub>, 及び B<sub>sRGB</sub>は以下のように定義される：</p>
+</div>
+<ul>
+<li><p>R<sub>sRGB</sub> = R<sub>8bit</sub>/255</p></li>
+<li><p>G<sub>sRGB</sub> = G<sub>8bit</sub>/255</p></li>
+
+<li><p>B<sub>sRGB</sub> = B<sub>8bit</sub>/255</p></li>
+</ul>
+<div class="note">
+<p class="prefix">"^"記号は指数演算子である。</p>
+</div>
+</li></ul>
+<div class="note">
+<p class="prefix"><em>注意：</em>エイリアス文字では文字の端から2ピクセルの部分の相対輝度の値を使用する。</p>
+
+</div></item>
+        <item><p>色の相対輝度 L = 0.2126 * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> と定義されている。この場合の<strong>R</strong>, <strong>G</strong> 及び <strong>B</strong> は：</p>
+
+<ul>
+<li>
+<p>R<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>R</strong> = R<sub>sRGB</sub>/12.92、それ以外の場合： <strong>R</strong> = ((R<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+</li>
+<li><p>G<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>G</strong> = G<sub>sRGB</sub>/12.92、それ以外の場合：<strong>G</strong> = ((G<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+
+<li><p>B<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>B</strong> = B<sub>sRGB</sub>/12.92、それ以外の場合：<strong>B</strong> = ((B<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+</ul>
+<div class="note">
+
+<p class="prefix">また、R<sub>sRGB</sub>, G<sub>sRGB</sub>, 及び B<sub>sRGB</sub>は以下のように定義される：</p>
+</div>
+<ul>
+<li><p>R<sub>sRGB</sub> = R<sub>8bit</sub>/255</p></li>
+<li><p>G<sub>sRGB</sub> = G<sub>8bit</sub>/255</p></li>
+
+<li><p>B<sub>sRGB</sub> = B<sub>8bit</sub>/255</p></li>
+</ul>
+<div class="note">
+<p class="prefix">"^"記号は指数演算子である。</p>
+</div></item>
+        <item>
+          <p>R<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>R</strong> = R<sub>sRGB</sub>/12.92、それ以外の場合： <strong>R</strong> = ((R<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+        </item>
+        <item>
+          <p>G<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>G</strong> = G<sub>sRGB</sub>/12.92、それ以外の場合：<strong>G</strong> = ((G<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+        </item>
+        <item>
+          <p>B<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>B</strong> = B<sub>sRGB</sub>/12.92、それ以外の場合：<strong>B</strong> = ((B<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+        </item>
+        <item>
+          <p>R<sub>sRGB</sub> = R<sub>8bit</sub>/255</p>
+        </item>
+        <item>
+          <p>G<sub>sRGB</sub> = G<sub>8bit</sub>/255</p>
+        </item>
+        <item>
+          <p>B<sub>sRGB</sub> = B<sub>8bit</sub>/255</p>
+        </item>
+        <item>
+          <p> 同じ公式を用いて、文字のすぐ隣の背景のピクセルの相対輝度を測る。 </p>
+        </item>
+        <item><p> 次の公式を用いて、コントラスト比を算出する。</p>
+<ul><li>
+<p>(L1 + 0.05) / (L2 + 0.05)</p>
+<ul>
+<li><p>L1は前景または背景色の明るい方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。及び、 </p></li>
+<li><p>L2は前景または背景色の暗い方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。 </p></li>
+</ul>
+</li></ul></item>
+        <item><p>(L1 + 0.05) / (L2 + 0.05)</p>
+<ul>
+<li><p>L1は前景または背景色の明るい方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。及び、 </p></li>
+<li><p>L2は前景または背景色の暗い方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。 </p></li>
+</ul></item>
+        <item>
+          <p>L1は前景または背景色の明るい方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。及び、 </p>
+        </item>
+        <item>
+          <p>L2は前景または背景色の暗い方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。 </p>
+        </item>
+        <item>
+          <p> コントラスト比が7：1と同じ、又はそれ以上である。【訳注：この計算式を用いているチェックツールで、コントラスト比が7：1以上であることを確認すればよい。】</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>4.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G17.html">G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text
+（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

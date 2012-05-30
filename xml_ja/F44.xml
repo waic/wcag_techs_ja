@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F44">
+  <short-name>達成基準 2.4.3 の不適合事例 － tabindex属性を用いて、意味及び操作性を保持しないタブ順序を指定している</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-focus-order"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この文書は、タブ順序がコンテンツの論理的な関係性及び順序に従っていない不適合事例について述べている。</p>
+          
+               <p>リンク及びフォーム要素のようなフォーカス可能な要素には、<code>tabindex</code>属性がある。要素は、<code>tabindex</code>属性の値が小さいものから大きいものへという順序でフォーカスを受け取る。
+			   <code>tabindex</code>属性の値が、コンテンツ内での関係性及び順序とは異なる順序で割り当てられていると、もはやタブ順序はコンテンツの関係性及び順序に従っていないことになる。</p>
+          
+               <p>この不適合事例は、以前より<code>tabindex</code>属性が用いられてきたページを編集する際に最もよく起こる。コンテンツが編集されているのに、
+			   <code>tabindex</code>属性がコンテンツの変更に応じて更新されていないと、タブ順序及びコンテンツの順序が一致しなくなる。</p></description>
+  <examples>
+    <eg-group role="failure">
+      <description><p>次の事例は、代替のタブ順序を指定するためにtabindexを誤って用いている。</p>
+</description>
+      <code>&lt;ul&gt;
+   &lt;li&gt;&lt;a href="main.html" tabindex="1"&gt;ホーム&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="chapter1.html" tabindex="4"&gt;第1章&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="chapter2.html" tabindex="3"&gt;第2章&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="chapter3.html" tabindex="2"&gt;第3章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code>
+      <description><p>このリストをTabキーを用いてナビゲートする場合、リストは、ホーム、第3章、第2章、第1章、という順序でナビゲートされ、コンテンツにおける順序通りではなくなってしまう。</p>
+</description>
+    </eg-group>
+    <eg-group role="failure">
+      <description><p>すべてのテキストフィールドに対して<code>tabindex</code>属性を提供することによって、ウェブページでのタブ順序が明確に設定されていた。
+					 後に、そのページには新しいテキストフィールドがページの中央付近に追加されたが、コンテンツ制作者はその新しいテキストフィールドに<code>tabindex</code>属性を付加し忘れてしまった。
+					 結果として、新しいテキストフィールドのタブ順序がそのページの最後になってしまっている。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/interact/forms.html#adef-tabindex" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Tabbing navigation</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H4"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p><code>tabindex</code>属性を用いている場合、<code>tabindex</code>属性によって指定されているタブ順序がコンテンツの関係性に従っている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1. を満たしていない場合、この不適合事例が適用され、そのコンテンツは達成基準に不適合となる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F44.html">F44: Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that does not preserve meaning and operability（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

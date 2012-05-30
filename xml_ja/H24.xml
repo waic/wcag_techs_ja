@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H24">
+  <short-name> イメージマップのarea要素に代替テキストを提供する</short-name>
+  <applicability>
+    <p>
+						<code>area</code>要素を含むHTML及びXHTMLドキュメント
+					</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+    <success-criterion idref="navigation-mechanisms-refs"/>
+    <success-criterion idref="navigation-mechanisms-link"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue><p>HTML 4.01仕様書は、<code>alt</code>属性のテキストを、その要素が通常通り描画されないときに表示されるもの、と説明している。ユーザーエージェントは、画像が表示されないときに<code>alt</code>属性のテキストを表示する。しかし、視覚系ユーザーエージェントは現状、イメージマップの<code>area</code>要素については、キーボードでアクセスした場合、又は画像そのものが表示されない場合には、<code>alt</code>属性のテキストを表示しない。また、画像の内在寸法が指定されていない場合【訳注−<code>img</code>要素の<code>width属性</code>や<code>height</code>属性で画像のサイズが示されていない場合など】、<code>area</code>要素を切り抜いて表示することもある。さらに、マウスオーバー時に反応して表示される<code>alt</code>属性のテキストは、ユーザーエージェントでのフォントサイズや色の組み合わせの設定通りに表示されない。</p>
+            
+						<p>
+								<code>title</code>属性は追加情報を提供するものとされている。しかし、ユーザーエージェントにおける現在の実装では、<code>title</code>属性と<code>alt</code>属性のどちらかにはアクセスできるが、両方同時にはアクセスできない。ユーザーエージェントは一般的に、<code>title属性</code>が指定された要素にマウスオーバーしたとき、その<code>title</code>属性のテキストを表示する。たとえば、Internet Explorerは、<code>title</code>属性のテキストが指定されていなければ、マウスオーバー時に<code>alt</code>属性のテキストを表示するが、FirefoxやOperaは、<code>title</code>属性のテキストのみをマウスオーバー時に表示し、<code>alt</code>属性のテキストは表示しない。したがって、<code>alt</code>属性のテキストをマウスオーバー時に表示させるには、同じテキストを<code>title</code>属性にも指定しておくべきである。</p>
+            
+						<p>このようなことから、イメージマップを用いる際、この実装方法を正しく実装するには次のどちらかが必要となる。</p>
+            
+                  <ul>
+<li>
+                
+								<p>
+										<code>area</code>要素の<code>alt</code>属性値が、画像が読み込まれていても読み込まれていなくても、フォーカス（キーボードによるフォーカスを含む）を受けたときに表示されるようにすること。または、</p>
+              
+                     </li>
+<li>
+                
+								<p>
+										<code>area</code>要素と同じ目的を果たせる代わりのメカニズムが、ウェブページに存在すること。
+										</p>
+              
+                     </li>
+</ul></ua-issue>
+  </ua-issues>
+  <description>
+    <p>
+							この実装方法の目的は、イメージマップ上の選択可能領域と同じ役割を果たす代替テキストを提供することである。イメージマップは、<code>area</code>要素によって定義された選択可能領域によって分割されている1枚の画像である。各領域は、他のウェブページや、現在のウェブページ内の他の場所へのリンクである。各<code>area</code>要素の<code>alt</code>属性は、その画像の選択可能領域と同じ目的を果たすものである。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <description><p>この事例では、イメージマップ上の各領域の目的を示したテキストを提供するのに、<code>area</code>要素の<code>alt</code>属性を利用している。</p>
+</description>
+      <code>&lt;img src="welcome.gif" usemap="#map1" 
+    alt="図書館の各エリア。詳細を見るには、各エリアを選択してください。" /&gt; 
+&lt;map id="map1" name="map1"&gt;
+  &lt;area shape="rect" coords="0,0,30,30"
+    href="reference.html" alt="資料室" /&gt;
+  &lt;area shape="rect" coords="34,34,100,100"
+    href="media.html" alt="視聴覚室" /&gt;
+&lt;/map&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#h-13.6.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    client-side image maps</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#h-13.8" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 -&#13;
+                    how to specify alt text</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G91"/>
+    <relatedtech idref="H30"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>
+								イメージマップ上の各<code>area</code>要素について:
+						</p>
+      <olist>
+        <item>
+          <p>その<code>area</code>要素に<code>alt</code>属性を指定している。</p>
+        </item>
+        <item>
+          <p><code>alt</code>属性で指定した代替テキストが、<code>area</code>要素で定義したイメージマップ上の領域と同じ目的を果たしている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記全てを満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H24.html">H24: Providing text alternatives for the area elements of image maps（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

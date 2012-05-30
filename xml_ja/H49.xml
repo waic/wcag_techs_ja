@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H49">
+  <short-name>セマンティックなマークアップを用いて、強調又は特別なテキストをマークアップする</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="content-structure-separation-programmatic"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <ul>
+<li>
+									<p>
+											セマンティックな要素の中には、支援技術によって十分にサポートされていないものもある。サポートが限られる要素として、<code>code</code>、<code>del</code>、<code>dfn</code>、<code>ins</code>、<code>kbd</code>、<code>s</code>、<code>sub</code>、<code>sup</code>、<code>tt</code>、<code>q</code>がよく知られている。これらの要素について、コンテンツ制作者には次を考慮することが推奨される。すなわち、利用者が内容を理解するために、またセマンティクスの理解が求められる部分ではその情報をテキストで提供するために、マークアップのセマンティックな意味に利用者がアクセスできる方法で、これらの要素を利用することである。</p>
+                     </li>
+<li>
+										 <p>スクリーンリーダーの大部分が、<code>em</code>、<code>strong</code>、<code>b</code>、<code>i</code>について、自動的に通知をしない。</p>
+                     </li>
+<li>
+										 <p>
+												JAWSは、<code>blockquote</code>及び<code>cite</code>をサポートしている。Window-Eyesは、<code>blockquote</code>、<code>q</code>及び<code>cite</code>をサポートしている。</p>
+                     </li>
+<li>
+										 <p>Firefox 1.0以降、Opera 7.54以降、Mozilla 1.7.3以降（以上、Windows版）は、<code>q</code>要素の前後に自動的に引用符を生成するが、Windows用Internet Explorer 6は生成しない。</p>
+                     </li>
+</ul>
+    </ua-issue>
+  </ua-issues>
+  <description><p>
+							この実装方法の目的は、強調または特別なテキストのマークアップをするとき、プログラムで解釈可能なようにする方法を示すことである。また、強調または特別なテキストのマークアップにセマンティックなマークアップを用いることで、その文書に構造を与えることができる。例えば、ユーザーエージェントは、構造が異なるものは異なる視覚表現にしたり、聴覚表現で異なる声やピッチにしたりすることで、利用者の構造の理解を促すことができる。 </p>
+          
+					<p>
+							大部分のユーザーエージェントは、セマンティックなマークアップによって特定されたテキストを、ほかとは別の見た目にする。支援技術の中には、セマンティックなマークアップを適切に用いることで、コンテンツの特性を決定するためのメカニズムを提供するものもある。</p></description>
+  <examples>
+    <eg-group>
+      <description><p>
+									この事例では、テキストの強調に<code>em</code>要素と<code>strong</code>要素を利用する方法を示している。<code>em</code>要素と<code>strong</code>要素は、構造的な強調を示すのに用意されているものであり、さまざまな形式で描画されうる（フォントスタイルの変更、読み上げ時の抑揚の変更など）。</p>
+</description>
+      <code>……彼女が&lt;em&gt;本当に&lt;/em&gt;言いたかったのは、&amp;quot;オーケーどころか、 
+ &lt;strong&gt;すばらしい&lt;/strong&gt;&amp;quot;ということでした！……</code>
+    </eg-group>
+    <eg-group>
+      <description><p>
+									この事例では、長い引用文をマークアップするのに<code>blockquote</code>要素を利用している。<code>blockquote</code>要素ではパラグラフ分けが必要となる場合もある。また、参考資料を示すのに<code>cite</code>要素も利用している。
+								</p>
+</description>
+      <code>&lt;p&gt;次の文章は、ヘレン・ケラーの&lt;cite&gt;The Story of my Life&lt;/cite&gt;からの引用である。&lt;/p&gt;
+ &lt;blockquote&gt;
+   &lt;p&gt;Even in the days before my teacher came, I used to feel along the square stiff boxwood
+   hedges, and, guided by the sense of smell, would find the first violets and lilies.  
+   There, too, after a fit of temper, I went to find comfort and to hide my hot face 
+   in the cool leaves and grass.&lt;/p&gt;
+ &lt;/blockquote&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>
+									この事例では、短い引用文のマークアップに<code>q</code>要素を利用している。<code>q</code>要素を引用符で囲んであるのは、ユーザーエージェントの多くがいまだにこの要素をサポートせず、適切に表示しないからである（前述「ユーザーエージェント及び支援技術によるサポート」を参照）。CSSで引用符を自動生成しないように設定し、<code>q</code>要素をサポートしているユーザーエージェントに適用することで、自動生成された引用符とコンテンツ制作者が付けた引用符が二重に表示されてしまう問題を避けている。将来、<code>q</code>要素が広くサポートされるようになれば、引用符を付けたり、ブラウザの引用符生成を避けたりする必要はなくなるだろう。</p>
+</description>
+      <code>q:before { content: ""; } 
+q:after { content: ""; }</code>
+      <code>&lt;p&gt;ヘレン・ケラーは、"&lt;q&gt;Self-pity is our worst enemy and if we yield to it, 
+we can never do anything good in the world.&lt;/q&gt;"と述べている。&lt;/p&gt;</code>
+      <description/>
+    </eg-group>
+    <eg-group>
+      <description><p>上付き文字と下付き文字を、<code>sup</code>要素と<code>sub</code>要素を使って生成している。</p>
+</description>
+      <code>&lt;p&gt;Beth received 1&lt;sup&gt;st&lt;/sup&gt; place in the 9&lt;sup&gt;th&lt;/sup&gt; grade science competition.&lt;/p&gt;
+&lt;p&gt;水の化学式は、H&lt;sub&gt;2&lt;/sub&gt;O です。&lt;/p&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Phrase&#13;
+                    elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Quotations: The BLOCKQUOTE and Q elements</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Subscripts and superscripts: the SUB and SUP elements</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/fixing-ie-quotes.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Fixing Quotes in&#13;
+                    Internet Explorer</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G115"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>
+										コンテンツにテキストの表現を変えることで伝達できる情報がある。
+								</p>
+        </item>
+        <item>
+          <p>
+										（<code>em</code>、<code>strong</code>、<code>cite</code>、<code>blockquote</code>、<code>quote</code>、<code>sub</code>のような）適切なセマンティックなマークアップを、テキストを変えることで情報を伝達するテキストのマークアップに利用している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H49.html">H49: Using semantic markup to mark emphasized or special text（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

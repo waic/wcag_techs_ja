@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F55">
+  <short-name>達成基準 2.1.1、達成基準 2.4.7 及び 達成基準 3.2.1 の不適合事例 － フォーカスを受け取った際に、スクリプトを用いてフォーカスを取り除いている</short-name>
+  <applicability>
+    <p>スクリプトをサポートしているすべてのコンテンツに適用</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="keyboard-operation-keyboard-operable"/>
+    <success-criterion idref="navigation-mechanisms-focus-visible"/>
+    <success-criterion idref="consistent-behavior-receive-focus"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>通常はキーボードでアクセスした場合フォーカスを受け取るコンテンツが、スクリプトによってフォーカスを失うことがある。これは、デザイナーがシステムのフォーカス・インジケータを見えなくしようとするときに時々起きる。しかしながら、システムのフォーカス・インジケータは、キーボード利用者のアクセシビリティにおける重要な一部分である。また、これを実行することによってフォーカスが完全に取り除かれると、コンテンツにはマウスのようなポインティング・デバイスでしかアクセスできなくなる。</p>
+  </description>
+  <examples>
+    <eg-group role="failure">
+      <code>&lt;input type="submit" onFocus="this.blur();"&gt;</code>
+    </eg-group>
+    <eg-group role="failure">
+      <code>&lt;a onFocus="this.blur()" href="Page.html"&gt;&lt;img src="myImage.gif"&gt;&lt;/a&gt;</code>
+    </eg-group>
+    <eg-group role="failure">
+      <code>&lt;a href="link.html" onfocus="if(this.blur)this.blur();"&gt;リンクの文言&lt;/a&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>キーボードを使用して、すべてのインタラクティブな要素にキーボードでアクセスできる。</p>
+        </item>
+        <item>
+          <p>それぞれの要素がフォーカスされたとき、利用者がフォーカスを移動するまでそこに残っている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしていない場合、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F55.html">F55: Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+    </ulist>
+  </translationcredit>
+</technique>

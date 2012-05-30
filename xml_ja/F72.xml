@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F72">
+  <short-name>達成基準 1.1.1 の不適合事例 － 代替テキストを提供せずに、ASCIIアートを用いている</short-name>
+  <applicability>
+    <p>全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>これは、代替テキストを提供せずにASCIIアートを使用するという不適合事例について述べている。ASCIIアートは文字列として実装されるが、その意味は、その文字列の視覚的な表現によって形成される絵柄のパターンから来るのであって、テキスト自体から来るのではない。そのため、ASCIIアートは非テキストコンテンツであり、代替テキストが必要となる。代替テキスト又は代替テキストへのリンクは、ASCIIアートと関連付けるために、その近くに置くべきである。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>不適合となる代替テキストのないASCIIアートのチャート</head>
+      <description><p>次のASCIIアートのチャートは、代替テキストがないため、達成基準1.1.1を満たしていない。事実、この不適合となる事例を含んでいるため、このウェブページは適合していないページとなっている。ただし、<a href="#F72-related-techs">ASCIIアートの例をスキップする</a>ことはできる。</p>
+</description>
+      <code>&lt;pre&gt;
+  %   __ __ __ __ __ __ __ __ __ __ __ __ __ __   
+100 |             *                             |
+ 90 |                *  *                       |
+ 80 |          *           *                    |
+ 70 |             @           *                 |
+ 60 |          @                 *              |
+ 50 |       *        @              *           |
+ 40 |                   @              *        |
+ 30 |    *  @              @  @           *     |
+ 20 |                                           |
+ 10 |    @                       @  @  @  @     |
+      0  5 10 15 20 25 30 35 40 45 50 55 60 65 70
+      閃光頻度 (Hz)
+&lt;/pre&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>ASCIIアートのあるページを開く。</p>
+        </item>
+        <item>
+          <p>それぞれのASCIIアートに対して、代替テキストが提供されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2. を満たしていなければ、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F72.html">F72: Failure of Success Criterion 1.1.1 due to using ASCII art without providing a text alternative（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

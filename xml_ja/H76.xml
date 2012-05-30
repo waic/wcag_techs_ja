@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H76">
+  <short-name>meta要素のrefreshを用いて、クライアントサイドで瞬間的にリダイレクトする</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-no-extreme-changes-context"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>
+							この実装方法の目的は、クライアントサイドで利用可能なリダイレクトを、利用者を混乱させることなく用いることである。リダイレクトはサーバサイドで実装するほうが望ましいが（<a href="SVR1.html">SVR1: クライアントサイドではなく、サーバサイドで自動リダイレクトを実装する</a>［サーバ］を参照）、コンテンツ制作者がサーバサイド技術を管理しているとは限らない。</p>
+          
+					<p>
+							HTML及びXHTMLでは、<code>meta</code>要素に<code>http-equiv</code>属性には「Refresh」という値、<code>content</code>属性の値には「0」（ゼロ秒を意味する）を、ブラウザが要求すべきURIを後に伴って指定することができる。重要なのは、新たなページを読み込む前にコンテンツが表示されるのを避けるために、タイムアウトをゼロに設定することである。リダイレクトのコードを指定したページには、リダイレクトに関する情報のみを含めるべきである。
+							</p></description>
+  <examples>
+    <eg-group>
+      <code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;    
+  &lt;head&gt;      
+    &lt;title&gt;チューダー&lt;/title&gt;      
+    &lt;meta http-equiv="refresh" content="0;URL='http://thetudors.example.com/'" /&gt;    
+  &lt;/head&gt;    
+  &lt;body&gt; 
+    &lt;p&gt;このページは、&lt;a href="http://thetudors.example.com/"&gt;theTudors.example.com&lt;/a&gt;
+      に移動しました。&lt;/p&gt; 
+  &lt;/body&gt;  
+&lt;/html&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="F41.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F41: 達成基準 2.2.1、達成基準 2.2.4、及び 達成基準 3.2.5 の不適合事例 － meta要素によるタイムアウト付きのリフレッシュを用いている も参照のこと。</loc> も参照のこと。</p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G110"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>ドキュメント内の<code>meta</code>要素を全て見つける。</p>
+        </item>
+        <item>
+          <p>
+										各<code>meta</code>要素について、値が「refresh」（大文字と小文字の区別なし）の<code>http-equiv</code>属性、及び<code>content</code>属性で0より大きい数字、その後に続いて<code>;'URL=anyURL'</code>（anyURLは、現在のページから切替わるURIを表す）という値が含まれている。
+										</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>2.を満たしていない。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H76.html">H76: Using meta refresh to create an instant client-side redirect（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

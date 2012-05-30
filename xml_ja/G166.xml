@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G166">
+  <short-name>重要な映像コンテンツを説明する音声を提供する</short-name>
+  <applicability>
+    <p>映像コンテンツを実装できる全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="media-equiv-av-only-alt"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>映像しか含まないコンテンツは、全盲の利用者及びロービジョンの利用者にとってはアクセシブルではない。そのため、これらの利用者が音声による代替コンテンツを利用できることが重要である。その一つの方法として、映像に含まれている情報を説明する音声トラックを提供する方法がある。この音声は、例えばMP3のように、インターネット上で一般的に使われている音声フォーマットである必要がある。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <description><p>ウェブページに、宇宙船の火星着陸シーンの映像しか含まないプレゼンテーションへのリンクがある。そして、この映像へのリンクは、宇宙船の写真である。この映像を説明する音声ファイルへのリンクが、映像の近くにある。これは、次のHTMLコード例のようになるだろう。</p>
+</description>
+      <code>&lt;a href="../video/marslanding.mp4"&gt;&lt;img src="../images/spaceship.jpg" 
+   alt="火星着陸（映像のみ）" width="193" height="255"/&gt;&lt;/a&gt;
+&lt;br /&gt;
+&lt;a href="Mars_landing_audio.mp3"&gt;映像「火星着陸」の音声ガイド&lt;/a&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G159"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>映像しか含まないウェブページに対して：</p>
+      <olist>
+        <item>
+          <p>映像しか含まないコンテンツの直前又は直後に、代替の音声コンテンツへのリンクがある。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1. を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G166.html">G166: Providing audio that describes the important video content and describing it as such（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

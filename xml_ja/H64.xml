@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H64">
+  <short-name>frame要素及びiframe要素のtitle属性を用いる</short-name>
+  <applicability>
+    <p><code>frame</code>要素又は<code>iframe</code>要素を用いているHTML及びXHTMLドキュメント</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-skip"/>
+    <success-criterion idref="ensure-compat-rsv"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>
+											<code>frame</code>要素と<code>iframe</code>要素での<code>longdesc</code>属性の使用は、支援技術によって十分にサポートされていない。</p>
+    </ua-issue>
+  </ua-issues>
+  <description><p>この実装方法の目的は、フレームの内容を説明するための、<code>frame</code>要素又は<code>iframe</code>要素での<code>title</code>属性の使用方法を示すことである。<code>title</code>属性はフレームのラベルを提供するものなので、ユーザーはどのフレームの中に入ってその詳細を見て回るかどうかを判断できる。<code>title</code>属性は、フレームセットの中の個々のページ（<code>frame</code>要素）やインラインフレーム（<code>iframe</code>要素）のラベルを付けるものではない。</p>
+          
+					<p><code>title</code>属性はフレームにラベルを付けるものであって、文書にラベルを付ける<code>title</code>要素とは異なることに注意しよう。<code>title</code>属性はユーザーが複数のフレームの間を移動しやすくし、また<code>title</code>要素はユーザーの現在位置を明確にするものであり、双方を提供すべきである。</p>
+          
+					<p>
+							<code>title</code>属性を<code>name</code>属性に置き換えることはできない。<code>title</code>属性はユーザーのためにフレームにラベルを付けるものであるのに対して、<code>name</code>属性はスクリプトによる操作やウィンドウのターゲットを決めるためにフレームにラベルを付けるものだからである。つまり、<code>name</code>属性はユーザーに提供されるものではなく、<code>title</code>属性だけがその役割を果たしている。</p></description>
+  <examples>
+    <eg-group>
+      <description><p>この事例は、ナビゲーションバーと主要コンテンツを別の文書として読み込んでいるフレームそれぞれを説明するために、<code>frame</code>要素に<code>title</code>属性を指定する方法を示している。</p>
+</description>
+      <code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;title&gt;単純なフレームセット文書&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;frameset cols="10%, 90%"&gt;
+    &lt;frame src="nav.html" title="メインメニュー" /&gt;
+    &lt;frame src="doc.html" title="文書" /&gt;
+    &lt;noframes&gt;
+      &lt;body&gt;
+        &lt;a href="lib.html" title="図書館へのリンク"&gt;選択して、
+        電子図書館に進んでください。&lt;/a&gt;
+      &lt;/body&gt;
+    &lt;/noframes&gt;
+  &lt;/frameset&gt;
+&lt;/html&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>
+									この事例は、インラインフレームの内容を説明するために、<code>iframe</code>要素に<code>title</code>属性を指定する方法を示している。さらに、<code>iframe</code>要素を解釈できない古いブラウザのために、読み込むページへの代替リンクを<code>iframe</code>要素の内容に含めてある。</p>
+</description>
+      <code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;title&gt;インラインフレームを利用した文書&lt;/title&gt;
+  &lt;/head&gt;
+...
+&lt;iframe src="banner-ad.html" id="testiframe" 
+  name="testiframe" title="広告"&gt;
+    &lt;a href="banner-ad.html"&gt;広告&lt;/a&gt;
+&lt;/iframe&gt;
+...
+&lt;/html&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    FRAME element</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.5" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.0.1&#13;
+                    Inline frames: the IFRAME element</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse4.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Navigation,&#13;
+                    "Implementing Frame Titles"</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>HTML又はXHTMLのソースコードにある<code>frame</code>要素と<code>iframe</code>要素のそれぞれに、<code>title</code>属性が指定されている。</p>
+        </item>
+        <item>
+          <p><code>title</code>属性の値として、そのフレームを特定できるテキストがある。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.及び2.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H64.html">H64: Using the title attribute of the frame and iframe elements（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

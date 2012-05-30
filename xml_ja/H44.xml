@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H44">
+  <short-name>label要素を用いて、テキストのラベルとフォーム・コントロールを関連付ける</short-name>
+  <applicability>
+    <p>ラベルを用いているHTML及びXHTMLのフォームコントロール</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+    <success-criterion idref="content-structure-separation-programmatic"/>
+    <success-criterion idref="minimize-error-cues"/>
+    <success-criterion idref="ensure-compat-rsv"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue><p>
+								HTML及びXHTML仕様書では、暗示的なラベルと明示的なラベルの両方を認めている。しかし、支援技術の一部は、暗示的なラベル（たとえば、<code>&lt;label&gt;First name &lt;input type="text" name="firstname"&gt;&lt;/label&gt;</code>）を正確に処理できない。【訳注：なお、暗示的なラベルとは、ラベルとフォームコントロールを単に<code>label</code>要素で囲んだだけのものである。一方、明示的なラベルとは、<code>label</code>要素の<code>for</code>属性に、フォームコントロールの<code>id</code>属性値と同じ値を指定することで、両者を明確に関連付けたものである。】</p>
+            
+                  <ul>
+<li>
+                
+								<p>
+										JAWS 7.10の動作を、Windows XPのInternet Explorer 6.0とFirefox 1.5で検証した。テキストフィールドに付けたラベルは、明示的なラベルでも暗示的なラベルでも、バーチャルPCカーソルとフォーム読み上げモードの両方で読み上げられた。ただし、フォーム読み上げモードでは、チェックボックスとラジオボタンに付けた暗示的なラベルは読み上げられなかった。</p>
+              
+                     </li>
+<li>
+                
+								<p>Window-Eyes 5.5の動作を、Windows XPのInternet Explorer 6.0とFirefox 1.5で検証した。フォームフィールドの明示的なラベルは常に読み上げられたが、ブラウズONモードでは暗示的なラベルは読み上げられなかった。ただし、ブラウズOFFモードでコントロールからコントロールへと移動したときは、暗示的なラベルでも読み上げられた。</p>
+              
+                     </li>
+</ul></ua-issue>
+    <ua-issue>
+      <p>
+								ユーザーエージェントは、<code>title</code>属性が指定してある<code>input</code>要素にマウスオーバーしたときに、ツールチップを表示するようである。支援技術は<code>title</code>属性を抽出し、多くのグラフィカルブラウザは<code>title</code>属性をツールチップで表示する。ただし、キーボード操作ではツールチップを開けないため、視力はあるがマウスではなくキーボードを使っている利用者は、現状ではツールチップの情報を利用できない恐れがある。</p>
+    </ua-issue>
+    <ua-issue><p>
+								JAWSとWindow-Eyesでは、フォームコントロールがフォーカスを受けたとき、もしラベルが指定されていなければ、<code>title</code>属性を読み上げる。</p>
+            
+                  <ul>
+<li>
+                
+								<p>JAWS 6.0以降では、<code>label</code>要素と<code>title</code>属性が異なるとき、その両方を読み上げるように設定できる。しかし、この設定方法に気づいているユーザーは非常に少ない。</p>
+              
+                     </li>
+<li>
+                
+								<p>Window-Eyes 5.5には、（title属性を含む）フォーカスされた項目の追加情報を読み上げるホットキー（ins+E）がある。</p>
+              
+                     </li>
+</ul></ua-issue>
+  </ua-issues>
+  <description><p>
+							この実装方法の目的は、フォームコントロールとラベルを明示的に関連付けるために、<code>label</code>要素を利用することである。ラベルは、<code>label</code>要素の<code>for</code>属性によって特定のフォームコントロールと結びつけることができる。この場合、<code>for</code>属性値はフォームコントロールの<code>id</code>属性値と同じでなければならない。</p>
+          
+					<p>
+							<code>id</code>属性が<code>name</code>属性と同じ値で、両方とも指定しなければならない場合でも、その<code>id</code>はそのウェブページ内で一意的なものとして、重複して使用してはならない。</p>
+            
+						<p>
+						この実装方法は、<code>label</code>要素が見えているかどうか、つまりCSSで非表示にしているかどうかに関わらず、達成基準 1.1.1、1.3.1、4.1.2を満たすことができる。しかし、達成基準 3.3.2では、<code>label</code>要素を入力フィールドの理解に役立てたい全ての利用者のために、見える状態にしておかなければならない、としている。</p>
+          
+					<p>
+							<code>input</code>要素の<code>type="checkbox"</code>と<code>type="radio"</code>では、<code>label</code>要素をその後に配置することに注意する。</p>
+          
+					<div class="note">
+<p class="prefix">
+									<em>注記 1：</em>明示的なラベルを利用する要素は次の通りである：</p>
+<ul>
+<li>
+                
+                        <p>
+                  
+                           <code>input type="text"</code>
+                
+                        </p>
+              
+                     </li>
+<li>
+                
+                        <p>
+                  
+                           <code>input type="checkbox"</code>
+                
+                        </p>
+              
+                     </li>
+<li>
+                
+                        <p>
+                  
+                           <code>input type="radio"</code>
+                
+                        </p>
+              
+                     </li>
+<li>
+                
+                        <p>
+                  
+                           <code>input type="file"</code>
+                
+                        </p>
+              
+                     </li>
+<li>
+                
+                        <p>
+                  
+                           <code>input type="password"</code>
+                
+                        </p>
+              
+                     </li>
+<li>
+                
+                        <p>
+                  
+                           <code>textarea</code>
+                
+                        </p>
+              
+                     </li>
+<li>
+                
+                        <p>
+                  
+                           <code>select</code>
+                
+                        </p>
+              
+							</li>
+</ul>
+<p class="prefix">
+									<em>注記 2：</em>次の場合には、<code>label</code>要素は利用<strong>しない</strong>。これらの要素に対するラベルは、<code>value</code>属性（送信ボタン及びリセットボタン）、<code>alt</code>属性（画像ボタン）、又は要素それ自体の内容（汎用ボタン）を介して提供されるからである。</p>
+<ul>
+<li>
+                
+								<p>送信及びリセットボタン（<code>input type="submit"</code>又は<code>input type="reset"</code>）</p>
+              
+                     </li>
+<li>
+                
+								<p>画像ボタン（<code>input type="image"</code>）</p>
+              
+                     </li>
+<li>
+                
+								<p>隠しフィールド（<code>input type="hidden"</code>）</p>
+								
+                     </li>
+<li>
+                
+								<p>スクリプトボタン（<code>button</code>要素又は<code>&lt;input type="button"&gt;</code>）</p>
+              
+                     </li>
+</ul>
+</div></description>
+  <examples>
+    <eg-group>
+      <head>テキスト入力フィールド</head>
+      <description><p>この事例では、テキスト入力フィールドに「お名前」という明示的なラベルが付けてある。<code>label</code>要素の<code>for</code>属性値は、<code>input</code>要素の<code>id</code>属性値と一致している。</p>
+</description>
+      <code>&lt;label for="firstname"&gt;お名前:&lt;/label&gt; 
+&lt;input type="text" name="firstname" id="firstname" /&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>チェックボックス</head>
+      <code>&lt;input type="checkbox" id="markuplang" name="computerskills" checked="checked"&gt;
+&lt;label for="markuplang"&gt;HTML&lt;/label&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>ラジオボタンのグループ</head>
+      <description><p>関連するラジオボタンの小さなグループについて、簡単な説明が付けてあり、さらに個々の要素にラベルが付けてある。</p>
+<note><em>注記：</em>ラジオボタンの数が多く、それらの関連付けや操作説明を必要とする場合は、<a href="H71.html"><em>H71:  Providing a description for groups of form controls using fieldset and legend elements</em></a> の方法を考慮すべきである。</note></description>
+      <code>&lt;h1&gt;ドーナツ&lt;/h1&gt;
+
+&lt;p&gt;お好きなドーナツを選び、「ドーナツを購入」ボタンを
+    押してください。&lt;/p&gt;
+
+&lt;form action="http://example.com/donut" method="post"&gt;
+&lt;p&gt;
+  &lt;input type="radio" name="flavor" id="choc" value="chocolate" /&gt;
+    &lt;label for="choc"&gt;チョコレート&lt;/label&gt;&lt;br/&gt;
+  &lt;input type="radio" name="flavor" id="cream" value="cream"/&gt;
+    &lt;label for="cream"&gt;クリーム入り&lt;/label&gt;&lt;br/&gt;
+  &lt;input type="radio" name="flavor" id="honey" value="honey"/&gt;
+    &lt;label for="honey"&gt;ハニーがけ&lt;/label&gt;&lt;br/&gt;
+  &lt;input type="submit" value="ドーナツを購入"/&gt;
+&lt;/p&gt;
+&lt;/form&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/interact/forms.html#h-17.9" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 form labels</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc>&#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G167"/>
+    <relatedtech idref="H65"/>
+    <relatedtech idref="H71"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>
+							 ウェブページ内の<code>type="text"</code>、<code>type="file"</code>、<code>type="password"</code>を指定した<code>input</code>要素、<code>textarea</code>要素、<code>select</code>要素全てについて：</p>
+      <olist>
+        <item>
+          <p>
+										<code>input</code>要素、<code>textarea</code>要素及び<code>select</code>要素の前に、そのコントロールの目的が特定できる<code>label</code>要素がある。</p>
+        </item>
+        <item>
+          <p><code>label</code>要素の<code>for</code>属性値が、<code>input</code>要素、<code>textarea</code>要素及び<code>select</code>要素の<code>id</code>と一致している。</p>
+        </item>
+        <item>
+          <p><code>label</code>要素のラベルが視覚的に認識できる状態である。</p>
+        </item>
+      </olist>
+      <p>ウェブページ内の<code>type="checkbox"</code>及び<code>type="radio"</code>を指定した<code>input</code>要素全てについて：</p>
+      <olist>
+        <item>
+          <p><code>input</code>要素の後に、そのコントロールの目的が特定できる<code>label</code>要素があるか確認する。</p>
+        </item>
+        <item>
+          <p><code>label</code>要素の<code>for</code>属性が、<code>input</code>要素の<code>id</code>属性と一致している。</p>
+        </item>
+        <item>
+          <p><code>label</code>要素のラベルが視覚的に認識できる状態である。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.及び2.を満たしている。達成基準 3.3.2に関しては、3.も満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H44.html">H44: Using label elements to associate text labels with form controls（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

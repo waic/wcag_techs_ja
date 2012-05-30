@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G149">
+  <short-name>フォーカスを受け取った際に、ユーザーエージェントによってハイライトされるユーザーインタフェースコンポーネントを用いる</short-name>
+  <applicability>
+    <p>ユーザーエージェントによって提供されるフォーカスのハイライトを用いる全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-focus-visible"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、ユーザーエージェントのサポートにより、利用者が、フォーカス可能なコンポーネントを視覚的に識別できるようにすることである。フォーカスを受け取った際に、何らかの方法で標準的なコンポーネントを強調することはユーザーエージェントでは一般的である。<a href="http://www.w3.org/TR/WAI-USERAGENT/guidelines.html#tech-interaction-highlight">UAAGのチェックポイント　10.2「選択状態の強調、コンテンツのフォーカス、活性の要素、訪問済みリンク」（英語）</a>を満たす場合、UAAGに適合したユーザーエージェントでは標準的なコンポーネントは強調される。ユーザーエージェントがサポートしている標準的なコントロールをウェブ制作者が使用すれば、利用者は、フォーカスの置かれている場所を標準的で予測可能な方法で知ることができる。</p>
+  </description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/UAAG10/guidelines.html#tech-interaction-highlight" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">User Agent Accessibility Guidelines 10.2: Highlight selection, content focus, enabled elements, visited links</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <p>ウェブページ上のフォーカス可能な各コンポーネントに対して：</p>
+      <olist>
+        <item>
+          <p>そのコントロールにフォーカスを設定する。</p>
+        </item>
+        <item>
+          <p>何らかの方法でユーザーエージェントがコントロールをハイライトしている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G149.html">G149: Using user interface components that are highlighted by the user agent when they receive focus（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

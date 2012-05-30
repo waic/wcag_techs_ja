@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H58">
+  <short-name>言語属性を用いて、自然言語の変更を指定する</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="meaning-other-lang-id"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>古いバージョンのスクリーンリーダーの中には、言語を表す属性の指定にあたって、その言語が話されている地域、その言語を記述するために用いられている文字コードなどを表すために、言語コードに続けて記述されることがあるサブ・コードが指定されていると、エラーが発生するものがある。<br/></p>
+    </ua-issue>
+    <ua-issue>
+      <p>JAWS 8.0の場合、lang属性の指定に基づいて読み上げに使用する言語を切り替えるように設定することができる。
+ただし、JAWSは主要な言語のみに対応しており、lang属性のプライマリー・コードに示されている言語を用いる。また、言語が用いられている地域を示すサブ・コードが続けて指定されている場合、プライマリー・コードで指定されている言語のデフォルトとして設定されている方式を用いるようになっている。</p>
+    </ua-issue>
+  </ua-issues>
+  <description><p>この実装方法の目的は、使用しているHTMLまたはXHTMLのバージョンに応じて、langまたはxml:lang属性を用いることで、ページ上で用いられている自然言語の変化を明示することである。</p>
+          
+               <p>HTML 4.01では、各要素の<code>lang</code>属性を用いる。text/htmlとして提供されるXHTMLでは、各要素の<code>lang</code>属性と<code>xml:lang</code>属性を用いることでXHTMLの仕様を満たし、またHTMLに対する後方互換性を保持する。application/xhtml+xml として提供されるXHTMLの場合は、各要素の<code>xml:lang</code>属性を用いる。</p>
+          
+               <div class="note"><p class="prefix"><em>注記: </em> HTMLでは<code>lang</code>属性のみを使用できる。XHTML 1.0.では移行措置として両方の属性を使用できる。XHTML 1.1ではxml:lang属性のみを使用できる。</p></div>
+          
+          
+               <p><code>lang</code>及び<code>xml:lang</code>属性に指定できる値については、以下に示す参考リソースに示されている。言語タグは、言語を表すプライマリー・コードと、その言語が使用される地域や記述に用いる文字コードなどを表すサブ・コードから成っている。サブ・コードの指定は任意で、指定する場合にはプライマリー・コードに続けてハイフンを記述し、その後に記述する。たとえば、プライマリー・コード「en」は英語を示し、「en-gb」と「en-us」はそれぞれイギリス英語とアメリカ英語を示す。この実装方法において、プライマリー・コードの使用は重要である。サブ・コードの使用は任意だが、状況によっては有用なものになり得る。</p></description>
+  <examples>
+    <eg-group>
+      <description><p>この例では、<code>xml:lang</code>属性を用いてドイツ語の引用部分を示している。このコードは、<code>lang</code>属性の使用が許されていないXHTML 1.1に含むことができるように書かれている。</p>
+</description>
+      <code>&lt;blockquote xml:lang="de"&gt;
+  &lt;p&gt;
+    Da dachte der Herr daran, ihn aus dem Futter zu schaffen,
+    aber der Esel merkte, daß kein guter Wind wehte, lief fort
+    und machte sich auf den Weg nach Bremen: dort, meinte er,
+    könnte er ja Stadtmusikant werden.
+  &lt;/p&gt;
+&lt;/blockquote&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/dirlang.html#adef-lang" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    lang attribute</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#sec-lang-tag" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML 1.0 xml:lang&#13;
+                  attribute</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Inheritance of language codes.</loc>. </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">BCP 47: Tags for the&#13;
+                    Identification of Languages .</loc> . </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/language-tags/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Language tags&#13;
+                    in HTML and XML</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H57"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>ドキュメントにおける各要素について：</p>
+      <olist>
+        <item>
+          <p><a href="http://www.asahi-net.or.jp/~sd5a-ucd/rec-html401j/struct/dirlang.html#h-8.1.2">言語コードの継承（HTML4.01）</a>で示されているように、その要素のコンテンツの自然言語が、その要素に継承されている言語と同一である。</p>
+        </item>
+      </olist>
+      <p>ドキュメントにおける各<code>lang</code>属性について：</p>
+      <olist>
+        <item>
+          <p><code>lang</code>属性の値が<a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47: Tags for the
+                    Identification of Languages</a>に適合している。</p>
+        </item>
+      </olist>
+      <p>ドキュメントにおける各xml:lang属性について：</p>
+      <olist>
+        <item>
+          <p><code>xml:lang</code>属性の値が<a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47: Tags for the
+                    Identification of Languages</a>に適合している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記の全てを満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H58.html">H58: Using language attributes to identify changes in the human language（英語）</a></item>
+      <item>日本語訳監修：<a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></item>
+      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

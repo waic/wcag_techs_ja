@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G110">
+  <short-name>クライアントサイドの瞬間的なリダイレクトを用いる</short-name>
+  <applicability>
+    <p>全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-no-extreme-changes-context"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>
+							この実装方法の目的は、クライアントサイドで利用可能なリダイレクトを、利用者を混乱させることなく用いることである。リダイレクトはサーバサイドで実装するほうが望ましい（<a href="SVR1.html">SVR1： クライアントサイドではなく、サーバサイドで自動リダイレクトを実装する</a>［サーバー］を参照）。なぜなら、サーバーサイドのリダイレクトでは、新たなURIにあるコンテンツをサーバが送信する前にコンテンツが表示されてしまうことがないからである。しかし、コンテンツ制作者がサーバサイド技術を管理しているとは限らず、このような場合にはクライアントサイドのリダイレクトを用いることができる。コンテンツを異なるURIから取得すべきことをユーザーエージェントに指示するコードを埋め込むことで、クライアントサイドのリダイレクトが実装できる。リダイレクト元のページには、リダイレクトに関する情報のみを含めておくことが重要である。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>HTML：meta要素のrefreshで、URIを指定し、タイムアウトを指定しない方法</head>
+      <description><p>
+									HTML 4.xとXHTML 1.xでは、mata要素を用いることでクライアントサイドのリダイレクトが実装できる。<a href="H76.html">H76: meta要素のrefreshを用いて、クライアントサイドで瞬間的にリダイレクトする</a>（HTML）を参照のこと。
+									
+                            </p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H76"/>
+    <relatedtech idref="SVR1"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>他のウェブページへのリンクやプログラム参照を見つける。</p>
+        </item>
+        <item>
+          <p>各リンクやプログラム参照について、参照先のウェブページにクライアントサイドのリダイレクト用のコード（meta要素やスクリプトなど）が含まれている。</p>
+        </item>
+        <item>
+          <p>クライアントサイドのリダイレクトが生じるリンクやプログラム参照について、リダイレクトは時間制限も遅延もなく実装され、そのページにはリダイレクトに関する情報のみが含まれている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>2.を満たしていない、又は3.を満たしている。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G110.html">G110: Using an instant client-side redirect（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

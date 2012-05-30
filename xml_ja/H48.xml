@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H48">
+  <short-name>リストに、ol要素、ul要素、dl要素を用いる</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="content-structure-separation-programmatic"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>
+											番号やビュレットの形式を指定する<code>type</code>属性について、支援技術のサポートが一致していない。
+									</p>
+    </ua-issue>
+  </ua-issues>
+  <description><p>
+							この実装方法の目的は、リスト要素を役割に合わせて適切に利用し、関連する項目のリストを生成することである。<code>ol</code>要素は順序のあるリストに、<code>ul</code>要素は順序のないリストに利用する。定義リスト（<code>dl</code>要素）は、用語とその定義をまとめるのに利用する。このようなマークアップを用いることで、リストを読みやすくできるとはいえ、すべてのリストをリスト要素でマークアップする必要はない。たとえば、文章に含まれるカンマ区切りのリストを、リスト要素でマークアップする必要はない。</p>
+          
+					<p>
+							リストの関係を示すためではなく、見た目をリストのようにしたいためにマークアップを用いることで、利用者が情報を利用しにくくなる恐れがある。リストのような見た目にする例としては、リスト項目の最初にアスタリスクを付け、<code>br</code>要素を用いて各リスト項目を分けるといったことが挙げられる。</p>
+          
+					<p>
+							支援技術の中には、利用者をリストからリストへ、またはリスト項目からリスト項目へと誘導する機能を備えているものがある。スタイルシートを利用すれば、リストという役割の整合性を保ったまま、表現を変更することができる。</p></description>
+  <examples>
+    <eg-group>
+      <head>連続するステップ示すリスト</head>
+      <description><p>この事例では、プロセスの連続するステップを示すために順序リスト（<code>ol</code>要素）を利用している。</p>
+</description>
+      <code>&lt;ol&gt;
+  &lt;li&gt;卵と牛乳をボールの中で混ぜる。&lt;/li&gt;
+  &lt;li&gt;塩とコショウを加える。&lt;/li&gt;
+&lt;/ol&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>材料のリスト</head>
+      <description><p>この事例では、お店で購入する品目を順不同リスト（<code>ul</code>要素）で示している。</p>
+</description>
+      <code>&lt;ul&gt;
+  &lt;li&gt;牛乳&lt;/li&gt;
+  &lt;li&gt;卵&lt;/li&gt;
+  &lt;li&gt;バター&lt;/li&gt;
+&lt;/ul&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>言葉とその定義</head>
+      <description><p>この事例では、用語とそれを明確にする定義をまとめるのに定義リスト（<code>dl</code>要素）を利用している。</p>
+</description>
+      <code>&lt;dl&gt;
+  &lt;dt&gt;点滅&lt;/dt&gt;
+  &lt;dd&gt;1秒当たり0.5回から3回、ついたり消えたりすること
+  &lt;/dd&gt;
+&lt;/dl&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Unordered lists (UL), ordered lists (OL), and list items (LI)</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Definition lists: the DL, DT, and DD elements</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H40"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>
+										リストの視覚表現（ビュレットがあるかどうかに関わらず）を含んだコンテンツが、順不同リストとしてマークアップされている。</p>
+        </item>
+        <item>
+          <p>
+									番号の付いたリストの視覚表現を含んだコンテンツが、順序リストとしてマークアップされている。
+								</p>
+        </item>
+        <item>
+          <p>用語とその定義をリストという形式で表現する場合、そのコンテンツが定義リストとしてマークアップされている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記全てを満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H48.html">H48: Using ol, ul and dl for lists（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

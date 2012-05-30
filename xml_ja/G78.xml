@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G78">
+  <short-name>音声ガイドを含んだ、利用者が選択可能な副音声トラックを提供する</short-name>
+  <applicability>
+    <p>音声トラック及び視覚的なコンテンツのあるウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="media-equiv-audio-desc"/>
+    <success-criterion idref="media-equiv-audio-desc-only"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、視覚的に提供される情報の音声（話し言葉）バージョンを提供することで、目で見ることのできない利用者が視聴覚コンテンツを理解できるようにすることである。</p>
+		<p>今日のユーザーエージェントのほとんどは複数の音声トラックを一つにまとめることができないため、この実装方法では、オリジナルの音声トラックを付加的な音声ガイドの入った別の音声トラックに置き換える選択肢を利用者に提供することによって、音声による追加の情報を同期したメディアに追加する。この追加された情報は、コンテンツを理解するにあたって重要な行動、登場人物、場面の変化、及びスクリーン上のテキスト（キャプション以外の文字）などに焦点を当てたものである。</p>
+		<p>この新しい情報によって、オリジナルの音声トラックに含まれた重要な音声情報が分かりにくくなってしまう（または、うるさい効果音によって新しい情報が不明瞭になってしまう）のでは役に立たないため、新しい情報は会話や効果音の合間に追加される。このため、コンテンツに追加できる情報の量は限られることになる。</p>
+		<p>（視覚的に伝えられている情報の）音声ガイドを提供する音声トラックは、利用者が選択できる代替の音声トラックとするか、又は全ての利用者が聞く標準の音声トラックとすることができる。</p></description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-smil/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL) 1.0</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL 2.0)</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL-access/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessibility Features of SMIL</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/richmedia/tutorials/smiltemplates.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NCAM Rich Media Accessibility, Accessible SMIL Templates</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://service.real.com/help/library/guides/realone/ProductionGuide/HTML/htmfiles/realtext.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Realtext</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn2.microsoft.com/en-us/library/ms971327.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SAMI 1.0</loc>
+          </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G69"/>
+    <relatedtech idref="SM6"/>
+    <relatedtech idref="SM7"/>
+    <relatedtech idref="G173"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>コンテンツ自体にあるコントロール又はメディアプレーヤーの設定によって、音声ガイドを含む音声トラックを選ぶことができる。</p>
+        </item>
+        <item>
+          <p>同期したメディアの音声を聞く。</p>
+        </item>
+        <item>
+          <p>発話の合間を使って、視覚的に伝えているコンテンツの重要な情報が伝えられている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1. 及び 3. を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G78.html">G78: Providing a second, user-selectable, audio track that includes audio descriptions（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G146">
+  <short-name>リキッドレイアウトを用いる</short-name>
+  <applicability>
+    <p>全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="visual-audio-contrast-scale"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>
+							この実装方法の目的は、表示領域幅の広狭に順応するレイアウト手法を用いることで、横スクロールバーが挿入されることなしに、コンテンツを表示できるようにすることである。オンスクリーン・ディスプレイ【訳注：ディスプレイの本体側面などに調節用のつまみがついているのではなく、画面上で各種設定を行うディスプレイ】に対応できるように、必要に応じてテキストサイズが変更できること、テキストを流し込み直せることの両方が可能なレイアウト領域を、リキッドレイアウトによって定義する。したがって、きっちりと決まったレイアウトとはならないが、各要素の関係と描画の順序は同じままである。さまざまなデバイスで問題なく表示できたり、通常とは異なるフォントサイズに設定変更しているユーザーに対するデザイン制作という面で、リキッドレイアウトは効果的な手法である。</p>
+          
+					<p>リキッドレイアウトの基本原則は次のとおりである。</p>
+          
+               <ol class="enumar">
+<li>
+              
+							<p>レイアウト領域を、テキストに応じてサイズが変わるユニットを利用して定義する。つまり、テキストの拡大縮小と同じように、レイアウト領域が広まったり狭まったりする。</p>
+            
+                  </li>
+<li>
+              
+							<p>レイアウト領域を、フロートボックスを隣り合わせで横に並べたように配置する。つまり、パラグラフの中の各単語とほぼ同じような方法で、必要に応じて行送りされる。</p>
+            
+                  </li>
+</ol>
+<p>複雑なリキッドレイアウトの実現には、入れ子にしたレイアウト領域、つまり大きな領域の中に部分ごとの複数の領域を入れ込む方法を利用する場合がある。単純なリキッドレイアウトであっても、テキストサイズの違いに関わらず見た目のよさを損なわないようにデザインを工夫する必要があるとはいえ、十分に計画したリキッドレイアウトは最も効果的なページデザインとなるだろう。</p></description>
+  <examples>
+    <eg-group>
+      <head>HTMLとCSSでの単純なリキッドレイアウト</head>
+      <description><p>
+									以下は、リキッドレイアウトの実現にHTMLとCSSを利用した、かなり単純な事例である。3つの列はテキストサイズが変わるのと同じようにサイズ調整される。もし全ての列を足した幅が、3つの列で利用できる幅の合計を超えてしまった場合、最後の列は前の列の横に置かれるのではなく、下に送られる。列に含まれるテキストの中で最も長い単語が列の幅におさまっている限り、フォントサイズを大きくすることができ、ブラウザの横スクロールバーへの影響はない。この事例では列の幅指定にパーセントを利用しており、「float」プロパティを利用して列をフロート領域として定義している。</p>
+</description>
+      <code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
+&lt;title&gt;単純なリキッドレイアウトの例&lt;/title&gt;
+&lt;style type="text/css"&gt;
+
+.column
+	{
+	border-left: 1px solid green;
+	padding-left:1%;
+	float: left;
+	width: 32%;
+	}
+#footer
+	{
+	border-top: 1px solid green;
+	clear: both;
+	}
+&lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;WCAGの例&lt;/h1&gt;
+   &lt;h2&gt;3つの列に含まれるテキスト&lt;/h2&gt;
+      &lt;div title="1列目" class="column"&gt;
+        &lt;h3&gt;Block 1&lt;/h3&gt;
+        &lt;p&gt; この実装方法の目的は、表示領域幅の広狭に順応するレイアウト手法を
+            用いることで、横スクロールバーが挿入されることなしに、コンテンツ
+            を表示できるようにすることである。
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;div title="2列目" class="column"&gt;
+        &lt;h3&gt;Block 2&lt;/h3&gt;
+        &lt;p&gt; これはとても簡単な例であり、テキストサイズの変化に順応するページ
+            レイアウトである。
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;div title="3列目" class="column"&gt;
+      &lt;h3&gt;Block 3&lt;/h3&gt;
+        &lt;p&gt; より複雑なページレイアウトに関する実装方法については、以下の参考
+            リソースを参照のこと。
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;p id="footer"&gt;Footer text&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webreference.com/authoring/style/sheets/css_mastery2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS Mastery: Fixed-Width, Liquid, and Elastic Layouts and Faux Columns</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cssliquid.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Liquid Designs</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="C12"/>
+    <relatedtech idref="C13"/>
+    <relatedtech idref="C14"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>ユーザーエージェントでコンテンツを表示する。</p>
+        </item>
+        <item>
+          <p>テキストサイズを200%に拡大する。</p>
+        </item>
+        <item>
+          <p>ブラウザの横スクロールバーが表示されることなしに、すべてのコンテンツが表示され、すべての機能が利用できるか確認する。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>3.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G146.html">G146: Using liquid layout（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

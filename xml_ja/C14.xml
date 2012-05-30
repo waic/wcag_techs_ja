@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="C14">
+  <short-name>em単位を用いてフォントサイズを指定する</short-name>
+  <applicability>
+    <p>CSS</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="visual-audio-contrast-scale"/>
+    <success-criterion idref="visual-audio-contrast-visual-presentation"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>
+							<code>em</code>単位を用いてフォントサイズを指定している場合、パーセントやキーワードを用いたときよりも、Internet Explorer 6でテキストが大きく拡大される。したがって、文字のサイズを最大にすると、テキストが200%以上の大きさで表示され、見切れの問題が発生するかもしれない。</p>
+    </ua-issue>
+    <ua-issue>
+      <p>フォントサイズがポイント（pt）やピクセル（px）といった絶対単位（あるいは事実上の絶対単位）で指定されている場合、Internet Explorer 7以前では、メニューコマンドの「文字のサイズ」でテキストのサイズ変更ができない。【訳注：厳密には、ピクセル（px）は「絶対単位」ではなく「相対単位」ですが、ブラウザやデバイスの扱いとしては「事実上の絶対単位」となっています。】</p>
+    </ua-issue>
+    <ua-issue>
+      <p>
+							Internet Explorer 7は、CSSが<code>style</code>要素で指定され、ある要素がキーオフされた場合、テキストサイズを変更する。【訳注：原文の意味がやや不明確なため、WCAGワーキンググループに確認中です。】<code>style</code>属性によるインラインスタイルが用いられた場合、このテキストサイズ変更はサポートされない。</p>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>
+							この実装方法の目的は、ユーザーエージェントがコンテンツを効果的に大きく表示したり小さく表示できるように、<code>em</code>単位でテキストのフォントサイズを指定することである。emはフォントのプロパティなので、フォントサイズの変更に応じてサイズが変わる。<code>body</code>要素に対してフォントサイズを指定した場合、より個別的なセレクタで上書きされない限り、他の全ての要素に値が継承される。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>CSSでのemによるフォントサイズ指定</head>
+      <description><p>
+									この事例では、どのような場合でも、<code>strong</code>要素のテキストが周りのテキストよりも常に大きく表示されるように指定してある。そのため、親要素である見出しやパラグラフにフォントサイズが指定されていても、strong要素でマークアップされた強調語は、周りのテキストよりも大きく表示される。</p>
+</description>
+      <code>strong {font-size: 1.6em}
+
+...
+
+&lt;h1&gt;&lt;strong&gt;ユーザー&lt;/strong&gt;がテキストサイズをコントロールできるようにする&lt;/h1&gt;
+&lt;p&gt;ユーザーだけが、テキストをどのぐらいのサイズにすれば彼にとって有意義かを知りうるのだから、
+彼がテキストサイズを設定できるようにするのが&lt;strong&gt;とても&lt;/strong&gt;重要である。   
+…</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Cascading Style Sheets, Level 2 (CSS2), Fonts</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html#font-size-props" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Font Size Property</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://css-discuss.incutio.com/?page=UsingEms" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS-Discuss Font Size Using Ems</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="C12"/>
+    <relatedtech idref="C13"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>CSS内の規則集合（CSSのソースコード）について、フォントサイズを指定している全てのCSSプロパティを洗い出す。</p>
+        </item>
+        <item>
+          <p>値が<code>em</code>単位で指定されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/C14.html">C14: Using em units for font sizes（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

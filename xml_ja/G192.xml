@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G192">
+  <short-name>仕様に完全に準拠する</short-name>
+  <applicability>
+    <p>この実装方法は仕様のある全てのマークアップ言語に関連する</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="ensure-compat-parses"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>マークアップ言語がその仕様に完全に準拠していれば、4.1.1のすべての要件が満たされる。つまり、仕様に完全に準拠することは、WCAG 2.0に適合するために必要ではないが、成功事例であり、達成基準4.1.1に適合することになる。</p>
+  </description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G134"/>
+    <relatedtech idref="H74"/>
+    <relatedtech idref="H75"/>
+    <relatedtech idref="H88"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>全てのウェブコンテンツ技術が仕様に従って使用される。</p>
+        </item>
+      </olist>
+      <div class="note">
+        <p class="prefix"><em>注記: </em>バリデータは、誤りを見つけるために素晴らしいツールであるが、通常、コンテンツが仕様に対して完全準拠となっていない事例のすべてを見つけられるものではない。</p>
+      </div>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G192.html">G192: Fully conforming to specifications（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

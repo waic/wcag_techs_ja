@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H45">
+  <short-name>longdesc属性を用いる</short-name>
+  <applicability>
+    <p>短い代替テキストでは説明しきれない画像を含むHTML及びXHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>古い支援技術の中は、<code>longdesc</code>属性をサポートしていないものもある。</p>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>
+							この実装方法の目的は、短い代替テキストでは画像の機能や情報が十分に伝達できない場合に、<code>longdesc</code>属性でのファイル指定によって情報を提供することである。<code>longdesc</code>属性には<acronym title="Unifrom Resource Identifier">URI</acronym>を指定する。これは非テキストコンテンツの詳しい説明を含む目的地を意味する。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <code>&lt;p&gt;&lt;img src="chart.gif" alt="複雑な図" longdesc="chartdesc.html"/&gt;&lt;/p&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/articles/too-much-accessibility/too-much-accessibility-the-rise-and-fall-of-the-longdesc/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Too much accessibility - the rise and fall of the LONGDESC</loc>&#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G73"/>
+    <relatedtech idref="G74"/>
+    <relatedtech idref="G92"/>
+    <relatedtech idref="G94"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>
+									<code>longdesc</code>属性を指定した<code>img</code>要素がある。
+									</p>
+        </item>
+        <item>
+          <p>
+														<code>longdesc</code>属性の値が、存在するリソースの有効なURIである。
+														</p>
+        </item>
+        <item>
+          <p>
+											URIで指定されたコンテンツには、関連付けられたオリジナルの非テキストコンテンツの詳しい説明が含まれている。
+										</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.から3.を全て満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H45.html">H45: Using longdesc（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

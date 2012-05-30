@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H50">
+  <short-name>構造を示す要素を用いて、リンクをグループ化する</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-skip"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>
+							この実装方法の目的は、リンクを論理的な一組にグループ化する方法を示すことである。リンクを論理的な一組（たとえば、サイト内の各ページに設置するナビゲーションバーやメインメニュー）にグループ化する場合、それらはひとつの単位としてマークアップされるべきである。通常、ナビゲーションバーは、利用者がページ上で遭遇する最初のものである。目の見える利用者はナビゲーションパーツを無視でき、そのページのコンテンツから読み始めることがある。しかし、スクリーンリーダーの利用者は、興味のあるコンテンツを読み始める前に、ナビゲーションバーに含まれるリンクテキストそれぞれの読み上げを聞かなければならない。スクリーンリーダーの利用者がナビゲーションバーを飛ばしたり、そこに含まれる全てのリンクの読み上げを回避したりできるようにする、コンテンツのマークアップの方法は何通りかある。</p>
+          
+					<p>
+						次のメカニズム（上から好ましい順）のどれかを利用して、リンクをグループ化する：</p>
+          
+               <ul>
+<li>
+              
+							<p>
+									<code>ul</code>要素又は<code>ol</code>要素
+
+							</p>
+            
+                  </li>
+<li>
+              
+							<p>
+									<code>map</code>要素
+							</p>
+            
+                  </li>
+</ul></description>
+  <examples>
+    <eg-group>
+      <head>リンクのグループ化にリストを利用</head>
+      <description><p>この事例では、リンクを<code>ul</code>要素と<code>li</code>要素でグループ化している。</p>
+</description>
+      <code>&lt;a name="categories" id="categories"&gt;&lt;/a&gt;&lt;h2&gt;商品カテゴリー&lt;/h2&gt;
+&lt;ul class="navigation"&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href="kitchen.html"&gt;キッチン&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href="bedbath.html"&gt;ベッドとバス&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href="dining.html"&gt;ダイニング&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href="lighting.html"&gt;照明&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href="storage.html"&gt;収納&lt;/a&gt;&lt;li&gt;&lt;p&gt;
+&lt;/ul&gt;</code>
+      <description><p>
+									CSSを利用してリスト要素のスタイルを変更できるので、この方法の視覚表現は多様である。
+								</p>
+<p>
+									次のスタイルでは、リストのビュレットと、インデントを生成している左側のパディングをなくし、各リスト要素を横に並べるように設定している。</p>
+</description>
+      <code>ul.navigation {
+  list-style: none; 
+  padding: 0;
+}
+ul.navigation li {
+  display: inline;
+}</code>
+      <description><p>次のスタイルでは、リストのビュレットと左側のパディングをなくし、各リスト項目を浮動化ブロックとして表示するように設定している。</p>
+</description>
+      <code>ul.navigation {
+ list-style: none; 
+ padding: 0;
+}
+ul.navigation li {
+ display: block; 
+ float: left;
+}</code>
+    </eg-group>
+    <eg-group>
+      <head>リンクのグループ化にmap要素を利用</head>
+      <description><p>この事例では、<code>map</code>要素でリンクを一組にグループ化し、<code>title</code>属性でナビゲーションバーという役割を特定している。</p>
+</description>
+      <code>&lt;map title="ナビゲーションバー"&gt;
+  &lt;p&gt;
+    [&lt;a href="home.html"&gt;ホーム&lt;/a&gt;] 
+    [&lt;a href="search.html"&gt;検索&lt;/a&gt;] 
+    [&lt;a href="new.html"&gt;新着とハイライト&lt;/a&gt;] 
+    [&lt;a href="sitemap.html"&gt;サイトマップ&lt;/a&gt;]
+  &lt;/p&gt;
+ &lt;/map&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/lists.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 lists</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#edef-MAP" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    MAP element</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/global.html#adef-title" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    title attribute</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <p>コンテンツに一緒にグループ化すべき<code>a</code>要素がある。</p>
+      <olist>
+        <item>
+          <p><code>a</code>要素をリストまたは<code>map</code>要素でグループ化している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H50.html">H50: Using structural elements to group links（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

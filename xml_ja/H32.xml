@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H32">
+  <short-name>実行ボタンを提供する</short-name>
+  <applicability>
+    <p>フォームのコントロールを含むコンテンツ</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-unpredictable-change"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、利用者が状況の変化を明示的に要求できるメカニズムを提供することである。送信ボタンの本来の使用法は、フォームに入力されたデータを実行するHTTPリクエストを生成することである。それは、状況の変化を起こすために使われる適切なコントロールである。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <description><p>これは送信ボタンを持つフォームの基本的な事例である。</p>
+</description>
+      <code>&lt;form action="http://www.example.com/cgi/subscribe/" method="post"&gt;&lt;br /&gt; 
+&lt;p&gt;メールリングリストに登録したい場合は、あなたの
+メールアドレスを入力してください。&lt;/p&gt;&lt;br /&gt; 
+&lt;label for="address"&gt;eメールアドレスを入力してください。:&lt;/label&gt;
+&lt;input type="text" id="address" name="address" /&gt; 
+&lt;input type="submit" value="登録" /&gt;&lt;br /&gt; 
+&lt;/form&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>次の事例では、利用者が要求したページを転送する( <code>action</code> 属性により指定された)サーバーサイド・スクリプトを使用している。</p>
+</description>
+      <code>&lt;form action="http://www.example.com/cgi/redirect/" method="get"&gt;&lt;br /&gt; 
+&lt;p&gt;Navigate the site.&lt;/p&gt;&lt;br /&gt; 
+&lt;select name="dest"&gt;&lt;br /&gt; 
+&lt;option value="/index.html"&gt;Home&lt;/option/&gt;&lt;br /&gt; 
+&lt;option value="/blog/index.html"&gt;My blog&lt;/option/&gt;&lt;br /&gt; 
+&lt;option value="/tutorials/index.html"&gt;Tutorials&lt;/option/&gt;&lt;br /&gt; 
+&lt;option value="/search.html"&gt;Search&lt;/option/&gt;&lt;br /&gt; 
+&lt;/select&gt;&lt;br /&gt; 
+&lt;input type="submit" value="Go" /&gt;&lt;br /&gt; 
+&lt;/form&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cs.tut.fi/~jkorpela/forms/navmenu.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Navigational pulldown menus in HTML by Jukka Korpela discusses a few techniques that work or do not work.</loc> by Jukka Korpela discusses a few techniques that work or do not work. </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G80"/>
+    <relatedtech idref="H36"/>
+    <relatedtech idref="H84"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>コンテンツ内の全てのフォームを見る。</p>
+        </item>
+        <item>
+          <p>それぞれのフォームに、送信ボタン(input type="submit"<span>、input type="image" 又は button type="submit"</span>)がある。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしている。 </p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H32.html">H32: Providing submit buttons（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+    </ulist>
+  </translationcredit>
+</technique>

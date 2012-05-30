@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H33">
+  <short-name>title属性を用いて、リンクテキストの文言を補足する</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-refs"/>
+    <success-criterion idref="navigation-mechanisms-link"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <ul>
+<li>
+                
+								<p>現在のユーザーエジェント及び支援技術は、リンクで利用できる<code>title</code>属性の内容があるときも、利用者に何もフィードバックしない。</p>
+              
+                     </li>
+<li>
+                
+								<p>グラフィカルなユーザーエージェントの一部は、<code>title</code>属性が指定された<code>a</code>要素の上にマウスオーバーしたときに、ツールチップを表示する。しかし、現在のユーザーエージェントは、キーボードによる<code>title</code>属性の内容へのアクセス方法を提供していない。</p>
+              
+                     </li>
+<li>
+                
+								<p>一般的なユーザーエージェントの一部では、短い時間（およそ5秒）でツールチップが消えてしまう。このことが、マウスは利用できても細かな操作ができない利用者が<code>title</code>属性の内容にアクセスする難しさや、ツールチップを読むのに時間を要する利用者の困惑につながっている。</p>
+              
+                     </li>
+<li>
+                
+								<p>現在のグラフィカルなユーザーエージェントは、<code>title</code>属性の内容表現をコントロールするメカニズムを提供していない。利用者は、ツールチップのテキストのサイズを変更したり、前景色と背景色をコントロールしたりできない。また、ツールチップの配置を利用者がコントロールできないことも問題である。画面拡大ソフトウェアの利用者の一部は、画面領域内にツールチップが全て表示されず、<code>title</code>属性の内容を意味がわかるほど得られないことにつながっているからである。</p>
+              
+                     </li>
+<li>
+                
+								<p>ユーザーエージェントの一部では、コンテキストメニューによって補足情報にアクセスできる。たとえばMozilla/Firefoxでは、Pに続けてShift＋F10とキーを押すと、他の補足情報とともに<code>title</code>属性の内容が表示される。</p>
+              
+                     </li>
+<li>
+                
+								<p>HTML 4.01仕様書は、<code>alt</code>属性のテキストを、ある要素が通常通り描画されないときに表示されるもの、と説明している。そのため、視覚系ユーザーエージェントでは、画像が表示されないときに<code>alt</code>属性のテキストを表示する。一方、<code>title</code>属性は追加情報を提供するものとされる。ユーザーエージェントは一般的に、<code>title</code>属性が指定された要素にマウスオーバーしたときに、その<code>title</code>属性のテキストを表示する。Internet Explorerは、<code>title</code>属性のテキストが指定されていなければ、マウスオーバー時に<code>alt</code>属性のテキストを表示する。一方、FirefoxやOperaは、<code>title</code>属性のテキストのみをマウスオーバー時に表示し、<code>alt</code>属性のテキストは表示しない。したがって、<code>alt</code>属性のテキストをマウスオーバー時に表示したければ、同じテキストを<code>title</code>属性にも指定しておくべきである。【訳注：本段落最後の一文は、<code>alt</code>属性の誤用を助長する恐れがあるので、WCAG　WGに削除を提案している。】</p>
+              
+                     </li>
+<li>
+										 <p>支援技術ごとに<code>title</code>属性の音声読み上げサポートが異なる。一部の支援技術には、利用者が<code>title</code>属性によって提供される情報にアクセスする機能が含まれていない。</p>
+                     </li>
+<li>
+										 <p>JAWS 7.0以降では、設定によって<code>title</code>属性値を読み上げることができる。この設定は、一時的な変更も固定的な変更も可能である。</p>
+                     </li>
+<li>
+										 <p>Window-Eyes 5.5以降には、（<code>title</code>属性を含む）フォーカスを受けた項目の追加情報を読み上げるホットキー（ins+E）がある。</p>
+                     </li>
+<li>
+										 <p>この実装方法は、<code>title</code>属性がアクセシビリティサポーテッドである場合のみ達成基準を満たすことができる。<code>title</code>属性がアクセシビリティサポーテッドであるためには、全てのキーボードの利用者が（音声読み上げソフトウェアを利用しているかどうかに関わらず）この属性の内容を利用できる必要がある。</p>
+                     </li>
+</ul>
+    </ua-issue>
+  </ua-issues>
+  <description><p>この実装方法の目的は、リンクを説明する追加情報を提供するための、a要素の<code>title</code>属性の利用方法を示すことである。<code>title</code>属性は、リンクの目的を明らかにしたり、詳しく説明したりするのに役立つ追加情報の指定に用いる。もし<code>title</code>属性を通して提供する補足情報が、警告文のように利用者がリンクをたどる前に知っておくべき内容であれば、<code>title</code>属性ではなくリンクテキストとして提供すべきである。</p>
+            
+						<p><code>title</code>属性へのアクセス方法について、ユーザーエージェントごとにサポートが大きく異なるため、コンテンツ制作者はこの実装方法を用いるときは注意を払うべきである。この理由から、コンテンツ制作者は実装方法 <a href="C7.html">C7： CSSを用いて、リンクテキストの一部を非表示にする </a>（CSS）又は <a href="H30.html">H30： a 要素のリンクの目的を説明するテキストリンクを提供する</a>（HTML）を利用することが望ましい。</p></description>
+  <examples>
+    <eg-group>
+      <head>リンクの目的を明らかにする</head>
+      <code>&lt;a href="http://example.com/WORLD/africa/kenya.elephants.ap/index.html" 
+title="象の避難の失敗について続きを読む"&gt;
+巨大な荷物のせいで、避難はさんざんな結果に
+&lt;/a&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>新規ウインドウを開くリンク</head>
+      <description><p>HTML 4.01では、<code>href</code>属性で指定したURIを新規ウインドウで表示するために、<code>a</code>要素で<code>target="_blank"</code>を利用できる。この事例では、新規ウインドウを開くリンクであるという情報を提供するのに、<code>a</code>要素の<code>title</code>属性を利用している。</p>
+</description>
+      <code>&lt;a href="http://example.com/subscribe.html" 
+target="_blank" title="新規ウインドウを開く"&gt;
+ニュース速報のメール通知に申し込む
+&lt;/a&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="C7"/>
+    <relatedtech idref="H30"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p><code>a</code>要素のソースコードについて、次のことを調べる。</p>
+      <olist>
+        <item>
+          <p><code>title</code>属性のある<code>a</code>要素では、リンクテキストの文言とともに<code>title</code>属性がそのリンクの目的を示している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H33.html">H33: Supplementing link text with the title attribute（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

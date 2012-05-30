@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H42">
+  <short-name>h1要素～h6要素を用いて、見出しを特定する</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="content-structure-separation-programmatic"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、HTML及びXHTMLの見出しマークアップを用いて、コンテンツ構造を伝達することである。</p>
+          
+
+<p>単にテキストの外観を変えるために見出しマークアップを使うのは、コンテンツの構成をうまく伝達できないばかりか、見出しを構造の理解に用いる利用者や、見出しを使ったナビゲーションを用いる利用者を混乱させる恐れがある。逆に、テキストを太字にしたり、<code>"class=heading"</code>と指定したりしたとしても、見た目が見出しのようになるだけで、支援技術はそのテキストを見出しとは認識できないだろう。</p></description>
+  <examples>
+    <eg-group>
+      <head>3段組レイアウトの見出し設定</head>
+      <description><p>この事例では、3段組の真ん中にページのメインコンテンツがある。メインコンテンツは、ページ内で最初のコンテンツではないが、そのタイトルはページタイトルと同じで、<code>h1</code>要素でマークアップされている。3段組のうち1番目と3番目のコンテンツは重要度が低いため、タイトルが<code>h2</code>要素でマークアップされている。【訳注：見出しを適切にマークアップする方法は、<a href="H69.html">H69： コンテンツの各セクションの開始位置に見出し要素を提供する</a>及び<a href="G141.html">G141： 見出しを用いてウェブページを構造化する</a>を参照するとよい。】</p>
+</description>
+      <code>&lt;head&gt;
+ &lt;title&gt;株式市場アップ・トゥデイ&lt;/title&gt;
+ &lt;/head&gt;
+
+ &lt;body&gt;
+
+ &lt;!-- left nav --&gt;
+ &lt;div class="left-nav"&gt;
+ &lt;h2&gt;サイトナビゲーション&lt;/h2&gt;
+ &lt;!-- content here --&gt;
+ &lt;/div&gt;
+
+ &lt;!-- main contents --&gt;
+ &lt;div class="main"&gt;
+ &lt;h1&gt;株式市場アップ・トゥデイ&lt;/h1&gt;
+ &lt;!-- article text here --&gt;
+ &lt;/div&gt;
+
+ &lt;!-- right panel --&gt;
+ &lt;div class="left-nav"&gt;
+ &lt;h2&gt;関連リンク&lt;/h2&gt;
+ &lt;!-- content here --&gt;
+ &lt;/div&gt;
+ &lt;/body&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/global.html#h-7.5.5" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    H1-H6 elements</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://meyerweb.com/eric/thoughts/2004/07/21/pick-a-heading/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pick a&#13;
+                    Heading Eric Meyer</loc> Eric Meyer</p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc>&#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H69"/>
+    <relatedtech idref="G141"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>コンテンツが見出しであるときに、見出しマークアップを利用している。</p>
+        </item>
+        <item>
+          <p>コンテンツが見出しでないときは、見出しマークアップを利用していない。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.及び2.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H42.html">H42: Using h1-h6 to identify headings（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="SM1">
+  <short-name>SMIL 1.0で拡張した音声ガイドを追加する</short-name>
+  <applicability>
+    <p>SMIL 1.0 プレーヤーが利用可能な場合</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="media-equiv-audio-desc"/>
+    <success-criterion idref="media-equiv-audio-desc-only"/>
+    <success-criterion idref="media-equiv-extended-ad"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、会話の合間に入れられるよりも多くの音声ガイドを、視聴覚素材に付加することである。</p>
+		<p>SMIL 1.0 にはこれを達成する簡単な方法がないが、連続して順番に再生される複数のファイルに、音声ファイル及び映像ファイルを分割することによって実装できる。この方法によって追加した音声ガイドは、視聴覚コンテンツが停止している間に再生される。映像ファイルの最後のフレームは、画面に表示されたまま一時停止し、その間に音声ファイルが再生される。</p>
+		<p>これにより、映像は最初から最後まで再生されるように見えながらも、ところどころで停止して、その間に長めの音声ガイドが提供される。そして、音声ガイドが終了すると、映像の再生が自動的に再開する。</p>
+		<p>この拡張した音声ガイドのオン／オフを操作するには、スクリプトを使用して、拡張した音声ガイドを含んだSMILスクリプト及び含まないSMILスクリプトの2つの間で切り替えることによって実装できる。又は、スクリプトを使用して、拡張した音声ガイドをSMILファイルに追加したりSMILファイルから削除したりすることもできる。そうすることで、映像クリップは、単純に順序どおり再生されることになる。</p>
+		<p>スクリプトが使用できない場合は、2つのバージョンの映像を提供することによって可能となる。つまり、1つは拡張した音声ガイドを含んだバージョン、もう1つは含まないバージョンを提供するのである。</p></description>
+  <examples>
+    <eg-group>
+      <head>拡張した音声ガイドのあるSMIL 1.0の映像、メインのメディアを4箇所で停止して拡張した音声ガイドを挿入している</head>
+      <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;smil xmlns:qt="http://www.apple.com/quicktime/resources/smilextensions" 
+xmlns="http://www.w3.org/TR/REC-smil" qt:time-slider="true"&gt;
+  &lt;head&gt;
+    &lt;layout&gt;
+      &lt;root-layout background-color="black" height="266" width="320"/&gt;
+      &lt;region id="videoregion" background-color="black" top="26" left="0" 
+      height="144" width="320"/&gt;
+    &lt;/layout&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;par&gt;
+   &lt;seq&gt;
+     &lt;par&gt;
+       &lt;video src="video.rm" region="videoregion" clip-begin="0s" clip-end="5.4" 
+       dur="8.7" fill="freeze" alt="videoalt"/&gt;   
+       &lt;audio src="no1.wav" begin="5.4" alt="audio alt"/&gt;
+     &lt;/par&gt;
+     &lt;par&gt;
+       &lt;video src="video.rm" region="videoregion" clip-begin="5.4" clip-end="24.1" 
+       dur="20.3" fill="freeze" alt="videoalt"/&gt;
+       &lt;audio src="no2.wav" begin="18.7" alt="audio alt"/&gt;
+     &lt;/par&gt;
+     &lt;par&gt;
+       &lt;video src="video.rm" region="videoregion" clip-begin="24.1" clip-end="29.6" 
+       dur="7.7" fill="freeze" alt="videoalt"/&gt;
+       &lt;audio src="no3.wav" begin="5.5" alt="audio alt"/&gt;
+     &lt;/par&gt;
+     &lt;par&gt;
+       &lt;video src="video.rm" region="videoregion" clip-begin="29.6" clip-end="34.5" 
+       dur="5.7" fill="freeze" alt="videoalt"/&gt;
+       &lt;audio src="no4.wav" begin="4.9" alt="audio alt"/&gt;
+     &lt;/par&gt;
+     &lt;par&gt;
+       &lt;video src="video.rm" region="videoregion" clip-begin="77.4" alt="video alt"/&gt;
+     &lt;/par&gt;
+   &lt;/seq&gt;
+  &lt;/par&gt;
+&lt;/body&gt;
+&lt;/smil&gt;</code>
+      <description><p>上記のマークアップは、5つの <code>&lt;par&gt;</code> セグメントに分割されている。各セグメントに <code>&lt;video&gt;</code> と <code>&lt;audio&gt;</code> のタグが1つずつある（ただし、最後の <code>&lt;par&gt;</code> に <code>&lt;audio&gt;</code> がないのは意図的なものである）。拡張した音声ガイドの通常の使い方は、音声ガイドが提供される間、メインのメディアを一時停止するというものである。SMIL 1.0でこれを実現するには、映像クリップの開始と終了を指定する「<code>clip-begin</code>」と「<code>clip-end</code>」を設定して、その「<code>clip-begin</code>」と「<code>clip-end</code>」で定義されるよりも長い再生時間をクリップに設定する。<code>fill=「freeze」</code>は、拡張した音声ガイドの再生中、映像の最後のフレームを保持する。<code>&lt;audio&gt;</code> タグには「<code>begin</code>」の属性があり、その前の <code>&lt;video&gt;</code> タグで定義された「<code>clip-end</code>」の値と同じ値を持っている。</p>
+<p>「<code>clip-begin</code>」「<code>clip-end</code>」「dur」の値を決めるにあたっては、音声ガイドが開始及び終了する前の映像部分の時間と、拡張した音声ガイドの全体の長さを調べる必要がある。「<code>clip-begin</code>」と「<code>clip-end</code>」は、それ自体の値を定義するが、「<code>dur</code>」の値は、「<code>clip-begin</code>」と「<code>clip-end</code>」によって定義される拡張した音声ガイド及び映像クリップを合計した長さとなる。最初の <code>&lt;par&gt;</code> では、映像クリップが0秒で始まり、5.4秒で終わる。そして記述の長さは3.3秒だ。このため、「<code>dur</code>」の値は、5.4 + 3.3 = 8.7秒となる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-smil/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL) 1.0</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL 2.0)</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL-access/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessibility Features of SMIL</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/richmedia/tutorials/smiltemplates.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NCAM Rich Media Accessibility, Accessible SMIL Templates</loc>
+          </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="SM2"/>
+    <relatedtech idref="SM6"/>
+    <relatedtech idref="G81"/>
+    <relatedtech idref="SM11"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>拡張した音声ガイドのあるファイルを再生する。</p>
+        </item>
+        <item>
+          <p>音声ガイドのあるファイルを再生する。</p>
+        </item>
+        <item>
+          <p>映像がところどころ一時停止して、拡張した音声ガイドが再生される。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>3.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SM1.html">SM1: Adding extended audio description in SMIL 1.0（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

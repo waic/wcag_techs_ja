@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="C8">
+  <short-name>CSS の letter-spacing プロパティを用いて、単語内の文字間隔を調整する</short-name>
+  <applicability>
+    <p>CSSに対応しているウェブコンテンツ技術全て</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="content-structure-separation-sequence"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>
+この実装方法の目的は、意味の伝わるテキストの流れを維持しながら、スタイルシートによって表示上の文字間隔を調整する方法を示すことである。
+文字間隔の量を調整するには、CSSの<code>letter-spacing</code>プロパティを使用する。
+単語の途中に空白文字を入れると意味や発音のされ方が変わってしまうため、間隔の調整はこの方法で行うことが推奨されている。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>単語内の文字間隔を広くする</head>
+      <description><p>
+以下のCSSは、レベル2の見出しに含まれる各文字に対して1文字分に相当する間隔を加える:</p>
+</description>
+      <code>h2
+{
+	letter-spacing: 1em;
+}</code>
+      <description><p>
+マークアップは以下の通り: </p>
+</description>
+      <code>&lt;h2&gt;博物館&lt;/h2&gt;</code>
+      <description><p>
+表示結果は、およそ以下のようになる: </p>
+</description>
+      <code>博　物　館</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1998/REC-CSS2-19980512/text.html#spacing-props" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: Letter and word spacing</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="F1"/>
+    <relatedtech idref="F32"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>
+文字間隔が標準ではない状態で表示されている各単語に対して: 
+							</p>
+      <olist>
+        <item>
+          <p>
+文字間隔を調整する手段としてCSSの<code>letter-spacing</code>プロパティが用いられている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C8.html">C8: Using CSS letter-spacing to control spacing within a word（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

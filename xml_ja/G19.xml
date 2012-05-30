@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G19">
+  <short-name>どの1秒間においても、コンテンツに3回よりも多く閃光を放つコンポーネントがないことを確認する</short-name>
+  <applicability>
+    <p>あらゆるウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="seizure-does-not-violate"/>
+    <success-criterion idref="seizure-three-times"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、明るく、その面積が大きいと発作を起こすといわれている速度で閃光を放つことを防ぐことである。
+			   面積を拡大して見ている利用者もいるので、この実装方法ではコンテンツのサイズの大きさに関係なく、1秒間に3回より少ない閃光しか
+			   用いてはいけないとしている。</p>
+          
+               <div class="note">
+                 <p class="prefix">注記１：この実装方法は、等級 Aの達成基準より厳しくなっている。
+				 しかし、検証は簡単で、等級Aの達成基準を満たしていることの検証にも用いることができる。
+				 等級Aの達成基準に適合していない閾値の場合、1秒間に3.5回以上の閃光があるからである。多くのコンテンツには閃光を放つものはなく、
+				 点滅があるコンテンツでも一部稀な場合を除いてこれほど速く点滅しない。よって、達成基準で示されているより複雑な検証を実行しなくてもすむようにするために、
+				 この実装方法にあるようにコンテンツが1秒間に1、2回、あるいは最大でも3回までしか閃光を放たないようにしておくとよい。</p>
+</div>
+          
+               <p>
+            
+                  <strong>3.5回の閃光又は7回の遷移の事例：</strong>
+          
+               </p>
+          
+               <ul>
+<li>
+              
+                     <p>始まりが暗い色－明るい色－暗い色－明るい色－暗い色－明るい色－暗い色－明るい色で終わる、又は</p>
+            
+                  </li>
+<li>
+              
+                     <p>始まりが明るい色－暗い色－明るい色－暗い色－明るい色－暗い色－明るい色－暗い色で終わる</p>
+            
+                  </li>
+</ul></description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://trace.wisc.edu/peat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Trace Center Photosensitive Epilepsy Analysis Tool (PEAT)</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G15"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>どの1秒間においても3回よりも多い閃光がない。</p>
+        </item>
+        <item>
+          <p>3回の閃光がある場合、1秒間の最後の明／暗の状態が初めと同じである。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.及び2.の両方を満たしている。
+    </p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G19.html">G19: Ensuring that no component of the content flashes more than three times in any 1-second period（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

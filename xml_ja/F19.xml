@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F19">
+  <short-name>適合要件 1 の不適合事例 － 適合していないウェブページの代替となる適合しているバージョンを利用者が見つけられる手段を提供していない</short-name>
+  <applicability>
+    <p>適合していないコンテンツの代替となる適合したバージョンを提供するサイト</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="cc1"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この文書では、コンテンツに対して代替となる適合したバージョンが提供されているにもかかわらず、利用者がそのことを知る方法、又はどこで見つけられるかを知る方法が提供されていない不適合事例について述べている。利用者が適合したバージョンを見つけることができないため、このようなコンテンツは、達成基準を満たしていないことになる。</p>
+  </description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G136"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>代替となる適合したバージョンがある、適合していないウェブページを特定する。</p>
+        </item>
+        <item>
+          <p>適合していないウェブページは、適合しているバージョンへのリンクを提供している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ol class="enumar">
+<li><p>2. を満たしていない場合、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p></li>
+		</ol>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F19.html">F19: Failure of Conformance Requirement 1 due to not providing a method for the user to find the alternative conforming version of a non-conforming Web page（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="SM14">
+  <short-name>SMIL 2.0で、同期した映像ストリームを通じて手話通訳を提供する</short-name>
+  <applicability>
+    <p>SMIL 2.0</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="media-equiv-sign"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、耳が聞こえないか、またはそうでなくとも、視聴覚コンテンツにおいて発話を聞くことに問題のある利用者に、コンテンツを閲覧できる方法を提供することである。この実装方法では、発話と重要な音の全てがキャプション領域に表示される手話通訳の映像によって入手できる。</p>
+          
+               <p>SMIL 2.0 では、2つの映像のために別々の領域を定義できる。2つの映像再生が同期していて、画面の一つの領域に本編のビデオを表示し、もう一つの領域に本編に対する手話通訳の映像を表示する。</p></description>
+  <examples>
+    <eg-group>
+      <head>RealMediaプレーヤーでの SMIL 2.0 手話ビデオのサンプル</head>
+      <code>&lt;smil xmlns="//www.w3.org/2001/SMIL20/Language"&gt;
+  &lt;head&gt;
+    &lt;layout&gt;
+
+      &lt;root-layout backgroundColor="black" height="310" width="330"/&gt;
+      &lt;region id="video" backgroundColor="black" top="5" left="5" 
+      height="240" width="320"/&gt;
+      &lt;region id="signing" backgroundColor="black" top="250" 
+      height="60" left="5" width="320"/&gt;
+    &lt;/layout&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+    &lt;par&gt;
+      &lt;video src="salesdemo.mpg" region="video" title="販売の実演" 
+      alt="販売の実演"/&gt;
+      &lt;video src="salesdemo_signing.mpg" 
+      region="signing" systemCaptions="on" 
+      title="手話通訳" 
+      alt="販売の実演の手話通訳"/&gt;
+    &lt;/par&gt;
+  &lt;/body&gt;
+&lt;/smil&gt;</code>
+      <description><p>この事例では、2つの <code>&lt;video&gt;</code>タグを含む <code>&lt;par&gt;</code>セグメントを示している。system-captions属性は、利用者のプレーヤーの字幕設定が、字幕を表示する選択になっているとき、手話の映像が表示されるべきであることを示す。<code>&lt;layout&gt;</code>セクションは、本編の映像と手話通訳の映像に割り当てる領域を定義している。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia&#13;
+                                        Integration Language (SMIL 2.0)</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL-access/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessibility&#13;
+                                        Features of SMIL</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/richmedia/tutorials/smiltemplates.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NCAM Rich Media Accessibility, Accessible SMIL&#13;
+                                    Templates</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="SM13"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>（手話通訳が常に表示されていない場合は、）手話通訳が表示されるように、コンテンツ内又はプレーヤーのコントロールを有効にする。</p>
+        </item>
+        <item>
+          <p>手話通訳を含むファイルを再生する。</p>
+        </item>
+        <item>
+          <p>手話通訳が表示される。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>3. を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SM14.html">SM14: Providing sign language interpretation through synchronized video streams in SMIL 2.0（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

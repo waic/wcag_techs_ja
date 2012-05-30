@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G90">
+  <short-name>キーボードがトリガーとなるイベント・ハンドラを提供する</short-name>
+  <applicability>
+    <p>コンテンツに機能性を含んでいるウェブコンテンツ技術すべて</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="keyboard-operation-keyboard-operable"/>
+    <success-criterion idref="keyboard-operation-all-funcs"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、キーボード又はキーボード・インターフェースを使用している利用者がコンテンツの機能にアクセスできるようにすることである。そのためには、キーボードではないUIのイベントによって引き起こされるすべてのイベント・ハンドラは、キーボードベースのイベントとも関連づける、又は、他のデバイス特有の機能によって提供された機能を遂行するために冗長なキーボードベースのメカニズムを提供する。</p>
+  </description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="SCR2"/>
+    <relatedtech idref="SCR20"/>
+    <relatedtech idref="SCR35"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>すべての機能がキーボードだけを使ってアクセスできる。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G90.html">G90: Providing keyboard-triggered event handlers
+（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

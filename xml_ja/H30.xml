@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H30">
+  <short-name>a 要素のリンクの目的を説明するリンクテキストを提供する</short-name>
+  <applicability>
+    <p>リンク(&lt;a href&gt; 要素)を含むHTML及びXHTMLドキュメント</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+    <success-criterion idref="navigation-mechanisms-refs"/>
+    <success-criterion idref="navigation-mechanisms-link"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>
+この実装方法の目的は、リンク先を説明するテキストを<code>a</code> 要素のコンテンツとして提供することにより、リンクの目的を説明することである。
+その説明により、利用者はこのリンクとウェブページ内にある他のリンクとの違いが区別でき、利用者がリンクをたどるかどうかを決定するのを助ける。
+一般的に、遷移先のURIでは、そのリンクの目的を説明したことにはならない。</p>
+<p>画像がリンクの唯一のコンテンツであるとき、画像の代替テキストがそのリンクに固有の機能を説明している。</p>
+<p>リンクのコンテンツがテキスト及び一つ又はそれ以上の画像を含むとき、テキストがリンクの目的を十分に説明しているならば、画像の代替テキストは空にする。(<a href="H67.html">H67: 支援技術が無視すべき画像の img 要素で、alt 属性値を空にして、title 属性を付与しない</a> (HTML)を参照。) 
+画像がリンクの目的以外にも情報を伝えるときには、画像に適切な代替テキストも付与しなければならない。</p></description>
+  <examples>
+    <eg-group>
+      <description><p><code>a</code> HTMLにおいて、<code>a</code>要素のテキストコンテンツを用いてリンクの目的を説明する。</p>
+</description>
+      <code>&lt;a href="routes.html"&gt;
+  ボールダーズクライミングジムでの現状のルート
+&lt;/a&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>画像のリンクの目的を説明するために、<code>img</code> 要素に <code>alt</code> 属性を使用する。</p>
+</description>
+      <code>&lt;a href="routes.html"&gt;
+   &lt;img src="topo.gif" alt="ボールダーズクライミングジムでの現状のルート" /&gt; 
+&lt;/a&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>アンカー (<code>a</code>) 要素が <code>img</code> 要素に加えてリンクの目的を説明するテキストを含むときは、空の<code>alt</code>属性を使用する。
+リンクテキストはページ上で画像の隣りに表示されることに注意する。</p>
+</description>
+      <code>&lt;a href="routes.html"&gt;
+  &lt;img src="topo.gif" alt="" /&gt;
+  ボールダーズクライミングジムでの現状のルート
+&lt;/a&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>リンクがアイコンとテキストを含み、サイトのヘルプはアイコンを参照する。
+<code>img</code> はサイトのヘルプのアイコンで使用する名前の代替テキストを持つ、
+それはHOMEページのアイコンをクリックすることを説明している。【訳注：あまり適切な例ではないので、WCAGワーキンググループに改善提案中】</p>
+</description>
+      <code>&lt;a href="foo.htm"&gt;
+&lt;img src="house.gif" alt="アイコン"/&gt;
+HOMEページ
+&lt;/a&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>リンクはテキスト及びアイコンを含み、アイコンはリンク先についての追加情報を提供している。</p>
+</description>
+      <code>&lt;a href="WMFP.pdf"&gt;
+ウッドエンドミュージックフェスティバルのプログラム
+&lt;img src="pdficon.gif" alt="PDFファイル"/&gt;
+&lt;/a&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#h-13.8" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 &#13;
+  - how to specify alt text</loc> </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G91"/>
+    <relatedtech idref="H2"/>
+    <relatedtech idref="H24"/>
+    <relatedtech idref="H67"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>この実装方法を使用したコンテンツのそれぞれのリンクに対して：</p>
+      <olist>
+        <item>
+          <p>テキスト又は非テキストコンテンツの代替テキストが <code>a</code> 要素に含まれている。</p>
+        </item>
+        <item>
+          <p><code>img</code> 要素だけが <code>a</code> 要素のコンテンツである場合、<code>img</code>要素の代替テキストがリンクの目的を説明している。</p>
+        </item>
+        <item>
+          <p><code>a</code> 要素が一つ又はそれ以上の <code>img</code> 要素を含み、<code>img</code> 要素の代替テキストが
+空の場合、リンクのテキストがリンクの目的を説明している。</p>
+        </item>
+        <item>
+          <p><code>a</code> 要素がテキストのみを含んでいる場合、テキストがリンクの目的を説明している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記のすべてを満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H30.html">H30: Providing link text that describes the purpose of a link for anchor elements（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+    </ulist>
+  </translationcredit>
+</technique>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="SCR28">
+  <short-name>展開可能及び折り畳み可能なメニューを用いて、コンテンツのブロックをバイパスする</short-name>
+  <applicability>
+    <p>クライアントサイド・スクリプティングを提供するウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-skip"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法は、繰り返される構成要素を利用者のコントロールの下でメニューを展開したり折りたたんだりできるメニューの中に置くことで、その構成要素をスキップできるようにする。利用者は、メニューを折りたたむことで繰り返される構成要素をスキップできる。利用者は、メニューの要素を隠したり削除したりするユーザーインターフェースを呼び出すことができる。関連情報には、ナビゲーションをスキップするメカニズムを提供するために利用できるメニュー、ツールバー及びツリーの実装方法をいくつか挙げている。</p>
+		<div class="note">
+				<p class="prefix"><em>注記： </em>類似の方法は、サーバーサイドスクリプティングを用いて修正後のウェブページを読み込むことでも実装できる。</p>
+		</div></description>
+  <examples>
+    <eg-group>
+      <description><p>ウェブページの先頭にあるナビゲーションリンクは、すべてHTML、CSS及びJavaScriptを用いて実装されているメニュー項目である。ナビゲーションバーが展開しているとき、ナビゲーションのリンクは利用可能になっている。ナビゲーションバーがたたまれているとき、リンクは利用不可能である。</p>
+</description>
+      <code>...
+
+  &lt;script type="text/javascript"&gt;
+  function toggle(id){
+    var n = document.getElementById(id);
+    n.style.display =  (n.style.display != 'none' ? 'none' : '' );
+  }
+  &lt;/script&gt;
+
+...
+
+  &lt;a href="#" onclick="toggle("navbar")"&gt;ナビゲーションバー切り替え&lt;/a&gt;
+
+  &lt;ul&gt; id="navbar"&gt;
+  &lt;li&gt;&lt;a href="http://target1.html"&gt;リンク 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://target2.html"&gt;リンク 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://target3.html"&gt;リンク 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://target4.html"&gt;リンク 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+...</code>
+      <description><p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR28/toggle-navbar.html">ナビゲーションバーをリンクで切り替える</a></p>
+</description>
+    </eg-group>
+    <eg-group>
+      <description><p>一連のウェブページのための目次はそれぞれのページの先頭近くで繰り返される。目次の先頭にあるボタンで、利用者はそれを消したり復元したりできる。</p>
+</description>
+      <code>...
+
+   &lt;script type="text/javascript"&gt;
+  function toggle(id){
+    var n = document.getElementById(id);
+    n.style.display =  (n.style.display != 'none' ? 'none' : '' );
+  }
+  &lt;/script&gt;
+
+  ...
+
+  &lt;button onclick="return toggle('toc');"&gt;目次切り替え&lt;/button&gt;
+  &lt;div id="toc"&gt;
+    ...
+  &lt;/div&gt;
+
+...</code>
+      <description><p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR28/toggle-toc.html">目次をボタンで切り替える</a></p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bobbyvandersluis.com/articles/unobtrusive_show_hide/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Unobtrusive show/hide behavior reloaded</loc> </p>
+        </item>
+        <item>
+          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.dustindiaz.com/seven-togglers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Seven ways to toggle an element with JavaScript</loc> </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H69"/>
+    <relatedtech idref="H50"/>
+    <relatedtech idref="H70"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>ユーザーインタフェースコントロールで、繰り返されるコンテンツを展開したり折りたたんだりできるかをチェックする。</p>
+        </item>
+        <item>
+          <p>コンテンツが展開されたとき、それがプログラムで解釈可能なコンテンツに含まれていて、論理的な場所で読み上げ順序があるかをチェックする。</p>
+        </item>
+        <item>
+          <p>コンテンツが折りたたまれているとき、それがプログラムで解釈可能でない部分にあることをチェックする。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記のすべての項目を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR28.html">SCR28: Using an expandable and collapsible menu to bypass block of content（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+    </ulist>
+  </translationcredit>
+</technique>

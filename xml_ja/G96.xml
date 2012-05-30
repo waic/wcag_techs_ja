@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G96">
+  <short-name>&#13;
+	理解すべき情報を感覚的にだけ伝えることのないように、テキストでもアイテムを特定する</short-name>
+  <applicability>
+    <p>利用者に対して、コンテンツの説明を描画して提示する全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="content-structure-separation-understanding"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、ウェブページ内のアイテムがコンテンツの中で、形や大きさや音又は位置だけでなく、知覚に依存しない言い回しによっても言及されるようにすることである。例えば、アイテムについて言及する文では、アイテムのラベル又はその機能についてもわせて説明する。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>事例１</head>
+      <description><p>フォームには、入力内容を送信して一連の過程の次の手順に進むために円形のボタンがある。そのボタンにはテキストで「次へ」とラベルが付けられている。説明には、「フォームを送信するには、<em>次へ</em>と記された円形のボタンを押して下さい」と示されている。これは、そのボタンを特定するための形とテキスト情報の両方を含んでいる。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <head>事例２</head>
+      <description><p>オンライントレーニングを提供するウェブページの説明には、「希望のオンラインコースへ進むには、右側の『クラス一覧』という見出しがついたリンクのリストを使用して下さい。」と書いてある。この説明は、適切なリンクのリストを見つけること補助するために位置と同様にテキストの手がかりを提供している。
+		</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <head>事例３</head>
+      <description><p>以下のレイアウトではボタンを右下隅に配置して位置によってそれを示している。テキストラベルの指示は、位置が意味をなさない線形化バージョンにアクセスするユーザーにも、どのボタンを使用するかを明確にしている。</p>
+</description>
+      <code>&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td colspan="2"&gt;右下の「前へ戻る」ボタンを押して下さい。&lt;/td&gt;
+      &lt;td&gt;
+        &lt;span style="background: ButtonFace; color: ButtonText; border: 
+        medium outset ButtonShadow; 
+        width: 5em; display: block; font-weight: bold; text-align: center;"&gt;
+        印刷&lt;/span&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        &lt;span style="background: ButtonFace; color: ButtonText; border: 
+        medium outset ButtonShadow; 
+        width: 5em; display: block; font-weight: bold; text-align: center;"&gt;
+        中止&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;span style="background: ButtonFace; color: ButtonText; border: 
+        medium outset ButtonShadow; 
+        width: 5em; display: block; font-weight: bold; text-align: center;"&gt;
+        OK&lt;/span&gt;
+      &lt;/td&gt;
+      &lt;td&gt;
+        &lt;span style="background: ButtonFace; color: ButtonText; border: 
+        medium outset ButtonShadow; 
+        width: 5em; display: block; font-weight: bold; text-align: center;"&gt;
+        前へ戻る&lt;/span&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <p>ウェブページ内において、オブジェクトの形、大きさ、又は位置を使って説明しているすべての言及箇所を探し出す。そのような各アイテムにおいて：</p>
+      <olist>
+        <item>
+          <p>その言及箇所には、形や大きさ、又は相対的な位置についての情報がない場合でもアイテムを見つけて、特定するための追加情報が含まれている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G96.html">G96: Providing textual identification of items that otherwise rely only on sensory information to be understood（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：田辺　丈士<a href="http://www.uniteair.co.jp/">（ユナイティア株式会社）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

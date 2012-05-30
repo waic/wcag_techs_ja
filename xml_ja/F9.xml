@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F9">
+  <short-name>達成基準 3.2.5 の不適合事例：　利用者がフォーカスをフォーム要素から他の要素へ移動させた際に状況を変化させる</short-name>
+  <applicability>
+    <p>全般</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-no-extreme-changes-context"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この文書では、次の要素にフォーカスを移動させることのように、フォーカスをフォーム要素から移動させた場合に状況の変化を引き起こす不適合事例について述べている。
+                    </p>
+  </description>
+  <examples>
+    <eg-group role="failure">
+      <description><p>順番に従って、フォームのフィールドに入力している。3つめのフィールドから4つめのフィールドに移動するとき、フォームが送信されてしまった。
+                            </p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="F37"/>
+    <relatedtech idref="F60"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>フォーム要素をすべて探す。</p>
+        </item>
+        <item>
+          <p>フォーム要素を順番に進んでいく。</p>
+        </item>
+        <item>
+          <p>次のフォーム要素に移動するときにフォームが送信される。</p>
+        </item>
+        <item>
+          <p>次のフォーム要素に移動するときに新しいウィンドウが開く。</p>
+        </item>
+        <item>
+          <p>次のフォーム要素に移動するときに別のスクリーンに遷移する。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>3.、4.、又は 5.に該当すれば、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F9.html">F9: Failure of Success Criterion 3.2.5 due to changing the context when the user removes focus from a form element（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

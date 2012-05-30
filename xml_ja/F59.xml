@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F59">
+  <short-name>達成基準 4.1.2 の不適合事例 － スクリプトを用いて、HTMLのdiv要素又はspan要素をユーザーインタフェースのコントロールにしている</short-name>
+  <applicability>
+    <p>スクリプトを持つHTML及びXHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="ensure-compat-rsv"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この不適合事例では、ユーザーインタフェース・コントロールを生成するために汎用的なHTML要素を用いたとき、どのようにしてコントロールが支援技術に対してアクセシブルでなくなるかを示している。コンポーネントについての情報を利用者に伝達する際、支援技術は、コンポーネントのロール及びカレント・ステートの情報に依存している。多くのHTML要素は、リンク、ボタン、テキストフィールドなどといった明確なロールを持っている。div 及び span などの汎用的な要素は、事前に定義されたロールがない。これらの汎用的な要素が、HTMLでユーザーインタフェース・コントロールを生成するために使用されると、支援技術は、コントロールを表現したり、コントロールとやり取りしたりするために必要な情報を得られないかもしれない。</p>
+	<p>完全にアクセシブルなユーザーインタフェース・コントロールを生成するための必要なロール及びステートについての情報を提供するメカニズムを記述している仕様へのリンクについては、下記の参考リソースの項目を参照のこと。/p&gt;
+</p></description>
+  <examples>
+    <eg-group>
+      <description><p>span 及び画像を使用したチェックボックスを生成するため、下記の事例は不適合となる。</p>
+</description>
+      <code>&lt;p&gt; 
+  &lt;span  onclick="toggleCheckbox('chkbox')"&gt; 
+  &lt;img src="unchecked.gif"  id="chkbox" alt=""&gt; 署名を含む
+  &lt;/span&gt; 
+  &lt;/p&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>これは、マウスで <code>span</code> をクリックする時に、画像のソースを変更するスクリプトコードである。</p>
+</description>
+      <code>var CHECKED = "check.gif"; 
+  var UNCHECKED = "unchecked.gif"; 
+  function toggleCheckbox(imgId) { 
+  var theImg = document.getElementById(imgId); 
+  if ( theImg.src.lastIndexOf(CHECKED)!= -1 ) { 
+  theImg.src = UNCHECKED; 
+  // チェックをはずすアクションを実装するための追加コード
+  } 
+  else { 
+  theImg.src = CHECKED; 
+  // チェックをつけるアクションを実装するための追加コード
+  } 
+  }</code>
+      <description><p>このような方法で生成されたチェックボックスは、チェックボックスとして識別する情報がないため、支援技術では機能しない。加えて、この事例はキーボードからも操作できず、ガイドライン 2.1に不適合となる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/WAI/PF/roadmap/DHTMLRoadmap040506.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Dynamic Accessible Web Content Roadmap</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="https://developer.mozilla.org/en/Accessible_DHTML" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible DHTML</loc>
+          </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="F42"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>マークアップ内又はスクリプトにより割り当てられたイベント・ハンドラを持つ要素に対するソースコードを検証する。</p>
+        </item>
+        <item>
+          <p>これらの要素がユーザーインタフェース・コントロールの役割を果たす場合は、コントロールの役割（role）が定義されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>2.を満たさず、生成されたユーザーインタフェース・コントロールが役割（role）の情報を持たない場合は、この不適合の条件が適用される。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F59.html">F59: Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+    </ulist>
+  </translationcredit>
+</technique>

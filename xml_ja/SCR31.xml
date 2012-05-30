@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="SCR31">
+  <short-name>スクリプトを用いて、フォーカスのある要素の背景色又はボーダーを変更する</short-name>
+  <applicability>
+    <p>HTML 及び XHTML、CSS、Script</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-focus-visible"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>この実装方法は<code>:focus</code>疑似クラスをサポートしていないがスクリプトをサポートしている、マイクロソフトのInternet Explorerを含むユーザエージェント上で用いることができる。</p>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>この実装方法の目的は、コンテンツ制作者がCSSを適用してフォーカス表示を通常よりもより見やすくするためにJavaScriptを使えるようにすることである。要素がフォーカスを受ける時、背景色またはボーダーは視覚的に異なるように変化する。要素からフォーカスがはずれたとき元のスタイルにもどる。この実装方法は:focus疑似クラスをサポートしているいないに関わらず、スクリプトやCSSをサポートしているどんなHTMLのユーザエージェントでも用いることができる。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <description><p>この事例において、リンクにフォーカスが当たった時、背景は黄色に変わる。フォーカスがはずれたとき、黄色ではなくなる。もしリンクに背景色がある場合は、スクリプト内で””よりむしろその色を用いることに注意する。</p>
+</description>
+      <code>...
+&lt;script&gt;
+ function toggleFocus(el)
+ {
+  el.style.backgroundColor =  el.style.backgroundColor=="yellow" ? "inherit" : "yellow";
+ }
+&lt;/script&gt;
+
+...
+
+&lt;a href="example.html" onfocus="toggleFocus(this)" onblur="toggleFocus(this)"&gt;ここにフォーカスを置く&lt;/a&gt;
+...</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="C15"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>キーボード操作でページ内の各要素にタブ移動する。</p>
+        </item>
+        <item>
+          <p>フォーカス表示が視覚的に認識可能である。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR31.html">SCR31: Using script to change the background color or border of the element with focus
+（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

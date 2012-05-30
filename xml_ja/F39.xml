@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F39">
+  <short-name>達成基準 1.1.1 の不適合事例 － 支援技術が無視すべき画像に対して、空ではない代替テキストを提供している（例： alt="spacer" 又は alt="image"）</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+  </applies-to>
+  <ua-issues/>
+  <description/>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure/>
+    <expected-results/>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F39.html">F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null. (e.g., alt="spacer" or alt="image") for images that should be ignored by assistive technology（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

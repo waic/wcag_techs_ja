@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F61">
+  <short-name>達成基準 3.2.5 の不適合事例：　利用者がコンテンツ内で停止させることのできない自動的な更新によってメインコンテンツを完全に変更する</short-name>
+  <applicability>
+    <p>全般</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-no-extreme-changes-context"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この文書では、利用者のビューポート全体に表示されているコンテンツが自動的に更新され、コンテンツにこの振る舞いを停止するための選択肢をがない不適合事例について述べている。</p>
+  </description>
+  <examples>
+    <eg-group role="failure">
+      <description><p>ニュースサイトで、常に最新の見出しが表示されるように、コンテンツが自動的に更新される。この振る舞いを停止させる選択肢がない。</p>
+</description>
+    </eg-group>
+    <eg-group role="failure">
+      <description><p>スライドショーがビューポートの全体に表示されていて、自動的に次のスライドに進んでいく。停止ボタンはない。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>コンテンツを開く。</p>
+        </item>
+        <item>
+          <p>24時間コンテンツを開いたままにしておく。【訳注：「24時間」そのままにしておくのは現実的な方法ではないので、WCAGワーキンググループに再検討を依頼中。】</p>
+        </item>
+        <item>
+          <p>コンテンツが変更される。</p>
+        </item>
+        <item>
+          <p>自動更新を停止させる設定がコンテンツに存在しない。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ol class="enumar">
+        <li>
+                
+                        <p>3.及び 4.の両方に該当すれば、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+              
+                     </li>
+      </ol>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F61.html">F61: Failure of Success Criterion 3.2.5 due to complete change of main content through an automatic update that the user cannot disable from within the content（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

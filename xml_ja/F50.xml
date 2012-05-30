@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F50">
+  <short-name>達成基準 2.2.2 の不適合事例 － 点滅させるスクリプトを用いていて、その点滅を5秒以内に停止させるメカニズムがない</short-name>
+  <applicability>
+    <p>スクリプトで制御されたコンテンツの点滅をサポートするウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="time-limits-pause"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>スクリプトを用いてコンテンツの表示、非表示を定期的に切り換えることで、コンテンツを点滅させることができる。スクリプトが5秒以内に点滅を止めるためのメカニズムを含まない場合は不適合となる。点滅を停止させるための実装方法をどのように修正するかについての情報は<a href="SCR22.html">SCR22： スクリプトを用いて、点滅を制御し、5秒以内に停止させる</a> (Scripting) を参照。</p>
+  </description>
+  <examples>
+    <eg-group role="failure">
+      <description><p>以下の例では点滅するコンテンツのためにスクリプトが使用されているが、点滅は5秒後に止まるのではなく、無期限に点滅し続ける。</p>
+</description>
+      <code>...
+&lt;script type="text/javascript"&gt;
+&lt;!--
+// 点滅「on」状態
+function show()
+{
+	if (document.getElementById)
+	document.getElementById("blink1").style.visibility = "visible";
+	settime-out("hide()", 450);
+}
+// 点滅「off」状態
+function hide()
+{
+	if (document.getElementById)
+	document.getElementById("blink1").style.visibility = "hidden";
+	settime-out("show()", 450);
+}
+// 開始
+show();
+//--&gt;
+&lt;/script&gt;
+...
+&lt;span id="blink1"&gt;このコンテンツは点滅します。&lt;/span&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="SCR22"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>点滅しているそれぞれのインスタンスに対して：</p>
+      <olist>
+        <item>
+          <p>点滅が5秒以内で止まる。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>1.を満たしていない場合、コンテンツは達成基準を満たしていないことになる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F50.html">F50: Failure of Success Criterion 2.2.2 due to a script that causes a blink effect without a mechanism to stop the blinking at 5 seconds or less（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：中村 浩佳（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+    </ulist>
+  </translationcredit>
+</technique>

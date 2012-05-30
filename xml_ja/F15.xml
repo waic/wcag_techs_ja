@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F15">
+  <short-name>達成基準 4.1.2 の不適合事例 － ウェブコンテンツ技術のアクセシビリティAPIを用いていない、又は完全には用いていないカスタム・コントロールを実装している</short-name>
+  <applicability>
+    <p>アクセシビリティAPIをサポートする全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="ensure-compat-rsv"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>アクセシブルなウェブコンテンツ技術の標準コントロールを用いる際、通常はアクセシビリティAPIを使用して、アクセシビリティAPIをサポートする方法でプログラムされている。しかし、カスタムコントロールを作成する場合には、新しく作成したコントロールがアクセシビリティAPIをサポートしているかどうかを、プログラマーが確認しなければならない。アクセシビリティAPIをサポートしていないと、支援技術は、そのコントロールが何なのか、又どのように操作できるのかが分からず、場合によっては、そのコントロールの存在すら感知しないことがある。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>不適合となる</head>
+      <description><p>音楽プレーヤーで、音量や音色等を制御するための、引き伸ばされた音符のように見えるカスタムコントロールが使われている。プログラマーは、この新しいコントロールがアクセシビリティAPIをサポートするようにしていない。結果として、このコントロールは、支援技術から特定又は制御することができない。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/ms696082.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Active Accessibility Checker (AccExplorer)</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://java.sun.com/developer/earlyAccess/jaccesshelper/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">JAVA Accessibility Helper</loc>
+          </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>使用しているウェブコンテンツ技術用のアクセシビリティチェッカーで確認すると（又は、チェッカーがない場合は、コードを検証するか、支援技術で動作確認をすると）、コントロールがアクセシビリティAPIをサポートしている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1. を満たしていない場合、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F15.html">F15: Failure of Success Criterion 4.1.2 due to implementing custom controls that do not use an accessibility API for the technology, or do so incompletely（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

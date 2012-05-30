@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G136">
+  <short-name>適合していないウェブページの先頭に、適合している代替バージョンへのリンクを提供する</short-name>
+  <applicability>
+    <p>本来のコンテンツはWCAGに適合していないが、WCAGに適合している代替バージョンは存在している。この実装方法を用いることができるのは、ウェブコンテンツ技術が代替バージョンへのアクセシブルなリンクを作ることを可能としている場合のみである。</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="cc1"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、本来のコンテンツ又は利用者が特定のURIに訪れた時に遭遇するデフォルトのコンテンツがWCAGに適合していない場合、利用者がWCAGに適合している代替コンテンツにアクセスできるようにすることである。代替ページ又は適合している代替バージョンは、適合するためにいくつかのデザイン又は機能的な譲歩を作る可能性があるが、適合している代替バージョンにするためには定義において記された要件を満たさなければならない。「適合している代替バージョン」の定義とは：</p>
+            
+<dl>
+<dt class="label">
+<a name="conforming-alternate-versiondef" id="conforming-alternate-versiondef"> </a>適合している代替バージョン</dt>
+	<dd>
+<p>以下の事項を満たすバージョンのことを指す：</p>
+		<ol class="enumar">
+<li><p>指定されたレベルで適合しており、かつ</p></li>
+			<li><p>同じ情報および機能のすべてを同一の自然言語で提供しており、かつ</p></li>
+			<li><p>適合していないコンテンツと同時に更新されていて、かつ</p></li>
+			<li>
+<p>以下に挙げる事項のうち少なくとも一つを満たしていること：</p>
+            	<ol class="enumla">
+<li><p>アクセシビリティ・サポーテッド  メカニズムを用いて、適合していないウェブページから適合しているバージョンへ移動できる。もしくは、</p></li>
+                    <li><p>適合しているバージョンからのみ適合していないバージョンへ移動できる。もしくは、</p></li>
+                    <li><p>適合しているバージョンへ移動するメカニズムも提供している適合しているウェブページからのみ、適合していないバージョンへ移動できる。</p></li>
+                </ol>
+</li>
+         </ol>
+<div class="note">
+<p class="prefix"><em>注記 1：</em>この定義においては、「･･･からのみ･･･へ移動できる」とは、条件付きのリダイレクトのような何らかのメカニズムがあり、利用者が特定のウェブページから来ないかぎり、利用者が適合していないウェブページに「たどり着く」（適合していないウェブページを読み込む）ことがない、ということを意味する。</p>
+					<p class="prefix"><em>注記 2：</em>代替バージョンは、元のウェブページと一対一で対応している必要はない（例えば、適合した代替バージョンは複数のウェブページであってもよい）。</p>
+<p class="prefix"><em>注記 3：</em>複数の言語版がある場合、各言語版に対して、適合した代替バージョンを提供する必要がある。</p>
+<p class="prefix"><em>注記 4：</em>様々な技術環境又は利用者層に対応するために、複数の代替バージョンを提供してもよい。この場合、各バージョンは可能なかぎり適合したものでなければならず、適合要件 1を満たすためには、そのうちの一つのバージョンが完全に適合したものでなければならない。</p>
+<p class="prefix"><em>注記 5：</em>適合していないバージョンと同じように自由に利用可能であるかぎり、適合した代替バージョンは、適合宣言の対象のウェブページ群に含まれている必要はなく、元のウェブページと同じウェブサイト上で提供されている必要もない。</p>
+<p class="prefix"><em>注記 6：</em>代替バージョンは、元のウェブページを補助して理解を高める補足的なコンテンツと混同されないようにすべきである。</p>
+<p class="prefix"><em>注意 7：</em>コンテンツ内で利用者が設定を行うことで適合したバージョンが作り出される仕組みは、その利用者の設定に用いられている手法がアクセシビリティ・サポーテッドであるかぎり、代替バージョンへの移動メカニズムとして条件を満たしているといえる。</p>
+</div>
+<p class="circref"><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照のこと。</p>
+</dd>
+</dl>
+<p>この実装方法を使用している際、ページの最初に代替コンテンツへのWCAGに適合したリンクを配置することで、利用者がそのリンクをすぐに見つけることができ、適合した代替バージョンに移動することができるようになる。利用者がどこからそのサイトに入ったかに関係なく、利用者が常に代替バージョンを見つけることができるようにするためには、特定のレベルで適合していないページには適合している代替バージョンへのリンクを含めることである。</p></description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="SVR2"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>宣言した適合レベルでWCAGに適合していないページを特定する。</p>
+        </item>
+        <item>
+          <p>そのページには、適合している代替バージョンへのリンクがある。</p>
+        </item>
+        <item>
+          <p>代替バージョンが、オリジナルページの<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>であり、かつ要求された適合レベルでWCAG2.0に適合している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.及び3.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G136.html">G136: Providing a link at the beginning of a nonconforming Web page that points to a conforming alternate version
+（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G162">
+  <short-name>ラベルを配置して、関係性を最大限に予測できるようにする</short-name>
+  <applicability>
+    <p>フォームをサポートするウェブコンテンツ技術全て</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="minimize-error-cues"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>フォームのフィールドに対するラベルを、視覚的に利用者が予想しやすい位置に置くと、複雑なフォームを理解したり、特定のフィールドを見つけるのが容易になる。ほとんどのフィールドに対するラベルは、そのフィールドの直前、すなわち、書字方向が左から右の言語の場合、そのフィールドの左か上に、書字方向が右から左の言語の場合、そのフィールドの右か上に置かれる。ラジオボタン及びチェックボックスのためのラベルはそのフィールドの後に置かれる。</p>
+                
+               <p>これらの配置は自明である。フィールド、ラジオボタン、及びチェックボックスのラベルを置く一般的な(そのために最も予測できる)位置だからである。</p>
+
+                
+               <p>入力フィールドはさまざまな長さになることがあるため、ラベルはフィールドの前に置かれる。フィールドの前にそれらを置くことでラベルを整列させることができる。また、ラベルがフィールドの直前にあるため、画面拡大ツール使用時でもラベルの場所を見つけることが容易になり、また、(フィールドの始まりが縦に整列しているとき)縦の列の中でも見つけることができる。最後に、フィールドにデータが入力されているならば、ラベルを読んでから内容を読むほうが、逆の場合よりもデータを理解したりチェックすることが容易になる。</p>
+                
+               <p>チェックボックス及びラジオボタンは一定の幅を持っているが、それらのラベルは往々にしてそうではない。チェックボックス又はラジオボタンを最初に置くことで、ボタンとラベルの両方を縦に整列させることができる。</p></description>
+  <examples>
+    <eg-group>
+      <head>テキストフィールドの上側のラベル</head>
+      <description>
+        <p>&#13;
+&#13;
+                        <img src="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G162/lbl-position_01.gif" alt="すぐ上にラベルが配置された二つのテキストフィールド"/></p>
+      </description>
+    </eg-group>
+    <eg-group>
+      <head>テキストフィールドの左側のラベル</head>
+      <description>
+        <p>&#13;
+                        <img src="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G162/lbl-position_02.gif" alt="すぐ左側にラベルが配置されたふたつのフィールド."/></p>
+      </description>
+    </eg-group>
+    <eg-group>
+      <head>ラジオボタンの右側のラベル</head>
+      <description>
+        <p>&#13;
+                        <img src="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G162/lbl-position_03.gif" alt="ラジオボタンの右側にラベルが配置されたふたつのラジオボタンを含むフォームのコントロールのグループ"/></p>
+      </description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/label-positioning.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Label Positioning</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/techniques/forms/screen_reader.php#labels" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Creating Accessible Forms</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse8.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.lukew.com/resources/articles/web_forms.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web Application Form Design</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.uxmatters.com/MT/archives/000107.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Label Placement in Forms</loc>&#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H44"/>
+    <relatedtech idref="H71"/>
+    <relatedtech idref="H65"/>
+    <relatedtech idref="G131"/>
+    <relatedtech idref="G167"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>ウェブページの各フォームのフィールドに対して:</p>
+      <olist>
+        <item>
+          <p>フォームのフィールドに目に見えるラベルがある。</p>
+        </item>
+        <item>
+          <p>フォームのフィールドがチェックボックス又はラジオボタンであれば、ラベルがそのフィールドの直後にある。</p>
+        </item>
+        <item>
+          <p>フォームのフィールドがチェックボックス又はラジオボタンでなければ、ラベルがそのフィールドの直前にある。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>全てを満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G162.html">G162: Positioning labels to maximize predictability of relationships（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

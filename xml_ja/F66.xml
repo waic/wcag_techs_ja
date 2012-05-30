@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F66">
+  <short-name>達成基準 3.2.3 の不適合事例：　ナビゲーションリンクをさまざまなページで相対的に異なる順序で提示する</short-name>
+  <applicability>
+    <p>全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-consistent-locations"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この文書では、ウェブページ一式の中にある複数のウェブページ上で繰り返されているナビゲーションメカニズム（達成基準 3.2.3）を含むすべての実装方法における不適合の条件を説明している。メカニズムが、2ページ又はそれ以上のページに異なる順序でリンクの順番を提示する場合に、不適合が起こる。</p>
+  </description>
+  <examples>
+    <eg-group role="failure">
+      <head>2つの異なるページで相対的に異なる順序で一連のリンクを提示しているXHTMLメニュー</head>
+      <description><p>異なる順序でリンクを提示するナビゲーションメカニズムの例。</p>
+<p><strong>1ページ目のメニュー</strong></p>
+</description>
+      <code>&lt;div id="menu"&gt; 
+    &lt;a href="Brazil.htm"&gt;ブラジル&lt;/a&gt;&lt;br /&gt;
+    &lt;a href="Canada.htm"&gt;カナダ&lt;/a&gt;&lt;br /&gt;
+    &lt;a href="Germany.htm"&gt;ドイツ&lt;/a&gt;&lt;br /&gt;
+    &lt;a href="Poland.htm"&gt;ポーランド&lt;/a&gt; 
+&lt;/div&gt;</code>
+      <description><p><strong>2ページ目のメニュー</strong></p>
+</description>
+      <code>&lt;div id="menu"&gt; 
+    &lt;a href="Canada.htm"&gt;カナダ&lt;/a&gt;&lt;br /&gt;
+    &lt;a href="Brazil.htm"&gt;ブラジル&lt;/a&gt;&lt;br /&gt;
+    &lt;a href="Germany.htm"&gt;ドイツ&lt;/a&gt;&lt;br /&gt;
+    &lt;a href="Poland.htm"&gt;ポーランド&lt;/a&gt; 
+&lt;/div&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>ナビゲーションメカニズムが複数のウェブページ上で使用されている。</p>
+        </item>
+        <item>
+          <p>各ページのナビゲーションメカニズムのデフォルトのプレゼンテーションで、リンクリストが各ウェブページ上で相対的に同一の順番になっている。</p>
+        </item>
+      </olist>
+      <div class="note">
+		<p class="prefix"><em>注記：</em>「相対的に同一の順番」は、あるページではリンク項目間に二次的なナビゲーション項目があるかもしれないことを意味する。これらが存在しても、この検証の結果に影響を及ぼすことはない。</p>
+	</div>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1．及び2．を満たしていなければ、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F66.html">F66: Failure of Success Criterion 3.2.3 due to presenting navigation links in a different relative order on different pages（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+    </ulist>
+  </translationcredit>
+</technique>

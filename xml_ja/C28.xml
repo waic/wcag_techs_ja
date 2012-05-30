@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="C28">
+  <short-name>em単位を用いて、テキストコンテナのサイズを指定する</short-name>
+  <applicability>
+    <p>CSS</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="visual-audio-contrast-scale"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>
+Windows版のInternet Explorer 6のハイコントラスト・モードでは、入れ子になったテーブル内の%指定されたフォントを極端に大きく表示してしまう。
+Firefox及びIE6より後のバージョンのIEでは、ハイコントラスト・モードでもフォントの大きさは変化せず、この問題は発生しない。</p>
+    </ua-issue>
+  </ua-issues>
+  <description><p>
+この実装方法の目的は、テキストを含むボックス又はテキストの入力を受け付けるボックスの幅及び又は高さを、<code>em</code>単位を用いて指定することである。
+これによって、文字サイズを変更できるユーザーエージェントは、文字サイズの設定の変更に連動させてテキストを含むボックスの大きさも変更できるようになる。
+</p>
+                
+               <p>
+テキストを含むボックスの幅及び又は高さを他の単位を使って指定していると、文字サイズの拡大によってテキストがボックスに入りきらなくなり、その一部が見えなくなってしまう危険性がある。
+</p>
+                
+               <p>
+大枠のボックス（コンテナ）は、一般にウェブページ内のテキストの配置をコントロールし、そこにはレイアウトのための要素と構造を示す要素、及びフォームのコントロールを含むことができる。
+</p></description>
+  <examples>
+    <eg-group>
+      <head>:  テキストを含むレイアウト用のボックスのサイズにem単位を使う</head>
+      <description><p>
+この事例では、ウェブページのメインコンテンツ領域の左側にナビゲーション・メニューを配置するために、<code>id</code>属性の値として「nav_menu」を指定した<code>div</code>要素を使用している。
+ナビゲーション・メニューは、<code>id</code>属性の値として「nav_list」を指定したテキストリンクのリストで構成されている。ナビゲーションのリンクを含むコンテナの幅は<code>em</code>単位で指定されている。</p>
+</description>
+      <code>#nav_menu { width: 20em; height: 100em }
+
+#nav_list { font-size: 100%; }</code>
+    </eg-group>
+    <eg-group>
+      <head>: テキストベースのフォームのコントロールにem単位を使う</head>
+      <description><p>
+この事例では、テキストを含む、又は利用者によるテキスト入力を受け付ける<code>input</code>要素に「form1」というクラス名を指定している。
+フォンサイズを<code>パーセント</code>単位で、これらの要素の幅を<code>em</code>単位で定義するためにCSSの規則が用いられている。
+これによって、フォーム・コントロール内のテキストは、部分的に欠けて見えなくなってしまうことなく文字サイズの変更に合わせてリサイズされるようになる（フォーム・コントロールの幅自身も文字サイズに合わせてリサイズされるようになるため）。</p>
+</description>
+      <code>input.form1 { font-size: 100%; width: 15em; }</code>
+    </eg-group>
+    <eg-group>
+      <head>: ドロップダウン・ボックスにem単位を使う</head>
+      <description><p>
+この事例では、<code>select</code>要素に「pick」というクラス名を指定している。
+フォンサイズを<code>パーセント</code>単位で、幅を<code>em</code>単位で定義するためにCSSの規則が使用されている。
+これによって、フォーム・コントロール内のテキストは、部分的に欠けて見えなくなってしまうことなく文字サイズの変更に合わせてリサイズされるようになる。
+</p>
+</description>
+      <code>select.pick { font-size: 100%; width: 10em; }</code>
+    </eg-group>
+    <eg-group>
+      <head>:テキストベースではないフォームのコントロールにem単位を使う</head>
+      <description><p>
+この事例では、チェックボックス又はラジオボタンの<code>input</code>要素に「choose」というクラス名を指定している。
+これらの要素の幅と高さを<code>em</code>単位で定義するためにCSSの規則が使用されている。
+これによって、フォーム・コントロールは、文字サイズの変更に合わせてリサイズされるようになる。
+</p>
+</description>
+      <code>input.choose { width: 1.2em; height: 1.2em; }</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="C12"/>
+    <relatedtech idref="C14"/>
+    <relatedtech idref="C17"/>
+    <relatedtech idref="C20"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>テキストを含む、又はテキストの入力を受け付けるコンテナを特定する。</p>
+        </item>
+        <item>
+          <p>そのコンテナの幅及び又は高さは<code>em</code>単位で指定されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C28.html">C28: Specifying the size of text containers using em units（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

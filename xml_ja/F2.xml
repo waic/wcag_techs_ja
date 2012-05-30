@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F2">
+  <short-name>達成基準 1.3.1  の不適合事例 － 適切なマークアップ又はテキストを用いずに、テキストの見た目の表現の変化を用いて情報を伝えている</short-name>
+  <applicability>
+    <p>画像又は表現のマークアップをサポートする全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="content-structure-separation-programmatic"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この文書では、何らかの意味を伝えるためのテキストの見た目の変化が、適切なマークアップを用いずに実現されている場合に発生する不適合について解説する。この不適合事例は、適切なセマンティック・マークアップを用いて表されていない画像化されたテキストにも適用されるものである。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>不適合となる CSSを用いてp要素を見出しのような見た目にする</head>
+      <description><p>コンテンツ制作者が、見出しの作成にあたってHTMLの見出し要素のデフォルトとは異なる見た目にする目的で、p要素に対してCSSを適用して見出しのような見た目を実現し、これを見出しとして扱っている場合。このような場合においては、適切なマークアップがされていないために支援技術がこれを見出しとして認識できない。</p>
+</description>
+      <code>&lt;style type="text/css"&gt;
+ .heading1{
+        font-family: Times, serif;
+        font-size:200%;
+        font-weight:bold;
+ }
+ &lt;/style&gt;
+
+ &lt;p class="heading1"&gt;はじめに&lt;/p&gt;
+ &lt;p&gt;この章では、この製品の詳しい使い方について
+ ........
+ &lt;/p&gt;</code>
+      <description>
+        <note>
+          <p class="prefix"><em>注記: </em>この事例で用いるべき適切な手法は、HTMLの<code>h1</code>要素を対象にしたCSSを用いて見た目を制御する方法である。</p>
+        </note>
+      </description>
+    </eg-group>
+    <eg-group>
+      <head>不適合となる 画像化されたテキストが見出しとして用いられている際、その画像が見出しタグでマークアップされていない場合</head>
+      <description><p>Chapter1.gifは、20ピクセルのGaramondフォントで表示した「Chapter 1」という文字列を画像化したものである。この場合、少なくともこの画像を見出し要素に入れる必要があるため、不適合である。よりよい手法は、このテキストを見出し要素でマークアップし、この要素に対するCSSを用いて見た目を指定する方法である。</p>
+</description>
+      <code>&lt;img src="Chapter1.gif" alt="Chapter 1"&gt;
+ 
+&lt;p&gt;むかしむかし、ウェブの国で.....
+&lt;/p&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>不適合となる 単語やフレーズを強調するためにCSSを用いて見た目を制御しているが、その強調のセマンティックを表すマークアップが行われていない場合</head>
+      <description><p>以下の例では、CSSの<code>font-weight</code>プロパティを用いて太字に変更している部分の持つ情報について、セマンティックを表すマークアップがされておらず、また明示的なテキスト情報も提供されていないため不適合となる。</p>
+<p>以下がCSSで太字の書体を指定するためのクラスである:</p>
+</description>
+      <code>.yell {
+  font-weight:bold;
+  text-transform: uppercase;
+}</code>
+      <description><p>そして以下が対応するHTMLである:</p>
+</description>
+      <code>&lt;p&gt;
+「&lt;span class="yell"&gt;だめよ&lt;/span&gt;、食事の前はだめだって言ったでしょ！」
+ティミーが母親に4度目にアイスクリームをねだった時、彼女はいらだってそう答えた。
+ &lt;/p&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H42"/>
+    <relatedtech idref="H49"/>
+    <relatedtech idref="G115"/>
+    <relatedtech idref="G117"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item><p>画像化されたテキストについて:</p>
+			<ol class="enumla">
+<li><p>画像化されたテキストが、ドキュメントの持つ構造的な情報を表すために使用されている。</p></li>
+				<li><p>適切なセマンティック構造（例： HTMLの見出し）を用いて画像化されたテキストの情報が表されている。</p></li>
+			</ol></item>
+        <item>
+          <p>画像化されたテキストが、ドキュメントの持つ構造的な情報を表すために使用されている。</p>
+        </item>
+        <item>
+          <p>適切なセマンティック構造（例： HTMLの見出し）を用いて画像化されたテキストの情報が表されている。</p>
+        </item>
+        <item><p>（何らかの構造的な) 情報を表すために見た目が変更されているテキストについて:</p>
+			<ol class="enumla">
+<li><p>構造的な情報を表現するために、見た目が変更されているテキストがある。</p></li>
+				<li><p>見た目に加えて、適切なセマンティック構造によってテキストが表されている。</p></li>
+			</ol></item>
+        <item>
+          <p>構造的な情報を表現するために、見た目が変更されているテキストがある。</p>
+        </item>
+        <item>
+          <p>見た目に加えて、適切なセマンティック構造によってテキストが表されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.のa.に該当する場合は、1.のb.を満たしている。</p>
+        </item>
+        <item>
+          <p>2.のa.に該当する場合は、2.のb.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F2.html">F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳： <a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

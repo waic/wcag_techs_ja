@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G99">
+  <short-name>消去した情報を元に戻せるようにする</short-name>
+  <applicability>
+    <p>利用者の操作によって削除されるコンテンツ</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="minimize-error-reversible"/>
+    <success-criterion idref="minimize-error-reversible-all"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、ウェブアプリケーションで情報を削除できる場合、利用者によって誤って削除された情報を復元する手段をサーバーが提供することである。一つの方法として、削除をするものにマークを付けるだけにする、又は（ゴミ箱のように）情報を保持する領域に移動させるなど、データの削除に時間差を設けて、実際に削除するまでにしばらくの間待機することが考えられる。この間、利用者はデータを復元したり、一時的な保持領域から取り出したりすることができる。他には、wiki及びソースコントロールアプリケーションで編集履歴が保持されているように、利用者が必要なときにデータを復元できるように全ての削除操作を記録しておく方法がある。トランザクションの修正が必要となる情報は保存し、利用者が取り出し可能なようにしておくべきである。
+            
+          </p>
+  </description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>コンテンツを削除する機能を特定する。</p>
+        </item>
+        <item>
+          <p>コンテンツを削除して、復元してみる。</p>
+        </item>
+        <item>
+          <p>削除された情報が復元されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>3.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G99.html">G99: Providing the ability to recover deleted information（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

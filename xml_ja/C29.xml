@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="C29">
+  <short-name>スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</short-name>
+  <applicability>
+    <p>クライアントサイド又はサーバーサイドのスクリプトとともに使用されるCSS</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="cc1"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>
+ウェブページのデフォルトの表示が部分的に達成基準を満たさない場合、「適合要件」の条項(適合要件1)にある「代替バージョン」を用意することで必要条件を満たすことができる。いくつかの必要条件を満たすことが目的なら、ページ全体をそのレベルに適合するような表示に変更できるスタイル・スイッチャーをページ上のリンク又はコントロールによって呼び出すようにすれば、コンテンツ制作者は同じ情報の複数バージョンを作らなくても済む。</p>
+                
+               <p>
+この実装方法の目的は、ウェブページの適合している代替バーションを提供するために、スクリプトと組み合わせてCSSを使う方法を示すことだ。
+この実装方法では、コンテンツの表示を制御するために使用されているCSSを変更するコントロールを提供することで、コンテンツ制作者はコンテンツの代替表示を提供する。
+ウェブページ内で提供されるコントロールは、そのレベルで要求される達成基準を満たすことができるような表示方法を利用者が選択・変更することを可能にする。
+これによって、以下のような状況において、利用者が異なる表示方法を選択できるようになる:</p>
+                
+               <ul>
+<li>
+                     <p>
+パソコンの知識や権限がないことが原因で、利用者はブラウザやOSの設定を調整できないかもしれない</p>
+                  </li>
+<li>
+                     <p>
+テキストが、ブラウザやOSの設定では対処できない方法で提供されている（テキストが画像の中に書き込まれているなど）</p>
+                  </li>
+<li>
+                     <p>
+コンテンツのデフォルトの表示では、一部のユーザーに対して十分なコントラストがない</p>
+                  </li>
+</ul>
+<p>
+この実装方法で達成させるには、以下の3項目を満たしていなければならない。 </p>
+                
+               <ol class="enumar">
+<li>
+                     <p>
+オリジナルのページのリンクまたはコントロールは、それ自身が達成基準を満たしていなければならない。
+たとえば、もしスタイル・スイッチャーがフォントサイズを大きくするために提供されているのに、そのコントロールが小さいフォントで書かれていたら、利用者はそのコントロールを作動させて代わりの表示方法で見ることができないかもしれない。</p>
+                  </li>
+<li>
+                     <p>
+新しいページは、オリジナルのページと同じすべての情報と機能を含んでいなければならない。</p>
+                  </li>
+<li>
+                     <p>
+新しいページは、希望する適合レベルのすべての達成基準に適合しなければならない。
+たとえば、ひとつの要求は満たすが、それを使うと別の要求に適合しなくなってしまうような代替スタイルシートは使用できない。</p>
+                  </li>
+</ol>
+<p>
+スタイル・スイッチャーを使う場合は、以下の課題と制限について検討することが重要である：</p>
+                
+               <ul>
+<li>
+                     <p>
+利用者が行うことのできる変更の数や形式は、ウェブページのコンテンツ制作者によって制御される範囲に限定される。
+できる限り多くの利用者のニーズに対応できるようにするために、バラエティ豊かな表示と設定項目が提供されるべきだ。
+しかしながら、コンテンツ制作者は、利用者に多くのオプションを提供することに起因する、利用者にとっての設定可能な項目と複雑さの相互作用について熟考することも重要だ。</p>
+                  </li>
+<li>
+                     <p>
+あるページから別のページに移動しても利用者の設定を保持しておくには、利用者の機器にクッキーで保存したり（詳細はリソースのセクションを参照）、ウェブサーバーに保存されるプロファイルにクエリー文字列として渡して格納するなどの方法で実現できる場合がある。</p>
+                  </li>
+<li>
+                     <p>
+スタイル・スイッチャーを実装するための技術的手法は、利用者の環境においていくつかの技術が利用可能であることを前提としている（たとえば、多くのクライアントサイド・ソリューションは、JavaScriptとCSSの両方が利用可能であることを必要とする）。
+これらのウェブコンテンツ技術が適合のために当てにできる場合を除き、クライアントサイドのサポートとウェブコンテンツ技術の利用可能性が保証されない場合には、コンテンツ制作者はサーバーサイドのウェブコンテンツ技術を使うことを検討すべきである。
+その代案としては、これらのウェブコンテンツ技術のサポートを適合のために当てにできない場合に、使用されているいくつかのウェブコンテンツ技術が有効でなくてもコンテンツが確実に適切な表現に変換されるような実装方法を使うことが、より良いページにするための効果的な方法となる。</p>
+                  </li>
+</ul></description>
+  <examples>
+    <eg-group>
+      <head>異なる外部スタイルシートファイルを適用するためにJavaScriptのコントロールを使う</head>
+      <description><p>
+この例では、文字色と背景色を変更するリンクをJavaScriptで提供する。
+そのリンクは、利用者の環境でJavaScriptがサポートされており、かつ有効な場合にのみ挿入されるようにすべきだ。
+これは、そのリンク自身を挿入するためにスクリプトを使う（つまりJavaScriptがサポートされており、かつ有効な場合にのみリンクが表示される）ことで実現できる。 </p>
+<p>
+以下のコードは、JavaScriptに依存した色を変更するリンクとウェブページのコンテンツの一部、及びそこに適用されるスタイルシート、そして色を変更するリンクが選択された時に使われるスタイルシートを変更するためのJavaScriptだ。</p>
+<p>
+この例は、現在のページの表示だけに適用される。実稼働環境では、利用者がそのサイトで一度選択すれば済むように、その設定をクッキーまたはサーバーサイドのユーザー・プロファイルに保存することが望ましい。</p>
+<p>XHTML（抜粋）:</p>
+</description>
+      <code>In &lt;head&gt; section:
+&lt;head&gt;〜&lt;/head&gt;内:
+
+  &lt;link href="main.css" rel="stylesheet" type="text/css" /&gt;
+  &lt;link id="currentCSS" href="defaultColors.css" rel="stylesheet" type="text/css" /&gt;
+
+In &lt;body&gt; section:
+&lt;body&gt;〜&lt;/body&gt;内:
+
+&lt;div id="colorswitch"&gt;
+&lt;p&gt;Change colors:&lt;/p&gt;
+&lt;p&gt;色の変更:&lt;/p&gt;
+  &lt;ul class="inline"&gt;
+    &lt;li&gt;&lt;a href="#" onClick="javascript:changeColors('altColors1.css');return false;" 
+      id="altColors1"&gt;文字:紺 背景:白&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" onClick="javascript:changeColors('altColors2.css');return false;" 
+      id="altColors2"&gt;文字:黄 背景:黒&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" onClick="javascript:changeColors('altColors3.css');return false;" 
+      id="altColors3"&gt;文字:黒 背景:黄&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" onClick="javascript:changeColors('altColors4.css');return false;" 
+      id="altColors4"&gt;文字:黒 背景:白&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" onClick="javascript:changeColors('defaultColors.css');return false;" 
+      id="default"&gt;デフォルトに戻す&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id="mainbody"&gt;
+  &lt;h1&gt;カンファレンス・レポート&lt;/h1&gt;
+  &lt;p&gt;先週のカンファレンスは、そうそうたる顔ぶれのスピーカーにより...&lt;/p&gt;
+&lt;/div&gt;</code>
+      <description><p>CSS（抜粋）:</p>
+</description>
+      <code>main.css内：
+
+body{ font-family: Geneva, Arial, Helvetica, sans-serif; margin: 2em; }
+
+#mainbody { 
+    padding: 1em; 
+}
+
+#colorswitch {
+    float: right; 
+    width: 12em; 
+    border: 1px #000066 solid; 
+    padding:0 1em 1em 1em; margin:0;
+}
+
+#colorswitch p { 
+    padding-top:.5em; 
+    font-weight:bold;
+}
+
+
+defaultColors.css内：
+
+body, p { 
+    color:#000000; 
+    background-color:#FFFFFF; 
+}
+
+h1, h2, h3 {
+        color:#990000; 
+        background-color:#FFFFFF;
+}
+
+
+altColors1.css内：
+
+body, h1, h2, h3, p, a { 
+    color:#000066; 
+    background-color:#FFFFFF; 
+}
+
+
+altColors2.css内：
+
+body, h1, h2, h3, p, a { 
+    color:#FFFF33; 
+       background-color:#000000; 
+}
+
+
+altColors3.css内：
+
+body, h1, h2, h3, p, a { 
+    color:#000000; 
+    background-color:#FFFF99; 
+}
+
+
+altColors4.css内：
+
+body, h1, h2, h3, p, a { 
+    color:#000000; 
+    background-color:#FFFFFF; 
+}</code>
+      <description><p>JavaScript（抜粋）:</p>
+</description>
+      <code>function changeColors (newCSS)
+{
+  document.getElementById('currentCSS').href = newCSS; 
+}</code>
+      <description><p>
+このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/C29/ex1/index.html">異なる外部スタイルシートファイルを適用するためにJavaScriptのコントロールを使う</a></p>
+</description>
+    </eg-group>
+    <eg-group>
+      <head>CSSプロパティを変更するためにクライアントサイドのJavaScriptを使用する</head>
+      <description><p>
+この例はコンテンツの一部分を単純に変更するもので、複雑なサイトやページに対してはあまり実用的なものではないかもしれない。
+この例では、特定のコンテンツを強調表示するための背景として（あらかじめ用意された選択肢から）利用者が選択した色を反映させるために、クラス名を変更する目的でクライアントサイドのJavaScriptを使用している。</p>
+<note><p class="prefix">
+<em>注: </em>以下のコードには、実装方法を理解しやすくする目的で、XHTMLコード内からJavaScriptを呼び出す部分が含まれている。しかし、コンテンツ制作者は、JavaScriptを組み込むためのその時点でのベストプラクティスを採用することが推奨される（アンオブトルーシブJavaScriptとプログレッシブ・エンハンスメントについての詳細はリソースを参照）。</p></note><p>XHTML（抜粋）: </p>
+</description>
+      <code>&lt;h1&gt;製品の比較&lt;/h1&gt;
+&lt;p&gt;比較のためにあなたが選択した製品は以下のとおりです。 
+各製品の相違点は強調表示され、イタリック体で表示されています。&lt;/p&gt;
+&lt;p class="inlinePara"&gt;強調表示の色を変更: &lt;/p&gt;
+&lt;ul class="inline"&gt;
+  &lt;li&gt;&lt;a href="#" onClick="changeColor('hghltLightYellow');return false;" 
+    class="hghltLightYellow"&gt;薄い黄色&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" onClick="changeColor('hghltBrightYellow');return false;" 
+    class="hghltBrightYellow"&gt;濃い黄色&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" onClick="changeColor('hghltLightBlue');return false;" 
+    class="hghltLightBlue"&gt;水色&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" onClick="changeColor('hghltBrightBlue');return false;" 
+    class="hghltBrightBlue"&gt;青&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" onClick="changeColor('hghltLightRed');return false;" 
+    class="hghltLightRed"&gt;ピンク&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" onClick="changeColor('hghltDrkRed');return false;" 
+    class="hghltDrkRed"&gt;茶色&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table width="400" border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt; &lt;/td&gt;
+    &lt;th scope="col"&gt;製品1&lt;/th&gt;
+    &lt;th scope="col"&gt;製品2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;比較項目1&lt;/th&gt;
+    &lt;td&gt;あり&lt;/td&gt;
+    &lt;td&gt;あり&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;比較項目2&lt;/th&gt;
+    &lt;td class="hghltLightYellow"&gt;あり&lt;/td&gt;
+    &lt;td class="hghltLightYellow"&gt;なし&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;比較項目3&lt;/th&gt;
+    &lt;td&gt;対応&lt;/td&gt;
+    &lt;td&gt;対応&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code>
+      <description><p>CSS（抜粋）: </p>
+</description>
+      <code>body { color:#000000; background-color:#FFFFFF; }
+
+.hghltLightYellow { color: #000000; background-color: #FFFF99; font-style:oblique; }
+.hghltBrightYellow { color: #000000; background-color: #FFFF00; font-style:oblique; }
+.hghltLightBlue { color: #000000; background-color: #33FFFF; font-style:oblique; }
+.hghltBrightBlue { color: #FFFFFF; background-color: #0000FF; font-style:oblique; }
+.hghltLightRed { color: #000000; background-color: #FF6266; font-style:oblique; }
+.hghltDrkRed { color: #FFFFFF; background-color: #993300; font-style:oblique; }
+
+.inlinePara {display:inline; }
+.inline {display: inline; margin-left:0px; padding-left:0px; line-height:3em; }
+.inline li { display:inline; }
+.inline li a {padding: 0.5em 1em; border: 2px solid #000000; }</code>
+      <description><p>JavaScript（抜粋）: </p>
+</description>
+      <code>function changeColor(hghltColor)
+{
+  // 表のセルのデータを配列に入れる
+ 
+ var els = document.getElementsByTagName('td');
+
+  // 配列の要素の中から、"hghlt"で始まるクラス名を探す
+  // 見つかったら、クラスの値を現在選択されているものに変更する
+  // このスクリプトは、td要素のクラスは強調表示のためだけに使用されていることを前提としている点に注意
+
+  for (var i=0; i&lt;els.length; i++)
+  {
+    if (els[i].className.indexOf("hghlt") == 0) { els[i].className = hghltColor; }
+  }
+}</code>
+      <description><p>
+このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/C29/ex2/index.html">CSSプロパティを変更するためにクライアントJavaScriptを使う</a></p>
+</description>
+    </eg-group>
+    <eg-group>
+      <head>異なる外部スタイルシートファイルを適用するためにPHPの「$_GET」を使う</head>
+      <description><p>
+このシンプルな例では、２つあるうちの１つの外部スタイルシートを適用するためにPHPの「$_GET」を使用している。
+同様のことは、PHPの様々な機能を使って実現できる。
+この例では、現在のページの表示だけに適用される。
+実際の制作においては、利用者がそのサイトにおいて一度選択すれば済むように、設定をクッキーまたはサーバーサイドのユーザープロファイルに保存することが望ましい。</p>
+<p>
+以下のコードはPHPであるが、同様のアプローチは様々なサーバーサイドのウェブコンテンツ技術によって可能である。</p>
+<p>PHPとXHTML（抜粋）: </p>
+</description>
+      <code>PHPの冒頭において：
+
+&lt;?php
+$thestyle = $_GET['set'];
+if ($thestyle == "style1")
+	{
+	$thestyle = "style2";
+	}
+else
+	{
+	$thestyle = "style1";
+	}
+?&gt;
+
+
+&lt;head&gt;〜&lt;/head&gt;内：
+
+   &lt;link rel="stylesheet" type="text/css" media="screen" href="&lt;?php echo($thestyle);?&gt;.css" &gt;
+
+
+&lt;body&gt;〜&lt;/body&gt;内：
+
+&lt;?php
+if ($thestyle == "style1") {
+	echo "&lt;a href=\"index.php?set=style1\"&gt;スタイルシート2に変更&lt;/a&gt;";
+	}
+else {
+	echo "&lt;a href=\"index.php?set=style2\"&gt;スタイルシート1に変更&lt;/a&gt;";
+	}
+?&gt;
+
+&lt;div id="mainbody"&gt;
+  &lt;h1&gt;カンファレンス・レポート&lt;/h1&gt;
+  &lt;p&gt;先週のカンファレンスは、そうそうたる顔ぶれのスピーカーにより...&lt;/p&gt;
+&lt;/div&gt;</code>
+      <description><p>CSS（抜粋）：</p>
+</description>
+      <code>style1.css内：
+
+  body, p { color:#000000; background-color:#FFFFFF; }
+  h1, h2, h3 {color:#990000; background-color:#FFFFFF; }
+
+
+style2.css内：
+
+  body, h1, h2, h3, p, a { color:#FFFF00; background-color:#000000; }</code>
+      <description><p>
+このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/C29/ex3/index.php">異なる外部スタイルシートファイルを適用するためにPHPの「$_GET」を使う</a></p>
+</description>
+    </eg-group>
+    <eg-group>
+      <head>代替スタイルシートを提供するためにJSPを使用する</head>
+      <description><p>以下の例では2つのファイルを使用している：</p>
+<ulist><item><p>
+フォームを含むJava Server Page (JSP)及びフォームの処理コード</p></item><item><p>
+上記ページ及び同様のスタイルを使用する他のページで使用される関数を含むインクルードファイル</p></item></ulist><p>
+サーバーサイドのコードは、利用者が選択したスタイルシートのための通常のlink要素及び他のスタイル用の「alternate stylesheet」のついたlink要素を出力する。そのコードは、２つめの例にあるように、クライアントサイドのコードのフォールバックとして使用することもできる。</p>
+<p>フォームを含むJSPページ: </p>
+</description>
+      <code>&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+ %&gt;&lt;%@include file="_jsp/styleswitch.jsp"%&gt;&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+ &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+ &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
+ &lt;head&gt;
+   &lt;meta content="text/html; charset=utf-8" http-equiv="Content-Type" /&gt;
+   &lt;title&gt;スタイルを変更する&lt;/title&gt;
+   &lt;%
+     String fStyle = "";
+     String styleName = "style";
+     String defaultStyle = "default";
+     Cookie[] cookies = request.getCookies();
+ 
+     // get style from post request parameters
+     if (request.getMethod().equals("POST") &amp;&amp; request.getParameter("styleSelect") != null) {
+       fStyle = request.getParameter("styleSelect");
+       // code that validates user input (security) not shown
+       
+       if (fStyle.equals("nostyle")) { // user prefers no author style
+       } else { // user requests author style
+         out.println(createStyleLinks(fStyle).toString());
+       }
+       
+       storeStylePreferenceCookie(request, response, fStyle);
+     } else if (request.getMethod().equals("GET")) { 
+     // GET request; get style from cookie; else default style links
+       // get style from cookie
+       if (cookies != null) {
+         // get style from cookies
+         fStyle = getStyleFromCookies(cookies);
+ 
+         if ( !fStyle.equals("NULL_STYLE") ) { // user requests author style
+             out.println(createStyleLinks(fStyle).toString());
+         } else { // no cookie for style; process request for style preference
+           // default style links
+           out.println(createStyleLinks(defaultStyle).toString());
+         }
+       } else { // GET request without cookies: default styles
+         out.println(createStyleLinks(defaultStyle).toString());
+       }//end else cookies
+     }
+   %&gt;
+ &lt;/head&gt;
+ &lt;body id="home"&gt;
+   &lt;form action="_styleSwitch.jsp" method="post" id="styleswitchform" name="styleswitchform"&gt;
+     &lt;p&gt;&lt;label for="styleSelect"&gt;スタイルを選択: &lt;/label&gt;
+       &lt;select id="styleSelect" name="styleSelect"&gt;
+         &lt;option value="default"&gt;デフォルト (緑)&lt;/option&gt;
+         &lt;option value="wonb"&gt;黒背景に白い文字&lt;/option&gt;
+         &lt;option value="bonw"&gt;白背景に黒い文字&lt;/option&gt;
+       &lt;/select&gt;
+       &lt;input type="submit" value="スタイルを変更" /&gt;
+     &lt;/p&gt;
+   &lt;/form&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;</code>
+      <description><p>上記ファイルにインクルードされる「styleswitcher.jsp」ファイル: </p>
+</description>
+      <code>&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
+ &lt;%!
+   /**
+    * Get the links (link elements) to the CSS files based on cookies, ...
+   */
+   private String getStyleLinks(HttpServletRequest request) {
+     String styleLinks = "";
+     Cookie[] cookies = request.getCookies();
+     String defaultStyle = "default";
+     String tempStyle = "";
+     // GET request; get style from cookie; else default style links
+     // get style from cookie
+     if (cookies != null) {
+       // get style from cookies
+       tempStyle = getStyleFromCookies(cookies);
+ 
+       if ( tempStyle.equals("NULL_STYLE") ) { 
+         // no cookie for style; process request for style preference
+         // default style links
+         styleLinks = createStyleLinks(defaultStyle).toString();
+       } else { // user requests author style
+         styleLinks = createStyleLinks(tempStyle).toString();
+       }
+     } else { // GET request without cookies: default styles
+       styleLinks = createStyleLinks(defaultStyle).toString();
+     }//end else cookies
+     
+     return styleLinks;
+   }
+ 
+   /**
+    * Get style cookie from request
+   */
+   private String getStyleFromCookies( Cookie[] cookies ) {
+     String fStyle = "NULL_STYLE";
+     for (int i = 0; i &lt; cookies.length; i++) {
+       Cookie cookie = cookies[i];
+       String name = cookie.getName();
+       
+       if ( name.equals("style") ) {
+         fStyle = cookie.getValue();
+         // code that validates cookie value (security) not shown
+       }
+     }
+     return fStyle;
+   }
+ 
+   /**
+    * Store the style preference in a persistent cookie
+   */
+   private void storeStylePreferenceCookie(HttpServletRequest request, 
+     HttpServletResponse response, String theStyle) {
+     final int ONE_YEAR = 60 * 60 * 24 * 365;
+     Cookie styleCookie = new Cookie("style", theStyle);
+     styleCookie.setMaxAge(ONE_YEAR);
+     response.addCookie(styleCookie);
+   }
+ 
+   /**
+    * Create the link elements for the stylesheets
+   */
+   private StringBuffer createStyleLinks(String prefStyle) {
+     StringBuffer theStyleLinks = new StringBuffer();
+     //two-dimensional array with identifiers (adding '.css' gives the name of the CSS file) 
+     // and strings for the title attribute of the link element
+    // the identifiers must correspond to the in the "value" attributes in the "option"
+    // elements in the style switcher form
+     String [] [] styles = {
+       { "default", "Default style"},
+       { "wonb", "White on black"},
+       { "bonw", "Black on white"}
+     };
+ 
+     // loop over 2dim array: if styles[i][1] matches prefStyle, 
+     // output as normal, else as alternate stylesheet
+     for (int i = 0; i &lt; styles.length; i++) {
+       if ( styles[i][0].equals(prefStyle) ) { // output pref stylesheet as normal stylesheet
+         theStyleLinks.append("&lt;link rel=\"stylesheet\" href=\"_css/").append(styles[i][0])
+           .append(".css\" title=\"").append(styles[i][1]).append("\" type=\"text/css\" /&gt;").append("\n");
+       } else { // output other stylesheets as alternate stylesheets
+         theStyleLinks.append("&lt;link rel=\"alternate stylesheet\" href=\"_css/")
+           .append(styles[i][0]).append(".css\" title=\"").append(styles[i][1])
+           .append("\" type=\"text/css\" /&gt;").append("\n");
+       }
+     } // end for loop
+ 
+     return theStyleLinks;
+   }
+ %&gt;</code>
+      <description><p>
+他のJSPページは、以下のコード（include / scriptlet）を用いてこのコードを使用できる: </p>
+</description>
+      <code>&lt;%@include file="_jsp/styleswitch.jsp"%&gt;&lt;% out.println(getStyleLinks(request)); %&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://css-discuss.incutio.com/?page=StyleSwitching" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">StyleSwitching  - css-discuss</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/200608/build_your_own_php_style_sheet_switcher/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Build your own PHP style sheet switcher</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.quirksmode.org/js/cookies.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">JavaScript - Cookies</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webdesign.about.com/od/cookies/a/aa083198.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Write Your First HTTP Cookie</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3schools.com/ASP/asp_cookies.asp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ASP Cookies</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/web.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Programming Ruby</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.alistapart.com/articles/behavioralseparation" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Behavioral Separation</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://en.wikipedia.org/wiki/Unobtrusive_JavaScript" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Wikipedia: Unobtrusive JavaScript</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://javascript.about.com/library/blunobtrusive.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">About.com: Unobtrusive JavaScript</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://en.wikipedia.org/wiki/Progressive_enhancement" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Progressive enhancement</loc>&#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://domscripting.com/blog/display/41" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hijax</loc>&#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G140"/>
+    <relatedtech idref="G174"/>
+    <relatedtech idref="G178"/>
+    <relatedtech idref="G188"/>
+    <relatedtech idref="G189"/>
+    <relatedtech idref="G191"/>
+    <relatedtech idref="C7"/>
+    <relatedtech idref="C22"/>
+    <relatedtech idref="C26"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>利用者が代わりの表示を選択できるようなコントロールがウェブページに含まれている。</p>
+        </item>
+        <item>
+          <p>そのコントロールで表示を変更できる。</p>
+        </item>
+        <item>
+          <p>結果として表示されたページは、元のページの「適合する代替バージョン」になっている。 </p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記のすべてを満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C29.html">C29: Using a style switcher to provide a conforming alternate version（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

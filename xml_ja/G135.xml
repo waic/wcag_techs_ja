@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G135">
+  <short-name>ウェブコンテンツ技術のアクセシビリティAPIを用いて、名前及び役割をUAに提供し、利用者が設定可能なプロパティを直接設定可能にし、変化を通知する</short-name>
+  <applicability>
+    <p>アクセシビリティAPIと連動するようにプログラムされた標準コンポーネントを持つプログラミング・ウェブコンテンツ技術。</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="ensure-compat-rsv"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、支援技術が代替のユーザーインタフェースを通して利用者に等価の情報を伝えることができるように、支援技術がウェブコンテンツを理解できるようにすることである。</p>
+          
+               <p>コンテンツは、マークアップ言語を用いず、プログラミング言語又はツールを用いて制作されることがある。多くの場合、これらのウェブコンテンツ技術には、既にアクセシビリティAPIと連動するようにプログラムされたインタフェース・コンポーネントがある。コンテンツ制作者がそういったコンポーネントを使用して、プロパティ（例えば名前など）を記述すれば、生成されたコンテンツのユーザーインタフェース・コンポーネントは支援技術に対してアクセシブルとなる。</p></description>
+  <examples>
+    <eg-group>
+      <description>
+        <ulist>
+          <item>
+            <p> ウェブページがアプレットを作るためにJavaを使用している。Java Swingオブジェクト（例えばプッシュボタン）が使われているのは、Javaで書かれた支援技術からアクセスできる標準搭載のアクセシビリティ・プロパティ、及びJava Access BridgeとともにOSのアクセシビリティAPIを用いる他の言語で書かれたアクセシビリティプロパティを持っているためである。コンテンツ制作者がそのコンポーネントに対して値を記述することによって、そのコンポーネントは支援技術にとってアクセシブルなものとなる。</p>
+          </item>
+        </ulist>
+      </description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p> アクセシブルなユーザーエージェントを用いてコンテンツを描画する。</p>
+        </item>
+        <item>
+          <p> 各ユーザーインタフェース・コンポーネントを評価するために、ユーザーエージェントのアクセシビリティAPIに対応して設計されたアクセシビリティツールを使用する。</p>
+        </item>
+        <item>
+          <p> 各インタフェース・コンポーネントの名前（name）及び役割（role）が、そのツールによって確認できる。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p> 各インターフェース要素について、3.を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G135.html">G135: Using the accessibility API features of a technology to expose names and roles, to allow user-settable properties to be directly set, and to provide notification of changes
+（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

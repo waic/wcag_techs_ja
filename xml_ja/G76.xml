@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G76">
+  <short-name>自動的に更新するのではなく、利用者がコンテンツの更新を要求するメカニズムを提供する</short-name>
+  <applicability>
+    <p>自動更新をサポートする全てのウェブコンテンツ技術又はウェブコンテンツ技術の組み合わせ
+                    </p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-no-extreme-changes-context"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、ページの自動的な再読み込みによって状況が変化し、利用者が混乱したり位置が分からなくなったりすることを避けるために、コンテンツの更新やそのタイミングを利用者がコントロールできるようにすることである。自動更新によって何が起こるのかが明らかになっていないと、スクリーンリーダーの利用者が混乱してしまう恐れがある。ページ上で利用者の現在位置を示すスクリーンリーダーの「バーチャルカーソル」は、ページが再読み込みされるとページの最上部に移動してしまう。また、画面拡大ソフトウェアの利用者や読字障害のある利用者も、ページの自動的な再読み込みによって現在位置が分からなくなってしまう恐れがある。 </p>
+          
+					<p>コンテンツの中には、頻繁に新たなデータや情報に更新するものがある。また、開発者は、コンテンツがサーバに自分自身の新しいコピーを要求するコードを挿入し、自動更新を強いることがある。そのような更新やその頻度は、常に利用者のコントロール下にあるわけではない。コンテンツ制作者は、自動更新の仕組みを埋め込むのではなく、利用者が必要な場合にコンテンツを更新できるメカニズムを提供すべきである。</p></description>
+  <examples>
+    <eg-group>
+      <description><p>
+									HTMLでは、利用者がコンテンツを更新するボタン又はリンクを、開発者が提供できる。例えば、次のコード例のように、ページ上で http://www.example.com/news.jsp にニュース項目があると示すことである。
+									</p>
+</description>
+      <code>&lt;a href="news.jsp"&gt;このページを更新する&lt;/a&gt;</code>
+    </eg-group>
+    <eg-group>
+      <description><p>Eメールのウェブインタフェース（ウェブメール）では、自動更新ではなく、新しいメールを確認するボタン又はリンクを、開発者が提供できる。
+								</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/xpedio/groups/public/documents/PublicWebsite/public_refreshandtimeouts.hcsp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Time outs and page refreshes, by the Web Access&#13;
+                                    Centre of the Royal National Institute of the Blind (RNIB),&#13;
+                                    provides rationale and techniques.</loc>, by the Web Access&#13;
+                                    Centre of the Royal National Institute of the Blind (RNIB),&#13;
+                                    provides rationale and techniques. </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G75"/>
+    <relatedtech idref="SCR14"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>コンテンツを更新するメカニズムを見つける（もしそのようなメカニズムが存在しているならば）。</p>
+        </item>
+        <item>
+          <p>メカニズムそれぞれについて、利用者が更新を要求できるようになっている。</p>
+        </item>
+        <item>
+          <p>メカニズムによって自動更新が実行されうる。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2. を満たしていて、3. に該当しない。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G76.html"> G76: Providing a mechanism to request an update of the content instead of updating automatically（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

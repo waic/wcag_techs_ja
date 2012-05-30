@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G121">
+  <short-name>発音（読み）にリンクする</short-name>
+  <applicability>
+    <p>リンクを含む全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="meaning-pronunciation"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、単語の発音に関する情報を同じウェブページ又は異なるウェブページ上で提供し、対象となる単語から発音の情報へリンクすることにより、その単語の発音を入手可能にすることである。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <description><p>単語がその発音情報を含む辞書にリンクされている。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <description><p>単語がその発音を含む音声ファイルにリンクされている。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <description><p>単語が発音辞書(発音音声を提供することを目的とした辞書)にリンクされている。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <description><p>単語がその発音のInternational Phonetic Alphabet(IPA)表現にリンクされている。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <description><p>単語がその発音を曖昧性のないように書き下したスペリングにリンクされている。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G62"/>
+    <relatedtech idref="G120"/>
+    <relatedtech idref="G163"/>
+    <relatedtech idref="H62"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>発音情報を提供すべき単語の全てについて：
+							</p>
+      <olist>
+        <item>
+          <p>少なくともその単語の最初の出現箇所がリンクになっている</p>
+        </item>
+        <item>
+          <p>そのようなすべてのリンクが単語の発音に関する情報にリンクしている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記全てを満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G121.html">G121: Linking to pronunciations（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.argv.org/">井上浩一（ARGV）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

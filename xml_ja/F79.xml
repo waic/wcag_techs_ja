@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F79">
+  <short-name>達成基準 4.1.2 の不適合事例 － ユーザーインタフェース・コンポーネントのフォーカスの状態がプログラムで解釈可能ではない、又はフォーカスの状態の変更が通知されていない</short-name>
+  <applicability>
+    <p>全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="ensure-compat-rsv"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>あるユーザーインタフェース・コンポーネントにフォーカスがあるかどうかは、そのコンポーネントの状態（state）の特に重要な一面である。多くの種類の支援技術が、キーボードフォーカスの現在位置を追跡することに依存している。スクリーンリーダーは、利用者の注視点をフォーカスの当たっているユーザーインタフェース・コンポーネントに移動させ、画面拡大ソフトはフォーカスが当たっているコンポーネントを見ることができるようにコンテンツの表示を変えていく。新しいコンポーネントにフォーカスが遷移した時に、支援技術に通知されなければ、利用者は意図と異なるコンポーネントとやりとりをしようとして混乱することになる。</p>
+          
+               <p>通常ユーザーエージェントが標準的なコンポーネントに対してこの機能で処理を行う一方、スクリプトで独自に記述されたユーザーインタフェース・コンポーネントは、アクセシビリティAPIを用いてユーザーエージェントがフォーカスについての情報及び通知を利用できるようにしなければならない。</p></description>
+  <examples/>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn2.microsoft.com/en-us/library/ms696082.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Explorer and Accessible Event Watcher</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://java.sun.com/developer/earlyAccess/jaccesshelper/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Java Accessibility Helper</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>ウェブコンテンツ技術に対してアクセシビリティ・チェッカーを用いる（又は、利用できない場合は、コードを検査する、又は支援技術で検証する）。コントロールがアクセシビリティAPIを経由してフォーカスの状態（state）を引き渡している。</p>
+        </item>
+        <item>
+          <p>ウェブコンテンツ技術に対してアクセシビリティ・チェッカーを用いる（又は、利用できない場合は、コードを検査する、又は支援技術で検証する）。フォーカスが別のコントロールに遷移したとき、支援技術にそのことが通知される。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1.又は2.を満たしていない場合、この不適合の条件が適用され、そのコンテンツは達成基準及を満たしていないことになる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F79.html">F79: Failure of Success Criterion 4.1.2 due to the focus state of a user interface component not being programmatically determinable or no notification of change of focus state available（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

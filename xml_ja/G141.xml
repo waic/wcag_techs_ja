@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G141">
+  <short-name>見出しを用いてウェブページを構造化する</short-name>
+  <applicability>
+    <p>セクションで構成されたコンテンツのあるウェブページ</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-headings"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、それぞれのセクションにそれを識別できる見出しがついているようにすることである。<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#content-structure-separation-programmatic">達成基準1.3.1</a>では見出しがプログラムで解釈可能な方法でマークアップされていることを要求している。</p>
+          
+               <p>HTMLにおいては、これは見出し要素(h1, h2, h3, h4, h5, h6)によって実現されうる。これによりユーザーエージェントは自動的にセクションの見出しを識別できる。他のウェブコンテンツ技術では、また異なる方法で見出しを識別する。ページ内の移動と文書の全体的構造の理解を助けるには、コンテンツ制作者は見出しを適切にネストさせるべきである(たとえばh1にはh2が続き、h2にはh2かh3が続き、h3にはh3またはh4が続き……といったように)。</p></description>
+  <examples>
+    <eg-group>
+      <head>HTMLのページを構造化するために用いられた見出し</head>
+      <description><p>ある調理法を紹介するページでは、h1要素により全体とタイトルを示し、h2要素で大項目としてサラダ油による調理とバターによる調理を示し、h3要素で油による調理の詳細なサブセクションを示している。</p>
+</description>
+      <code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+&lt;title&gt;調理法&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;調理法&lt;/h1&gt;
+... ここにはテキストが入る ...
+&lt;h2&gt;サラダ油による調理&lt;/h2&gt;
+... セクションのテキストが入る ...
+&lt;h3&gt;ソテー&lt;/h3&gt;
+....
+&lt;h3&gt;油揚げ&lt;/h3&gt;
+&lt;h2&gt;バターによる調理&lt;/h2&gt;
+... セクションのテキストが入る ...
+&lt;/body&gt;
+&lt;/html&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc>&#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H42"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>ページの内容がセクションに分けられている。</p>
+        </item>
+        <item>
+          <p>それぞれのセクションに見出しがある。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2. を満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G121.html">G121: Linking to pronunciations（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.argv.org/">井上浩一（ARGV）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F86">
+  <short-name>達成基準 4.1.2 の不適合事例 － 例えば電話番号にように、複数に分けられたテキストフィールドのそれぞれに対して、識別名が提供されていない</short-name>
+  <applicability>
+    <p>全般</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="ensure-compat-rsv"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>これは、複数のテキストフィールドから成るフォームの入力項目で、その一部又は全部に識別名がないことによる達成基準4.1.2の不適合事例について述べている。多くの場合、複数のテキストフィールドから成るフォームの入力項目の全体に対してラベルが1つあり、そのラベルが最初のテキストフィールドに対してプログラム的に関連付けられているか、又はどのテキストフィールドに対してもプログラム的に関連付けられていない必要がある。</p>
+<div class="note">
+		<p class="prefix"><em>注記： </em>識別名は、必ずしも視覚的に表示しなければならないわけではないが、支援技術に対しては明示されている必要がある。</p>
+</div></description>
+  <examples>
+    <eg-group>
+      <head>不適合となる</head>
+      <description><p>米国の電話番号は、3桁の市外局番、3桁の市内局番、それに続く4桁の番号で構成されている。通常はこれが、例えば（206）555-1212のように、（市外局番）市内局番-番号というフォーマットで示される。多くの場合、電話番号の記入を求めるフォームは3つのテキストフィールドに分かれているが、次の例ではラベルが1つしかない。</p>
+</description>
+      <code>電話番号： 
+(&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</code>
+      <description><p>この不適合となる事例は、アクセシビリティAPIに3つのテキストフィールドそれぞれに対する識別名（name）がない場合に生じる。支援技術を使っている利用者は、3つの不明確なテキストフィールドを提示されることになる。また、3つのテキストフィールドから成る米国の電話番号の場合、一部の支援技術は、1つ目のフィールドを「（」、2つ目のフィールドを「）」、3つ目のフィールドを「-」とラベル付けすることがあり、これも決して利用者の役に立つものではない。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <head>不適合となる</head>
+      <description><p>同じく米国の電話番号で、この事例では、ラベルがプログラム的にどの部分にも関連付けられていない。</p>
+</description>
+      <code>電話番号：
+(&lt;input type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</code>
+      <description><p>支援技術を使っている利用者は、3つの不明確なテキストフィールドを提示されることになる。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <head>不適合となる</head>
+      <description><p>同じく米国の電話番号で、この例では、ラベルが1つめのテキストフィールドにプログラム的に関連付けられている。</p>
+</description>
+      <code>&lt;label for="area"&gt;電話番号：&lt;/label&gt; 
+(&lt;input id="area" type="text" size="3"&gt;) &lt;input type="text" size="3"&gt;-&lt;input type="text" size="4"&gt;</code>
+      <description><p>支援技術を使っている利用者は、1つめのテキストフィールドが電話番号全体のためのテキストフィールドであると理解し、2つめと3つめは不明確なテキストフィールドとして認識することになる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/downloads/details.aspx?familyid=3755582A-A707-460A-BF21-1373316E13F0&amp;displaylang=en" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Active Accessibility 2.0 SDK. Includes Inspect32.exe and other MSAA tools.</loc>. Includes Inspect32.exe and other MSAA tools.</p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://library.gnome.org/devel/atk/unstable/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Gnome Accessibility Toolkit documentation</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://developer.gnome.org/projects/gap/testing/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Gnome Accessibility QA documentation and tools</loc>
+          </p>
+        </item>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/downloads/details.aspx?familyid=E59C3964-672D-4511-BB3E-2D5E1DB91038&amp;displaylang=en" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Internet Explorer Developer Toolbar. Allows examination of script-generated DOM in Microsoft Internet Explorer.</loc>. Allows examination of script-generated DOM in Microsoft Internet Explorer.</p>
+        </item>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug. Allows examination of script-generated DOM in Firefox.</loc>. Allows examination of script-generated DOM in Firefox.</p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H44"/>
+    <relatedtech idref="H71"/>
+    <relatedtech idref="H65"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>
+        <strong>一般的な手順：</strong>
+      </p>
+      <olist>
+        <item>
+          <p>自分の使用しているプラットフォームのアクセシビリティAPIを確認できるツールをインストールする（「参考リソース」を参照）。</p>
+        </item>
+        <item>
+          <p>フォームにあるコントロールそれぞれをチェックする。</p>
+        </item>
+        <item>
+          <p>各コントロールに対して、識別名（name）のプロパティがある。</p>
+        </item>
+      </olist>
+      <p>
+        <strong>HTML及びXHTMLの場合の手順：</strong>
+      </p>
+      <olist>
+        <item>
+          <p>HTMLソースにある<code>input</code>、<code>select</code>、及び<code>textarea</code>要素をチェックする。</p>
+        </item>
+        <item>
+          <p>要素に<code>title</code>属性がある。</p>
+        </item>
+        <item>
+          <p>関連付けられた<code>label</code>要素がある。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>
+        <strong>一般的な判定基準：</strong>
+      </p>
+      <ulist>
+        <item>
+          <p>3. を満たしていなければ、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+        </item>
+      </ulist>
+      <p>
+        <strong>HTML及びXHTMLの場合の判定基準：</strong>
+      </p>
+      <ulist>
+        <item>
+          <p>2. 及び 3. を満たしていなければ、この不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F86.html">F86: Failure of Success Criterion 4.1.2 due to not providing names for each part of a multi-part form field, such as a US telephone number（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

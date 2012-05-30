@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H59">
+  <short-name>link要素及びナビゲーションツールを用いる</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-mult-loc"/>
+    <success-criterion idref="navigation-mechanisms-location"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <ul>
+<li>
+									<p>link要素について、ユーザーエージェントと支援技術のサポートが一貫していない。</p>
+                     </li>
+<li>
+										 <p>ユーザーエージェントの一部は、link要素で指定されている情報を表示する追加的なナビゲーションバーを提供する。MozillaとOperaの現在のバージョンがこの機能を提供する。IE 6.0とFirefox 1.5はこの機能を提供しないが、拡張機能やアドオンを通して利用できることがある。</p>
+            
+						<p><code>link</code>要素のブラウザサポートに関する詳しい情報は、<a href="http://www.subotnik.net/html/link">(X)HTMLにおける「link」要素（英語）</a>を参照。</p>
+                     </li>
+</ul>
+    </ua-issue>
+  </ua-issues>
+  <description><p>この実装方法の目的は、link要素を用いて、あるHTMLページがウェブページ一式の中でどのような位置にあるのかを示すメタデータを提供する方法、及び利用者がウェブページ一式の中で特定のコンテンツを発見することを支援する方法について解説することである。rel属性の値が、どのような関係性が定義されているのかを示し、href属性がその関係を持つドキュメントへのリンクを提供する。複数のlink要素を用いることで、複数の関係を示すこともできる。<code>rel</code>属性の値としては、以下のようなものが有用である:</p>
+          
+               <ul>
+<li>
+              
+							<p>Start：複数のドキュメントの中の最初のドキュメントへのリンク</p>
+            
+                  </li>
+<li>
+              
+							<p>Next：一連のドキュメントにおける次のドキュメントへのリンク</p>
+            
+                  </li>
+<li>
+              
+							<p>Prev：一連のドキュメントにおける前のドキュメントへのリンク</p>
+            
+                  </li>
+<li>
+              
+							<p>Contents：目次の役割を果たすドキュメントへのリンク</p>
+            
+                  </li>
+<li>
+              
+							<p>Index：現在のドキュメントに対して索引を提供するドキュメントへのリンク</p>
+            
+                  </li>
+</ul></description>
+  <examples>
+    <eg-group>
+      <description><p>オンライン書籍の第2章のウェブページがあり、<code>head</code>要素セクションに次のリンクが含まれている。</p>
+</description>
+      <code>&lt;link rel="Contents" href="Contents.html" title="目次"  /&gt;
+&lt;link rel="Index" href="Index.html" title="索引" /&gt;
+&lt;link rel="Prev" href="Chapter01.html" title="01. なぜ進んでやるのか？" /&gt;
+&lt;link rel="Next" href="Chapter03.html" title="03. 誰が進んでやるのか？" /&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html#edef-LINK" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    LINK element</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/types.html#type-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 link&#13;
+                    types</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://cdn.mozdev.org/linkToolbar/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Link Toolbar extension for&#13;
+                  Firefox</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/use-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Use &lt;link&gt;s in your&#13;
+                    document from W3C's Quality Web Tips</loc> from W3C's Quality Web Tips </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/reference/html40/head/link.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">LINK -&#13;
+                    Document Relationship from Web Design Group</loc> from Web Design Group </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.subotnik.net/html/link" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The 'link'-Element in (X)HTML</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G1"/>
+    <relatedtech idref="G63"/>
+    <relatedtech idref="G64"/>
+    <relatedtech idref="G123"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>一連のまたは集合的なウェブページにおける、あるウェブページについて：</p>
+      <olist>
+        <item>
+          <p>ナビゲーションに関する全ての<code>link</code>要素が、その文書の<code>head</code>要素セクションに含まれている</p>
+        </item>
+        <item><p>その文書の<code>head</code>要素セクション内のナビゲーションに関する各<code>link</code>要素に、少なくとも以下が指定されている：</p>
+                
+                        <ol class="enumla">
+<li>
+                    
+										<p>リンクタイプを特定するための<code>rel</code>属性</p>
+                  
+                           </li>
+<li>
+                    
+										<p>該当するリソースの場所を示すための妥当な<code>href</code>属性</p>
+                  
+                           </li>
+</ol></item>
+        <item>
+          <p>リンクタイプを特定するための<code>rel</code>属性</p>
+        </item>
+        <item>
+          <p>該当するリソースの場所を示すための妥当な<code>href</code>属性</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記全てを満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H59.html">H59: Using the link element and navigation tools（英語）</a></item>
+      <item>日本語訳監修：<a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

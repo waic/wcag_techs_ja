@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H84">
+  <short-name>select要素とボタンを併用して、アクションを実行するようにする</short-name>
+  <applicability>
+    <p>HTML 及び XHTML</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-unpredictable-change"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、 <code>select</code> 要素の値を選択することで意図せずアクションが実行されるのではなく、アクションの実行を利用者が制御できるようにすることである。利用者は、アクションが実行されるとは思わずに、 <code>select</code> 要素にどんな値があるのかを調べたり、間違って意図しない値を選んだりするかもしれない。利用者が自分の選択に納得したとき、アクションを実行するボタンを選択できるようにする。</p>
+
+          
+               <p><code>select</code> 要素の選択肢の操作によって(フォームの)コントロールの値が変化する場合、キーボードで <code>select</code> 要素の値を選んでいる利用者に対して特に重要である。</p></description>
+  <examples>
+    <eg-group>
+      <head>カレンダー</head>
+      <description><p>あるウェブページでは、利用者が任意の年の任意の月を選ぶと、その月のカレンダーが表示される。利用者が月と年を指定した後に「表示」ボタンを押すことでカレンダーが表示される。この例では、クライアントサイド・スクリプティングでアクションを実装している。</p>
+</description>
+      <code>&lt;label for="month"&gt;月:&lt;/label&gt;
+&lt;select name="month" id="month"&gt;
+  &lt;option value="1"&gt;1月&lt;/option&gt;
+
+  &lt;option value="2"&gt; 2月&lt;/option&gt;
+  ...
+  &lt;option value="12"&gt;12月&lt;/option&gt;
+&lt;/select&gt; 
+&lt;label for="year"&gt;年:&lt;/label&gt;
+
+&lt;input type="text" name="year" id="year"&gt;
+&lt;input type="button" value="Show" onclick = "..."&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>アクションを選ぶ</head>
+      <description><p><code>select</code> 要素は実行可能なアクションのリストを含んでいる。利用者が「実行」というボタンを押すまで、アクションは実行されない。</p>
+</description>
+      <code>&lt;form action="http://somesite.com/action" method="post"&gt;
+  &lt;label for="action"&gt;選択肢:&lt;/label&gt;
+  &lt;select name="action" id="action"&gt;
+    &lt;option value="help"&gt;ヘルプ&lt;/option&gt;
+
+    &lt;option value="reset"&gt;リセット&lt;/option&gt;
+    &lt;option value="submit"&gt;送信&lt;/option&gt;
+  &lt;/select&gt; 
+  &lt;button type="submit" name="submit" value="submit"&gt;実行 &lt;/button&gt;
+
+&lt;/form&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cs.tut.fi/~jkorpela/forms/navmenu.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Jukka Korpela: Navigational pulldown menus in HTML</loc>&#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H32"/>
+    <relatedtech idref="G80"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>それぞれの <code>select</code> 要素/ボタンの要素の組み合わせに対して:</p>
+      <olist>
+        <item>
+          <p><code>select</code> 要素の選択肢にフォーカスがあたったとき(キーボード・フォーカスを含む)、どのアクションも実行されない。</p>
+        </item>
+        <item>
+          <p>ボタンを選択すると、現在の <code>select</code> 要素の値に関連付けられたアクションが実行される。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記全てを満たしている。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H84.html">H84: Using a button with a select element to perform an action（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

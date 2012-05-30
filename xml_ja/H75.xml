@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H75">
+  <short-name>ウェブページがwell-formedであることを確認する</short-name>
+  <applicability>
+    <p> すべてのXMLベースのマークアップ言語</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="ensure-compat-parses"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p> この実装方法の目的は、支援技術がコンテンツを解析するときに生じるエラーを避けることである。well-formedについては、文書をXMLパーサーを用いてチェックし、
+			  バリデーションレポートがwell-formedに関するエラーを含んでいるかどうかで確認できる。すべてのXMLパーサーには、well-formedをチェックし、well-formedに関するエラーが見つかったときは、
+			  通常の処理を停止することが要求される（XMLパーサーは、バリデーションをサポートしていなくてもよい）。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <description><p>XMLファイルは、文書タイプ宣言、a xsi:schemaLocation属性あるいは他のタイプのスキーマへのリファレンスを含む。
+					 コンテンツ開発者は、オンラインあるいはオフラインのバリデーター、XMLエディタもしくはXMLサポートのあるIDE（下記参考リソースを参照）を用いて、
+					 well-formedであることをチェックできる。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <description><p> XMLファイルが文書タイプ宣言、a xsi:schemaLocation属性又はスキーマがあるのにスキーマ参照のインストラクションのない処理を
+					 含まないとき、関連するスキーマがコマンドラインの指示、利用者ダイアログあるいは（構成）コンフィグレーションファイルで指定されている。
+					 そして、XMLファイルがスキーマに対してチェックされている。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <description><p>XMLファイルが文書タイプ宣言、a xsi:schemaLocation属性あるいはスキーマがあるのにスキーマ参照のインストラクションのない処理を 含まないとき、名前空間がスキーマ文書又は<a href="http://www.rddl.org/">RDDL（Resource Directory Description Language ）</a>を読み出すのに参照されておらず、
+					 そしてXMLファイルがスキーマに対してチェックされている。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <description><p>ウェブサイトが静的な文書ではなく、XMLを動的に生成するとき、コンテンツ開発者は<a href="http://xmlunit.sourceforge.net/">XMLUnit</a>や
+					 <a href="http://xmltestsuite.sourceforge.net/">XML Test Suite</a>あるいは類似のフレームワークを用いて、
+				生成されるXMLコードをチェックできる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2004/REC-xml-20040204/Overview.html#sec-well-formed" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Well-Formed XML Documents in Extensible Markup Language (XML) 1.0 (Third&#13;
+                  Edition), W3C Recommendation 04 February 2004.</loc> in Extensible Markup Language (XML) 1.0 (Third&#13;
+                  Edition), W3C Recommendation 04 February 2004. </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2004/REC-xml11-20040204/#sec-well-formed" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Well-Formed XML Documents in Extensible Markup Language (XML) 1.1, W3C&#13;
+                  Recommendation 04 February 2004.</loc> in Extensible Markup Language (XML) 1.1, W3C&#13;
+                  Recommendation 04 February 2004. </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#wf-entities" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">4.3.2 Well-Formed Parsed&#13;
+                    Entities in Extensible Markup Language (XML) 1.1, W3C Recommendation 04&#13;
+                  February 2004.</loc> in Extensible Markup Language (XML) 1.1, W3C Recommendation 04&#13;
+                  February 2004.</p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p> 各ファイルをXMLパーサーにロードする。</p>
+        </item>
+        <item>
+          <p> well-formedに関するエラーがないことをチェックする。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>2.を満たしている。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H75.html">H75: Ensuring that Web pages are well-formed（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G74">
+  <short-name>短い説明の中で長い説明のある場所を示して、非テキストコンテンツの近くにあるテキストで長い説明を提供する</short-name>
+  <applicability>
+    <p> 全てのウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、利用者を別の場所にジャンプさせることなく長い説明文を提供することである。非テキストコンテンツの内容の一部が失われる恐れがある利用者にとって有益な説明文が、すべての利用者にも見られるようになる。</p>
+          
+               <p>この実装方法によって、長い説明文が標準のプレゼンテーションの一部として提供される（つまり、すべての利用者が受け取ることができる）。説明文は非テキストコンテンツの近くに配置されるが、隣接させる必要はない。例えばグラフの下にキャプションがあり、長い説明文が次の段落で提供されているといった場合である。</p>
+          
+               <p>非テキストコンテンツを閲覧できないときに、どこを探せば良いかわかるように、簡潔な代替テキストの中に長い説明文の場所を示す。</p></description>
+  <examples>
+    <eg-group>
+      <head>棒グラフ</head>
+      <description><p>ウェブページ に上位3名の販売員の売上げを示した棒グラフがある。</p>
+<p>簡潔な代替テキストでは「上位3名の販売員の10月の売上表。グラフに続いてテキストの詳細」と書かれている。</p>
+<p>次の説明文が棒グラフの直下の段落にある。「10月の売上げはメアリーが400個でトップ、マイクが389個の僅差で続き、クリスが350個でトップ3の最後となっている。」</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G73"/>
+    <relatedtech idref="H45"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>簡潔な代替テキストに長い説明文の場所が含まれている。</p>
+        </item>
+        <item>
+          <p>長い説明文が視覚的な配置順及び音声読み上げ順序でも非テキストコンテンツの近くにある。</p>
+        </item>
+        <item>
+          <p>長い説明文が非テキストコンテンツと同じ情報を伝達している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>上記の3つ全てを満たしている。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G74.html">G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="ttp://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

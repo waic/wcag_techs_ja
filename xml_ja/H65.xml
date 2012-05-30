@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H65">
+  <short-name>label要素を用いることができないとき、title属性を用いてフォーム・コントロールを特定する</short-name>
+  <applicability>
+    <p><code>value</code>属性、<code>alt</code>属性、または要素内容で特定できないHTML及びXHTMLのフォーム・コントロール</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+    <success-criterion idref="content-structure-separation-programmatic"/>
+    <success-criterion idref="minimize-error-cues"/>
+    <success-criterion idref="ensure-compat-rsv"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <ul>
+<li>
+                
+								<p>
+										ユーザーエージェントは、<code>title</code>要素が指定してある<code>input</code>要素にマウスオーバーしたときに、ツールチップを表示するだろう。</p>
+              
+                     </li>
+<li>
+                
+								<p>
+										JAWSとWindow-Eyesでは、フォーム・コントロールがフォーカスを受けとったとき、<code>label</code>要素が指定されていなければ、<code>title</code>属性の内容を読み上げる。</p>
+                
+                        <ul>
+<li>
+                    
+										<p>JAWS 6.0以降では、<code>label</code>要素と<code>title</code>属性に異なる内容が指定されている場合、両方を読み上げるように設定できる。しかし、この設定方法を知っているユーザーは非常に少ない。</p>
+                  
+                           </li>
+<li>
+                    
+										<p>Window-Eyes 5.5には、フォーカスを受けとったアイテムの追加情報（<code>title</code>属性を含む）を読み上げるホットキー（insert＋E）がある。</p>
+                  
+                           </li>
+</ul>
+</li>
+</ul>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>
+							この実装方法の目的は、ラベルを付けるのが視覚デザイン上そぐわない場合（たとえば、ラベルとなりうるテキストが画面上にない場合）や、ラベルを表示することで混乱を引き起こしてしまう場合に、<code>title</code>属性を利用してフォーム・コントロールにラベルを付けることである。それによって、ユーザーエージェントや支援技術が、<code>title</code>属性を読み上げることができる。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>検索対象を絞り込むプルダウンメニュー</head>
+      <description><p>検索フォームで検索対象を絞り込むプルダウンメニューを用いている。そのプルダウンメニューは、検索語を入力するテキストフィールドのすぐそばにある。テキストフィールドとプルダウンメニューの関係は、見た目のデザインを目で見ることができるユーザーには明白であり、ラベルを置くスペースはない。そこで、<code>select</code>要素を特定するのに<code>title</code>属性を利用している。<code>title</code>属性はスクリーンリーダーによって読み上げられたり、画面拡大ソフトを使っているユーザーにはツールチップとして表示されたりする。</p>
+</description>
+      <code>&lt;label for="searchTerm"&gt;検索語：&lt;/label&gt;
+&lt;input id="searchTerm" type="text" size="30" value="" name="searchTerm"&gt;
+&lt;select title="検索対象" id="scope"&gt;
+…
+&lt;/select&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>電話番号の入力フィールド</head>
+      <description><p>
+									ウェブページの中に、アメリカでの電話番号を入力するコントロールがあり、市外局番、市内局番、下4桁の3つのフィールドで構成されている。</p>
+</description>
+      <code>&lt;fieldset&gt;&lt;legend&gt;電話番号&lt;/legend&gt;
+&lt;input id="areaCode" name="areaCode" title="市外局番" 
+type="text" size="3" value="" &gt;
+&lt;input id="exchange" name="exchange" title="電話番号の上3桁" 
+type="text" size="3" value="" &gt;
+&lt;input id="lastDigits" name="lastDigits" title="電話番号の下4桁" 
+type="text" size="4" value="" &gt;
+&lt;/fieldset&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>検索機能</head>
+      <description><p>ウェブページに、ユーザーが検索語を入力できるテキストフィールドと、検索を実行するための「検索」というラベルが付いたボタンがある。フォーム・コントロールを特定するの<code>title</code>属性を利用し、ボタンはテキストフィールドの直後に置いてあるので、テキストフィールドに検索語を入力すべきことはユーザーにとって明白である。</p>
+</description>
+      <code>&lt;input type="text" title="ここに検索語を入力"/&gt; 
+&lt;input type="submit" value="検索"/&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 The&#13;
+                    title attribute</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                  &#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse8.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms</loc>&#13;
+                &#13;
+                        </p>
+        </item>
+        <item>
+          <p>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc>&#13;
+                        </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H44"/>
+    <relatedtech idref="H71"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p><code>label</code>要素によって関連付けられていないフォーム・コントロールを特定する。</p>
+        </item>
+        <item>
+          <p>そのコントロールに<code>title</code>属性が指定されている。</p>
+        </item>
+        <item>
+          <p><code>title</code>属性によってそのコントロールの目的を特定している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記全てを満たしている</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H65.html">H65: Using the title attribute to identify form controls when the label element cannot be used（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

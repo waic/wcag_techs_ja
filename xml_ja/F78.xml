@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="F78">
+  <short-name>達成基準 2.4.7 の不適合事例：　要素のアウトライン及びボーダーを視覚的なフォーカスインジケーターを除去する又は非表示にするようにスタイル指定する</short-name>
+  <applicability>
+    <p>あらゆるウェブコンテンツ技術</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-focus-visible"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この文書は、ユーザーエージェントでデフォルトに指定されているキーボードフォーカスの視覚的なインジケーターが非表示になっている、又はコンテンツ制作者が提供する視覚的なフォーカスインジケーターが提供されずに、ページ上の他のスタイル指定により非表示にされる時に起こる不適合の条件について述べている。フォーカスインジケーターを非表示に指定することで、ユーザーエージェントはフォーカスインジケーターを表示しなくなる。他のスタイル指定によって、フォーカスインジケーターが提示されていても見づらくなることがある。例えばフォーカスのアウトラインと同じように見えるアウトライン、又はフォーカスインジケーターと同じ色になっているため識別できない太いボーダーといったものである。</p>
+  </description>
+  <examples>
+    <eg-group role="failure">
+      <head>CSSを用いて、フォーカスインジケーターを表示しないようにする</head>
+      <description><p>下記のCSSの事例では、デフォルトのフォーカスインジケーターを除去しているため、視覚的に認識可能なフォーカスインジケーターを提供するという要求に不適合となる。</p>
+</description>
+      <code>:focus {outline: none}</code>
+    </eg-group>
+    <eg-group role="failure">
+      <head>要素のアウトラインが、フォーカスインジケーターと視覚的に類似している</head>
+      <description><p>下記のCSSの事例は、リンクの周辺にフォーカスインジケーターと同じように見えるアウトラインを生成するものである。たとえユーザーエージェントがフォーカスインジケーターを表示しているとしても、利用者にはどの要素が実際にフォーカスを持つのか判別できない。</p>
+</description>
+      <code>a {outline: thin dotted black}</code>
+    </eg-group>
+    <eg-group role="failure">
+      <head>要素が、フォーカスインジケーターを覆い隠すボーダーを持つ</head>
+      <description><p>下記のCSSの事例では、フォーカスインジケーターがボーダーの上に表示されたときに、フォーカスインジケーターに対してコントラストが十分でないボーダーをリンクの周辺に生成している。この場合、フォーカスインジケーターがボーダーのすぐ外側に表示されているが、両方とも黒で、ボーダーがフォカスインジケーターよりも太くなっている。これにより、「視覚的に認識可能」の定義を満たさない。</p>
+</description>
+      <code>a {border: medium solid black}</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>フォーカスを、ページ上のすべてのフォーカス可能な要素に合わせる。</p>
+        </item>
+        <item>
+          <p>フォーカスインジケーターが視覚的に認識可能である。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2.を満たしていない場合、この不適合の条件が適用され、そのコンテンツは達成基準及を満たしていないことになる。</p>
+        </item>
+      </ulist>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F78.html">F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+    </ulist>
+  </translationcredit>
+</technique>
