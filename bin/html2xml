@@ -117,12 +117,21 @@ xml = Nokogiri::XML::Builder.new do |x|
 					html.css( "##{tech_id}-resources + div.textbody li" ).each{|li|
 						x.item {
 							x.p {
-								x.loc(
-									'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
-									'href' => li.css( 'a' ).attr( 'href' ),
-									'xlink:type' => 'simple',
-									'xlink:show' => 'replace',
-									'xlink:actuate' => 'onRequest' ) { x.text li.text.strip }
+								li.css( 'p' ).children.each do |e|
+									case e.node_name
+									when 'text'
+										x.text e.text
+									when 'a'
+										x.loc(
+											'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
+											'href' => e.attr( 'href' ),
+											'xlink:type' => 'simple',
+											'xlink:show' => 'replace',
+											'xlink:actuate' => 'onRequest' ) { x.text li.text.strip }
+									else
+										x << e.to_html
+									end
+								end
 							}
 						}
 					}
