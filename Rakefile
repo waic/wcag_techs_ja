@@ -10,7 +10,7 @@ HTMLS = Dir.glob( "#{HTML_DIR}/[A-Z]*[0-9]*.html" ).sort
 XMLS = HTMLS.map{|a| a.gsub( /html/, 'xml' )}
 XMLS.each_with_index do |x, i|
 	file x => HTMLS[i] do |t|
-		sh "bundle exec bin/html2xml #{t.prerequisites.join ' '} #{XML_DIR} > #{t.name}"
+		sh "bundle exec bin/html2xml #{t.prerequisites.join ' '} #{XML_DIR}"
 	end
 end
 

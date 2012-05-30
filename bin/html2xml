@@ -11,7 +11,8 @@ if ARGV.size != 2
 end
 
 src = ARGV.shift
-dst = ARGV.shift
+dst = "#{ARGV.shift}/#{File.basename src, '.html'}.xml"
+
 tech_id = File.basename( src, '.html' )
 html = Nokogiri( open( src, 'r:utf-8', &:read ) )
 
@@ -193,4 +194,6 @@ xml = Nokogiri::XML::Builder.new do |x|
 	}
 end
 
-puts Nokogiri::XML( xml.to_xml, nil, 'utf-8' )
+open( dst, 'w:utf-8' ) do |o|
+	o.puts Nokogiri::XML( xml.to_xml, nil, 'utf-8' )
+end
