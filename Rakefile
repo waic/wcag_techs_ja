@@ -6,7 +6,7 @@
 HTML_DIR = './html_ja'
 XML_DIR = './xml_ja'; directory XML_DIR
 
-HTMLS = Dir.glob "#{HTML_DIR}/*.html"
+HTMLS = Dir.glob( "#{HTML_DIR}/[A-Z]*[0-9]*.html" ).sort
 XMLS = HTMLS.map{|a| a.gsub( /html/, 'xml' )}
 XMLS.each_with_index do |x, i|
 	file x => HTMLS[i] do |t|
