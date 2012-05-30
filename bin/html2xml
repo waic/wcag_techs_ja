@@ -67,6 +67,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 											}
 										else
 											$stderr.puts "#{tech_id}: Unknown div class name '#{e.attr "class"}' in eg-group.description."
+											exit 1
 										end
 									when 'p'
 										x << e.to_html.strip + "\n"
@@ -85,7 +86,10 @@ xml = Nokogiri::XML::Builder.new do |x|
 											'xlink:show' => "embed",
 											'xlink:actuate' => "onLoad" ){}
 									else
-										$stderr.puts "#{tech_id}: Unknown node '#{e.node_name}' in eg-group.description." unless e.node_name == 'text'
+										unless e.node_name == 'text'
+											$stderr.puts "#{tech_id}: Unknown node '#{e.node_name}' in eg-group.description."
+											exit 1
+										end
 									end
 								end
 							}
@@ -94,7 +98,10 @@ xml = Nokogiri::XML::Builder.new do |x|
 								x << div.css( 'code' ).inner_html.strip
 							}
 						else
-							$stderr.puts "#{tech_id}: Unknown class name '#{div.node_name}.#{div.attr 'class'}', skipped." unless div.node_name == 'text'
+							unless div.node_name == 'text'
+								$stderr.puts "#{tech_id}: Unknown class name '#{div.node_name}.#{div.attr 'class'}', skipped."
+								exit 1
+							end
 						end
 					}
 				}
