@@ -6,13 +6,25 @@
 	<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
-    <meta http-equiv="Content-Style-Type" content="text/css" /><title>H42: h1要素～h6要素を用いて、見出しを特定する</title>
-		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+    <meta http-equiv="Content-Style-Type" content="text/css" /><title>H42: h1要素～h6要素を用いて、見出しを特定する｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
 		<link rel="stylesheet" type="text/css" href="css/additional.css" />
 		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
-		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
-	</head>
-	<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
+</head>
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
+    <div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
 	
 		<div id="skipnav">
 			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
@@ -60,16 +72,54 @@
         
             </div>
         
-            <h2 class="small-head" id="H42-examples">事例</h2>
-            
-						<h3 class="small-head" id="H42-ex1">事例 1：3段組レイアウトの見出し設定</h3><div class="example">
+	<h2 class="small-head" id="H42-examples">事例</h2>
+<div class="diff-add">
+		<span class="difftext"> [ここから追加]</span>
+    <h3 class="small-head" id="H42-ex1">事例 1: 階層的な見出し構造</h3>
+<div class="example"><div class="textbody">
+		<p>以下の事例では、<code>h3</code>が<code>h2</code>のサブセクションで、<code>h2</code>が<code>h1</code>のサブセクションとなっていて、見出しが階層的なレイアウトに用いられている。</p>
+</div>
+<div class="code">
+<p><strong>コード例</strong></p>
+<pre><code>
+&lt;h1&gt;Plant Foods that Humans Eat&lt;/h1&gt;
+&lt;p&gt;There are an abundant number of plants that humans eat...&lt;/p&gt;
+&lt;h2&gt;Fruit&lt;/h2&gt;
+&lt;p&gt; A fruit is a structure of a plant that contains its
+  seeds...&lt;/p&gt;
+&lt;h3&gt;Apple&lt;/h3&gt;
+&lt;p&gt;The apple is the pomaceous fruit of the apple tree...&lt;/p&gt;
+&lt;h3&gt;Orange&lt;/h3&gt;
+&lt;p&gt;The orange is a hybrid of ancient cultivated origin...&lt;/p&gt;
+&lt;h3&gt;Banana&lt;/h3&gt;
+&lt;p&gt;Banana is the common name for herbaceous plants ...&lt;/p&gt;
+&lt;h2&gt;Vegetables&lt;/h2&gt;
+&lt;p&gt;A vegetable is an edible plant or part of a plant other than a
+  sweet fruit ...&lt;/p&gt;
+&lt;h3&gt;Broccoli&lt;/h3&gt;
+&lt;p&gt;Broccoli is a plant of the mustard/cabbage family ... &lt;/p&gt;
+&lt;h3&gt;Brussels sprouts&lt;/h3&gt;
+&lt;p&gt;The Brussels sprout of the Brassicaceae family, is a Cultivar
+  group of wild cabbage ...&lt;/p&gt;
+&lt;h3&gt;Green beans&lt;/h3&gt;
+&lt;p&gt;Green beans have been bred for the fleshiness, flavor, or
+  sweetness of their pods...&lt;/p&gt;</code></pre></div></div>
+  <span class="difftext">[追加ここまで] </span></div>
+  
+						<h3 class="small-head" id="H42-ex1">事例 <span class="diff-change"><span class="difftext"> [ここから変更]</span>2<span class="difftext">[変更ここまで] </span></span>：3段組レイアウトの見出し設定</h3><div class="example">
             
                   
             
                   <div class="textbody">
               
 							<p>この事例では、3段組の真ん中にページのメインコンテンツがある。メインコンテンツは、ページ内で最初のコンテンツではないが、そのタイトルはページタイトルと同じで、<code>h1</code>要素でマークアップされている。3段組のうち1番目と3番目のコンテンツは重要度が低いため、タイトルが<code>h2</code>要素でマークアップされている。【訳注：見出しを適切にマークアップする方法は、<a href="H69.html">H69： コンテンツの各セクションの開始位置に見出し要素を提供する</a>及び<a href="G141.html">G141： 見出しを用いてウェブページを構造化する</a>を参照するとよい。】</p>
-            
+<div class="note">
+<div class="diff-add">
+		<span class="difftext"> [ここから追加]</span>
+	<p class="prefix"><em>注記：</em>以下のコード例は、ウェブページの特定のセクションに対して用いるべき見出しレベルを規定するものではないことに留意することが重要である。レイアウトする際には、各カラムの最初に見出しを同じ見出しレベル（例えば、h1）で提示したり、またはコード例にあるようにメインコンテンツに関してその重要度を反映した見出しレベルで提示したりすることが可能である。</p>
+<span class="difftext">[追加ここまで] </span>
+</div>
+</div>            
                   </div>
             
           
@@ -168,13 +218,9 @@
                 
 								<p>1.及び2.を満たしている。</p>
               
-                     </li></ul>
-          
-               
-        
-            </div>
-      
-			<!-- BOTTOM NAVIGATION BAR -->
+                     </li></ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
 <ul id="navigationbottom">
 			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
 			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
@@ -194,6 +240,7 @@
 				<li>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H42.html">H42: Using h1-h6 to identify headings（英語）</a></li>
 				<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
 				<li>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></li>
+                <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 			</ul>
 	</div>
 	

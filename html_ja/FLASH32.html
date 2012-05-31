@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>FLASH32： 自動ラベル機能を使用してフォーム・コントロールにテキストラベルを関連付ける｜WCAG 2.0 実装方法集</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH31.html"><strong>前： </strong>実装方法 FLASH31</a></li>
+<li><a href="FLASH33.html"><strong>次： </strong>実装方法 FLASH33</a></li>
+</ul>
+<div class="navtoc">
+<p>On this page:</p>
+<ul id="navbar">
+<li><a href="#FLASH32-applicability">適用（対象）</a></li>
+<li><a href="#FLASH32-description">解説</a></li>
+<li><a href="#FLASH32-examples">事例</a></li>
+<li><a href="#FLASH32-related-techs">関連する実装方法</a></li>
+<li><a href="#FLASH32-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+<h1><a name="FLASH32" id="FLASH32"> </a>FLASH32： 自動ラベル機能を使用してフォーム・コントロールにテキストラベルを関連付ける</h1>
+<div class="applicability">
+<h2 id="FLASH32-applicability">適用（対象）</h2>
+<div class="textbody"><ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#text-equiv-all">達成基準 1.1.1（非テキストコンテンツ）</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#text-equiv-all">How to Meet 1.1.1 (Non-text Content)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/text-equiv-all.html">達成基準 1.1.1（非テキストコンテンツ）を理解する</a></li>
+</ul></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#content-structure-separation-programmatic">達成基準 1.3.1 (情報及び関係性)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#content-structure-separation-programmatic">How to Meet 1.3.1 (Info and Relationships)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">達成基準 1.3.1 (情報及び関係性) を理解する</a></li>
+</ul></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#minimize-error-cues">達成基準 3.3.2 (ラベル又は説明文)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#minimize-error-cues">How to Meet 3.3.2 (Labels or Instructions)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html">達成基準 3.3.2 (ラベル又は説明文) を理解する</a></li>
+</ul></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-rsv">達成基準 4.1.2 (プログラムが解釈可能な識別名・役割及び設定可能な値)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#ensure-compat-rsv">How to Meet 4.1.2 (Name, Role, Value)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">達成基準 4.1.2 (プログラムが解釈可能な識別名・役割及び設定可能な値) を理解する</a></li>
+</ul></li>
+</ul>
+<div class="ua-issues">
+<h2 class="small-head" id="ua9.32.1">ユーザーエージェント及び支援技術によるサポート</h2>
+<div class="ua-issue">
+<p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+</div>
+</div>
+<h2 id="FLASH32-description">解説</h2>
+<div class="textbody">
+<p><code>CheckBox</code> コンポーネントおよび <code>RadioButton</code> コンポーネント以外の Flash 標準コンポーネントでは、関連付けられたラベルが自動的に提供されることはない。これらのコンポーネントについては、<code>Label</code> コンポーネントを使用して、コントロールの隣にラベルテキストを手動で配置する必要がある。アクセシビリティパネルで「自動ラベル」機能を有効にしてある場合は、<code>TextInput</code> コンポーネントおよび <code>TextArea</code> コンポーネントについては Flash Player が自動的にラベルテキストを関連付ける。つまり、これらのコンポーネントでは、アクセシビリティパネルを使用してコントロールのラベルテキストを複製する必要はない。自動ラベル機能はデフォルトで有効になっている。</p>
+<p>また、自動ラベル機能によって、Flash Player はボタンシンボルに含まれているテキストをシンボルのアクセシブルな名前として自動的に追加することが可能になる。これは、ボタンシンボルがテキストラベルを含む一つのレイヤーだけで構成されている場合のみ有効である。</p>
+
+<div class="note">
+<p class="prefix"><em>注記： </em>自動ラベル機能は人間が操作することなくラベルを関連付けるため、関連付けの正確性を検証する必要がある。予測可能な結果を得るためには、すべてのコントロールに対して明示的にラベルを追加することが推奨される。</p>
+</div>
+<p>次の手順で自動ラベル機能を利用する。</p>
+<ol class="enumar">
+<li><p>Flash アプリケーションに含まれる各フォーム・コントロールの近くに、説明テキストが配置されていることを確認する。自動ラベル機能で使用されるテキストは、支援技術からアクセス可能にする必要がある。</p></li>
+<li><p>ムービーステージを選択し、「アクセシビリティ」パネルを開く。</p></li>
+<li><p>「自動ラベル」オプションがオンになっていることを確認する。この結果、TextInput コントロールおよび TextArea コントロールにラベルが自動的に関連付けられ、カスタムボタンシンボル内のテキストがアクセシブルな名前として追加される。</p></li>
+<li><p>自動ラベル動作が適さない Flash コンテンツの場合は「自動ラベル」オプションをオフにし、「アクセシビリティ」パネルで各コントロールに分かりやすい「名前」の値を設定する。</p></li>
+<li><p>自動ラベル機能を、ムービー全体に対してでなく特定のオブジェクトに対して無効にするには、プロパティインスペクタを使用してテキストのタイプを「ダイナミックテキスト」に変更する。次にそのテキストを選択し、「アクセシビリティ」パネルで「オブジェクトをアクセス可能にする」オプションをオフにする。</p></li>
+</ol>
+<div class="note">
+<p class="prefix"><em>注記： </em>アクセシビリティパネルを使用する以外にも、ステージオブジェクトの <code>AccessibilityProperties.noAutoLabel</code> を <code>true</code> に設定することによって自動ラベル機能をオフにすることができる。</p>
+</div>
+</div>
+<h2 class="small-head" id="FLASH32-examples">事例</h2>
+<h3 class="small-head" id="FLASH32-ex1">事例 1： アクセシビリティパネルで「自動ラベル」オプションを使用する</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例では、二つの TextInput コンポーネントと、TextArea コンポーネントとカスタムボタンシンボルのインスタンスが一つずつ表示される。各 TextInput コンポーネントには、コントロールの左に個別のラベル要素が配置されている。TextArea コンポーネントには、コントロールの上にラベルが配置されている。カスタムボタンには、ボタンシンボルの内部にラベルテキストが配置されている。アクセシビリティパネルで「自動ラベル」オプションを有効にしているため、すべてのコントロールに対してラベルに基づいたアクセシブルな名前が提供される。</p>
+
+<p>次のスクリーンショットは、この事例を示したものである。
+ <img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH32/using_auto_label.png" alt="画面スクリーンショット：Flashオーサリング環境で自動ラベル機能を使用" height="300" width="593"/></p>
+
+<p>この実例は、 <a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH32/using_auto_labeling_to_associate_label_text_with_controls_as3.html">「アクセシビリティパネルで「自動ラベル」オプションを使用する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH32/using_auto_labeling_to_associate_label_text_with_controls_as3.swf">「アクセシビリティパネルで「自動ラベル」オプションを使用する」のソース（英語）</a>をダウンロードすることもできる。</p>
+</div>
+</div>
+<h2 id="FLASH32-related-techs">関連する実装方法</h2>
+<div class="textbody"><ul>
+<li><a href="FLASH25.html">FLASH25： アクセシブルな名前を設定することによって、フォーム・コントロールにラベルを付ける</a></li>
+</ul>
+</div>
+<h2 id="FLASH32-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="FLASH32-procedure">チェックポイント</h3>
+<p>Flash フォームに TextInput コンポーネント、TextArea コンポーネント、またはテキストラベルを使用したカスタムボタンシンボルが含まれている場合、次のことを確認する。</p>
+<ol class="enumar">
+<li><p>ムービーのアクセシビリティパネルで「自動ラベル」オプションが有効になっている。</p></li>
+<li><p>スクリーンリーダーまたは MSAA チェッカーを使用して確認すると、ラベルテキストがコントロールのアクセシブルな名前として実際に利用されている。</p></li>
+</ol>
+<h3 class="small-head" id="FLASH32-results">判定基準</h3><ul>
+<li><p>1. および 2. を満たしている。</p></li>
+</ul>
+<p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">Top</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH31.html"><strong>前： </strong>実装方法 FLASH31</a></li>
+<li><a href="FLASH33.html"><strong>次： </strong>実装方法 FLASH33</a></li>
+</ul>
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH32.html">FLASH32: Using auto labeling to associate text labels with form controls（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></li>
+	</ul>
+</div>
+</body>
+</html>

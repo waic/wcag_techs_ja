@@ -7,13 +7,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-	<title>H91: HTMLのフォーム・コントロール及びリンクを用いる</title>
-		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+	<title>H91: HTMLのフォーム・コントロール及びリンクを用いる｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
 		<link rel="stylesheet" type="text/css" href="css/additional.css" />
 		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
-		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
-	</head>
-	<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
+</head>
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
+<div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
 
 		<div id="skipnav">
 			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
@@ -24,7 +36,7 @@
 			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
 			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
 			<li><a href="H90.html"><strong>前：</strong>実装方法 H90</a></li>
-			<li><a href="C6.html"><strong>次：</strong>実装方法 C6</a></li>
+			<li><a href="H92.html"><strong>次：</strong>実装方法 H92</a></li>
 		</ul>
 
 	<div class="navtoc">
@@ -40,7 +52,7 @@
 	</div>
 
             
-            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="H91" id="H91"> </a>HTMLのフォーム・コントロール及びリンクを用いる</h1>
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="H91" id="H91"> </a>H91： HTMLのフォーム・コントロール及びリンクを用いる</h1>
             
             <div class="applicability"><h2 id="H91-applicability">適用（対象）</h2><div class="textbody">
 								<p>HTMLのフォーム・コントロール及びリンク</p>
@@ -234,11 +246,11 @@
 												<h4 id="H91-subhead-13">事例 3b</h4>
                         
 												<p>
-														事例 3bでは、入力フィールドが事例 3aと同じ役割（Role）と値（Value）を持つが、識別名（Name）を<code>title</code>属性で指定している点が異なる。</p>
+														事例 3bでは、入力フィールドが事例 3aと同じ役割（Role）<span class="diff-delete"><span class="difftext">[ここから削除] </span><span>と値（Value）</span><span class="difftext">[削除ここまで]</span></span>を持つが、<span class="diff-add"><span class="difftext">[ここから追加] </span><span>値（Value）がなく、</span><span class="difftext">[追加ここまで]</span></span>識別名（Name）を<code>title</code>属性で指定している点が異なる。</p>
                     
                   </div>
 
-                  <div class="code"><p><strong>コード例：</strong></p><pre><code>&lt;input id="text_1" type="text" value="バナナ" title="果物の種類"&gt;
+                  <div class="code"><p><strong>コード例：</strong></p><pre><code>&lt;input id="text_1" type="text" <span class="diff-delete"><span class="difftext">[ここから削除] </span>value="バナナ" <span class="difftext">[削除ここまで]</span></span>title="果物の種類"&gt;
 </code></pre></div>
 
                 
@@ -288,7 +300,7 @@
 												<h4 id="H91-subhead-14">事例 6a</h4>
                         
 												<p>
-														事例 6aは、<code>select</code>要素によって「コンボボックス」という役割（Role）を持っている。識別名（Name）は「数量」で、<code>label</code>要素から与えられている。<code>select</code>要素に識別名を付け忘れるのは、よくあるエラーの一つである。値（Value）は、<code>selected</code>属性で「<code>selected</code>」と指定した<code>option</code>要素であり、初期値は「2個」ということになる。</p>
+														事例 6aは、<code>select</code>要素によって「コンボボックス」という役割（Role）を持っている。識別名（Name）は「数量」で、<code>label</code>要素から与えられている。<code>select</code>要素に識別名を付け忘れるのは、よくあるエラーの一つである。値（Value）は、<code>selected</code>属性<span class="diff-change"><span class="difftext">[ここから変更] </span><span>（XHTMLでは値を "<code>selected</code>" と指定）のある</span><span class="difftext">[変更ここまで]</span></span><code>option</code>要素であり、初期値は「2個」ということになる。</p>
                     
                   </div>
 										
@@ -338,9 +350,8 @@
                   <div class="textbody">
                         
                      <h4 id="H91-subhead-17">事例 7b</h4>
-                        
-												<p>
-														事例 7bは、事例 7aの<code>textarea</code>要素と同じ識別名（Name）、役割（Role）、値（Value）であるが、識別名を<code>title</code>属性で指定している点が異なる。</p>
+                        <p><span class="diff-change"><span class="difftext">[ここから変更] </span><span>事例 7bは、同じ役割（Role）を持ち、識別名（Name）は<code>title</code>属性を用いて指定していて、値（Value）は空である。</span><span class="difftext">[変更ここまで]</span></span></p>
+												
                     
                   </div>
 										
@@ -420,20 +431,15 @@
                     
                   <ul><li>
 									<p>上記2.を満たしている。</p>
-                     </li></ul>
-                    
-                
-               
-            
-            </div>
-        
-			<!-- BOTTOM NAVIGATION BAR -->
+                     </li></ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
 <ul id="navigationbottom">
 			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
 			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
 			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
 			<li><a href="H90.html"><strong>前：</strong>実装方法 H90</a></li>
-			<li><a href="C6.html"><strong>次：</strong>実装方法 C6</a></li>
+			<li><a href="H92.html"><strong>次：</strong>実装方法 H92</a></li>
 		</ul>
 				
 				<div class="footer">
@@ -447,6 +453,7 @@
 				<li>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H91.html">H91: Using HTML form controls and links（英語）</a></li>
 				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
 				<li>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></li>
+                <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 			</ul>
 	</div>
 

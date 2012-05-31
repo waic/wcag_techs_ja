@@ -7,13 +7,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-	<title>H48: リストに、ol要素、ul要素、dl要素を用いる</title>
-		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+	<title>H48: リストに、ol要素、ul要素、dl要素を用いる｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
 		<link rel="stylesheet" type="text/css" href="css/additional.css" />
 		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
-		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
-	</head>
-	<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
+</head>
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
+    <div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
 	
 		<div id="skipnav">
 			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
@@ -80,7 +92,7 @@
         
             <h2 class="small-head" id="H48-examples">事例</h2>
           
-					<h3 class="small-head" id="H48-ex1">事例 1：連続するステップ示すリスト</h3><div class="example">
+					<h3 class="small-head" id="H48-ex1">事例 1：連続するステップを示すリスト</h3><div class="example">
             
                   
             
@@ -117,7 +129,8 @@
           
                </div>
           
-					<h3 class="small-head" id="H48-ex3">事例 3：言葉とその定義</h3><div class="example">
+					<h3 class="small-head" id="H48-ex3">事例 3：言葉とその定義</h3>
+                    <div class="example">
             
                   
             
@@ -138,8 +151,84 @@
           
                </div>
         
-            
-        
+<div class="diff-add"><span class="difftext">[ここから追加] </span>
+<h3 class="small-head" id="H48-ex4">事例 4： 定義リストを用いた連絡先情報</h3>
+<div class="example">
+<div class="textbody">
+	<p>この事例では、定義リストを用いて、対になる関連するアイテムをマークアップしている。対になっているアイテムは、それ自体が論理的に関連したリストである。定義リスト要素のCSSスタイルはブラウザによるサポートが十分ではないため、スタイル目的のためだけにspan要素がマークアップに含められているが、これは必須ではない。</p>
+<div class="code">
+<pre><code>
+&lt;dl&gt;
+&lt;dt&gt;&lt;span&gt;名前：&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;John Doe&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span&gt;電話番号：&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;01-2345678&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span&gt;FAX：&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;02-3456789&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span&gt;Eメール：&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;johndoe@someemail.com&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+</div>
+	<p>以下のCSSスタイルは、対になっているアイテムそれぞれをテーブルのようなレイアウトにして一行に並べるために用いることが可能である。</p>
+<div class="code">
+<pre><code>
+dt, dd{float: left;margin: 0;padding: 0;}
+dt{clear:both;font-weight: bold}
+dt span{display: inline-block; width: 70px;}
+dd span{display: inline-block; margin-right: 5px;}
+</code></pre>
+</div>
+	<p>この事例のサンプルとして、<a href="http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/working-examples/H48/ContactInfoDL.html">定義リストを用いた連絡先情報のサンプル</a>がある。</p>
+</div>
+</div>
+<span class="difftext">[追加ここまで]</span></div>
+<div class="diff-add"><span class="difftext">[ここから追加] </span>
+<h3 class="small-head" id="H48-ex5">事例 5： リストを用いてリンクをグループ化する</h3>
+<div class="example">
+<div class="textbody">
+	<p>この事例では、リンクが <code>ul</code> 要素と <code>li</code> 要素を用いてグループ化されている。</p>
+</div>
+<div class="code">
+<p><strong>コード例：</strong></p>
+<pre><code>
+&lt;a name="categories" id="categories"&gt;&lt;/a&gt;&lt;h2&gt;製品カテゴリ&lt;/h2&gt;
+&lt;ul class="navigation"&gt;
+    &lt;li&gt;&lt;a href="kitchen.html"&gt;キッチン&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="bedbath.html"&gt;ベッド&amp;amp; Bath&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="dining.html"&gt;ダイニング&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="lighting.html"&gt;照明&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="storage.html"&gt;収納&lt;/a&gt;&lt;li&gt;
+&lt;/ul&gt; </code></pre>
+</div>
+<div class="textbody">
+	<p>リスト要素のスタイルを指定するのにCSSを使用することが可能で、この実装方法はさまざまなビジュアルデザインで用いることができる。</p>
+	<p>このCSSでは、リストのビュレットとインデントする左側の余白を削除して、各リスト要素を水平に並べている。</p>
+</div>
+<div class="code">
+<p><strong>コード例：</strong></p>
+<pre><code>
+ul.navigation {
+  list-style: none; 
+  padding: 0;
+}
+ul.navigation li {
+  display: inline;
+}</code></pre>
+</div>
+<div class="textbody">
+	<p>このスタイルは、リストのビュレットと左側の余白を削除し、リスト項目を横並びのブロックにして表示する。</p></div>
+<div class="code">
+<p><strong>コード例：</strong></p>
+<pre><code>
+ul.navigation {
+ list-style: none; 
+ padding: 0;
+}
+ul.navigation li {
+ display: block; 
+ float: left;
+}
+</code></pre>
+</div>
+</div>            
+<span class="difftext">[追加ここまで]</span></div>        
 				<h2 id="H48-resources">参考リソース</h2><div class="textbody"><p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
           
                
@@ -197,13 +286,9 @@
                 
 								<p>上記全てを満たしている。</p>
               
-                     </li></ul>
-          
-               
-        
-            </div>
-      
-			<!-- BOTTOM NAVIGATION BAR -->
+                     </li></ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
 <ul id="navigationbottom">
 			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
 			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
@@ -223,6 +308,7 @@
 				<li>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H48.html">H48: Using ol, ul and dl for lists（英語）</a></li>
 				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
 				<li>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></li>
+                <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 			</ul>
 	</div>
 

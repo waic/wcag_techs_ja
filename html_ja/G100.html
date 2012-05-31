@@ -7,13 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-<title>G100: 非テキストコンテンツの一般に認められた名前又は内容が分かる名前を提供する</title>
-		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<title>G100: 非テキストコンテンツの一般に認められた名前又は内容が分かる名前を提供する｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
 		<link rel="stylesheet" type="text/css" href="css/additional.css" />
 		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
-		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
 </head>
-<body class="slices">
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
 <div id="masthead">
 <p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
 <p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
@@ -42,7 +53,7 @@
 		</ul>
 	</div>
         
-            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G100" id="G100"> </a>G100: 非テキストコンテンツの一般に認められた名前又は内容が分かる名前を提供する</h1>
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G100" id="G100"> </a>G100: 非テキストコンテンツの一般に認められた名前又は内容が分かる名前<span class="diff-add"><span class="difftext">[ここから追加] </span><span>となる簡潔な代替テキスト</span><span class="difftext">[追加ここまで]</span></span>を提供する</h1>
         
             <div class="applicability"><h2 id="G100-applicability">適用（対象</h2><div class="textbody">
           
@@ -69,22 +80,16 @@
               
                      <ul><li>
                   
-                           <p>
-                    
-                              <strong>事例 1:</strong>モナリザの絵には「モナリザ。レオナルド・ダ･ビンチ作」という代替テキスト がある。</p>
+                           <p>モナリザの絵には「モナリザ。レオナルド・ダ･ビンチ作」という代替テキスト がある。</p>
                 
                         </li><li>
                   
-                           <p>
-                    
-                              <strong>事例 2:</strong>音声ファイルには「テルミンを演奏している5人の小学生」という代替テキストがある。
+                           <p>音声ファイルには「テルミンを演奏している5人の小学生」という代替テキストがある。
                                     </p>
                 
                         </li><li>
                   
-                           <p>
-                    
-                              <strong>事例 3:</strong>有名なモダンアートの作品には「赤、青、及び黄色。ピエト　モンドリアン作」という表題が付けられている。</p>
+                           <p>有名なモダンアートの作品には「赤、青、及び黄色。ピエト　モンドリアン作」という表題が付けられている。</p>
                 
                         </li></ul>
             
@@ -112,11 +117,11 @@
             
                   <ol class="enumar"><li>
                 
-                        <p>代替テキストで内容が分かる名前を提供している。</p>
+                        <p><span class="diff-add"><span class="difftext">[ここから追加] </span><span>簡潔な</span><span class="difftext">[追加ここまで]</span></span>代替テキストで内容が分かる名前を提供している。</p>
               
                      </li><li>
                 
-                        <p>代替テキストで非テキストコンテンツに作者や他の人によって以前から付け<span>られている</span>名前を提供している。</p>
+                        <p><span class="diff-add"><span class="difftext">[ここから追加] </span><span>簡潔な</span><span class="difftext">[追加ここまで]</span></span>代替テキストで非テキストコンテンツに作者や他の人によって以前から付け<span>られている</span>名前を提供している。</p>
               
                      </li></ol>
           
@@ -128,12 +133,8 @@
                 
                         <p> 1.又は2.を満たしている。</p>
               
-                     </li></ul>
-          
-               
-        
-            </div>
-      
+                     </li></ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
 <!-- BOTTOM NAVIGATION BAR -->
 <ul id="navigationbottom">
 	<li><strong><a href="#top">このページの先頭へ</a></strong></li>
@@ -153,5 +154,6 @@
 				<li>原文：<a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G100">G100: Providing the accepted name or a descriptive name of the non-text content（英語）</a></li>
 				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
 				<li>日本語訳：<a href="ttp://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+                <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 			</ul>
 </div>

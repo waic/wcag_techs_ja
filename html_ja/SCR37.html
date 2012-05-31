@@ -7,13 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-<title>SCR37: デバイス非依存な方法でカスタム・ダイアログを作成する</title>
-<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
-<link rel="stylesheet" type="text/css" href="css/additional.css" />
-<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
-<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+<title>SCR37: デバイス非依存な方法でカスタム・ダイアログを作成する｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
 </head>
-<body class="slices">
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
 <div id="masthead">
 		<p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
 		<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
@@ -201,11 +212,7 @@ function ResetForm(elem)
 				<li>
 						<p>Microsoft Developer Network Whitepaper:<a href="http://download.microsoft.com/download/0/f/5/0f5e941c-c495-401a-9031-eab8315da35e/writing_accessible_web_applications.doc"> Writing Accessible Web Applications</a> by Cynthia C. Shelly and George Young. (Microsoft Word Format)</p>
 				</li>
-				<li>
-						<p> <a href="http://www.microsoft.com/downloads/details.aspx?familyid=3755582A-A707-460A-BF21-1373316E13F0&amp;displaylang=en">Microsoft Active Accessibility 2.0 SDK</a>. Includes Inspect32.exe and other MSAA tools.</p>
-				</li>
-				<li>
-						<p> <a href="http://www.microsoft.com/downloads/details.aspx?familyid=E59C3964-672D-4511-BB3E-2D5E1DB91038&amp;displaylang=en">Microsoft Internet Explorer Developer Toolbar.</a>. Allows examination of script-generated DOM in Microsoft Internet Explorer</p>
+                <li><div class="diff-change"><span class="difftext">[ここから変更] </span><p><a href="http://msdn.microsoft.com/en-us/library/ms695716.aspx">Microsoft Active Accessibility 2.0 SDK</a>. Includes Inspect32.exe and other MSAA tools.</p><span class="difftext">[変更ここまで]</span></div></li><li><div class="diff-add"><span class="difftext">[ここから追加] </span><p><a href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd318521%28v=vs.85%29.aspx">Instructions for the Inspect tool</a></p><span class="difftext">[追加ここまで]</span></div></li><li><div class="diff-add"><span class="difftext">[ここから追加] </span><p><a href="http://www.eramp.com/david/name-role-value-using-inspect.htm">Using the Inspect tool to find name Name, Role and Value for Javascript</a></p><span class="difftext">[追加ここまで]</span></div></li><li><p><span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar.</a><span class="difftext">[変更ここまで]</span></span>. Allows examination of script-generated DOM in Microsoft Internet Explorer</p>
 				</li>
 				<li>
 						<p> <a href="http://getfirebug.com/">Firebug</a>. Allows examination of script-generated DOM in Firefox. </p>
@@ -244,7 +251,7 @@ function ResetForm(elem)
 				<li>
 						<p>2., 3., 4.及び5.を満たしている。</p>
 				</li>
-		</ul>
+		</ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
 </div>
 <!-- BOTTOM NAVIGATION BAR -->
 <ul id="navigationbottom">
@@ -265,6 +272,7 @@ function ResetForm(elem)
 				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR37.html">SCR37: Creating Custom Dialogs in a Device Independent Way（英語）</a></li>
 				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
 				<li>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</li>
+                <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 		</ul>
 </div>
 </body>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>SVR5: HTTPヘッダーで主たる自然言語を指定する｜WCAG 2.0 実装方法集</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="SVR4.html"><strong>前：</strong>実装方法 SVR4</a></li>
+<li><a href="SM1.html"><strong>次：</strong>実装方法 SM1</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：</p>
+<ul id="navbar">
+<li><a href="#SVR5-applicability">適用（対象）</a></li>
+<li><a href="#SVR5-description">解説</a></li>
+<li><a href="#SVR5-examples">事例</a></li>
+<li><a href="#SVR5-resources">参考リソース</a></li>
+<li><a href="#SVR5-related-techs">関連する実装方法</a></li>
+<li><a href="#SVR5-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+<h1><a name="SVR5" id="SVR5"> </a>SVR5: HTTPヘッダーで主たる自然言語を指定する</h1>
+<div class="applicability">
+<h2 id="SVR5-applicability">適用（対象）</h2>
+<div class="textbody">
+	<p>サーバサイド技術（HTTPヘッダーを設定するサーバサイドのスクリプト言語及びサーバ設定ファイルを含む）</p>
+</div>
+</div>
+	<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+	<ul>
+	<li><a href="http://waic.jp/docs/WCAG20/Overview.html#meaning-doc-lang-id">達成基準 3.1.1 （ページの言語）</a>
+		<ul>
+		<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20120103/#meaning-doc-lang-id">How to Meet 3.1.1 (Language of Page)：英語</a></li>
+		<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/meaning-doc-lang-id.html">達成基準 3.1.1 （ページの言語）を理解する</a></li>
+		</ul></li>
+	</ul>
+<h2 id="SVR5-description">解説</h2>
+<div class="textbody">
+	<p>この実装方法の目的は、コンテンツの対象者を特定するために、ウェブページの主たる自然言語に関する情報を提供することである。HTTP Content-Language ヘッダーには、一つ以上の言語コードのリストを含めることが可能で、ユーザーエージェントとサーバとの間での言語ネゴシエーションに用いられる。ユーザーエージェントで言語設定が正しく設定されていれば、言語ネゴシエーションによってユーザーは自分が設定した自然言語に合うコンテンツを見つけることができる。</p>
+    <p>ただし、HTTP Content-Language ヘッダーは、コンテンツを処理するのに用いられる自然言語を特定するためのものではないことに注意しなければならない。コンテンツを処理する自然言語は、マークアップ言語のlang属性やxml:lang属性などによって特定することができる。</p>
+	<p>この実装方法は、lang属性またはxml:lang属性の例で明記されているように、文書の主たる自然言語をHTTP Content-Language ヘッダーで挙げるようにするものである。</p>
+    <p><strong>訳注：</strong>【WCAGワーキンググループに確認中】言語ネゴシエーション (language negotiation) というのは、Accept-Languageによるコンテント・ネゴシエーションのことを指していると思われますが、このときネゴシエーションに使われるのは "Content-Language" ではなく、クライアントが送る "Accept-Language" の値です。現在、原文の記述に誤りがないかどうかを確認中です。</p>
+</div>
+<h2 class="small-head" id="SVR5-examples">事例</h2>
+<h3 class="small-head" id="SVR5-ex1">事例 1： Javaサーブレット及びJSPによるコンテンツの自然言語設定</h3>
+<div class="example">
+<div class="textbody">
+	<p>Java サーブレット又はJavaServer Pages(JSP)では、開発者は response.setHeader("Content-Language", lang)を用いることが可能で、"lang" は言語タグを表す（例えば、英語なら "en" ）：</p>
+</div>
+<div class="code">
+	<p><strong>コード例：</strong></p>
+	<pre><code>
+…
+public void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException 
+{
+…
+  response.setHeader("Content-Language", "en");
+  PrintWriter out = response.getWriter();
+…
+}
+	</code></pre>
+</div>
+</div>
+<h3 class="small-head" id="SVR5-ex2">事例 2： PHPによるコンテンツの自然言語設定</h3>
+<div class="example">
+<div class="textbody">
+	<p>PHPでは、開発者は header メソッドで生のHTTPヘッダーを送ることができる。次の例では、自然言語をフランス語に設定している：</p>
+</div>
+<div class="code">
+	<p><strong>コード例：</strong></p>
+	<pre><code>
+&lt;?php  header('Content-language: fr');  …  ?&gt;  
+	</code></pre>
+</div>
+</div>
+<h2 id="SVR5-resources">参考リソース</h2>
+<div class="textbody">
+	<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+	<p> <a href="http://www.w3.org/International/questions/qa-http-and-lang">W3C Internationalization FAQ: HTTP and meta for language information</a></p>
+	<p> <a href="http://www.w3.org/TR/i18n-html-tech-lang/#ri20040429.094220724">Best Practice 9: Using HTTP or a meta tag to indicate audience</a> in Internationalization Best Practices: Specifying Language in XHTML &amp; HTML Content - W3C Working Group Note 12 April 2007. </p><p> <a href="http://www.ietf.org/rfc/rfc1945.txt">Hypertext Transfer Protocol -- HTTP/1.0 (IETF Request for Comments 1945)</a> (plain text) </p>
+	<p> <a href="http://www.ietf.org/rfc/rfc2616.txt">Hypertext Transfer Protocol -- HTTP/1.1 (IETF Request for Comments 2616)</a> (plain text) </p>
+	<p> <a href="http://php.net/manual/en/function.header.php">header</a> in the PHP Manual. </p>
+</div>
+<h2 id="SVR5-related-techs">関連する実装方法</h2>
+<div class="textbody">
+	<ul>
+	<li><a href="H57.html">H57:  Using language attributes on the html element </a></li>
+	</ul>
+</div>
+<h2 id="SVR5-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="SVR5-procedure">チェックポイント</h3>
+	<ol class="enumar">
+	<li><p>Live HTTP Header ビューアを用いて、"Content-Language" ヘッダーの値を確認する。</p></li>
+	<li><p>その値がウェブページの主たる自然言語と合致している。</p></li>
+	</ol>
+<h3 class="small-head" id="SVR5-results">判定基準</h3>
+	<ul>
+	<li><p>2. を満たしている。</p></li>
+	</ul>
+	<p>この実装方法がある達成基準を満たすことのできる実装方法である場合、この判定基準をクリアしていなかったとしても、そのことは必ずしもその達成基準が満たされていないことを意味しない。単にこの実装方法が正しく用いられておらず、この実装方法によって達成基準を満たしているとはいえないということである。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+	<ul id="navigationbottom">
+<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="SVR4.html"><strong>前：</strong>実装方法 SVR4</a></li>
+	<li><a href="SM1.html"><strong>次：</strong>実装方法 SM1</a></li>
+	</ul>
+<div class="footer">
+	<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集 WCAG 2.0の実装方法と不適合事例</a>」の一部であり、文書全体は1ページ版でも提供されている。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+	<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2012 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SVR5.html">SVR5: Specifying the default language in the HTTP header（英語）</a></li>
+	<li>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	</ul>
+</div>
+</body>
+</html>

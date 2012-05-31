@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>Flash テクノロジーノート｜WCAG 2.0 実装方法集</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+	<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+	<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+	<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+	<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+	<ul id="navigation">
+		<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+		<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+		<li><a href="http://www.w3.org/TR/WCAG20-TECHS/ARIA3.html"><strong>前： </strong>実装方法 ARIA3</a></li>
+		<li><a href="FLASH1.html"><strong>次： </strong>実装方法 FLASH1</a></li>
+	</ul>
+	<h1><a name="flash_notes" id="flash_notes"> </a>Flash テクノロジーノート</h1>
+		<p>Adobe Flash Player は、クロスプラットフォームなブラウザのプラグインである。Flash Player によって表示されるコンテンツの制作者は、映像サポート、オーサリングの好み、ベクターベースのグラフィック能力などの様々な要因から Flash Player を用いてコンテンツを提供したり、Flashの標準コンポーネントを利活用したりすることを選択する。コンテンツ制作者がFlashを用いるそういった動機が何であれ、他のウェブコンテンツ技術を用いたウェブコンテンツと同様に、Flash Player で提供されるコンテンツが WCAG 2.0 のアクセシビリティ基準を満たすようにすることは重要である。</p>
+<div class="div3">
+	<h3><a name="flash_ua_support" id="flash_ua_support"> </a>Flash のユーザーエージェントによるサポート</h3>
+		<p>Flash Player は、アクセシビリティのビルトインでのサポートと、コンテンツ制作者およびオーサリングツールがコンテンツをアクセシブルにするために利活用できる性能とのコンビネーションを提供している。Flash コンテンツ制作者は、アクセシブルな Flash コンテンツを制作するためには次のどのツールを用いてもよい（ただし、必ずしもこれらに限定されない）。</p>
+		<ul>
+			<li><p> Flash MX, MX2004, 8, CS3, CS4, CS5 </p></li>
+			<li><p> Flex 1.5 以降</p></li>
+			<li><p> Flex Builder 2, Flex Builder 3, Flash Builder 4 </p></li>
+			<li><p> Flash Catalyst 4 </p></li>
+			<li><p> その他、Adobe Presenter、Adobe Captivate など</p></li>
+		</ul>
+		<p>全盲の利用者、ロービジョンの利用者およびその他の支援技術利用者向けに、Flash Player は2001年に Flash Player 6 でアクセシビリティAPIのサポートを実現した。Flashのアクセシビリティに関する支援技術サポートは、Flash コンテンツに関する情報を支援技術に正しく伝えるという点においては、MSAA（Microsoft   Active  Accessibility）インタフェースと Flash Player 特有のインタフェースに依存している。支援技術のサポートは、次の組み合わせによる閲覧環境の利用者に対して提供されている：</p>
+		<ul>
+			<li><p>Windows OS上での Internet Explorer 6 以降とFlash Player 6 以降の組み合わせ</p></li>
+			<li><p>Windows OS上での Mozilla Firefox 3 以降と Flash Player 9 以降の組み合わせ</p></li>
+		</ul>
+		<p>支援技術によるMSAAのサポートは、次のような支援技術製品で提供されている（ただし、必ずしもこれらに限定されない）。</p>
+		<ul>
+			<li><p> JAWS (4.5 以降) </p></li>
+			<li><p> Window-Eyes (4.2 以降) </p></li>
+			<li><p> NVDA </p></li>
+			<li><p> ZoomText (8 以降) </p></li>
+		</ul>
+</div>
+<div class="div3">
+	<h3><a name="flash_accessibility_support" id="flash_accessibility_support"> </a>Flash によるアクセシビリティのサポート</h3>
+		<p>Flash Player は、マウスを使用することのできない利用者向けにキーボード操作もサポートしている。キーボード操作のサポートに関しては、Internet Explorer で用いられている Flash Player の ActiveX 版が最も高いレベルだが、Mozilla Firefox でのサポートを提供するための実装方法もこの文書で提供されている。「WCAG 2.0 実装方法集」で紹介されているように、Flash コンテンツ制作者はパブリッシュしたコンテンツ内でのタブ順序を制御することができる。</p>
+		<p>Flash player は、映像を表示するのに用いられることが多く、あらゆる言語のクローズド・キャプションやサブタイトルを提供することのできるテキストトラックがある。また、音声ガイドを提供できるように複数の音声トラックも用意されている。さらに、視聴覚コンテンツに手話通訳の提供を可能にする映像トラックも複数ある。</p>
+		<p>現時点では、Flash Player はWindows OSによるハイコントラスト・モードやテキストのサイズ変更をサポートしていない。しかし、Flashコンテンツ制作者は、Flashによるカスケーディング・スタイルシート（CSS）のサポート、その他の標準搭載スタイルのサポート、あるいはFlashの画面フィルタ機能を利用することによって、Flashベースのインタフェースを大きめのテキストで閲覧可能な代替ビュー、代替フォント、あるいは代替ハイコントラスト・カラースキームなどを提供することが可能である。</p>
+		<p>支援技術向けのFlashによるアクセシビリティのサポートは、Windows OS上で、Internet Explorer 6以降（Flash Player 6 以降）または Mozilla Firefox 3 以降（Flash Player 9以降）を使用した場合に限られている。</p>
+		<p>Adobe は、Flash Playerにおけるアクセシビリティのサポート向上を継続していく。2010年3月には、Adobeは  IAccessible2 のサポート及びMac OSとLinuxプラットフォームの双方に対するアクセシビリティAPIのサポートを追加することを発表した。</p>
+		<p>Flash Playerに関する詳細な情報は、Adobeサイトで提供されている <a href="http://www.adobe.com/products/flashplayer/faq.html">Flash Player FAQ（英語）</a>を参照のこと。</p>
+</div>
+<div class="div3">
+	<h3><a name="flash_conformance_considerations" id="flash_conformance_considerations"> </a>WCAG 2.0 適合に向けた特記事項</h3>
+		<ul>
+			<li><p><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-title">2.4.2 ページタイトル</a> - 達成基準 2.4.2 を満たすためには、Flash コンテンツは <code>title</code>要素によるページタイトルを有したHTMLのウェブページ内に埋め込まれていなければならない。<a href="http://www.ciaj.or.jp/access/web/docs/WCAG-TECHS/H25.html">H25： title要素を用いて、ページタイトルを提供する</a>(HTML) を参照のこと。</p></li>
+			<li><p><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#meaning-doc-lang-id">3.1.1 ページの言語</a> - Flash コンテンツの言語は、FlashのSWFファイル自体ではなく、HTMLにある<code>object</code>要素を含んだ部分のlang属性によって示される。また、コンテンツ制作者は、<code>object</code>要素の<code>lang</code>属性によって異なる言語をそれぞれに示した複数のFlashのSWFファイルを一つのウェブページ内に埋め込むことができる。<a href="FLASH13.html"><em>FLASH13： HTML の言語属性を使用して Flash コンテンツの言語を指定する</em></a>を参照のこと。</p></li>
+			<li><p><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#meaning-other-lang-id">3.1.2 部分的に用いられている言語</a> - Flash コンテンツの言語は、FlashのSWFファイル内では示すことができないため、現時点ではSWFファイル内での言語の変更を示すことはできない。</p></li>
+		</ul>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+		<ul id="navigationbottom">
+			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+			<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+			<li><a href="http://www.w3.org/TR/WCAG20-TECHS/ARIA3.html"><strong>前： </strong>実装方法 ARIA3</a></li>
+			<li><a href="FLASH1.html"><strong>次： </strong>実装方法 FLASH1</a></li>
+		</ul>
+<div class="footer">
+		<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。また、パブリックコメントを提出する際は、「<a href="http://www.w3.org/WAI/WCAG20/comments/">Instructions for Commenting on WCAG 2.0 Documents（英語）</a>」にしたがって送信すること。</p>
+		<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2011 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/flash_notes.html">Flash Technology Notes（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></li>
+	</ul>
+</div>
+</body>
+</html>

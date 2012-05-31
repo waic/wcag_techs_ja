@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>FLASH22： キーボードで操作可能なアクションを静的エレメントに追加する｜WCAG 2.0 実装方法集</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH21.html"><strong>前： </strong>実装方法 FLASH21</a></li>
+<li><a href="FLASH23.html"><strong>次： </strong>実装方法 FLASH23</a></li>
+</ul>
+<div class="navtoc">
+<p>On this page:</p>
+<ul id="navbar">
+<li><a href="#FLASH22-applicability">適用（対象）</a></li>
+<li><a href="#FLASH22-description">解説</a></li>
+<li><a href="#FLASH22-examples">事例</a></li>
+<li><a href="#FLASH22-related-techs">関連する実装方法</a></li>
+<li><a href="#FLASH22-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+<h1><a name="FLASH22" id="FLASH22"> </a>FLASH22： キーボードで操作可能なアクションを静的エレメントに追加する</h1>
+<div class="applicability">
+<h2 id="FLASH22-applicability">適用（対象）</h2>
+<div class="textbody"><ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#keyboard-operation-keyboard-operable">達成基準 2.1.1 (キーボード操作)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#keyboard-operation-keyboard-operable">How to Meet 2.1.1 (Keyboard)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html">達成基準 2.1.1 (キーボード操作) を理解する</a></li>
+</ul></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#keyboard-operation-all-funcs">達成基準 2.1.3 (キーボード操作（例外なし）)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#keyboard-operation-all-funcs">How to Meet 2.1.3 (Keyboard (No Exception))：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/keyboard-operation-all-funcs.html">達成基準 2.1.3 (キーボード操作（例外なし）) を理解する</a></li>
+</ul></li>
+</ul>
+<div class="ua-issues">
+<h2 class="small-head" id="ua9.22.1">ユーザーエージェント及び支援技術によるサポート</h2>
+<div class="ua-issue">
+<p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+</div>
+</div>
+<h2 id="FLASH22-description">解説</h2>
+<div class="textbody">
+<p>この実装方法の目的は、デフォルトではキーボードで操作できない Flash ムービークリップをキーボードで操作可能にする方法を示すことである。この実装方法では、tabenabled プロパティを設定してエレメントをフォーカス可能にし、click ハンドラに加えて keydown ハンドラを提供してキーボードからアクションをトリガできるようにする。</p>
+</div>
+<h2 class="small-head" id="FLASH22-examples">事例</h2>
+<h3 class="small-head" id="FLASH22-ex1">事例 1： ムービークリップをボタンとして使用する</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例では、カスタムムービークリップをボタンとして使用する。キーボードでの操作を可能にするため、tabEnabled を使用してムービークリップをタブの順序に配置する。さらに、カスタムボタンがマウスクリックとスペースバーの打鍵の両方に反応するように、冗長なイベントハンドラを追加する。最後に、ムービークリップの AccessibilityProperties オブジェクトを使用して、カスタムボタンにアクセシブルな名前を付ける。これにより、支援技術でボタンのラベルを認識できるようになる。</p>
+
+<p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH22/event_handlers_to_static_objects_as3.html">「ムービークリップをボタンとして使用する」のサンプル（英語）</a>で確認できる。 <a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH22/event_handlers_to_static_objects_as3.swf">「ムービークリップをボタンとして使用する」のソース（英語）</a>をダウンロードすることもできる。</p>
+
+<div class="note">
+<p class="prefix"><em>注記： </em>カスタムボタンはボタンではなくフォーカス可能なグラフィックとして認識されるので、汎用のムービークリップを使用することは一般的に推奨されない。代わりに、標準の Flash の Button コンポーネントを使用するか、「button」タイプの新規シンボルを作成することが望ましい。</p>
+</div>
+</div>
+<div class="code">
+<p><strong>コード例：</strong></p>
+<pre><code>import flash.accessibility. *
+import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
+import flash.net.navigateToURL;
+import flash.net.URLRequest;
+
+testMC.tabEnabled = true;
+updateAccName(testMC);
+testMC.addEventListener(MouseEvent.CLICK, clickHandler, false);
+testMC.addEventListener(KeyboardEvent.KEY_DOWN, keyDownHandler);
+
+updateAccName(testMC);
+
+function clickHandler(e) {
+  testMC.labelText.text = "THANKS";
+  updateAccName(testMC);
+}
+
+function keyDownHandler(e) {
+  if (e.keyCode == 32)
+  clickHandler(e);
+}
+
+function updateAccName(mc: MovieClip) {
+  if (! mc.accessibilityProperties)
+  mc.accessibilityProperties = new AccessibilityProperties();
+  mc.accessibilityProperties.name = mc.labelText.text;
+  Accessibility.updateProperties();
+}</code></pre>
+</div>
+</div>
+<h2 id="FLASH22-related-techs">関連する実装方法</h2>
+<div class="textbody"><ul>
+<li><a href="SCR29.html">SCR29： Adding keyboard-accessible actions to static HTML elements（英語）</a></li>
+<li><a href="FLASH17.html">FLASH17： Flash オブジェクトをキーボードで操作可能にして、キーボードトラップを回避する</a></li>
+</ul>
+</div>
+<h2 id="FLASH22-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="FLASH22-procedure">チェックポイント</h3>
+<p>インタラクティブコントロールとして使用されるムービークリップの汎用インスタンスが Flash ムービーに含まれている場合は、次のことを確認する。</p>
+<ol class="enumar">
+<li><p>ムービークリップインスタンスの tabEnabled プロパティが true に設定されている。</p></li>
+<li><p>ムービークリップインスタンスにマウスとキーボードの両方のイベントに対応するイベントハンドラがある。</p></li>
+</ol>
+<h3 class="small-head" id="FLASH22-results">判定基準</h3><ul>
+<li><p>1. および 2. を満たしている。</p></li>
+</ul>
+<p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">Top</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH21.html"><strong>前： </strong>実装方法 FLASH21</a></li>
+<li><a href="FLASH23.html"><strong>次： </strong>実装方法 FLASH23</a></li>
+</ul>
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH22.html">FLASH22: Adding keyboard-accessible actions to static elements（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></li>
+	</ul>
+</div>
+</body>
+</html>

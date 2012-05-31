@@ -7,13 +7,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-	<title>H69: コンテンツの各セクションの開始位置に見出し要素を提供する</title>
-		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+	<title>H69: コンテンツの各セクションの開始位置に見出し要素を提供する｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
 		<link rel="stylesheet" type="text/css" href="css/additional.css" />
 		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
-		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
-	</head>
-	<body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
+</head>
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
+<div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
 
 		<div id="skipnav">
 			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
@@ -60,7 +72,7 @@
           
                <div class="ua-issue">
             
-						<p>JAWS及びWindows-Eyesは、見出し要素を用いたナビゲーション機能を提供しており、見出しレベルに関する情報も提供している。また、Operaは、見出し要素ごとに移動できるメカニズムを提供している。他のユーザーエージェントでも、追加的なプラグインが見出し要素を用いたナビゲーション機能をサポートしている。</p>
+						<p>JAWS及びWindows-Eyesは、見出し要素を用いたナビゲーション機能を提供しており、見出しレベルに関する情報も提供している。また、Operaは、見出し要素ごとに移動できるメカニズムを提供している。他のユーザーエージェントでも、追加的なプラグインが見出し要素を用いたナビゲーション機能をサポートしている。<span class="diff-add"><span class="difftext">[ここから追加] </span><span>プラグインに関しては、「参考リソース」のセクションを参照のこと。</span><span class="difftext">[追加ここまで]</span></span></p>
           
                </div>
         
@@ -89,7 +101,7 @@
                 
                   </li></ul>
             
-						<p>いくつかのウェブコンテンツ技術において、見出しは論理的な階層を伝達することを目的としている。下位レベルの見出しを飛ばすと、文書構造がきちんと検討されなかったのではないか、又は一部の見出しが意味ではなく視覚的な表現を得るために選択されたのではないか、といった印象を与えてしまうかもしれない。したがって、コンテンツ制作者には見出しを階層的に入れ子にすることが推奨される。</p>
+						<p><span class="diff-delete"><span class="difftext">[ここから削除] </span><span>いくつかのウェブコンテンツ技術において、</span><span class="difftext">[削除ここまで]</span></span>見出しは論理的な階層を伝達することを目的としている。下位レベルの見出しを飛ばすと、文書構造がきちんと検討されなかったのではないか、又は一部の見出しが意味ではなく視覚的な表現を得るために選択されたのではないか、といった印象を与えてしまうかもしれない。したがって、コンテンツ制作者には見出しを階層的に入れ子にすることが推奨される。</p>
             
 						<p>見出しは、コンテンツの中の重要なセクションの開始位置を示すものであるため、支援技術のユーザーが適切な見出しまで直接ジャンプしてから、コンテンツを読み始めることができる。つまり、そのコンテンツに到達するのに時間を要していたユーザーが、見出しのマークアップによってより早く到達できるようになる。</p>
           
@@ -207,7 +219,11 @@
                         <p>
                            <a href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/">Quick tips for accessible headings</a>
                         </p>
-                     </li></ul>
+                     </li>
+                     <li><div class="diff-add"><span class="difftext">[ここから追加] </span><p><a href="http://www.456bereastreet.com/archive/201003/heading_navigation_in_web_browsers">Heading navigation in web browsers</a></p><span class="difftext">[追加ここまで]</span></div></li>
+                     <li><div class="diff-add"><span class="difftext">[ここから追加] </span><p>Firefoxでは、以下のプラグインがキーボード操作による見出しナビゲーション機能を提供している：</p><ul><li><p><span class="diff-change"><span class="difftext">[ここから変更] </span><a href="https://addons.mozilla.org/en-US/firefox/addon/accessibility-evaluation-toolb/">Accessibility Evaluation Toolbar</a><span class="difftext">[変更ここまで]</span></span></p></li><li><p><a href="http://juicystudio.com/article/heading-navigation-greasemonkey-user-script.php">Heading Navigation Greasemonkey User Script</a></p></li></ul>
+								<p></p><span class="difftext">[追加ここまで]</span></div></li>
+                     </ul>
           
                
         
@@ -239,13 +255,9 @@
                 
 								<p>1.を満たしている。</p>
               
-                     </li></ul>
-          
-               
-        
-            </div>
-      
-			<!-- BOTTOM NAVIGATION BAR -->
+                     </li></ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
 <ul id="navigationbottom">
 			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
 			<li><strong><a href="Overview.html#contents">目次</a></strong></li>
@@ -265,6 +277,7 @@
 				<li>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H69.html">H69: Providing heading elements at the beginning of each section of content（英語）</a></li>
 				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
 				<li>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></li>
+                <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 			</ul>
 	</div>
 	

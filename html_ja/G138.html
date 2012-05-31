@@ -7,14 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-<title>G138: 色の手がかりを用いる際は、必ずセマンティックなマークアップを用いる</title>
-<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<title>G138: 色の手がかりを用いる際は、必ずセマンティックなマークアップを用いる｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
 		<link rel="stylesheet" type="text/css" href="css/additional.css" />
 		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
-		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
-
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
 </head>
-<body class="slices">
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
 <div id="masthead"><p class="logo"><a href="http://www.w3.org/">
 <img alt="W3C" src="images/w3c_home.png" width="72" height="48" />
 </a></p>
@@ -76,7 +86,10 @@
             <h2 id="G138-resources">参考リソース</h2>
 <div class="textbody">
 <p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
-<ul><li> <p>
+<ul><li><div class="diff-add"><span class="difftext">[ここから追加] </span><p>
+                	<a href="http://www.paciellogroup.com/blog/2008/02/screen-readers-lack-emphasis/">Screen Readers lack emphasis</a>
+                </p><span class="difftext">[追加ここまで]</span></div></li>
+<li> <p>
                 <a href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/text.html#h-9.2.1">Phrase elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</a></p>
 </li></ul></div>
         
@@ -121,6 +134,7 @@
 （英語）</a></li>
 				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
 				<li>日本語訳：<a href=http://jp.fujitsu.com>富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></li>
+                <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 			</ul>
 </div>
 </body></html>

@@ -7,13 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-<title>SCR20: キーボードとその他のデバイス特有の機能を両方とも用いる</title>
-<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css"/>
-<link rel="stylesheet" type="text/css" href="css/additional.css"/>
-<link rel="stylesheet" type="text/css" href="css/slicenav.css"/>
-<link rel="stylesheet" type="text/css" href="css/waic-wg2.css"/>
+<title>SCR20: キーボードとその他のデバイス特有の機能を両方とも用いる｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
 </head>
-<body class="slices">
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
 <div id="masthead">
 		<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="images/w3c_home.png"/></a></p>
 		<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
@@ -121,7 +132,7 @@ onmouseout="swapImageOff('menu')" onblur="swapImageOff('menu')"&gt;
 <h3 class="small-head" id="SCR20-ex2">事例 2</h3>
 <div class="example">
 		<div class="textbody">
-				<p>この例では、キーボードから機能を実行できる画像を紹介している。マウスイベントの<code>onclick</code>は、対応するキーボードイベントの<code>onkeypress</code>によって補完されている。<code>tabindex</code>属性は、キーボードを用いてTabキーで移動した際に、画像の上で停止させるためのものである。この例では<code>nextPage()</code>関数が、キーボードのキー押下がEnterキーであるかどうかをチェックしていることに注目してほしい。もしチェックしなければ、画像にフォーカスがあるときには、どのキーが押下されても常に反応してしまうため望ましくない。</p>
+				<p><span class="diff-change"><span class="difftext">[ここから変更] </span><span>この事例では、マウスとキーボードの両方を用いて機能を実行できる画像のカスタム・コントロールを紹介している。</span><span class="difftext">[変更ここまで]</span></span>マウスイベントの<code>onclick</code>は、対応するキーボードイベントの<code>onkeypress</code>によって補完されている。<code>tabindex</code>属性は、キーボードを用いてTabキーで移動した際に、画像の上で停止させるためのものである。この事例では<code>nextPage()</code>関数が、キーボードのキー押下がEnterキーであるかどうかをチェックしていることに注目してほしい。もしチェックしなければ、画像にフォーカスがあるときには、どのキーが押下されても常に反応してしまうため望ましくない。</p>
 		</div>
 		<div class="code">
 				<p><strong>コード例：</strong></p>
@@ -131,7 +142,7 @@ alt="次のページへ移動"&gt; </code></pre>
 		</div>
 		<div class="textbody">
 				<div class="note">
-						<p class="prefix"><em>注記：</em>この例では<code>img</code>要素にtabindexを用いている。現時点では（文法的に）妥当ではないが、この機能を実装するための古典的なテクニックとして用いられている。</p>
+						<p class="prefix"><em>注記：</em>この例では<code>img</code>要素にtabindexを用いている。現時点では（文法的に）妥当ではないが、この機能を実装するための古典的なテクニックとして用いられている。<span class="diff-add"><span class="difftext">[ここから追加] </span><span>このようなカスタム・コントロールでは、コントロールの役割（role）と状態（state）を支援技術に引き渡すためにWAI-ARIAも用いるべきである。</span><span class="difftext">[追加ここまで]</span></span></p>
 				</div>
 		</div>
 </div>
@@ -166,7 +177,7 @@ alt="次のページへ移動"&gt; </code></pre>
 				<li>
 						<p>2.を満たしている。</p>
 				</li>
-		</ul>
+		</ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
 </div>
 <!-- BOTTOM NAVIGATION BAR -->
 		<ul id="navigationbottom">
@@ -187,6 +198,7 @@ alt="次のページへ移動"&gt; </code></pre>
 				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR20.html">SCR20: Using both keyboard and other device-specific functions（英語）</a></li>
 				<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
 				<li>日本語訳：辻 勝利<a href="http://www.mitsue.co.jp//">（株式会社ミツエーリンクス）</a></li>
+                <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 			</ul>
 	</div></body>
 </html>

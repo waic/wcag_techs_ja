@@ -7,12 +7,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-<title>G97: 元の語のすぐ後に略語を提供する</title>
-		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<title>G97: 元の語のすぐ後に略語を提供する｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
 		<link rel="stylesheet" type="text/css" href="css/additional.css" />
 		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
-		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
-</head><body class="slices"><div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
+</head>
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
+<div id="masthead"><p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p><p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p></div>
 		<div id="skipnav">
 			<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
 		</div>
@@ -37,7 +50,7 @@
 	</div>
 
         
-            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G97" id="G97"> </a>G97: 元の語のすぐ後に略語を提供する</h1>
+            <div class="skiptarget"><a id="maincontent">-</a></div> <h1><a name="G97" id="G97"> </a>G97: <span class="diff-change"><span class="difftext">[ここから変更] </span><span>略語の初出時にその直前か直後に元の語を提供する</span><span class="difftext">[変更ここまで]</span></span><span class="diff-delete"><span class="difftext">[ここから削除] </span><span>元の語のすぐ後に略語を提供する</span><span class="difftext">[削除ここまで]</span></span></h1>
         
             <div class="applicability"><h2 id="G97-applicability">適用（対象）</h2><div class="textbody">
           
@@ -54,7 +67,7 @@
           
                <p>この実装方法の目的は、ウェブページの中で略語が最初に現れたとき、元の語を略語に関連付けることで、略語の元の語を分かるようにすることである。ウェブページで最初の使用箇所を探すことで、すべての略語の元の語を見つけることができる。</p>
           
-               <p>単語、句または名前を、略語、頭文字語、頭字語、又は他の短縮表記によって短くするときは、省略された表記を提供する前に完全な表記を提供する。こうすることで、テキストが読みやすくなる。多くのスタイルガイドでも勧められている。</p>
+               <p><span class="diff-add"><span class="difftext">[ここから追加] </span><span>英語では、</span><span class="difftext">[追加ここまで]</span></span>単語、句または名前を、略語、頭文字語、頭字語、又は他の短縮表記によって短くするときは、省略された表記を提供する前に完全な表記を提供する。こうすることで、テキストが読みやすくなり、多くのスタイルガイドでも勧められている。<span class="diff-add"><span class="difftext">[ここから追加] </span><span>その他の言語では異なる慣習があることもある。</span><span class="difftext">[追加ここまで]</span></span></p>
 
           
                <p>略語の中には、元の語より説明を必要とするものがあることに注意する。そのような略語には、この実装方法は適切ではない。</p>
@@ -64,17 +77,18 @@
         
             </div>
         
-            <h2 class="small-head" id="G97-examples">事例</h2>
-          
-               <h3 class="small-head" id="G97-ex1">事例 1</h3><div class="example">
-            
-                  <div class="textbody">
-              
-                     <p>「国際連合難民高等弁務官事務所(UNHCR)は、1950年に難民の保護と支援を提供するために設立された。」
-
-</p>
-            
-                  </div>
+	<h2 class="small-head" id="G97-examples">事例</h2>
+    <h3 class="small-head" id="G97-ex1">事例 1</h3><div class="example">
+<div class="textbody">
+		<p>「国際連合難民高等弁務官事務所(UNHCR)は、1950年に難民の保護と支援を提供するために設立された。」</p>
+</div>
+<div class="diff-add">
+		<span class="difftext">[ここから追加] </span>
+<div class="textbody">
+		<p>WAI (Web Accessibility Initiative) があることは、W3Cのアクセシビリティへの取り組みの証のようなものである。</p>
+</div>
+		<span class="difftext">[追加ここまで]</span>
+</div>
           
                </div>
         
@@ -114,17 +128,17 @@
           
                <h3 class="small-head" id="G97-procedure">チェックポイント</h3>
             
-                  <p>コンテンツにある略語それぞれに：
+                  <p>コンテンツにある略語それぞれに対して：
 							</p>
             
                   <ol class="enumar"><li>
                 
-                        <p>当該執筆物の中で、その略語の最初の使用箇所を探す。</p>
+                        <p>その略語の最初の使用箇所を探す。</p>
               
                      </li><li>
 
                 
-                        <p>最初の使用箇所の直前に、略語の元の語がある。</p>
+                        <p>最初の使用箇所の直前<span class="diff-add"><span class="difftext">[ここから追加] </span><span>または直後</span><span class="difftext">[追加ここまで]</span></span>に、略語の元の語がある。</p>
               
                      </li><li>
                 
@@ -141,12 +155,8 @@
                         <p>2.及び 3.を満たしている。</p>
 
               
-                     </li></ul>
-          
-               
-        
-            </div>
-      
+                     </li></ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
 <!-- BOTTOM NAVIGATION BAR -->
 		<ul id="navigationbottom">
 			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
@@ -165,6 +175,7 @@
 				<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G97.html">G97: Providing the abbreviation immediately following the expanded form（英語）</a></li>
 				<li>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
 				<li>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></li>
+                <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 			</ul>
 	</div>
 </body></html>

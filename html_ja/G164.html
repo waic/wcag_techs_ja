@@ -7,13 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-<title>G164: フォームの送信後に、利用者が注文を変更又はキャンセルできる一定の時間を提供する</title>
-<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
-<link rel="stylesheet" type="text/css" href="css/additional.css" />
-<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
-<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+<title>G164: フォームの送信後に、利用者が注文を変更又はキャンセルできる一定の時間を提供する｜WCAG 2.0 実装方法集</title>
+    	<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+        <link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+		<script type="text/javascript" src="js/diffmarks.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/diffs.css">
 </head>
-<body class="slices">
+<body class="slices" onload="jscheck()">
+<div style="display: block;" id="diffexp">
+<p class="options">このページには、前バージョン（2008年12月11日版の日本語訳）から修正（追加、変更または削除）された箇所があります。<br /><strong>設定：</strong><a href="#" onclick="javascript:hideClass('diff-delete'); hideClass('issue'); hideClass('difftext');showClean('diff-change');showClean('diff-add')">全ての修正を非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('diff-delete')">削除箇所を表示/非表示</a>&nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('issue')">問題No.を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:toggleClass('difftext')">[ここから]&nbsp;/&nbsp;[ここまで]&nbsp;を表示/非表示</a> &nbsp; | &nbsp; <a href="#" onclick="javascript:showClass('issue');showClass('diff-delete');showClass('difftext');showChange('diff-change');showAdd('diff-add')">全ての修正を表示</a></p>
+<p class="state"><strong>表示サンプル：</strong> このページの修正箇所は次のように表示されます。</p>
+<ul>
+<li><span class="diff-add"><span class="difftext"> [ここから追加]</span> テキスト <span class="difftext">[追加ここまで] </span></span></li>
+<li><span class="diff-change"><span class="difftext"> [ここから変更]</span> テキスト <span class="difftext">[変更ここまで] </span></span></li>
+<li><span class="diff-delete"><span class="difftext"> [ここから削除]</span> テキスト <span class="difftext">[削除ここまで] </span></span></li>
+</ul>
+</div>
 <div id="masthead">
 <p class="logo"><a href="http://www.w3.org/"><img alt="W3C" src="images/w3c_home.png" width="72" height="48" /></a></p>
 <p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
@@ -40,7 +51,7 @@
 </div>
             
             <div class="skiptarget">
-<a id="maincontent">-</a></div> <h1><a name="G164" id="G164"> </a>G164: フォームの送信後に、利用者が注文を変更又はキャンセルできる一定の時間を提供する</h1>
+<a id="maincontent">-</a></div> <h1><a name="G164" id="G164"> </a>G164: <span class="diff-change"><span class="difftext">[ここから変更] </span><span>フォームの送信後に、利用者がそのオンラインでのリクエスト（またはトランザクション）を修正またはキャンセルできる一定の時間を提供する</span><span class="difftext">[変更ここまで]</span></span> <span class="diff-delete"><span class="difftext">[ここから削除] </span><span>フォームの送信後に、利用者が注文を変更又はキャンセルできる一定の時間を提供する</span><span class="difftext">[削除ここまで]</span></span></h1>
             
             <div class="applicability"><h2 id="G164-applicability">適用（対象）</h2><div class="textbody">
                <p>フォームを提供する全てのウェブコンテンツ技術</p>
@@ -56,7 +67,7 @@
             
             <h2 id="G164-description">解説</h2><div class="textbody">
                 
-               <p>この実装方法の目的は、注文を変更又はキャンセルできる猶予期間を提供することによって、利用者が誤った注文をしてしまった際にその内容を変更又はキャンセルできるようにすることである。一般的には、契約又は注文は法的な義務であり、キャンセルすることができない。しかしながら、ウェブサイトにおいては、この機能を提供し、利用者が注文内容を間違えてしまった際には、を変更又はキャンセルできるようにすることが可能である。</p>
+               <p>この実装方法の目的は、注文を変更又はキャンセルできる猶予期間を提供することによって、利用者が誤った注文をしてしまった際にその内容を変更又はキャンセルできるようにすることである。一般的には、契約又は注文は法的な義務であり、キャンセルすることができない。しかしながら、ウェブサイトにおいては、この機能を提供し、利用者が注文内容を間違えてしまった際には、注文を変更又はキャンセルできるようにすることが可能である。</p>
                 
                <p>ウェブコンテンツでは、フォームを送信した後、キャンセル可能期間がどのくらいなのか、及びどのような手続きで注文をキャンセルするかを利用者に伝える必要がある。注文をキャセルする手続きがオンラインでは利用できない場合もあり得る。例えば、ウェブページ上に記載された住所宛に書面による通知が必要な場合である。</p>
             
@@ -116,14 +127,9 @@
                     
                   <ul><li>
                         <p>1.及び 2.を満たしている。</p>
-                     </li></ul>
-                    
-                
-               
-            
-            </div>
-        
-         <!-- BOTTOM NAVIGATION BAR -->
+                     </li></ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
 <ul id="navigationbottom">
 			<li><strong><a href="#top">このページの先頭へ</a></strong></li>
 			<li><strong><a href="Overview.html">目次</a></strong></li>
@@ -143,6 +149,7 @@
 	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G164.html">G164: Providing a stated period of time after submission of the form when the order can be updated or canceled by the user（英語）</a></li>
 	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
 	<li>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></li>
+    <li>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</li>
 	</ul>
 </div>
 </body>

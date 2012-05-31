@@ -246,3 +246,11 @@ border-bottom:thin solid #666666;
 display:block;
 padding-bottom:0.25em;
 }
+
+.eximg{
+	display: block;
+	padding: .5em;
+	margin-left: auto;
+	margin-right: auto;
+	border: thick outset #777788;
+}

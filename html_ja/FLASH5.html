@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>FLASH5： リンク先が同じで隣接している画像とテキストのボタンを結合する｜WCAG 2.0 実装方法集</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH4.html"><strong>前： </strong>実装方法 FLASH4</a></li>
+<li><a href="FLASH6.html"><strong>次： </strong>実装方法 FLASH6</a></li>
+</ul>
+<div class="navtoc">
+<p>On this page:</p>
+<ul id="navbar">
+<li><a href="#FLASH5-applicability">適用（対象）</a></li>
+<li><a href="#FLASH5-description">解説</a></li>
+<li><a href="#FLASH5-examples">事例</a></li>
+<li><a href="#FLASH5-related-techs">関連する実装方法</a></li>
+<li><a href="#FLASH5-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+<h1><a name="FLASH5" id="FLASH5"> </a>FLASH5： リンク先が同じで隣接している画像とテキストのボタンを結合する</h1>
+<div class="applicability">
+<h2 id="FLASH5-applicability">適用（対象）</h2>
+<div class="textbody"><ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#text-equiv-all">達成基準 1.1.1（非テキストコンテンツ）</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#text-equiv-all">How to Meet 1.1.1 (Non-text Content)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/text-equiv-all.html">達成基準 1.1.1（非テキストコンテンツ）を理解する</a></li>
+</ul></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-refs">達成基準 2.4.4 (文脈におけるリンクの目的)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#navigation-mechanisms-refs">How to Meet 2.4.4 (Link Purpose (In Context))：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html">達成基準 2.4.4 (文脈におけるリンクの目的) を理解する </a></li>
+</ul></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-link">達成基準 2.4.9 (リンクの目的)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#navigation-mechanisms-link">How to Meet 2.4.9 (Link Purpose (Link Only))：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-link.html">達成基準 2.4.9 (リンクの目的) を理解する </a></li>
+</ul></li>
+</ul>
+<div class="ua-issues">
+<h2 class="small-head" id="ua9.5.1">ユーザーエージェント及び支援技術によるサポート</h2>
+<div class="ua-issue">
+<p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+</div>
+</div>
+<h2 id="FLASH5-description">解説</h2>
+<div class="textbody">
+<p>この実装方法の目的は、隣接するテキストとボタンアイコンを Flash ムービーに含める際の不要な重複を回避することである。</p>
+<p>テキストとボタンアイコンが隣接しているボタンがよく用いられている。視覚上多少離れた位置に配置するなどの目的で、テキストとアイコンボタンが個別のボタンとして表現されることも多い。視覚に問題のない利用者はこれらの位置が多少離れていることを視覚的に認識できるが、全盲やロービジョンの利用者は位置の距離を認識できないためボタンの重複に混乱する。これを避けるため、コンテンツ制作者によっては画像のアクセシブルな名前の指定を省略する場合があるが、そのような方法ではグラフィックボタンと同じ目的を果たす代替テキストがなくなってしまい、達成基準 1.1.1 を満たすことができない。この問題への対処として望ましいのは、テキストと画像を 1 つのボタンシンボルインスタンスに含め、ボタンに対して 1 つのアクセシブルな名前を割り当てることによってテキストの重複を回避する方法である。</p>
+</div>
+<h2 class="small-head" id="FLASH5-examples">事例</h2>
+<p>以下に示すのは、ステージ上の 1 つのボタンインスタンスに画像とテキストの両方が含まれている場合の例である。この例のテキストと画像の結合ボタンでは、「flashLink1」というインスタンス名が使用されている。</p>
+<p>Flash Professional で結合ボタンを作成するには、次のようにする。</p>
+<ol class="enumar">
+<li><p>ステージにグラフィックオブジェクトとテキストを追加する。</p></li>
+<li><p>両方のオブジェクトを選択する。</p></li>
+<li><p>［挿入］メニューから「新規シンボル」を選択するか、Ctrl+F8 キーを押して、新しいボタンオブジェクトを作成する。</p></li>
+<li><p>ステージ上のボタンオブジェクトをクリックし、プロパティパネルでインスタンス名を入力する。</p></li>
+<li><p>さらに、以下の事例 1 から事例 3 までのそれぞれの説明に従う。</p></li>
+</ol>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH5/adjacentbtns.jpg" alt="画面スクリーンショット：プロパティパネルでインスタンス名を 'flashLink1' とした結合ボタン" height="221" width="411"/></p>
+<h3 class="small-head" id="FLASH5-ex1">事例 1： アクセシビリティパネルを使用してアクセシブルな名前を指定する</h3>
+<div class="example">
+<div class="textbody">
+<p>アクセシビリティパネルを使用してアクセシブルな名前（この例の場合は表示されているテキストと同じ）を指定する。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH5/findoutmore.jpg" alt="画面スクリーンショット：結合ボタンの「名前」を記述したアクセシビリティパネル" height="152" width="530"/></p>
+</div>
+</div>
+<h3 class="small-head" id="FLASH5-ex2">事例 2： </h3>
+<div class="example">
+<div class="textbody">
+<p>次のように、アクセシビリティパネルの代わりに ActionScript 3 を使用して、結合ボタンのアクセシビリティ名を指定することもできる。</p>
+</div>
+<div class="code">
+<p><strong>コード例：</strong></p>
+<pre><code>// 'flashLink1' は、ムービーのメインのタイムラインに置かれたインスタンスである。
+flashLink1.accessibilityProperties = new AccessibilityProperties();
+flashLink1.accessibilityProperties.name = "Flashについてさらに学ぶ";</code></pre>
+</div>
+<div class="textbody">
+<p>また、次のように、アクセシビリティパネルの代わりに ActionScript 2 を使用して、結合ボタンのアクセシビリティ名を指定することもできる。</p>
+</div>
+<div class="code">
+<p><strong>コード例：</strong></p>
+<pre><code>// 'flashLink1' is an instance placed on the movie's main timeline
+flashLink1._accProps = new Object();
+flashLink1._accProps.name = "Flashについてさらに学ぶ";</code></pre>
+</div>
+</div>
+<h2 id="FLASH5-related-techs">関連する実装方法</h2>
+<div class="textbody"><ul>
+<li><a href="G94.html">G94： 非テキストコンテンツに対して、それと同じ目的を果たし、同じ情報を提供する、簡潔な代替テキストを提供する</a></li>
+<li><a href="G53.html">G53： リンクテキストとそれが含まれている文章中のテキストとを組み合わせて、リンクの目的を特定する </a></li>
+</ul>
+</div>
+<h2 id="FLASH5-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="FLASH5-procedure">チェックポイント</h3><ol class="enumar">
+<li><p>SWF ファイルを発行する。</p></li>
+<li><p>Internet Explorer 6 以降（Flash Player 6 以降を使用）、または Firefox 3 以降（Flash Player 9 以降を使用）で SFW ファイルを開く。</p></li>
+<li><p>オブジェクト名の代替テキストを表示できる aDesigner2 などのツールを使用して Flash ムービーを開く。</p></li>
+<li><p>aDesigner2 を使用する場合は、GUI 概要パネルを使用して Flash ムービー内の各画像ボタンを確認し、画像と同じ機能を持つ別の重複したテキストコントロールが画像の近くにないことを確かめる。</p></li>
+</ol>
+<h3 class="small-head" id="FLASH5-results">判定基準</h3>
+<p>上記全てを満たしている。</p>
+<p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">Top</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH4.html"><strong>前： </strong>実装方法 FLASH4</a></li>
+<li><a href="FLASH6.html"><strong>次： </strong>実装方法 FLASH6</a></li>
+</ul>
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH5.html">FLASH5: Combining adjacent image and text buttons for the same resource（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></li>
+	</ul>
+</div>
+</body>
+</html>

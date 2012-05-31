@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>H92: フォーム・コントロールのラベルに色を用いる際にはテキストで補足する｜WCAG 2.0 実装方法集</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="H91.html"><strong>前：</strong>実装方法 H91</a></li>
+<li><a href="H93.html"><strong>次：</strong>実装方法 H93</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：</p>
+<ul id="navbar">
+<li><a href="#H92-applicability">適用（対象）</a></li>
+<li><a href="#H92-description">解説</a></li>
+<li><a href="#H92-examples">事例</a></li>
+<li><a href="#H92-resources">参考リソース</a></li>
+<li><a href="#H92-related-techs">関連する実装方法</a></li>
+<li><a href="#H92-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+<h1><a name="H92" id="H92"> </a>H92: フォーム・コントロールのラベルに色を用いる際にはテキストで補足する</h1>
+<div class="applicability">
+<h2 id="H92-applicability">適用（対象）</h2>
+<div class="textbody">
+	<p>色及びテキストをサポートするウェブコンテンツ技術すべて</p>
+</div>
+</div>
+	<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+	<ul>
+	<li><a href="http://waic.jp/docs/WCAG20/Overview.html#visual-audio-contrast-without-color">達成基準 1.4.1 （色の使用）</a>
+		<ul>
+		<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20120103/#visual-audio-contrast-without-color">How to Meet 1.4.1 (Use of Color)：英語</a></li>
+		<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html">達成基準 1.4.1 （色の使用）を理解する</a></li>
+		</ul></li>
+	</ul>
+<h2 id="H92-description">解説</h2>
+<div class="textbody">
+<p>この実装方法の目的は、情報を伝えるために色と補足のテキストとを併用することである。ほとんどのユーザーは、ウェブページを素早く見渡して、色の違いを用いることによって伝えられている情報を見つけることができる。色を見ることのできないユーザーは、 補足のテキストを頼りにして、見たり聞いたりすることができる。また、点字ピンディスプレイやその他の触覚インタフェースを使用しているユーザーは、触れることによって補足のテキストを見つけることができる。</p>
+</div>
+<h2 class="small-head" id="H92-examples">事例</h2>
+<h3 class="small-head" id="H92-ex1">事例 1： HTMLフォームの必須項目</h3>
+<div class="example">
+<div class="textbody">
+	<p>オンラインフォームの説明文に「必須項目は赤字で、加えて（必須）と書かれています。」とある。そして、補足のテキストである「（必須）」が <code>label</code>要素内に含まれている。</p>
+</div>
+<div class="code">
+	<p><strong>コード例：</strong></p>
+	<pre><code>
+&lt;label for="lastname" class="required"&gt;名前（必須）：&lt;/label&gt;
+&lt;input id="lastname" type="text" size="25" value=""/&gt;
+&lt;style type="text/css"&gt;
+  .required {
+    color=red;
+  }
+&lt;/style&gt;
+	</code></pre>
+</div>
+</div>
+<h2 id="H92-resources">参考リソース</h2>
+<div class="textbody">
+	<p>この実装方法には、関連するリソースがない。</p>
+</div>
+<h2 id="H92-related-techs">関連する実装方法</h2>
+<div class="textbody">
+	<ul>
+	<li><a href="G14.html">G14: 色の違いで伝えている情報をテキストでも入手可能にする</a></li>
+	</ul>
+</div>
+<h2 id="H92-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="H92-procedure">チェックポイント</h3>
+	<p>色の違いを用いて情報を伝えているコンテンツに対して：</p>
+	<ol class="enumar">
+	<li><p>同じ情報がテキストで補足されている。</p></li>
+	</ol>
+<h3 class="small-head" id="H92-results">判定基準</h3>
+	<ul>
+	<li><p>1. を満たしている。</p></li>
+	</ul>
+	<p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+	<ul id="navigationbottom">
+<li><strong><a href="#top">このページの先頭へ</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+	<li><a href="H91.html"><strong>前：</strong>実装方法 H91</a></li>
+	<li><a href="H93.html"><strong>次：</strong>実装方法 H93</a></li>
+	</ul>
+<div class="footer">
+	<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集 WCAG 2.0の実装方法と不適合事例</a>」の一部であり、文書全体は1ページ版でも提供されている。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+	<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2012 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H92.html">H92: Including a text cue for colored form control labels（英語）</a></li>
+	<li>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	</ul>
+</div>
+</body>
+</html>

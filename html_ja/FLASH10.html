@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>FLASH10： Flashでフォーム・コントロールが必須項目であることを示す｜WCAG 2.0 実装方法集</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH9.html"><strong>前： </strong>実装方法 FLASH9</a></li>
+<li><a href="FLASH11.html"><strong>次： </strong>実装方法 FLASH11</a></li>
+</ul>
+<div class="navtoc">
+<p>On this page:</p>
+<ul id="navbar">
+<li><a href="#FLASH10-applicability">適用（対象）</a></li>
+<li><a href="#FLASH10-description">解説</a></li>
+<li><a href="#FLASH10-examples">事例</a></li>
+<li><a href="#FLASH10-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+<h1><a name="FLASH10" id="FLASH10"> </a>FLASH10： Flashでフォーム・コントロールが必須項目であることを示す</h1>
+<div class="applicability">
+<h2 id="FLASH10-applicability">適用（対象）</h2>
+<div class="textbody"><ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#minimize-error-cues">達成基準 3.3.2 (ラベル又は説明文)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#minimize-error-cues">How to Meet 3.3.2 (Labels or Instructions)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html">達成基準 3.3.2 (ラベル又は説明文) を理解する</a></li>
+</ul></li>
+</ul>
+<div class="ua-issues">
+<h2 class="small-head" id="ua9.10.1">ユーザーエージェント及び支援技術によるサポート</h2>
+<div class="ua-issue">
+<p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+</div>
+</div>
+<h2 id="FLASH10-description">解説</h2>
+<div class="textbody">
+<p>この実装方法の目的は、利用者がデータを正しく送信できるように、Web アプリケーションまたはフォームに含まれる特定のフォーム・コントロールが必須項目であることを明示することである。フォーム・コントロールのアクセシブルな名前に「必須」という語を追加し、視覚的な表示をラベルの横に配置する。</p>
+</div>
+<h2 class="small-head" id="FLASH10-examples">事例</h2>
+<h3 class="small-head" id="FLASH10-ex1">事例 1： コントロールのアクセシブルな名前に「必須」という語を追加する</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例では、アクセシビリティパネルを使用して、フィールドが「必須」であることを利用者に知らせる方法を示している。</p>
+<ol class="enumar">
+<li><p>フォーム・コントロールのラベルの近くに、アスタリスク文字などの視覚的なマークを配置する。</p></li>
+<li><p>アクセシビリティパネルを使用して、「名前」フィールドに記述したコントロールのラベルのすぐ後に「（必須）」と記述する。</p></li>
+</ol>
+<p>次のスクリーンショットは、このアプローチについて説明したものである。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_flash_control.png" alt="画面スクリーンショット：アクセシビリティパネルを用いて、フォーム・コントロールが必須項目であることを明示" height="312" width="546"/></p>
+<p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.html">「コントロールのアクセシブルな名前に「必須」という語を追加する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.swf">「コントロールのアクセシブルな名前に「必須」という語を追加する」のソース（英語）</a>をダウンロードすることもできる。</p>
+</div>
+</div>
+<h2 id="FLASH10-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="FLASH10-procedure">チェックポイント</h3>
+<p>Flash ムービーに含まれる必須項目のフォーム・コントロールごとに、次のことを確認する。</p>
+<ul>
+<li><p>必須項目であることが視覚的に示されている。</p></li>
+<li><p>必須項目であることが、アクセシビリティパネルの「名前」フィールドを使用してテキストで記述されている。</p></li>
+</ul>
+<h3 class="small-head" id="FLASH10-results">判定基準</h3><ul>
+<li><p>上記の二点を満たしている。</p></li>
+</ul>
+<p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">Top</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH9.html"><strong>前： </strong>実装方法 FLASH9</a></li>
+<li><a href="FLASH11.html"><strong>次： </strong>実装方法 FLASH11</a></li>
+</ul>
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH10.html">FLASH10: Indicating required form controls in Flash（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></li>
+	</ul>
+</div>
+</body>
+</html>

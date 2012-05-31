@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-<title>SCR32: クライアントサイドのバリデーションを提供し、DOMを介してエラーテキストを追加する</title>
+<title>SCR32: クライアントサイドのバリデーションを提供し、DOMを介してエラーテキストを追加する｜WCAG 2.0 実装方法集</title>
 		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
 		<link rel="stylesheet" type="text/css" href="css/additional.css" />
 		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
@@ -200,7 +200,7 @@ function validateForm(objForm)
       strLinkID = objForm.name + 'ErrorID';
    }
 
-   // validationクラスを探索するため、inputフォームコントロールをループする
+   // validationクラスを探索するため、inputフォーム・コントロールをループする
    for (iFieldCounter=0; iFieldCounter&lt;objField.length; iFieldCounter++)
    {
       // フィールドのクラスを取得し、適切なクラスを探す
@@ -325,7 +325,7 @@ function addError(objList, strError, strID, strErrorID)
    var objListItem = document.createElement('li');
    var objAnchor = document.createElement('a');
    
-   // フォームコントロールへの部分識別子
+   // フォーム・コントロールへの部分識別子
    objAnchor.href='#' + strID;
 
    // エラーの見出しに向けたターゲットにする
@@ -336,7 +336,7 @@ function addError(objList, strError, strID, strErrorID)
 
    // エラーメッセージ用のラベルプロンプトを使う
    objAnchor.appendChild(document.createTextNode(strError));
-   // フォームコントロールにフォーカスを当てるために、キーボード及びマウスイベントを追加する
+   // フォーム・コントロールにフォーカスを当てるために、キーボード及びマウスイベントを追加する
    objAnchor.onclick = function(event){return focusFormField(this, event);};
    objAnchor.onkeypress = function(event){return focusFormField(this, event);};
    objListItem.appendChild(objAnchor);
@@ -356,7 +356,7 @@ function focusFormField(objAnchor, objEvent)
       }
    }
 
-   // フォームコントロールにフォーカスを当てる
+   // フォーム・コントロールにフォーカスを当てる
    strFormField = objAnchor.href.match(/[^#]\w*$/);
    objForm = getForm(strFormField);
    objForm[strFormField].focus();
@@ -485,7 +485,7 @@ function checkOptional(bValid, strValue, arClass)
 				<li>
 						<p>2、3、4 及び 5 の全てを満たしている。</p>
 				</li>
-		</ul>
+		</ul><p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
 </div>
 <!-- BOTTOM NAVIGATION BAR -->
 		<ul id="navigationbottom">

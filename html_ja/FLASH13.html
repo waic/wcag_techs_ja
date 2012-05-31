@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>FLASH13： HTML の言語属性を使用して Flash コンテンツの言語を指定する｜WCAG 2.0 実装方法集</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH12.html"><strong>前： </strong>実装方法 FLASH12</a></li>
+<li><a href="FLASH14.html"><strong>次： </strong>実装方法 FLASH14</a></li>
+</ul>
+<div class="navtoc">
+<p>On this page:</p>
+<ul id="navbar">
+<li><a href="#FLASH13-applicability">適用（対象）</a></li>
+<li><a href="#FLASH13-description">解説</a></li>
+<li><a href="#FLASH13-examples">事例</a></li>
+<li><a href="#FLASH13-resources">参考リソース</a></li>
+<li><a href="#FLASH13-related-techs">関連する実装方法</a></li>
+<li><a href="#FLASH13-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+<h1><a name="FLASH13" id="FLASH13"> </a>FLASH13： HTML の言語属性を使用して Flash コンテンツの言語を指定する</h1>
+<div class="applicability">
+<h2 id="FLASH13-applicability">適用（対象）</h2>
+<div class="textbody"><ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#meaning-doc-lang-id">達成基準 3.1.1 (ページの言語)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#meaning-doc-lang-id">How to Meet 3.1.1 (Language of Page)：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/meaning-doc-lang-id.html">達成基準 3.1.1 (ページの言語) を理解する</a></li>
+</ul></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#meaning-other-lang-id">達成基準 3.1.2 (部分的に用いられている言語)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#meaning-other-lang-id">How to Meet 3.1.2 (Language of Parts)：英語</a></li>
+<li><a href="http://www.w3.org/TR/2008/NOTE-UNDERSTANDING-WCAG20-20081211/meaning-other-lang-id.html">達成基準 3.1.2 (部分的に用いられている言語) を理解する</a></li>
+</ul></li>
+</ul>
+<div class="ua-issues">
+<h2 class="small-head" id="ua9.13.1">ユーザーエージェント及び支援技術によるサポート</h2>
+<div class="ua-issue">
+<p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+</div>
+<div class="ua-issue">
+<p>JAWS 8.0 以降は、言語属性に基づいて自動的に言語を変更するように設定することができる。ただし自動的に切り替えることができるのは、プライマリコードで指定される主要言語のみである。言語のサブコードによって地域的に変異した言語が指定されている場合、JAWS は設定されているデフォルトの主要言語を使用する。</p>
+</div>
+</div>
+<h2 id="FLASH13-description">解説</h2>
+<div class="textbody">
+<p>この実装方法の目的は、Flash が含まれるページの HTML 要素または object 要素に lang 属性または xml:lang 属性（またはその両方）を指定することによって、Flash コンテンツのデフォルトの言語を特定することである。埋め込まれた Flash コンテンツは、この方法で指定された言語を継承する。Web ページ全体で 1 つの言語を使用する場合は、ページの HTML 要素に lang 属性および xml:lang 属性を指定することができる。これについては、「<a href="http://www.ciaj.or.jp/access/web/docs/WCAG-TECHS/H57.html">H57： html要素の言語属性を用いる</a>」で説明されている。</p>
+<p>Flash は HTML 要素または object 要素から言語を継承する。したがって、Flash コンテンツ内のすべてのテキストは、そのようにして継承された言語であると想定される。これは、ある言語のページに別の言語の Flash オブジェクトを配置すること、また、異なる言語の複数の Flash オブジェクトを配置することが可能であることを意味する。ただし、この実装方法を使用して、<em>一つの Flash オブジェクト内で</em>コンテンツの言語（人間が使用する言語）を変更するように指定することはできない。</p>
+</div>
+<h2 class="small-head" id="FLASH13-examples">事例</h2>
+<h3 class="small-head" id="FLASH13-ex1">事例 1： 埋め込まれた Flash 内でページ全体の言語を使用する</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例では、Web ページ全体のコンテンツをフランス語に定義する。Flash コンテンツは、HTML コンテナで指定された言語を継承する。</p>
+</div>
+<div class="code">
+<p><strong>コード例：</strong></p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;meta content="text/html; charset=iso-8859-1"
+      http-equiv="Content-Type"/&gt;
+    &lt;title&gt;Flash Languages Examples - French&lt;/title&gt;
+    &lt;script src="swfobject.js" type="text/javascript"/&gt;
+    &lt;script type="text/javascript"&gt;
+
+    swfobject.registerObject("myMovie", "9.0.115", "expressInstall.swf");
+&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+      height="420" id="myMovie" width="780"&gt;
+      &lt;param name="movie" value="myMovie.swf"/&gt;
+      &lt;!--[if !IE]&gt;--&gt;
+
+      &lt;object data="languages.swf" height="420"
+        type="application/x-shockwave-flash" width="780"&gt;
+        &lt;!--&lt;![endif]--&gt;
+        &lt;!--[if !IE]&gt;--&gt;
+      &lt;/object&gt;
+      &lt;!--&lt;![endif]--&gt;
+
+    &lt;/object&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<div class="textbody">
+<p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH13/language_en.html">「埋め込まれた Flash 内でページ全体の言語を使用する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH13/languages.swf">「埋め込まれた Flash 内でページ全体の言語を使用する」のソース（英語）</a>をダウンロードすることもできる。</p>
+</div>
+</div>
+<h3 class="small-head" id="FLASH13-ex2">事例 2： 埋め込まれた Flash のみに言語を適用する</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例では、Flash ムービーのコンテンツをフランス語に定義する。Flash ムービーは、<a href="http://code.google.com/p/swfobject/wiki/documentation#How_to_embed_Flash_Player_content_using_SWFObject_static_publish">SWFObject による静的なパブリッシュ手法（英語）</a>を使用して埋め込まれている。この手法では 二つのネストした object 要素が使用され、外側の要素は Internet Explorer 向け、内側の要素はその他のブラウザ向けである。このため、lang 属性および xml:lang 属性を二つ追加する必要がある。</p>
+</div>
+<div class="code">
+<p><strong>コード例：</strong></p>
+<pre><code>&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+  height="420" id="myMovie" lang="fr" width="780" xml:lang="fr"&gt;
+
+  &lt;param name="movie" value="myMovie.swf"/&gt;
+  &lt;!--[if !IE]&gt;--&gt;
+  &lt;object data="languages.swf" height="420" lang="fr"
+    type="application/x-shockwave-flash" width="780" xml:lang="fr"&gt;
+    &lt;!--&lt;![endif]--&gt;
+    &lt;!--[if !IE]&gt;--&gt;
+
+  &lt;/object&gt;
+  &lt;!--&lt;![endif]--&gt;
+&lt;/object&gt;
+</code></pre>
+</div>
+</div>
+<h2 id="FLASH13-resources">参考リソース</h2>
+<div class="textbody">
+<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+<ul>
+<li><p><a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47: Tags for the Identification of Languages</a></p></li>
+<li><p><a href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2">Inheritance of language codes</a></p></li>
+</ul>
+</div>
+<h2 id="FLASH13-related-techs">関連する実装方法</h2>
+<div class="textbody"><ul>
+<li><a href="H57.html">H57： html要素の言語属性を用いる</a></li>
+<li><a href="H58.html">H58： 言語属性を用いて、自然言語の変更を指定する</a></li>
+</ul>
+</div>
+<h2 id="FLASH13-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="FLASH13-procedure">チェックポイント</h3><ol class="enumar">
+<li><p>SWF への参照が含まれている HTML ドキュメントの html 要素および object 要素を確認する。</p></li>
+<li><p>Flash コンテンツの言語（人間が使用する言語）が、object 要素で継承されている言語（HTML 4.01 仕様書の「Inheritance of language codes」を参照）と同じである</p></li>
+<li><p>lang 属性の値が、「BCP 47: Tags for the Identification of Languages」、またはその後続の仕様に準拠しており、Flash コンテンツで使用されている主要言語を反映したものである。</p></li>
+<li><p>Flash コンテンツ内で人間が使用する言語に変更が生じていない</p></li>
+</ol>
+<h3 class="small-head" id="FLASH13-results">判定基準</h3><ul>
+<li><p>達成基準 3.1.1 については、1.～3. を全て満たしている。</p></li>
+<li><p>達成基準 3.1.2 については、1.～4. を全て満たしている。</p></li>
+</ul>
+<p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">Top</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH12.html"><strong>前： </strong>実装方法 FLASH12</a></li>
+<li><a href="FLASH14.html"><strong>次： </strong>実装方法 FLASH14</a></li>
+</ul>
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH13.html">FLASH13: Using HTML language attributes to specify language in Flash content（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></li>
+	</ul>
+</div>
+</body>
+</html>

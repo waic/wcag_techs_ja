@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>FLASH9： 収録済みの同期したメディアにキャプションを提供する｜WCAG 2.0 実装方法集</title>
+<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+<link rel="stylesheet" type="text/css" href="css/additional.css" />
+<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a thref="FLASH8.html"><strong>前： </strong>実装方法 FLASH8</a></li>
+<li><a href="FLASH10.html"><strong>次： </strong>実装方法 FLASH10</a></li>
+</ul>
+<div class="navtoc">
+<p>On this page:</p>
+<ul id="navbar">
+<li><a href="#FLASH9-applicability">適用（対象）</a></li>
+<li><a href="#FLASH9-description">解説</a></li>
+<li><a href="#FLASH9-examples">事例</a></li>
+<li><a href="#FLASH9-resources">参考リソース</a></li>
+<li><a href="#FLASH9-related-techs">関連する実装方法</a></li>
+<li><a href="#FLASH9-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div>
+<h1><a name="FLASH9" id="FLASH9"> </a>FLASH9： 収録済みの同期したメディアにキャプションを提供する</h1>
+<div class="applicability">
+<h2 id="FLASH9-applicability">適用（対象）</h2>
+<div class="textbody">
+<p>Adobe Flashをベースにしたコンテンツ</p>
+<ul>
+<li><p>Adobe Flash CS3 以降</p></li>
+</ul>
+</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-captions">達成基準 1.2.2 (収録済の音声コンテンツのキャプション)</a><ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20100729/#media-equiv-captions">How to Meet 1.2.2 (Captions (Prerecorded))：英語</a></li>
+<li><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/media-equiv-captions.html">達成基準 1.2.2 (収録済の音声コンテンツのキャプション) を理解する</a></li>
+</ul></li>
+</ul>
+<div class="ua-issues">
+<h2 class="small-head" id="ua9.9.1">ユーザーエージェント及び支援技術によるサポート</h2>
+<div class="ua-issue">
+<p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+</div>
+</div>
+<h2 id="FLASH9-description">解説</h2>
+<div class="textbody">
+<p>この実装方法の目的は、聴覚障害のあるユーザーや同期したメディア内の音声や会話を聞くことが困難な利用者が、音声情報の代替手段としてキャプションを見るように選択できるオプションを提供することである。この実装方法では、すべての会話と重要な音がテキストとして提供されるが、それらのテキストは利用者が要求した場合以外は表示されない。結果として、必要な場合にのみ表示される。これは、FLVPlayback コンポーネントと FLVPlaybackCaptioning コンポーネントを使用して実現できる。<em>注記：</em>FLVPlayback のスキンを使用すると、クローズドキャプションボタンがデフォルトでアクセシブルになる。ただし、カスタムスキンを実装する場合は、クローズドキャプションボタンがアクセシブルかどうかをコンテンツ制作者がテストする必要がある。</p>
+</div>
+<h2 class="small-head" id="FLASH9-examples">事例</h2>
+<h3 class="small-head" id="FLASH9-ex1">事例 1： Timed Textのキャプションファイルを Flash に追加する</h3>
+<div class="example">
+<div class="textbody"><ol class="enumar">
+<li><p>外部ツール（Magpie やシンプルなテキストエディタなど）を使用して、Timed Textを用いたキャプションの XML ファイルを作成する。ビデオコンテンツを停止して再生し、音声情報の適切な部分（会話、重要な背景音、イベントサウンドなど）ごとに開始と終了のタイムコードおよび代替テキストを挿入する。Magpie のようなツールにはこの作業を簡単に行うことができる高度な機能がある。これに対し、テキストエディタでは次のキャプション文書の例に示すようにメディアプレーヤーからタイムコードを読み取って XML に含める必要がある。</p></li>
+<li><p>Flash では、ステージに FLVPlayback コンポーネントの新しいインスタンスを作成し、［コンポーネントインスペクタ］パネルまたは［パラメータ］パネルを使用して contentPath 値を flv ビデオファイルに設定する。</p></li>
+<li><p>CC（クローズドキャプション）ボタンを含むスキンを使用するように「Skin」パラメータを設定する。</p></li>
+<li><p>さらに、コンポーネントのリストから FLVPlayback キャプションコンポーネントのインスタンスを作成する。［コンポーネントインスペクタ］パネルで、「Source」パラメータをTimed TextのXMLファイルの名前に設定する。キャプションは、プレーヤーのフレームの下部に自動的に配置される。</p></li>
+</ol>
+</div>
+<div class="code">
+<p><strong>コード例：</strong></p>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;tt xml:lang="en" xmlns="http://www.w3.org/2006/04/ttaf1"
+  xmlns:tts="http://www.w3.org/2006/04/ttaf1#styling"&gt;
+  &lt;head&gt;
+    &lt;styling&gt;
+      &lt;style id="defaultSpeaker" tts:backgroundColor="black"
+        tts:color="white" tts:fontFamily="SansSerif" tts:fontSize="12"
+        tts:fontStyle="normal" tts:fontWeight="normal"
+        tts:textAlign="left" tts:textDecoration="none"/&gt;
+      &lt;style id="defaultCaption" tts:backgroundColor="black"
+        tts:color="white" tts:fontFamily="Arial" tts:fontSize="12"
+        tts:fontStyle="normal" tts:fontWeight="normal"
+        tts:textAlign="center" tts:textDecoration="none"/&gt;
+    &lt;/styling&gt;
+
+  &lt;/head&gt;
+  &lt;body id="thebody" style="defaultCaption"&gt;
+    &lt;div xml:lang="en"&gt;
+      &lt;p begin="0:00:00.20" end="0:00:02.20"&gt;If there were nothing in
+        our universe&lt;/p&gt;
+      &lt;p begin="0:00:02.20" end="0:00:05.65"&gt;the fabric of space-time
+        would be flat.&lt;/p&gt;
+
+      &lt;p begin="0:00:05.65" end="0:00:08.88"&gt;But add a mass, and
+        dimples form within it.&lt;/p&gt;
+      &lt;p begin="0:00:16.61" end="0:00:19.84"&gt;Smaller objects that
+        approach that large mass&lt;/p&gt;
+      &lt;p begin="0:00:19.84" end="0:00:23.41"&gt;will follow the curve in
+        space-time around it.&lt;/p&gt;
+      &lt;p begin="0:00:32.64" end="0:00:36.84"&gt;Our nearest star, the
+        sun, has formed such a dimple&lt;/p&gt;
+
+      &lt;p begin="0:00:36.84" end="0:00:38.00"&gt;and our tiny planet
+        Earth&lt;/p&gt;
+      &lt;p begin="0:00:38.00" end="0:00:41.50"&gt;goes along for the ride
+        in the curve of its dimple&lt;/p&gt;
+      &lt;p begin="0:00:41.50" end="0:00:43.80"&gt;staying in orbit around
+        the sun.&lt;/p&gt;
+      &lt;p begin="0:00:45.67" end="0:01:55.00"/&gt;
+
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/tt&gt;
+</code></pre>
+</div>
+<div class="textbody">
+<p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH9/adding_captions_to_Flash_video_as3.html">「Timed Textのキャプションファイルを Flash に追加する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH9/adding_captions_to_Flash_video_as3.zip">「Timed Textのキャプションファイルを Flash に追加する」のサンプルをダウンロード</a>することもできる。</p>
+</div>
+</div>
+<h2 id="FLASH9-resources">参考リソース</h2>
+<div class="textbody">
+<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+<p> <a href="http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines">http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines</a> </p>
+<p> <a href="http://www.buraks.com/captionate/">http://www.buraks.com/captionate/</a> </p>
+<p> <a href="http://www.w3.org/AudioVideo/TT/">http://www.w3.org/AudioVideo/TT/</a> </p>
+</div>
+<h2 id="FLASH9-related-techs">関連する実装方法</h2>
+<div class="textbody"><ul>
+<li><a href="G87.html">G87： クローズド・キャプションを提供する</a></li>
+</ul>
+</div>
+<h2 id="FLASH9-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="FLASH9-procedure">チェックポイント</h3>
+<p>Flash ムービーで表示されるすべてのビデオコンテンツを見て、次のことを確認する。</p>
+<ol class="enumar">
+<li><p>すべての音声コンテンツでキャプションを利用でき、デフォルトまたはユーザー環境設定によってオンになる。</p></li>
+<li><p>ビデオに含まれるすべての音声情報がキャプションで適切に説明されている。</p></li>
+</ol>
+<h3 class="small-head" id="FLASH9-results">判定基準</h3><ul>
+<li><p>1. および 2. を満たしている。</p></li>
+</ul>
+<p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div>
+<!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">Top</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="FLASH8.html"><strong>前： </strong>実装方法 FLASH8</a></li>
+<li><a href="FLASH10.html"><strong>次： </strong>実装方法 FLASH10</a></li>
+</ul>
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集&nbsp;WCAG 2.0の実装方法と不適合事例</a>」の一部である。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH9.html">FLASH9: Applying captions to prerecorded synchronized media（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></li>
+	</ul>
+</div>
+</body>
+</html>

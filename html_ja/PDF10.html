@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>PDF10：PDF 文書内のインタラクティブなフォーム・コントロールにラベルを付ける｜WCAG 2.0 実装方法集</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="PDF9.html"><strong>前：</strong>実装方法 PDF9</a></li>
+<li><a href="PDF11.html"><strong>次：</strong>実装方法 PDF11</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：</p>
+<ul id="navbar">
+<li><a href="#PDF10-applicability">適用（対象）</a></li>
+<li><a href="#PDF10-description">解説</a></li>
+<li><a href="#PDF10-examples">事例</a></li>
+<li><a href="#PDF10-resources">参考リソース</a></li>
+<li><a href="#PDF10-related-techs">関連する実装方法</a></li>
+<li><a href="#PDF10-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div> 
+<h1><a name="PDF10" id="PDF10"> </a>PDF10：PDF 文書内のインタラクティブなフォーム・コントロールにラベルを付ける</h1>
+<div class="applicability">
+<h2 id="PDF10-applicability">適用（対象）</h2>
+<div class="textbody">
+<ul>
+<li>
+<p>フォームが含まれているタグ付き PDF 文書</p></li>
+<li>
+<p>Adobe LiveCycle Designer で作成された PDF フォーム</p></li>
+</ul>
+</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://waic.jp/docs/WCAG20/Overview.html#content-structure-separation-programmatic">達成基準 1.3.1 （情報及び関係性）</a>
+<ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20120103/#content-structure-separation-programmatic">How to Meet 1.3.1 (Info and Relationships)：英語</a></li>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">達成基準 1.3.1 （情報及び関係性）を理解する</a></li>
+</ul></li>
+<li><a href="http://waic.jp/docs/WCAG20/Overview.html#minimize-error-cues">達成基準 3.3.2 （ラベル又は説明文）</a>
+<ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20120103/#minimize-error-cues">How to Meet 3.3.2 (Labels or Instructions)：英語</a></li>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/minimize-error-cues.html">達成基準 3.3.2 （ラベル又は説明文）を理解する</a></li>
+</ul></li>
+<li><a href="http://waic.jp/docs/WCAG20/Overview.html#ensure-compat-rsv">達成基準 4.1.2 （プログラムが解釈可能な識別名・役割及び設定可能な値）</a>
+<ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20120103/#ensure-compat-rsv">How to Meet 4.1.2 (Name, Role, Value)：英語</a></li>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">達成基準 4.1.2 （プログラムが解釈可能な識別名・役割及び設定可能な値）を理解する</a></li>
+</ul></li>
+</ul>
+<div class="ua-issues">
+<h2 class="small-head" id="ua11.10.1"> ユーザーエージェント及び支援技術によるサポート</h2>
+<div class="ua-issue">
+<p>ユーザーエージェント及び支援技術に関する情報は、<a href="pdf_notes.html">PDF テクノロジーノート</a>を参照のこと。</p>
+</div>
+</div>
+<h2 id="PDF10-description">解説</h2>
+<div class="textbody">
+<p>この実装方法の目的は、支援技術のユーザーがフォーム・コントロールのラベルを認識し、フォーム・コントロールの使用方法を理解できるようにすることである。</p>
+<p>フォーム・コントロールを使用すると、ユーザーは、情報を入力したり選択肢を指定したりして PDF 文書を操作してから、送信して処理することができる。支援技術のユーザーは、視力のあるユーザーと同様に、フォームフィールドを認識して理解し、選択を行い、フォームに入力し、フォームを送信できなければならない。フォームのアクセシビリティを確保するには、各フォーム・コントロールの目的を示す、理解可能なラベルが不可欠である。</p>
+<p>フォームの入力では通常、必要な情報とフォームの入力方法をユーザーが理解できるように、ラベルと説明文が提供される。これらのラベルが、対応するフィールドとプログラムで関連付けられていないと、支援技術で正しく関連付けを行うことができず、ユーザーがフォームの入力方法を理解できないことがある。</p>
+<p>インタラクティブなフォームが含まれている文書を Adobe Acrobat Pro を使用して作成することで、プログラムで関連付けられた、フィールドの目的を示すラベルを付けることができ、フォームのアクセシビリティとユーザビリティが確保される。</p>
+<p>プログラムで関連付けられたラベルがない場合には、支援技術が使用するヒューリスティック手法によって、テキストラベルが使用される場合がある。フィールド辞書の TU エントリ（ツールヒント）が、プログラムで関連付けられたラベルである（以下の事例 3 と、<a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF 1.7（ISO 32000-1）</a>の表 220 を参照のこと）。そのため、各フィールドにツールヒントを追加し、支援技術が解釈できるラベルを提供する。</p>
+<div id=""><a name="PDF10_placement-rules"/>
+<h4>配置ルール</h4>
+<p>次の表は、Adobe LiveCycle によってデフォルトでラベルが配置される場所を規定する、配置ルールを示している。これらのルールでは、テキストの方向が左から右であることが前提になっている。特定のフォームでデフォルトとは異なる配置が必要な場合（テキストの方向が右から左の言語の PDF に対応する場合など）については、以下の事例 2 の「<em>フォームラベルの位置を変更する</em>」を参照のこと。一般的に作成者は、特定のフォームの要件を満たすために、ラベルの配置について検討すべきである。</p>
+<table border="1" cellpadding="2">
+<tbody>
+<tr valign="top">
+<th>コントロールタイプ</th>
+<th>LiveCycle の配置ルール</th>
+</tr>
+<tr valign="top">
+<td><em>テキスト入力（日付／時刻フィールドとパスワードフィールドを含む）</em> </td>
+<td>コントロールの左側にラベルを配置する（デフォルト）。不可能な場合、LiveCycle ではコントロールのすぐ上に配置される。</td>
+</tr>
+<tr valign="top">
+<td><em>チェックボックス</em> </td>
+<td>チェックボックスの右側にラベルを配置する（デフォルト）。</td>
+</tr>
+<tr valign="top">
+<td><em>ラジオボタングループ</em> </td>
+<td>個々のラジオボタンの右側にラベルを配置する（デフォルト）。ラジオボタングループにキャプションを表示するには、静的なテキストを作成し、グループの左側または上に配置する（下の「<em>ラジオボタンにラベルを付ける</em>」を参照のこと）。</td>
+</tr>
+<tr valign="top">
+<td><em>コンボボックス</em> </td>
+<td>ドロップダウンリストの左側にラベルを配置する（デフォルト）。不可能な場合、LiveCycle ではコントロールのすぐ上に配置される。</td>
+</tr>
+<tr valign="top">
+<td><em>リストボックス</em> </td>
+<td>リストボックスの上にラベルを配置する（デフォルト）。</td>
+</tr>
+<tr valign="top">
+<td><em>ボタン</em> </td>
+<td>LiveCycle では、ラベルは自動的にボタン上に配置される。手動で位置を設定する必要はない。ボタンの目的がラベルテキストに適切に記述されていることを確認する。 </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2 class="small-head" id="PDF10-examples">事例</h2>
+<h3 class="small-head" id="PDF10-ex1">事例 1： Adobe Acrobat 9 Pro のフォームツールを使用してラベルを付ける</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+<p>解説に記載されているように、オーサリングツールで追加され PDF に変換されたテキストラベルは、フィールドに視覚的に関連付けられていても、プログラムで関連付けられていないため、ツールヒントを提供する必要がある。</p>
+<ol class="enumar">
+<li>
+<p>［フォーム］メニューで［フィールドを追加または編集］を選択する</p></li>
+<li>
+<p>編集するフィールドのコンテキストメニューから［プロパティ］ダイアログボックスを選択する</p></li>
+<li>
+<p>［プロパティ］ダイアログボックスの［一般］タブで、「ツールヒント」フィールドにフォームフィールドの説明を入力する</p></li>
+<li>
+<p>すべてのフォームフィールドについて同じ操作を繰り返す</p></li>
+</ol>
+<p>次の画像は、［プロパティ］ダイアログボックスの「ツールヒント」フィールドに説明が入力された状態を示している。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form5.jpg" alt="スクリーンショット：フォームフィールドのプロパティダイアログボックス。フィールドで要求される形式を含む簡単な説明を入力すると、ツールヒントとして表示される。" height="503" width="525"/>  </p>
+<p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form">フォームツールを使用してラベルを表示させるサンプル（PDFフォーム）</a>がある。</p>
+</div>
+</div>
+<h3 class="small-head" id="PDF10-ex2">事例 2： Adobe LiveCycle Designer ES 8.2.1 でフォーム・コントロールにラベルを付ける</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例は Adobe LiveCycle Designer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+<p>LiveCycle Designer には、説明的なテキストやラベルをフォームエレメントに関連付けるためのいくつかのオプションがある。</p>
+<p>視力のあるユーザーまたはロービジョンのユーザーの場合は、コントロールのすぐ近くにラベルを正しく配置することが重要である。スクリーンリーダーのユーザーの場合は、ラベルがフォーム・コントロールとプログラムで関連付けられていることと、スクリーンリーダーのユーザーがすぐにフォームに入力して送信できるだけの十分な情報が提供されていることを確認する必要もある。</p>
+<p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form-lc">LiveCycle Designer でラベルを入力するサンプル（PDFフォーム）</a>がある。</p>
+<div>
+<h4>アクセシビリティパレットを使用してアクセシブルなラベルテキストを指定する</h4>
+<p>LiveCycle Designer で、フォームを作成またはインポートする。次に、以下の作業を行う。</p>
+<ol class="enumar">
+<li>
+<p>ウィンドウ &gt; アクセシビリティを選択するか、Shift + F6 キーを押して、パレットを有効にする</p></li>
+<li>
+<p>LiveCycle Designer の右側のパネルにパレットが表示される</p></li>
+<li>
+<p>フォーム内のオブジェクトを選択する。パレットに、オブジェクトのアクセシビリティプロパティが表示される。</p></li>
+</ol>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/access-palette-dropdown.jpg" alt="スクリーンショット：優先順位ドロップダウンリストが表示された Adobe LiveCycle アクセシビリティパレット。テキストは、リストで示される順序（カスタムテキスト、ツールチップ、キャプション、名前）で読み上げられる。" height="574" width="284"/> </p>
+<p>スクリーンリーダーが使用するラベルは、必ずしも視覚的なキャプションと同じである必要はない。フォームエレメントの目的について、より多くの情報を提供する必要がある場合もある。</p>
+<p>特定のオブジェクトについてスクリーンリーダーが読み上げるテキストを指定するには、アクセシビリティパレットのスクリーンリーダーの優先順位ドロップダウンリストを使用する。テキストは、リストで示される順序（カスタムテキスト、ツールチップ、キャプション、名前）で読み上げられる。</p>
+<p>フォームの複雑さと難しさに応じて、フォームの要件に最も適したオプションを判断する必要がある。</p>
+<p>デフォルトでは、スクリーンリーダーは画像で示されている順序でオブジェクトのテキストを検索する。コントロールの説明的なテキストが見つかると、検索は終了する。</p>
+<p>次の画像は、スクリーンリーダーのユーザーにとってわかりにくい視覚的なキャプションを持つテキストフィールドの例を示している。1 つのフィールドのキャプションは「日付」になっているが、スクリーンリーダーのユーザーは、（スクリーンテキストに示されているような）推奨される日付形式を知る必要がある。このため、このテキストはツールチップで提供される。ツールチップは視覚的なキャプションより優先度が高いため、スクリーンリーダーはツールチップを使用する。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/livecycledatefield.jpg" alt="スクリーンショット：日付形式に関するツールヒントテキストが表示された、LiveCycle Designer の日付形式フィールド。" height="101" width="592"/> </p>
+</div>
+<div>
+<h4>ラジオボタンにラベルを付ける</h4>
+<p>スクリーンリーダーのユーザーがラジオボタンにタブ移動したとき、スクリーンリーダーは次の2つの項目を読み上げる必要がある。</p>
+<ul>
+<li>
+<p>ボタンの<em>グループ</em>の目的に関する一般的な説明</p></li>
+<li>
+<p><em>それぞれの</em>ラジオボタンの目的に関する意味のある説明</p></li>
+</ul>
+<p>ラジオボタンをアクセシブルにするには：</p>
+<ol class="enumar">
+<li>
+<p>［階層］パレットで、ラジオボタングループを選択する</p></li>
+<li>
+<p>［アクセシビリティ］パレットを選択し、「カスタムのスクリーンリーダーテキスト」ボックスに、グループに対する読み上げテキストを入力する。例えば、「支払方法を選択してください」と入力する</p></li>
+<li>
+<p>［階層］パレットで、グループの最初のラジオボタンを選択する</p></li>
+<li>
+<p>［オブジェクト］パレットで、［フィールド］タブを選択する。「項目」領域で項目を選択し、選択したラジオボタンに対する意味のある値を入力する。例えば、「現金」と入力する</p></li>
+<li>
+<p>グループ内のラジオボタンごとに、手順 3 と 4 を繰り返す</p></li>
+</ol>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/radiobuttongroup.jpg" alt="スクリーンショット：LiveCycle Designer でラジオボタンに適用するカスタムのスクリーンリーダーテキスト。" height="237" width="526"/> </p>
+</div>
+<div>
+<h4>フォームラベルの位置を変更する</h4>
+<p>ユーザーは、キャプション（ラベル）がコントロールのすぐ近くの特定の場所にあることを想定しているので、これらの配置は重要である。画面拡大表示機能のユーザーの場合、コントロールとラベルを同時に表示できない可能性があるため、この点は特に重要となる。</p>
+<p>オブジェクトを作成すると、Adobe LiveCycle Designer はコントロールタイプで指定されたとおりにラベルの位置を自動的に設定する（上の「解説」の表を参照のこと）。例えばテキストフィールドでは、コントロールの左側にラベルを配置する。</p>
+<p>ラベルテキストの配置を変更する場合（テキストの方向が右から左の言語に対応するためなど）には、次の操作を行う。</p>
+<ol class="enumar">
+<li>
+<p>オブジェクトにフォーカスを移動して、オブジェクトを選択する</p></li>
+<li>
+<p>［レイアウト］パレットの「キャプション」で、「位置」ドロップダウンリストからオブジェクトの位置を選択する</p></li>
+</ol>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/captionposition.jpg" alt="スクリーンショット：レイアウトパレットと新しいキャプションの位置" height="291" width="305"/> </p>
+<p>この操作の結果、位置が変更されたラベルを以下に示す。日付テキストフィールドのラベルが、フィールドの左側からフィールドの上に移動している。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/formlabeltop.jpg" alt="スクリーンショット：フォームラベルの位置がフィールドの上に変更された。ラベルのデフォルトの位置（テキストフィールド左側）も示されている。" height="148" width="505"/> </p>
+</div>
+</div>
+</div>
+<h3 class="small-head" id="PDF10-ex3">事例 3： インタラクティブなフォーム・コントロールにツールヒントを追加する</h3>
+<div class="example">
+<div class="textbody">
+<p>次のコードフラグメントは、TU エントリを使用してフォームフィールドにツールヒント（またはプログラムで関連付けられたテキストラベル）を追加する方法を示している。これは通常、オーサリングツールを使用して行う。</p>
+<div class="code">
+<pre><code>&lt;&lt; /AP -dict-                                                   
+   /DA /Helv  0 Tf 0 g
+   /DR -dict-
+   /F 0x4
+   /FT Tx              % テキストフィールドの Tx に設定された FT キー
+   /P -dict-
+   /Rect -array-
+   /StructParent 0x1
+   /Subtype Widget
+   /T Date you are available   % 日付の部分的なフィールド名
+   /TU Date you are available: use MM/DD/YYYY format % 簡単な説明として機能する TU ツールヒントの値
+   /Type Annot
+   /V Pat Jones
+&gt;&gt;
+...
+&lt;Start Stream&gt;
+ BT
+  /P &lt;&lt;/MCID 0 &gt;&gt;BDC
+  /CS0 cs 0  scn 
+  /TT0 1 Tf
+    -0.001 Tc 0.003 Tw 11.04 0 0 11.04 72 709.56 Tm
+    [(P)-6(le)-3(as)10(e)-3( )11(P)-6(rin)2(t)-3( Y)8(o)-7(u)2(r N)4(a)11(m)-6(e)]TJ
+  0 Tc 0 Tw 9.533 0 Td
+  ( )Tj
+  -0.004 Tc 0.004 Tw 0.217 0 Td
+  [(\()-5(R)-4(e)5(q)-1(u)-1(i)-3(r)-3(e)-6(d)-1(\))]TJ
+ EMC
+  /P &lt;&lt;/MCID 1 &gt;&gt;BDC
+  0 Tc 0 Tw 4.283 0 Td
+  [( )-2( )]TJ
+   EMC
+   /ArtifactSpan &lt;&lt;/MCID 2 &gt;&gt;BDC
+   0.002 Tc -0.002 Tw 0.456 0 Td
+  [(__)11(___)11(___)11(___)11(___)11(_)11(____)11(___)11(___)11(__)]TJ
+  0 Tc 0 Tw 13.391 0 Td
+  ( )Tj
+  EMC
+ ET
+&lt;End Stream&gt;
+</code></pre>
+</div>
+</div>
+</div>
+<h2 id="PDF10-resources">参考リソース</h2>
+<div class="textbody">
+<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+<ul>
+<li>
+<p> <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF 1.7 (ISO 32000-1)</a> </p></li>
+<li>
+<p> <a href="http://partners.adobe.com/public/developer/xml/index_arch.html">Adobe XML Forms Architecture (XFA)</a> </p></li>
+<li>
+<p><a href="http://www.adobe.com/accessibility/pdf">PDF and Accessibility</a></p></li>
+</ul>
+</div>
+<h2 id="PDF10-related-techs">関連する実装方法</h2>
+<div class="textbody">
+<ul>
+<li><a href="G131.html">G131: 目的や内容が分かるラベルを提供する</a></li>
+<li><a href="G162.html">G162: ラベルを配置して、関係性を最大限に予測できるようにする</a></li>
+<li><a href="PDF23.html">PDF23：PDF 文書内でインタラクティブなフォーム・コントロールを提供する</a></li>
+<li><a href="PDF5.html">PDF5: PDF フォームで必須項目のフォーム・コントロールを特定する</a></li>
+<li><a href="PDF22.html">PDF22：ユーザーの入力が PDF フォーム内の必須形式または必須値の範囲外になる場合を指定する</a></li>
+</ul>
+</div>
+<h2 id="PDF10-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="PDF10-procedure">チェックポイント</h3>
+<ol class="enumar">
+<li>
+<p>各フォーム・コントロールについて、コントロールに関連付けられた正しい位置にラベルが配置されている</p></li>
+<li>
+<p>各フォーム・コントロールについて、次のいずれかの方法で、名前がコントロールにプログラムで関連付けられていることを確認する</p>
+<ul>
+<li>
+<p>コントロールに関連付けられている名前を表示できるツールを使用して PDF 文書を開き、名前がコントロールに正しく関連付けられていることを確認する</p></li>
+<li>
+<p>アクセシビリティ API を通じて文書を表示するツールを使用して、名前がコントロールに正しく関連付けられていることを確認する</p></li>
+</ul></li>
+</ol>
+<h3 class="small-head" id="PDF10-results">判定基準</h3>
+<ul>
+<li>
+<p>1. 及び 2. を満たしている。</p></li>
+</ul>
+<p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div><!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">Top</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="PDF9.html"><strong>前：</strong>実装方法 PDF9</a></li>
+<li><a href="PDF11.html"><strong>次：</strong>実装方法 PDF11</a></li>
+</ul>
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集 WCAG 2.0の実装方法と不適合事例</a>」の一部であり、文書全体は1ページ版でも提供されている。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2012 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/PDF10.html">PDF10: Providing labels for interactive form controls in PDF documents（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></li>
+	</ul>
+</div>
+</body>
+</html>

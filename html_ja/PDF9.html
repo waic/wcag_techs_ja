@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+<title>PDF9: PDF 文書内のコンテンツを見出しタグでマークアップすることによって見出しを作成する｜WCAG 2.0 実装方法集</title>
+		<link rel="stylesheet" type="text/css" href="css/W3C-WG-NOTE.css" />
+		<link rel="stylesheet" type="text/css" href="css/additional.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicenav.css" />
+		<link rel="stylesheet" type="text/css" href="css/waic-wg2.css" />
+</head>
+<body class="slices">
+<div id="masthead">
+<p class="logo"><a href="http://www.w3.org/"><img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a></p>
+<p class="collectiontitle"><a href="./">WCAG 2.0 実装方法集</a></p>
+</div>
+<div id="skipnav">
+<p class="skipnav"><a href="#maincontent">メインコンテンツへスキップ</a></p>
+</div>
+<a name="top"> </a>
+<!-- TOP NAVIGATION BAR -->
+<ul id="navigation">
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="PDF8.html"><strong>前：</strong>実装方法 PDF8</a></li>
+<li><a href="PDF10.html"><strong>次：</strong>実装方法 PDF10</a></li>
+</ul>
+<div class="navtoc">
+<p>このページのコンテンツ：</p>
+<ul id="navbar">
+<li><a href="#PDF9-applicability">適用（対象）</a></li>
+<li><a href="#PDF9-description">解説</a></li>
+<li><a href="#PDF9-examples">事例</a></li>
+<li><a href="#PDF9-resources">参考リソース</a></li>
+<li><a href="#PDF9-related-techs">関連する実装方法</a></li>
+<li><a href="#PDF9-tests">検証</a></li>
+</ul>
+</div>
+<div class="skiptarget">
+<a id="maincontent">-</a>
+</div> 
+<h1><a name="PDF9" id="PDF9"> </a>PDF9: PDF 文書内のコンテンツを見出しタグでマークアップすることによって見出しを作成する</h1>
+<div class="applicability">
+<h2 id="PDF9-applicability">適用（対象）</h2>
+<div class="textbody">
+<p>Tagged PDF documents with headings</p>
+</div>
+</div>
+<p class="referenced">これは、次の達成基準に関連する実装方法である：</p>
+<ul>
+<li><a href="http://waic.jp/docs/WCAG20/Overview.html#content-structure-separation-programmatic">達成基準 1.3.1 （情報及び関係性）</a>
+<ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20120103/#content-structure-separation-programmatic">How to Meet 1.3.1 (Info and Relationships)：英語</a></li>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">達成基準 1.3.1 （情報及び関係性）を理解する</a></li>
+</ul></li>
+<li><a href="http://waic.jp/docs/WCAG20/Overview.html#navigation-mechanisms-skip">達成基準 2.4.1 （ブロック・スキップ）</a>
+<ul>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/20120103/#navigation-mechanisms-skip">How to Meet 2.4.1 (Bypass Blocks)：英語</a></li>
+<li><a href="http://waic.jp/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">達成基準 2.4.1 （ブロック・スキップ）を理解する</a></li>
+</ul></li>
+</ul>
+<div class="ua-issues">
+<h2 class="small-head" id="ua11.9.1"> ユーザーエージェント及び支援技術によるサポート</h2>
+<div class="ua-issue">
+<p>ユーザーエージェント及び支援技術に関する情報は、<a href="pdf_notes.html">PDF テクノロジーノート</a>を参照のこと。</p>
+</div>
+</div>
+<h2 id="PDF9-description">解説</h2>
+<div class="textbody">
+<p>この実装方法の目的は、支援技術で認識されるように PDF 文書内の見出しをマークアップする方法を示すことである。これは通常、PDF のオーサリングツールを使用して行う。</p>
+<p>見出しマークアップは次の目的のために使用できる。</p>
+<ul>
+<li>
+<p>メインコンテンツの開始を示す</p></li>
+<li>
+<p>メインコンテンツ領域内のセクション見出しをマークアップする</p></li>
+<li>
+<p>トップまたはメインナビゲーション、左側または第2のナビゲーション、フッタナビゲーションなど、様々なナビゲーションセクションを区別する</p></li>
+<li>
+<p>視覚的な見出しの外観のある図（テキストを含む）をマークアップする</p></li>
+</ul>
+<p>ウェブコンテンツ技術によっては、見出しで論理階層を定義するよう設計されている。見出しの順序のスキップレベルで、文書の構造が適切に熟慮されている、または意味よりも視覚的な表現のために特定の見出しが選択されているという印象が形成される場合がある。作成者は、見出しを階層的に組み込むことが推奨される。</p>
+<p>見出しでコンテンツの重要なセクションの始まりが示されるので、支援技術のユーザーは見出しのリストにアクセスして、適切な見出しに直接ジャンプし、コンテンツを読み始めることができる。見出しでコンテンツを「ざっと読み」、興味のあるコンテンツに直接移動できるこの機能は、そうしなければコンテンツへのアクセスが遅くなってしまうユーザーにとって、操作が非常にスピードアップする。</p>
+<p>例えば HTML 文書では、H1 ～ H6 の HTML タグを正しく使用することで、HTML の見出しが、正しくタグ付けされた PDF の見出しに変換される。見出しの使用方法については、一般的な実装方法として「<a href="G141.html">G141：見出しを用いてウェブページを構造化する</a>」を参照のこと。</p>
+</div>
+<h2 class="small-head" id="PDF9-examples">事例</h2>
+<h3 class="small-head" id="PDF9-ex1">事例 1： Adobe Acrobat 9 Pro を使用して、PDF 文書内のタグ付き見出しを追加または変更する</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+<div>
+<h4>Touchup 読み上げ順序ツールを使用する</h4>
+<p>PDF 文書に見出しを追加する方法の 1 つとして、Touchup 読み上げ順序ツールを使用できる。</p>
+<ol class="enumar">
+<li>
+<p>Adobe Acrobat Pro で PDF 文書を開く</p></li>
+<li>
+<p>アドバンスト &gt; アクセシビリティ &gt; TouchUp 読み上げ順序を選択する</p></li>
+<li>
+<p>TouchUp 読み上げ順序パネルの［順序パネルを表示］ボタンをクリックする。</p></li>
+<li>
+<p>［順序］パネルでタグが表示される</p></li>
+</ol>
+<p>次の画像は、Adobe Acrobat Pro で開いた PDF 文書を示している。タグパネルが開き、H1 タグとして「Cooking techniques」、H2 タグとして「Cooking with oil」という見出しテキストが表示されている。「Cooking with butter」というテキストは H2 タグとすべきであるが、H2 タグにはなっていない。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/cooking-headings1.gif" alt="スクリーンショット：Adobe Acrobat で開いた PDF 文書。［タグ］パネルには、タグツリー内の見出しが表示されている。H2 としてタグ付けされるべきテキストが、誤って段落としてタグ付けされている。" height="326" width="539"/> </p>
+<p>H2 見出しに修正するには、次のように TouchUp 読み上げ順序パネルを使用する。</p>
+<ol class="enumar">
+<li>
+<p>選択ボックスを左クリックして、タグ付けするコンテンツにドラッグする</p></li>
+<li>
+<p>TouchUp 読み上げ順序パネルから「見出し 2」タグを選択する</p></li>
+</ol>
+<p>次の画像は、Adobe Acrobat Pro で開いた PDF 文書を示している。TouchUp 読み上げ順序パネルが表示されている。「Cooking with butter」テキストの近くに選択ボックスが表示され、パネルの「見出し 2」が選択されている。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/cooking-headings2.gif" alt="スクリーンショット：Adobe Acrobat で開いた PDF 文書。TouchUp 読み上げ順序パネルが表示されている。見出しテキストが選択され、パネルの「見出し 2」が選択されている。" height="607" width="585"/> </p>
+<p>最後に、TouchUp 読み上げ順序パネルの［順序パネルを表示］ボタンを押下する。</p>
+<p>次の画像は、Adobe Acrobat Pro で開いた PDF 文書を示している。タグパネルが表示され、H2 としてタグ付けされた「Cooking with butter」というテキストが表示されている。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/cooking-headings3.gif" alt="スクリーンショット：Adobe Acrobat で開いた PDF 文書。TouchUp 読み上げ順序パネルに正しくタグ付けされた見出しが表示されている。" height="352" width="520"/> </p>
+</div>
+<div>
+<h4>［順序］パネルと［タグ］パネルを使用する</h4>
+<p>次の手順に従い、見出しを追加または変更することもできる。</p>
+<ol class="enumar">
+<li>
+<p>［順序］パネルを表示する</p></li>
+<li>
+<p>変更または追加する見出しのテキストのコンテキストメニューを開く</p></li>
+<li>
+<p>テキストに対する正しい見出しタグを選択する</p></li>
+</ol>
+<p>次のスクリーンショットは、「Cooking with butter」というテキストの順序パネルとコンテキストメニューを示している。コンテキストメニューから「見出し 2 としてタグ付け」が選択されている。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/cooking-headings4.gif" alt="スクリーンショット：Adobe Acrobat で開いた PDF 文書。順序パネルとコンテキストメニューに、見出し2 に変更するテキストが示されている。" height="637" width="649"/> </p>
+<p>次のスクリーンショットに示すように、タグパネルを開いて、正しい見出しが適用されていることを確認できる。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/cooking-headings5.gif" alt="スクリーンショット：Adobe Acrobat で開いた PDF 文書。正しい見出しタグが付けられていることをタグパネルで確認できる。" height="319" width="480"/> </p>
+<p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/cooking.docx">タグ付き見出しを追加するサンプル (Word ファイル)</a> and <a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/cooking.pdf">タグ付き見出しを追加するサンプル (PDF ファイル)</a>がある。</p>
+</div>
+</div>
+</div>
+<h3 class="small-head" id="PDF9-ex2">事例 2： PDF 変換時に正しいタグ付き見出しのある Microsoft Word 文書を作成する</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例は Microsoft Word の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+<p>スタイルを使用して、見出しの書式（見出し 1、見出し 2、見出し 3 など）を作成する。スタイルが論理的な構成になるようにする（見出し 2 が見出し 1 より後に来るようにするなど）。</p>
+<div>
+<h4>Microsoft Word 2003 </h4>
+<ul>
+<li>
+<p>書式 &gt; スタイルと書式メニューを選択し、［スタイルと書式］ウィンドウを表示する</p></li>
+<li>
+<p>［スタイルと書式］パネルに用意されている見出し 1～6 のスタイルを使用する</p></li>
+</ul>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/word2003.gif" alt="スクリーンショット：Word 2003での見出しの書式の選択" height="288" width="500"/> </p>
+</div>
+<div>
+<h4>Microsoft Word 2007/2010 </h4>
+<p>Word 2007/2010 で［ホーム］リボンを選択し、スタイルのグループから適切な見出し（見出し 1～6）を選択する。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/word2007.gif" alt="Word 2007/2010での見出しの書式の選択" height="109" width="500"/> </p>
+</div>
+</div>
+</div>
+<h3 class="small-head" id="PDF9-ex3">事例 3： OpenOffice.org Writer 2.2 で PDF 変換時に正しいタグ付き見出しがある文書を作成する</h3>
+<div class="example">
+<div class="textbody">
+<p>この事例は OpenOffice.org Writer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+<p>スタイルを使用して、見出しの書式（見出し 1、見出し 2、見出し 3 など）を作成する。スタイルが論理的な構成になるようにする（見出し 2 が見出し 1 より後に来るようにするなど）。</p>
+<p>次の手順に従い、PDF としてエクスポートする。</p>
+<ol class="enumar">
+<li>
+<p>ファイルメニューの「PDF としてエクスポート」を選択する</p></li>
+<li>
+<p>初めて PDF としてエクスポートする場合には、オプションダイアログボックスが表示される</p></li>
+<li>
+<p>「タグ付き PDF」を選択して、［エクスポート］を押下する</p></li>
+</ol>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/openofficecooking.jpg" alt="スクリーンショット：OpenOffice.org Writer で見出しスタイルを選択し、PDF にエクスポートする。" height="380" width="628"/> </p>
+</div>
+</div>
+<h3 class="small-head" id="PDF9-ex4">事例 4： /Headn エレメントを使用して見出しをマークアップする</h3>
+<div class="example">
+<div class="textbody">
+<p>PDF 文書内の見出しは、構造ツリー内の /Head<em>n</em> エレメントを使用してマークアップできる。ここで、<em>n</em> は 1 ～ 6 の数字である（/Head1、/Head2 など）。 </p>
+<p>次のコードフラグメントは、/Head<em>n</em> エレメントを使用してコンテンツをマークアップする一般的なコードを示している。これは通常、オーサリングツールを使用して行う。</p>
+<div class="code">
+<pre><code>0 obj% Document catalog
+  &lt;&lt; /Type /Catalog
+     /Pages 100 0 R                  % ページツリー
+     /StructTreeRoot 300 0 R         % 構造ツリーのルート
+  &gt;&gt;
+endobj
+ ...
+300 0 obj% Structure tree root
+  &lt;&lt; /Type /StructTreeRoot
+     /K [ 301 0 R                    % 2つの子： 章と
+        304 0 R                      % 段落
+        ]
+     /RoleMap &lt;&lt; /Chap /Sect         % 構造ツリーへのマッピング
+                 /Head1 /H
+                 /Para /P
+              &gt;&gt;
+    /ClassMap &lt;&lt; /Normal 305 0 R &gt;&gt;  % 1つの属性クラスを含むクラスマップ
+    /ParentTree 400 0 R              % 親エレメントの数字ツリー
+    /ParentTreeNextKey 2             % 親ツリーで次に使用するキー
+    /IDTree 403 0 R                  % エレメント識別子の名前ツリー
+  &gt;&gt;
+endobj
+301 0 obj                            % 章の構造エレメント
+  &lt;&lt; /Type /StructElem
+     /S /Chap
+     /ID (Chap1)                     % エレメント識別子
+     /T (Chapter 1)                  % 人間が読み取ることができるタイトル
+     /P 300 0 R                      % 親が構造ツリーのルート
+     /K [ 302 0 R                    % 2つの子：セクションヘッダと
+          303 0 R                    % 段落
+        ]
+  &gt;&gt;
+endobj
+302 0 obj                            % セクションヘッダの構造エレメント
+  &lt;&lt; /Type /StructElem
+     /S /Head1
+     /ID (Sec1.1)                    % エレメント識別子
+     /T (Section 1.1)                % 人間が読み取ることができるタイトル
+     /P 301 0 R                      % 親が章
+     /Pg 101 1 R                     % コンテンツ項目を含むページ
+     /A &lt;&lt; /O /Layout                % レイアウトが所有する属性
+           /SpaceAfter 25
+           /SpaceBefore 0
+           /TextIndent 12.5
+        &gt;&gt;
+    /K 0                             % マークされたコンテンツ順序 0
+  &gt;&gt;
+endobj
+...
+</code></pre>
+</div>
+<p>マークされたコンテンツコンテナー内で、PDF 文書内の第1レベルの見出しに対して、次のように /Head<em>n</em> エレメントを使用して見出しをマークアップできる。</p>
+<div class="code">
+<pre><code>BT		 		% テキストオブジェクトの始まり
+  /Head1 &lt;&lt;/MCID 0 &gt;&gt;   	% マークされたコンテンツ順序の始まり
+     BDC
+        ...
+        (これは第1レベルの見出しです。Hello world: ) Tj
+        ...
+     EMC			% マークされたコンテンツ順序の終わり
+     ...
+ET				% テキストオブジェクトの終わり
+</code></pre>
+</div>
+</div>
+</div>
+<h2 id="PDF9-resources">参考リソース</h2>
+<div class="textbody">
+<p>この参考リソースは、あくまでも情報提供のみが目的であり、推薦などを意味するものではない。</p>
+<ul>
+<li>
+<p> Section 14.8.4.3.2 (Paragraphlike Elements) in <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF 1.7 (ISO 32000-1)</a> </p></li>
+<li>
+<p> <a href="http://pdf.editme.com/Headings">PDF Standards: Headings</a> </p></li>
+<li>
+<p> <a href="http://accessdp.wordpress.com/fixing-pdfs-for-accessibility/headings/">PDF	Accessibility Documentation:headings</a> </p></li>
+<li>
+<p><a href="http://www.adobe.com/accessibility/pdf">PDF and Accessibility</a></p></li>
+</ul>
+</div>
+<h2 id="PDF9-related-techs">関連する実装方法</h2>
+<div class="textbody">
+<ul>
+<li><a href="G141.html">G141: 見出しを用いてウェブページを構造化する</a></li>
+</ul>
+</div>
+<h2 id="PDF9-tests">検証</h2>
+<div class="textbody">
+<h3 class="small-head" id="PDF9-procedure">チェックポイント</h3>
+<ol class="enumar">
+<li>
+<p>別個のセクションに分割されているすべての PDF コンテンツについて、次のいずれかの方法を使用して、見出しが正しくタグ付けされていることを確認する。</p>
+<ul>
+<li>
+<p>PDF 文書をスクリーンリーダーで読み上げると、見出しのリストが正しく読み上げられる</p></li>
+<li>
+<p>PDF エディターを使用して、見出しが正しくタグ付けされていることを確認する</p></li>
+<li>
+<p>/Head<em>n</em> エントリを表示できるツールを使用して PDF 文書を開き、見出しが正しくタグ付けされていることを確認する</p></li>
+<li>
+<p>アクセシビリティ API を通じて文書を表示するツールを使用して、見出しが正しくタグ付けされていることを確認する</p></li>
+</ul></li>
+</ol>
+<h3 class="small-head" id="PDF9-results">判定基準</h3>
+<ul>
+<li>
+<p>1. を満たしている。</p></li>
+</ul>
+<p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+</div><!-- BOTTOM NAVIGATION BAR -->
+<ul id="navigationbottom">
+<li><strong><a href="#top">Top</a></strong></li>
+<li><strong><a href="Overview.html#contents">目次</a></strong></li>
+<li><strong><a href="intro.html">イントロダクション</a></strong></li>
+<li><a href="PDF8.html"><strong>前：</strong>実装方法 PDF8</a></li>
+<li><ahref="PDF10.html"><strong>次：</strong>実装方法 PDF10</a></li>
+</ul>
+<div class="footer">
+<p class="copyright">このページは、「<a href="Overview.html">WCAG 2.0 実装方法集 WCAG 2.0の実装方法と不適合事例</a>」の一部であり、文書全体は1ページ版でも提供されている。Web Content Accessibility Guidelines (WCAG) 2.0 関連文書群において、この「WCAG 2.0 実装方法集」がその他の文書とどのような関係にあるかは、<a href="http://www.w3.org/WAI/intro/wcag20">The WCAG 2.0 Documents（英語）</a>を参照のこと。</p>
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2012 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+<div class="annotation">
+	<p><strong>日本語訳における注記：</strong></p>
+	<p>この文書の正式版は、W3Cサイトで公開されている英語の文書であり、この日本語訳には誤訳が含まれていることもありえます。なお、文中にある「日本語訳における注記」は、W3Cの原文にはないものであり、日本語訳監修者が追記したものです。</p>
+	<ul>
+	<li>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/PDF9.html">PDF9: Providing headings by marking content with heading tags in PDF documents（英語）</a></li>
+	<li>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></li>
+	<li>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></li>
+	</ul>
+</div>
+</body>
+</html>
