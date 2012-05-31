@@ -108,6 +108,8 @@ xml = Nokogiri::XML::Builder.new do |x|
 							x.code {
 								x << div.css( 'code' ).inner_html.strip
 							}
+						when 'diff-add'
+							### CODE ME ###
 						else
 							unless div.node_name == 'text'
 								$stderr.puts "#{tech_id}: Unknown class name '#{div.node_name}.#{div.attr 'class'}', skipped."
