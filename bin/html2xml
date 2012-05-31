@@ -99,6 +99,8 @@ xml = Nokogiri::XML::Builder.new do |x|
 										x.exsubhead {
 											x.text e.text.strip
 										}
+									when 'table'
+										### CODE ME: table element appear in PDF3 ###
 									else
 										unless e.node_name == 'text'
 											$stderr.puts "#{tech_id}: Unknown node '#{e.node_name}' in eg-group.description."
