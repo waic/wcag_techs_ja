@@ -24,7 +24,7 @@
 							支援技術の中には、利用者をリストからリストへ、またはリスト項目からリスト項目へと誘導する機能を備えているものがある。スタイルシートを利用すれば、リストという役割の整合性を保ったまま、表現を変更することができる。</p></description>
   <examples>
     <eg-group>
-      <head>連続するステップ示すリスト</head>
+      <head>連続するステップを示すリスト</head>
       <description><p>この事例では、プロセスの連続するステップを示すために順序リスト（<code>ol</code>要素）を利用している。</p>
 </description>
       <code>&lt;ol&gt;
@@ -51,6 +51,58 @@
   &lt;dd&gt;1秒当たり0.5回から3回、ついたり消えたりすること
   &lt;/dd&gt;
 &lt;/dl&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>定義リストを用いた連絡先情報</head>
+      <description><p>この事例では、定義リストを用いて、対になる関連するアイテムをマークアップしている。対になっているアイテムは、それ自体が論理的に関連したリストである。定義リスト要素のCSSスタイルはブラウザによるサポートが十分ではないため、スタイル目的のためだけにspan要素がマークアップに含められているが、これは必須ではない。</p>
+</description>
+      <code>&lt;dl&gt;
+&lt;dt&gt;&lt;span&gt;名前：&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;John Doe&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span&gt;電話番号：&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;01-2345678&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span&gt;FAX：&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;02-3456789&lt;/span&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span&gt;Eメール：&lt;/span&gt;&lt;/dt&gt;&lt;dd&gt;&lt;span&gt;johndoe@someemail.com&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;</code>
+      <description><p>以下のCSSスタイルは、対になっているアイテムそれぞれをテーブルのようなレイアウトにして一行に並べるために用いることが可能である。</p>
+</description>
+      <code>dt, dd{float: left;margin: 0;padding: 0;}
+dt{clear:both;font-weight: bold}
+dt span{display: inline-block; width: 70px;}
+dd span{display: inline-block; margin-right: 5px;}</code>
+      <description><p>この事例のサンプルとして、<a href="http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/working-examples/H48/ContactInfoDL.html">定義リストを用いた連絡先情報のサンプル</a>がある。</p>
+</description>
+    </eg-group>
+    <eg-group>
+      <head>リストを用いてリンクをグループ化する</head>
+      <description><p>この事例では、リンクが <code>ul</code> 要素と <code>li</code> 要素を用いてグループ化されている。</p>
+</description>
+      <code>&lt;a name="categories" id="categories"&gt;&lt;/a&gt;&lt;h2&gt;製品カテゴリ&lt;/h2&gt;
+&lt;ul class="navigation"&gt;
+    &lt;li&gt;&lt;a href="kitchen.html"&gt;キッチン&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="bedbath.html"&gt;ベッド&amp;amp; Bath&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="dining.html"&gt;ダイニング&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="lighting.html"&gt;照明&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="storage.html"&gt;収納&lt;/a&gt;&lt;li&gt;
+&lt;/ul&gt;</code>
+      <description><p>リスト要素のスタイルを指定するのにCSSを使用することが可能で、この実装方法はさまざまなビジュアルデザインで用いることができる。</p>
+<p>このCSSでは、リストのビュレットとインデントする左側の余白を削除して、各リスト要素を水平に並べている。</p>
+</description>
+      <code>ul.navigation {
+  list-style: none; 
+  padding: 0;
+}
+ul.navigation li {
+  display: inline;
+}</code>
+      <description><p>このスタイルは、リストのビュレットと左側の余白を削除し、リスト項目を横並びのブロックにして表示する。</p>
+</description>
+      <code>ul.navigation {
+ list-style: none; 
+ padding: 0;
+}
+ul.navigation li {
+ display: block; 
+ float: left;
+}</code>
     </eg-group>
   </examples>
   <resources>
@@ -95,6 +147,7 @@
           <p>上記全てを満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -102,6 +155,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H48.html">H48: Using ol, ul and dl for lists（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

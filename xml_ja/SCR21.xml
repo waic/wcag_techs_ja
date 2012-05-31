@@ -127,7 +127,7 @@ function focusFormField(objAnchor, objEvent, objForm)
   if (objEvent &amp;&amp; objEvent.type == 'keypress')
     if (objEvent.keyCode != 13 &amp;&amp; objEvent.keyCode != 32)
       return true;
-  // フォーカスをフォームコントロールに設定する
+  // フォーカスをフォーム・コントロールに設定する
   var strFormField = objAnchor.href.match(/[^#]\w*$/);
   objForm[strFormField].focus();
   return false;
@@ -197,6 +197,7 @@ function focusFormField(objAnchor, objEvent, objForm)
           <p>1.を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>

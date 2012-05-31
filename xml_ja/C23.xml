@@ -58,9 +58,7 @@ Internet Explorer 6 は、システム設定で同じ色が選択されない限
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bbc.co.uk/accessibility/win/seeing/colour/browser/sub_3.shtml" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">BBC's Web page with instructions how to change the browser colors in most browsers</loc>&#13;
-                        </p>
+          <p>BBC's Web page with instructions how to change the browser colors in most browsers</p>
         </item>
       </ulist>
     </see-also>
@@ -90,6 +88,7 @@ Internet Explorer 6 は、システム設定で同じ色が選択されない限
           <p>2.及び 3.を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -97,6 +96,7 @@ Internet Explorer 6 は、システム設定で同じ色が選択されない限
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C23.html">C23: Specifying text and background colors of secondary content such as banners, features and navigation in CSS while not specifying text and background colors of the main content（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
       <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -183,6 +183,7 @@
 <div class="textbody">
 <p>PDF 文書内の見出しは、構造ツリー内の /Head<em>n</em> エレメントを使用してマークアップできる。ここで、<em>n</em> は 1 ～ 6 の数字である（/Head1、/Head2 など）。 </p>
 <p>次のコードフラグメントは、/Head<em>n</em> エレメントを使用してコンテンツをマークアップする一般的なコードを示している。これは通常、オーサリングツールを使用して行う。</p>
+</div>
 <div class="code">
 <pre><code>0 obj% Document catalog
   &lt;&lt; /Type /Catalog
@@ -235,7 +236,9 @@ endobj
 ...
 </code></pre>
 </div>
+<div class="textbody">
 <p>マークされたコンテンツコンテナー内で、PDF 文書内の第1レベルの見出しに対して、次のように /Head<em>n</em> エレメントを使用して見出しをマークアップできる。</p>
+</div>
 <div class="code">
 <pre><code>BT		 		% テキストオブジェクトの始まり
   /Head1 &lt;&lt;/MCID 0 &gt;&gt;   	% マークされたコンテンツ順序の始まり

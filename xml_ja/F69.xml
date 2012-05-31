@@ -19,7 +19,14 @@
 		<li>
 			<p>新しいフォントサイズで表示されたコンテンツに対して、十分な大きさがないポップアップを作成する</p>
 		</li>
-	</ul></description>
+	</ul>
+<div class="diff-add">
+	<span class="difftext">[ここから追加] </span>
+<div class="note">
+	<p class="prefix"><em>注記：</em> WCAGワーキンググループは、この不適合事例の検証方法に多くの誤解があることを確認している。この不適合事例の文書を次回の更新時に修正する予定である。それまでは、コンテンツが「達成基準を満たすことのできる実装方法」のいずれかを用いて達成基準を満たしていれば、この不適合事例には該当しないと考えてよい。</p>
+</div>
+	<span class="difftext">[追加ここまで]</span>
+</div></description>
   <examples>
     <eg-group role="failure">
       <description><p>フォントサイズはスケーラブルな方法で設定されているが、コンテナは固定ピクセルサイズに設定されている。灰色のボーダーは、テキストのコンテナの境界線を示している。テキストが拡大されるとき、そのコンテナからあふれ、次のパラグラフを覆い隠す。</p>
@@ -53,29 +60,15 @@
   </resources>
   <related-techniques/>
   <tests>
-    <procedure>
-      <olist>
-        <item>
-          <p>コンテンツのテキストの文字サイズを200％拡大する。</p>
-        </item>
-        <item>
-          <p>テキストが切り取られたり、端が欠けたり、又は覆い隠されたりしていない。</p>
-        </item>
-      </olist>
-    </procedure>
-    <expected-results>
-      <ulist>
-        <item>
-          <p>2.を満たしていなければ、不適合の条件が適用され、そのコンテンツは達成基準を満たしていないことになる。</p>
-        </item>
-      </ulist>
-    </expected-results>
+    <procedure/>
+    <expected-results/>
   </tests>
   <translationcredit>
     <ulist>
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F69.html">F69: Failure of Success Criterion 1.4.4 when resizing visually rendered text up to 200 percent causes the text, image or controls to be clipped, truncated or obscured（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
       <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

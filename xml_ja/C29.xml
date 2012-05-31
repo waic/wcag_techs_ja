@@ -501,14 +501,12 @@ style2.css内：
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://css-discuss.incutio.com/?page=StyleSwitching" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">StyleSwitching  - css-discuss</loc>&#13;
-                        </p>
+          <p>StyleSwitching  - css-discuss</p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/200608/build_your_own_php_style_sheet_switcher/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Build your own PHP style sheet switcher</loc>&#13;
-                        </p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/200608/build_your_own_php_style_sheet_switcher/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Build your own PHP style sheet switcher</loc>
+          </p>
         </item>
         <item>
           <p>&#13;
@@ -589,6 +587,7 @@ style2.css内：
           <p>上記のすべてを満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -596,6 +595,7 @@ style2.css内：
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C29.html">C29: Using a style switcher to provide a conforming alternate version（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

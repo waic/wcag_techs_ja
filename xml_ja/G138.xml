@@ -23,6 +23,13 @@
       <ulist>
         <item>
           <p>&#13;
+                	<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.paciellogroup.com/blog/2008/02/screen-readers-lack-emphasis/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] &#13;
+                	Screen Readers lack emphasis&#13;
+                [追加ここまで]</loc>&#13;
+                </p>
+        </item>
+        <item>
+          <p>&#13;
                 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/text.html#h-9.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Phrase elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</loc></p>
         </item>
       </ulist>
@@ -55,6 +62,7 @@
 （英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

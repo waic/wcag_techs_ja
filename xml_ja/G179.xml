@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G179">
-  <short-name>文字サイズを変更しても、テキストコンテナのサイズが変更されない際に、コンテンツ又は機能が損なわれないようにする</short-name>
+  <short-name>文字サイズを変更しても、テキストコンテナの [ここから変更] 幅[変更ここまで]が変更されない際に、コンテンツ又は機能が損なわれないようにする</short-name>
   <applicability>
     <p>ウィンドウのサイズを変更するとテキストを折り返す、全てのウェブコンテンツ技術</p>
   </applicability>
@@ -22,7 +22,6 @@
       </description>
     </eg-group>
     <eg-group>
-      <head>Example 2</head>
       <description><p>カラムの中でテキストブロックでレイアウトしている新聞がある。そのブロックは横幅は固定されているが、高さは指定していない。ブラウザでテキストが変更された時、文字は包まれ、ブロックは高さが高くなる。</p>
 </description>
     </eg-group>
@@ -69,6 +68,7 @@
           <p>2.を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -76,6 +76,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G179.html">G179: Ensuring that there is no loss of content or functionality when the text resizes and text containers do not resize（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
       <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

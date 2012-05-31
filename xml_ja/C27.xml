@@ -39,7 +39,7 @@
       <ulist>
         <item>
           <p>&#13;
-<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/downloads/details.aspx?familyid=E59C3964-672D-4511-BB3E-2D5E1DB91038&amp;displaylang=en" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Internet Explorer Developer Toolbar を使用すると、Microsoft の Internet Explorer でスクリプトによって生成されたDOMのチェックが可能になる。</loc> を使用すると、Microsoft の Internet Explorer でスクリプトによって生成されたDOMのチェックが可能になる。</p>
+<span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar</a><span class="difftext">[変更ここまで]</span></span>を使用すると、Microsoft の Internet Explorer でスクリプトによって生成されたDOMのチェックが可能になる。</p>
         </item>
         <item>
           <p>&#13;
@@ -76,6 +76,7 @@ DOMを表示できるツールを使って、DOM内の要素を検査する。</
           <p>3.を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -83,6 +84,7 @@ DOMを表示できるツールを使って、DOM内の要素を検査する。</
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C27.html">C27: Making the DOM order match the visual order（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -24,16 +24,26 @@
     <procedure>
       <olist>
         <item>
-          <p>代替テキストがリアルタイムで伝達されるように手順とポリシーが整っている。【訳注：チェックポイントがこれだけでよいのか、WCAGワーキンググループに確認中。】</p>
+          <p>代替テキストがリアルタイムで伝達されるように手順とポリシーが整っている。</p>
+        </item>
+        <item>
+          <p>
+            <span class="diff-add">
+              <span class="difftext">[ここから追加] </span>
+              <span>代替テキストが提供されているかどうかをランダムにチェックすると、手順とポリシーの通りである。</span>
+              <span class="difftext">[追加ここまで]</span>
+            </span>
+          </p>
         </item>
       </olist>
     </procedure>
     <expected-results>
       <ulist>
         <item>
-          <p>1.を満たしている。</p>
+          <p>1.<span class="diff-add"><span class="difftext">[ここから追加] </span><span> 及び 2. </span><span class="difftext">[追加ここまで]</span></span>を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -41,6 +51,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G150.html">G150: Providing text based alternatives for live audio-only content（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

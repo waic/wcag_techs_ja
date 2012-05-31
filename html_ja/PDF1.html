@@ -160,19 +160,26 @@
 <div class="example">
 <div class="textbody">
 <p>山と月と木々の画像の場合、/Alt プロパティは次のように使用される（通常、オーサリングツールを使用して行う）。</p>
+</div>
 <div class="code">
 <pre><code>/Figure &lt;&lt;/Alt (山と月と木々のスケッチ) &gt;&gt;</code></pre>
 </div>
+<div class="textbody">
 <p>この画像は別の名前のタグで表示される場合がある。別の名前が使用されるのは、タグ名が英語以外の言語で記述されているか、特定のツールで何らかの理由で別の名前が使用されているためである。そのような状況では、PDF 文書の StructTreeRoot にある RoleMap に、PDF 文書で使用される標準的な構造タイプを持つ画像で使用されるタグの名前（この場合は Figure）を明示的に割り当てるエントリが含まれていなければならない。RoleMap に Shape タグと Figure タグのエントリマッピングだけが含まれる場合、ロールマップ情報は次のように表示される。</p>
+</div>
 <div class="code">
 <pre><code>/RoleMap &lt;&lt; /Shape /Figure &gt;&gt;</code></pre>
 </div>
+<div class="textbody">
 <p>この場合、/Alt エントリは次のように使用することもできる。</p>
+</div>
 <div class="code">
 <pre><code>/Shape &lt;&lt;/Alt (夏のクレーター湖。青空、雲と景色が湖面にきれいに映っている。) &gt;&gt;
     					</code></pre>
 </div>
+<div class="textbody">
 <p>プロパティリストの /Alt エントリは、他のエントリと組み合わせることができる。</p>
+</div>
 </div>
 </div>
 <h2 id="PDF1-resources">参考リソース</h2>

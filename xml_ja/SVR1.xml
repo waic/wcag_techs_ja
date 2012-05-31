@@ -95,11 +95,7 @@ header("Location: http://www.example.com/newUserLogin.php");
                                     the Java Servlets 2.3 API documentation. </p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://php.net/header" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">header in the PHP&#13;
-                                    Manual.</loc> in the PHP&#13;
-                                    Manual. </p>
+          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://php.net/manual/en/function.header.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更]  header in the PHP Manual. [変更ここまで]</loc> in the PHP Manual. </p>
         </item>
         <item>
           <p>&#13;
@@ -145,6 +141,7 @@ header("Location: http://www.example.com/newUserLogin.php");
           <p>2. 及び 3. を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -152,6 +149,7 @@ header("Location: http://www.example.com/newUserLogin.php");
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SVR1.html">SVR1: Implementing automatic redirects on the server side instead of on the client side（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -9,7 +9,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>JAWS及びWindows-Eyesは、見出し要素を用いたナビゲーション機能を提供しており、見出しレベルに関する情報も提供している。また、Operaは、見出し要素ごとに移動できるメカニズムを提供している。他のユーザーエージェントでも、追加的なプラグインが見出し要素を用いたナビゲーション機能をサポートしている。</p>
+      <p>JAWS及びWindows-Eyesは、見出し要素を用いたナビゲーション機能を提供しており、見出しレベルに関する情報も提供している。また、Operaは、見出し要素ごとに移動できるメカニズムを提供している。他のユーザーエージェントでも、追加的なプラグインが見出し要素を用いたナビゲーション機能をサポートしている。<span class="diff-add"><span class="difftext">[ここから追加] </span><span>プラグインに関しては、「参考リソース」のセクションを参照のこと。</span><span class="difftext">[追加ここまで]</span></span></p>
     </ua-issue>
   </ua-issues>
   <description><p>
@@ -37,7 +37,7 @@
                 
                   </li>
 </ul>
-<p>いくつかのウェブコンテンツ技術において、見出しは論理的な階層を伝達することを目的としている。下位レベルの見出しを飛ばすと、文書構造がきちんと検討されなかったのではないか、又は一部の見出しが意味ではなく視覚的な表現を得るために選択されたのではないか、といった印象を与えてしまうかもしれない。したがって、コンテンツ制作者には見出しを階層的に入れ子にすることが推奨される。</p>
+<p><span class="diff-delete"><span class="difftext">[ここから削除] </span><span>いくつかのウェブコンテンツ技術において、</span><span class="difftext">[削除ここまで]</span></span>見出しは論理的な階層を伝達することを目的としている。下位レベルの見出しを飛ばすと、文書構造がきちんと検討されなかったのではないか、又は一部の見出しが意味ではなく視覚的な表現を得るために選択されたのではないか、といった印象を与えてしまうかもしれない。したがって、コンテンツ制作者には見出しを階層的に入れ子にすることが推奨される。</p>
             
 						<p>見出しは、コンテンツの中の重要なセクションの開始位置を示すものであるため、支援技術のユーザーが適切な見出しまで直接ジャンプしてから、コンテンツを読み始めることができる。つまり、そのコンテンツに到達するのに時間を要していたユーザーが、見出しのマークアップによってより早く到達できるようになる。</p>
           
@@ -124,6 +124,28 @@
                            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc>&#13;
                         </p>
         </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/201003/heading_navigation_in_web_browsers" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] Heading navigation in web browsers[追加ここまで]</loc>
+          </p>
+        </item>
+        <item>
+          <p>Firefoxでは、以下のプラグインがキーボード操作による見出しナビゲーション機能を提供している：<span class="diff-change"><span class="difftext">[ここから変更] </span><a href="https://addons.mozilla.org/en-US/firefox/addon/accessibility-evaluation-toolb/">Accessibility Evaluation Toolbar</a><span class="difftext">[変更ここまで]</span></span><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/heading-navigation-greasemonkey-user-script.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] Firefoxでは、以下のプラグインがキーボード操作による見出しナビゲーション機能を提供している：[ここから変更] Accessibility Evaluation Toolbar[変更ここまで]Heading Navigation Greasemonkey User Script[追加ここまで]</loc></p>
+        </item>
+        <item>
+          <p>
+            <span class="diff-change">
+              <span class="difftext">[ここから変更] </span>
+              <a href="https://addons.mozilla.org/en-US/firefox/addon/accessibility-evaluation-toolb/">Accessibility Evaluation Toolbar</a>
+              <span class="difftext">[変更ここまで]</span>
+            </span>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/heading-navigation-greasemonkey-user-script.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Heading Navigation Greasemonkey User Script</loc>
+          </p>
+        </item>
       </ulist>
     </see-also>
   </resources>
@@ -145,6 +167,7 @@
           <p>1.を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -152,6 +175,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H69.html">H69: Providing heading elements at the beginning of each section of content（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

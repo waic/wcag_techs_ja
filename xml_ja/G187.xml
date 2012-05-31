@@ -8,7 +8,7 @@
     <success-criterion idref="time-limits-pause"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、点滅するコンテンツをユーザーエージェントの機能を使用して止めることができるようにすることである。特定のウェブコンテンツ技術では、ユーザーエージェントによって利用者がアニメーションを止めることができる。利用者がこの機能を実行するとき、点滅も含めたすべてのアニメーションは停止する。</p>
+  <description><p>この実装方法の目的は、点滅するコンテンツをユーザーエージェントの機能を使用して止めることができるようにすることである。特定のウェブコンテンツ技術では、ユーザーエージェントによって利用者がアニメーションを止めることができる。利用者がこの機能を実行するとき、点滅も含めたすべてのアニメーションは停止する。<span class="diff-add"><span class="difftext">[ここから追加] </span><span>この機能は、WCAGに適合したインタラクティブなコントロール、又は明記されたキーボード・ショートカットのいずれかによって提供することが可能である。</span><span class="difftext">[追加ここまで]</span></span></p>
                 
                <p>利用者がアニメーションを止めるための一般的な方法は、Escapeキーを押すことである。そのキーを押すためのイベントキューの中で先行するプロセスがない限り、動きのあるアニメーションや点滅しているコンテンツを停止するコマンドとして動作する。</p>
                 
@@ -57,6 +57,7 @@
 （英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -33,10 +33,22 @@
     <procedure>
       <olist>
         <item>
+          <div class="diff-add">
+<span class="difftext">[ここから追加] </span><p>ビューポートのサイズを 1024px × 768px 以上に設定する。</p>
+<span class="difftext">[追加ここまで]</span>
+</div>
+        </item>
+        <item>
           <p>文字サイズを大きくできる。</p>
         </item>
         <item>
           <p>文字サイズが元のサイズから200％まで大きくすることができる。</p>
+        </item>
+        <item>
+          <div class="diff-add">
+<span class="difftext">[ここから追加] </span><p>文字サイズが元のサイズから200％まで大きくした後、コンテンツまたは機能が損なわれていない（例えば、テキストの一部が表示されなくなる、ボックスが重なり合う、コントロールが隠れてしまったりラベルから離れてしまったりする、というような状態にならない）。</p>
+<span class="difftext">[追加ここまで]</span>
+</div>
         </item>
         <item>
           <p>文字サイズを初期値まで小さく戻すことができる。</p>
@@ -46,9 +58,10 @@
     <expected-results>
       <ulist>
         <item>
-          <p>1.及び 2.を満たしている。</p>
+          <p><span class="diff-delete"><span class="difftext">[ここから削除] </span><span>1.及び 2.</span><span class="difftext">[削除ここまで]</span></span><span class="diff-add"><span class="difftext">[ここから追加] </span><span>2. ～ 4. </span><span class="difftext">[追加ここまで]</span></span>を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -56,6 +69,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G178.html">G178: Providing controls on the Web page that allow users to incrementally change the size of all text on the page up to 200 percent（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
       <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

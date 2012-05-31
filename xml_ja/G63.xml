@@ -51,17 +51,12 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           National Center for Accessible Curriculumの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cast.org/publications/ncac/ncac_go.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">National Center for Accessible CurriculumのGraphic Organizersのページは、いろいろな種類のグラフィック・オーガナイザーの有用な概要と、それらの用途に加えて、学習障害の学生のためのグラフィック・オーガナイザーの有効性の関連する研究の概要を提供している。</loc>のページは、いろいろな種類のグラフィック・オーガナイザーの有用な概要と、それらの用途に加えて、学習障害の学生のためのグラフィック・オーガナイザーの有効性の関連する研究の概要を提供している。&#13;
-    </p>
+          <p>National Center for Accessible Curriculumの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://aim.cast.org/learn/historyarchive/backgroundpapers/graphic_organizers" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更] National Center for Accessible CurriculumのGraphic Organizersのページは、いろいろな種類のグラフィック・オーガナイザーの有用な概要と、それらの用途に加えて、学習障害の学生のためのグラフィック・オーガナイザーの有効性の関連する研究の概要を提供している。[変更ここまで]</loc>のページは、いろいろな種類のグラフィック・オーガナイザーの有用な概要と、それらの用途に加えて、学習障害の学生のためのグラフィック・オーガナイザーの有効性の関連する研究の概要を提供している。</p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usabilityfirst.com/glossary/main.cgi?function=display_term&amp;term_id=193" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Usability Glossary: sitemap</loc>&#13;
-                &#13;
-                        </p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usabilityfirst.com/glossary/main.cgi?function=display_term&amp;term_id=193" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Usability Glossary: sitemap</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -95,6 +90,7 @@
           <p>上記、全てを満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -102,6 +98,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G63.html">G63: Providing a site map（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
       <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

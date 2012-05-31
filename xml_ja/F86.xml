@@ -45,20 +45,18 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/downloads/details.aspx?familyid=3755582A-A707-460A-BF21-1373316E13F0&amp;displaylang=en" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Active Accessibility 2.0 SDK. Includes Inspect32.exe and other MSAA tools.</loc>. Includes Inspect32.exe and other MSAA tools.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/ms695716.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更] Microsoft Active Accessibility 2.0 SDK. Includes Inspect32.exe and other MSAA tools.[変更ここまで]</loc>. Includes Inspect32.exe and other MSAA tools.</p>
         </item>
         <item>
           <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://library.gnome.org/devel/atk/unstable/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Gnome Accessibility Toolkit documentation</loc>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://developer.gnome.org/atk/unstable/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更] Gnome Accessibility Toolkit documentation[変更ここまで]</loc>
           </p>
         </item>
         <item>
-          <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://developer.gnome.org/projects/gap/testing/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Gnome Accessibility QA documentation and tools</loc>
-          </p>
+          <p>Gnome Accessibility QA documentation and tools </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/downloads/details.aspx?familyid=E59C3964-672D-4511-BB3E-2D5E1DB91038&amp;displaylang=en" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Internet Explorer Developer Toolbar. Allows examination of script-generated DOM in Microsoft Internet Explorer.</loc>. Allows examination of script-generated DOM in Microsoft Internet Explorer.</p>
+          <p><span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar</a><span class="difftext">[変更ここまで]</span></span>. Allows examination of script-generated DOM in Microsoft Internet Explorer.</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug. Allows examination of script-generated DOM in Firefox.</loc>. Allows examination of script-generated DOM in Firefox.</p>
@@ -126,6 +124,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F86.html">F86: Failure of Success Criterion 4.1.2 due to not providing names for each part of a multi-part form field, such as a US telephone number（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
       <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -52,11 +52,7 @@
                         </p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://css-discuss.incutio.com/?page=UsingKeywords" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS-Discuss Font Size Using Keywords</loc>&#13;
-                &#13;
-                        </p>
+          <p> CSS-Discuss Font Size Using Keywords</p>
         </item>
       </ulist>
     </see-also>
@@ -66,29 +62,14 @@
     <relatedtech idref="C14"/>
   </related-techniques>
   <tests>
-    <procedure>
-      <olist>
-        <item>
-          <p>CSS内の規則集合（CSSのソースコード）について、フォントサイズを指定している全てのCSSプロパティを洗い出す。</p>
-        </item>
-        <item>
-          <p>値が<code>xx-small</code>、<code>x-small</code>、<code>small</code>、<code>medium</code>、<code>large</code>、<code>x-large</code>、<code>xx-large</code>、<code>smaller</code>、<code>larger</code>の中のどれか一つである。</p>
-        </item>
-      </olist>
-    </procedure>
-    <expected-results>
-      <ulist>
-        <item>
-          <p>2.を満たしている。</p>
-        </item>
-      </ulist>
-    </expected-results>
+    <procedure/>
+    <expected-results/>
   </tests>
   <translationcredit>
     <ulist>
       <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/C13.html">C13: Using named font sizes（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

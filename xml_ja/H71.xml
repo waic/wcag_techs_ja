@@ -12,12 +12,11 @@
   <description><p>
 							この実装方法の目的は、関連するフォーム・コントロールをセマンティックにグループ化する方法を提供することである。これによって、ユーザーはフォーム・コントロールの関係が理解でき、より早く効率的にフォームを利用できるようになる。</p>
             
-						<p>
-								フォーム・コントロールは、<code>fieldset</code>要素で囲むことによってグループ化できる。つまり、<code>fieldset</code>要素内にある全てのフォームコントロールが関連付けられることになる。<code>fieldset</code>要素内での最初の要素は<code>legend</code>要素とすべきであり、<code>legend</code>要素はそのグループのラベルや使用法を提供するものである。<code>fieldset</code>要素は入れ子にもできるが、あまりやり過ぎるとユーザーの混乱につながる可能性がある。</p>
+                        <p>
+								フォーム・コントロールは、<code>fieldset</code>要素で囲むことによってグループ化できる。つまり、<code>fieldset</code>要素内にある全てのフォームコントロールが関連付けられることになる。<code>fieldset</code>要素内での最初の要素は<code>legend</code>要素<span class="diff-change"><span class="difftext">[ここから変更]</span><span>でなければならず、</span><span class="difftext">[変更ここまで]</span></span><code>legend</code>要素はそのグループのラベルや<span class="diff-change"><span class="difftext">[ここから変更]</span><span>説明</span><span class="difftext">[変更ここまで]</span></span>を提供するものである。<span class="diff-change"><span class="difftext">[ここから変更]</span><span>なお、ユーザーを混乱させてしまう恐れがあるため、コンテンツ制作者は必要以上に <code>fieldsets</code> 要素を入れ子にすることを避けるべきである。</span><span class="difftext">[変更ここまで]</span></span></p>
             
             
-						<p>
-								フォーム・コントロールのグループ化が最も重要なのは、関連するラジオボタンやチェックボックスをまとめるときである。ラジオボタンやチェックボックスは、<code>name</code>属性で同じ値が指定されている場合に、一組のコントロールとして関連付けられる。これらは、選択肢の中から自由に選択できるセレクトメニューと同じように動作することになるが、セレクトメニューは単一のコントロールであるのに対し、ラジオボタンとチェックボックスは複数のコントロールである点が異なる。複数のコントロールであるがゆえに、セマンティックにグループ化しておくことが特に重要であり、それによって単一のコントロールのように簡単に操作できるようになる。ユーザーエージェントは、複数のコントロールが同じグループの一部であることをユーザーに伝えるために、各コントロールのラベルよりも先に<code>legend</code>要素の内容を提示することができる。</p>
+						<p>フォーム・コントロールのグループ化が最も重要なのは、関連するラジオボタンやチェックボックスをまとめるときである。ラジオボタンやチェックボックスは、<code>name</code>属性で同じ値が指定されている場合に、一組のコントロールとして関連付けられる。これらは、選択肢の中から自由に選択できるセレクトメニューと同じように動作することになるが、セレクトメニューは単一のコントロールであるのに対し、ラジオボタンとチェックボックスは複数のコントロールである点が異なる。<span class="diff-change"><span class="difftext">[ここから変更]</span><span>それぞれのラジオボタンやチェックボックスの個々のラベルは、そのグループの説明となる文脈を十分に伝えられないことがある。この場合、セマンティックにグループ化しておくことが特に重要であり、それによって単一のコントロールのように簡単に操作できるようになり、またグループの説明を補足することができる。ユーザーエージェントは、その説明を提供し、複数のコントロールが同じグループの一部であることをユーザーに伝えるために、各コントロールのラベルよりも先に<code>legend</code>要素の内容を提示することが多い。</span><span class="difftext">[変更ここまで]</span></span></p>
             
             
 						<p>
@@ -28,8 +27,12 @@
 								ブラウザの初期状態では、<code>fieldset</code>要素によってグループ化したコントロール全体を枠で囲むという表示であるため、コンテンツ制作者は<code>fieldset</code>要素の利用を避けたい場合がある。しかし、このような視覚的なグループ化も有益であり、その状態のままにしておくこと（あるいは、何らかの形で視覚的にグループ化すること）をしっかり検討すべきである。見た目のスタイルについては、CSSで<code>fieldset</code>要素に対する「border」プロパティを上書きしたり、<code>fieldset</code>要素に対する「position」プロパティを上書きしたりすることによって変更できる。</p>
           
           
-					<p>
-							関連する複数のラジオボタンが小さなグループであり、分かりやすい使用法とはっきりと異なった選択肢で構成されている場合は、<code>fieldset</code>要素と<code>legend</code>要素を利用する必要はなく、<a href="H44.html"><em>H44: label要素を用いて、テキストのラベルとフォーム・コントロールを関連付ける</em></a> の実装方法を用いれば十分なこともある。</p></description>
+					
+<div class="diff-delete">
+	<span class="difftext">[ここから削除] </span>
+	<p>関連する複数のラジオボタンが小さなグループであり、分かりやすい使用法とはっきりと異なった選択肢で構成されている場合は、<code>fieldset</code>要素と<code>legend</code>要素を利用する必要はなく、<a href="H44.html"><em>H44: label要素を用いて、テキストのラベルとフォーム・コントロールを関連付ける</em></a> の実装方法を用いれば十分なこともある。</p>
+    <span class="difftext">[削除ここまで]</span>
+    </div></description>
   <examples>
     <eg-group>
       <head>選択式のテスト</head>
@@ -138,10 +141,10 @@
     <procedure>
       <olist>
         <item>
-          <p>論理的に関連している<code>input</code>要素のグループが、1つの<code>fieldset</code>要素内に含められている。</p>
-        </item>
-        <item>
-          <p>同じ<code>name</code>属性値を持つ<code>type="radio"</code>又は<code>type="checkbox"</code>の<code>input</code>要素のグループが、1つの<code>fieldset</code>要素内に含められている。</p>
+          <div class="diff-change">
+<span class="difftext">[ここから変更] </span><p>論理的に関連している<code>input</code>要素または<code>select</code>要素のグループが、1つの<code>fieldset</code>要素内に含められている。</p>
+<span class="difftext">[変更ここまで]</span>
+</div>
         </item>
         <item>
           <p>各<code>fieldset</code>要素には、そのグループの説明を含めた<code>legend</code>要素が指定されている。</p>
@@ -154,6 +157,7 @@
           <p>上記全てを満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -161,6 +165,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H71.html">H71:  Providing a description for groups of form controls using fieldset and legend elements（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

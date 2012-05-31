@@ -10,7 +10,10 @@
   <ua-issues/>
   <description><p>この実装方法の目的は、ウェブページのメインコンテンツへ直接移動できるようにすることによって、複数のウェブページ上で繰り返されているコンテンツのブロックをスキップできるメカニズムを提供することである。メインコンテンツの開始位置へのリンクが、そのウェブページの最初のインタラクティブなアイテムとなるようにする。そのリンクを実行することにより、その他のコンテンツを通過して、フォーカスをメインコンテンツへ移動させる。この実装方法は、ウェブページに同じくらい重要なコンテンツエリアが複数ある場合よりも、ウェブページのメインコンテンツエリアが一つである際に最も効果的である。</p>
 <div class="note">
-		<p class="prefix"><em>注記：</em>キーボードで操作している利用者（スイッチの利用者を含む）、キーボード・ストロークを遅めにしている利用者、画面拡大ソフトウェアの利用者、画面を見ている人と一緒に作業しているスクリーンリーダーの利用者、キーボードだけで操作している利用者、及び音声認識ソフトウェアの利用者にとっては、リンクが画面に表示されていることが必要である。</p>
+<div class="diff-change">
+<span class="difftext">[ここから変更] </span><p class="prefix"><em>注記：</em>キーボードで操作している利用者（スイッチの利用者を含む）、キーボード・ストロークを遅めにしている利用者、画面拡大ソフトウェアの利用者、画面を見ている人と一緒に作業しているスクリーンリーダーの利用者、キーボードだけで操作している利用者、及び音声認識ソフトウェアの利用者にとっては、このリンクは常に表示されていることが望ましい。しかし、<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-skip">達成基準 2.4.1</a>は、フォーカスを受け取っていないときには表示されていることを要求してはいない。フォーカスを受け取っているときだけ表示されるリンクも達成基準を満たすことが可能である。</p>
+<span class="difftext">[変更ここまで]</span>
+</div>
 </div></description>
   <examples>
     <eg-group>
@@ -62,6 +65,7 @@
           <p>上記のチェック全てを満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -69,6 +73,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G1.html">G1: Adding a link at the top of each page that goes directly to the main content area（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
       <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会の「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

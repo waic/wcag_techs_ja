@@ -2,7 +2,7 @@
 <technique id="H44">
   <short-name>label要素を用いて、テキストのラベルとフォーム・コントロールを関連付ける</short-name>
   <applicability>
-    <p>ラベルを用いているHTML及びXHTMLのフォームコントロール</p>
+    <p>ラベルを用いているHTML及びXHTMLのフォーム・コントロール</p>
   </applicability>
   <applies-to>
     <success-criterion idref="text-equiv-all"/>
@@ -12,7 +12,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue><p>
-								HTML及びXHTML仕様書では、暗示的なラベルと明示的なラベルの両方を認めている。しかし、支援技術の一部は、暗示的なラベル（たとえば、<code>&lt;label&gt;First name &lt;input type="text" name="firstname"&gt;&lt;/label&gt;</code>）を正確に処理できない。【訳注：なお、暗示的なラベルとは、ラベルとフォームコントロールを単に<code>label</code>要素で囲んだだけのものである。一方、明示的なラベルとは、<code>label</code>要素の<code>for</code>属性に、フォームコントロールの<code>id</code>属性値と同じ値を指定することで、両者を明確に関連付けたものである。】</p>
+								HTML及びXHTML仕様書では、暗示的なラベルと明示的なラベルの両方を認めている。しかし、支援技術の一部は、暗示的なラベル（たとえば、<code>&lt;label&gt;First name &lt;input type="text" name="firstname"&gt;&lt;/label&gt;</code>）を正確に処理できない。【訳注：なお、暗示的なラベルとは、ラベルとフォーム・コントロールを単に<code>label</code>要素で囲んだだけのものである。一方、明示的なラベルとは、<code>label</code>要素の<code>for</code>属性に、フォーム・コントロールの<code>id</code>属性値と同じ値を指定することで、両者を明確に関連付けたものである。】</p>
             
                   <ul>
 <li>
@@ -32,7 +32,7 @@
 								ユーザーエージェントは、<code>title</code>属性が指定してある<code>input</code>要素にマウスオーバーしたときに、ツールチップを表示するようである。支援技術は<code>title</code>属性を抽出し、多くのグラフィカルブラウザは<code>title</code>属性をツールチップで表示する。ただし、キーボード操作ではツールチップを開けないため、視力はあるがマウスではなくキーボードを使っている利用者は、現状ではツールチップの情報を利用できない恐れがある。</p>
     </ua-issue>
     <ua-issue><p>
-								JAWSとWindow-Eyesでは、フォームコントロールがフォーカスを受けたとき、もしラベルが指定されていなければ、<code>title</code>属性を読み上げる。</p>
+								JAWSとWindow-Eyesでは、フォーム・コントロールがフォーカスを受けたとき、もしラベルが指定されていなければ、<code>title</code>属性を読み上げる。</p>
             
                   <ul>
 <li>
@@ -48,7 +48,7 @@
 </ul></ua-issue>
   </ua-issues>
   <description><p>
-							この実装方法の目的は、フォームコントロールとラベルを明示的に関連付けるために、<code>label</code>要素を利用することである。ラベルは、<code>label</code>要素の<code>for</code>属性によって特定のフォームコントロールと結びつけることができる。この場合、<code>for</code>属性値はフォームコントロールの<code>id</code>属性値と同じでなければならない。</p>
+							この実装方法の目的は、フォーム・コントロールとラベルを明示的に関連付けるために、<code>label</code>要素を利用することである。ラベルは、<code>label</code>要素の<code>for</code>属性によって特定のフォーム・コントロールと結びつけることができる。この場合、<code>for</code>属性値はフォーム・コントロールの<code>id</code>属性値と同じでなければならない。</p>
           
 					<p>
 							<code>id</code>属性が<code>name</code>属性と同じ値で、両方とも指定しなければならない場合でも、その<code>id</code>はそのウェブページ内で一意的なものとして、重複して使用してはならない。</p>
@@ -244,6 +244,7 @@
           <p>1.及び2.を満たしている。達成基準 3.3.2に関しては、3.も満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>

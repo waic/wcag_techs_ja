@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G68">
-  <short-name>コンテンツの内容が分かるラベルを提供し、ライブの音声しか含まないコンテンツ及びライブの映像しか含まないコンテンツの目的を説明する</short-name>
+  <short-name>[ここから削除] コンテンツの内容が分かるラベル[削除ここまで][ここから追加] 簡潔な代替テキスト[追加ここまで]を提供し、ライブの音声しか含まないコンテンツ及びライブの映像しか含まないコンテンツの目的を説明する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>
@@ -9,7 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p>この実装方法は、ライブの音声しか含まない、及びライブ映像しか含まないコンテンツに対して、その内容を説明するラベルを提供するものである。ここでいうラベルは、音声の場合は時間の経過に伴って変化するメディアの代替コンテンツ、そして映像の場合は時間の経過に伴って変化するメディアの代替コンテンツ又は音声ガイドと組み合わせて使用することもできる。ただし、そういった代替コンテンツは、この実装方法には含まれていない。この実装方法の目的は、利用者が非テキストのコンテンツにアクセスできないとしても、それが何であるかを判断できるようにすることである。注記：完全な代替コンテンツがほかに提供されている場合でも、利用者が非テキストのコンテンツに遭遇する際は、それを特定できるようにしておくことが重要である。これにより、利用者は混乱せず、非テキストのコンテンツに遭遇した時点で、それを完全な代替コンテンツと関連付けられるようになる。</p>
+    <p>この実装方法は、ライブの音声しか含まない、及びライブ映像しか含まないコンテンツに対して、<span class="diff-delete"><span class="difftext">[ここから削除] </span><span>その内容を説明するラベル</span><span class="difftext">[削除ここまで]</span></span><span class="diff-add"><span class="difftext">[ここから追加] </span><span>簡潔な代替テキスト</span><span class="difftext">[追加ここまで]</span></span>を提供するものである。<span class="diff-delete"><span class="difftext">[ここから削除] </span><span>ここでいうラベル</span><span class="difftext">[削除ここまで]</span></span><span class="diff-add"><span class="difftext">[ここから追加] </span><span>この代替テキスト</span><span class="difftext">[追加ここまで]</span></span>は、音声の場合は時間の経過に伴って変化するメディア<span class="diff-add"><span class="difftext">[ここから追加] </span><span>（音声または映像）の完全な代替テキスト、または映像の</span><span class="difftext">[追加ここまで]</span></span><span class="diff-delete"><span class="difftext">[ここから削除] </span><span>代替コンテンツ 、そして映像の場合は時間の経過に伴って変化するメディアの代替コンテンツ又は</span><span class="difftext">[削除ここまで]</span></span>音声ガイドと組み合わせて使用することもできる。ただし、そういった代替コンテンツは、この実装方法には含まれていない。この実装方法の目的は、利用者が非テキストのコンテンツにアクセスできないとしても、それが何であるかを判断できるようにすることである。注記：完全な代替コンテンツがほかに提供されている場合でも、利用者が非テキストのコンテンツに遭遇する際は、それを特定できるようにしておくことが重要である。これにより、利用者は混乱せず、非テキストのコンテンツに遭遇した時点で、それを完全な代替コンテンツと関連付けられるようになる。</p>
   </description>
   <examples>
     <eg-group>
@@ -40,7 +40,7 @@
           <p>非テキストコンテンツを取り除くか、非表示にするか、又は覆い隠す。</p>
         </item>
         <item>
-          <p>代替テキストを表示させる。</p>
+          <p><span class="diff-add"><span class="difftext">[ここから追加] </span><span>簡潔な</span><span class="difftext">[追加ここまで]</span></span>代替テキストを表示させる。</p>
         </item>
         <item>
           <p>コンテンツそのものはなかったとしても、非テキストコンテンツの目的が明らかである。</p>
@@ -53,6 +53,7 @@
           <p>3. を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -60,6 +61,7 @@
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G68.html">G68: Providing a descriptive label that describes the purpose of live audio-only and live video-only content（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
       <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

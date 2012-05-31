@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G100">
-  <short-name>非テキストコンテンツの一般に認められた名前又は内容が分かる名前を提供する</short-name>
+  <short-name>非テキストコンテンツの一般に認められた名前又は内容が分かる名前[ここから追加] となる簡潔な代替テキスト[追加ここまで]を提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>
@@ -16,20 +16,14 @@
       <description>
         <ulist>
           <item>
-            <p>
-                    
-                              <strong>事例 1:</strong>モナリザの絵には「モナリザ。レオナルド・ダ･ビンチ作」という代替テキスト がある。</p>
+            <p>モナリザの絵には「モナリザ。レオナルド・ダ･ビンチ作」という代替テキスト がある。</p>
           </item>
           <item>
-            <p>
-                    
-                              <strong>事例 2:</strong>音声ファイルには「テルミンを演奏している5人の小学生」という代替テキストがある。
+            <p>音声ファイルには「テルミンを演奏している5人の小学生」という代替テキストがある。
                                     </p>
           </item>
           <item>
-            <p>
-                    
-                              <strong>事例 3:</strong>有名なモダンアートの作品には「赤、青、及び黄色。ピエト　モンドリアン作」という表題が付けられている。</p>
+            <p>有名なモダンアートの作品には「赤、青、及び黄色。ピエト　モンドリアン作」という表題が付けられている。</p>
           </item>
         </ulist>
       </description>
@@ -47,10 +41,10 @@
     <procedure>
       <olist>
         <item>
-          <p>代替テキストで内容が分かる名前を提供している。</p>
+          <p><span class="diff-add"><span class="difftext">[ここから追加] </span><span>簡潔な</span><span class="difftext">[追加ここまで]</span></span>代替テキストで内容が分かる名前を提供している。</p>
         </item>
         <item>
-          <p>代替テキストで非テキストコンテンツに作者や他の人によって以前から付け<span>られている</span>名前を提供している。</p>
+          <p><span class="diff-add"><span class="difftext">[ここから追加] </span><span>簡潔な</span><span class="difftext">[追加ここまで]</span></span>代替テキストで非テキストコンテンツに作者や他の人によって以前から付け<span>られている</span>名前を提供している。</p>
         </item>
       </olist>
     </procedure>
@@ -60,6 +54,7 @@
           <p> 1.又は2.を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -67,6 +62,7 @@
       <item>原文：<a href="http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G100">G100: Providing the accepted name or a descriptive name of the non-text content（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：<a href="ttp://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

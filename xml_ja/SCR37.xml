@@ -129,10 +129,20 @@ function ResetForm(elem)
           <p>Microsoft Developer Network Whitepaper:<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://download.microsoft.com/download/0/f/5/0f5e941c-c495-401a-9031-eab8315da35e/writing_accessible_web_applications.doc" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Developer Network Whitepaper: Writing Accessible Web Applications by Cynthia C. Shelly and George Young. (Microsoft Word Format)</loc> by Cynthia C. Shelly and George Young. (Microsoft Word Format)</p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/downloads/details.aspx?familyid=3755582A-A707-460A-BF21-1373316E13F0&amp;displaylang=en" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Active Accessibility 2.0 SDK. Includes Inspect32.exe and other MSAA tools.</loc>. Includes Inspect32.exe and other MSAA tools.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/ms695716.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更] Microsoft Active Accessibility 2.0 SDK. Includes Inspect32.exe and other MSAA tools.[変更ここまで]</loc>. Includes Inspect32.exe and other MSAA tools.</p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/downloads/details.aspx?familyid=E59C3964-672D-4511-BB3E-2D5E1DB91038&amp;displaylang=en" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Internet Explorer Developer Toolbar.. Allows examination of script-generated DOM in Microsoft Internet Explorer</loc>. Allows examination of script-generated DOM in Microsoft Internet Explorer</p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd318521%28v=vs.85%29.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] Instructions for the Inspect tool[追加ここまで]</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eramp.com/david/name-role-value-using-inspect.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] Using the Inspect tool to find name Name, Role and Value for Javascript[追加ここまで]</loc>
+          </p>
+        </item>
+        <item>
+          <p><span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar.</a><span class="difftext">[変更ここまで]</span></span>. Allows examination of script-generated DOM in Microsoft Internet Explorer</p>
         </item>
         <item>
           <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug. Allows examination of script-generated DOM in Firefox.</loc>. Allows examination of script-generated DOM in Firefox. </p>
@@ -170,6 +180,7 @@ function ResetForm(elem)
           <p>2., 3., 4.及び5.を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
@@ -177,6 +188,7 @@ function ResetForm(elem)
       <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR37.html">SCR37: Creating Custom Dialogs in a Device Independent Way（英語）</a></item>
       <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
       <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
     </ulist>
   </translationcredit>
 </technique>

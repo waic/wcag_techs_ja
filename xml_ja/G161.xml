@@ -17,7 +17,7 @@
               
                <p>検索の機能性は、普通は検索ワードのためのテキストフィールド及び検索を開始するためのボタンを含むウェブページの単純なフォーム、又は検索フォームを含むページへのリンクを追加することによって、高めることができる。もちろん、検索フォーム自体もアクセシブルでなければならない。</p>
               
-               <p>外部検索の検索エンジンの結果を最適化するのに使用され、また内部検索エンジンもサポートしており、それらをより効果的にする実装方法: キーワード、<code>META</code>タグ、およびアクセシブルなナビゲーション構造を使用する。検索サイトは、検索のために最適化されたコンテンツをどう作成するかのガイダンスを提供している。例えば、<a href="http://help.live.com/help.aspx?mkt=en-us&amp;project=wl_webmasters">Microsoft's Guidelines for successful indexing</a>、<a href="http://www.google.com/support/webmasters/bin/topic.py?topic=8522">Creating a Google-friendly site</a>、及び<a href="http://help.yahoo.com/l/us/yahoo/search/basics/basics-18.html">Yahoo! Search Content Quality Guidelines</a>である。</p></description>
+               <p>外部検索の検索エンジンの結果を最適化するのに使用され、また内部検索エンジンもサポートしており、それらをより効果的にする実装方法: キーワード、<code>META</code>タグ、およびアクセシブルなナビゲーション構造を使用する。検索サイトは、検索のために最適化されたコンテンツをどう作成するかのガイダンスを提供している。例えば、<a href="http://help.live.com/help.aspx?mkt=en-us&amp;project=wl_webmasters">Microsoft's Guidelines for successful indexing</a>、<a href="http://support.google.com/webmasters/bin/topic.py?hl=en&amp;topic=28800&amp;from=8522&amp;rd=1">Creating a Google-friendly site</a>、及び<a href="http://help.yahoo.com/l/us/yahoo/search/basics/basics-18.html">Yahoo! Search Content Quality Guidelines</a>である。</p></description>
   <examples>
     <eg-group>
       <head>ショッピングサイト</head>
@@ -52,11 +52,6 @@
           <p>&#13;
                            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.google.com/coop/cse/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Google Custom Search Engine</loc>&#13;
 &#13;
-                        </p>
-        </item>
-        <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://search.live.com/siteowner" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Live Search</loc>&#13;
                         </p>
         </item>
         <item>
@@ -100,6 +95,7 @@
           <p>1.を満たしていて、加えて 4.又は 5.を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>

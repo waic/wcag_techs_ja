@@ -33,7 +33,7 @@
         </item>
         <item>
           <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnid.org.uk/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Royal National Institute for Deaf People (RNID)</loc>&#13;
+                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.actiononhearingloss.org.uk/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Royal National Institute for Deaf People (RNID)</loc>&#13;
                         </p>
         </item>
         <item>
@@ -44,11 +44,6 @@
         <item>
           <p>&#13;
                            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ieeexplore.ieee.org/iel5/2220/28020/01251527.pdf?arnumber=1251527" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Perceptually optimised sign language video coding based on eye tracking analysis</loc>&#13;
-                        </p>
-        </item>
-        <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ece.udel.edu/InfoAccess/Technology/sl.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Sign Language Video Communications</loc>&#13;
                         </p>
         </item>
         <item>
@@ -98,6 +93,7 @@
           <p>2. 及び 3. を満たしている。</p>
         </item>
       </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>
   <translationcredit>
