@@ -78,6 +78,12 @@ xml = Nokogiri::XML::Builder.new do |x|
 												x.item{ x << li.inner_html.strip }
 											end
 										}
+									when 'ol'
+										x.olist {
+											e.css( 'li' ).each do |li|
+												x.item{ x << li.inner_html.strip }
+											end
+										}
 									when 'img'
 										x.graphic(
 											'xmlns:xlink' => "http://www.w3.org/1999/xlink",
