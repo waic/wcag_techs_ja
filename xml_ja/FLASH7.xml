@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH7">
+  <short-name>スクリプトを使用してコントロールのラベルを変更する</short-name>
+  <applicability>
+    <ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="navigation-mechanisms-refs"/>
+    <success-criterion idref="navigation-mechanisms-link"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description><p>この実装方法の目的は、前後の文脈を把握しなくても理解できるように、利用者がボタンなどのコントロールのラベルに付加情報を追加できるようにすることである。</p>
+<p>コントロールの前後にある文脈をわざわざ把握しなくてもすむように、コントロールのラベルによって十分な情報が提供されることを望む利用者がいる。その一方で、すべてのボタンに文脈を含む情報があるのはあまりにも冗長であり、サイトの利便性を低下させると考えるユーザーもいる。また、支援技術の利用者からワーキンググループに寄せられるフィードバックでも、どちらが好ましいかについて意見が分かれている。この実装方法は、ユーザー自身が好むほうを選択できるようにするものである。</p>
+<p>ページの先頭近くにページ上のコントロールのラベルを拡張するためのコントロールを配置し、前後の文脈を加味しなくてもコントロールの目的を理解できるようにする。必ずコントロールの目的をラベルから直接理解できるようにすることが必要である。</p>
+<p>この実装方法によってコントロールのラベルが拡張されるのは、現在参照しているページのみである。ただし、サイト全体で1回選択すればすむように、cookie やサーバー側のユーザープロファイルにこの設定を保存しておく方法もある。場合によっては、そのほうが望ましいかもしれない。</p></description>
+  <examples>
+    <eg-group>
+      <head>ActionScript を使用してボタンのラベルに文脈の情報を直接追加する</head>
+      <description><p>この事例では、ActionScript を使用してボタンのラベルに文脈の情報を直接追加している。「より詳細なボタン名に変更」ボタンをクリックすることによって、ページ上の各ボタンのラベルプロパティが変更される。</p>
+</description>
+      <code>import fl.accessibility.ButtonAccImpl;
+ButtonAccImpl.enableAccessibility();
+btn1.addEventListener(MouseEvent.CLICK, clickHandler);
+
+function clickHandler(e) {
+  btn2.label = btn1.selected? "2010年版パンフレット PDF版": "PDF";
+  btn2.width = btn1.selected? 200: 100;
+  btn3.label = btn1.selected? "2010年版パンフレット テキスト版": "テキスト";
+  btn3.width = btn1.selected? 200: 100;
+  btn4.label = btn1.selected? "2010年版パンフレット Word版": "Word";
+  btn4.width = btn1.selected? 200: 100;
+}</code>
+      <description><p>この結果は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH7/change_button_label.html">「ボタンのラベルにコンテキスト情報を追加する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH7/change_button_label.swf">「ボタンのラベルにコンテキスト情報を追加する」のソース（英語）</a>をダウンロードすることもできる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="SCR30"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>Flash ムービーに前後の文脈に依存したラベルが含まれている場合、利用者がラベルに前後の文脈を加味しなくてもすむように、ラベルを拡張するためのトグルコントロールが提供されている。</p>
+    </procedure>
+    <expected-results>
+      <p>上記チェックポイントを満たしている。</p>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH7.html">FLASH7: Using scripting to change control labels（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

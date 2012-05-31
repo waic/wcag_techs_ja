@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH3">
+  <short-name>支援技術が無視できるように Flash のオブジェクトにマークを付ける</short-name>
+  <applicability>
+    <ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description><p>この実装方法は、支援技術が無視できるように画像にマークを付ける方法を示すことである。</p>
+<p>Flash Player では、以下の事例に示すように、アクセシビリティオブジェクトの silent プロパティを使用すると、どのグラフィックを支援技術に認識させるかをコンテンツ制作者が制御できる。</p></description>
+  <examples>
+    <eg-group>
+      <head>Flash Professional のオーサリングツールでグラフィックを非表示にする</head>
+      <description><p>Flash Professional のオーサリングツールのアクセシビリティパネルを使用すると、コンテンツ制作者は、支援技術にアクセシビリティ情報を提供したり、Flash の個々のオブジェクトや Flash アプリケーション全体に対してアクセシビリティ関連オプションを設定できる。</p>
+<olist><item><p>グラフィックのアクセシビリティ関連プロパティに対する変更を適用するには、変更したものをシンボルとしてムービーのライブラリに保存する必要がある。<em>注記：</em>Flash ではグラフィックシンボル用の代替テキストを使用することはできない。グラフィックをムービークリップまたはボタンシンボルに変換するか、これらに保存する必要がある。</p></item><item><p>アプリケーションメニューで［ウィンドウ］&gt;［他のパネル］&gt;［アクセシビリティ］を選択するか、ショートカットキーの Alt+F11 を使用してアクセシビリティパネルを表示する。</p></item><item><p>グラフィックオブジェクトを選択する。</p></item><item><p>アクセシビリティパネルで「オブジェクトをアクセス可能にする」チェックボックスがオンになっている場合は、このオプションをオフにして、支援技術に伝達するアクセシビリティ情報からグラフィックを削除する。</p></item></olist></description>
+    </eg-group>
+    <eg-group>
+      <head>ActionScript 2.0 でプログラムによる代替テキストを適用する</head>
+      <description><p>ActionScript を使用してプログラムによりオブジェクトの等価なテキストを制御するには、_accProps プロパティを使用する必要がある。このオブジェクトは、オブジェクトに対して設定されているアクセシビリティ関連プロパティが含まれているオブジェクトを参照する。以下に、_accProps プロパティを使用して、ActionScript を使用しているムービー用のアクセシビリティ情報からオブジェクトを削除するための簡単なコードの例を示す。</p>
+</description>
+      <code>// 'decorative_mc' は、ムービーのメインのタイムラインに置かれたインスタンスである。
+_root.decorative_mc._accProps = new Object();
+_root.decorative_mc._accProps.silent = true;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://livedocs.adobe.com/flash/9.0/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&amp;file=00001235.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flash CS3 Documention _accProps property</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eclipse.org/actf/downloads/tools/aDesigner/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">aDesigner</loc>
+          </p>
+        </item>
+        <item>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.softpedia.com/get/Programming/SDK-DDK/Active-Accessibility-SDK.shtml" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">MS Active Accessibility 2.0 inspection tools</loc>
+          </p>
+        </item>
+      </ulist>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G94"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>SWF ファイルを発行する。</p>
+        </item>
+        <item>
+          <p>Internet Explorer 6 以降（Flash Player 6 以降を使用）、または Firefox 3 以降（Flash Player 9 以降を使用）で SFW ファイルを開く。</p>
+        </item>
+        <item>
+          <p>オブジェクトのアクセシビリティ情報を表示できる aDesigner2 などのツールを使用して Flash ムービーを開く。</p>
+        </item>
+        <item>
+          <p>GUI 概要パネルで、Flash ムービーに含まれている各オブジェクトをチェックすると、表示されないように設定されているオブジェクトがツールの画面に表示されていない。</p>
+        </item>
+        <item>
+          <p>コンテンツ制作者は、テストにスクリーンリーダーを使用することもできる。その場合は、Flash コンテンツを読み上げて音声を聞くと、読み上げたページの内容にオブジェクトが含まれていない。</p>
+        </item>
+        <item>
+          <p>支援技術に無視されるようにコーディングされている非テキストオブジェクトは、支援技術からは認識できない。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>6. を満たしている。</p>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH3.html">FLASH3: Marking objects in Flash so that they can be ignored by AT（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

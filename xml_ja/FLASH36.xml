@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH36">
+  <short-name>スクリプトを使用して点滅を制御し、5秒以内に点滅を停止させる</short-name>
+  <applicability>
+    <ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="time-limits-pause"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>この実装方法の目的は、スクリプトを使用して点滅を制御し、点滅を5秒以内に停止させることである。ActionScript の <code>setTimeout()</code> メソッドを使用して、ムービークリップの点滅動作を5秒以内に停止させる。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>タイムアウト後に点滅を停止させる</head>
+      <description><p>この事例では、ムービークリップ（blinkingTextMC）でタイムラインを使用して点滅効果を生成している。5 秒経過する前にムービークリップの <code>gotoAndStop()</code> メソッドが呼び出され、このメソッドにより点滅が停止する。</p>
+</description>
+      <code>setTimeout(stopBlinking, 4500);
+function stopBlinking() {
+  var blinkingTextMC = getChildByName('blinkingTextMC');
+  blinkingTextMC.gotoAndStop(1);
+}</code>
+      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH36/control_blinking_with_script_as3.html">「タイムアウト後に点滅を停止させる」のサンプル（英語）</a>で確認できる。<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH36/control_blinking_with_script_as3.swf">「タイムアウト後に点滅を停止させる」のソース（英語）</a>をダウンロードすることもできる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <p>点滅するコンテンツのインスタンスすべてについて、次のことを確認する。</p>
+      <olist>
+        <item>
+          <p>点滅が開始したら5秒経過するまで待つ。</p>
+        </item>
+        <item>
+          <p>5秒経過した時点で、点滅が停止する。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>点滅するコンテンツのインスタンスすべてについて、2.を満たしている。</p>
+        </item>
+      </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH36.html">FLASH36: Using scripts to control blinking and stop it in five seconds or less（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

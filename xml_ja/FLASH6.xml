@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH6">
+  <short-name>非表示のボタンを使用してアクセシブルなホットスポットを作成する</short-name>
+  <applicability>
+    <ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>この実装方法の目的は、画像のクリック可能なホットスポットと同じ目的を果たす代替テキストを提供することである。ホットスポットというのは、アクション（例えば、ホットスポットに対応する Web ページを開くこと等）をトリガできる画像内のクリック可能な領域である。ホットスポットは、非表示の Flash ボタンとして実装し、それぞれにホットスポットのリンク先を説明するアクセシブルな名前を指定する。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>アクセシブルなクリック可能領域を含むグラフィック</head>
+      <description>
+        <olist>
+          <item>
+            <p>クリック可能なホットスポットを置く必要があるオリジナルのグラフィックをステージに追加する。</p>
+          </item>
+          <item><p>各ホットスポットについて、次の作業を行う。</p>
+<ol class="enumla">
+<li><p>Flash Professional の［挿入］メニューから「新規シンボル」を選択するか Ctrl+F8 キーを押して、新しいボタンシンボルを作成する。</p></li>
+<li><p>ボタンシンボルの中に、クリック可能な領域に一致するシェイプを作成する。</p></li>
+<li><p>新しく作成したボタンを元のグラフィックの上に置く。</p></li>
+<li><p>ボタンのプロパティパネルを開き、「カラー効果」の下にある「スタイル」ドロップダウンリストから「アルファ」を選択する。表示される「アルファ」スライダの値を 0 に変更し、ボタンを非表示にする。</p></li>
+<li><p>アクセシビリティパネルを使用して「タブインデックス」フィールドの値を指定し、タブ順序内におけるボタンの論理的な位置を指定する。</p></li>
+<li><p>アクセシビリティパネルを使用して、ホットスポットの目的を説明するアクセシブルな名前を指定する。</p></li>
+</ol></item>
+          <item>
+            <p>Flash Professional の［挿入］メニューから「新規シンボル」を選択するか Ctrl+F8 キーを押して、新しいボタンシンボルを作成する。</p>
+          </item>
+          <item>
+            <p>ボタンシンボルの中に、クリック可能な領域に一致するシェイプを作成する。</p>
+          </item>
+          <item>
+            <p>新しく作成したボタンを元のグラフィックの上に置く。</p>
+          </item>
+          <item>
+            <p>ボタンのプロパティパネルを開き、「カラー効果」の下にある「スタイル」ドロップダウンリストから「アルファ」を選択する。表示される「アルファ」スライダの値を 0 に変更し、ボタンを非表示にする。</p>
+          </item>
+          <item>
+            <p>アクセシビリティパネルを使用して「タブインデックス」フィールドの値を指定し、タブ順序内におけるボタンの論理的な位置を指定する。</p>
+          </item>
+          <item>
+            <p>アクセシビリティパネルを使用して、ホットスポットの目的を説明するアクセシブルな名前を指定する。</p>
+          </item>
+        </olist>
+        <p>
+          <img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/flash_hotspot_graphic.png" alt="画面スクリーンショット 1：Flashのオーサリングステージにグラフィックを追加" height="181" width="274"/>
+        </p>
+        <p>
+          <img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/flash_hotspot_invisible.png" alt="画面スクリーンショット 2：プロパティパネルの「アルファ」スライダの値を 0 に変更して、ボタンを非表示に" height="297" width="429"/>
+        </p>
+        <p>
+          <img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/flash_hotspot_accessibleName.png" alt="画面スクリーンショット 3：アクセシビリティパネルを用いて、ボタンの名前を設定" height="303" width="384"/>
+        </p>
+      </description>
+      <description><p>この結果は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/invisible_buttons_as_image_map_regions.html">「非表示のボタンを使用してアクセシブルなホットスポットを作成する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/invisible_buttons_as_image_map_regions.swf">「非表示のボタンを使用してアクセシブルなホットスポットを作成する」のソース（英語）</a>をダウンロードすることもできる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G91"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>ホットスポットが含まれるすべての画像を見つけて、各ホットスポットについて次のことを確認する。</p>
+      <olist>
+        <item>
+          <p>ホットスポットが非表示のボタンとして実装されている。</p>
+        </item>
+        <item>
+          <p>アクセシビリティパネルまたは ActionScript を使用してホットスポットにアクセシブルな名前が指定されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1. および 2. を満たしている。</p>
+        </item>
+      </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH6.html">FLASH6: Creating accessible hotspots using invisible buttons（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

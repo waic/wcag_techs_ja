@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH10">
+  <short-name>Flashでフォーム・コントロールが必須項目であることを示す</short-name>
+  <applicability>
+    <ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="minimize-error-cues"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>この実装方法の目的は、利用者がデータを正しく送信できるように、Web アプリケーションまたはフォームに含まれる特定のフォーム・コントロールが必須項目であることを明示することである。フォーム・コントロールのアクセシブルな名前に「必須」という語を追加し、視覚的な表示をラベルの横に配置する。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>コントロールのアクセシブルな名前に「必須」という語を追加する</head>
+      <description><p>この事例では、アクセシビリティパネルを使用して、フィールドが「必須」であることを利用者に知らせる方法を示している。</p>
+<olist><item><p>フォーム・コントロールのラベルの近くに、アスタリスク文字などの視覚的なマークを配置する。</p></item><item><p>アクセシビリティパネルを使用して、「名前」フィールドに記述したコントロールのラベルのすぐ後に「（必須）」と記述する。</p></item></olist><p>次のスクリーンショットは、このアプローチについて説明したものである。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_flash_control.png" alt="画面スクリーンショット：アクセシビリティパネルを用いて、フォーム・コントロールが必須項目であることを明示" height="312" width="546"/></p><p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.html">「コントロールのアクセシブルな名前に「必須」という語を追加する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.swf">「コントロールのアクセシブルな名前に「必須」という語を追加する」のソース（英語）</a>をダウンロードすることもできる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <p>Flash ムービーに含まれる必須項目のフォーム・コントロールごとに、次のことを確認する。</p>
+      <ul>
+<li><p>必須項目であることが視覚的に示されている。</p></li>
+<li><p>必須項目であることが、アクセシビリティパネルの「名前」フィールドを使用してテキストで記述されている。</p></li>
+</ul>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記の二点を満たしている。</p>
+        </item>
+      </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH10.html">FLASH10: Indicating required form controls in Flash（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="H92">
+  <short-name>フォーム・コントロールのラベルに色を用いる際にはテキストで補足する</short-name>
+  <applicability>
+    <p>色及びテキストをサポートするウェブコンテンツ技術すべて</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="visual-audio-contrast-without-color"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、情報を伝えるために色と補足のテキストとを併用することである。ほとんどのユーザーは、ウェブページを素早く見渡して、色の違いを用いることによって伝えられている情報を見つけることができる。色を見ることのできないユーザーは、 補足のテキストを頼りにして、見たり聞いたりすることができる。また、点字ピンディスプレイやその他の触覚インタフェースを使用しているユーザーは、触れることによって補足のテキストを見つけることができる。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>HTMLフォームの必須項目</head>
+      <description><p>オンラインフォームの説明文に「必須項目は赤字で、加えて（必須）と書かれています。」とある。そして、補足のテキストである「（必須）」が <code>label</code>要素内に含まれている。</p>
+</description>
+      <code>&lt;label for="lastname" class="required"&gt;名前（必須）：&lt;/label&gt;
+&lt;input id="lastname" type="text" size="25" value=""/&gt;
+&lt;style type="text/css"&gt;
+  .required {
+    color=red;
+  }
+&lt;/style&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G14"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>色の違いを用いて情報を伝えているコンテンツに対して：</p>
+      <olist>
+        <item>
+          <p>同じ情報がテキストで補足されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1. を満たしている。</p>
+        </item>
+      </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H92.html">H92: Including a text cue for colored form control labels（英語）</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

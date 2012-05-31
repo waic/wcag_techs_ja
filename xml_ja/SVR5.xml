@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="SVR5">
+  <short-name>HTTPヘッダーで主たる自然言語を指定する</short-name>
+  <applicability>
+    <p>サーバサイド技術（HTTPヘッダーを設定するサーバサイドのスクリプト言語及びサーバ設定ファイルを含む）</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="meaning-doc-lang-id"/>
+  </applies-to>
+  <ua-issues/>
+  <description><p>この実装方法の目的は、コンテンツの対象者を特定するために、ウェブページの主たる自然言語に関する情報を提供することである。HTTP Content-Language ヘッダーには、一つ以上の言語コードのリストを含めることが可能で、ユーザーエージェントとサーバとの間での言語ネゴシエーションに用いられる。ユーザーエージェントで言語設定が正しく設定されていれば、言語ネゴシエーションによってユーザーは自分が設定した自然言語に合うコンテンツを見つけることができる。</p>
+    <p>ただし、HTTP Content-Language ヘッダーは、コンテンツを処理するのに用いられる自然言語を特定するためのものではないことに注意しなければならない。コンテンツを処理する自然言語は、マークアップ言語のlang属性やxml:lang属性などによって特定することができる。</p>
+	<p>この実装方法は、lang属性またはxml:lang属性の例で明記されているように、文書の主たる自然言語をHTTP Content-Language ヘッダーで挙げるようにするものである。</p>
+    <p><strong>訳注：</strong>【WCAGワーキンググループに確認中】言語ネゴシエーション (language negotiation) というのは、Accept-Languageによるコンテント・ネゴシエーションのことを指していると思われますが、このときネゴシエーションに使われるのは "Content-Language" ではなく、クライアントが送る "Accept-Language" の値です。現在、原文の記述に誤りがないかどうかを確認中です。</p></description>
+  <examples>
+    <eg-group>
+      <head>Javaサーブレット及びJSPによるコンテンツの自然言語設定</head>
+      <description><p>Java サーブレット又はJavaServer Pages(JSP)では、開発者は response.setHeader("Content-Language", lang)を用いることが可能で、"lang" は言語タグを表す（例えば、英語なら "en" ）：</p>
+</description>
+      <code>…
+public void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException 
+{
+…
+  response.setHeader("Content-Language", "en");
+  PrintWriter out = response.getWriter();
+…
+}</code>
+    </eg-group>
+    <eg-group>
+      <head>PHPによるコンテンツの自然言語設定</head>
+      <description><p>PHPでは、開発者は header メソッドで生のHTTPヘッダーを送ることができる。次の例では、自然言語をフランス語に設定している：</p>
+</description>
+      <code>&lt;?php  header('Content-language: fr');  …  ?&gt;</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H57"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>Live HTTP Header ビューアを用いて、"Content-Language" ヘッダーの値を確認する。</p>
+        </item>
+        <item>
+          <p>その値がウェブページの主たる自然言語と合致している。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>2. を満たしている。</p>
+        </item>
+      </ulist>
+      <p>この実装方法がある達成基準を満たすことのできる実装方法である場合、この判定基準をクリアしていなかったとしても、そのことは必ずしもその達成基準が満たされていないことを意味しない。単にこの実装方法が正しく用いられておらず、この実装方法によって達成基準を満たしているとはいえないということである。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SVR5.html">SVR5: Specifying the default language in the HTTP header（英語）</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

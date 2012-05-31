@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH5">
+  <short-name>リンク先が同じで隣接している画像とテキストのボタンを結合する</short-name>
+  <applicability>
+    <ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+    <success-criterion idref="navigation-mechanisms-refs"/>
+    <success-criterion idref="navigation-mechanisms-link"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description><p>この実装方法の目的は、隣接するテキストとボタンアイコンを Flash ムービーに含める際の不要な重複を回避することである。</p>
+<p>テキストとボタンアイコンが隣接しているボタンがよく用いられている。視覚上多少離れた位置に配置するなどの目的で、テキストとアイコンボタンが個別のボタンとして表現されることも多い。視覚に問題のない利用者はこれらの位置が多少離れていることを視覚的に認識できるが、全盲やロービジョンの利用者は位置の距離を認識できないためボタンの重複に混乱する。これを避けるため、コンテンツ制作者によっては画像のアクセシブルな名前の指定を省略する場合があるが、そのような方法ではグラフィックボタンと同じ目的を果たす代替テキストがなくなってしまい、達成基準 1.1.1 を満たすことができない。この問題への対処として望ましいのは、テキストと画像を 1 つのボタンシンボルインスタンスに含め、ボタンに対して 1 つのアクセシブルな名前を割り当てることによってテキストの重複を回避する方法である。</p></description>
+  <examples>
+    <eg-group>
+      <head>アクセシビリティパネルを使用してアクセシブルな名前を指定する</head>
+      <description><p>アクセシビリティパネルを使用してアクセシブルな名前（この例の場合は表示されているテキストと同じ）を指定する。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH5/findoutmore.jpg" alt="画面スクリーンショット：結合ボタンの「名前」を記述したアクセシビリティパネル" height="152" width="530"/></p></description>
+    </eg-group>
+    <eg-group>
+      <description><p>次のように、アクセシビリティパネルの代わりに ActionScript 3 を使用して、結合ボタンのアクセシビリティ名を指定することもできる。</p>
+</description>
+      <code>// 'flashLink1' は、ムービーのメインのタイムラインに置かれたインスタンスである。
+flashLink1.accessibilityProperties = new AccessibilityProperties();
+flashLink1.accessibilityProperties.name = "Flashについてさらに学ぶ";</code>
+      <description><p>また、次のように、アクセシビリティパネルの代わりに ActionScript 2 を使用して、結合ボタンのアクセシビリティ名を指定することもできる。</p>
+</description>
+      <code>// 'flashLink1' is an instance placed on the movie's main timeline
+flashLink1._accProps = new Object();
+flashLink1._accProps.name = "Flashについてさらに学ぶ";</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G94"/>
+    <relatedtech idref="G53"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>SWF ファイルを発行する。</p>
+        </item>
+        <item>
+          <p>Internet Explorer 6 以降（Flash Player 6 以降を使用）、または Firefox 3 以降（Flash Player 9 以降を使用）で SFW ファイルを開く。</p>
+        </item>
+        <item>
+          <p>オブジェクト名の代替テキストを表示できる aDesigner2 などのツールを使用して Flash ムービーを開く。</p>
+        </item>
+        <item>
+          <p>aDesigner2 を使用する場合は、GUI 概要パネルを使用して Flash ムービー内の各画像ボタンを確認し、画像と同じ機能を持つ別の重複したテキストコントロールが画像の近くにないことを確かめる。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>上記全てを満たしている。</p>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH5.html">FLASH5: Combining adjacent image and text buttons for the same resource（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

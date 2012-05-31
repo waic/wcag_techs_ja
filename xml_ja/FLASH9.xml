@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH9">
+  <short-name>収録済みの同期したメディアにキャプションを提供する</short-name>
+  <applicability><p>Adobe Flashをベースにしたコンテンツ</p>
+<ul>
+<li><p>Adobe Flash CS3 以降</p></li>
+</ul></applicability>
+  <applies-to>
+    <success-criterion idref="media-equiv-captions"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>この実装方法の目的は、聴覚障害のあるユーザーや同期したメディア内の音声や会話を聞くことが困難な利用者が、音声情報の代替手段としてキャプションを見るように選択できるオプションを提供することである。この実装方法では、すべての会話と重要な音がテキストとして提供されるが、それらのテキストは利用者が要求した場合以外は表示されない。結果として、必要な場合にのみ表示される。これは、FLVPlayback コンポーネントと FLVPlaybackCaptioning コンポーネントを使用して実現できる。<em>注記：</em>FLVPlayback のスキンを使用すると、クローズドキャプションボタンがデフォルトでアクセシブルになる。ただし、カスタムスキンを実装する場合は、クローズドキャプションボタンがアクセシブルかどうかをコンテンツ制作者がテストする必要がある。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>Timed Textのキャプションファイルを Flash に追加する</head>
+      <description>
+        <olist>
+          <item>
+            <p>外部ツール（Magpie やシンプルなテキストエディタなど）を使用して、Timed Textを用いたキャプションの XML ファイルを作成する。ビデオコンテンツを停止して再生し、音声情報の適切な部分（会話、重要な背景音、イベントサウンドなど）ごとに開始と終了のタイムコードおよび代替テキストを挿入する。Magpie のようなツールにはこの作業を簡単に行うことができる高度な機能がある。これに対し、テキストエディタでは次のキャプション文書の例に示すようにメディアプレーヤーからタイムコードを読み取って XML に含める必要がある。</p>
+          </item>
+          <item>
+            <p>Flash では、ステージに FLVPlayback コンポーネントの新しいインスタンスを作成し、［コンポーネントインスペクタ］パネルまたは［パラメータ］パネルを使用して contentPath 値を flv ビデオファイルに設定する。</p>
+          </item>
+          <item>
+            <p>CC（クローズドキャプション）ボタンを含むスキンを使用するように「Skin」パラメータを設定する。</p>
+          </item>
+          <item>
+            <p>さらに、コンポーネントのリストから FLVPlayback キャプションコンポーネントのインスタンスを作成する。［コンポーネントインスペクタ］パネルで、「Source」パラメータをTimed TextのXMLファイルの名前に設定する。キャプションは、プレーヤーのフレームの下部に自動的に配置される。</p>
+          </item>
+        </olist>
+      </description>
+      <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;tt xml:lang="en" xmlns="http://www.w3.org/2006/04/ttaf1"
+  xmlns:tts="http://www.w3.org/2006/04/ttaf1#styling"&gt;
+  &lt;head&gt;
+    &lt;styling&gt;
+      &lt;style id="defaultSpeaker" tts:backgroundColor="black"
+        tts:color="white" tts:fontFamily="SansSerif" tts:fontSize="12"
+        tts:fontStyle="normal" tts:fontWeight="normal"
+        tts:textAlign="left" tts:textDecoration="none"/&gt;
+      &lt;style id="defaultCaption" tts:backgroundColor="black"
+        tts:color="white" tts:fontFamily="Arial" tts:fontSize="12"
+        tts:fontStyle="normal" tts:fontWeight="normal"
+        tts:textAlign="center" tts:textDecoration="none"/&gt;
+    &lt;/styling&gt;
+
+  &lt;/head&gt;
+  &lt;body id="thebody" style="defaultCaption"&gt;
+    &lt;div xml:lang="en"&gt;
+      &lt;p begin="0:00:00.20" end="0:00:02.20"&gt;If there were nothing in
+        our universe&lt;/p&gt;
+      &lt;p begin="0:00:02.20" end="0:00:05.65"&gt;the fabric of space-time
+        would be flat.&lt;/p&gt;
+
+      &lt;p begin="0:00:05.65" end="0:00:08.88"&gt;But add a mass, and
+        dimples form within it.&lt;/p&gt;
+      &lt;p begin="0:00:16.61" end="0:00:19.84"&gt;Smaller objects that
+        approach that large mass&lt;/p&gt;
+      &lt;p begin="0:00:19.84" end="0:00:23.41"&gt;will follow the curve in
+        space-time around it.&lt;/p&gt;
+      &lt;p begin="0:00:32.64" end="0:00:36.84"&gt;Our nearest star, the
+        sun, has formed such a dimple&lt;/p&gt;
+
+      &lt;p begin="0:00:36.84" end="0:00:38.00"&gt;and our tiny planet
+        Earth&lt;/p&gt;
+      &lt;p begin="0:00:38.00" end="0:00:41.50"&gt;goes along for the ride
+        in the curve of its dimple&lt;/p&gt;
+      &lt;p begin="0:00:41.50" end="0:00:43.80"&gt;staying in orbit around
+        the sun.&lt;/p&gt;
+      &lt;p begin="0:00:45.67" end="0:01:55.00"/&gt;
+
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/tt&gt;</code>
+      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH9/adding_captions_to_Flash_video_as3.html">「Timed Textのキャプションファイルを Flash に追加する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH9/adding_captions_to_Flash_video_as3.zip">「Timed Textのキャプションファイルを Flash に追加する」のサンプルをダウンロード</a>することもできる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G87"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>Flash ムービーで表示されるすべてのビデオコンテンツを見て、次のことを確認する。</p>
+      <olist>
+        <item>
+          <p>すべての音声コンテンツでキャプションを利用でき、デフォルトまたはユーザー環境設定によってオンになる。</p>
+        </item>
+        <item>
+          <p>ビデオに含まれるすべての音声情報がキャプションで適切に説明されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1. および 2. を満たしている。</p>
+        </item>
+      </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH9.html">FLASH9: Applying captions to prerecorded synchronized media（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

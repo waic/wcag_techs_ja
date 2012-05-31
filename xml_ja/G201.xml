@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="G201">
+  <short-name>新しいウィンドウを開くときにはユーザーに事前に知らせる</short-name>
+  <applicability>
+    <p>新しいウィンドウを開くウェブページ</p>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-receive-focus"/>
+    <success-criterion idref="consistent-behavior-unpredictable-change"/>
+  </applies-to>
+  <ua-issues/>
+  <description>
+    <p>この実装方法の目的は、自動的に新しいウィンドウまたはタブを開く前にユーザーに知らせることである。リンクを押下したときに自動的に新しいウィンドウを開くことは、もし事前にそのことを知らせていなければ、視覚的なコンテンツを知覚するのに困難を伴うユーザーや認知障害のあるユーザーが混乱する原因となりうる。事前に知らせることによって、ユーザーは現在のウィンドウから離れるかどうかを判断することができるようになる。また、ユーザーが新しいウィンドウを開くことを選んだ場合にも、元のウィンドウに戻りやすくなる。さらに、ブラウザの[戻る]ボタンが使えないことや、直前まで自分がいた場所を見つけるためには元のウィンドウに戻らなければならないことをユーザーが理解する手助けにもなる。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>コントロールを説明するテキストで知らせる</head>
+      <description><p>コントロールを説明する識別名またはラベルを用いて、新しいウィンドウで開くことを知らせることができる。</p>
+</description>
+      <code>&lt;a href="knitting.html" target="_blank"&gt;編み物のすべて 
+              （新しいウィンドウで開く）&lt;/a&gt;</code>
+    </eg-group>
+    <eg-group>
+      <head>CSSを用いて、新しいウィンドウが開く前に知らせる</head>
+      <description><p>以下のコードでは、CSSを用いて新しいウィンドウが開く前に知らせている。</p>
+</description>
+      <code>&lt;html&gt;
+                &lt;head&gt;
+                &lt;title&gt;ポップアップによる警告&lt;/title&gt;
+                &lt;style type="text/css"&gt;
+                body {
+                margin-left:2em;
+                margin-right:2em;
+                }
+                :focus { outline: 0; }
+                a.info {
+                position:relative;
+                z-index:24;
+                background-color:#ccc;
+                color:#000;
+                text-decoration:none
+                }
+                a.info:hover, a.info:focus, a.info:active {
+                z-index:25;
+                background-color:#ff0
+                }
+                a.info span {
+                position: absolute;
+                left: -9000px;
+                width: 0;
+                overflow: hidden;
+                }
+                a.info:hover span, a.info:focus span, a.info:active span {
+                display:block;
+                position:absolute;
+                top:1em; left:1em; width:12em;
+                border:1px solid #0cf;
+                background-color:#cff;
+                color:#000;
+                text-align: center
+                }
+                div.example {
+                margin-left: 5em;
+                }
+                &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;h1&gt;ポップアップによる警告&lt;/h1&gt;
+                &lt;p&gt; これは &lt;a class="info" href="popup_advisory_technique.html"
+                 target="_blank"&gt;&lt;strong&gt;外部へのリンク&lt;/strong&gt;
+                 &lt;span&gt;新しいウィンドウで開く&lt;/span&gt;&lt;/a&gt;の事例です。
+                &lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;</code>
+      <description><p>参考：<a href="working-examples/G201/new-window.html">CSSを用いて、新しいウィンドウが開く前に知らせるサンプル：英語</a></p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="H83"/>
+    <relatedtech idref="SCR24"/>
+    <relatedtech idref="G200"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>利用者の要求による状況の変化が生じた際に新しいウィンドウまたはタブで開くリンクに対して：</p>
+      <olist>
+        <item>
+          <p>このリンクは新しいウィンドウを開くことが支援技術（音声ブラウザ/スクリーンリーダー）によって読み上げられる。</p>
+        </item>
+        <item>
+          <p>このリンクは新しいウィンドウを開くことが視覚的に示されている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>1. および 2. を満たしている。</p>
+        </item>
+      </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G201.html">G201: Giving users advanced warning when opening a new window（英語）</a></item>
+      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

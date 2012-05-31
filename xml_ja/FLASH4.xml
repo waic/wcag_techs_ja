@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH4">
+  <short-name>Flash で送信ボタンを提供する</short-name>
+  <applicability>
+    <ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="consistent-behavior-unpredictable-change"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>この実装方法の目的は、状況の変化を送信ボタンを使用して引き起こすようにし、送信ボタン以外のコントロールの値または状態が変更された場合は状況の変化が発生しないようにすることである。この実装方法での送信ボタンの用途は、フォームに入力されたデータを送信する HTTP 要求を生成すること、または状況の変化をトリガーするアクションを実行することである（状況の変化を開始するのに適したコントロールがボタンの場合）。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>ActionScript 3 によるコンボボックスと送信ボタンの実装</head>
+      <description><p>これは、コンボボックスコンポーネントと送信ボタンによって利用者を別のリソースにリダイレクトする、ActionScript 3 の基本的な事例である。</p>
+</description>
+      <code>import fl.accessibility.ComboBoxAccImpl;
+import flash.net.navigateToURL;
+import flash.net.URLRequest;
+ComboBoxAccImpl.enableAccessibility();
+state_submit.addEventListener(MouseEvent.CLICK, submitHandler);
+function submitHandler(e) {
+  var url: URLRequest = new URLRequest("http://www.wikipedia.org/wiki/" + 
+    state_combo.selectedLabel);
+  navigateToURL(url, "_self");
+}</code>
+    </eg-group>
+    <eg-group>
+      <head>ActionScript 2 によるコンボボックスと送信ボタンの実装</head>
+      <description><p>これは、コンボボックスコンポーネントと送信ボタンによって利用者を別のリソースにリダイレクトする、ActionScript 2 の基本的な事例である。ActionScript 2 を使用していること以外は、事例 1 と同じである。</p>
+</description>
+      <code>import fl.accessibility.ComboBoxAccImpl;
+ComboBoxAccImpl.enableAccessibility();
+state_submit.addEventListener("click", submitHandler);
+function submitHandler(e) {
+  getURL("http://www.wikipedia.org/wiki/" + state_combo.selectedLabel, "_self");
+}</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G80"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <olist>
+        <item>
+          <p>Flash ムービー内で状況の変化を開始するすべてのインタラクティブコントロールのインスタンス（送信ボタン以外）を見つける（コンボボックス、ラジオボタン、チェックボックスなど）。</p>
+        </item>
+        <item>
+          <p>それぞれのインスタンスについて、状況の変化を実行するイベントハンドラが、上記のコントロール自体ではなく個別のボタンに関連付けられている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <p>2. を満たしている。</p>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH4.html">FLASH4: Providing submit buttons in Flash（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

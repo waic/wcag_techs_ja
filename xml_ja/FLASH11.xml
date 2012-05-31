@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH11">
+  <short-name>オブジェクトについて長いテキストの説明を提供する</short-name>
+  <applicability>
+    <ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="text-equiv-all"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description>
+    <p>この実装方法の目的は、画像のアクセシブルな名前として適切な、画像についての長くて詳細なテキスト情報を提供することである。画像の隣にアクセシブルなボタンを配置し、そのボタンによって画像の長いテキストの説明を含む新しいパネルを表示するようにする。</p>
+  </description>
+  <examples>
+    <eg-group>
+      <head>非表示の説明を利用者の要求に応じて表示する</head>
+      <description><p>この事例では、統計データを含む画像が用いられている。画像には、短い代替テキストが提供されている（「グラフ：一つ以上の障害があることを申告した米国の施設に入っていない16～64歳の人口比率」）。画像の下にあるボタンを押すことによって、ユーザーは統計情報自体の長いテキストの説明を表示することができる。ボタンを押すと、次のように動作する。</p>
+<ulist><item><p>長いテキストの説明を含むムービークリップが表示され、AccessibilityProperties.silent プロパティが false に設定され、支援技術で認識可能となる。そして、そのコンテンツがタブ順序に配置される。</p></item><item><p>元の画像とボタンは、支援技術とタブ順序からは一時的に隠された状態になる。</p></item></ulist><p>画像と説明的なテキストは、<a href="http://webaim.org/techniques/images/longdesc">HTML example for long image descriptions on WebAIM.org：英語</a>から引用した。</p>
+<p>この実装方法の実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH11/long_description_for_image_as3.html">「非表示の説明を利用者の要求に応じて表示する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH11/long_description_for_image_as3.swf">「非表示の説明を利用者の要求に応じて表示する」のソース（英語）</a>をダウンロードすることもできる。</p>
+</description>
+      <code>import flash.accessibility. *;
+import fl.accessibility.ButtonAccImpl;
+import flash.system.Capabilities;
+
+ButtonAccImpl.enableAccessibility();
+
+//set accessibility properties
+graph_mc.accessibilityProperties = new AccessibilityProperties();
+graph_mc.accessibilityProperties.name = "Graph of percentage of total U.S. \ 
+  noninsitutionalized population age 16-64 declaring one or more disabilities";
+longDescBtn.accessibilityProperties = new AccessibilityProperties();
+longDesc_mc.accessibilityProperties = new AccessibilityProperties();
+longDesc_mc.accessibilityProperties.forceSimple = false;
+hideLongDesc();
+
+//set click handlers for button
+longDescBtn.addEventListener("click", function () {
+  showLongDesc()
+});
+longDesc_mc.longDescCloseBtn.addEventListener("click", function () {
+  hideLongDesc()
+});
+
+function showLongDesc() {
+  // hide the original content from screen readers
+  graph_mc.accessibilityProperties.silent = true;
+  graph_mc.tabEnabled = false;
+  graph_mc.alpha = 0.2;
+  longDescBtn.enabled = false;
+  longDescBtn.accessibilityProperties.silent = true;
+  longDesc_mc.accessibilityProperties.silent = false;
+  // make the long description panel visible, both visually and to screen readers
+  longDesc_mc.visible = true;
+  longDesc_mc.tabEnabled = true;
+  longDesc_mc.longDescTitle.stage.focus = longDesc_mc.longDescTitle;
+  if (Capabilities.hasAccessibility)
+  Accessibility.updateProperties();
+}
+
+function hideLongDesc() {
+  //do the opposite to what showLongDesc does
+  graph_mc.accessibilityProperties.silent = false;
+  graph_mc.tabEnabled = true;
+  graph_mc.alpha = 1;
+  longDescBtn.enabled = true;
+  longDescBtn.accessibilityProperties.silent = false;
+  longDesc_mc.visible = false;
+  longDesc_mc.accessibilityProperties.silent = true;
+  longDesc_mc.tabEnabled = false;
+  longDescBtn.stage.focus = longDescBtn;
+  if (Capabilities.hasAccessibility)
+  Accessibility.updateProperties();
+}</code>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques>
+    <relatedtech idref="G73"/>
+    <relatedtech idref="G74"/>
+    <relatedtech idref="G92"/>
+    <relatedtech idref="G94"/>
+  </related-techniques>
+  <tests>
+    <procedure>
+      <p>Flash ムービーに長い説明を要する画像が含まれている場合、近くにあるボタンを押すことによって長い説明が表示される。</p>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>上記のチェックポイントを満たしている。</p>
+        </item>
+      </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH11.html">FLASH11: Providing a longer text description of an object（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>

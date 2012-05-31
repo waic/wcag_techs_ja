@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technique id="FLASH21">
+  <short-name>DataGrid コンポーネントを使用して列見出しとデータセルを関連付ける</short-name>
+  <applicability>
+    <ul>
+<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
+<li><p>Adobe Flex</p></li>
+</ul>
+  </applicability>
+  <applies-to>
+    <success-criterion idref="content-structure-separation-programmatic"/>
+  </applies-to>
+  <ua-issues>
+    <ua-issue>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+    </ua-issue>
+  </ua-issues>
+  <description><p>この実装方法の目的は、データテーブルで視覚的に示されている情報とそれらの関連性を、プログラムが解釈できるようにすることである。具体的には、テーブルの列見出しとそれに対応するデータセルの関連性を支援技術が解釈できるようにする必要がある。Flash では、この実現方法として DataGrid コンポーネントを使用できる。DataGrid コンポーネントでアクセシビリティを有効にした場合、Flash はグリッドの行のアクセシブルな名前を支援技術に渡す際に、各セルの値の前に自動的に列名を付加する。例えば、次のスクリーンショットの行は、スクリーンリーダーによって「13行中の6行目 Name Patty Crawford Bats L Throws L Year Jr Home Whittier, CA」と読み上げられる。</p>&#13;
+<div class="note">&#13;
+<p class="prefix"><em>注記： </em>Flash の DataGrid コンポーネントは列見出しのみをサポートし、行見出しはサポートしていない。</p>&#13;
+</div>&#13;
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH21/highlighted_row_in_flash_datagrid.png" alt="画面スクリーンショット：6行目が強調表示されたDataGrid コンポーネント" height="283" width="424"/></p></description>
+  <examples>
+    <eg-group>
+      <head>統計データのテーブル</head>
+      <description><p>この事例では、DataGrid コンポーネントを動的に作成し、そのデータプロバイダとして静的なデータが使用されている。import fl.accessibility.DataGridAccImpl; DataGridAccImpl.enableAccessibility(); は、Datagrid コンポーネントのアクセシビリティを有効にするために必要な行である。</p>
+</description>
+      <code>import fl.accessibility.DataGridAccImpl;
+DataGridAccImpl.enableAccessibility();
+
+import fl.data.DataProvider;
+bldRosterGrid(aDg);
+var aRoster: Array = new Array();
+aRoster = [ {
+  Name: "Wilma Carter", Bats: "R", Throws: "R", Year: "So", Home: "Redlands, CA"}, {
+  Name: "Sue Pennypacker", Bats: "L", Throws: "R", Year: "Fr", Home: "Athens, GA"}, {
+  Name: "Jill Smithfield", Bats: "R", Throws: "L", Year: "Sr", Home: "Spokane, WA"}, {
+  Name: "Shirley Goth", Bats: "R", Throws: "R", Year: "Sr", Home: "Carson, NV"}, {
+  Name: "Jennifer Dunbar", Bats: "R", Throws: "R", Year: "Fr", Home: "Seaside, CA"}, {
+  Name: "Patty Crawford", Bats: "L", Throws: "L", Year: "Jr", Home: "Whittier, CA"}, {
+  Name: "Angelina Davis", Bats: "R", Throws: "R", Year: "So", Home: "Odessa, TX"}, {
+  Name: "Maria Santiago", Bats: "L", Throws: "L", Year: "Sr", Home: "Tacoma, WA"}, {
+  Name: "Debbie Ferguson", Bats: "R", Throws: "R", Year: "Jr", Home: "Bend, OR"}, {
+  Name: "Karen Bronson", Bats: "R", Throws: "R", Year: "Sr", Home: "Billings, MO"}, {
+  Name: "Sylvia Munson", Bats: "R", Throws: "R", Year: "Jr", Home: "Pasadena, CA"}, {
+  Name: "Carla Gomez", Bats: "R", Throws: "L", Year: "Sr", Home: "Corona, CA"}, {
+  Name: "Betty Kay", Bats: "R", Throws: "R", Year: "Fr", Home: "Palo Alto, CA"}
+];
+aDg.dataProvider = new DataProvider(aRoster);
+aDg.rowCount = aDg.length;
+
+function bldRosterGrid(dg: DataGrid) {
+  dg.setSize(400, 300);
+  dg.columns =[ "Name", "Bats", "Throws", "Year", "Home"];
+  dg.columns[0].width = 120;
+  dg.columns[1].width = 50;
+  dg.columns[2].width = 50;
+  dg.columns[3].width = 40;
+  dg.columns[4].width = 120;
+  dg.move(50, 50);
+};</code>
+      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH21/using_datagrid_to_associate_headers_with_cells_as3.html">「統計データのテーブル」のサンプル（英語）</a>で確認できる。また、<a href="working-examples/FLASH21/using_datagrid_to_associate_headers_with_cells_as3.swf">「統計データのテーブル」のソース</a>をダウンロードすることもできる。</p>
+</description>
+    </eg-group>
+  </examples>
+  <resources>
+    <see-also>
+      <ulist/>
+    </see-also>
+  </resources>
+  <related-techniques/>
+  <tests>
+    <procedure>
+      <p>テーブル形式のデータを含む Flash コンテンツで以下を実行する。</p>
+      <olist>
+        <item>
+          <p>Internet Explorer 6 以降（Flash Player 6 以降を使用）、または Firefox 3 以降（Flash Player 9 以降を使用）で SFW ファイルを開く。</p>
+        </item>
+        <item>
+          <p>オブジェクトのアクセシビリティ名を表示できる aDesigner2 などのツールを使用して Flash ムービーを開く。</p>
+        </item>
+        <item>
+          <p>GUI 概要パネルでデータグリッドの行とセルのアクセシビリティ名を調べて、見出しデータとデータセルのデータがともに存在する。</p>
+        </item>
+        <item>
+          <p>コンテンツ制作者は、テストにスクリーンリーダーを使用することもできる。その場合は、Flash コンテンツを読み上げて音声を聞き、データグリッドが読み上げられる際に見出しとデータセルのデータが読み上げられる。</p>
+        </item>
+        <item>
+          <p>または、Flash オーサリングツールで、DataGrid コンポーネントを使用してデータが構造化されており、<code>DataGridAccImpl.enableAccessibility</code> メソッドによって DataGrid がアクセシブルになっている。</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>3., 4. または 5. を満たしている。</p>
+        </item>
+      </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
+  </tests>
+  <translationcredit>
+    <ulist>
+      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH21.html">FLASH21: Using the DataGrid component to associate column headers with cells（英語）</a></item>
+      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+    </ulist>
+  </translationcredit>
+</technique>
