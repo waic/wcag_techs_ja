@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE spec SYSTEM "xmlspec.dtd">
-<spec status="final" w3c-doctype="rec">
+<spec status="int-review" w3c-doctype="review" role="editors-copy" >
   <header>
       <title>Web Content Accessibility Guidelines (WCAG) </title>
     <version>2.0</version>
     <w3c-designation>WCAG20</w3c-designation>
     <w3c-doctype>W3C Recommendation</w3c-doctype>
     <pubdate>
-        <day>11</day>
-        <month>December</month>
-        <year>2008</year>
+        <month>June</month>
+        <year>2010</year>
     </pubdate>
     <publoc>
-        <loc href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/">http://www.w3.org/TR/2008/REC-WCAG20-20081211/</loc>
+    	<loc href="http://www.w3.org/WAI/GL/2010/WD-WCAG20-20100617/">http://www.w3.org/WAI/GL/2010/WD-WCAG20-20100617/</loc>
     </publoc>
     <altlocs>
-        <loc href="/WAI/WCAG20/versions/guidelines/">Alternate Versions of Web Content Accessibility Guidelines 2.0</loc>
+    	<loc href="Overview-diff.html">Single file diff-marked version showing revisions since 11 December 2008</loc>
+    	<loc href="/WAI/WCAG20/versions/guidelines/">Alternate Versions of Web Content Accessibility Guidelines 2.0</loc>
     </altlocs>
     <latestloc>
-      <loc href="http://www.w3.org/TR/WCAG20/">http://www.w3.org/TR/WCAG20/</loc>
+      <loc href="http://www.w3.org/WAI/GL/WCAG20/">http://www.w3.org/WAI/GL/WCAG20/</loc>
     </latestloc>
     <prevlocs>
-        <loc href="http://www.w3.org/TR/2008/PR-WCAG20-20081103/">http://www.w3.org/TR/2008/PR-WCAG20-20081103/</loc>
+    	<loc href="http://www.w3.org/WAI/GL/2010/WD-WCAG20-20100128/">http://www.w3.org/WAI/GL/2010/WD-WCAG20-20100128/</loc>
     </prevlocs>
     <authlist>
       <author role="current">
@@ -93,7 +93,7 @@
   		<p>This document has been produced as part of the W3C <loc
   			href="http://www.w3.org/WAI/">Web Accessibility Initiative</loc> (WAI). The
   			goals of the WCAG Working Group are discussed in the <loc
-  				href="http://www.w3.org/2004/04/wcag-charter">WCAG Working Group
+  				href="http://www.w3.org/WAI/GL/2010/06/charter">WCAG Working Group
   				charter</loc>. The WCAG Working Group is part of the <loc
   					href="http://www.w3.org/WAI/Technical/Activity">WAI Technical
   					Activity</loc>.</p>
@@ -171,7 +171,7 @@
           </item>
         </ulist>
         <p>All of these layers of guidance (principles, guidelines, success criteria, and sufficient and advisory techniques) work together to provide guidance on how to make content more accessible. Authors are encouraged to view and apply all layers that they are able to, including the advisory techniques, in order to best address the needs of the widest possible range of users.</p>
-        <p>Note that even content that conforms at the highest level (AAA) will not be accessible to individuals with all types, degrees, or combinations of disability, particularly in the cognitive language and learning areas.  Authors are encouraged to consider the full range of techniques, including the advisory techniques, as well as to seek relevant advice about current best practice to ensure that Web content is accessible, as far as possible, to this community. <loc linktype="understanding" href="understanding-metadata">Metadata</loc> may assist users in finding content most suitable for their needs.
+      	<p>Note that even content that conforms at the highest level (AAA) will not be accessible to individuals with all types, degrees, or combinations of disability, particularly in the <phrase diff="chg">cognitive, language, and learning areas</phrase>.  Authors are encouraged to consider the full range of techniques, including the advisory techniques, as well as to seek relevant advice about current best practice to ensure that Web content is accessible, as far as possible, to this community. <loc linktype="understanding" href="understanding-metadata">Metadata</loc> may assist users in finding content most suitable for their needs.
         </p>
       </div2>
       <div2 role="front" id="intro-related-docs">
@@ -258,7 +258,7 @@
               <ulist>
                 <item>
                   <p>
-                    <emph role="sc-handle">Controls, Input: </emph> If non-text content is a control or accepts user input, then it has a <termref def="namedef">name</termref> that describes its purpose. (Refer to <specref ref="ensure-compat"/> for additional requirements for controls and content that accepts user input.)
+                    <emph role="sc-handle">Controls, Input: </emph> If non-text content is a control or accepts user input, then it has a <termref def="namedef">name</termref> that describes its purpose. <phrase diff="chg">(Refer to <specref ref="ensure-compat-rsv"/> for additional requirements for controls and content that accepts user input.)</phrase>
                   </p>
                 </item>
                 <item>
@@ -423,7 +423,7 @@ and operating content do not rely solely on sensory characteristics of component
                 <item>
                   <p>
                     <emph role="sc-handle">Logotypes: </emph>
-                    Text that is part of a logo or brand name has no minimum contrast requirement.</p>
+                    Text that is part of a logo or brand name has no <phrase diff="del">minimum</phrase> contrast requirement.</p>
                 </item>
               </ulist>
             </div5>
@@ -1580,7 +1580,7 @@ and operating content do not rely solely on sensory characteristics of component
               <p>In Japanese, the phrase "<phrase xml:lang="jp">さじを投げる</phrase>" literally translates into "he throws a spoon," but it means that there is nothing he can do and finally he gives up.
                 
               </p>
-              <p>In Dutch, "<phrase xml:lang="ne">Hij ging met de kippen op stok</phrase>" literally translates into "He went to roost with the chickens," but it means that he went to bed early.</p>
+              <p>In Dutch, "<phrase xml:lang="nl" diff="chg">Hij ging met de kippen op stok</phrase>" literally translates into "He went to roost with the chickens," but it means that he went to bed early.</p>
             </example>
           </def>
         </gitem>
@@ -2168,7 +2168,7 @@ and operating content do not rely solely on sensory characteristics of component
         </gitem><gitem id="video-onlydef">
           <label>video-only</label>
           <def>
-            <p>a time-based presentation that contains only <termref def="videodef">video</termref> (no <termref def="videodef">audio</termref> and no interaction)</p>
+            <p>a time-based presentation that contains only <termref def="videodef">video</termref> (no <termref def="audiodef" diff="chg">audio</termref> and no interaction)</p>
           </def>
         </gitem>
         <gitem id="viewportdef">
@@ -2246,7 +2246,7 @@ and operating content do not rely solely on sensory characteristics of component
       </div2>
       <div2>
         <head>Other previously active WCAG WG participants and other contributors to WCAG 2.0</head>
-      	<p>Shadi Abou-Zahra, Jim Allan, Jenae Andershonis, Avi Arditti, Aries Arditi, Mike Barta, Sandy Bartell, Kynn Bartlett, Marco Bertoni, Harvey Bingham, Chris Blouch, Paul Bohman, Patrice Bourlon, Judy Brewer, Andy Brown, Dick Brown, Doyle Burnett, Raven Calais, Tomas Caspers, Roberto Castaldo, Sambhavi Chandrashekar, Mike Cherim, Jonathan Chetwynd, Wendy Chisholm, Alan Chuter, David M Clark, Joe Clark, James Coltham, James Craig, Tom Croucher, Nir Dagan, Daniel Dardailler, Geoff Deering, Pete DeVasto, Don Evans, Neal Ewers, Steve Faulkner, Lainey Feingold, Alan J. Flavell,  Nikolaos Floratos, Kentarou Fukuda, Miguel Garcia, P.J. Gardner, Greg Gay, Becky Gibson, Al Gilman, Kerstin Goldsmith, Michael Grade, Jon Gunderson, Emmanuelle Gutiérrez y Restrepo, Brian Hardy, Eric Hansen, Sean Hayes, Shawn Henry, Hans Hillen, Donovan Hipke, Bjoern Hoehrmann, Chris Hofstader, Yvette Hoitink, Carlos Iglesias, Ian Jacobs, Phill Jenkins, Jyotsna Kaki, Leonard R. Kasday, Kazuhito Kidachi, Ken Kipness, Marja-Riitta Koivunen, Preety Kumar, Gez Lemon, Chuck Letourneau, Scott Luebking, Tim Lacy, Jim Ley, William Loughborough, Greg Lowney, Luca Mascaro, Liam McGee, Jens Meiert, Niqui Merret, Alessandro Miele, Mathew J Mirabella, Charles McCathieNevile , Matt May, Marti McCuller, Sorcha Moore, Charles F. Munat, Robert Neff, Bruno von Niman, Tim Noonan, Sebastiano Nutarelli, Graham Oliver, Sean B. Palmer, Sailesh Panchang, Nigel Peck, Anne Pemberton, David Poehlman, Adam Victor Reed, Chris Ridpath, Lee Roberts, Gregory J. Rosmaita, Matthew Ross, Sharron Rush, Gian Sampson-Wild, Joel Sanda,  Gordon Schantz, Lisa Seeman, John Slatin, Becky Smith, Jared Smith, Neil Soiffer, Jeanne Spellman, Mike Squillace, Michael Stenitzer, Jim Thatcher, Terry Thompson, Justin Thorp, Makoto Ueki, Eric Velleman, Dena Wainwright, Paul Walsch, Takayuki Watanabe, Jason White.</p>
+      	<p>Shadi Abou-Zahra, Jim Allan, Jenae Andershonis, Avi Arditti, Aries Arditi, Mike Barta, Sandy Bartell, Kynn Bartlett, Marco Bertoni, Harvey Bingham, Chris Blouch, Paul Bohman, Patrice Bourlon, Judy Brewer, Andy Brown, Dick Brown, Doyle Burnett, Raven Calais, Tomas Caspers, Roberto Castaldo, Sambhavi Chandrashekar, Mike Cherim, Jonathan Chetwynd, Wendy Chisholm, Alan Chuter, David M Clark, Joe Clark, James Coltham, James Craig, Tom Croucher, Nir Dagan, Daniel Dardailler, Geoff Deering, Pete DeVasto, Don Evans, Neal Ewers, Steve Faulkner, Lainey Feingold, Alan J. Flavell,  Nikolaos Floratos, Kentarou Fukuda, Miguel Garcia, P.J. Gardner, Greg Gay, Becky Gibson, Al Gilman, Kerstin Goldsmith, Michael Grade, Jon Gunderson, Emmanuelle Gutiérrez y Restrepo, Brian Hardy, Eric Hansen, Sean Hayes, Shawn Henry, Hans Hillen, Donovan Hipke, Bjoern Hoehrmann, Chris Hofstader, Yvette Hoitink, Carlos Iglesias, Ian Jacobs, Phill Jenkins, Jyotsna Kaki, Leonard R. Kasday, Kazuhito Kidachi, Ken Kipness, Marja-Riitta Koivunen, Preety Kumar, Gez Lemon, Chuck Letourneau, Scott Luebking, Tim Lacy, Jim Ley, William Loughborough, Greg Lowney, Luca Mascaro, Liam McGee, Jens Meiert, Niqui Merret, Alessandro Miele, Mathew J Mirabella, Charles McCathieNevile , Matt May, Marti McCuller, Sorcha Moore, Charles F. Munat, Robert Neff, Bruno von Niman, Tim Noonan, Sebastiano Nutarelli, Graham Oliver, Sean B. Palmer, Sailesh Panchang, Nigel Peck, Anne Pemberton, David Poehlman, Adam Victor Reed, Bob Regan, Chris Ridpath, Lee Roberts, Gregory J. Rosmaita, Matthew Ross, Sharron Rush, Gian Sampson-Wild, Joel Sanda,  Gordon Schantz, Lisa Seeman, John Slatin, Becky Smith, Jared Smith, Neil Soiffer, Jeanne Spellman, Mike Squillace, Michael Stenitzer, Jim Thatcher, Terry Thompson, Justin Thorp, Makoto Ueki, Eric Velleman, Dena Wainwright, Paul Walsch, Takayuki Watanabe, Jason White.</p>
       </div2>
     </inform-div1>
     <inform-div1 id="references">
