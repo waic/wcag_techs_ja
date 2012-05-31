@@ -62,10 +62,13 @@ xml = Nokogiri::XML::Builder.new do |x|
 								div.children.each do |e|
 									case e.node_name
 									when 'div'
-										if e.attr( 'class' ) == 'note'
+										case e.attr( 'class' )
+										when 'note'
 											x.note {
 												x << e.inner_html.strip
 											}
+										when nil
+											### CODE ME: a div have empty class name in PDF1 ###
 										else
 											$stderr.puts "#{tech_id}: Unknown div class name '#{e.attr "class"}' in eg-group.description."
 											exit 1
