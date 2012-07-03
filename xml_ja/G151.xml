@@ -12,11 +12,7 @@
           
                <p>この実装方法をもちいることによって、トランスクリプト又は台本へのリンクが提供され、WCAG 2.0に適合する。そのトランスクリプト又は台本は、同じウェブページ上にあってもよいし、別のURIにあってもよい。</p></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G150"/>
     <relatedtech idref="G58"/>

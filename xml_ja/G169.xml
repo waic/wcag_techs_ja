@@ -24,11 +24,7 @@ Lorem ipsum dolor sit amet, ...
 </description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="C22"/>
     <relatedtech idref="F88"/>

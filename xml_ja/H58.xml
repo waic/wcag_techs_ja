@@ -42,39 +42,23 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/dirlang.html#adef-lang" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    lang attribute</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/dirlang.html#adef-lang" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    lang attribute</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#sec-lang-tag" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML 1.0 xml:lang&#13;
-                  attribute</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#sec-lang-tag" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML 1.0 xml:lang&#13;
+                  attribute</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Inheritance of language codes.</loc>. </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Inheritance of language codes.</loc>.</p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">BCP 47: Tags for the&#13;
-                    Identification of Languages .</loc> . </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">BCP 47: Tags for the&#13;
+                    Identification of Languages .</loc>.</p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/language-tags/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Language tags&#13;
-                    in HTML and XML</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/language-tags/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Language tags&#13;
+                    in HTML and XML</loc></p>
         </item>
       </ulist>
     </see-also>

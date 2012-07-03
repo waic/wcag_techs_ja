@@ -12,11 +12,7 @@
 	<p>このように、HOMEページに一つで二つのメカニズムを持たせることができる。一つは各ページへの通常のナビゲーションを提供することであり、もう一つはサイトの事実上のサイトマップにもなることである。</p>
 	<p>サイト内の全てのウェブページは、全ての他のページへのリンクを提供し、一連のそれらのリンクは<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#navigation-mechanisms-mult-loc">達成基準 3.2.3 (一貫したナビゲーション)</a>を満たしている。</p></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G61"/>
     <relatedtech idref="G63"/>

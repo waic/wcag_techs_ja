@@ -12,11 +12,7 @@
                 
 								<div class="note"><p class="prefix"><em>注記：</em>ユーザから送信されたデータが機密情報であったり、セキュリティリスクの疑いがある場合、データを再認証ページに受け渡したり、再認証後、データ保護を保証するために元のデータを処理してページに受け渡すプロセスを、コンテンツ制作者は見直すべきである。</p></div></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G105"/>
   </related-techniques>

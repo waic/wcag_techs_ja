@@ -42,11 +42,7 @@
 </dl>
 <p>この実装方法を使用している際、ページの最初に代替コンテンツへのWCAGに適合したリンクを配置することで、利用者がそのリンクをすぐに見つけることができ、適合した代替バージョンに移動することができるようになる。利用者がどこからそのサイトに入ったかに関係なく、利用者が常に代替バージョンを見つけることができるようにするためには、特定のレベルで適合していないページには適合している代替バージョンへのリンクを含めることである。</p></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="SVR2"/>
   </related-techniques>

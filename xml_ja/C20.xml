@@ -47,53 +47,25 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/box.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Box Model</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/box.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Box Model</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/visuren.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Visual formatting Model</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/visuren.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Visual formatting Model</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/visudet.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Visual formatting Model Details</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/visudet.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Visual formatting Model Details</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://css-discuss.incutio.com/?page=CssLayouts" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CssLayouts</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://css-discuss.incutio.com/?page=CssLayouts" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CssLayouts</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/200504/about_fluid_and_fixed_width_layouts/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">About fluid and fixed width layouts</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/200504/about_fluid_and_fixed_width_layouts/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">About fluid and fixed width layouts</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://cookiecrook.com/AIR/2003/train/accessiblecss.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible CSS</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://cookiecrook.com/AIR/2003/train/accessiblecss.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible CSS</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.maxdesign.com.au/presentation/em/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Ideal line length for content</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.maxdesign.com.au/presentation/em/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Ideal line length for content</loc></p>
         </item>
       </ulist>
     </see-also>

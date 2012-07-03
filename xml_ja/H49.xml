@@ -74,28 +74,18 @@ we can never do anything good in the world.&lt;/q&gt;"と述べている。&lt;/
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Phrase&#13;
-                    elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Phrase&#13;
+                    elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</loc></p>
         </item>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Quotations: The BLOCKQUOTE and Q elements</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Quotations: The BLOCKQUOTE and Q elements</loc></p>
         </item>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Subscripts and superscripts: the SUB and SUP elements</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Subscripts and superscripts: the SUB and SUP elements</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/fixing-ie-quotes.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Fixing Quotes in&#13;
-                    Internet Explorer</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/fixing-ie-quotes.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Fixing Quotes in&#13;
+                    Internet Explorer</loc></p>
         </item>
       </ulist>
     </see-also>

@@ -26,27 +26,22 @@
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.paciellogroup.com/resources/contrast-analyser.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser - Application&#13;
                 &#13;
 &#13;
-カラーコントラストアナライザー 日本語版</loc>&#13;
-<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser - Application&#13;
+カラーコントラストアナライザー 日本語版</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser - Application&#13;
                 &#13;
 &#13;
 カラーコントラストアナライザー 日本語版</loc></p>
         </item>
         <item>
-          <p>&#13;
-<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">カラーコントラストアナライザー 日本語版</loc></p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">カラーコントラストアナライザー 日本語版</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/services/luminositycontrastratio.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Ratio Analyser - online service</loc></p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/services/luminositycontrastratio.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Ratio Analyser - online service</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/colour-contrast-analyser-firefox-extension.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Colour Contrast Analyser - Firefox Extension</loc>&#13;
-                </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/colour-contrast-analyser-firefox-extension.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Colour Contrast Analyser - Firefox Extension</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://trace.wisc.edu/contrast-ratio-examples/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Color Contrast Samples</loc>&#13;
-                </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://trace.wisc.edu/contrast-ratio-examples/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Color Contrast Samples</loc></p>
         </item>
         <item>
           <p>
@@ -59,13 +54,10 @@
           </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.vischeck.com/daltonize/runDaltonize.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Tool to convert images based on color loss so that contrast is restored as luminance contrast when there was only color contrast (that was lost due to color deficiency)</loc>&#13;
-                 </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.vischeck.com/daltonize/runDaltonize.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Tool to convert images based on color loss so that contrast is restored as luminance contrast when there was only color contrast (that was lost due to color deficiency)</loc></p>
         </item>
         <item>
-          <p>&#13;
-<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/200709/10_colour_contrast_checking_tools_to_improve_the_accessibility_of_your_design/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">List of color contrast tools</loc>&#13;
-</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/200709/10_colour_contrast_checking_tools_to_improve_the_accessibility_of_your_design/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">List of color contrast tools</loc></p>
         </item>
       </ulist>
     </see-also>

@@ -73,32 +73,16 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-smil/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL) 1.0</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-smil/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL) 1.0</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL 2.0)</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL 2.0)</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL-access/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessibility Features of SMIL</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL-access/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessibility Features of SMIL</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/richmedia/tutorials/smiltemplates.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NCAM Rich Media Accessibility, Accessible SMIL Templates</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/richmedia/tutorials/smiltemplates.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NCAM Rich Media Accessibility, Accessible SMIL Templates</loc></p>
         </item>
       </ulist>
     </see-also>

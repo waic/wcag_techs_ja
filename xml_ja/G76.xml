@@ -30,13 +30,11 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/xpedio/groups/public/documents/PublicWebsite/public_refreshandtimeouts.hcsp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Time outs and page refreshes, by the Web Access&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/xpedio/groups/public/documents/PublicWebsite/public_refreshandtimeouts.hcsp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Time outs and page refreshes, by the Web Access&#13;
                                     Centre of the Royal National Institute of the Blind (RNIB),&#13;
                                     provides rationale and techniques.</loc>, by the Web Access&#13;
                                     Centre of the Royal National Institute of the Blind (RNIB),&#13;
-                                    provides rationale and techniques. </p>
+                                    provides rationale and techniques.</p>
         </item>
       </ulist>
     </see-also>

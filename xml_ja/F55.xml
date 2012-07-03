@@ -24,11 +24,7 @@
       <code>&lt;a href="link.html" onfocus="if(this.blur)this.blur();"&gt;リンクの文言&lt;/a&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

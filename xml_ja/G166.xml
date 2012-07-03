@@ -21,11 +21,7 @@
 &lt;a href="Mars_landing_audio.mp3"&gt;映像「火星着陸」の音声ガイド&lt;/a&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G159"/>
   </related-techniques>

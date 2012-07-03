@@ -44,11 +44,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://trace.wisc.edu/peat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Trace Center Photosensitive Epilepsy Analysis Tool (PEAT)</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://trace.wisc.edu/peat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Trace Center Photosensitive Epilepsy Analysis Tool (PEAT)</loc></p>
         </item>
       </ulist>
     </see-also>

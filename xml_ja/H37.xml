@@ -26,7 +26,18 @@
   </examples>
   <resources>
     <see-also>
-      <ulist/>
+      <p>
+              
+                     <a href="http://www.w3.org/TR/html401/struct/objects.html#edef-IMG">HTML 4.01 IMG
+                element</a>
+            
+                  </p>
+      <p>
+              
+                     <a href="http://www.w3.org/TR/html401/struct/objects.html#adef-alt">HTML 4.01 alt
+                attribute</a>
+            
+                  </p>
     </see-also>
   </resources>
   <related-techniques>

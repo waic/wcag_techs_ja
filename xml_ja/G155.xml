@@ -17,11 +17,7 @@
           
                <div class="note"><p class="prefix"><em>注記: </em>利用者がチェックボックスを選択せずに送信した場合、再送信のためのフォームで、これまでに入力した情報を再入力する必要がないようにしなければならない。</p></div></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G98"/>
     <relatedtech idref="G99"/>

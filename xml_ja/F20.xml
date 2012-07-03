@@ -13,11 +13,7 @@
     <p> この文書では、非テキストコンテンツが更新されているが、代替テキストが同時に更新されないことによる不適合事例について述べている。代替テキストの中のテキストが、情報や機能を失なわずに非テキストコンテンツの代わりとして用いることができなくなった場合は、もはや非テキストコンテンツに対する代替テキストは意味をなさなくなる。</p>
   </description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

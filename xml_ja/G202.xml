@@ -16,11 +16,7 @@
 	<p class="prefix"><em>注記：</em>同じ機能を使用できる手段がウェブページ上で複数提供されている場合には、必ずしもそれぞれのコントロールをキーボードだけで操作可能にする必要はない。その場合、コンテンツ制作者には、ユーザーがキーボードで操作可能な手段を見つけやすくすることが推奨される。</p>
 </div></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G90"/>
   </related-techniques>

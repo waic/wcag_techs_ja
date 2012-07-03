@@ -28,11 +28,7 @@
                   </li>
 </ul></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G80"/>
   </related-techniques>

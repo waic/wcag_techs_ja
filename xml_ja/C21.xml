@@ -51,11 +51,7 @@ In the content, call up the class.</p>
       <code>&lt;p class="tall"&gt; Lorem ipsum dolor sit …  &lt;/p&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

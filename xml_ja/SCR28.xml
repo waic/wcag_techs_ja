@@ -68,10 +68,10 @@
     <see-also>
       <ulist>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bobbyvandersluis.com/articles/unobtrusive_show_hide/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Unobtrusive show/hide behavior reloaded</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bobbyvandersluis.com/articles/unobtrusive_show_hide/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Unobtrusive show/hide behavior reloaded</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.dustindiaz.com/seven-togglers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Seven ways to toggle an element with JavaScript</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.dustindiaz.com/seven-togglers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Seven ways to toggle an element with JavaScript</loc></p>
         </item>
       </ulist>
     </see-also>

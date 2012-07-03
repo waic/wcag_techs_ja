@@ -32,23 +32,15 @@
     <see-also>
       <ulist>
         <item>
-          <p> HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 &#13;
-                    The FRAMESET element</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 &#13;
+                    The FRAMESET element</loc></p>
         </item>
         <item>
-          <p> HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 &#13;
-                    The FRAME element</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 &#13;
+                    The FRAME element</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse4.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Navigation</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse4.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Navigation</loc></p>
         </item>
       </ulist>
     </see-also>

@@ -23,11 +23,7 @@
 <ulist><item><p>入力欄に表示された任意の情報を変更することができます。「終了」を選択すると情報が記録され、プロフィールを公開することができます。変更を破棄したい場合は「中断」を選択してください。</p></item><item><p>プロフィール中で、入力欄外にシステムのテキストとして表示された情報は変更できません。これらの情報は企業内人事情報から取得しています。編集できない部分に誤りや更新すべき情報がある場合は、表示情報の隣にあるヘルプアイコンを選択すると修正方法を確認できます。</p></item><item><p>電話番号は半角の数字とハイフン(-)のみ入力できます。</p></item><item><p>必須の入力欄はアスタリスク(*)で示されており、入力しなければフォームを完了できません。</p></item></ulist></description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G89"/>
   </related-techniques>

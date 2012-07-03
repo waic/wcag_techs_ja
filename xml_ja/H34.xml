@@ -59,12 +59,10 @@ What you need to know about the bidi algorithm and inline markup（双方向ア�
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/inline-bidi-markup/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">What you&#13;
-                    need to know about the bidi algorithm and inline markup</loc>&#13;
-</p>
+                    need to know about the bidi algorithm and inline markup</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/geo/html-tech/tech-bidi.html#bidisource" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Problems with bidirectional source text</loc>&#13;
-</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/geo/html-tech/tech-bidi.html#bidisource" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Problems with bidirectional source text</loc></p>
         </item>
       </ulist>
     </see-also>

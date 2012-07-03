@@ -42,28 +42,23 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2004/REC-xml-20040204/Overview.html#sec-well-formed" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Well-Formed XML Documents in Extensible Markup Language (XML) 1.0 (Third&#13;
-                  Edition), W3C Recommendation 04 February 2004.</loc> in Extensible Markup Language (XML) 1.0 (Third&#13;
-                  Edition), W3C Recommendation 04 February 2004. </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2004/REC-xml-20040204/Overview.html#sec-well-formed" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Well-Formed XML Documents in Extensible Markup Language (XML) 1.0 (Third&#13;
+                  Edition), W3C Recommendation 04 February 2004.</loc>in Extensible Markup Language (XML) 1.0 (Third&#13;
+                  Edition), W3C Recommendation 04 February 2004.</p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2004/REC-xml11-20040204/#sec-well-formed" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Well-Formed XML Documents in Extensible Markup Language (XML) 1.1, W3C&#13;
-                  Recommendation 04 February 2004.</loc> in Extensible Markup Language (XML) 1.1, W3C&#13;
-                  Recommendation 04 February 2004. </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2004/REC-xml11-20040204/#sec-well-formed" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Well-Formed XML Documents in Extensible Markup Language (XML) 1.1, W3C&#13;
+                  Recommendation 04 February 2004.</loc>in Extensible Markup Language (XML) 1.1, W3C&#13;
+                  Recommendation 04 February 2004.</p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#wf-entities" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">4.3.2 Well-Formed Parsed&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#wf-entities" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">4.3.2 Well-Formed Parsed&#13;
                     Entities in Extensible Markup Language (XML) 1.1, W3C Recommendation 04&#13;
-                  February 2004.</loc> in Extensible Markup Language (XML) 1.1, W3C Recommendation 04&#13;
+                  February 2004.</loc>in Extensible Markup Language (XML) 1.1, W3C Recommendation 04&#13;
                   February 2004.</p>
         </item>
       </ulist>
+      <p><a href="G134.html#G134-resources">G134: ウェブページをバリデートする</a>の参考リソースを参照のこと。</p>
     </see-also>
   </resources>
   <related-techniques/>

@@ -91,18 +91,10 @@ Windows版のFirefox 2.0とOpera 9.02、SeaMonkey 1.1は、フォームのラベ
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: 5.11.3 The dynamic pseudo-classes: :hover, :active, and :focus</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: 5.11.3 The dynamic pseudo-classes: :hover, :active, and :focus</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/selector.html#adjacent-selectors" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: 5.7 Adjacent sibling selectors</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/selector.html#adjacent-selectors" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: 5.7 Adjacent sibling selectors</loc></p>
         </item>
       </ulist>
     </see-also>

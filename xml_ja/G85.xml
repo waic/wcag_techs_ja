@@ -17,11 +17,7 @@
 			<li><p>利用者のデータ入力を踏まえ、それから推測できるそれに近い正しいデータ入力の値を示すことにより、正しい値を入力する方法について利用者に説明する。</p></li>
 		</ul></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="SCR18"/>
   </related-techniques>

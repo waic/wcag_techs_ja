@@ -36,11 +36,7 @@
       <code>&lt;p class="right"&gt; Lorem ipsum dolor sit …&lt;/p&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

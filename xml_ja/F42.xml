@@ -103,7 +103,7 @@ function changeLocation(objEvent, strLocation)
     <see-also>
       <ulist>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/wai-aria/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Rich Internet Applications (WAI-ARIA) Version 1.0</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/wai-aria/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Rich Internet Applications (WAI-ARIA) Version 1.0</loc></p>
         </item>
       </ulist>
     </see-also>

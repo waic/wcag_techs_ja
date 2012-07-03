@@ -106,51 +106,27 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    "lang" attribute</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/dirlang.html#h-8.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    "lang" attribute</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">BCP 47: Tags for the&#13;
-                    Identification of Languages</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">BCP 47: Tags for the&#13;
+                    Identification of Languages</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Inheritance of language codes</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/dirlang.html#h-8.1.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Inheritance of language codes</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/tutorials/language-decl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Declaring&#13;
-                    Language in XHTML and HTML</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/tutorials/language-decl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Declaring&#13;
+                    Language in XHTML and HTML</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/i18n-html-tech-lang/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authoring Techniques for&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/i18n-html-tech-lang/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authoring Techniques for&#13;
                     XHTML &amp; HTML Internationalization: Specifying the language of content&#13;
-                    1.0</loc>&#13;
-                &#13;
-                        </p>
+                    1.0</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/language-tags/Overview.en.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Language tags in HTML and XML</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/language-tags/Overview.en.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Language tags in HTML and XML</loc></p>
         </item>
       </ulist>
     </see-also>

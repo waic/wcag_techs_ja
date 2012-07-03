@@ -14,11 +14,7 @@
 <p class="prefix"><em>注記: </em><code>alt=" "</code>でも有効だが、<code>alt=""</code>とすることを推奨する。</p>
 </div></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

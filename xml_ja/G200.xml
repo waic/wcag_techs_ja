@@ -34,7 +34,12 @@
   </examples>
   <resources>
     <see-also>
-      <ulist/>
+      <p>
+        <a href="http://www.webcredible.co.uk/user-friendly-resources/web-usability/new-browser-windows.shtml">Beware of opening links in a new window</a>
+      </p>
+      <p>
+        <a href="http://www.useit.com/alertbox/990530.html">Top-10 New Mistakes of Web Design</a>
+      </p>
     </see-also>
   </resources>
   <related-techniques>

@@ -38,12 +38,10 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-<span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar</a><span class="difftext">[変更ここまで]</span></span>を使用すると、Microsoft の Internet Explorer でスクリプトによって生成されたDOMのチェックが可能になる。</p>
+          <p><span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar</a><span class="difftext">[変更ここまで]</span></span>を使用すると、Microsoft の Internet Explorer でスクリプトによって生成されたDOMのチェックが可能になる。</p>
         </item>
         <item>
-          <p>&#13;
-<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug を使用すると、Firefox でスクリプトによって生成されたDOMのチェックが可能になる。</loc> を使用すると、Firefox でスクリプトによって生成されたDOMのチェックが可能になる。</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug を使用すると、Firefox でスクリプトによって生成されたDOMのチェックが可能になる。</loc>を使用すると、Firefox でスクリプトによって生成されたDOMのチェックが可能になる。</p>
         </item>
       </ulist>
     </see-also>

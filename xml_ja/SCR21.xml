@@ -173,10 +173,10 @@ function focusFormField(objAnchor, objEvent, objForm)
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webreference.com/js/column44/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 The Document Object Model, More methods from Webreference.com</loc> from Webreference.com </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webreference.com/js/column44/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 The Document Object Model, More methods from Webreference.com</loc>from Webreference.com</p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc></p>
         </item>
       </ulist>
     </see-also>

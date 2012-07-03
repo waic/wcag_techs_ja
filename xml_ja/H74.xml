@@ -45,23 +45,18 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/Doctype" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Do not forget to add a doctype（W3C Quality Assurance Initiative）は、文書型がどういうもので、なぜそれを用いるべきかについて説明している。</loc>（W3C Quality Assurance Initiative）は、文書型がどういうもので、なぜそれを用いるべきかについて説明している。</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/Doctype" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Do not forget to add a doctype（W3C Quality Assurance Initiative）は、文書型がどういうもので、なぜそれを用いるべきかについて説明している。</loc>（W3C Quality Assurance Initiative）は、文書型がどういうもので、なぜそれを用いるべきかについて説明している。</p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Recommended DTDs to&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Recommended DTDs to&#13;
                     use in your Web document（W3C Quality Assurance Initiative）は、よく用いられる宣言のリストである。</loc>（W3C Quality Assurance Initiative）は、よく用いられる宣言のリストである。</p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chami.com/html-kit/faq/pages/validate_tools.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">How do I&#13;
-                    validate my code or check for possible errors? は、フリーエディタのHTML-Kitにある、HTML、CSS及びXMLをチェックするためのツールを説明している。</loc> は、フリーエディタのHTML-Kitにある、HTML、CSS及びXMLをチェックするためのツールを説明している。</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chami.com/html-kit/faq/pages/validate_tools.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">How do I&#13;
+                    validate my code or check for possible errors? は、フリーエディタのHTML-Kitにある、HTML、CSS及びXMLをチェックするためのツールを説明している。</loc>は、フリーエディタのHTML-Kitにある、HTML、CSS及びXMLをチェックするためのツールを説明している。</p>
         </item>
       </ulist>
+      <p><a href="G134.html#G134-resources">G134: ウェブページをバリデートする</a>の参考リソースを参照のこと。</p>
     </see-also>
   </resources>
   <related-techniques/>

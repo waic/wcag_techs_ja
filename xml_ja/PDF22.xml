@@ -61,7 +61,7 @@ if (event.value !="") {
     <see-also>
       <ulist>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/devnet/acrobat/javascript.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">JavaScript for Acrobat</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/devnet/acrobat/javascript.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">JavaScript for Acrobat</loc></p>
         </item>
       </ulist>
     </see-also>

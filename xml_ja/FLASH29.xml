@@ -70,11 +70,7 @@ addChild(myRadioButton);</code>
 </description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="FLASH25"/>
     <relatedtech idref="FLASH32"/>

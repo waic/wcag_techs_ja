@@ -122,13 +122,13 @@ ET				% テキストオブジェクトの終わり</code>
     <see-also>
       <ulist>
         <item>
-          <p> Section 14.8.4.3.2 (Paragraphlike Elements) in <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 14.8.4.3.2 (Paragraphlike Elements) in PDF 1.7 (ISO 32000-1)</loc> </p>
+          <p>Section 14.8.4.3.2 (Paragraphlike Elements) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 14.8.4.3.2 (Paragraphlike Elements) in PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://pdf.editme.com/Headings" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF Standards: Headings</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://pdf.editme.com/Headings" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF Standards: Headings</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://accessdp.wordpress.com/fixing-pdfs-for-accessibility/headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF	Accessibility Documentation:headings</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://accessdp.wordpress.com/fixing-pdfs-for-accessibility/headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF	Accessibility Documentation:headings</loc></p>
         </item>
         <item>
           <p>

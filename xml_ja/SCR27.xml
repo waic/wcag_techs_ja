@@ -96,11 +96,7 @@ ul#swapper ul.menu li a { text-decoration:none; color:black; padding:0 0.1em;
     display:block; width:100%; }</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

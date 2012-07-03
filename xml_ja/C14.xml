@@ -45,21 +45,13 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Cascading Style Sheets, Level 2 (CSS2), Fonts</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Cascading Style Sheets, Level 2 (CSS2), Fonts</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html#font-size-props" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Font Size Property</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html#font-size-props" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Font Size Property</loc></p>
         </item>
         <item>
-          <p> CSS-Discuss Font Size Using Ems </p>
+          <p>CSS-Discuss Font Size Using Ems</p>
         </item>
       </ulist>
     </see-also>

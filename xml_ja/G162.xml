@@ -44,29 +44,19 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/label-positioning.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Label Positioning</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/label-positioning.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Label Positioning</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/techniques/forms/screen_reader.php#labels" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Creating Accessible Forms</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/techniques/forms/screen_reader.php#labels" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Creating Accessible Forms</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse8.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse8.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.lukew.com/resources/articles/web_forms.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web Application Form Design</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.lukew.com/resources/articles/web_forms.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web Application Form Design</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.uxmatters.com/MT/archives/000107.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Label Placement in Forms</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.uxmatters.com/MT/archives/000107.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Label Placement in Forms</loc></p>
         </item>
       </ulist>
     </see-also>

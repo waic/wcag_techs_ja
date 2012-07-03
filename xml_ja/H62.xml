@@ -74,34 +74,18 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/ruby/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Ruby Annotation</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/ruby/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Ruby Annotation</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/salt/guidelines/sec11.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">IMS Guidelines for&#13;
-                    Topic-Specific Accessibility</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/salt/guidelines/sec11.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">IMS Guidelines for&#13;
+                    Topic-Specific Accessibility</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/css3-ruby/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 3 Ruby</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/css3-ruby/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 3 Ruby</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/techniques/markup#ruby" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">W3C I18N&#13;
-                    Techniques: Markup and text, "Using Ruby"</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/techniques/markup#ruby" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">W3C I18N&#13;
+                    Techniques: Markup and text, "Using Ruby"</loc></p>
         </item>
       </ulist>
     </see-also>

@@ -508,50 +508,59 @@ style2.css内：
             <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/200608/build_your_own_php_style_sheet_switcher/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Build your own PHP style sheet switcher</loc>
           </p>
         </item>
+      </ulist>
+    </see-also>
+    <see-also>
+      <head>クッキーを使用する</head>
+      <p>
+クッキーを通して利用者のコンピュータ上に情報を保管することによって、利用者による設定はページ全体に渡って永続的に保存しておくことができる。
+この機能を利用するには、利用者のコンピュータでクッキーがサポートされており、かつその利用が許可されている必要がある。
+クッキーは、Javascriptのようなクライアントサイドのスクリプト、またはCGIスクリプトのようなサーバーサイドのスクリプトを使用することで、作成・読み込み・変更・削除することができる。
+クライアントサイドの実装に依存するということは、クッキーがサポートされその利用が許可されていることに加えて、利用者のコンピュータでその実装方法がサポートされており、かつ利用可能であることを要求することになる。</p>
+      <p>
+クッキーの生成と使用方法に関する情報はWeb上にある。以下にいくつかの参考となるページを示す。</p>
+      <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.quirksmode.org/js/cookies.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">JavaScript - Cookies</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.quirksmode.org/js/cookies.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">JavaScript - Cookies</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webdesign.about.com/od/cookies/a/aa083198.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Write Your First HTTP Cookie</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webdesign.about.com/od/cookies/a/aa083198.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Write Your First HTTP Cookie</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3schools.com/ASP/asp_cookies.asp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ASP Cookies</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3schools.com/ASP/asp_cookies.asp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ASP Cookies</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/web.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Programming Ruby</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/web.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Programming Ruby</loc></p>
+        </item>
+      </ulist>
+      <p>
+コンテンツ制作者はクッキーをサポートしているかどうかのテストを行い、もしサポートされていなければ別のコントロールを提供することが推奨される。この別のコントロールには、「この設定をすべてのページに適用する」のような設定の有効化に関する情報が含まれるべきである。メッセージや別のコントロールの設定に応じて利用者に向けて表示されるページは、クッキーの動作環境とそれ以外の環境で利用できるオプションについての情報を提供する。
+利用者がクッキーを有効にできない状況において、もし利用者がサイトの閲覧を継続することを選択した場合、それはどうなることを意味するのかということについての説明を含める。そしてクッキーをサポートしている場合と同様の結果を得るにはユーザーエージェントをどう設定すればよいかということについての情報を提供する。</p>
+      <p>
+例：「このブラウザはクッキーを受け付ける設定になっていません。このサイトでは、サイト内の全ページに渡って、あなたの変更した設定を適用するためにはクッキーが有効になっている必要があります。お使いの環境においてクッキーを有効にする方法については<span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://support.google.com/websearch/bin/answer.py?hl=en&amp;answer=35851">How to Enable Cookies</a><span class="difftext">[変更ここまで]</span></span>を参照してください。ただし、これを実行するためには、お使いのコンピュータにおける管理者の権限が必要となる場合がありますので注意してください。クッキーが利用できない場合、あなたの設定はこのサイト内の他のページも含めて保存されません。弊社では、この機能をコンピュータの性能に関わらず提供できるよう努力しておりますが、それが実現できるまでの間でも、各ページにおいて設定を変更することは可能です。」</p>
+    </see-also>
+    <see-also>
+      <head>プログレッシブ・エンハンスメントとアンオブトルーシブJavaScript</head>
+      <p>
+HTMLまたはXHTMLページにおけるJavaScript実装のための現在のベストプラクティスは、構造及び表現からコンテンツの動作を分離させた形で使用することだ。「プログレッシブ・エンハンスメント」と「アンオブトルーシブJavaScript」という言葉は、ページの機能を向上させ、さらに良いものにするだけでなく、JavaScriptがサポートされていない場合でもコンテンツが機能し続けられるようにうまく作られているスクリプトを指す用語としてよく使用されている。</p>
+      <p>
+より詳しく知るための推奨される情報: 
+</p>
+      <ulist>
+        <item>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.alistapart.com/articles/behavioralseparation" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Behavioral Separation</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.alistapart.com/articles/behavioralseparation" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Behavioral Separation</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://en.wikipedia.org/wiki/Unobtrusive_JavaScript" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Wikipedia: Unobtrusive JavaScript</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://en.wikipedia.org/wiki/Unobtrusive_JavaScript" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Wikipedia: Unobtrusive JavaScript</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://javascript.about.com/library/blunobtrusive.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">About.com: Unobtrusive JavaScript</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://javascript.about.com/library/blunobtrusive.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">About.com: Unobtrusive JavaScript</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://en.wikipedia.org/wiki/Progressive_enhancement" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Progressive enhancement</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://en.wikipedia.org/wiki/Progressive_enhancement" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Progressive enhancement</loc>&#13;
-                        </p>
-        </item>
-        <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://domscripting.com/blog/display/41" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hijax</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://domscripting.com/blog/display/41" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hijax</loc></p>
         </item>
       </ulist>
     </see-also>

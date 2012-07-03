@@ -18,11 +18,7 @@
 <ulist><item><p>画像や絵の「代替テキスト」の位置に埋め込まれた、" "、"スペーサー"、"画像"、"絵" といったプレースホルダーテキスト。</p></item><item><p>非テキストコンテンツの情報又は機能を伝達しない、"絵 1"及び"絵 2" 、"0001"及び"0002" 又は"イントロ #1"及び"イントロ #2"といったプログラム上の参照情報</p></item><item><p>"10月.jpg"、"グラフ.jpg" 又は "売上げ\\10月\\上位3名.jpg"といったそれ自体では有効な代替テキストとならないファイル名</p></item></ulist></description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

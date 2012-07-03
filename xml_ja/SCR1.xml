@@ -14,24 +14,7 @@
   </description>
   <examples/>
   <resources>
-    <see-also>
-      <ulist>
-        <item>
-          <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jayeckles.com/tutorials/servlets.pc" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">setting session and default time limits using Java servlets</loc>
-          </p>
-        </item>
-        <item>
-          <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://viral.media.mit.edu/peers/doc/d756cb761d93c8aff5fb0aadf16d5c41ae1f353c.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Overriding timeouts in peers applications</loc>
-          </p>
-        </item>
-        <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.phpbuilder.com/tips/item.php?id=141" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PHPBuilder Time-out Info</loc>&#13;
-</p>
-        </item>
-      </ulist>
-    </see-also>
+    <see-also/>
   </resources>
   <related-techniques>
     <relatedtech idref="SCR16"/>

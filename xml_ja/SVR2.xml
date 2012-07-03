@@ -53,13 +53,13 @@ ErrorDocument 403 http://example.com/documents/index.html</code>
     <see-also>
       <ulist>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/mod/mod_env.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Module mod_env</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/mod/mod_env.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Module mod_env</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/howto/auth.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authentication, Authorization and Access Control</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/howto/auth.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authentication, Authorization and Access Control</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.0/howto/htaccess.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Tutorial: .htaccess files</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.0/howto/htaccess.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Tutorial: .htaccess files</loc></p>
         </item>
       </ulist>
     </see-also>

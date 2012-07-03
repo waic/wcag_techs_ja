@@ -33,9 +33,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc></p>
         </item>
       </ulist>
     </see-also>

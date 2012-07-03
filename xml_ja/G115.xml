@@ -43,35 +43,19 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 specification</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 specification</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 specification, using phrase elements</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 specification, using phrase elements</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/MathML2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Mathematical Markup Language (MathML) Version 2.0, Second Edition</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/MathML2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Mathematical Markup Language (MathML) Version 2.0, Second Edition</loc></p>
         </item>
         <item>
-          <p>Jeffrey Zeldman's book         <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.zeldman.com/dwws/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Jeffrey Zeldman's book         "Designing with Web standards"</loc>&#13;
-                &#13;
-                        </p>
+          <p>Jeffrey Zeldman's book<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.zeldman.com/dwws/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Jeffrey Zeldman's book         "Designing with Web standards"</loc></p>
         </item>
         <item>
-          <p>Web Design Group's article         <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/design/style/docstyle-tags.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web Design Group's article         "Document style: Use the right tag for the job"</loc>&#13;
-                &#13;
-                        </p>
+          <p>Web Design Group's article<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/design/style/docstyle-tags.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web Design Group's article         "Document style: Use the right tag for the job"</loc></p>
         </item>
       </ulist>
     </see-also>

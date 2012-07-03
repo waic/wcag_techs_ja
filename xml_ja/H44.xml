@@ -191,15 +191,10 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/interact/forms.html#h-17.9" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 form labels</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/interact/forms.html#h-17.9" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 form labels</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc></p>
         </item>
       </ulist>
     </see-also>

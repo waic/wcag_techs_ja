@@ -36,11 +36,7 @@
  &lt;/table&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="H39"/>
     <relatedtech idref="H51"/>

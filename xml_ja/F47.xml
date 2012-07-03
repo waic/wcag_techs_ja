@@ -22,11 +22,7 @@
       <code>&lt;p&gt;わが社の素晴らしい製品 &lt;blink&gt;セール! 44,995ドル！&lt;/blink&gt;&lt;/p&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

@@ -126,10 +126,10 @@ o.SWFsetFocusIds('prevId', 'nextId');</code>
     <see-also>
       <ulist>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="working-examples/FLASH17/keyboard_trap_fix_custom_as3.zip" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Example source containing the SWFFocus class</loc></p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="working-examples/FLASH17/keyboard_trap_fix_custom_as3.zip" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Example source containing the SWFFocus class</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.iheni.com/flash-and-keyboard-access-across-browsers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flash and keyboard access across browsers by Henny Swan</loc> by Henny Swan</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.iheni.com/flash-and-keyboard-access-across-browsers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flash and keyboard access across browsers by Henny Swan</loc>by Henny Swan</p>
         </item>
       </ulist>
     </see-also>

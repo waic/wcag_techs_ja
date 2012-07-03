@@ -69,11 +69,7 @@
 &lt;p&gt;これは別のパラグラフです&lt;/p&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

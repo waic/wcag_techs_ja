@@ -22,15 +22,12 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                	<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.paciellogroup.com/blog/2008/02/screen-readers-lack-emphasis/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] &#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.paciellogroup.com/blog/2008/02/screen-readers-lack-emphasis/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] &#13;
                 	Screen Readers lack emphasis&#13;
-                [追加ここまで]</loc>&#13;
-                </p>
+                [追加ここまで]</loc></p>
         </item>
         <item>
-          <p>&#13;
-                <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/text.html#h-9.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Phrase elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</loc></p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/text.html#h-9.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Phrase elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</loc></p>
         </item>
       </ulist>
     </see-also>

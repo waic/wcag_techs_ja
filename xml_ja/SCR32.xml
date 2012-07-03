@@ -375,11 +375,7 @@ function checkOptional(bValid, strValue, arClass)
 </description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G83"/>
     <relatedtech idref="G85"/>

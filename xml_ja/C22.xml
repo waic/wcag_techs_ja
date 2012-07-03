@@ -236,19 +236,13 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS21/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS2.1 Specification</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS21/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS2.1 Specification</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/Style/CSS/learning" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Learning CSS</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/Style/CSS/learning" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Learning CSS</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS-access" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS and Accessibility</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS-access" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS and Accessibility</loc></p>
         </item>
       </ulist>
     </see-also>

@@ -12,11 +12,7 @@
     <p>マークアップ言語がその仕様に完全に準拠していれば、4.1.1のすべての要件が満たされる。つまり、仕様に完全に準拠することは、WCAG 2.0に適合するために必要ではないが、成功事例であり、達成基準4.1.1に適合することになる。</p>
   </description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G134"/>
     <relatedtech idref="H74"/>

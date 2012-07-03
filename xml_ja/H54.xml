@@ -27,10 +27,8 @@
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#edef-DFN" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 DFN&#13;
-                    Element</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#edef-DFN" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 DFN&#13;
+                    Element</loc></p>
         </item>
       </ulist>
     </see-also>

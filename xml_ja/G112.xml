@@ -35,11 +35,7 @@ Example 3: W3C key words</head>
 </description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G55"/>
     <relatedtech idref="G62"/>

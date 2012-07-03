@@ -12,11 +12,7 @@
     <p>この文書では、コンテンツに対して代替となる適合したバージョンが提供されているにもかかわらず、利用者がそのことを知る方法、又はどこで見つけられるかを知る方法が提供されていない不適合事例について述べている。利用者が適合したバージョンを見つけることができないため、このようなコンテンツは、達成基準を満たしていないことになる。</p>
   </description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G136"/>
   </related-techniques>

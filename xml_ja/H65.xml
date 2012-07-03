@@ -81,22 +81,14 @@ type="text" size="4" value="" &gt;
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 The&#13;
-                    title attribute</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 The&#13;
+                    title attribute</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse8.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse8.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc></p>
         </item>
       </ulist>
     </see-also>

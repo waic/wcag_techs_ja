@@ -13,11 +13,7 @@
 		<p>しかし、コンテンツ制作者が新しいユーザーインタフェースコンポーネントを作成したいと考え、標準のコンポーネントを使うことができない場合は、自分でアクセシビリティ機能を確実に追加し、アクセシビリティAPIと互換性があるように実装する必要がある。</p>
 		<p>そういったカスタムコンポーネントでは、完成後、アクセシビリティ・サポーテッドの検証を行うべきである。</p></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="H91"/>
   </related-techniques>

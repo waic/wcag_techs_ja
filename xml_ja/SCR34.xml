@@ -74,9 +74,7 @@ objAlign.style.top = calculatePosition(objReference, 'offsetTop') + objReference
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/bb250395(VS.85).aspx#cssenhancements_topic3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">MSDN: Fix the Box Instead of Thinking Outside It</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/bb250395(VS.85).aspx#cssenhancements_topic3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">MSDN: Fix the Box Instead of Thinking Outside It</loc></p>
         </item>
       </ulist>
     </see-also>

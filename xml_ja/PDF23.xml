@@ -118,10 +118,10 @@
     <see-also>
       <ulist>
         <item>
-          <p> Section 12.7 (Interactive Forms) in <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 12.7 (Interactive Forms) in PDF 1.7 (ISO 32000-1)</loc> </p>
+          <p>Section 12.7 (Interactive Forms) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 12.7 (Interactive Forms) in PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/xml/index_arch.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Adobe XML Forms Architecture (XFA)</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/xml/index_arch.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Adobe XML Forms Architecture (XFA)</loc></p>
         </item>
       </ulist>
     </see-also>

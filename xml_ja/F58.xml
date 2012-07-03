@@ -55,14 +55,14 @@
     <see-also>
       <ulist>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ietf.org/rfc/rfc1945.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hypertext&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ietf.org/rfc/rfc1945.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hypertext&#13;
 								Transfer Protocol -- HTTP/1.0 (IETF Request for Comments&#13;
-								1945) (plain text)</loc> (plain text) </p>
+								1945) (plain text)</loc>(plain text)</p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ietf.org/rfc/rfc2616.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hypertext&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ietf.org/rfc/rfc2616.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hypertext&#13;
 								Transfer Protocol -- HTTP/1.1 (IETF Request for Comments&#13;
-								2616) (plain text)</loc> (plain text) </p>
+								2616) (plain text)</loc>(plain text)</p>
         </item>
       </ulist>
     </see-also>

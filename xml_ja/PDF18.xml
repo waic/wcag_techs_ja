@@ -46,10 +46,10 @@ endobj</code>
           </p>
         </item>
         <item>
-          <p> Section 14.3.3 (Document Information Dictionary) in <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 14.3.3 (Document Information Dictionary) in PDF 1.7 (ISO 32000-1)</loc> </p>
+          <p>Section 14.3.3 (Document Information Dictionary) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 14.3.3 (Document Information Dictionary) in PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/en/pdf/PDFReference16.pdf#page=794" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF Reference 1.6, TITLE entry of the document information dictionary</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/en/pdf/PDFReference16.pdf#page=794" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF Reference 1.6, TITLE entry of the document information dictionary</loc></p>
         </item>
       </ulist>
     </see-also>

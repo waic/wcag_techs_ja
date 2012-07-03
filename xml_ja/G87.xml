@@ -21,6 +21,7 @@
   </examples>
   <resources>
     <see-also>
+      <p>キャプションのガイダンス</p>
       <ulist>
         <item>
           <p>
@@ -32,6 +33,9 @@
             <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://joeclark.org/access/captioning/bpoc/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Best Practices in Online Captioning</loc>
           </p>
         </item>
+      </ulist>
+      <p>SMIL</p>
+      <ulist>
         <item>
           <p>
             <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-smil/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL) 1.0</loc>
@@ -52,6 +56,9 @@
             <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/richmedia/tutorials/smiltemplates.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NCAM Rich Media Accessibility, Accessible SMIL Templates</loc>
           </p>
         </item>
+      </ulist>
+      <p>その他のキャプション関連</p>
+      <ulist>
         <item>
           <p>
             <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">National Center for Accessible Media</loc>

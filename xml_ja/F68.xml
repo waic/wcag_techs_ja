@@ -77,11 +77,7 @@
       <code>&lt;input type="text" value="検索文字列を入力"&gt;&lt;input type="submit" type="submit" value="検索"&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="H44"/>
     <relatedtech idref="H65"/>

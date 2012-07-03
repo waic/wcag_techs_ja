@@ -34,19 +34,13 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2005/REC-xml-id-20050909/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">xml:id Version 1.0 - W3C Recommendation 9 September 2005.</loc> - W3C Recommendation 9 September 2005.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2005/REC-xml-id-20050909/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">xml:id Version 1.0 - W3C Recommendation 9 September 2005.</loc>- W3C Recommendation 9 September 2005.</p>
         </item>
         <item>
-          <p>Extensible Markup Language (XML) 1.0 (Fourth Edition): <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#id" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Extensible Markup Language (XML) 1.0 (Fourth Edition): Validity constraint: ID</loc>&#13;
-                &#13;
-                        </p>
+          <p>Extensible Markup Language (XML) 1.0 (Fourth Edition):<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#id" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Extensible Markup Language (XML) 1.0 (Fourth Edition): Validity constraint: ID</loc></p>
         </item>
         <item>
-          <p>HTML 4.01: <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/global.html#adef-id" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01: id attribute</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01:<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/global.html#adef-id" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01: id attribute</loc></p>
         </item>
       </ulist>
     </see-also>

@@ -51,9 +51,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cs.tut.fi/~jkorpela/forms/navmenu.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Jukka Korpela: Navigational pulldown menus in HTML</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cs.tut.fi/~jkorpela/forms/navmenu.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Jukka Korpela: Navigational pulldown menus in HTML</loc></p>
         </item>
       </ulist>
     </see-also>

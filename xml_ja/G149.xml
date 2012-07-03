@@ -16,11 +16,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/UAAG10/guidelines.html#tech-interaction-highlight" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">User Agent Accessibility Guidelines 10.2: Highlight selection, content focus, enabled elements, visited links</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/UAAG10/guidelines.html#tech-interaction-highlight" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">User Agent Accessibility Guidelines 10.2: Highlight selection, content focus, enabled elements, visited links</loc></p>
         </item>
       </ulist>
     </see-also>

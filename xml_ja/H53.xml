@@ -42,20 +42,12 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#edef-OBJECT" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    OBJECT element</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#edef-OBJECT" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    OBJECT element</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/object-paranoia.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Object&#13;
-                  Paranoia</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/object-paranoia.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Object&#13;
+                  Paranoia</loc></p>
         </item>
       </ulist>
     </see-also>

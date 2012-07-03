@@ -15,11 +15,7 @@
 		<p class="prefix"><em>注記 2:</em>この実装方法は、表示スタイルを変更して非適合コンテンツに対する<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>となるページを提供する実装方法と併せて用いることができる。詳しくは、「<a href="C29.html">C29：Using a style switcher to provide a conforming alternate version</a>(CSS)」及び「<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>」を参照のこと。</p>
 </div></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G4"/>
     <relatedtech idref="G11"/>

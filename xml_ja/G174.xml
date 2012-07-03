@@ -33,11 +33,7 @@
                <div class="note"><p class="prefix"><em>注意: </em>この実装方法は、非適合コンテンツのための<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>である現在のページにスタイルを切り替える実装方法と組み合わせることで用いることができる。詳しくは、
 <a href="C29.html">C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する </a>と<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照。</p></div></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G17"/>
     <relatedtech idref="G18"/>

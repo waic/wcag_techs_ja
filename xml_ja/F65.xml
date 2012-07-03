@@ -18,11 +18,7 @@
       <code>&lt;img src="../images/animal.jpg" /&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="H67"/>
   </related-techniques>

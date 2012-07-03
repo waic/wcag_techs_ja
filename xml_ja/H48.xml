@@ -109,14 +109,10 @@ ul.navigation li {
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Unordered lists (UL), ordered lists (OL), and list items (LI)</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Unordered lists (UL), ordered lists (OL), and list items (LI)</loc></p>
         </item>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Definition lists: the DL, DT, and DD elements</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Definition lists: the DL, DT, and DD elements</loc></p>
         </item>
       </ulist>
     </see-also>

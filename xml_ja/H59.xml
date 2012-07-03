@@ -65,47 +65,27 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html#edef-LINK" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    LINK element</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html#edef-LINK" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    LINK element</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/types.html#type-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 link&#13;
-                    types</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/types.html#type-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 link&#13;
+                    types</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://cdn.mozdev.org/linkToolbar/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Link Toolbar extension for&#13;
-                  Firefox</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://cdn.mozdev.org/linkToolbar/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Link Toolbar extension for&#13;
+                  Firefox</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/use-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Use &lt;link&gt;s in your&#13;
-                    document from W3C's Quality Web Tips</loc> from W3C's Quality Web Tips </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/use-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Use &lt;link&gt;s in your&#13;
+                    document from W3C's Quality Web Tips</loc>from W3C's Quality Web Tips</p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/reference/html40/head/link.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">LINK -&#13;
-                    Document Relationship from Web Design Group</loc> from Web Design Group </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/reference/html40/head/link.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">LINK -&#13;
+                    Document Relationship from Web Design Group</loc>from Web Design Group</p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.subotnik.net/html/link" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The 'link'-Element in (X)HTML</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.subotnik.net/html/link" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The 'link'-Element in (X)HTML</loc></p>
         </item>
       </ulist>
     </see-also>

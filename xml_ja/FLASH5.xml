@@ -38,11 +38,7 @@ flashLink1._accProps = new Object();
 flashLink1._accProps.name = "Flashについてさらに学ぶ";</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G94"/>
     <relatedtech idref="G53"/>

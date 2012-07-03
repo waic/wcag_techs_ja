@@ -17,11 +17,7 @@
           
                <p>トランザクションを確定する最終ステップが始まる前に、入力したデータを見直して確認することを促す案内を提供する。そして、利用者が確認を行うとトランザクションが完了するようにする。</p></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G155"/>
     <relatedtech idref="G168"/>

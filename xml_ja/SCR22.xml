@@ -45,11 +45,7 @@ for(var i=900; i &lt; 4500; i=i+900)
 </description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

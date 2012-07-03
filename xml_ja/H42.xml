@@ -77,23 +77,15 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/global.html#h-7.5.5" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    H1-H6 elements</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/global.html#h-7.5.5" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    H1-H6 elements</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://meyerweb.com/eric/thoughts/2004/07/21/pick-a-heading/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pick a&#13;
-                    Heading Eric Meyer</loc> Eric Meyer</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://meyerweb.com/eric/thoughts/2004/07/21/pick-a-heading/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pick a&#13;
+                    Heading Eric Meyer</loc>Eric Meyer</p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc></p>
         </item>
       </ulist>
     </see-also>

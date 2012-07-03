@@ -12,11 +12,7 @@
           
                <p>点滅するコンテンツは、様々なウェブコンテンツ技術を用いて制作することができる。その多くには、点滅するコンテンツを連続的に繰り返し再生させたり、点滅するコンテンツを表示させる長さを指定したりするオプションがある。点滅するコンテンツの長さを5秒より短い時間に限定することで、点滅が引き起こす混乱を最小限にすることができる。これはあるタイプの学習障害がある人や弱視の利用者の役に立つ。</p></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G152"/>
     <relatedtech idref="G186"/>

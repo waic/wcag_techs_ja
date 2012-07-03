@@ -29,11 +29,7 @@
           
                <p>繰り返しが1回で5秒を超える場合は、別の要素のうちの一つを調整しなければならない。画像の中のフレーム数を減らす、又はフレームレートを増やす。フレームレートを増やす場合は、変更後の画像が一般閃光閾値又は赤色閃光閾値を超えないという要求事項に不適合にならないように留意すること。これは大きな画像では特に重要であるので注意すること。</p></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

@@ -49,11 +49,7 @@
 &lt;/table&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="C8"/>
   </related-techniques>

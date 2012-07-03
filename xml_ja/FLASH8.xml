@@ -191,11 +191,7 @@ addChild(myFieldSet);</code>
 <note><p class="prefix"><em>注記： </em>Adobe Flex を使用すれば、&lt;form&gt;, &lt;formitem&gt; および &lt;formheading&gt; 要素を使用して、このタイプの動作を実現できる。</p></note></description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="FLASH25"/>
   </related-techniques>

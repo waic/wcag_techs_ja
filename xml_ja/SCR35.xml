@@ -85,16 +85,16 @@ function doStuff()
     <see-also>
       <ulist>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/interact/scripts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Scripts</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/interact/scripts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Scripts</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/interact/forms.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Forms</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/interact/forms.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Forms</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Links</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Links</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/DOM/DOMTR" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Document Object Model (DOM) Technical Reports</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/DOM/DOMTR" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Document Object Model (DOM) Technical Reports</loc></p>
         </item>
       </ulist>
     </see-also>

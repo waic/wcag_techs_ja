@@ -25,9 +25,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bbc.co.uk/accessibility/win/seeing/colour/browser/sub_3.shtml" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">BBC's Web page with instructions how to change the browser colors in most browsers</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bbc.co.uk/accessibility/win/seeing/colour/browser/sub_3.shtml" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">BBC's Web page with instructions how to change the browser colors in most browsers</loc></p>
         </item>
       </ulist>
     </see-also>

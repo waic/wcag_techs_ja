@@ -34,31 +34,19 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webdesign.about.com/od/administration/a/aa091399.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Searching Your Site</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webdesign.about.com/od/administration/a/aa091399.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Searching Your Site</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bravenet.com/webtools/search2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Bravenet Site Search</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bravenet.com/webtools/search2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Bravenet Site Search</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.freefind.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FreeFind</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.freefind.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FreeFind</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.google.com/coop/cse/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Google Custom Search Engine</loc>&#13;
-&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.google.com/coop/cse/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Google Custom Search Engine</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.picosearch.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pico Search</loc>&#13;
-&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.picosearch.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pico Search</loc></p>
         </item>
       </ulist>
     </see-also>

@@ -49,19 +49,13 @@
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Table Element</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Table Element</loc></p>
         </item>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.5" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Table rows: The TR element</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.5" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Table rows: The TR element</loc></p>
         </item>
         <item>
-          <p>HTML 4.01 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.6" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Table cells: The TH and TD elements</loc>&#13;
-                &#13;
-                        </p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.6" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Table cells: The TH and TD elements</loc></p>
         </item>
       </ulist>
     </see-also>

@@ -36,19 +36,11 @@ dir="rtl"&gt;<span dir="rtl">פעילות הבינאום, W3C</span>&lt;/span&gt
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/dirlang.html#blocklevel-bidi" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Inheritance of text direction information</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/dirlang.html#blocklevel-bidi" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Inheritance of text direction information</loc></p>
         </item>
         <item>
-          <p>&#13;
-                  &#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/i18n-html-tech-bidi/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authoring Techniques for&#13;
-                    XHTML &amp; HTML Internationalization: Handling Bidirectional Text 1.0</loc>&#13;
-                &#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/i18n-html-tech-bidi/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authoring Techniques for&#13;
+                    XHTML &amp; HTML Internationalization: Handling Bidirectional Text 1.0</loc></p>
         </item>
       </ulist>
     </see-also>

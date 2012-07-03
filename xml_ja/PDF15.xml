@@ -59,13 +59,13 @@ this.submitForm({
     <see-also>
       <ulist>
         <item>
-          <p> Section 12.7.5.2 (Submit-Form Action) in <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 12.7.5.2 (Submit-Form Action) in PDF 1.7 (ISO 32000-1)</loc> </p>
+          <p>Section 12.7.5.2 (Submit-Form Action) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 12.7.5.2 (Submit-Form Action) in PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://kb2.adobe.com/cps/332/332289.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Create submission forms in LiveCycle Designer</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://kb2.adobe.com/cps/332/332289.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Create submission forms in LiveCycle Designer</loc></p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/en/xml/xfa_spec_2_5.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Forms Architecture (XFA) Specification Version 2.5</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/en/xml/xfa_spec_2_5.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Forms Architecture (XFA) Specification Version 2.5</loc></p>
         </item>
         <item>
           <p>

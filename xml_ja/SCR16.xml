@@ -53,11 +53,7 @@ timeControl();
 &lt;/html&gt;</code>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="SCR1"/>
   </related-techniques>

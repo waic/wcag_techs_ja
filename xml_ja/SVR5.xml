@@ -35,9 +35,8 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
     </eg-group>
   </examples>
   <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
+    <see-also><p> <a href="http://www.w3.org/International/questions/qa-http-and-lang">W3C Internationalization FAQ: HTTP and meta for language information</a></p><p> <a href="http://www.w3.org/TR/i18n-html-tech-lang/#ri20040429.094220724">Best Practice 9: Using HTTP or a meta tag to indicate audience</a> in Internationalization Best Practices: Specifying Language in XHTML &amp; HTML Content - W3C Working Group Note 12 April 2007. </p>
+<p> <a href="http://www.ietf.org/rfc/rfc1945.txt">Hypertext Transfer Protocol -- HTTP/1.0 (IETF Request for Comments 1945)</a> (plain text) </p><p> <a href="http://www.ietf.org/rfc/rfc2616.txt">Hypertext Transfer Protocol -- HTTP/1.1 (IETF Request for Comments 2616)</a> (plain text) </p><p> <a href="http://php.net/manual/en/function.header.php">header</a> in the PHP Manual. </p></see-also>
   </resources>
   <related-techniques>
     <relatedtech idref="H57"/>

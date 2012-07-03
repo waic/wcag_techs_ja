@@ -146,11 +146,7 @@
 <note><p class="prefix"><em>注記：</em>この事例は、達成基準を満たしてはいるが、このようにリンクの後にそのリンクを理解するために必要な情報を置くと、スクリーンリーダーでドキュメントを読んでいる人にとっては分かりにくいものである。</p></note></description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques>
     <relatedtech idref="G91"/>
     <relatedtech idref="H2"/>

@@ -75,14 +75,10 @@
     <see-also>
       <ulist>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/css/hidden-barriers-out-of-sight/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hidden barriers - out of sight</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/css/hidden-barriers-out-of-sight/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hidden barriers - out of sight</loc></p>
         </item>
         <item>
-          <p>&#13;
-                           <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webaim.org/techniques/css/invisiblecontent/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS in Action: Invisible Content Just for Screen Reader Users</loc>&#13;
-                        </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webaim.org/techniques/css/invisiblecontent/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS in Action: Invisible Content Just for Screen Reader Users</loc></p>
         </item>
       </ulist>
     </see-also>

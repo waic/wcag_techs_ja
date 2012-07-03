@@ -123,10 +123,10 @@ function ResetForm(elem)
     <see-also>
       <ulist>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w4a.info/2007/prog/8-shelly.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">W4A Paper: Accessibility for Simple to Moderate-Complexity DHTML Web Sites by Cynthia C. Shelly and George Young, Microsoft Corporation. (PDF Format)</loc> by Cynthia C. Shelly and George Young, Microsoft Corporation. (PDF Format)</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w4a.info/2007/prog/8-shelly.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">W4A Paper: Accessibility for Simple to Moderate-Complexity DHTML Web Sites by Cynthia C. Shelly and George Young, Microsoft Corporation. (PDF Format)</loc>by Cynthia C. Shelly and George Young, Microsoft Corporation. (PDF Format)</p>
         </item>
         <item>
-          <p>Microsoft Developer Network Whitepaper:<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://download.microsoft.com/download/0/f/5/0f5e941c-c495-401a-9031-eab8315da35e/writing_accessible_web_applications.doc" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Developer Network Whitepaper: Writing Accessible Web Applications by Cynthia C. Shelly and George Young. (Microsoft Word Format)</loc> by Cynthia C. Shelly and George Young. (Microsoft Word Format)</p>
+          <p>Microsoft Developer Network Whitepaper:<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://download.microsoft.com/download/0/f/5/0f5e941c-c495-401a-9031-eab8315da35e/writing_accessible_web_applications.doc" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Developer Network Whitepaper: Writing Accessible Web Applications by Cynthia C. Shelly and George Young. (Microsoft Word Format)</loc>by Cynthia C. Shelly and George Young. (Microsoft Word Format)</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/ms695716.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更] Microsoft Active Accessibility 2.0 SDK. Includes Inspect32.exe and other MSAA tools.[変更ここまで]</loc>. Includes Inspect32.exe and other MSAA tools.</p>
@@ -145,7 +145,7 @@ function ResetForm(elem)
           <p><span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar.</a><span class="difftext">[変更ここまで]</span></span>. Allows examination of script-generated DOM in Microsoft Internet Explorer</p>
         </item>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug. Allows examination of script-generated DOM in Firefox.</loc>. Allows examination of script-generated DOM in Firefox. </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug. Allows examination of script-generated DOM in Firefox.</loc>. Allows examination of script-generated DOM in Firefox.</p>
         </item>
       </ulist>
     </see-also>

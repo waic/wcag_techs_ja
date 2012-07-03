@@ -26,11 +26,7 @@
 	この実装方法は、完全にユーザーエージェントの機能に依存するため、さまざまなユーザーエージェントを用いて検証することは重要である。</p>
 	<p>この実装方法では、ズーム機能を用いてもページ上の全ての空間的な関係が保持され、全ての機能が継続して利用可能である必要がある。</p></description>
   <examples/>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

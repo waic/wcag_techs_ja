@@ -18,11 +18,7 @@
 <ulist><item><p>発話内容（簡略化した発話内容の場合もある）を含むが、重要な音についての説明がないテキスト</p></item><item><p>内容の一部分の発話内容が省略されたテキスト</p></item></ulist></description>
     </eg-group>
   </examples>
-  <resources>
-    <see-also>
-      <ulist/>
-    </see-also>
-  </resources>
+  <resources/>
   <related-techniques/>
   <tests>
     <procedure>

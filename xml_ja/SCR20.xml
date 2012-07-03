@@ -83,7 +83,7 @@ alt="次のページへ移動"&gt;</code>
     <see-also>
       <ulist>
         <item>
-          <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/techniques/javascript/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Overview of Creating Accessible JavaScript</loc> </p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/techniques/javascript/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Overview of Creating Accessible JavaScript</loc></p>
         </item>
       </ulist>
     </see-also>
