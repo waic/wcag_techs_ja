@@ -5,6 +5,45 @@
 #
 require 'nokogiri'
 
+def make_see_also( x, see_also )
+	x.__send__( :'see-also' ) {
+		see_also.each{|e|
+			case e.name
+			when 'h3'
+				x.head {
+					x.text e.text.strip
+				}
+			when 'ul'
+				x.ulist {
+					e.css( 'li' ).each{|li|
+						x.item {
+							x.p {
+								li.css( 'p' ).children.each do |e|
+									case e.node_name
+									when 'text'
+										x.text e.text.strip
+									when 'a'
+										x.loc(
+											'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
+											'href' => e.attr( 'href' ),
+											'xlink:type' => 'simple',
+											'xlink:show' => 'replace',
+											'xlink:actuate' => 'onRequest' ) { x.text li.text.strip }
+									else
+										x << e.to_html
+									end
+								end
+							}
+						}
+					}
+				}
+			when 'p'
+				x << e.to_html
+			end
+		}
+	}
+end
+
 if ARGV.size != 2
 	$stderr.puts "usage: #{File.basename $0} <html> <dest>\n\thtml: HTML file name\n\tdest: destination path"
 	exit 1
@@ -126,31 +165,16 @@ xml = Nokogiri::XML::Builder.new do |x|
 			end
 		}
 		x.resources {
-			x.__send__( :'see-also' ) {
-				x.ulist {
-					html.css( "##{tech_id}-resources + div.textbody li" ).each{|li|
-						x.item {
-							x.p {
-								li.css( 'p' ).children.each do |e|
-									case e.node_name
-									when 'text'
-										x.text e.text
-									when 'a'
-										x.loc(
-											'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
-											'href' => e.attr( 'href' ),
-											'xlink:type' => 'simple',
-											'xlink:show' => 'replace',
-											'xlink:actuate' => 'onRequest' ) { x.text li.text.strip }
-									else
-										x << e.to_html
-									end
-								end
-							}
-						}
-					}
-				}
+			see_also = []
+			html.css( "##{tech_id}-resources + div.textbody > *" ).each_with_index{|e, idx|
+				next if idx == 0 # skipping first <p> element because it is only a comment.
+				if e.name == 'h3' # beginning of next resource
+					make_see_also( x, see_also ) unless see_also.empty?
+					see_also = []
+				end
+				see_also << e
 			}
+			make_see_also( x, see_also ) unless see_also.empty?
 		}
 		x.__send__( :'related-techniques' ) {
 			html.css( "##{tech_id}-related-techs + div.textbody li a" ).each{|a|
