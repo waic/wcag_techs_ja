@@ -5,6 +5,43 @@
 #
 require 'nokogiri'
 
+def get_diff_class( elem )
+	return {} unless elem
+	return {} if elem.name !~ /^(div|span)$/
+
+	return {}.tap{|h|
+		h['diff'] = case elem.attr( 'class' )
+		when 'diff-delete'
+			'del'
+		when 'diff-change'
+			'chg'
+		else
+			raise "+++ unknown diff class: #{elem.name}.#{elem.attr( 'class' )} +++"
+		end
+	}
+end
+
+def paragraph( x, p )
+	p.children.each do |e|
+		e = e.children[0] if e.name == 'span'
+		case e.name
+		when 'text'
+			x.text e.text.strip
+		when 'a'
+			opts = {
+				'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
+				'href' => e.attr( 'href' ),
+				'xlink:type' => 'simple',
+				'xlink:show' => 'replace',
+				'xlink:actuate' => 'onRequest'
+			}.update( get_diff_class( e.parent ) )
+			x.loc( opts ) { x.text e.text.strip }
+		else
+			x << e.to_html
+		end
+	end
+end
+
 def make_see_also( x, see_also )
 	x.__send__( :'see-also' ) {
 		see_also.each{|e|
@@ -16,29 +53,18 @@ def make_see_also( x, see_also )
 			when 'ul'
 				x.ulist {
 					e.css( 'li' ).each{|li|
-						x.item {
-							x.p {
-								li.css( 'p' ).children.each do |e|
-									case e.node_name
-									when 'text'
-										x.text e.text.strip
-									when 'a'
-										x.loc(
-											'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
-											'href' => e.attr( 'href' ),
-											'xlink:type' => 'simple',
-											'xlink:show' => 'replace',
-											'xlink:actuate' => 'onRequest' ) { x.text li.text.strip }
-									else
-										x << e.to_html
-									end
-								end
+						diff_class = get_diff_class( li.css( 'div' )[0] )
+						x.item( diff_class ) {
+							x.p( diff_class ) {
+								paragraph( x, li.css( 'p' ) )
 							}
 						}
 					}
 				}
 			when 'p'
-				x << e.to_html
+				x.p {
+					paragraph( x, e )
+				}
 			end
 		}
 	}
@@ -54,6 +80,7 @@ dst = "#{ARGV.shift}/#{File.basename src, '.html'}.xml"
 
 tech_id = File.basename( src, '.html' )
 html = Nokogiri( open( src, 'r:utf-8', &:read ) )
+html.css( '.difftext' ).remove
 
 xml = Nokogiri::XML::Builder.new do |x|
 	x.technique( id: tech_id ) {
@@ -181,7 +208,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 				x.relatedtech( idref: a.attr( 'href' ).sub( /\.html$/, '' ))
 			}
 		}
-		x.tests {
+		x.tests( get_diff_class( html.css("##{tech_id}-tests")[0].parent ) ) {
 			procedure = []
 			result = []
 			tmp = procedure
@@ -230,6 +257,8 @@ xml = Nokogiri::XML::Builder.new do |x|
 		}
 	}
 end
+
+### CODE HERE: after making XML, replace span.diff-*, div.note etc ###
 
 open( dst, 'w:utf-8' ) do |o|
 	o.puts Nokogiri::XML( xml.to_xml, nil, 'utf-8' )
