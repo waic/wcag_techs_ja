@@ -48,18 +48,13 @@ def paragraph( x, p )
 		e = e.children[0] if e.name == 'span'
 		case e.name
 		when 'text'
-			x.text e.text.strip
-		when 'a'
-			opts = {
-				'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
-				'href' => e.attr( 'href' ),
-				'xlink:type' => 'simple',
-				'xlink:show' => 'replace',
-				'xlink:actuate' => 'onRequest'
-			}.update( get_diff_class( e.parent ) )
-			x.loc( opts ) { x.text e.text.strip }
+			x << e.to_html.strip
+		when 'loc'
+			x.loc( e.attributes.update( get_diff_class( e.parent ) ) ){|loc|
+				x.text e.text.strip
+			}
 		else
-			x << e.to_html
+			x << e.to_html.strip
 		end
 	end
 end
@@ -127,13 +122,16 @@ html.css( 'em' ).each{|em|
 		# CODE ME: <em>の特殊な使われ方への対応
 	end
 }
+html.css( 'a' ).each{|a|
+	a.replace( %Q|<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="#{a.attr( 'href' )}" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">#{a.inner_html.strip}</loc>| )
+}
 
-### CODE ME: <a>の変換もここでする?
+### CODE ME: <ul><ol>の一括置換も?
 
 xml = Nokogiri::XML::Builder.new do |x|
 	x.technique( id: tech_id ) {
 		x.__send__( :"short-name" ) {
-			html.css( 'h1 a' ).remove
+			html.css( 'h1 loc' ).remove
 			x << html.css( 'h1' ).inner_html
 		}
 		x.applicability {
@@ -141,7 +139,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 		}
 		x.__send__( :'applies-to' ) {
 			[].tap{|ids|
-				html.css( 'p.referenced + ul > li a' ).each do |a|
+				html.css( 'p.referenced + ul > li loc' ).each do |a|
 					next if a.attr( 'href' ) !~ /#/
 					ids << a.attr( 'href' ).sub( /\A.*#/, '' )
 				end
@@ -157,7 +155,14 @@ xml = Nokogiri::XML::Builder.new do |x|
 			end
 		}
 		x.description {
-			x << html.css( "##{tech_id}-description + div.textbody" ).inner_html.strip
+			html.css( "##{tech_id}-description + div.textbody" ).children.each{|e|
+				case e.name
+				when 'p'
+					x.p { paragraph( x, e ) }
+				else
+					x << e.to_html.strip
+				end
+			}
 		}
 		x.examples {
 			html.css( 'div.example' ).each_with_index do |example, idx|
@@ -254,7 +259,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 			make_see_also( x, see_also ) unless see_also.empty?
 		}
 		x.__send__( :'related-techniques' ) {
-			html.css( "##{tech_id}-related-techs + div.textbody li a" ).each{|a|
+			html.css( "##{tech_id}-related-techs + div.textbody li loc" ).each{|a|
 				x.relatedtech( idref: a.attr( 'href' ).sub( /\.html$/, '' ))
 			}
 		}
@@ -310,7 +315,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 		x.translationcredit {
 			x.ulist {
 				html.css( 'div.annotation li' ).each{|li|
-					x.item { x << li.inner_html.strip  }
+					x.item { paragraph( x, li ) }
 				}
 			}
 		}
