@@ -5,6 +5,26 @@
 #
 require 'nokogiri'
 
+def replace_element( elem )
+	case elem.name
+	when 'div'
+		case elem.attr( 'class' )
+		when 'note'
+			'note'
+		when 'textbody'
+			'textbody'
+		when nil
+			'div'
+		else
+			$stderr.puts "Unknown replace rule for #{elem.name}.#{elem.attr 'class'}"
+		end
+	when 'span'
+		'phrase'
+	else
+		elem.name
+	end
+end
+
 def get_diff_class( elem )
 	return {} unless elem
 	return {} if elem.name !~ /^(div|span)$/
@@ -15,6 +35,8 @@ def get_diff_class( elem )
 			'del'
 		when 'diff-change'
 			'chg'
+		when 'diff-add'
+			'add'
 		else
 			raise "+++ unknown diff class: #{elem.name}.#{elem.attr( 'class' )} +++"
 		end
@@ -55,7 +77,7 @@ def make_see_also( x, see_also )
 					e.css( 'li' ).each{|li|
 						diff_class = get_diff_class( li.css( 'div' )[0] )
 						x.item( diff_class ) {
-							x.p( diff_class ) {
+							x.p( li.css( 'p' ).first.attributes.empty? ? diff_class : li.css( 'p' ).first.attributes ) {
 								paragraph( x, li.css( 'p' ) )
 							}
 						}
@@ -80,17 +102,33 @@ dst = "#{ARGV.shift}/#{File.basename src, '.html'}.xml"
 
 tech_id = File.basename( src, '.html' )
 html = Nokogiri( open( src, 'r:utf-8', &:read ) )
+
+if html.css( 'h1' ).size == 0
+	$stderr.puts "#{tech_id}: No h1 element in the html. Maybe invalid source."
+	open( dst, 'w:utf-8' ) {|o|} # put dummy file
+	exit
+end
+
 html.css( '.difftext' ).remove
+html.css( '.diff-change > span', '.diff-change > p' ).each{|e|
+	e.parent.replace( %Q|<#{replace_element e} diff="chg">#{e.inner_html}</#{replace_element e}>| )
+}
+html.css( '.diff-add > span', '.diff-add > p', '.diff-add > div.note' ).each{|e|
+	e.parent.replace( %Q|<#{replace_element e} diff="add">#{e.inner_html}</#{replace_element e}>| )
+}
+html.css( '.diff-delete > span', '.diff-delete > p' ).each{|e|
+	e.parent.replace( %Q|<#{replace_element e} diff="del">#{e.inner_html}</#{replace_element e}>| )
+}
+html.css( 'div.note' ).each{|div| div.replace( %Q|<note>#{div.inner_html}</note>| ) }
+
+### CODE ME: <em>注記: </em>は削除?
+### CODE ME: <a>の変換もここでする?
 
 xml = Nokogiri::XML::Builder.new do |x|
 	x.technique( id: tech_id ) {
 		x.__send__( :"short-name" ) {
-			begin
-				x.text html.css( 'h1' )[0].text.strip.sub( /\A.*? /, '' )
-			rescue NoMethodError
-				$stderr.puts "#{tech_id}: No h1 element in the html. Maybe invalid source."
-				exit
-			end
+			html.css( 'h1 a' ).remove
+			x << html.css( 'h1' ).inner_html
 		}
 		x.applicability {
 			x << html.css( 'div.applicability div.textbody' ).inner_html.strip
@@ -119,12 +157,18 @@ xml = Nokogiri::XML::Builder.new do |x|
 			html.css( 'div.example' ).each_with_index do |example, idx|
 				head = html.css( "##{tech_id}-ex#{idx+1}", "##{tech_id}-failex#{idx+1}" ).text.strip.sub( /(不適合)?事例\s\d[：:]?/, '' ).strip
 				role = $1 ? { role: 'failure' } : {}
+				role.update( get_diff_class( example.parent.parent ) )
 				x.__send__( :'eg-group', role ) {
 					x.head { x.text head } unless head.empty?
 					example.children.each{|div|
+						diff = {}
+						if /^diff-/ =~ div.attr( 'class' )
+							diff = get_diff_class( div )
+							div = div.css( 'div' )[0]
+						end
 						case div.attr( 'class' )
 						when 'textbody'
-							x.description {
+							x.description( diff ) {
 								div.children.each do |e|
 									case e.node_name
 									when 'div'
@@ -140,6 +184,8 @@ xml = Nokogiri::XML::Builder.new do |x|
 											exit 1
 										end
 									when 'p'
+										x << e.to_html.strip + "\n"
+									when 'note'
 										x << e.to_html.strip + "\n"
 									when 'ul'
 										x.ulist {
@@ -179,10 +225,8 @@ xml = Nokogiri::XML::Builder.new do |x|
 							x.code {
 								x << div.css( 'code' ).inner_html.strip
 							}
-						when 'diff-add'
-							### CODE ME ###
 						else
-							unless div.node_name == 'text'
+							unless div.name == 'text'
 								$stderr.puts "#{tech_id}: Unknown class name '#{div.node_name}.#{div.attr 'class'}', skipped."
 								exit 1
 							end
@@ -208,10 +252,17 @@ xml = Nokogiri::XML::Builder.new do |x|
 				x.relatedtech( idref: a.attr( 'href' ).sub( /\.html$/, '' ))
 			}
 		}
-		x.tests( get_diff_class( html.css("##{tech_id}-tests")[0].parent ) ) {
+		x.tests( (get_diff_class( html.css("##{tech_id}-tests")[0].parent ) rescue {}) ) {
+			note = nil
 			procedure = []
 			result = []
 			tmp = procedure
+
+			html.css( "##{tech_id}-tests + note" ).each{|n|
+				note = n
+				n.remove
+			}
+
 			html.css( "##{tech_id}-tests + div.textbody > *" ).each{|e|
 				if e.node_name == 'h3'
 					tmp = result if e.attr( 'id' ) == "#{tech_id}-results"
@@ -220,6 +271,8 @@ xml = Nokogiri::XML::Builder.new do |x|
 				tmp << e
 			}
 			x.procedure {
+				x << note.to_html if note
+
 				procedure.each{|e|
 					case e.node_name
 					when 'ol'
@@ -257,8 +310,6 @@ xml = Nokogiri::XML::Builder.new do |x|
 		}
 	}
 end
-
-### CODE HERE: after making XML, replace span.diff-*, div.note etc ###
 
 open( dst, 'w:utf-8' ) do |o|
 	o.puts Nokogiri::XML( xml.to_xml, nil, 'utf-8' )
