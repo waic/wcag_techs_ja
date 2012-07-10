@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR35">
-  <short-name>アンカー及びボタンのonclickイベントを用いて、アクションをキーボードで操作可能にする</short-name>
+  <short-name>SCR35: アンカー及びボタンのonclickイベントを用いて、アクションをキーボードで操作可能にする</short-name>
   <applicability>
     <p>HTML又はXHTMLで使用されるスクリプト。</p>
   </applicability>

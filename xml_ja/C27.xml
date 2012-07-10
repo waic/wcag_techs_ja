@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C27">
-  <short-name>DOMの順序を表示順序と一致させる</short-name>
+  <short-name>C27: DOMの順序を表示順序と一致させる</short-name>
   <applicability>
     <p>HTML及びXHTMLで使用されるCSS</p>
   </applicability>
@@ -25,23 +25,23 @@
                <p>
 ソースの順序が表示結果の順序と同じである場合、すべての人が同じ（正しい）順序でコンテンツを読んで情報のやり取りをすることができる。</p>
                 
-               <div class="note"><p class="prefix">
+               <note><p class="prefix">
 <em>注: </em> HTMLの<code>tabindex</code>属性には2つの機能がある。ひとつは要素をフォーカス可能にすることであり、もうひとつは要素にフォーカスの順序を割り当てることである。
 <code>tabindex</code>の値を0にするとその要素はフォーカス可能になるが、フォーカスが追加されるだけで順序はソースの通りになる。
 フォーカスの順序は、tabindexに指定された正の値だけで昇順となる。
 <code>tabindex</code>の値をドキュメント・オブジェクト・モデル(DOM)の要素の順序と異なるように設定することは、支援技術の利用者にとっては不適当な順序となることもある。
 これは主に、tabindexがCSSではなく、HTML又はXHTMLで指定されていることによるものだ。
 この点については、将来の仕様で変更される可能性がある。
-それは、視覚的な表示結果の順序とは異なる可能性もある。</p></div></description>
+それは、視覚的な表示結果の順序とは異なる可能性もある。</p></note></description>
   <examples/>
   <resources>
     <see-also>
       <ulist>
         <item>
-          <p><span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar</a><span class="difftext">[変更ここまで]</span></span>を使用すると、Microsoft の Internet Explorer でスクリプトによって生成されたDOMのチェックが可能になる。</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/download/en/details.aspx?id=18359" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest" diff="chg">Microsoft Internet Explorer Developer Toolbar</loc>を使用すると、Microsoft の Internet Explorer でスクリプトによって生成されたDOMのチェックが可能になる。</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug を使用すると、Firefox でスクリプトによって生成されたDOMのチェックが可能になる。</loc>を使用すると、Firefox でスクリプトによって生成されたDOMのチェックが可能になる。</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug</loc>を使用すると、Firefox でスクリプトによって生成されたDOMのチェックが可能になる。</p>
         </item>
       </ulist>
     </see-also>

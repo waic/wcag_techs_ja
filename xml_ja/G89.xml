@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G89">
-  <short-name>所定のデータ書式及び入力例を提供する</short-name>
+  <short-name>G89: 所定のデータ書式及び入力例を提供する</short-name>
   <applicability>
     <p>利用者から情報を集め、利用者が入力できる書式に制約のあるページ</p>
   </applicability>
@@ -10,9 +10,8 @@
   </applies-to>
   <ua-issues/>
   <description><p>この実装方法の目的は、利用者が入力しなければならないデータ書式の制約を通知することによって、利用者が入力エラーを回避しやすくすることである。これは、書式の特徴を記述するか、入力データに求められる書式の例を提供することによって対処できる。</p>
-	<div class="note">
-		<p class="prefix"><em>注記：</em>日付や時刻のように、様々な記述方法があるデータ書式については、利用者にとって最も入力しやすい書式を選択できるオプションを提供するとよい。</p>
-	</div></description>
+	<note><p class="prefix"><em>注記：</em>日付や時刻のように、様々な記述方法があるデータ書式については、利用者にとって最も入力しやすい書式を選択できるオプションを提供するとよい。</p>
+	</note></description>
   <examples>
     <eg-group>
       <head>事例１</head>

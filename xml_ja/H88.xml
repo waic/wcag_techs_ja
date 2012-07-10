@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H88">
-  <short-name>仕様に準じてHTMLを用いる</short-name>
+  <short-name>H88: 仕様に準じてHTMLを用いる</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>
@@ -55,7 +55,7 @@
   <examples/>
   <resources>
     <see-also>
-      <p><a href="G134.html#G134-resources">G134: ウェブページをバリデートする</a>の参考リソースを参照のこと。</p>
+      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="G134.html#G134-resources" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G134: ウェブページをバリデートする</loc>の参考リソースを参照のこと。</p>
     </see-also>
   </resources>
   <related-techniques>
@@ -76,9 +76,8 @@
           <p>ページが、関連する仕様のルールに従って、正しく解析可能であることを確認する。</p>
         </item>
       </olist>
-      <div class="note">
-<p class="prefix"><em>注記：</em>上記1.及び3.は、バリデーションツールを用いて容易に確認することができる。上記2.は、通常は人間による判断が求められるが、ヒューリスティックな評価ツールを補助的に用いて確認することが可能である。</p>
-                  </div>
+      <note><p class="prefix"><em>注記：</em>上記1.及び3.は、バリデーションツールを用いて容易に確認することができる。上記2.は、通常は人間による判断が求められるが、ヒューリスティックな評価ツールを補助的に用いて確認することが可能である。</p>
+                  </note>
     </procedure>
     <expected-results>
       <ulist>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR16">
-  <short-name>制限時間が切れようとしていることを利用者に警告するスクリプトを提供する</short-name>
+  <short-name>SCR16: 制限時間が切れようとしていることを利用者に警告するスクリプトを提供する</short-name>
   <applicability>
     <p>スクリプトによって制御された制限時間</p>
   </applicability>

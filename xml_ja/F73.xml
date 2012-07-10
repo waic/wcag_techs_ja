@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F73">
-  <short-name>達成基準 1.4.1 の不適合事例 － 色覚なしではリンクであることが視覚的にはっきりと分からない</short-name>
+  <short-name>F73: 達成基準 1.4.1 の不適合事例 － 色覚なしではリンクであることが視覚的にはっきりと分からない</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>
@@ -9,10 +9,9 @@
   </applies-to>
   <ua-issues/>
   <description><p>これは、色の違いを知覚できない利用者がリンクを特定できない不適合事例について述べている。リンクには、下線又は色を使わない他の視覚的な区別が必要である。リンクのなかには、ナビゲーションリンクなどのように、ページのデザインや文脈から視覚的に明らかなリンクもあるが、テキスト内のリンクはしばしば、その表示属性のみから視覚的に理解されている。こうしたリンクの下線を取り除いて色の違いだけを残すと、これがリンクであると視覚的に見分けるための他の（色以外の）識別方法がなくなるため、不適合となる。</p>
-<div class="note">
-		<p class="prefix"><em>注記 1：</em>色以外の手掛かりが、リンクをマウスオーバーした際、又はリンクがフォーカスを受けた際にだけ提示される場合、それもやはり不適合となる。</p>
+<note><p class="prefix"><em>注記 1：</em>色以外の手掛かりが、リンクをマウスオーバーした際、又はリンクがフォーカスを受けた際にだけ提示される場合、それもやはり不適合となる。</p>
 		<p class="prefix"><em>注記 2：</em>リンクが他のテキストとは異なる色でかつ太字にされている場合、太字は色に依存していないため、不適合とはならない。</p>
-</div></description>
+</note></description>
   <examples>
     <eg-group>
       <head>不適合となる</head>
@@ -38,11 +37,9 @@ p a:hover {text-decoration: underline; color: red;}
 関する情報を見つけたいならば、多くのリソースがある。&lt;/p&gt;
 
 &lt;/body&gt;</code>
-      <description>
-        <note>
-          <p class="prefix"><em>注記： </em>視覚的な手掛かりが、（上の例のように）マウスオーバーした際のみ提供される場合、それはやはり不適合となる。</p>
-        </note>
-      </description>
+      <description><note><p class="prefix"><em>注記： </em>視覚的な手掛かりが、（上の例のように）マウスオーバーした際のみ提供される場合、それはやはり不適合となる。</p>
+</note>
+</description>
     </eg-group>
   </examples>
   <resources/>

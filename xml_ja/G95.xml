@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G95">
-  <short-name>非テキストコンテンツの簡単な説明を提供する、簡潔な代替テキストを提供する</short-name>
+  <short-name>G95: 非テキストコンテンツの簡単な説明を提供する、簡潔な代替テキストを提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

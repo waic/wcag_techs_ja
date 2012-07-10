@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H48">
-  <short-name>リストに、ol要素、ul要素、dl要素を用いる</short-name>
+  <short-name>H48: リストに、ol要素、ul要素、dl要素を用いる</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>
@@ -109,10 +109,10 @@ ul.navigation li {
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Unordered lists (UL), ordered lists (OL), and list items (LI)</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Unordered lists (UL), ordered lists (OL), and list items (LI)</loc></p>
         </item>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Definition lists: the DL, DT, and DD elements</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/lists.html#h-10.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Definition lists: the DL, DT, and DD elements</loc></p>
         </item>
       </ulist>
     </see-also>

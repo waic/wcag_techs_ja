@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR30">
-  <short-name>スクリプトを用いて、リンクのラベルを変更する</short-name>
+  <short-name>SCR30: スクリプトを用いて、リンクのラベルを変更する</short-name>
   <applicability>
     <p>HTML及びXHTMLで使用されるクライアントサイドスクリプト</p>
   </applicability>

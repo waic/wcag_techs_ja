@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SM13">
-  <short-name>SMIL 1.0で、同期した映像ストリームを通じて手話通訳を提供する</short-name>
+  <short-name>SM13: SMIL 1.0で、同期した映像ストリームを通じて手話通訳を提供する</short-name>
   <applicability>
     <p>SMIL 1.0 プレーヤーが利用可能な場合</p>
   </applicability>

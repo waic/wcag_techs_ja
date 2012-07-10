@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F83">
-  <short-name>達成基準 1.4.3 及び 1.4.6 の不適合事例 － 前景にあるテキスト（又は画像化された文字）とのコントラストが十分ではない背景画像を用いる</short-name>
+  <short-name>F83: 達成基準 1.4.3 及び 1.4.6 の不適合事例 － 前景にあるテキスト（又は画像化された文字）とのコントラストが十分ではない背景画像を用いる</short-name>
   <applicability>
     <p>あらゆるウェブコンテンツ技術</p>
   </applicability>

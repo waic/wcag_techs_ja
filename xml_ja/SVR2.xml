@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SVR2">
-  <short-name>.htaccessを用いて、適合しているコンテンツからしか適合していないコンテンツにアクセスできないようにする</short-name>
+  <short-name>SVR2: .htaccessを用いて、適合しているコンテンツからしか適合していないコンテンツにアクセスできないようにする</short-name>
   <applicability>
     <p>.htaccessをサポートしているウェブサーバー（一般的にはApache）内にあるコンテンツで、コンテンツの適合するバージョンが不適合のバージョンの代替として提供されているもの</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C12">
-  <short-name>パーセントを用いてフォントサイズを指定する</short-name>
+  <short-name>C12: パーセントを用いてフォントサイズを指定する</short-name>
   <applicability>
     <p>CSS</p>
   </applicability>
@@ -47,7 +47,7 @@
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html#font-size-props" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Font Size Property</loc></p>
         </item>
         <item>
-          <p>CSS-Discuss Font Size Using Percentages</p>
+          <p diff="del">CSS-Discuss Font Size Using Percentages</p>
         </item>
       </ulist>
     </see-also>
@@ -56,7 +56,7 @@
     <relatedtech idref="C13"/>
     <relatedtech idref="C14"/>
   </related-techniques>
-  <tests>
+  <tests diff="chg">
     <procedure>
       <olist>
         <item>

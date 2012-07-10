@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH36">
-  <short-name>スクリプトを使用して点滅を制御し、5秒以内に点滅を停止させる</short-name>
+  <short-name>FLASH36： スクリプトを使用して点滅を制御し、5秒以内に点滅を停止させる</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

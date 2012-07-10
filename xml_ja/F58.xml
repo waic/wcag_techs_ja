@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F58">
-  <short-name>達成基準 2.2.1 の不適合事例 － サーバサイドの実装方法を用いて、タイムアウト後にページを自動的にリダイレクトしている</short-name>
+  <short-name>F58: 達成基準 2.2.1 の不適合事例 － サーバサイドの実装方法を用いて、タイムアウト後にページを自動的にリダイレクトしている</short-name>
   <applicability>
     <ul>
 <li>
@@ -57,12 +57,12 @@
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ietf.org/rfc/rfc1945.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hypertext&#13;
 								Transfer Protocol -- HTTP/1.0 (IETF Request for Comments&#13;
-								1945) (plain text)</loc>(plain text)</p>
+								1945)</loc>(plain text)</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ietf.org/rfc/rfc2616.txt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hypertext&#13;
 								Transfer Protocol -- HTTP/1.1 (IETF Request for Comments&#13;
-								2616) (plain text)</loc>(plain text)</p>
+								2616)</loc>(plain text)</p>
         </item>
       </ulist>
     </see-also>

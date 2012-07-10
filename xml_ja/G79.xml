@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G79">
-  <short-name>テキストの音声バージョンを提供する</short-name>
+  <short-name>G79: テキストの音声バージョンを提供する</short-name>
   <applicability>
     <p>音声フォーマットへのリンクをサポートするウェブコンテンツ技術</p>
   </applicability>

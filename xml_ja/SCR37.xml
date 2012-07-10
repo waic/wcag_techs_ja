@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR37">
-  <short-name>デバイス非依存な方法でカスタム・ダイアログを作成する</short-name>
+  <short-name>SCR37: デバイス非依存な方法でカスタム・ダイアログを作成する</short-name>
   <applicability>
     <p>スクリプトで使用されるHTML及びXHTML</p>
   </applicability>
@@ -123,29 +123,29 @@ function ResetForm(elem)
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w4a.info/2007/prog/8-shelly.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">W4A Paper: Accessibility for Simple to Moderate-Complexity DHTML Web Sites by Cynthia C. Shelly and George Young, Microsoft Corporation. (PDF Format)</loc>by Cynthia C. Shelly and George Young, Microsoft Corporation. (PDF Format)</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w4a.info/2007/prog/8-shelly.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">W4A Paper: Accessibility for Simple to Moderate-Complexity DHTML Web Sites</loc>by Cynthia C. Shelly and George Young, Microsoft Corporation. (PDF Format)</p>
         </item>
         <item>
-          <p>Microsoft Developer Network Whitepaper:<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://download.microsoft.com/download/0/f/5/0f5e941c-c495-401a-9031-eab8315da35e/writing_accessible_web_applications.doc" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Developer Network Whitepaper: Writing Accessible Web Applications by Cynthia C. Shelly and George Young. (Microsoft Word Format)</loc>by Cynthia C. Shelly and George Young. (Microsoft Word Format)</p>
+          <p>Microsoft Developer Network Whitepaper:<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://download.microsoft.com/download/0/f/5/0f5e941c-c495-401a-9031-eab8315da35e/writing_accessible_web_applications.doc" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Writing Accessible Web Applications</loc>by Cynthia C. Shelly and George Young. (Microsoft Word Format)</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/ms695716.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更] Microsoft Active Accessibility 2.0 SDK. Includes Inspect32.exe and other MSAA tools.[変更ここまで]</loc>. Includes Inspect32.exe and other MSAA tools.</p>
+          <p diff="chg"><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/ms695716.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Active Accessibility 2.0 SDK</loc>. Includes Inspect32.exe and other MSAA tools.</p>
         </item>
         <item>
-          <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd318521%28v=vs.85%29.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] Instructions for the Inspect tool[追加ここまで]</loc>
+          <p diff="add">
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/windows/desktop/dd318521%28v=vs.85%29.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Instructions for the Inspect tool</loc>
           </p>
         </item>
         <item>
-          <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eramp.com/david/name-role-value-using-inspect.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] Using the Inspect tool to find name Name, Role and Value for Javascript[追加ここまで]</loc>
+          <p diff="add">
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eramp.com/david/name-role-value-using-inspect.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Using the Inspect tool to find name Name, Role and Value for Javascript</loc>
           </p>
         </item>
         <item>
-          <p><span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar.</a><span class="difftext">[変更ここまで]</span></span>. Allows examination of script-generated DOM in Microsoft Internet Explorer</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/download/en/details.aspx?id=18359" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest" diff="chg">Microsoft Internet Explorer Developer Toolbar.</loc>. Allows examination of script-generated DOM in Microsoft Internet Explorer</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug. Allows examination of script-generated DOM in Firefox.</loc>. Allows examination of script-generated DOM in Firefox.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug</loc>. Allows examination of script-generated DOM in Firefox.</p>
         </item>
       </ulist>
     </see-also>

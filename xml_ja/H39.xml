@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H39">
-  <short-name>caption要素を用いて、データテーブルの表題とデータテーブルを関連付ける</short-name>
+  <short-name>H39: caption要素を用いて、データテーブルの表題とデータテーブルを関連付ける</short-name>
   <applicability>
     <p>HTML及びXHTMLのデータテーブル</p>
   </applicability>
@@ -29,7 +29,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Table Captions: The CAPTION element</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#h-11.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Table Captions: The CAPTION element</loc></p>
         </item>
       </ulist>
     </see-also>

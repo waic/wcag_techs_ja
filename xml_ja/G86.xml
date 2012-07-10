@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G86">
-  <short-name>中学校教育レベルを超えた読解力を必要としないテキストで要約を提供する</short-name>
+  <short-name>G86: 中学校教育レベルを超えた読解力を必要としないテキストで要約を提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

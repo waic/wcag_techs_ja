@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G122">
-  <short-name>色の手がかりを用いる際には、必ずテキストの手がかりも提供する</short-name>
+  <short-name>G122: 色の手がかりを用いる際には、必ずテキストの手がかりも提供する</short-name>
   <applicability>
     <p>色及びテキストをサポートする全てのウェブコンテンツ技術</p>
   </applicability>

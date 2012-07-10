@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G120">
-  <short-name>単語のすぐ後に発音（読み）を提供する</short-name>
+  <short-name>G120: 単語のすぐ後に発音（読み）を提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

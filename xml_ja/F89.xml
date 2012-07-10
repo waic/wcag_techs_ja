@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F89">
-  <short-name>達成基準 2.4.4、達成基準 2.4.9、及び 達成基準 4.1.2 の不適合事例 － 画像だけがリンクのコンテンツである際に、img要素のalt属性値が空になっている</short-name>
+  <short-name>F89: 達成基準 2.4.4、達成基準 2.4.9、及び 達成基準 4.1.2 の不適合事例 － 画像だけがリンクのコンテンツである際に、img要素のalt属性値が空になっている</short-name>
   <applicability>
     <p>リンクを提供するコンテンツ</p>
   </applicability>

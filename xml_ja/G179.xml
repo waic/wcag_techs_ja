@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G179">
-  <short-name>文字サイズを変更しても、テキストコンテナの [ここから変更] 幅[変更ここまで]が変更されない際に、コンテンツ又は機能が損なわれないようにする</short-name>
+  <short-name>G179: 文字サイズを変更しても、テキストコンテナの <phrase diff="chg">幅</phrase>が変更されない際に、コンテンツ又は機能が損なわれないようにする</short-name>
   <applicability>
     <p>ウィンドウのサイズを変更するとテキストを折り返す、全てのウェブコンテンツ技術</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G134">
-  <short-name>ウェブページをバリデートする</short-name>
+  <short-name>G134: ウェブページをバリデートする</short-name>
   <applicability>
     <p>全てのマークアップ言語及びその他の多くのウェブコンテンツ技術</p>
   </applicability>
@@ -36,148 +36,148 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/Doctype" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Do not forget to add a doctype by the W3C Quality Assurance Initiative explains what doctypes are and why you should use them.</loc>by the W3C Quality Assurance Initiative explains what doctypes are and why you should use them.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/Doctype" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Do not forget to add a doctype</loc>by the W3C Quality Assurance Initiative explains what doctypes are and why you should use them.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Recommended DTDs to use in your Web document by the W3C Quality Assurance Initiative is a list of commonly used declarations.</loc>by the W3C Quality Assurance Initiative is a list of commonly used declarations.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Recommended DTDs to use in your Web document</loc>by the W3C Quality Assurance Initiative is a list of commonly used declarations.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chami.com/html-kit/faq/pages/validate_tools.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">How do I validate my code or check for possible errors? describes the tools in the free editor HTML-Kit for checking HTML, CSS and XML.</loc>describes the tools in the free editor HTML-Kit for checking HTML, CSS and XML.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chami.com/html-kit/faq/pages/validate_tools.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">How do I validate my code or check for possible errors?</loc>describes the tools in the free editor HTML-Kit for checking HTML, CSS and XML.</p>
         </item>
       </ulist>
       <p>HTML及びXHTMLのバリデーション</p>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.w3.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The W3C Markup Validation Service by the World Wide Web Consortium allows you to validate HTML and XHTML files by URI, by file upload and by direct input of complete HTML or XHTML documents. There are also separate pages with an extended interface for file upload and for validating by URI (advanced options such as encodings and document types).</loc>by the World Wide Web Consortium allows you to validate HTML and XHTML files by URI, by file upload and by direct input of complete HTML or XHTML documents. There are also separate pages with an extended interface for file upload and for validating by URI (advanced options such as encodings and document types).</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.w3.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The W3C Markup Validation Service</loc>by the World Wide Web Consortium allows you to validate HTML and XHTML files by URI, by file upload and by direct input of complete HTML or XHTML documents. There are also separate pages with an extended interface for file upload and for validating by URI (advanced options such as encodings and document types).</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.w3.org/docs/install.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Installation Documentation for the W3C Markup Validation Service explains how to install this service (for example for use on an intranet).</loc>explains how to install this service (for example for use on an intranet).</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.w3.org/docs/install.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Installation Documentation for the W3C Markup Validation Service</loc>explains how to install this service (for example for use on an intranet).</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.projektmedien.de/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML Validator is a German version of the W3C Markup Validation Service.</loc>is a German version of the W3C Markup Validation Service.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.projektmedien.de/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML Validator</loc>is a German version of the W3C Markup Validation Service.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/validator/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">WDG HTML Validator by the Web Design Group allows you to enter a URI to validate single pages or entire sites. There are also versions to validate Web pages in batch mode (by specifying one or more URIs of HTML documents to validate), by file upload and by direct input of HTML code.</loc>by the Web Design Group allows you to enter a URI to validate single pages or entire sites. There are also versions to validate Web pages in batch mode (by specifying one or more URIs of HTML documents to validate), by file upload and by direct input of HTML code.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/validator/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">WDG HTML Validator</loc>by the Web Design Group allows you to enter a URI to validate single pages or entire sites. There are also versions to validate Web pages in batch mode (by specifying one or more URIs of HTML documents to validate), by file upload and by direct input of HTML code.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/validator/offline/index.html.en" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Offline HTMLHelp.com Validator is a tool for Unix users; it is the off-line version of the online WDG HTML Validator.</loc>is a tool for Unix users; it is the off-line version of the online WDG HTML Validator.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/validator/offline/index.html.en" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Offline HTMLHelp.com Validator</loc>is a tool for Unix users; it is the off-line version of the online WDG HTML Validator.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://people.tuke.sk/igor.podlubny/ov.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Off-line HTML Validator – A clipbook for NoteTab by Professor Igor Podlubny is an extension for the programming editor NoteTab. It uses James Clark's open-source SGML parser, which is also used by the W3C Markup Validation Service.</loc>by Professor Igor Podlubny is an extension for the programming editor NoteTab. It uses<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jclark.com/sp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Off-line HTML Validator – A clipbook for NoteTab by Professor Igor Podlubny is an extension for the programming editor NoteTab. It uses James Clark's open-source SGML parser, which is also used by the W3C Markup Validation Service.</loc>, which is also used by the W3C Markup Validation Service.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://people.tuke.sk/igor.podlubny/ov.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Off-line HTML Validator – A clipbook for NoteTab</loc>by Professor Igor Podlubny is an extension for the programming editor NoteTab. It uses<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jclark.com/sp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">James Clark's open-source SGML parser</loc>, which is also used by the W3C Markup Validation Service.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://kzone.host.sk/download/item4.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Off-line HTML Validator for Windows by Jan Kacur is another validator based on James Clark's open-source SGML parser. Source code (in Delphi) is also available.</loc>by Jan Kacur is another validator based on James Clark's open-source SGML parser. Source code (in Delphi) is also available.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://kzone.host.sk/download/item4.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Off-line HTML Validator for Windows</loc>by Jan Kacur is another validator based on James Clark's open-source SGML parser. Source code (in Delphi) is also available.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ktmatu.com/info/do-it-yourself-offline-html-validator/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Do-it-yourself Offline HTML Validator by Matti Tukiainen explains how you can create a simple validator with James Clark's SGML parser on Windows.</loc>by Matti Tukiainen explains how you can create a simple validator with James Clark's SGML parser on Windows.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ktmatu.com/info/do-it-yourself-offline-html-validator/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Do-it-yourself Offline HTML Validator</loc>by Matti Tukiainen explains how you can create a simple validator with James Clark's SGML parser on Windows.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.standards-schmandards.com/index.php?2005/04/10/18-massvalidate" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Validating an entire site by Peter Kranz explains how you can install a modified version of the W3C Markup Validation Service that outputs validation results as XML on Mac OS. Source code (in Perl and Python) is available.</loc>by Peter Kranz explains how you can install a modified version of the W3C Markup Validation Service that outputs validation results as XML on Mac OS. Source code (in Perl and Python) is available.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.standards-schmandards.com/index.php?2005/04/10/18-massvalidate" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Validating an entire site</loc>by Peter Kranz explains how you can install a modified version of the W3C Markup Validation Service that outputs validation results as XML on Mac OS. Source code (in Perl and Python) is available.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/widgets/#valid" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML Validation Widget adds a "Validate HTML" option to Internet Explorer's context menu and validates the current HTML document with the Web Design Group's HTML Validator.</loc>adds a "Validate HTML" option to Internet Explorer's context menu and validates the current HTML document with the Web Design Group's HTML Validator.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/widgets/#valid" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML Validation Widget</loc>adds a "Validate HTML" option to Internet Explorer's context menu and validates the current HTML document with the Web Design Group's HTML Validator.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chami.com/html-kit/faq/pages/w3c_markup_validator.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Can I use the W3C MarkUp Validation Service to validate HTML? explains how you can validate HTML from within the free editor HTML-Kit.</loc>explains how you can validate HTML from within the free editor HTML-Kit.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chami.com/html-kit/faq/pages/w3c_markup_validator.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Can I use the W3C MarkUp Validation Service to validate HTML?</loc>explains how you can validate HTML from within the free editor HTML-Kit.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.aborla.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML/XML Validator is an online repair tool for HTML and XHTML based on Tidy and PHP 5. It is available in several languages but it is not a real validator.</loc>is an online repair tool for HTML and XHTML based on Tidy and PHP 5. It is available in several languages but it is not a real validator.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.aborla.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML/XML Validator</loc>is an online repair tool for HTML and XHTML based on Tidy and PHP 5. It is available in several languages but it is not a real validator.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.alistapart.com/stories/doctype/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Fix Your Site With the Right DOCTYPE! by Jeffrey Zeldman explains what HTML and XHTML doctypes work and what their effect is on the rendering mode of a few browsers.</loc>by Jeffrey Zeldman explains what HTML and XHTML doctypes work and what their effect is on the rendering mode of a few browsers.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.alistapart.com/stories/doctype/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Fix Your Site With the Right DOCTYPE!</loc>by Jeffrey Zeldman explains what HTML and XHTML doctypes work and what their effect is on the rendering mode of a few browsers.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.alistapart.com/articles/dreamweaver/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Modifying Dreamweaver to Produce Valid XHTML by Carrie Bickner.</loc>by Carrie Bickner.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.alistapart.com/articles/dreamweaver/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Modifying Dreamweaver to Produce Valid XHTML</loc>by Carrie Bickner.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://schneegans.de/frontpage/xhtml-schema/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XHTML-Schemata für FrontPage 2003 und Visual Studio .NET by Christoph Schneegans is a German article that explains how the W3C XML Schemas for XHTML 1.0 can be used in FrontPage 2003 and Visual Studio .NET to create valid code.</loc>by Christoph Schneegans is a German article that explains how the W3C XML Schemas for XHTML 1.0 can be used in FrontPage 2003 and Visual Studio .NET to create valid code.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://schneegans.de/frontpage/xhtml-schema/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XHTML-Schemata für FrontPage 2003 und Visual Studio .NET</loc>by Christoph Schneegans is a German article that explains how the W3C XML Schemas for XHTML 1.0 can be used in FrontPage 2003 and Visual Studio .NET to create valid code.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.nvu.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Nvu is a free and open-source Web authoring tool for Windows, Macintosh and Linux that can call the W3C HTML Validation Service.</loc>is a free and open-source Web authoring tool for Windows, Macintosh and Linux that can call the W3C HTML Validation Service.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.nvu.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Nvu</loc>is a free and open-source Web authoring tool for Windows, Macintosh and Linux that can call the W3C HTML Validation Service.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/Amaya/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Amaya by the World Wide Web Consortium is a free and open-source Web authoring tool with support for HTML, XHTML, CSS, SVG and MathML that alerts you to validity errors when you save a document.</loc>by the World Wide Web Consortium is a free and open-source Web authoring tool with support for HTML, XHTML, CSS, SVG and MathML that alerts you to validity errors when you save a document.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/Amaya/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Amaya</loc>by the World Wide Web Consortium is a free and open-source Web authoring tool with support for HTML, XHTML, CSS, SVG and MathML that alerts you to validity errors when you save a document.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://chrispederick.com/work/web-developer/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web Developer Extension is an extension for Mozilla, Firefox and Flock by Chris Pedrick that allows you to use the W3C Validation Services for HTML and CSS.</loc>is an extension for Mozilla, Firefox and Flock by Chris Pedrick that allows you to use the W3C Validation Services for HTML and CSS.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://chrispederick.com/work/web-developer/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web Developer Extension</loc>is an extension for Mozilla, Firefox and Flock by Chris Pedrick that allows you to use the W3C Validation Services for HTML and CSS.</p>
         </item>
       </ulist>
       <p>XMLのバリデーション</p>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.validome.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML/XHTML/WML/XML Validator allows you to validate documents by URI or by file upload. An extended interface is also available.</loc>allows you to validate documents by URI or by file upload. An extended interface is also available.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.validome.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML/XHTML/WML/XML Validator</loc>allows you to validate documents by URI or by file upload. An extended interface is also available.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.de.selfhtml.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML/XHTML/WML/XML Validator is a German version of the same validator.</loc>is a German version of the same validator.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://validator.de.selfhtml.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML/XHTML/WML/XML Validator</loc>is a German version of the same validator.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.javaview.de/validator/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Validator - A Document Validation Service by JavaView allows you to check wellformedness and validity of XML files, by file upload or by direct input of XML code.</loc>by JavaView allows you to check wellformedness and validity of XML files, by file upload or by direct input of XML code.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.javaview.de/validator/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Validator - A Document Validation Service</loc>by JavaView allows you to check wellformedness and validity of XML files, by file upload or by direct input of XML code.</p>
         </item>
         <item>
-          <p>Apache Ant's<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ant.apache.org/manual/OptionalTasks/xmlvalidate.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Ant's XMLValidate Task can be used to validate XML-based documents. This tool can be used to validate entire directories (and subdirectories) of XML files.</loc>can be used to validate XML-based documents. This tool can be used to validate entire directories (and subdirectories) of XML files.</p>
+          <p>Apache Ant's<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ant.apache.org/manual/OptionalTasks/xmlvalidate.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XMLValidate Task</loc>can be used to validate XML-based documents. This tool can be used to validate entire directories (and subdirectories) of XML files.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://schneegans.de/sv/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Schema Validator by Christoph Schneegans is an online tool that allows you to validate XML (and XHTML) files by by URI, by file upload, by direct input of complete XML documents, and by direct input of XML code fragments. A bookmarklet that allows you to validate the page currently displayed in your browser is also available. This validator claims to be more accurate than the W3C validator.</loc>by Christoph Schneegans is an online tool that allows you to validate XML (and XHTML) files by by URI, by file upload, by direct input of complete XML documents, and by direct input of XML code fragments. A bookmarklet that allows you to validate the page currently displayed in your browser is also available. This validator claims to be more accurate than the W3C validator.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://schneegans.de/sv/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Schema Validator</loc>by Christoph Schneegans is an online tool that allows you to validate XML (and XHTML) files by by URI, by file upload, by direct input of complete XML documents, and by direct input of XML code fragments. A bookmarklet that allows you to validate the page currently displayed in your browser is also available. This validator claims to be more accurate than the W3C validator.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://tools.decisionsoft.com/schemaValidate/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Schema Validator by DecisionSoft is an online tool that allows you to validate an XML file against a W3C XML Schema, both of which can be uploaded.</loc>by DecisionSoft is an online tool that allows you to validate an XML file against a W3C XML Schema, both of which can be uploaded.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://tools.decisionsoft.com/schemaValidate/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Schema Validator</loc>by DecisionSoft is an online tool that allows you to validate an XML file against a W3C XML Schema, both of which can be uploaded.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.stg.brown.edu/service/xmlvalid/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">STG XML Validation Form by the Scholarly Technology Group of Brown University allows you to validate XML files by URI, by file upload and by direct input of complete XML documents.</loc>by the Scholarly Technology Group of Brown University allows you to validate XML files by URI, by file upload and by direct input of complete XML documents.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.stg.brown.edu/service/xmlvalid/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">STG XML Validation Form</loc>by the Scholarly Technology Group of Brown University allows you to validate XML files by URI, by file upload and by direct input of complete XML documents.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.onjava.com/pub/a/onjava/excerpt/netbeans_2/index1.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NetBeans: Working with XML, Part 1 and NetBeans: Working with XML, Part 2 by Tim Boudreau and others, explains how to enable XML support, validation and other related functionality in the open-source NetBeans framework. .</loc>and<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.onjava.com/pub/a/onjava/excerpt/netbeans_2/index2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NetBeans: Working with XML, Part 1 and NetBeans: Working with XML, Part 2 by Tim Boudreau and others, explains how to enable XML support, validation and other related functionality in the open-source NetBeans framework. .</loc>by Tim Boudreau and others, explains how to enable XML support, validation and other related functionality in the open-source NetBeans framework. .</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.onjava.com/pub/a/onjava/excerpt/netbeans_2/index1.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NetBeans: Working with XML, Part 1</loc>and<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.onjava.com/pub/a/onjava/excerpt/netbeans_2/index2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NetBeans: Working with XML, Part 2</loc>by Tim Boudreau and others, explains how to enable XML support, validation and other related functionality in the open-source NetBeans framework. .</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.xmlforasp.net/SchemaValidator.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Schema Validator: this is a validator that allows you to paste XML and W3C XML Schema code into text boxes to validate XML code.</loc>: this is a validator that allows you to paste XML and W3C XML Schema code into text boxes to validate XML code.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.xmlforasp.net/SchemaValidator.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Schema Validator</loc>: this is a validator that allows you to paste XML and W3C XML Schema code into text boxes to validate XML code.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.xmlnanny.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Nanny: a graphical tool for validating XML and XHTML, with support for DTD, W3C XML Schema, RELAX NG and Schematron (Max OX X).</loc>: a graphical tool for validating XML and XHTML, with support for DTD, W3C XML Schema, RELAX NG and Schematron (Max OX X).</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.xmlnanny.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Nanny</loc>: a graphical tool for validating XML and XHTML, with support for DTD, W3C XML Schema, RELAX NG and Schematron (Max OX X).</p>
         </item>
       </ulist>
       <p>多くのプログラミング用のエディタ、XMLエディタ及び統合開発環境（IDE）は、XMLファイルをバリデートすることができる。フリー及び/又はオープンソースのツールには、次のようなものがある。</p>
       <ulist>
         <item>
-          <p>the programming editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jedit.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">the programming editor JEdit with the XML and SideKick plugins, which supports DTDs and W3C XML Schemas,</loc>with the XML and SideKick plugins, which supports DTDs and W3C XML Schemas,</p>
+          <p>the programming editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jedit.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">JEdit</loc>with the XML and SideKick plugins, which supports DTDs and W3C XML Schemas,</p>
         </item>
         <item>
-          <p>the “workbench"<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eclipse.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">the “workbench" Eclipse with the Web Tools Platform,</loc>with the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://download.eclipse.org/webtools/downloads/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">the “workbench" Eclipse with the Web Tools Platform,</loc>,</p>
+          <p>the “workbench"<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eclipse.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Eclipse</loc>with the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://download.eclipse.org/webtools/downloads/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web Tools Platform</loc>,</p>
         </item>
         <item>
-          <p>the Web authoring tool<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.screem.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">the Web authoring tool SCREEM for the Gnome desktop environment, which supports DTDs,</loc>for the Gnome desktop environment, which supports DTDs,</p>
+          <p>the Web authoring tool<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.screem.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCREEM</loc>for the Gnome desktop environment, which supports DTDs,</p>
         </item>
         <item>
-          <p>the XML editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jaxe.sourceforge.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">the XML editor Jaxe, which validates XML files with Apache Xerces,</loc>, which validates XML files with Apache Xerces,</p>
+          <p>the XML editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jaxe.sourceforge.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Jaxe</loc>, which validates XML files with Apache Xerces,</p>
         </item>
         <item>
-          <p>the XML editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.xerlin.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">the XML editor Xerlin, which supports DTDs and to some extent W3C XML schema,</loc>, which supports DTDs and to some extent W3C XML schema,</p>
+          <p>the XML editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.xerlin.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Xerlin</loc>, which supports DTDs and to some extent W3C XML schema,</p>
         </item>
         <item>
-          <p>the XML editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.xmloperator.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">the XML editor xmloperator, which supports DTDs and RELAX NG schemas,</loc>, which supports DTDs and RELAX NG schemas,</p>
+          <p>the XML editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.xmloperator.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">xmloperator</loc>, which supports DTDs and RELAX NG schemas,</p>
         </item>
         <item>
-          <p>Emacs in nXML mode (see the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://tech.groups.yahoo.com/group/emacs-nxml-mode/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Emacs in nXML mode (see the YahooGroup Emacs nXML Mode),</loc>),</p>
+          <p>Emacs in nXML mode (see the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://tech.groups.yahoo.com/group/emacs-nxml-mode/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">YahooGroup Emacs nXML Mode</loc>),</p>
         </item>
         <item>
-          <p>the XML editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://pollo.sourceforge.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">the XML editor Pollo, which supports DTDs, W3C XML Schemas and RELAX NG schemas, and is best suited for tree-like XML files.</loc>, which supports DTDs, W3C XML Schemas and RELAX NG schemas, and is best suited for tree-like XML files.</p>
+          <p>the XML editor<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://pollo.sourceforge.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pollo</loc>, which supports DTDs, W3C XML Schemas and RELAX NG schemas, and is best suited for tree-like XML files.</p>
         </item>
       </ulist>
       <p>CSSのバリデーション</p>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jigsaw.w3.org/css-validator/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The W3C CSS Validation Service allows you to validate CSS files by URI, by file upload and by direct input of CSS code.</loc>allows you to validate CSS files by URI, by file upload and by direct input of CSS code.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jigsaw.w3.org/css-validator/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The W3C CSS Validation Service</loc>allows you to validate CSS files by URI, by file upload and by direct input of CSS code.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jigsaw.w3.org/css-validator/validator.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The W3C CSS Validation Service: Validate by URI is an extended interface that allows you to specify a CSS stylesheet or an HTML page with CSS, specify the CSS profile and medium, and choose the types of warnings that should be displayed.</loc>is an extended interface that allows you to specify a CSS stylesheet or an HTML page with CSS, specify the CSS profile and medium, and choose the types of warnings that should be displayed.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jigsaw.w3.org/css-validator/validator.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The W3C CSS Validation Service: Validate by URI</loc>is an extended interface that allows you to specify a CSS stylesheet or an HTML page with CSS, specify the CSS profile and medium, and choose the types of warnings that should be displayed.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/csscheck/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSSCheck by the Web Design Group allows you to validate CSS files by URI and by direct input of CSS code. Note that it is primarily a CSS 1 checker.</loc>by the Web Design Group allows you to validate CSS files by URI and by direct input of CSS code. Note that it is primarily a CSS 1 checker.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/csscheck/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSSCheck</loc>by the Web Design Group allows you to validate CSS files by URI and by direct input of CSS code. Note that it is primarily a CSS 1 checker.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/csscheck/upload.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSSCheckUp by the Web Design Group allows you to validate CSS files by file upload. Note that it is primarily a CSS 1 checker.</loc>by the Web Design Group allows you to validate CSS files by file upload. Note that it is primarily a CSS 1 checker.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/tools/csscheck/upload.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSSCheckUp</loc>by the Web Design Group allows you to validate CSS files by file upload. Note that it is primarily a CSS 1 checker.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ahfb2000.com/cssvalidator.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS (Cascading Style Sheets) Validator allows you to validate CSS files by URI.</loc>allows you to validate CSS files by URI.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ahfb2000.com/cssvalidator.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS (Cascading Style Sheets) Validator</loc>allows you to validate CSS files by URI.</p>
         </item>
         <item>
           <p>

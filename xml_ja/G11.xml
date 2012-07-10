@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G11">
-  <short-name>5秒未満で点滅が終わるようにコンテンツを制作する</short-name>
+  <short-name>G11: 5秒未満で点滅が終わるようにコンテンツを制作する</short-name>
   <applicability>
     <p>点滅するコンテンツをサポートしているウェブコンテンツ技術</p>
   </applicability>

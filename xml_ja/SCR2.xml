@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR2">
-  <short-name>キーボード及びマウスのイベント・ハンドラを両方とも用いる</short-name>
+  <short-name>SCR2: キーボード及びマウスのイベント・ハンドラを両方とも用いる</short-name>
   <applicability>
     <p>スクリプトをサポートしているHTML及びXHTML</p>
   </applicability>
@@ -13,9 +13,8 @@
 		<p>下記の例では、アンカー要素の前に装飾画像がある。利用者がアンカータグにマウスオーバーすると、アンカータグの前の装飾画像が変化する。また、マウスがアンカーを離れると、画像は元に戻る。同じ画像の変化は、利用者がキーボードを使ってアンカー要素にフォーカスしたときにも起こる。フォーカスされたときに画像が変化し、フォーカスを失ったときには元の画像に戻る。これは、アンカー要素に<code>onmouseover</code>、<code>onmouseout</code>、<code>onfocus</code>及び<code>onblur</code>イベント・ハンドラを付加することで実現できる。このイベント・ハンドラはJavaScriptの関数でupdateImage()と呼ばれており、画像のsrc属性を変更する。updateImage()はonmouseover、onmouseout、onfocus、及びonblurイベントの応答として呼ばれる。</p>
 		<p>それぞれの画像には固有のIDが与えられている。このIDはどちらの画像が使われるかを表す論理値とともに、updateImage()に渡される:
 <code>updateImage(imgId, isOver);</code>。論理値trueは、マウスがアンカー要素に乗った場合、又はそれがフォーカスされた場合に渡される。falseは、マウスがアンカー要素から離れた場合、又はそれがフォーカスを失った場合に渡される。 updateImage()関数は、画像のIDを使用して画像を読み込み、その後に論理値の状態に応じてsrc属性を変更する。画像は装飾目的で使用されているので、alt属性値は空であることに注意する。</p>
- <div class="note">
- 		<p class="prefix"><em>注記：</em>サイズの近い画像を使用し、画像要素では幅と高さの属性値を指定することが望ましい。これは、画像が更新されることによりページのレイアウトが変化してしまうことを防ぐ。例では、同一サイズの画像が使用されている。</p>
-</div></description>
+ <note><p class="prefix"><em>注記：</em>サイズの近い画像を使用し、画像要素では幅と高さの属性値を指定することが望ましい。これは、画像が更新されることによりページのレイアウトが変化してしまうことを防ぐ。例では、同一サイズの画像が使用されている。</p>
+</note></description>
   <examples>
     <eg-group>
       <code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd"&gt;

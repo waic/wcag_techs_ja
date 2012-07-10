@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH31">
-  <short-name>データグリッドの表題を指定する</short-name>
+  <short-name>FLASH31： データグリッドの表題を指定する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H90">
-  <short-name>label要素またはlegend要素を用いて、必須項目のフォーム・コントロールを特定する</short-name>
+  <short-name>H90: label要素またはlegend要素を用いて、必須項目のフォーム・コントロールを特定する</short-name>
   <applicability>
     <p>外部ラベルを用いている HTML 及び XHTML のコントロール</p>
   </applicability>
@@ -35,11 +35,9 @@
 </description>
       <code>&lt;label for="firstname"&gt;名前（必須）:&lt;/label&gt; 
 &lt;input type="text" name="firstname" id="firstname" /&gt;</code>
-      <description>
-        <note>
-          <p class="prefix"><em>注記：</em>英語では、必須項目の "required" を略して "req." とするコンテンツ制作者もいるが、この略語は分かりにくいという報告がある。</p>
-        </note>
-      </description>
+      <description><note><p class="prefix"><em>注記：</em>英語では、必須項目の "required" を略して "req." とするコンテンツ制作者もいるが、この略語は分かりにくいという報告がある。</p>
+</note>
+</description>
     </eg-group>
     <eg-group>
       <head>アスタリスクを用いて必須項目であることを示す</head>

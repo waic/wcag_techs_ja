@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C24">
-  <short-name>コンテナのサイズにCSSのパーセント値を用いる</short-name>
+  <short-name>C24: コンテナのサイズにCSSのパーセント値を用いる</short-name>
   <applicability>
     <p>CSSを用いているウェブページ</p>
   </applicability>

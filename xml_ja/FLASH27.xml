@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH27">
-  <short-name>ボタンの目的を説明するラベルを提供する</short-name>
+  <short-name>FLASH27： ボタンの目的を説明するラベルを提供する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

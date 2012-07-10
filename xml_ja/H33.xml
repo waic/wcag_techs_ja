@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H33">
-  <short-name>title属性を用いて、リンクテキストの文言を補足する</short-name>
+  <short-name>H33： title属性を用いて、リンクテキストの文言を補足する</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR18">
-  <short-name>クライアントサイドのバリデーション及びアラートを提供する</short-name>
+  <short-name>SCR18: クライアントサイドのバリデーション及びアラートを提供する</short-name>
   <applicability>
     <p>利用者の入力を検証するコンテンツ</p>
   </applicability>

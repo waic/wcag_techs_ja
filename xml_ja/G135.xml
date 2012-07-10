@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G135">
-  <short-name>ウェブコンテンツ技術のアクセシビリティAPIを用いて、名前及び役割をUAに提供し、利用者が設定可能なプロパティを直接設定可能にし、変化を通知する</short-name>
+  <short-name>G135: ウェブコンテンツ技術のアクセシビリティAPIを用いて、名前及び役割をUAに提供し、利用者が設定可能なプロパティを直接設定可能にし、変化を通知する</short-name>
   <applicability>
     <p>アクセシビリティAPIと連動するようにプログラムされた標準コンポーネントを持つプログラミング・ウェブコンテンツ技術。</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G105">
-  <short-name>利用者が再認証した後に利用できるようにデータを保存する</short-name>
+  <short-name>G105: 利用者が再認証した後に利用できるようにデータを保存する</short-name>
   <applicability>
     <p>データを送信するのに、利用者認証を求め制限時間のあるウェブページ</p>
   </applicability>

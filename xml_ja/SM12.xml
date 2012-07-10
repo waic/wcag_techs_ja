@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SM12">
-  <short-name>SMIL 2.0で同期したテキストストリームによるキャプションを提供する</short-name>
+  <short-name>SM12: SMIL 2.0で同期したテキストストリームによるキャプションを提供する</short-name>
   <applicability>
     <p> SMIL 2.0</p>
   </applicability>

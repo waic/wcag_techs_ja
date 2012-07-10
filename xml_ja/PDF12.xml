@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="PDF12">
-  <short-name>PDF 文書内のフォームフィールドの名前、役割、値情報を提供する</short-name>
+  <short-name>PDF12: PDF 文書内のフォームフィールドの名前、役割、値情報を提供する</short-name>
   <applicability>
     <p>インタラクティブなフォームフィールドが含まれているタグ付き PDF 文書</p>
   </applicability>
@@ -150,7 +150,7 @@ endobj</code>
     <see-also>
       <ulist>
         <item>
-          <p>Section 12.7.4 (Field Types) of<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 12.7.4 (Field Types) of PDF 1.7 (ISO 32000-1)</loc></p>
+          <p>Section 12.7.4 (Field Types) of<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/xml/index_arch.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Adobe XML Forms Architecture (XFA)</loc></p>

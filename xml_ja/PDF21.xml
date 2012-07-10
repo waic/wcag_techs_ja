@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="PDF21">
-  <short-name>PDF 文書のリストにリストタグを使用する</short-name>
+  <short-name>PDF21: PDF 文書のリストにリストタグを使用する</short-name>
   <applicability>
     <p>リストが含まれているタグ付き PDF 文書</p>
   </applicability>
@@ -159,7 +159,7 @@ endobj</code>
     <see-also>
       <ulist>
         <item>
-          <p>Section 14.8.4.3.3 (List Elements) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 14.8.4.3.3 (List Elements) in PDF 1.7 (ISO 32000-1)</loc></p>
+          <p>Section 14.8.4.3.3 (List Elements) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/acrobat/pro/using/WS58a04a822e3e50102bd615109794195ff-7ce6.w.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Edit Tags in the Tag Panel documentation</loc></p>

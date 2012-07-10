@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H44">
-  <short-name>label要素を用いて、テキストのラベルとフォーム・コントロールを関連付ける</short-name>
+  <short-name>H44: label要素を用いて、テキストのラベルとフォーム・コントロールを関連付ける</short-name>
   <applicability>
     <p>ラベルを用いているHTML及びXHTMLのフォーム・コントロール</p>
   </applicability>
@@ -59,8 +59,7 @@
 					<p>
 							<code>input</code>要素の<code>type="checkbox"</code>と<code>type="radio"</code>では、<code>label</code>要素をその後に配置することに注意する。</p>
           
-					<div class="note">
-<p class="prefix">
+					<note><p class="prefix">
 									<em>注記 1：</em>明示的なラベルを利用する要素は次の通りである：</p>
 <ul>
 <li>
@@ -150,8 +149,7 @@
 								<p>スクリプトボタン（<code>button</code>要素又は<code>&lt;input type="button"&gt;</code>）</p>
               
                      </li>
-</ul>
-</div></description>
+</ul></note></description>
   <examples>
     <eg-group>
       <head>テキスト入力フィールド</head>
@@ -168,7 +166,8 @@
     <eg-group>
       <head>ラジオボタンのグループ</head>
       <description><p>関連するラジオボタンの小さなグループについて、簡単な説明が付けてあり、さらに個々の要素にラベルが付けてある。</p>
-<note><em>注記：</em>ラジオボタンの数が多く、それらの関連付けや操作説明を必要とする場合は、<a href="H71.html"><em>H71:  Providing a description for groups of form controls using fieldset and legend elements</em></a> の方法を考慮すべきである。</note></description>
+<note><em>注記：</em>ラジオボタンの数が多く、それらの関連付けや操作説明を必要とする場合は、<a href="H71.html"><em>H71:  Providing a description for groups of form controls using fieldset and legend elements</em></a> の方法を考慮すべきである。</note>
+</description>
       <code>&lt;h1&gt;ドーナツ&lt;/h1&gt;
 
 &lt;p&gt;お好きなドーナツを選び、「ドーナツを購入」ボタンを

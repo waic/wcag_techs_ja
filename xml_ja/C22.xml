@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C22">
-  <short-name>CSSを用いて、テキストの視覚的な表現を制御する</short-name>
+  <short-name>C22: CSSを用いて、テキストの視覚的な表現を制御する</short-name>
   <applicability>
     <p>CSSをサポートする全てのウェブコンテンツ技術</p>
   </applicability>
@@ -104,7 +104,9 @@
     </eg-group>
     <eg-group>
       <head>テキストの色を制御するためにCSSのcolorを使用する。</head>
-      <description><note><p class="prefix"><em>注意 ：</em>この例で用いているスタイルは、情報や構造又は関係性を伝えるためのものではない。</p></note><p>XHTML：</p>
+      <description><note><p class="prefix"><em>注意 ：</em>この例で用いているスタイルは、情報や構造又は関係性を伝えるためのものではない。</p>
+                     </note>
+<p>XHTML：</p>
 </description>
       <code>&lt;p&gt;2008年&lt;em class="highlight"&gt;3月&lt;/em&gt;9日&lt;/p&gt;</code>
       <description><p>CSS：</p>
@@ -113,7 +115,8 @@
     </eg-group>
     <eg-group>
       <head>イタリック体のテキストにするためにCSSのfont-styleを使用する。</head>
-      <description><note><p class="prefix"><em>注意 ：</em>この例で用いているスタイルは、情報や構造又は関係性を伝えるためのものではない。</p></note><p>XHTML：</p>
+      <description><note><p class="prefix"><em>注意 ：</em>この例で用いているスタイルは、情報や構造又は関係性を伝えるためのものではない。</p></note>
+<p>XHTML：</p>
 </description>
       <code>&lt;p&gt;この記事は &lt;a href="http://www.example.com" class="featuredsite"&gt;内分泌学のブログ&lt;/a&gt;で入手可能である。&lt;/p&gt;</code>
       <description><p>CSS：</p>
@@ -122,7 +125,8 @@
     </eg-group>
     <eg-group>
       <head>テキストの太さを制御するためにCSSのfont-weightを使用する。</head>
-      <description><note><p class="prefix"><em>注意 ：</em>この例で用いているスタイルは、情報や構造又は関係性を伝えるためのものではない。</p></note><p>XHTML：</p>
+      <description><note><p class="prefix"><em>注意 ：</em>この例で用いているスタイルは、情報や構造又は関係性を伝えるためのものではない。</p></note>
+<p>XHTML：</p>
 </description>
       <code>&lt;p&gt;この取引は &lt;span class="highlight"&gt;今&lt;/span&gt;利用可能です！&lt;/p&gt;</code>
       <description><p>CSS：</p>
@@ -131,7 +135,8 @@
     </eg-group>
     <eg-group>
       <head>テキストの大文字小文字の区別を制御するためにCSSのtext-transformを使用する。</head>
-      <description><note><p class="prefix"><em>注意 ：</em>この例で用いているスタイルは、情報や構造又は関係性を伝えるためのものではない。</p></note><p>XHTML：</p>
+      <description><note><p class="prefix"><em>注意 ：</em>この例で用いているスタイルは、情報や構造又は関係性を伝えるためのものではない。</p></note>
+<p>XHTML：</p>
 </description>
       <code>&lt;p&gt;2008年 &lt;span class="caps"&gt;3月&lt;/span&gt; 9日&lt;/p&gt;</code>
       <description><p>CSS：</p>

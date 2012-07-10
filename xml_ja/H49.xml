@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H49">
-  <short-name>セマンティックなマークアップを用いて、強調又は特別なテキストをマークアップする</short-name>
+  <short-name>H49: セマンティックなマークアップを用いて、強調又は特別なテキストをマークアップする</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>
@@ -74,14 +74,14 @@ we can never do anything good in the world.&lt;/q&gt;"と述べている。&lt;/
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Phrase&#13;
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Phrase&#13;
                     elements: EM, STRONG, DFN, CODE, SAMP, KBD, VAR, CITE, ABBR, and ACRONYM</loc></p>
         </item>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Quotations: The BLOCKQUOTE and Q elements</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quotations: The BLOCKQUOTE and Q elements</loc></p>
         </item>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Subscripts and superscripts: the SUB and SUP elements</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Subscripts and superscripts: the SUB and SUP elements</loc></p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/fixing-ie-quotes.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Fixing Quotes in&#13;

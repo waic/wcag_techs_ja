@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G169">
-  <short-name>テキストを左寄せ又は右寄せにする</short-name>
+  <short-name>G169: テキストを左寄せ又は右寄せにする</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

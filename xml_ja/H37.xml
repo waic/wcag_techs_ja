@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H37">
-  <short-name>img 要素の alt 属性を用いる</short-name>
+  <short-name>H37: <code>img</code> 要素の <code>alt</code> 属性を用いる</short-name>
   <applicability>
     <p>HTMLドキュメントで用いられている画像</p>
   </applicability>
@@ -26,18 +26,10 @@
   </examples>
   <resources>
     <see-also>
-      <p>
-              
-                     <a href="http://www.w3.org/TR/html401/struct/objects.html#edef-IMG">HTML 4.01 IMG
-                element</a>
-            
-                  </p>
-      <p>
-              
-                     <a href="http://www.w3.org/TR/html401/struct/objects.html#adef-alt">HTML 4.01 alt
-                attribute</a>
-            
-                  </p>
+      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#edef-IMG" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 IMG&#13;
+                element</loc></p>
+      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#adef-alt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 alt&#13;
+                attribute</loc></p>
     </see-also>
   </resources>
   <related-techniques>

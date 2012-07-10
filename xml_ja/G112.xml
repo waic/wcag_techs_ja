@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G112">
-  <short-name>インラインの定義を用いる</short-name>
+  <short-name>G112: インラインの定義を用いる</short-name>
   <applicability>
     <p>テキストを含むあらゆるウェブコンテンツ技術</p>
   </applicability>

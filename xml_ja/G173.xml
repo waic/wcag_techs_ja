@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G173">
-  <short-name>映像の音声ガイド付きバージョンを提供する</short-name>
+  <short-name>G173: 映像の音声ガイド付きバージョンを提供する</short-name>
   <applicability>
     <p>音声及び映像をサポートするあらゆるウェブコンテンツ技術</p>
   </applicability>

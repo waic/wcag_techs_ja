@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH3">
-  <short-name>支援技術が無視できるように Flash のオブジェクトにマークを付ける</short-name>
+  <short-name>FLASH3： 支援技術が無視できるように Flash のオブジェクトにマークを付ける</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

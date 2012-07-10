@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F19">
-  <short-name>適合要件 1 の不適合事例 － 適合していないウェブページの代替となる適合しているバージョンを利用者が見つけられる手段を提供していない</short-name>
+  <short-name>F19: 適合要件 1 の不適合事例 － 適合していないウェブページの代替となる適合しているバージョンを利用者が見つけられる手段を提供していない</short-name>
   <applicability>
     <p>適合していないコンテンツの代替となる適合したバージョンを提供するサイト</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G166">
-  <short-name>重要な映像コンテンツを説明する音声を提供する</short-name>
+  <short-name>G166: 重要な映像コンテンツを説明する音声を提供する</short-name>
   <applicability>
     <p>映像コンテンツを実装できる全てのウェブコンテンツ技術</p>
   </applicability>
@@ -30,7 +30,7 @@
       <p>映像しか含まないウェブページに対して：</p>
       <olist>
         <item>
-          <p>映像しか含まないコンテンツの直前又は直後に、<span class="diff-add"><span class="difftext">[ここから追加] </span><span>映像のコンテンツを説明する</span><span class="difftext">[追加ここまで]</span></span>代替の音声コンテンツへのリンクがある。</p>
+          <p>映像しか含まないコンテンツの直前又は直後に、<phrase diff="add">映像のコンテンツを説明する</phrase>代替の音声コンテンツへのリンクがある。</p>
         </item>
       </olist>
     </procedure>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G157">
-  <short-name>ライブの音声キャプションサービスをウェブページに組み込む</short-name>
+  <short-name>G157: ライブの音声キャプションサービスをウェブページに組み込む</short-name>
   <applicability>
     <p>ライブの音声しか含まない情報を提示する全てのウェブコンテンツ技術</p>
   </applicability>
@@ -16,25 +16,7 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/techniques/captions/realtime.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Real-time Captioning&#13;
-                        &#13;
-              &#13;
-                        &#13;
-                              CaptionCaster&#13;
-                           &#13;
-Captioned Text (provider for relay conference captioning)</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/products/captioncaster/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Real-time Captioning&#13;
-                        &#13;
-              &#13;
-                        &#13;
-                              CaptionCaster&#13;
-                           &#13;
-Captioned Text (provider for relay conference captioning)</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.captionedtext.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Real-time Captioning&#13;
-                        &#13;
-              &#13;
-                        &#13;
-                              CaptionCaster&#13;
-                           &#13;
-Captioned Text (provider for relay conference captioning)</loc>(provider for relay conference captioning)</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/techniques/captions/realtime.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Real-time Captioning</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/products/captioncaster/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CaptionCaster</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.captionedtext.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Captioned Text</loc>(provider for relay conference captioning)</p>
         </item>
         <item>
           <p>
@@ -42,13 +24,13 @@ Captioned Text (provider for relay conference captioning)</loc>(provider for rel
           </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.captionedtext.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Captioned Text (provider for relay conference captioning)</loc>(provider for relay conference captioning)</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.captionedtext.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Captioned Text</loc>(provider for relay conference captioning)</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.google.com/Top/Arts/Television/Closed_Captioning/Service_Providers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Google Directory of Closed Caption Service Providers</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://en.wikipedia.org/wiki/Communication_Access_Real-Time_Translation" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Wikipedia entry for CART (variously Computer Assisted Real-time Captioning or Communication Access Real-time Translation)</loc>(variously Computer Assisted Real-time Captioning or Communication Access Real-time Translation)</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://en.wikipedia.org/wiki/Communication_Access_Real-Time_Translation" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Wikipedia entry for CART</loc>(variously Computer Assisted Real-time Captioning or Communication Access Real-time Translation)</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.captions.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Closed Captioning Web</loc></p>
@@ -57,21 +39,7 @@ Captioned Text (provider for relay conference captioning)</loc>(provider for rel
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cartinfo.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Communication Access Information Center</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://onlineconferencingsystems.com/vpat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web conferencing products with integrated support for captioning viewport&#13;
-              &#13;
-                        &#13;
-                              IDEAL Conference&#13;
-                              &#13;
-                           &#13;
-                              &#13;
-                             Acrobat Connect</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/resources/accessibility/tools/vpat/acrobatconnect_508.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web conferencing products with integrated support for captioning viewport&#13;
-              &#13;
-                        &#13;
-                              IDEAL Conference&#13;
-                              &#13;
-                           &#13;
-                              &#13;
-                             Acrobat Connect</loc></p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://onlineconferencingsystems.com/vpat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">IDEAL Conference</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/resources/accessibility/tools/vpat/acrobatconnect_508.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Acrobat Connect</loc></p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://onlineconferencingsystems.com/vpat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">IDEAL Conference</loc></p>

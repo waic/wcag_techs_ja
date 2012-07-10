@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G133">
-  <short-name>複数の画面で構成されるフォームの最初のページに、利用者がセッションの制限時間を延長又は解除できるチェックボックスを提供する</short-name>
+  <short-name>G133: 複数の画面で構成されるフォームの最初のページに、利用者がセッションの制限時間を延長又は解除できるチェックボックスを提供する</short-name>
   <applicability>
     <p>複数の画面で構成されるフォームのあるコンテンツ</p>
   </applicability>

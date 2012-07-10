@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H84">
-  <short-name>select要素とボタンを併用して、アクションを実行するようにする</short-name>
+  <short-name>H84: select要素とボタンを併用して、アクションを実行するようにする</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>

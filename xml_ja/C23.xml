@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C23">
-  <short-name>メインコンテンツのテキスト及び背景の色を指定せず、バナー、特集記事及びナビゲーションなどのようにメインではないコンテンツのテキスト及び背景の色をCSSで指定する</short-name>
+  <short-name>C23: メインコンテンツのテキスト及び背景の色を指定せず、バナー、特集記事及びナビゲーションなどのようにメインではないコンテンツのテキスト及び背景の色をCSSで指定する</short-name>
   <applicability>
     <p>CSSを用いているウェブページ</p>
   </applicability>
@@ -58,7 +58,7 @@ Internet Explorer 6 は、システム設定で同じ色が選択されない限
     <see-also>
       <ulist>
         <item>
-          <p>BBC's Web page with instructions how to change the browser colors in most browsers</p>
+          <p diff="del">BBC's Web page with instructions how to change the browser colors in most browsers</p>
         </item>
       </ulist>
     </see-also>
@@ -73,7 +73,7 @@ Internet Explorer 6 は、システム設定で同じ色が選択されない限
     <procedure>
       <olist>
         <item><p>テキスト、リンク及び背景の色が、デフォルトの色とも、メインではないコンテンツに指定されている色とも異なるように、ブラウザの設定を変える。</p>
-                        <div class="note"><p class="prefix"><em>注：ブラウザがそのページに指定されている色を無視するような設定にはしないこと。</em></p></div></item>
+                        <note><p class="prefix"><em>注：ブラウザがそのページに指定されている色を無視するような設定にはしないこと。</em></p></note></item>
         <item>
           <p>メインコンテンツのテキスト、リンク及び背景が、設定した色に変わる。</p>
         </item>

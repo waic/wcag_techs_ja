@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G94">
-  <short-name>非テキストコンテンツに対して、それと同じ目的を果たし、同じ情報を提供する、簡潔な代替テキストを提供する</short-name>
+  <short-name>G94: 非テキストコンテンツに対して、それと同じ目的を果たし、同じ情報を提供する、簡潔な代替テキストを提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

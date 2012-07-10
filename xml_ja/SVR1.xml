@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SVR1">
-  <short-name>クライアントサイドではなく、サーバサイドで自動リダイレクトを実装する</short-name>
+  <short-name>SVR1: クライアントサイドではなく、サーバサイドで自動リダイレクトを実装する</short-name>
   <applicability>
     <p>サーバーサイド・スクリプト言語、及びリダイレクトためのURL又はURLパターンのあるサーバ環境設定ファイルを含む、サーバーサイドのウェブコンテンツ技術</p>
   </applicability>
@@ -70,37 +70,30 @@ header("Location: http://www.example.com/newUserLogin.php");
       <ulist>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/reback" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Use standard&#13;
-                                        redirects: do not break the back button! (W3C QA Tip).</loc>(W3C QA Tip).</p>
+                                        redirects: do not break the back button!</loc>(W3C QA Tip).</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTTP/1.1 Status Code Definitions: Redirection 3xx.</loc>.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTTP/1.1 Status Code Definitions: Redirection 3xx</loc>.</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.somacon.com/p145.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTTP 301 Permanent&#13;
-                                        Redirection Techniques by Shailesh N. Humbad.</loc>by Shailesh N. Humbad.</p>
+                                        Redirection Techniques</loc>by Shailesh N. Humbad.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://java.sun.com/products/servlet/2.3/javadoc/javax/servlet/http/HttpServletResponse.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Interface javax.servlet.http.HttpServletResponse in&#13;
-                                    the Java Servlets 2.3 API documentation.</loc>in&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://java.sun.com/products/servlet/2.3/javadoc/javax/servlet/http/HttpServletResponse.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Interface javax.servlet.http.HttpServletResponse</loc>in&#13;
                                     the Java Servlets 2.3 API documentation.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://php.net/manual/en/function.header.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更]  header in the PHP Manual. [変更ここまで]</loc>in the PHP Manual.</p>
+          <p diff="chg"><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://php.net/manual/en/function.header.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">header</loc>in the PHP Manual.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/mod/mod_alias.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Module mod_alias in the Apache HTTP Server&#13;
-                                        Version 2.2 Documentation describes how redirects can&#13;
-                                    be specified in Apache 2.2.</loc>in the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Module mod_alias in the Apache HTTP Server&#13;
-                                        Version 2.2 Documentation describes how redirects can&#13;
-                                    be specified in Apache 2.2.</loc>describes how redirects can&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/mod/mod_alias.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Module mod_alias</loc>in the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache HTTP Server&#13;
+                                        Version 2.2 Documentation</loc>describes how redirects can&#13;
                                     be specified in Apache 2.2.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/1.3/mod/mod_alias.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Module mod_alias in the Apache HTTP Server&#13;
-                                        Version 1.3 Documentation describes how redirects can&#13;
-                                    be specified in Apache 1.3.</loc>in the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/1.3/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Module mod_alias in the Apache HTTP Server&#13;
-                                        Version 1.3 Documentation describes how redirects can&#13;
-                                    be specified in Apache 1.3.</loc>describes how redirects can&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/1.3/mod/mod_alias.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Module mod_alias</loc>in the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/1.3/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache HTTP Server&#13;
+                                        Version 1.3 Documentation</loc>describes how redirects can&#13;
                                     be specified in Apache 1.3.</p>
         </item>
       </ulist>

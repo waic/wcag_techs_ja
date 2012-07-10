@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH16">
-  <short-name>標準コンポーネントに対するクリックイベントを使用して、アクションをキーボードによって操作可能にする</short-name>
+  <short-name>FLASH16： 標準コンポーネントに対するクリックイベントを使用して、アクションをキーボードによって操作可能にする</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

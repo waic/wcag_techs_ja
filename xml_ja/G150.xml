@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G150">
-  <short-name>ライブの音声しか含まないコンテンツに対して、テキストベースの代替コンテンツを提供する</short-name>
+  <short-name>G150: ライブの音声しか含まないコンテンツに対して、テキストベースの代替コンテンツを提供する</short-name>
   <applicability>
     <p>ライブの音声しか含まない情報を提示する全てのウェブコンテンツ技術</p>
   </applicability>
@@ -24,11 +24,7 @@
         </item>
         <item>
           <p>
-            <span class="diff-add">
-              <span class="difftext">[ここから追加] </span>
-              <span>代替テキストが提供されているかどうかをランダムにチェックすると、手順とポリシーの通りである。</span>
-              <span class="difftext">[追加ここまで]</span>
-            </span>
+            <phrase diff="add">代替テキストが提供されているかどうかをランダムにチェックすると、手順とポリシーの通りである。</phrase>
           </p>
         </item>
       </olist>
@@ -36,7 +32,7 @@
     <expected-results>
       <ulist>
         <item>
-          <p>1.<span class="diff-add"><span class="difftext">[ここから追加] </span><span> 及び 2. </span><span class="difftext">[追加ここまで]</span></span>を満たしている。</p>
+          <p>1.<phrase diff="add"> 及び 2. </phrase>を満たしている。</p>
         </item>
       </ulist>
       <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>

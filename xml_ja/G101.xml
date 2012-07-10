@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G101">
-  <short-name>一般的ではない、又は限定された用法で用いられている単語や語句の定義を提供する</short-name>
+  <short-name>G101: 一般的ではない、又は限定された用法で用いられている単語や語句の定義を提供する</short-name>
   <applicability>
     <p>テキストを含むあらゆるウェブコンテンツ技術</p>
   </applicability>

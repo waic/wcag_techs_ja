@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR33">
-  <short-name>スクリプトを用いてコンテンツをスクロールし、それを一時停止できるメカニズムを提供する</short-name>
+  <short-name>SCR33: スクリプトを用いてコンテンツをスクロールし、それを一時停止できるメカニズムを提供する</short-name>
   <applicability>
     <p>スクリプトでコントロールされる、コンテンツのスクロールをサポートするウェブコンテンツ技術 </p>
   </applicability>
@@ -164,9 +164,9 @@ addLoadEvent(initScroller)</code>
       <ulist>
         <item>
           <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.websemantics.co.uk/tutorials/accessible_scroller/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">webSemanticによるアクセシブルなスクローラーwebSemantics Accessible Scroller</loc>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.websemantics.co.uk/tutorials/accessible_scroller/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">webSemanticによるアクセシブルなスクローラー</loc>
             <br/>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.websemantics.co.uk/tutorials/accessible_scroller/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">webSemanticによるアクセシブルなスクローラーwebSemantics Accessible Scroller</loc>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.websemantics.co.uk/tutorials/accessible_scroller/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">webSemantics Accessible Scroller</loc>
           </p>
         </item>
       </ulist>

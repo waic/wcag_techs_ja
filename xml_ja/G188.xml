@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G188">
-  <short-name>行送りや段落の間隔を広げるボタンをウェブページ上に提供する</short-name>
+  <short-name>G188: 行送りや段落の間隔を広げるボタンをウェブページ上に提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>
@@ -9,11 +9,10 @@
   </applies-to>
   <ua-issues/>
   <description><p>多くの認知障害を持つ人々は行間がシングル・スペースに設定されたテキストを読む事が困難である。行の高さを増やすボタンは彼らが内容を読む助けとなる。段落の間が離れている状態を維持するためには、段落間の幅は、行送り幅の少なくとも1.5倍の高さになるように広げられるべきである。</p>
-	<div class="note">
-		<p class="prefix">
+	<note><p class="prefix">
 		<em>注：</em>この実装方法は、非適合コンテンツに対して、<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョンのページ</a>を提供するための、スタイルスイッチの実装方法と組み合わせて用いることができる。詳細は、<a href="C29.html">C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</a> (CSS)、及び<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照のこと。
 		</p>
-	</div></description>
+	</note></description>
   <examples>
     <eg-group>
       <description><p>ページを変更するための標準的なスタイル・スイッチングを用いる。スタイルシートを切り替えるためのボタン又はリンクをページに用意する。新しいスタイルシートには、行送りを広げるルールと段落の間隔を広げるクラスが含まれている。

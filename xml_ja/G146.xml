@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G146">
-  <short-name>リキッドレイアウトを用いる</short-name>
+  <short-name>G146: リキッドレイアウトを用いる</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

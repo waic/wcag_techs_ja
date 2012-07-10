@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G192">
-  <short-name>仕様に完全に準拠する</short-name>
+  <short-name>G192: 仕様に完全に準拠する</short-name>
   <applicability>
     <p>この実装方法は仕様のある全てのマークアップ言語に関連する</p>
   </applicability>
@@ -26,9 +26,9 @@
           <p>全てのウェブコンテンツ技術が仕様に従って使用される。</p>
         </item>
       </olist>
-      <div class="note">
+      <note>
         <p class="prefix"><em>注記: </em>バリデータは、誤りを見つけるために素晴らしいツールであるが、通常、コンテンツが仕様に対して完全準拠となっていない事例のすべてを見つけられるものではない。</p>
-      </div>
+      </note>
     </procedure>
     <expected-results>
       <ulist>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H62">
-  <short-name>ruby要素を用いる</short-name>
+  <short-name>H62: ruby要素を用いる</short-name>
   <applicability>
     <p>XHTML 1.1</p>
   </applicability>

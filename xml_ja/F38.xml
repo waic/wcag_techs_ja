@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F38">
-  <short-name>達成基準 1.1.1 の不適合事例 － HTMLで装飾を目的にして用いられている非テキストコンテンツのalt属性を省略している</short-name>
+  <short-name>F38: 達成基準 1.1.1 の不適合事例 － HTMLで装飾を目的にして用いられている非テキストコンテンツのalt属性を省略している</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>
@@ -8,11 +8,9 @@
     <success-criterion idref="text-equiv-all"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この文書は、支援技術によって無視されなければならない画像の代替テキストに対する不適合事例について述べている。alt属性が全くない場合、支援技術は非テキストコンテンツを無視することができない。この達成基準の不適合とならないように、alt属性を<span class="diff-change"><span class="difftext">[ここから変更] </span><span>提供</span><span class="difftext">[変更ここまで]</span></span>し、空（alt ="" 又は alt =" "）にしなければならない。</p>
+  <description><p>この文書は、支援技術によって無視されなければならない画像の代替テキストに対する不適合事例について述べている。alt属性が全くない場合、支援技術は非テキストコンテンツを無視することができない。この達成基準の不適合とならないように、alt属性を<phrase diff="chg">提供</phrase>し、空（alt ="" 又は alt =" "）にしなければならない。</p>
           
-               <div class="note">
-<p class="prefix"><em>注記: </em><code>alt=" "</code>でも有効だが、<code>alt=""</code>とすることを推奨する。</p>
-</div></description>
+               <note><p class="prefix"><em>注記: </em><code>alt=" "</code>でも有効だが、<code>alt=""</code>とすることを推奨する。</p></note></description>
   <examples/>
   <resources/>
   <related-techniques/>

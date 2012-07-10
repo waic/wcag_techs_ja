@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G18">
-  <short-name>テキスト（及び画像化された文字）とその背景の間に、少なくとも4.5:1以上のコントラスト比をもたせる</short-name>
+  <short-name>G18: テキスト（及び画像化された文字）とその背景の間に、少なくとも4.5:1以上のコントラスト比をもたせる</short-name>
   <applicability>
     <p>あらゆるウェブコンテンツ技術</p>
   </applicability>
@@ -25,13 +25,7 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.paciellogroup.com/resources/contrast-analyser.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser – Application&#13;
-&#13;
-&#13;
-カラーコントラストアナライザー 日本語版</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser – Application&#13;
-&#13;
-&#13;
-カラーコントラストアナライザー 日本語版</loc></p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.paciellogroup.com/resources/contrast-analyser.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser – Application</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">カラーコントラストアナライザー 日本語版</loc></p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">カラーコントラストアナライザー 日本語版</loc></p>
@@ -74,21 +68,16 @@
 <li><p>G<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>G</strong> = G<sub>sRGB</sub>/12.92、それ以外の場合：<strong>G</strong> = ((G<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
 <li><p>B<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>B</strong> = B<sub>sRGB</sub>/12.92、それ以外の場合：<strong>B</strong> = ((B<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
 </ul>
-<div class="note">
-<p class="prefix">また、R<sub>sRGB</sub>, G<sub>sRGB</sub>, 及び B<sub>sRGB</sub>は以下のように定義される：</p>
-</div>
+<note><p class="prefix">また、R<sub>sRGB</sub>, G<sub>sRGB</sub>, 及び B<sub>sRGB</sub>は以下のように定義される：</p></note>
 <ul>
 <li><p>R<sub>sRGB</sub> = R<sub>8bit</sub>/255</p></li>
 <li><p>G<sub>sRGB</sub> = G<sub>8bit</sub>/255</p></li>
 <li><p>B<sub>sRGB</sub> = B<sub>8bit</sub>/255</p></li>
 </ul>
-<div class="note">
-<p class="prefix">"^"記号は指数演算子である。</p>
-</div>
+<note><p class="prefix">"^"記号は指数演算子である。</p></note>
 </li></ul>
-<div class="note">
-<p class="prefix"><em>注意：</em>エイリアス文字では文字の端から2ピクセルの部分の相対輝度の値を使用する。</p>
-</div></item>
+<note><p class="prefix"><em>注意：</em>エイリアス文字では文字の端から2ピクセルの部分の相対輝度の値を使用する。</p>
+</note></item>
         <item><p>色の相対輝度 L = 0.2126 * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> と定義されている。この場合の<strong>R</strong>, <strong>G</strong> 及び <strong>B</strong> は：</p>
 <ul>
 <li>
@@ -97,17 +86,13 @@
 <li><p>G<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>G</strong> = G<sub>sRGB</sub>/12.92、それ以外の場合：<strong>G</strong> = ((G<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
 <li><p>B<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>B</strong> = B<sub>sRGB</sub>/12.92、それ以外の場合：<strong>B</strong> = ((B<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
 </ul>
-<div class="note">
-<p class="prefix">また、R<sub>sRGB</sub>, G<sub>sRGB</sub>, 及び B<sub>sRGB</sub>は以下のように定義される：</p>
-</div>
+<note><p class="prefix">また、R<sub>sRGB</sub>, G<sub>sRGB</sub>, 及び B<sub>sRGB</sub>は以下のように定義される：</p></note>
 <ul>
 <li><p>R<sub>sRGB</sub> = R<sub>8bit</sub>/255</p></li>
 <li><p>G<sub>sRGB</sub> = G<sub>8bit</sub>/255</p></li>
 <li><p>B<sub>sRGB</sub> = B<sub>8bit</sub>/255</p></li>
 </ul>
-<div class="note">
-<p class="prefix">"^"記号は指数演算子である。</p>
-</div></item>
+<note><p class="prefix">"^"記号は指数演算子である。</p></note></item>
         <item>
           <p>R<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>R</strong> = R<sub>sRGB</sub>/12.92、それ以外の場合： <strong>R</strong> = ((R<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
         </item>

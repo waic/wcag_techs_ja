@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR22">
-  <short-name>スクリプトを用いて、点滅を制御し、5秒以内に停止させる</short-name>
+  <short-name>SCR22: スクリプトを用いて、点滅を制御し、5秒以内に停止させる</short-name>
   <applicability>
     <p>スクリプトで制御されたコンテンツの点滅をサポートするウェブコンテンツ技術</p>
   </applicability>

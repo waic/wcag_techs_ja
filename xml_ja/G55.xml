@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G55">
-  <short-name>定義にリンクする</short-name>
+  <short-name>G55: 定義にリンクする</short-name>
   <applicability>
     <p>リンク機能を含む全てのウェブコンテンツ技術</p>
   </applicability>

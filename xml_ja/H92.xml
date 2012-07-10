@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H92">
-  <short-name>フォーム・コントロールのラベルに色を用いる際にはテキストで補足する</short-name>
+  <short-name>H92: フォーム・コントロールのラベルに色を用いる際にはテキストで補足する</short-name>
   <applicability>
     <p>色及びテキストをサポートするウェブコンテンツ技術すべて</p>
   </applicability>

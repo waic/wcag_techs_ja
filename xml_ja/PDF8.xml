@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="PDF8">
-  <short-name>構造エレメントの E エントリによって略語の定義を提供する</short-name>
+  <short-name>PDF8: 構造エレメントの E エントリによって略語の定義を提供する</short-name>
   <applicability>
     <p>略語または頭字語を含んでいるタグ付きPDF文書</p>
   </applicability>
@@ -65,7 +65,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>Section 14.9.5 (Expansion of Abbreviations and Acronyms) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 14.9.5 (Expansion of Abbreviations and Acronyms) in PDF 1.7 (ISO 32000-1)</loc></p>
+          <p>Section 14.9.5 (Expansion of Abbreviations and Acronyms) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/Acrobat/9.0/Professional/WS58a04a822e3e50102bd615109794195ff-7ce1.w.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Add	alternate text and supplementary information to tags</loc></p>

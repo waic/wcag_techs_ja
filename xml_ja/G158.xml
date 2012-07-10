@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G158">
-  <short-name>時間の経過に伴って変化するメディアの音声しか含まないコンテンツに対して代替コンテンツを提供する</short-name>
+  <short-name>G158: 時間の経過に伴って変化するメディアの音声しか含まないコンテンツに対して代替コンテンツを提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術。</p>
   </applicability>

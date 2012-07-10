@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G168">
-  <short-name>選択されたアクションを続行するために確認を求める</short-name>
+  <short-name>G168: 選択されたアクションを続行するために確認を求める</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

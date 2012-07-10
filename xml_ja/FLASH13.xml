@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH13">
-  <short-name>HTML の言語属性を使用して Flash コンテンツの言語を指定する</short-name>
+  <short-name>FLASH13： HTML の言語属性を使用して Flash コンテンツの言語を指定する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

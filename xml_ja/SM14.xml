@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SM14">
-  <short-name>SMIL 2.0で、同期した映像ストリームを通じて手話通訳を提供する</short-name>
+  <short-name>SM14: SMIL 2.0で、同期した映像ストリームを通じて手話通訳を提供する</short-name>
   <applicability>
     <p>SMIL 2.0</p>
   </applicability>

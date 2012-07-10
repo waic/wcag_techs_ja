@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H65">
-  <short-name>label要素を用いることができないとき、title属性を用いてフォーム・コントロールを特定する</short-name>
+  <short-name>H65: label要素を用いることができないとき、title属性を用いてフォーム・コントロールを特定する</short-name>
   <applicability>
     <p><code>value</code>属性、<code>alt</code>属性、または要素内容で特定できないHTML及びXHTMLのフォーム・コントロール</p>
   </applicability>
@@ -81,7 +81,7 @@ type="text" size="4" value="" &gt;
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 The&#13;
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/global.html#h-7.4.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The&#13;
                     title attribute</loc></p>
         </item>
         <item>

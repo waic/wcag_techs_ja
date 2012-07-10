@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G195">
-  <short-name>コンテンツ制作者が提供する視認性に優れたフォーカスインジケータを用いる</short-name>
+  <short-name>G195: コンテンツ制作者が提供する視認性に優れたフォーカスインジケータを用いる</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

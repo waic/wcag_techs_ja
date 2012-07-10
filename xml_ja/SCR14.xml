@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR14">
-  <short-name>スクリプトを用いて、不可欠ではないアラートの表示を任意にする</short-name>
+  <short-name>SCR14: スクリプトを用いて、不可欠ではないアラートの表示を任意にする</short-name>
   <applicability>
     <p>緊急ではない情報提供のアラートにスクリプトを使用するウェブコンテンツ技術</p>
   </applicability>

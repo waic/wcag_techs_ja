@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C28">
-  <short-name>em単位を用いて、テキストコンテナのサイズを指定する</short-name>
+  <short-name>C28: em単位を用いて、テキストコンテナのサイズを指定する</short-name>
   <applicability>
     <p>CSS</p>
   </applicability>

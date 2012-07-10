@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G127">
-  <short-name>技術特有の実装方法を用いて、そのウェブページとその他の多くのウェブページとの関係を示す</short-name>
+  <short-name>G127: 技術特有の実装方法を用いて、そのウェブページとその他の多くのウェブページとの関係を示す</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

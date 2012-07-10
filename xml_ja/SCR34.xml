@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR34">
-  <short-name>テキストサイズに応じて拡大するように、サイズ及びポジションを定める</short-name>
+  <short-name>SCR34: テキストサイズに応じて拡大するように、サイズ及びポジションを定める</short-name>
   <applicability>
     <p>クライアントサイド・スクリプティング</p>
   </applicability>

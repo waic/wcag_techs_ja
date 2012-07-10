@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G87">
-  <short-name>クローズド・キャプションを提供する</short-name>
+  <short-name>G87: クローズド・キャプションを提供する</short-name>
   <applicability>
     <p>ユーザーエージェントがクローズドキャプションをサポートしている音声/映像のウェブコンテンツ技術</p>
   </applicability>

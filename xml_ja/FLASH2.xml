@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH2">
-  <short-name>Flash 内の非テキストオブジェクトに説明プロパティを設定する</short-name>
+  <short-name>FLASH2： Flash 内の非テキストオブジェクトに説明プロパティを設定する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

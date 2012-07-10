@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H69">
-  <short-name>コンテンツの各セクションの開始位置に見出し要素を提供する</short-name>
+  <short-name>H69: コンテンツの各セクションの開始位置に見出し要素を提供する</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>
@@ -9,7 +9,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>JAWS及びWindows-Eyesは、見出し要素を用いたナビゲーション機能を提供しており、見出しレベルに関する情報も提供している。また、Operaは、見出し要素ごとに移動できるメカニズムを提供している。他のユーザーエージェントでも、追加的なプラグインが見出し要素を用いたナビゲーション機能をサポートしている。<span class="diff-add"><span class="difftext">[ここから追加] </span><span>プラグインに関しては、「参考リソース」のセクションを参照のこと。</span><span class="difftext">[追加ここまで]</span></span></p>
+      <p>JAWS及びWindows-Eyesは、見出し要素を用いたナビゲーション機能を提供しており、見出しレベルに関する情報も提供している。また、Operaは、見出し要素ごとに移動できるメカニズムを提供している。他のユーザーエージェントでも、追加的なプラグインが見出し要素を用いたナビゲーション機能をサポートしている。<phrase diff="add">プラグインに関しては、「参考リソース」のセクションを参照のこと。</phrase></p>
     </ua-issue>
   </ua-issues>
   <description><p>
@@ -37,7 +37,7 @@
                 
                   </li>
 </ul>
-<p><span class="diff-delete"><span class="difftext">[ここから削除] </span><span>いくつかのウェブコンテンツ技術において、</span><span class="difftext">[削除ここまで]</span></span>見出しは論理的な階層を伝達することを目的としている。下位レベルの見出しを飛ばすと、文書構造がきちんと検討されなかったのではないか、又は一部の見出しが意味ではなく視覚的な表現を得るために選択されたのではないか、といった印象を与えてしまうかもしれない。したがって、コンテンツ制作者には見出しを階層的に入れ子にすることが推奨される。</p>
+<p><phrase diff="del">いくつかのウェブコンテンツ技術において、</phrase>見出しは論理的な階層を伝達することを目的としている。下位レベルの見出しを飛ばすと、文書構造がきちんと検討されなかったのではないか、又は一部の見出しが意味ではなく視覚的な表現を得るために選択されたのではないか、といった印象を与えてしまうかもしれない。したがって、コンテンツ制作者には見出しを階層的に入れ子にすることが推奨される。</p>
             
 						<p>見出しは、コンテンツの中の重要なセクションの開始位置を示すものであるため、支援技術のユーザーが適切な見出しまで直接ジャンプしてから、コンテンツを読み始めることができる。つまり、そのコンテンツに到達するのに時間を要していたユーザーが、見出しのマークアップによってより早く到達できるようになる。</p>
           
@@ -111,32 +111,18 @@
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://meyerweb.com/eric/thoughts/2004/07/21/pick-a-heading/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pick a&#13;
-                    Heading Eric Meyer</loc>Eric Meyer</p>
+                    Heading</loc>Eric Meyer</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc></p>
         </item>
         <item>
-          <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/201003/heading_navigation_in_web_browsers" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] Heading navigation in web browsers[追加ここまで]</loc>
+          <p diff="add">
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.456bereastreet.com/archive/201003/heading_navigation_in_web_browsers" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Heading navigation in web browsers</loc>
           </p>
         </item>
         <item>
-          <p>Firefoxでは、以下のプラグインがキーボード操作による見出しナビゲーション機能を提供している：<span class="diff-change"><span class="difftext">[ここから変更] </span><a href="https://addons.mozilla.org/en-US/firefox/addon/accessibility-evaluation-toolb/">Accessibility Evaluation Toolbar</a><span class="difftext">[変更ここまで]</span></span><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/heading-navigation-greasemonkey-user-script.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから追加] Firefoxでは、以下のプラグインがキーボード操作による見出しナビゲーション機能を提供している：[ここから変更] Accessibility Evaluation Toolbar[変更ここまで]Heading Navigation Greasemonkey User Script[追加ここまで]</loc></p>
-        </item>
-        <item>
-          <p>
-            <span class="diff-change">
-              <span class="difftext">[ここから変更] </span>
-              <a href="https://addons.mozilla.org/en-US/firefox/addon/accessibility-evaluation-toolb/">Accessibility Evaluation Toolbar</a>
-              <span class="difftext">[変更ここまで]</span>
-            </span>
-          </p>
-        </item>
-        <item>
-          <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/heading-navigation-greasemonkey-user-script.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Heading Navigation Greasemonkey User Script</loc>
-          </p>
+          <p diff="add">Firefoxでは、以下のプラグインがキーボード操作による見出しナビゲーション機能を提供している：</p>
         </item>
       </ulist>
     </see-also>

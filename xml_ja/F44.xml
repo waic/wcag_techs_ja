@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F44">
-  <short-name>達成基準 2.4.3 の不適合事例 － tabindex属性を用いて、意味及び操作性を保持しないタブ順序を指定している</short-name>
+  <short-name>F44: 達成基準 2.4.3 の不適合事例 － tabindex属性を用いて、意味及び操作性を保持しないタブ順序を指定している</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>
@@ -19,12 +19,12 @@
     <eg-group role="failure">
       <description><p>次の事例は、代替のタブ順序を指定するためにtabindexを誤って用いている。</p>
 </description>
-      <code><span class="diff-change"><span class="difftext">[ここから変更] </span><span>&lt;ol&gt;</span><span class="difftext">[変更ここまで]</span></span>
+      <code><phrase diff="chg">&lt;ol&gt;</phrase>
    &lt;li&gt;&lt;a href="main.html" tabindex="1"&gt;ホーム&lt;/a&gt;&lt;/li&gt;
    &lt;li&gt;&lt;a href="chapter1.html" tabindex="4"&gt;第1章&lt;/a&gt;&lt;/li&gt;
    &lt;li&gt;&lt;a href="chapter2.html" tabindex="3"&gt;第2章&lt;/a&gt;&lt;/li&gt;
    &lt;li&gt;&lt;a href="chapter3.html" tabindex="2"&gt;第3章&lt;/a&gt;&lt;/li&gt;
-<span class="diff-change"><span class="difftext">[ここから変更] </span><span>&lt;/ol&gt;</span><span class="difftext">[変更ここまで]</span></span></code>
+<phrase diff="chg">&lt;/ol&gt;</phrase></code>
       <description><p>このリストをTabキーを用いてナビゲートする場合、リストは、ホーム、第3章、第2章、第1章、という順序でナビゲートされ、コンテンツにおける順序通りではなくなってしまう。</p>
 </description>
     </eg-group>
@@ -39,7 +39,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/interact/forms.html#adef-tabindex" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Tabbing navigation</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/interact/forms.html#adef-tabindex" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Tabbing navigation</loc></p>
         </item>
       </ulist>
     </see-also>

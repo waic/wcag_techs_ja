@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G162">
-  <short-name>ラベルを配置して、関係性を最大限に予測できるようにする</short-name>
+  <short-name>G162: ラベルを配置して、関係性を最大限に予測できるようにする</short-name>
   <applicability>
     <p>フォームをサポートするウェブコンテンツ技術全て</p>
   </applicability>

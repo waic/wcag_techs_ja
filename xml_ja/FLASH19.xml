@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH19">
-  <short-name>スクリプトを用いて、ユーザーに制限時間が間もなく終了することを警告し、制限時間を延長する方法を提供する</short-name>
+  <short-name>FLASH19： スクリプトを用いて、ユーザーに制限時間が間もなく終了することを警告し、制限時間を延長する方法を提供する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

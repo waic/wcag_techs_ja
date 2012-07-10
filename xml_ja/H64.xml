@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H64">
-  <short-name>frame要素及びiframe要素のtitle属性を用いる</short-name>
+  <short-name>H64： frame要素及びiframe要素のtitle属性を用いる</short-name>
   <applicability>
     <p><code>frame</code>要素又は<code>iframe</code>要素を用いているHTML及びXHTMLドキュメント</p>
   </applicability>

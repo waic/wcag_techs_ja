@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G75">
-  <short-name>コンテンツの更新を延期するメカニズムを提供する</short-name>
+  <short-name>G75: コンテンツの更新を延期するメカニズムを提供する</short-name>
   <applicability>
     <p>自動更新するコンテンツ</p>
   </applicability>

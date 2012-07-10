@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR24">
-  <short-name>プログレッシブ・エンハンスメントを用いて、利用者の要求に応じて新しいウィンドウを開く</short-name>
+  <short-name>SCR24: プログレッシブ・エンハンスメントを用いて、利用者の要求に応じて新しいウィンドウを開く</short-name>
   <applicability>
     <p>HTML 4.01 及び XHTML 1.0 </p>
   </applicability>

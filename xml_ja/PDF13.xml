@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="PDF13">
-  <short-name>PDF 文書内のリンクに対して /Alt エントリを使用して代替テキストを提供する</short-name>
+  <short-name>PDF13: PDF 文書内のリンクに対して /Alt エントリを使用して代替テキストを提供する</short-name>
   <applicability>
     <p>Tagged リンクを含む PDF 文書. </p>
   </applicability>
@@ -62,7 +62,7 @@ endobj</code>
     <see-also>
       <ulist>
         <item>
-          <p>Section 14.9.4 (Replacement Text) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 14.9.4 (Replacement Text) in PDF 1.7 (ISO 32000-1)</loc></p>
+          <p>Section 14.9.4 (Replacement Text) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
           <p>

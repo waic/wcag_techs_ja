@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR32">
-  <short-name>クライアントサイドのバリデーションを提供し、DOMを介してエラーテキストを追加する</short-name>
+  <short-name>SCR32: クライアントサイドのバリデーションを提供し、DOMを介してエラーテキストを追加する</short-name>
   <applicability>
     <p>HTML又はXHTMLで使用されるスクリプト。</p>
   </applicability>
@@ -404,9 +404,8 @@ function checkOptional(bValid, strValue, arClass)
           <p>アンカータグによってエラーメッセージと関連付けられたすべてのフィールドに対して、繰り返す。</p>
         </item>
       </olist>
-      <div class="note">
-				<p class="prefix"><em>注記：</em>上記の手順を、支援技術を用いて実行することも推奨する。</p>
-		</div>
+      <note><p class="prefix"><em>注記：</em>上記の手順を、支援技術を用いて実行することも推奨する。</p>
+		</note>
     </procedure>
     <expected-results>
       <ulist>

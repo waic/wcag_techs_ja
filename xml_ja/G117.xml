@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G117">
-  <short-name>テキストを用いて、テキストの表現のバリエーションによって伝えている情報を伝達する</short-name>
+  <short-name>G117: テキストを用いて、テキストの表現のバリエーションによって伝えている情報を伝達する</short-name>
   <applicability>
     <p>テキストの視覚的な表現のバリエーションをサポートするウェブコンテンツ技術</p>
   </applicability>

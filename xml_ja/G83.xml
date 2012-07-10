@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G83">
-  <short-name>入力が完了していない必須項目を特定するために、テキストの説明文を提供する</short-name>
+  <short-name>G83: 入力が完了していない必須項目を特定するために、テキストの説明文を提供する</short-name>
   <applicability>
     <p>利用者の入力が必須の項目があるコンテンツ</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H91">
-  <short-name>HTMLのフォーム・コントロール及びリンクを用いる</short-name>
+  <short-name>H91： HTMLのフォーム・コントロール及びリンクを用いる</short-name>
   <applicability>
     <p>HTMLのフォーム・コントロール及びリンク</p>
   </applicability>
@@ -164,9 +164,9 @@
       <code>&lt;label for="text_1"&gt;果物の種類&lt;/label&gt;
 &lt;input id="text_1" type="text" value="バナナ"&gt;</code>
       <description><exsubhead>事例 3b</exsubhead><p>
-														事例 3bでは、入力フィールドが事例 3aと同じ役割（Role）<span class="diff-delete"><span class="difftext">[ここから削除] </span><span>と値（Value）</span><span class="difftext">[削除ここまで]</span></span>を持つが、<span class="diff-add"><span class="difftext">[ここから追加] </span><span>値（Value）がなく、</span><span class="difftext">[追加ここまで]</span></span>識別名（Name）を<code>title</code>属性で指定している点が異なる。</p>
+														事例 3bでは、入力フィールドが事例 3aと同じ役割（Role）<phrase diff="del">と値（Value）</phrase>を持つが、<phrase diff="add">値（Value）がなく、</phrase>識別名（Name）を<code>title</code>属性で指定している点が異なる。</p>
 </description>
-      <code>&lt;input id="text_1" type="text" <span class="diff-delete"><span class="difftext">[ここから削除] </span>value="バナナ" <span class="difftext">[削除ここまで]</span></span>title="果物の種類"&gt;</code>
+      <code>&lt;input id="text_1" type="text" <phrase diff="del">value="バナナ" </phrase>title="果物の種類"&gt;</code>
     </eg-group>
     <eg-group>
       <head>チェックボックス</head>
@@ -188,7 +188,7 @@
     <eg-group>
       <head>事例6：セレクトメニュー</head>
       <description><exsubhead>事例 6a</exsubhead><p>
-														事例 6aは、<code>select</code>要素によって「コンボボックス」という役割（Role）を持っている。識別名（Name）は「数量」で、<code>label</code>要素から与えられている。<code>select</code>要素に識別名を付け忘れるのは、よくあるエラーの一つである。値（Value）は、<code>selected</code>属性<span class="diff-change"><span class="difftext">[ここから変更] </span><span>（XHTMLでは値を "<code>selected</code>" と指定）のある</span><span class="difftext">[変更ここまで]</span></span><code>option</code>要素であり、初期値は「2個」ということになる。</p>
+														事例 6aは、<code>select</code>要素によって「コンボボックス」という役割（Role）を持っている。識別名（Name）は「数量」で、<code>label</code>要素から与えられている。<code>select</code>要素に識別名を付け忘れるのは、よくあるエラーの一つである。値（Value）は、<code>selected</code>属性<phrase diff="chg">（XHTMLでは値を "<code>selected</code>" と指定）のある</phrase><code>option</code>要素であり、初期値は「2個」ということになる。</p>
 </description>
       <code>&lt;label for="s1"&gt;数量&lt;/label&gt;
 &lt;select id="s1" size="1"&gt;
@@ -212,7 +212,7 @@
 </description>
       <code>&lt;label for="ta_1"&gt;あなたの発言をここに入力&lt;/label&gt;
 &lt;textarea id="ta_1" &gt;87年前&lt;/textarea&gt;</code>
-      <description><exsubhead>事例 7b</exsubhead><p><span class="diff-change"><span class="difftext">[ここから変更] </span><span>事例 7bは、同じ役割（Role）を持ち、識別名（Name）は<code>title</code>属性を用いて指定していて、値（Value）は空である。</span><span class="difftext">[変更ここまで]</span></span></p>
+      <description><exsubhead>事例 7b</exsubhead><p><phrase diff="chg">事例 7bは、同じ役割（Role）を持ち、識別名（Name）は<code>title</code>属性を用いて指定していて、値（Value）は空である。</phrase></p>
 </description>
       <code>&lt;textarea id="ta_1" title="あなたの発言をここに入力" &gt;87年前&lt;/textarea&gt;</code>
     </eg-group>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH22">
-  <short-name>キーボードで操作可能なアクションを静的エレメントに追加する</short-name>
+  <short-name>FLASH22： キーボードで操作可能なアクションを静的エレメントに追加する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>
@@ -24,7 +24,9 @@
       <head>ムービークリップをボタンとして使用する</head>
       <description><p>この事例では、カスタムムービークリップをボタンとして使用する。キーボードでの操作を可能にするため、tabEnabled を使用してムービークリップをタブの順序に配置する。さらに、カスタムボタンがマウスクリックとスペースバーの打鍵の両方に反応するように、冗長なイベントハンドラを追加する。最後に、ムービークリップの AccessibilityProperties オブジェクトを使用して、カスタムボタンにアクセシブルな名前を付ける。これにより、支援技術でボタンのラベルを認識できるようになる。</p>
 <p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH22/event_handlers_to_static_objects_as3.html">「ムービークリップをボタンとして使用する」のサンプル（英語）</a>で確認できる。 <a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH22/event_handlers_to_static_objects_as3.swf">「ムービークリップをボタンとして使用する」のソース（英語）</a>をダウンロードすることもできる。</p>
-<note><p class="prefix"><em>注記： </em>カスタムボタンはボタンではなくフォーカス可能なグラフィックとして認識されるので、汎用のムービークリップを使用することは一般的に推奨されない。代わりに、標準の Flash の Button コンポーネントを使用するか、「button」タイプの新規シンボルを作成することが望ましい。</p></note></description>
+<note><p class="prefix"><em>注記： </em>カスタムボタンはボタンではなくフォーカス可能なグラフィックとして認識されるので、汎用のムービークリップを使用することは一般的に推奨されない。代わりに、標準の Flash の Button コンポーネントを使用するか、「button」タイプの新規シンボルを作成することが望ましい。</p>
+</note>
+</description>
       <code>import flash.accessibility. *
 import flash.events.KeyboardEvent;
 import flash.events.MouseEvent;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G152">
-  <short-name>数回のループ後（5秒以内）に停止するように、アニメーションGIFを設定する</short-name>
+  <short-name>G152: 数回のループ後（5秒以内）に停止するように、アニメーションGIFを設定する</short-name>
   <applicability>
     <p>アニメーションGIF (GIF89a)をサポートするあらゆるウェブコンテンツ技術</p>
   </applicability>

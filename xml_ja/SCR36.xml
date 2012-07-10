@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR36">
-  <short-name>静的なウィンドウ又はエリアにある、動きのあるテキスト、スクロールするテキスト、又は自動更新されるテキストを利用者が表示できるメカニズムを提供する</short-name>
+  <short-name>SCR36: 静的なウィンドウ又はエリアにある、動きのあるテキスト、スクロールするテキスト、又は自動更新されるテキストを利用者が表示できるメカニズムを提供する</short-name>
   <applicability>
     <p>動く、点滅する、又はテキストを更新し、静的なテキスト・ブロックを生成する全てのウェブコンテンツ技術</p>
   </applicability>
@@ -10,14 +10,15 @@
   <ua-issues/>
   <description><p>スペースが限られているために、スクロールするテキストを表示するウェブページがある。小さなテキストウィンドウの中でテキストをスクロールさせることにより、その速度にあわせて読むことができる利用者にはコンテンツが利用可能となるが、それよりも速度が読むのが遅い利用者や、支援技術の利用者にとっては問題となる。この実装方法では、動きを止めて、テキスト・ブロック全体を静的に利用可能にするメカニズムを提供する。テキストは別ウィンドウかページ中の（より大きな）セクションで利用可能になるだろう。そうすることで、利用者はテキストを自分の速度で読むことができる。</p>
 		<p>この実装方法は、動いているテキストが全て同時に画面に表示できない場合（例：長いチャットでの会話）には適用されない。</p>
-		<div class="note">
-				<p class="prefix"><em>注記：</em><em>Note: </em>この実装方法は、不適合のコンテンツのための<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>のページを表示するためのスタイルスイッチの実装方法とあわせて利用できる。詳細については、<a href="C29.html">C29： スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</a> (CSS)及び<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照のこと。</p>
-		</div></description>
+		<note><p class="prefix"><em>注記：</em><em>Note: </em>この実装方法は、不適合のコンテンツのための<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>のページを表示するためのスタイルスイッチの実装方法とあわせて利用できる。詳細については、<a href="C29.html">C29： スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</a> (CSS)及び<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照のこと。</p>
+		</note></description>
   <examples>
     <eg-group>
       <head>スクロールするテキストを展開する</head>
       <description><p>大きなテキスト・ブロックがページ中の小さなマーキーの範囲をスクロールする。ボタンにより、利用者はスクロールを止め、テキスト・ブロック全体を表示することができる。</p>
-<note><p class="prefix"><em>注記：</em>このコード例ではCSSとJavaScriptの両方が利用可能で有効になっている必要がある。 </p></note><p>CSS部分：</p>
+<note><p class="prefix"><em>注記：</em>このコード例ではCSSとJavaScriptの両方が利用可能で有効になっている必要がある。 </p>
+				</note>
+<p>CSS部分：</p>
 </description>
       <code>#scrollContainer {
         visibility: visible;

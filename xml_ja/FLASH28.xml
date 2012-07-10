@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH28">
-  <short-name>Flash で ASCII アート、顔文字、リート語の代替テキストを提供する</short-name>
+  <short-name>FLASH28： Flash で ASCII アート、顔文字、リート語の代替テキストを提供する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

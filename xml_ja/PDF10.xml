@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="PDF10">
-  <short-name>文書内のインタラクティブなフォーム・コントロールにラベルを付ける</short-name>
+  <short-name>PDF10：PDF 文書内のインタラクティブなフォーム・コントロールにラベルを付ける</short-name>
   <applicability>
     <ul>
 <li>

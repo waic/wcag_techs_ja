@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="PDF5">
-  <short-name>PDF フォームで必須項目のフォーム・コントロールを特定する</short-name>
+  <short-name>PDF5: PDF フォームで必須項目のフォーム・コントロールを特定する</short-name>
   <applicability>
     <p>Tagged PDF documents with forms</p>
   </applicability>
@@ -89,7 +89,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>Section 12.7 (Interactive Forms) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 12.7 (Interactive Forms) in PDF&#13;
+          <p>Section 12.7 (Interactive Forms) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF&#13;
     				1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>

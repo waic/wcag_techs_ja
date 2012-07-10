@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H56">
-  <short-name>インライン要素のdir属性を用いて、入れ子になったテキストの表記方向に伴う問題を解決する</short-name>
+  <short-name>H56: インライン要素の<code>dir</code>属性を用いて、入れ子になったテキストの表記方向に伴う問題を解決する</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>

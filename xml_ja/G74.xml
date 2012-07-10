@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G74">
-  <short-name>短い説明の中で長い説明のある場所を示して、非テキストコンテンツの近くにあるテキストで長い説明を提供する</short-name>
+  <short-name>G74: 短い説明の中で長い説明のある場所を示して、非テキストコンテンツの近くにあるテキストで長い説明を提供する</short-name>
   <applicability>
     <p> 全てのウェブコンテンツ技術</p>
   </applicability>

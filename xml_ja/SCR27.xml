@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR27">
-  <short-name>DOMを用いて、ページ上にある複数のセクションを並び替える</short-name>
+  <short-name>SCR27: DOMを用いて、ページ上にある複数のセクションを並び替える</short-name>
   <applicability>
     <p>HTMLおよびXHTML、スクリプト</p>
   </applicability>

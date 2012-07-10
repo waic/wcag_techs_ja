@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G142">
-  <short-name>ズーム機能をサポートする一般に入手可能なユーザーエージェントのあるウェブコンテンツ技術を用いる</short-name>
+  <short-name>G142: ズーム機能をサポートする一般に入手可能なユーザーエージェントのあるウェブコンテンツ技術を用いる</short-name>
   <applicability>
     <p>ズーム機能を提供するユーザーエージェントのある全てのウェブコンテンツ技術</p>
   </applicability>

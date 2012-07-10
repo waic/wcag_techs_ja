@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G190">
-  <short-name>適合している代替バージョンへのリンクを、適合していないオブジェクトの直前で提供する、又は適合していないオブジェクトと関連付ける</short-name>
+  <short-name>G190: 適合している代替バージョンへのリンクを、適合していないオブジェクトの直前で提供する、又は適合していないオブジェクトと関連付ける</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術。</p>
   </applicability>

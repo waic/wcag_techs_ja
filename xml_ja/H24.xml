@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H24">
-  <short-name> イメージマップのarea要素に代替テキストを提供する</short-name>
+  <short-name>H24:  イメージマップの<code>area</code>要素に代替テキストを提供する</short-name>
   <applicability>
     <p>
 						<code>area</code>要素を含むHTML及びXHTMLドキュメント

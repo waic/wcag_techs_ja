@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H76">
-  <short-name>meta要素のrefreshを用いて、クライアントサイドで瞬間的にリダイレクトする</short-name>
+  <short-name>H76: meta要素のrefreshを用いて、クライアントサイドで瞬間的にリダイレクトする</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>
@@ -32,7 +32,7 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="F41.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F41: 達成基準 2.2.1、達成基準 2.2.4、及び 達成基準 3.2.5 の不適合事例 － meta要素によるタイムアウト付きのリフレッシュを用いている も参照のこと。</loc>も参照のこと。</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="F41.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F41: 達成基準 2.2.1、達成基準 2.2.4、及び 達成基準 3.2.5 の不適合事例 － meta要素によるタイムアウト付きのリフレッシュを用いている</loc>も参照のこと。</p>
         </item>
       </ulist>
     </see-also>

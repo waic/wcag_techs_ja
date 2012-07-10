@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G8">
-  <short-name>ムービーに拡張した音声ガイド付を提供する</short-name>
+  <short-name>G8: ムービーに拡張した音声ガイド付を提供する</short-name>
   <applicability>
     <p>音声及び映像をサポートする、あらゆるウェブコンテンツ技術</p>
   </applicability>

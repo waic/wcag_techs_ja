@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G128">
-  <short-name>ナビゲーションバー内で現在位置を示す</short-name>
+  <short-name>G128: ナビゲーションバー内で現在位置を示す</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

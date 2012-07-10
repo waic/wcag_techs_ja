@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F17">
-  <short-name>達成基準 1.3.1 及び 達成基準 4.1.1 の不適合事例 － HTMLで1対1の関係性を示すためのDOMにおける情報が不十分である（例：同じIDを持つラベル間の関係性）</short-name>
+  <short-name>F17: 達成基準 1.3.1 及び 達成基準 4.1.1 の不適合事例 － HTMLで1対1の関係性を示すためのDOMにおける情報が不十分である（例：同じIDを持つラベル間の関係性）</short-name>
   <applicability>
     <p>HTML及びXHTMLに対するドキュメントオブジェクトモデル (DOM) </p>
   </applicability>

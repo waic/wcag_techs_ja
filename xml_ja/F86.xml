@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F86">
-  <short-name>達成基準 4.1.2 の不適合事例 － 例えば電話番号にように、複数に分けられたテキストフィールドのそれぞれに対して、識別名が提供されていない</short-name>
+  <short-name>F86: 達成基準 4.1.2 の不適合事例 － 例えば電話番号にように、複数に分けられたテキストフィールドのそれぞれに対して、識別名が提供されていない</short-name>
   <applicability>
     <p>全般</p>
   </applicability>
@@ -9,9 +9,8 @@
   </applies-to>
   <ua-issues/>
   <description><p>これは、複数のテキストフィールドから成るフォームの入力項目で、その一部又は全部に識別名がないことによる達成基準4.1.2の不適合事例について述べている。多くの場合、複数のテキストフィールドから成るフォームの入力項目の全体に対してラベルが1つあり、そのラベルが最初のテキストフィールドに対してプログラム的に関連付けられているか、又はどのテキストフィールドに対してもプログラム的に関連付けられていない必要がある。</p>
-<div class="note">
-		<p class="prefix"><em>注記： </em>識別名は、必ずしも視覚的に表示しなければならないわけではないが、支援技術に対しては明示されている必要がある。</p>
-</div></description>
+<note><p class="prefix"><em>注記： </em>識別名は、必ずしも視覚的に表示しなければならないわけではないが、支援技術に対しては明示されている必要がある。</p>
+</note></description>
   <examples>
     <eg-group>
       <head>不適合となる</head>
@@ -45,21 +44,21 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/ms695716.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更] Microsoft Active Accessibility 2.0 SDK. Includes Inspect32.exe and other MSAA tools.[変更ここまで]</loc>. Includes Inspect32.exe and other MSAA tools.</p>
+          <p diff="chg"><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/ms695716.aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft Active Accessibility 2.0 SDK</loc>. Includes Inspect32.exe and other MSAA tools.</p>
         </item>
         <item>
-          <p>
-            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://developer.gnome.org/atk/unstable/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更] Gnome Accessibility Toolkit documentation[変更ここまで]</loc>
+          <p diff="chg">
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://developer.gnome.org/atk/unstable/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Gnome Accessibility Toolkit documentation</loc>
           </p>
         </item>
         <item>
-          <p>Gnome Accessibility QA documentation and tools</p>
+          <p diff="del">Gnome Accessibility QA documentation and tools</p>
         </item>
         <item>
-          <p><span class="diff-change"><span class="difftext">[ここから変更] </span><a href="http://www.microsoft.com/download/en/details.aspx?id=18359">Microsoft Internet Explorer Developer Toolbar</a><span class="difftext">[変更ここまで]</span></span>. Allows examination of script-generated DOM in Microsoft Internet Explorer.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.microsoft.com/download/en/details.aspx?id=18359" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest" diff="chg">Microsoft Internet Explorer Developer Toolbar</loc>. Allows examination of script-generated DOM in Microsoft Internet Explorer.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug. Allows examination of script-generated DOM in Firefox.</loc>. Allows examination of script-generated DOM in Firefox.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://getfirebug.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Firebug</loc>. Allows examination of script-generated DOM in Firefox.</p>
         </item>
       </ulist>
     </see-also>

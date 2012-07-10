@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F77">
-  <short-name>達成基準 4.1.1 の不適合事例 － id属性の値が重複している</short-name>
+  <short-name>F77: 達成基準 4.1.1 の不適合事例 － id属性の値が重複している</short-name>
   <applicability>
     <p>HTML4.01とXHTML1.xを含むあらゆるXMLベースのマークアップ言語</p>
   </applicability>
@@ -16,10 +16,9 @@
                <p>そのスキーマでドキュメントをバリデートすることによって、IDの属性値がそのドキュメント内で一意的であることをチェックすることが可能である。なぜなら、どの属性がドキュメント全体にわたって一意的な識別子を有しているかは、
 			   スキーマによって定められているからである。</p>
           
-               <div class="note">
-<p class="prefix"><em>注記1： ほとんどのマークアップ言語では、例えばHTML及びXHTMLにおいてそうであるように、IDの値は属性値である。</em></p>
+               <note><p class="prefix"><em>注記1： ほとんどのマークアップ言語では、例えばHTML及びXHTMLにおいてそうであるように、IDの値は属性値である。</em></p>
                <p class="prefix"><em>注記2：IDを示す属性としてxml:id属性のみを用いるXMLドキュメントでは、xml:idの仕様をサポートするバリデータを用いてXMLドキュメントを解析すればよい。</em></p>
-               </div></description>
+               </note></description>
   <examples>
     <eg-group>
       <description><p>コンテンツ制作者が、オンラインのバリデーション・サービスを使って、すべてのid属性値が一意的であることをチェックしている。</p>
@@ -34,13 +33,13 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2005/REC-xml-id-20050909/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">xml:id Version 1.0 - W3C Recommendation 9 September 2005.</loc>- W3C Recommendation 9 September 2005.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2005/REC-xml-id-20050909/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">xml:id Version 1.0</loc>- W3C Recommendation 9 September 2005.</p>
         </item>
         <item>
-          <p>Extensible Markup Language (XML) 1.0 (Fourth Edition):<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#id" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Extensible Markup Language (XML) 1.0 (Fourth Edition): Validity constraint: ID</loc></p>
+          <p>Extensible Markup Language (XML) 1.0 (Fourth Edition):<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-xml/#id" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Validity constraint: ID</loc></p>
         </item>
         <item>
-          <p>HTML 4.01:<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/global.html#adef-id" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01: id attribute</loc></p>
+          <p>HTML 4.01:<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/global.html#adef-id" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">id attribute</loc></p>
         </item>
       </ulist>
     </see-also>

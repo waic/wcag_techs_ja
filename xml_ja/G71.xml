@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G71">
-  <short-name>すべてのウェブページにヘルプへのリンクを提供する</short-name>
+  <short-name>G71: すべてのウェブページにヘルプへのリンクを提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

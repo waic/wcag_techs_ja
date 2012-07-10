@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH25">
-  <short-name>アクセシブルな名前を設定することによって、フォーム・コントロールにラベルを付ける</short-name>
+  <short-name>FLASH25： アクセシブルな名前を設定することによって、フォーム・コントロールにラベルを付ける</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

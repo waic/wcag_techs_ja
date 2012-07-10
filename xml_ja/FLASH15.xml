@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH15">
-  <short-name>tabIndex プロパティを使用して Flash 内の論理的な読み上げ順序及びタブ順序を指定する</short-name>
+  <short-name>FLASH15： tabIndex プロパティを使用して Flash 内の論理的な読み上げ順序及びタブ順序を指定する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>
@@ -32,15 +32,12 @@
 <ol class="enumar"><li><p>要素をクリックして選択する。</p></li>&#13;
 <li><p>アクセシビリティパネルで、「タブインデックス」フィールドに数値を入力する。この値には、選択されているオブジェクトの読み上げ順序を示す正の整数（最大 65535）を指定する必要がある。タブインデックスに小さい値が設定された要素が先に、大きい値が設定された要素が後に読み上げられる。フレーム内の複数のオブジェクトに同じタブインデックスが設定されている場合は、Flash はオブジェクトがステージ上に配置されている順序に従う。</p></li>&#13;
 <li><p>現在定義されているタブ順序を表示するには、［表示］&gt;［タブ順序の表示］を選択する。個々のオブジェクトの左上にタブインデックスの数値が表示される。</p></li>&#13;
-</ol><div class="note">&#13;
-<p class="prefix"><em>注記： </em>ActionScript のコードを用いて、キーボード操作のナビゲーションのためにタブ順序のインデックスを作成することもできる。</p>&#13;
-</div>&#13;
-<p>上記の手順を以下のスクリーンショットで示す。</p>&#13;
+</ol><note><p class="prefix"><em>注記： </em>ActionScript のコードを用いて、キーボード操作のナビゲーションのためにタブ順序のインデックスを作成することもできる。</p>&#13;
+</note><p>上記の手順を以下のスクリーンショットで示す。</p>&#13;
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/ac_show_tab_order_view.png" alt="画面スクリーンショット：タブ順序を視覚化" height="232" width="214"/></p>&#13;
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/setting_tabindex_in_accessibility_panel.png" alt="画面スクリーンショット：アクセシビリティパネルでタブインデックス値を設定" height="319" width="281"/></p>&#13;
-<div class="note">&#13;
-<p class="prefix"><em>注記： </em>現在の Flash Player では、FLA ファイル内のすべてのオブジェクトをタブインデックス値のリストに追加する必要はない。すべてのオブジェクトにタブインデックスを指定しなくても、スクリーンリーダーは各オブジェクトを正しく読み上げる。</p>&#13;
-</div></description>
+<note><p class="prefix"><em>注記： </em>現在の Flash Player では、FLA ファイル内のすべてのオブジェクトをタブインデックス値のリストに追加する必要はない。すべてのオブジェクトにタブインデックスを指定しなくても、スクリーンリーダーは各オブジェクトを正しく読み上げる。</p>&#13;
+</note></description>
   <examples>
     <eg-group>
       <head>タブインデックスを使用して列の構造をナビゲートする</head>

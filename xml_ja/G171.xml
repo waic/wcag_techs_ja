@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G171">
-  <short-name>利用者の要求に応じてのみ、音声を再生する</short-name>
+  <short-name>G171: 利用者の要求に応じてのみ、音声を再生する</short-name>
   <applicability>
     <p>音を再生できるウェブコンテンツ技術すべて</p>
   </applicability>

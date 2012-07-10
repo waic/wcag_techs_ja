@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G93">
-  <short-name>オープン・キャプション（常に表示）を提供する</short-name>
+  <short-name>G93: オープン・キャプション（常に表示）を提供する</short-name>
   <applicability>
     <p>（クローズドキャプションをサポートしていないものを含む）あらゆる同期したメディアのウェブコンテンツ技術</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR26">
-  <short-name>動的なコンテンツをDOMのそのトリガーとなる要素の直後に挿入する</short-name>
+  <short-name>SCR26: 動的なコンテンツをDOMのそのトリガーとなる要素の直後に挿入する</short-name>
   <applicability>
     <p>HTML及びXHTML、スクリプト</p>
   </applicability>

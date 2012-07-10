@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C20">
-  <short-name>カラム幅に相対サイズを用いて、ブラウザの画面サイズを変更しても各行の文字数が平均80字（日本語は40字）以下を維持できるようにする</short-name>
+  <short-name>C20: カラム幅に相対サイズを用いて、ブラウザの画面サイズを変更しても各行の文字数が平均80字（日本語は40字）以下を維持できるようにする</short-name>
   <applicability>
     <p>CSS</p>
   </applicability>
@@ -20,7 +20,8 @@
       <description><p>
 この例では、<code>div</code>要素の幅はスタイルシートでem単位で指定されている。</p>
 <note><p class="prefix">
-<em>注記：</em>CSSプロパティの<code>max-width</code>は、Internet Explorer 6 以前のバージョンではサポートされていない。</p></note></description>
+<em>注記：</em>CSSプロパティの<code>max-width</code>は、Internet Explorer 6 以前のバージョンではサポートされていない。</p></note>
+</description>
       <code>#main_content {max-width: 70em}</code>
       <description><p>
 テキストのブロックは、コンテンツ内の<code>div</code>要素の中に収められる。</p>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G185">
-  <short-name>HOMEページからサイト上の全てのウェブページにリンクする</short-name>
+  <short-name>G185: HOMEページからサイト上の全てのウェブページにリンクする</short-name>
   <applicability>
     <p>リンク機能を提供する全てのウェブコンテンツ技術</p>
   </applicability>

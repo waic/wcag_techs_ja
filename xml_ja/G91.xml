@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G91">
-  <short-name>リンクの目的を説明したリンクテキストを提供する</short-name>
+  <short-name>G91: リンクの目的を説明したリンクテキストを提供する</short-name>
   <applicability>
     <p>リンク機能を含む全てのウェブコンテンツ技術</p>
   </applicability>

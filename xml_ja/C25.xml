@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C25">
-  <short-name>CSSで、テキスト及び背景の色は指定せずに、ウェブページの各領域の範囲を明確にするためのボーダーやレイアウトを指定する</short-name>
+  <short-name>C25: CSSで、テキスト及び背景の色は指定せずに、ウェブページの各領域の範囲を明確にするためのボーダーやレイアウトを指定する</short-name>
   <applicability>
     <p>CSSを用いているウェブページ</p>
   </applicability>
@@ -33,7 +33,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>BBC's Web page with instructions how to change the browser colors in most browsers</p>
+          <p diff="del">BBC's Web page with instructions how to change the browser colors in most browsers</p>
         </item>
       </ulist>
     </see-also>
@@ -53,7 +53,7 @@
           <p>HTMLで作られたコンテンツの色を変更できるブラウザでウェブページを開く。</p>
         </item>
         <item><p>ブラウザの設定画面で、テキスト、リンク及び背景の色を、現在の設定とは異なる色に変える。</p>
-                        <div class="note"><p class="prefix"><em>注：</em>「ページで指定されている色を無視する」というようなオプションを選択していないことを確認する。</p></div></item>
+                        <note><p class="prefix"><em>注：</em>「ページで指定されている色を無視する」というようなオプションを選択していないことを確認する。</p></note></item>
         <item>
           <p>ページに戻って表示を確認すると、新しく設定したテキスト、リンク及び背景の色で表示されている。</p>
         </item>

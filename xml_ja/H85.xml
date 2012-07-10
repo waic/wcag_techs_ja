@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H85">
-  <short-name>optgroup要素を用いて、select要素内のoption要素をグループ化する</short-name>
+  <short-name>H85: optgroup要素を用いて、select要素内のoption要素をグループ化する</short-name>
   <applicability>
     <p>利用者の入力項目をまとめているHTML及びXHTML</p>
   </applicability>

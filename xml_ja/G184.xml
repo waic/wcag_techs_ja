@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G184">
-  <short-name>フォーム又はテキスト・フィールド一式の先頭に、必要とされる入力フォーマットを説明するテキストの説明文を提供する</short-name>
+  <short-name>G184: フォーム又はテキスト・フィールド一式の先頭に、必要とされる入力フォーマットを説明するテキストの説明文を提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

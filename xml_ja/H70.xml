@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H70">
-  <short-name>フレームを用いて、繰り返されているコンテンツのブロックをグループ化する</short-name>
+  <short-name>H70: フレームを用いて、繰り返されているコンテンツのブロックをグループ化する</short-name>
   <applicability>
     <p>フレームを用いているHTML及びXHTMLドキュメント</p>
   </applicability>
@@ -32,12 +32,10 @@
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 &#13;
-                    The FRAMESET element</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The FRAMESET element</loc></p>
         </item>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 &#13;
-                    The FRAME element</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The FRAME element</loc></p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse4.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Navigation</loc></p>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H79">
-  <short-name>リンクテキストとそれが含まれているデータセル及び関連づけられた見出しセルとを組み合わせて、リンクの目的を特定する</short-name>
+  <short-name>H79: リンクテキストとそれが含まれているデータセル及び関連づけられた見出しセルとを組み合わせて、リンクの目的を特定する</short-name>
   <applicability>
     <p>リンクが含まれる全てのウェブコンテンツ技術</p>
   </applicability>

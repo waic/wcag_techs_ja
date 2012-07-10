@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G153">
-  <short-name>テキストを読みやすくする</short-name>
+  <short-name>G153: テキストを読みやすくする</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

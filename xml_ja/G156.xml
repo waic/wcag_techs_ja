@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G156">
-  <short-name>一般に入手可能なユーザーエージェントで、テキストのブロックの前景及び背景を変更できるウェブコンテンツ技術を用いる</short-name>
+  <short-name>G156: 一般に入手可能なユーザーエージェントで、テキストのブロックの前景及び背景を変更できるウェブコンテンツ技術を用いる</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

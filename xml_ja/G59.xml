@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G59">
-  <short-name>コンテンツ内の順番及び関係に従った順序で、インタラクティブな要素を配置する</short-name>
+  <short-name>G59: コンテンツ内の順番及び関係に従った順序で、インタラクティブな要素を配置する</short-name>
   <applicability>
     <p>インタラクティブな要素を含み、インタラクティブな要素のデフォルトのタブ移動順序を定義している、全てのウェブコンテンツ技術</p>
   </applicability>

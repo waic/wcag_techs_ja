@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR31">
-  <short-name>スクリプトを用いて、フォーカスのある要素の背景色又はボーダーを変更する</short-name>
+  <short-name>SCR31: スクリプトを用いて、フォーカスのある要素の背景色又はボーダーを変更する</short-name>
   <applicability>
     <p>HTML 及び XHTML、CSS、Script</p>
   </applicability>

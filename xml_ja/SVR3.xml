@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SVR3">
-  <short-name>HTTPリファラを用いて、適合しているコンテンツからしか適合していないコンテンツにアクセスできないようにする</short-name>
+  <short-name>SVR3: HTTPリファラを用いて、適合しているコンテンツからしか適合していないコンテンツにアクセスできないようにする</short-name>
   <applicability>
     <p>サーバサイドのスクリプトを用いて生成されたコンテンツで、コンテンツの適合したバージョンがHTTPリファラによって不適合バージョンの代替として提供されているもの</p>
   </applicability>

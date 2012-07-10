@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G200">
-  <short-name>必要なときにだけリンク先を新しいウィンドウおよびタブで開く</short-name>
+  <short-name>G200: 必要なときにだけリンク先を新しいウィンドウおよびタブで開く</short-name>
   <applicability>
     <p>新しいウィンドウを開くウェブページ</p>
   </applicability>
@@ -35,10 +35,10 @@
   <resources>
     <see-also>
       <p>
-        <a href="http://www.webcredible.co.uk/user-friendly-resources/web-usability/new-browser-windows.shtml">Beware of opening links in a new window</a>
+        <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webcredible.co.uk/user-friendly-resources/web-usability/new-browser-windows.shtml" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Beware of opening links in a new window</loc>
       </p>
       <p>
-        <a href="http://www.useit.com/alertbox/990530.html">Top-10 New Mistakes of Web Design</a>
+        <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.useit.com/alertbox/990530.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Top-10 New Mistakes of Web Design</loc>
       </p>
     </see-also>
   </resources>

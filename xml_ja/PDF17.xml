@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="PDF17">
-  <short-name>PDF 文書に一貫性のあるページ番号を指定する</short-name>
+  <short-name>PDF17: PDF 文書に一貫性のあるページ番号を指定する</short-name>
   <applicability>
     <p id="pdf.applicability.general">タグ付き PDF 文書</p>
   </applicability>
@@ -78,7 +78,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>Section 12.4.2 (Page Labels)<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 12.4.2 (Page Labels) PDF 1.7 (ISO 32000-1)</loc></p>
+          <p>Section 12.4.2 (Page Labels)<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
           <p>

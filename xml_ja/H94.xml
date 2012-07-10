@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H94">
-  <short-name>要素には重複した属性がないようにする</short-name>
+  <short-name>H94: 要素には重複した属性がないようにする</short-name>
   <applicability>
     <p>All HTML pages</p>
   </applicability>
@@ -22,16 +22,16 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/Doctype" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Do not forget to add a doctype by the W3C Quality Assurance Initiative explains what doctypes are and why you should use them.</loc>.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/Doctype" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Do not forget to add a doctype by the W3C Quality Assurance Initiative explains what doctypes are and why you should use them</loc>.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Recommended DTDs to use in your Web document by the W3C Quality Assurance Initiative is a list of commonly used declarations.</loc>.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Recommended DTDs to use in your Web document by the W3C Quality Assurance Initiative is a list of commonly used declarations</loc>.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chami.com/html-kit/faq/pages/validate_tools.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">How do I validate my code or check for possible errors? describes the tools in the free editor HTML-Kit for checking HTML, CSS and XML.</loc>.</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chami.com/html-kit/faq/pages/validate_tools.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">How do I validate my code or check for possible errors? describes the tools in the free editor HTML-Kit for checking HTML, CSS and XML</loc>.</p>
         </item>
       </ulist>
-      <p>その他の参考リソースは、<a href="http://waic.jp/docs/WCAG-TECHS/G134.html">G134: ウェブページをバリデートする</a>を参照のこと。</p>
+      <p>その他の参考リソースは、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://waic.jp/docs/WCAG-TECHS/G134.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G134: ウェブページをバリデートする</loc>を参照のこと。</p>
     </see-also>
   </resources>
   <related-techniques/>

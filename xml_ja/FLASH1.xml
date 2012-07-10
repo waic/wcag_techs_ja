@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH1">
-  <short-name>非テキストオブジェクトに名前プロパティを設定する</short-name>
+  <short-name>FLASH1： 非テキストオブジェクトに名前プロパティを設定する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

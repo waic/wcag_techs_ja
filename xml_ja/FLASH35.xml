@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH35">
-  <short-name>スクリプトを使用して、 Flash コンテンツをスクロールする、およびそれを停止するメカニズムを提供する</short-name>
+  <short-name>FLASH35： スクリプトを使用して、 Flash コンテンツをスクロールする、およびそれを停止するメカニズムを提供する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>
@@ -22,7 +22,9 @@
     <eg-group>
       <head>スクロールの一時停止と再開を行うためのトグルボタン</head>
       <description><p>この事例では、テキストを左から右にスクロールさせている。利用者がこのスクロール動作を停止および再開できるようにするためのトグルボタンが用意されている。また、スクロールの速度を落とすためのチェックボックスも用意されている。</p>
-<note><p class="prefix"><em>注記： </em>スクロール速度のオプションについて、この事例で紹介されているよりも多くのオプションを希望する利用者もいる。こうした要求を満たすために、コンテンツ制作者はスライダやドロップダウンリストなどのコントロールを使用して、複数の速度オプションを提供することも可能である。</p></note></description>
+<note><p class="prefix"><em>注記： </em>スクロール速度のオプションについて、この事例で紹介されているよりも多くのオプションを希望する利用者もいる。こうした要求を満たすために、コンテンツ制作者はスライダやドロップダウンリストなどのコントロールを使用して、複数の速度オプションを提供することも可能である。</p>
+</note>
+</description>
       <code>import fl.accessibility.ButtonAccImpl;
 import fl.accessibility.CheckBoxAccImpl;
 

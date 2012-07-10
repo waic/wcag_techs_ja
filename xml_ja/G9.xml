@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G9">
-  <short-name>ライブの同期したメディアに対してキャプションを作成する</short-name>
+  <short-name>G9: ライブの同期したメディアに対してキャプションを作成する</short-name>
   <applicability>
     <p>視聴覚の情報を提示する全てのウェブコンテンツ技術</p>
   </applicability>

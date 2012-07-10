@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G111">
-  <short-name>色とパターンを併用する</short-name>
+  <short-name>G111: 色とパターンを併用する</short-name>
   <applicability>
     <p>画像をサポートするウェブコンテンツ技術全て</p>
   </applicability>

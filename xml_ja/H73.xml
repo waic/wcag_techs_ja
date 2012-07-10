@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H73">
-  <short-name>table要素のsummary属性を用いて、データテーブルの概要を提供する</short-name>
+  <short-name>H73: table要素のsummary属性を用いて、データテーブルの概要を提供する</short-name>
   <applicability>
     <p>HTML 4.01及びXHTML 1.x</p>
   </applicability>
@@ -62,7 +62,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#adef-summary" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 summary attribute</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/tables.html#adef-summary" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">summary attribute</loc></p>
         </item>
       </ulist>
     </see-also>

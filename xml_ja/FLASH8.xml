@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH8">
-  <short-name>フォーム・コントロールのアクセシブルな名前にグループ名を追加する</short-name>
+  <short-name>FLASH8： フォーム・コントロールのアクセシブルな名前にグループ名を追加する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>
@@ -29,7 +29,9 @@
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/groupname.png" alt="画面スクリーンショット：アクセシビリティパネルを用いて、フォーム・コントロールにグループ名を追加" height="236" width="584"/></p><note><p class="prefix"><em>注記： </em>この事例のラジオボタンをアクセシブルにするには、次の2行をムービーのスクリプトに追加する必要がある。
 </p>
 <pre><code>import fl.accessibility.RadioButtonAccImpl;
-RadioButtonAccImpl.enableAccessibility();</code></pre></note><p>このアプローチの実例については、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/radio_button_group_as3.html">「ラジオボタンのアクセシブルな名前にグループ名を追加する」のサンプル（英語）</a>を参照のこと。<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/radio_button_group_as3.swf">「ラジオボタンのアクセシブルな名前にグループ名を追加する」のソース（英語）</a>をダウンロードすることもできる。</p>
+RadioButtonAccImpl.enableAccessibility();</code></pre>
+</note>
+<p>このアプローチの実例については、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/radio_button_group_as3.html">「ラジオボタンのアクセシブルな名前にグループ名を追加する」のサンプル（英語）</a>を参照のこと。<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/radio_button_group_as3.swf">「ラジオボタンのアクセシブルな名前にグループ名を追加する」のソース（英語）</a>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -188,7 +190,9 @@ RadioButtonAccImpl.enableAccessibility();</code></pre></note><p>このアプロ�
 ]);
 addChild(myFieldSet);</code>
       <description><p>このアプローチの実例については、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/grouped_form_controls.html">「プログラムによってラジオボタンのアクセシブルな名前にグループ名を追加する」のサンプル（英語）</a>を参照のこと。<a href="">「プログラムによってラジオボタンのアクセシブルな名前にグループ名を追加する」のソースはこちらからダウンロードできる。</a></p>
-<note><p class="prefix"><em>注記： </em>Adobe Flex を使用すれば、&lt;form&gt;, &lt;formitem&gt; および &lt;formheading&gt; 要素を使用して、このタイプの動作を実現できる。</p></note></description>
+<note><p class="prefix"><em>注記： </em>Adobe Flex を使用すれば、&lt;form&gt;, &lt;formitem&gt; および &lt;formheading&gt; 要素を使用して、このタイプの動作を実現できる。</p>
+</note>
+</description>
     </eg-group>
   </examples>
   <resources/>

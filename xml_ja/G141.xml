@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G141">
-  <short-name>見出しを用いてウェブページを構造化する</short-name>
+  <short-name>G141: 見出しを用いてウェブページを構造化する</short-name>
   <applicability>
     <p>セクションで構成されたコンテンツのあるウェブページ</p>
   </applicability>

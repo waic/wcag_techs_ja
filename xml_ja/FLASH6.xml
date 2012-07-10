@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH6">
-  <short-name>非表示のボタンを使用してアクセシブルなホットスポットを作成する</short-name>
+  <short-name>FLASH6： 非表示のボタンを使用してアクセシブルなホットスポットを作成する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

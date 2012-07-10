@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G194">
-  <short-name>スペルチェック機能を提供し、テキスト入力の修正候補を提示する</short-name>
+  <short-name>G194: スペルチェック機能を提供し、テキスト入力の修正候補を提示する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

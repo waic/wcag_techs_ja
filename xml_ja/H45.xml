@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H45">
-  <short-name>longdesc属性を用いる</short-name>
+  <short-name>H45: longdesc属性を用いる</short-name>
   <applicability>
     <p>短い代替テキストでは説明しきれない画像を含むHTML及びXHTML</p>
   </applicability>

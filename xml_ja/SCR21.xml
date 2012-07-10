@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR21">
-  <short-name>DOM（ドキュメント・オブジェクト・モデル）を用いて、ページにコンテンツを追加する</short-name>
+  <short-name>SCR21: DOM（ドキュメント・オブジェクト・モデル）を用いて、ページにコンテンツを追加する</short-name>
   <applicability>
     <p>HTML及びXHTMLの中で利用されるECMAScript</p>
   </applicability>
@@ -14,9 +14,8 @@
     </ua-issue>
   </ua-issues>
   <description><p>この実装方法の目的は、<code>document.write</code>又は<code>object.innerHTML</code>の代わりにDocument Object Model (DOM)の機能を用いて、ページ中にコンテンツを追加することである。<code>document.write()</code>メソッドはXHTMLで正しいMIMEタイプ(application/xhtml+xml)が指定されているときに動作せず、<code>innerHTML</code>プロパティはDOMの仕様ではないため利用すべきでない。もしDOMの機能を利用してコンテンツを追加すれば、ユーザーエージェントはDOMにアクセスしてコンテンツを取り込むことができる。<code>createElement()</code>関数を使ってDOMの中に要素を作成することもできる。<code>createTextNode()</code>は要素に関連付けられたテキストを作成するのに用いられる。<code>appendChild()</code>、 <code>removeChild()</code>、 <code>insertBefore()</code>及び<code>replaceChild()</code>関数は、要素やノードを追加したり削除したりするのに用いられる。その他のDOM関数は、作成された要素に属性を与えるときに使用される。</p>
-  <div class="note">
-    <p class="prefix"><em>注記：</em>フォーカス可能な要素を文書に追加するとき、<code>tabindex</code>属性を用いて明示的なタブ順序を指定してはならない。なぜなら、文書の中央にフォーカス可能な要素を追加するときに問題が発生するからである。<code>tabindex</code>属性を明示的に設定しないことで、デフォルトのタブ順序が新しい要素に割り当てられるようにする。</p>
-  </div></description>
+  <note><p class="prefix"><em>注記：</em>フォーカス可能な要素を文書に追加するとき、<code>tabindex</code>属性を用いて明示的なタブ順序を指定してはならない。なぜなら、文書の中央にフォーカス可能な要素を追加するときに問題が発生するからである。<code>tabindex</code>属性を明示的に設定しないことで、デフォルトのタブ順序が新しい要素に割り当てられるようにする。</p>
+  </note></description>
   <examples>
     <eg-group>
       <description><p>この例では、クライアントサイドスクリプトの使用法として、フォームの検証方法を紹介している。もしエラーがみつかれば、適切なエラーメッセージが表示される。この例ではDOM関数を使用し、タイトル、エラーに関する短い説明、及びエラー一覧の順序付リストを含むエラー通知を追加している。タイトルの内容はリンクとして書かれているので、focusメソッドを使って利用者の注意をエラーに向けることができる。個別のリスト項目もまた、リンクとして書かれているので、そのリンク先に移動したときにエラーのあるフォームのフィールドにフォーカスできるように書かれている。</p>
@@ -173,7 +172,7 @@ function focusFormField(objAnchor, objEvent, objForm)
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webreference.com/js/column44/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 The Document Object Model, More methods from Webreference.com</loc>from Webreference.com</p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webreference.com/js/column44/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The Document Object Model, More methods</loc>from Webreference.com</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc></p>

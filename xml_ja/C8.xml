@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C8">
-  <short-name>CSS の letter-spacing プロパティを用いて、単語内の文字間隔を調整する</short-name>
+  <short-name>C8: CSS の letter-spacing プロパティを用いて、単語内の文字間隔を調整する</short-name>
   <applicability>
     <p>CSSに対応しているウェブコンテンツ技術全て</p>
   </applicability>

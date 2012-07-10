@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G159">
-  <short-name>時間の経過に伴って変化するメディアの映像しか含まないコンテンツに対して代替コンテンツを提供する</short-name>
+  <short-name>G159: 時間の経過に伴って変化するメディアの映像しか含まないコンテンツに対して代替コンテンツを提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術。</p>
   </applicability>

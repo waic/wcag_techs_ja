@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G160">
-  <short-name>コンテンツを利用するのに理解が不可欠な情報、アイデア及びプロセスの手話バージョンを提供する</short-name>
+  <short-name>G160: コンテンツを利用するのに理解が不可欠な情報、アイデア及びプロセスの手話バージョンを提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>
@@ -19,16 +19,14 @@
 							<p>手話通訳者の見つけ方については、後述の参考リソースの部分に載っている。【訳注：ただし、主に英語圏での情報である。】
 							</p>
 
-               <div class="note">
-<p class="prefix"><em>注記 1：</em>映像ストリームが小さすぎる場合は、手話通訳が見にくくなる。手話通訳を含む映像ストリームを制作する場合は、映像ストリームをアクセシビリティ・サポーテッドなウェブコンテンツ技術でフルスクリーンで再生するメカニズムがあることを確認する。そうでない場合は、映像の中の手話通訳の部分が、映像ストリームがフルスクリーンになった際のサイズまで調節可能にする。</p>
-               <p class="prefix"><em>注記 2：</em>一般的に、手話は単に墨字を符号化したものではないため、コンテンツ制作者は複数種類あるうちのどの手話を用いるかを決めなければならない。通常は主な利用者が使用している手話を用いる。さまざまな利用者を想定する場合は、複数の手話を用いる。複数の手話のための推奨実装方法を参照のこと【訳注：まだ文書化されていない。】。</p>
-</div></description>
+               <note><p class="prefix"><em>注記 1：</em>映像ストリームが小さすぎる場合は、手話通訳が見にくくなる。手話通訳を含む映像ストリームを制作する場合は、映像ストリームをアクセシビリティ・サポーテッドなウェブコンテンツ技術でフルスクリーンで再生するメカニズムがあることを確認する。そうでない場合は、映像の中の手話通訳の部分が、映像ストリームがフルスクリーンになった際のサイズまで調節可能にする。</p>
+               <p class="prefix"><em>注記 2：</em>一般的に、手話は単に墨字を符号化したものではないため、コンテンツ制作者は複数種類あるうちのどの手話を用いるかを決めなければならない。通常は主な利用者が使用している手話を用いる。さまざまな利用者を想定する場合は、複数の手話を用いる。複数の手話のための推奨実装方法を参照のこと【訳注：まだ文書化されていない。】。</p></note></description>
   <examples/>
   <resources>
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.nidcd.nih.gov/health/hearing/asl.asp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">National Institute on Deafness and other Communication Disorders: Information on American Sign Language</loc>: Information on American Sign Language</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.nidcd.nih.gov/health/hearing/asl.asp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">National Institute on Deafness and other Communication Disorders</loc>: Information on American Sign Language</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.actiononhearingloss.org.uk/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Royal National Institute for Deaf People (RNID)</loc></p>
@@ -52,7 +50,7 @@
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.aslservices.com" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">American Sign Language Services, Inc.</loc></p>
         </item>
       </ulist>
-      <p><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/media-equiv-sign.html#media-equiv-sign-resources-head">達成基準 1.2.6（手話通訳）の関連リソース：英語</a>も参照のこと。</p>
+      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/media-equiv-sign.html#media-equiv-sign-resources-head" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">達成基準 1.2.6（手話通訳）の関連リソース：英語</loc>も参照のこと。</p>
     </see-also>
   </resources>
   <related-techniques>

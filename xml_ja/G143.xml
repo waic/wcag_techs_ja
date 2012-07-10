@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G143">
-  <short-name>代替テキストを提供して、CAPTCHAの目的を説明する</short-name>
+  <short-name>G143: 代替テキストを提供して、CAPTCHAの目的を説明する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

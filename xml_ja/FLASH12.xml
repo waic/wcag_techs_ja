@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH12">
-  <short-name>クライアントサイドのバリデーションを提供し、エラーメッセージのテキストをアクセシブルな「説明」によって追加する</short-name>
+  <short-name>FLASH12： クライアントサイドのバリデーションを提供し、エラーメッセージのテキストをアクセシブルな「説明」によって追加する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>
@@ -23,7 +23,9 @@
     <eg-group>
       <head>テキストフィールドのバリデート</head>
       <description><p>この事例では、二つのテキストフィールド（「name」および「zip code」）を含むサンプルフォームが示されている。どちらのフィールドも必須入力である。フォームの「submit」ボタンが押されると、テキストフィールドの値が検証される。テキストフィールドに無効な値が含まれていると、<code>_accProps</code> オブジェクトがそのテキストフィールドに対して生成され、<code>description</code> プロパティにエラーメッセージが設定される。</p>
-<note><p class="prefix"><em>注記： </em>アクセシブルな「説明」（<code>_accProps.description</code> プロパティ）を使用する代わりに、エラーテキストをアクセシブルな「名前」（<code>_accProps.name</code>）に追加することもできる。これは、<code>_accProps.description</code>よりも広範囲の支援技術でサポートされている。</p></note><p>ActionScript 2.0 のコード</p>
+<note><p class="prefix"><em>注記： </em>アクセシブルな「説明」（<code>_accProps.description</code> プロパティ）を使用する代わりに、エラーテキストをアクセシブルな「名前」（<code>_accProps.name</code>）に追加することもできる。これは、<code>_accProps.description</code>よりも広範囲の支援技術でサポートされている。</p>
+</note>
+<p>ActionScript 2.0 のコード</p>
 </description>
       <code>import flash.accessibility. *;
 import mx.accessibilty.ButtonAccImpl;

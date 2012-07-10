@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G90">
-  <short-name>キーボードがトリガーとなるイベント・ハンドラを提供する</short-name>
+  <short-name>G90: キーボードがトリガーとなるイベント・ハンドラを提供する</short-name>
   <applicability>
     <p>コンテンツに機能性を含んでいるウェブコンテンツ技術すべて</p>
   </applicability>

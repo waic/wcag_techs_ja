@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH4">
-  <short-name>Flash で送信ボタンを提供する</short-name>
+  <short-name>FLASH4： Flash で送信ボタンを提供する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

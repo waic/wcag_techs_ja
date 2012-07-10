@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G62">
-  <short-name>用語集を提供する</short-name>
+  <short-name>G62: 用語集を提供する</short-name>
   <applicability>
     <p>テキストを提供するあらゆるウェブコンテンツ技術</p>
   </applicability>

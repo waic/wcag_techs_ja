@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G123">
-  <short-name>繰り返しているコンテンツのブロックの開始位置に、そのブロックの終了位置へのリンクを追加する</short-name>
+  <short-name>G123: 繰り返しているコンテンツのブロックの開始位置に、そのブロックの終了位置へのリンクを追加する</short-name>
   <applicability>
     <p>リンクを実装できる全てのウェブコンテンツ技術</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G180">
-  <short-name>利用者が初期設定の制限時間を10倍に設定できる手段を提供する</short-name>
+  <short-name>G180: 利用者が初期設定の制限時間を10倍に設定できる手段を提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

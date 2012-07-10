@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="PDF11">
-  <short-name>PDF 文書内で /Link 構造エレメントを使用してリンクとリンクテキストを提供する</short-name>
+  <short-name>PDF11: PDF 文書内で /Link 構造エレメントを使用してリンクとリンクテキストを提供する</short-name>
   <applicability>
     <p>リンクを含む PDF 文書</p>
   </applicability>
@@ -148,7 +148,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>Section 14.8.4.4.2 (Link Elements) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Section 14.8.4.4.2 (Link Elements) in PDF&#13;
+          <p>Section 14.8.4.4.2 (Link Elements) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF&#13;
     					1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>

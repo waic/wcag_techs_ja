@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H35">
-  <short-name>applet要素に代替テキストを提供する</short-name>
+  <short-name>H35: <code>applet</code>要素に代替テキストを提供する</short-name>
   <applicability>
     <p><code>applet</code>要素が非推奨ではない場合に、Javaアプレットを読み込んでいるHTML及びXHTMLドキュメント</p>
   </applicability>

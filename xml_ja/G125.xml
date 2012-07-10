@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G125">
-  <short-name>関連するウェブページへナビゲートするリンクを提供する</short-name>
+  <short-name>G125: 関連するウェブページへナビゲートするリンクを提供する</short-name>
   <applicability>
     <p>リンクを含む全てのウェブコンテンツ技術</p>
   </applicability>

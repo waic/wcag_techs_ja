@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H2">
-  <short-name>隣り合った画像とテキストリンクを同じリンクの中に入れる</short-name>
+  <short-name>H2: 隣り合った画像とテキストリンクを同じリンクの中に入れる</short-name>
   <applicability>
     <p>リンク機能を提供するHTML及びXTHMLドキュメント</p>
   </applicability>

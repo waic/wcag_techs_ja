@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F78">
-  <short-name>達成基準 2.4.7 の不適合事例：　要素のアウトライン及びボーダーを視覚的なフォーカスインジケーターを除去する又は非表示にするようにスタイル指定する</short-name>
+  <short-name>F78: 達成基準 2.4.7 の不適合事例：　要素のアウトライン及びボーダーを視覚的なフォーカスインジケーターを除去する又は非表示にするようにスタイル指定する</short-name>
   <applicability>
     <p>あらゆるウェブコンテンツ技術</p>
   </applicability>

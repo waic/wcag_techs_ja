@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH18">
-  <short-name>Flash で自動的に再生される音声をオフにするコントロールを提供する</short-name>
+  <short-name>FLASH18： Flash で自動的に再生される音声をオフにするコントロールを提供する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

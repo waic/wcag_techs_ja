@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F65">
-  <short-name>達成基準 1.1.1 の不適合事例 － img要素、area要素、及び type "image" のinput要素のalt属性を省略している</short-name>
+  <short-name>F65: 達成基準 1.1.1 の不適合事例 － <code>img</code>要素、<code>area</code>要素、及び <code>type "image"</code> の<code>input</code>要素の<code>alt</code>属性を省略している</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>

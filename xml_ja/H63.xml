@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H63">
-  <short-name>scope属性を用いて、データテーブルの見出しセルとデータセルを関連付ける</short-name>
+  <short-name>H63: scope属性を用いて、データテーブルの見出しセルとデータセルを関連付ける</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>
@@ -33,15 +33,14 @@
             
                   </li>
 </ul>
-<div class="note">
-					  <p class="prefix">
+<note><p class="prefix">
 									<em>注記：</em>
 									1行目や1列目に見出しがある単純なテーブルについては、<code>scope</code>属性を指定せずに<code>th</code>要素を利用するだけで十分である。</p>
-			  </div>
+			  </note>
           
-					<div class="note"><p class="prefix">
+					<note><p class="prefix">
 									<em>注記：</em>
-									複雑なテーブルについては、<a href="H43.html"><em>H43: Using id and headers attributes to associate data cells with header cells in data tables</em></a> の通り、<code>id</code>属性と<code>headers</code>属性を利用する。</p></div></description>
+									複雑なテーブルについては、<a href="H43.html"><em>H43: Using id and headers attributes to associate data cells with header cells in data tables</em></a> の通り、<code>id</code>属性と<code>headers</code>属性を利用する。</p></note></description>
   <examples>
     <eg-group>
       <head>単純なスケジュール表</head>
@@ -82,10 +81,10 @@
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-scope " xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Table Cells: scope attribute</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-scope " xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Table Cells: scope attribute</loc></p>
         </item>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/tables.html#h-11.2.6" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Table cells: The TH and TD elements</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/tables.html#h-11.2.6" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Table cells: The TH and TD elements</loc></p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eramp.com/david/tablesample2.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Assistive technology&#13;

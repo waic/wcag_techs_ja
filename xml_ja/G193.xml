@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G193">
-  <short-name>ウェブページでアシスタントによるヘルプを提供する</short-name>
+  <short-name>G193: ウェブページでアシスタントによるヘルプを提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>
@@ -10,7 +10,7 @@
   <ua-issues/>
   <description><p>この実装方法の目的は、ウェブページを利用する際の支援となるマルチメディアのアバターを使ったヘルプを提供することである。アバターを使ったヘルプは、テキストを読むことが難しい認知障害のある利用者に特に役立つ。また、視覚情報を利用することで、提示された題材に集中するのに役立つことがある。</p>
                 
-               <div class="note"><p class="prefix"><em>注記：</em>マルチメディアのアバターは<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv">ガイドライン 1.2</a>の関連する達成基準も満たさなければならない。</p></div></description>
+               <note><p class="prefix"><em>注記：</em>マルチメディアのアバターは<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv">ガイドライン 1.2</a>の関連する達成基準も満たさなければならない。</p></note></description>
   <examples/>
   <resources/>
   <related-techniques>

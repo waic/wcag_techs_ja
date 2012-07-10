@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SVR4">
-  <short-name>適合している代替バージョンの表示に関する設定を利用者が行えるようにする</short-name>
+  <short-name>SVR4: 適合している代替バージョンの表示に関する設定を利用者が行えるようにする</short-name>
   <applicability>
     <p>設定を保存するためにサーバサイドのスクリプトを用いて生成されたコンテンツ</p>
   </applicability>

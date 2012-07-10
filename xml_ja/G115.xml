@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G115">
-  <short-name>セマンティックな要素を用いて、構造をマークアップする</short-name>
+  <short-name>G115: セマンティックな要素を用いて、構造をマークアップする</short-name>
   <applicability>
     <p>HTML 4.01及び XHTML 1.xを含むマークアップ言語</p>
   </applicability>
@@ -52,10 +52,10 @@
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/MathML2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Mathematical Markup Language (MathML) Version 2.0, Second Edition</loc></p>
         </item>
         <item>
-          <p>Jeffrey Zeldman's book<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.zeldman.com/dwws/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Jeffrey Zeldman's book         "Designing with Web standards"</loc></p>
+          <p>Jeffrey Zeldman's book<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.zeldman.com/dwws/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">"Designing with Web standards"</loc></p>
         </item>
         <item>
-          <p>Web Design Group's article<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/design/style/docstyle-tags.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Web Design Group's article         "Document style: Use the right tag for the job"</loc></p>
+          <p>Web Design Group's article<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.htmlhelp.com/design/style/docstyle-tags.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">"Document style: Use the right tag for the job"</loc></p>
         </item>
       </ulist>
     </see-also>

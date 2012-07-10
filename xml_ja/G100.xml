@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G100">
-  <short-name>非テキストコンテンツの一般に認められた名前又は内容が分かる名前[ここから追加] となる簡潔な代替テキスト[追加ここまで]を提供する</short-name>
+  <short-name>G100: 非テキストコンテンツの一般に認められた名前又は内容が分かる名前<phrase diff="add">となる簡潔な代替テキスト</phrase>を提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>
@@ -37,10 +37,10 @@
     <procedure>
       <olist>
         <item>
-          <p><span class="diff-add"><span class="difftext">[ここから追加] </span><span>簡潔な</span><span class="difftext">[追加ここまで]</span></span>代替テキストで内容が分かる名前を提供している。</p>
+          <p><phrase diff="add">簡潔な</phrase>代替テキストで内容が分かる名前を提供している。</p>
         </item>
         <item>
-          <p><span class="diff-add"><span class="difftext">[ここから追加] </span><span>簡潔な</span><span class="difftext">[追加ここまで]</span></span>代替テキストで非テキストコンテンツに作者や他の人によって以前から付け<span>られている</span>名前を提供している。</p>
+          <p><phrase diff="add">簡潔な</phrase>代替テキストで非テキストコンテンツに作者や他の人によって以前から付け<span>られている</span>名前を提供している。</p>
         </item>
       </olist>
     </procedure>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G63">
-  <short-name>サイトマップを提供する</short-name>
+  <short-name>G63: サイトマップを提供する</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>
@@ -51,7 +51,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>National Center for Accessible Curriculumの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://aim.cast.org/learn/historyarchive/backgroundpapers/graphic_organizers" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">[ここから変更] National Center for Accessible CurriculumのGraphic Organizersのページは、いろいろな種類のグラフィック・オーガナイザーの有用な概要と、それらの用途に加えて、学習障害の学生のためのグラフィック・オーガナイザーの有効性の関連する研究の概要を提供している。[変更ここまで]</loc>のページは、いろいろな種類のグラフィック・オーガナイザーの有用な概要と、それらの用途に加えて、学習障害の学生のためのグラフィック・オーガナイザーの有効性の関連する研究の概要を提供している。</p>
+          <p diff="chg">National Center for Accessible Curriculumの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://aim.cast.org/learn/historyarchive/backgroundpapers/graphic_organizers" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Graphic Organizers</loc>のページは、いろいろな種類のグラフィック・オーガナイザーの有用な概要と、それらの用途に加えて、学習障害の学生のためのグラフィック・オーガナイザーの有効性の関連する研究の概要を提供している。</p>
         </item>
         <item>
           <p>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C6">
-  <short-name>構造を示すマークアップをした上で、コンテンツを配置する</short-name>
+  <short-name>C6: 構造を示すマークアップをした上で、コンテンツを配置する</short-name>
   <applicability>
     <p>CSSに対応しているウェブコンテンツ技術全て</p>
   </applicability>
@@ -96,10 +96,10 @@
     <see-also>
       <ulist>
         <item>
-          <p>CSS-Discuss Home Page</p>
+          <p diff="del">CSS-Discuss Home Page</p>
         </item>
         <item>
-          <p>CSS-Discuss on CSS Layouts</p>
+          <p diff="del">CSS-Discuss on CSS Layouts</p>
         </item>
       </ulist>
     </see-also>

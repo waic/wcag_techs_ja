@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G170">
-  <short-name>自動的に再生される音声を停止するコントロールを、ウェブページの先頭付近で提供する</short-name>
+  <short-name>G170: 自動的に再生される音声を停止するコントロールを、ウェブページの先頭付近で提供する</short-name>
   <applicability>
     <p>自動的に再生される音を含むウェブコンテンツ技術全て</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR1">
-  <short-name>利用者が初期設定の制限時間を延長できるようにする</short-name>
+  <short-name>SCR1: 利用者が初期設定の制限時間を延長できるようにする</short-name>
   <applicability>
     <p>クライアントサイドスクリプトによりコントロールされた制限時間。</p>
   </applicability>

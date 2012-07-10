@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH9">
-  <short-name>収録済みの同期したメディアにキャプションを提供する</short-name>
+  <short-name>FLASH9： 収録済みの同期したメディアにキャプションを提供する</short-name>
   <applicability><p>Adobe Flashをベースにしたコンテンツ</p>
 <ul>
 <li><p>Adobe Flash CS3 以降</p></li>
@@ -85,9 +85,9 @@
   </examples>
   <resources>
     <see-also>
-      <p> <a href="http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines">http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines</a> </p>
-      <p> <a href="http://www.buraks.com/captionate/">http://www.buraks.com/captionate/</a> </p>
-      <p> <a href="http://www.w3.org/AudioVideo/TT/">http://www.w3.org/AudioVideo/TT/</a> </p>
+      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines</loc></p>
+      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.buraks.com/captionate/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://www.buraks.com/captionate/</loc></p>
+      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/AudioVideo/TT/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://www.w3.org/AudioVideo/TT/</loc></p>
     </see-also>
   </resources>
   <related-techniques>

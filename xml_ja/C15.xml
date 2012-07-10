@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C15">
-  <short-name>CSSを用いて、ユーザーインタフェースコンポーネントがフォーカスを受けとったときの表示を変更する</short-name>
+  <short-name>C15: CSSを用いて、ユーザーインタフェースコンポーネントがフォーカスを受けとったときの表示を変更する</short-name>
   <applicability>
     <p>CSS、HTML及びXHTML</p>
   </applicability>

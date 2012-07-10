@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G57">
-  <short-name>コンテンツを意味のある順序で並べる</short-name>
+  <short-name>G57: コンテンツを意味のある順序で並べる</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

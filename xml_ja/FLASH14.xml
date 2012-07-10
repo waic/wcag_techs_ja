@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH14">
-  <short-name>Flash でキーボード及びマウスのイベントハンドラを両方とも用いる</short-name>
+  <short-name>FLASH14： Flash でキーボード及びマウスのイベントハンドラを両方とも用いる</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>
@@ -76,7 +76,9 @@ function clickHandler(e) {
   var url: URLRequest = new URLRequest("http://www.wikipedia.org/wiki/" + e.target.label);
   navigateToURL(url, "_self");
 }</code>
-      <description><note><p class="prefix"><em>注記： </em>スクリーンリーダーを使用している利用者のアクセシビリティを向上させるには、説明文のテキストをアクセシブルな説明としてボタン自体に付加する。また、ボタンコンポーネントの MouseEvent.CLICK イベントは、マウスクリックだけではなく Enter キーを押したときにも発生することに注意しなければならない。</p></note><p>この実装方法は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH14/redundant_event_handlers_as3.html">「複数のイベントハンドラを使用してボタンのテキストを更新する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH14/redundant_event_handlers_as3.swf">「複数のイベントハンドラを使用してボタンのテキストを更新する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><note><p class="prefix"><em>注記： </em>スクリーンリーダーを使用している利用者のアクセシビリティを向上させるには、説明文のテキストをアクセシブルな説明としてボタン自体に付加する。また、ボタンコンポーネントの MouseEvent.CLICK イベントは、マウスクリックだけではなく Enter キーを押したときにも発生することに注意しなければならない。</p>
+</note>
+<p>この実装方法は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH14/redundant_event_handlers_as3.html">「複数のイベントハンドラを使用してボタンのテキストを更新する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH14/redundant_event_handlers_as3.swf">「複数のイベントハンドラを使用してボタンのテキストを更新する」のソース（英語）</a>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G97">
-  <short-name>[ここから変更] 略語の初出時にその直前か直後に元の語を提供する[変更ここまで][ここから削除] 元の語のすぐ後に略語を提供する[削除ここまで]</short-name>
+  <short-name>G97: <phrase diff="chg">略語の初出時にその直前か直後に元の語を提供する</phrase><phrase diff="del">元の語のすぐ後に略語を提供する</phrase></short-name>
   <applicability>
     <p>テキストを提供する全てのウェブコンテンツ技術</p>
   </applicability>
@@ -10,7 +10,7 @@
   <ua-issues/>
   <description><p>この実装方法の目的は、ウェブページの中で略語が最初に現れたとき、元の語を略語に関連付けることで、略語の元の語を分かるようにすることである。ウェブページで最初の使用箇所を探すことで、すべての略語の元の語を見つけることができる。</p>
           
-               <p><span class="diff-add"><span class="difftext">[ここから追加] </span><span>英語では、</span><span class="difftext">[追加ここまで]</span></span>単語、句または名前を、略語、頭文字語、頭字語、又は他の短縮表記によって短くするときは、省略された表記を提供する前に完全な表記を提供する。こうすることで、テキストが読みやすくなり、多くのスタイルガイドでも勧められている。<span class="diff-add"><span class="difftext">[ここから追加] </span><span>その他の言語では異なる慣習があることもある。</span><span class="difftext">[追加ここまで]</span></span></p>
+               <p><phrase diff="add">英語では、</phrase>単語、句または名前を、略語、頭文字語、頭字語、又は他の短縮表記によって短くするときは、省略された表記を提供する前に完全な表記を提供する。こうすることで、テキストが読みやすくなり、多くのスタイルガイドでも勧められている。<phrase diff="add">その他の言語では異なる慣習があることもある。</phrase></p>
 
           
                <p>略語の中には、元の語より説明を必要とするものがあることに注意する。そのような略語には、この実装方法は適切ではない。</p>
@@ -20,6 +20,8 @@
   <examples>
     <eg-group>
       <description><p>「国際連合難民高等弁務官事務所(UNHCR)は、1950年に難民の保護と支援を提供するために設立された。」</p>
+</description>
+      <description diff="add"><p>WAI (Web Accessibility Initiative) があることは、W3Cのアクセシビリティへの取り組みの証のようなものである。</p>
 </description>
     </eg-group>
   </examples>
@@ -46,7 +48,7 @@
           <p>その略語の最初の使用箇所を探す。</p>
         </item>
         <item>
-          <p>最初の使用箇所の直前<span class="diff-add"><span class="difftext">[ここから追加] </span><span>または直後</span><span class="difftext">[追加ここまで]</span></span>に、略語の元の語がある。</p>
+          <p>最初の使用箇所の直前<phrase diff="add">または直後</phrase>に、略語の元の語がある。</p>
         </item>
         <item>
           <p>その元の語が、略語の使用として正しい元の語である。</p>

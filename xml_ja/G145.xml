@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G145">
-  <short-name>テキスト（及び画像化された文字）とその背景の間に、少なくとも3:1以上のコントラスト比をもたせる</short-name>
+  <short-name>G145: テキスト（及び画像化された文字）とその背景の間に、少なくとも3:1以上のコントラスト比をもたせる</short-name>
   <applicability>
     <p>あらゆるウェブコンテンツ技術</p>
   </applicability>
@@ -14,13 +14,7 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.paciellogroup.com/resources/contrast-analyser.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser – Application&#13;
-&#13;
-&#13;
-カラーコントラストアナライザー 日本語版</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser – Application&#13;
-&#13;
-&#13;
-カラーコントラストアナライザー 日本語版</loc></p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.paciellogroup.com/resources/contrast-analyser.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Contrast Analyser – Application</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">カラーコントラストアナライザー 日本語版</loc></p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.com/tools/cca/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">カラーコントラストアナライザー 日本語版</loc></p>
@@ -65,8 +59,96 @@
   </resources>
   <related-techniques/>
   <tests>
-    <procedure/>
-    <expected-results/>
+    <procedure>
+      <olist>
+        <item><p> 以下の公式を用いて、各文字（すべて同一ではない限り）の相対輝度を測る： </p>
+<ul><li>
+<p>色の相対輝度 L = 0.2126 * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> と定義されている。この場合の<strong>R</strong>, <strong>G</strong> 及び <strong>B</strong> は：</p>
+<ul>
+<li>
+<p>R<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>R</strong> = R<sub>sRGB</sub>/12.92、それ以外の場合： <strong>R</strong> = ((R<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+</li>
+<li><p>G<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>G</strong> = G<sub>sRGB</sub>/12.92、それ以外の場合：<strong>G</strong> = ((G<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+<li><p>B<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>B</strong> = B<sub>sRGB</sub>/12.92、それ以外の場合：<strong>B</strong> = ((B<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+</ul>
+<note><p class="prefix">また、R<sub>sRGB</sub>, G<sub>sRGB</sub>, 及び B<sub>sRGB</sub>は以下のように定義される：</p></note>
+<ul>
+<li><p>R<sub>sRGB</sub> = R<sub>8bit</sub>/255</p></li>
+<li><p>G<sub>sRGB</sub> = G<sub>8bit</sub>/255</p></li>
+<li><p>B<sub>sRGB</sub> = B<sub>8bit</sub>/255</p></li>
+</ul>
+<note><p class="prefix">"^"記号は指数演算子である。</p></note>
+</li></ul>
+<note><p class="prefix"><em>注意：</em>エイリアス文字では文字の端から2ピクセルの部分の相対輝度の値を使用する。</p>
+</note></item>
+        <item><p>色の相対輝度 L = 0.2126 * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> と定義されている。この場合の<strong>R</strong>, <strong>G</strong> 及び <strong>B</strong> は：</p>
+<ul>
+<li>
+<p>R<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>R</strong> = R<sub>sRGB</sub>/12.92、それ以外の場合： <strong>R</strong> = ((R<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+</li>
+<li><p>G<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>G</strong> = G<sub>sRGB</sub>/12.92、それ以外の場合：<strong>G</strong> = ((G<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+<li><p>B<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>B</strong> = B<sub>sRGB</sub>/12.92、それ以外の場合：<strong>B</strong> = ((B<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p></li>
+</ul>
+<note><p class="prefix">また、R<sub>sRGB</sub>, G<sub>sRGB</sub>, 及び B<sub>sRGB</sub>は以下のように定義される：</p></note>
+<ul>
+<li><p>R<sub>sRGB</sub> = R<sub>8bit</sub>/255</p></li>
+<li><p>G<sub>sRGB</sub> = G<sub>8bit</sub>/255</p></li>
+<li><p>B<sub>sRGB</sub> = B<sub>8bit</sub>/255</p></li>
+</ul>
+<note><p class="prefix">"^"記号は指数演算子である。</p></note></item>
+        <item>
+          <p>R<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>R</strong> = R<sub>sRGB</sub>/12.92、それ以外の場合： <strong>R</strong> = ((R<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+        </item>
+        <item>
+          <p>G<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>G</strong> = G<sub>sRGB</sub>/12.92、それ以外の場合：<strong>G</strong> = ((G<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+        </item>
+        <item>
+          <p>B<sub>sRGB</sub> &lt;= 0.03928 の場合：<strong>B</strong> = B<sub>sRGB</sub>/12.92、それ以外の場合：<strong>B</strong> = ((B<sub>sRGB</sub>+0.055)/1.055) ^ 2.4</p>
+        </item>
+        <item>
+          <p>R<sub>sRGB</sub> = R<sub>8bit</sub>/255</p>
+        </item>
+        <item>
+          <p>G<sub>sRGB</sub> = G<sub>8bit</sub>/255</p>
+        </item>
+        <item>
+          <p>B<sub>sRGB</sub> = B<sub>8bit</sub>/255</p>
+        </item>
+        <item>
+          <p> 同じ公式を用いて、文字のすぐ隣の背景のピクセルの相対輝度を測る。 </p>
+        </item>
+        <item><p> 次の公式を用いて、コントラスト比を算出する。</p>
+<ul><li>
+<p>(L1 + 0.05) / (L2 + 0.05)</p>
+<ul>
+<li><p>L1は前景または背景色の明るい方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。及び、 </p></li>
+<li><p>L2は前景または背景色の暗い方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。 </p></li>
+</ul>
+</li></ul></item>
+        <item><p>(L1 + 0.05) / (L2 + 0.05)</p>
+<ul>
+<li><p>L1は前景または背景色の明るい方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。及び、 </p></li>
+<li><p>L2は前景または背景色の暗い方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。 </p></li>
+</ul></item>
+        <item>
+          <p>L1は前景または背景色の明るい方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。及び、 </p>
+        </item>
+        <item>
+          <p>L2は前景または背景色の暗い方の<a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">相対輝度</a>である。 </p>
+        </item>
+        <item>
+          <p> コントラスト比が3：1と同じ、又はそれ以上である。【訳注：この計算式を用いているチェックツールで、コントラスト比が3:1以上であることを確認すればよい。】</p>
+        </item>
+      </olist>
+    </procedure>
+    <expected-results>
+      <ulist>
+        <item>
+          <p>4.を満たしている。</p>
+        </item>
+      </ulist>
+      <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
+    </expected-results>
   </tests>
   <translationcredit>
     <ulist>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G175">
-  <short-name>背景及び前景の色を複数から選択できるツールをウェブページ上で提供する</short-name>
+  <short-name>G175: 背景及び前景の色を複数から選択できるツールをウェブページ上で提供する</short-name>
   <applicability>
     <p>利用者が他のページで再利用するために設定を保持できる全てのウェブコンテンツ技術</p>
   </applicability>

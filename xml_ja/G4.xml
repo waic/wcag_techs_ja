@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G4">
-  <short-name>コンテンツを一時停止させて、一時停止させたところから再開できるようにする</short-name>
+  <short-name>G4: コンテンツを一時停止させて、一時停止させたところから再開できるようにする</short-name>
   <applicability>
     <p>動きやスクロールのあるコンテンツのあるウェブコンテンツ技術</p>
   </applicability>

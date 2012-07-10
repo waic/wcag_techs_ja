@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH30">
-  <short-name>画像ボタンにアクセシブルな名前を指定する</short-name>
+  <short-name>FLASH30： 画像ボタンにアクセシブルな名前を指定する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

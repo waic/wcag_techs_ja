@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F25">
-  <short-name>達成基準 2.4.2 の不適合事例 － ウェブページのページタイトルがコンテンツの内容を示していない</short-name>
+  <short-name>F25: 達成基準 2.4.2 の不適合事例 － ウェブページのページタイトルがコンテンツの内容を示していない</short-name>
   <applicability>
     <p>全てのウェブコンテンツ技術</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G78">
-  <short-name>音声ガイドを含んだ、利用者が選択可能な副音声トラックを提供する</short-name>
+  <short-name>G78: 音声ガイドを含んだ、利用者が選択可能な副音声トラックを提供する</short-name>
   <applicability>
     <p>音声トラック及び視覚的なコンテンツのあるウェブコンテンツ技術</p>
   </applicability>

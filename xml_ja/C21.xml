@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C21">
-  <short-name>行送りをCSSで指定する</short-name>
+  <short-name>C21: 行送りをCSSで指定する</short-name>
   <applicability>
     <p>CSSをサポートする全てのウェブコンテンツ技術</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR20">
-  <short-name>キーボードとその他のデバイス特有の機能を両方とも用いる</short-name>
+  <short-name>SCR20: キーボードとその他のデバイス特有の機能を両方とも用いる</short-name>
   <applicability>
     <p>機能を実装するためにスクリプトを用いる全てのコンテンツ</p>
   </applicability>
@@ -68,15 +68,13 @@ onmouseout="swapImageOff('menu')" onblur="swapImageOff('menu')"&gt;
 &lt;/a&gt;</code>
     </eg-group>
     <eg-group>
-      <description><p><span class="diff-change"><span class="difftext">[ここから変更] </span><span>この事例では、マウスとキーボードの両方を用いて機能を実行できる画像のカスタム・コントロールを紹介している。</span><span class="difftext">[変更ここまで]</span></span>マウスイベントの<code>onclick</code>は、対応するキーボードイベントの<code>onkeypress</code>によって補完されている。<code>tabindex</code>属性は、キーボードを用いてTabキーで移動した際に、画像の上で停止させるためのものである。この事例では<code>nextPage()</code>関数が、キーボードのキー押下がEnterキーであるかどうかをチェックしていることに注目してほしい。もしチェックしなければ、画像にフォーカスがあるときには、どのキーが押下されても常に反応してしまうため望ましくない。</p>
+      <description><p><phrase diff="chg">この事例では、マウスとキーボードの両方を用いて機能を実行できる画像のカスタム・コントロールを紹介している。</phrase>マウスイベントの<code>onclick</code>は、対応するキーボードイベントの<code>onkeypress</code>によって補完されている。<code>tabindex</code>属性は、キーボードを用いてTabキーで移動した際に、画像の上で停止させるためのものである。この事例では<code>nextPage()</code>関数が、キーボードのキー押下がEnterキーであるかどうかをチェックしていることに注目してほしい。もしチェックしなければ、画像にフォーカスがあるときには、どのキーが押下されても常に反応してしまうため望ましくない。</p>
 </description>
       <code>&lt;img onclick="nextPage();" onkeypress="nextPage();" tabindex="0" src="arrow.gif" 
 alt="次のページへ移動"&gt;</code>
-      <description>
-        <note>
-          <p class="prefix"><em>注記：</em>この例では<code>img</code>要素にtabindexを用いている。現時点では（文法的に）妥当ではないが、この機能を実装するための古典的なテクニックとして用いられている。<span class="diff-add"><span class="difftext">[ここから追加] </span><span>このようなカスタム・コントロールでは、コントロールの役割（role）と状態（state）を支援技術に引き渡すためにWAI-ARIAも用いるべきである。</span><span class="difftext">[追加ここまで]</span></span></p>
-        </note>
-      </description>
+      <description><note><p class="prefix"><em>注記：</em>この例では<code>img</code>要素にtabindexを用いている。現時点では（文法的に）妥当ではないが、この機能を実装するための古典的なテクニックとして用いられている。<phrase diff="add">このようなカスタム・コントロールでは、コントロールの役割（role）と状態（state）を支援技術に引き渡すためにWAI-ARIAも用いるべきである。</phrase></p>
+				</note>
+</description>
     </eg-group>
   </examples>
   <resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH26">
-  <short-name>Flash ビデオに音声ガイドを提供する</short-name>
+  <short-name>FLASH26： Flash ビデオに音声ガイドを提供する</short-name>
   <applicability>
     <ul>
 <li><p> Flash CS3 and higher </p></li>

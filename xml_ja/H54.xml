@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="H54">
-  <short-name>dfn要素を用いて、単語の定義対象を特定する</short-name>
+  <short-name>H54: <code>dfn</code>要素を用いて、単語の定義対象を特定する</short-name>
   <applicability>
     <p>HTML 及び XHTML</p>
   </applicability>
@@ -27,7 +27,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#edef-DFN" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 DFN&#13;
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#edef-DFN" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">DFN&#13;
                     Element</loc></p>
         </item>
       </ulist>

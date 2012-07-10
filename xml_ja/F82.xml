@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="F82">
-  <short-name>達成基準 3.3.2 の不適合事例 － 電話番号を入力するテキスト・フィールド一式を視覚的にフォーマットしているが、テキストのラベルが提供されていない</short-name>
+  <short-name>F82: 達成基準 3.3.2 の不適合事例 － 電話番号を入力するテキスト・フィールド一式を視覚的にフォーマットしているが、テキストのラベルが提供されていない</short-name>
   <applicability>
     <p>あらゆるウェブコンテンツ技術</p>
   </applicability>

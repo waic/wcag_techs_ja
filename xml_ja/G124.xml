@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G124">
-  <short-name>ページの先頭に、コンテンツの各エリアへのリンクを追加する</short-name>
+  <short-name>G124: ページの先頭に、コンテンツの各エリアへのリンクを追加する</short-name>
   <applicability>
     <p>リンク機能を提供するウェブコンテンツ技術すべて。</p>
   </applicability>

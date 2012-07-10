@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH11">
-  <short-name>オブジェクトについて長いテキストの説明を提供する</short-name>
+  <short-name>FLASH11： オブジェクトについて長いテキストの説明を提供する</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

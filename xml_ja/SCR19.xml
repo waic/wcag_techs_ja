@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="SCR19">
-  <short-name>状況の変化を引き起こすことのないように、select要素のonchangeイベントを用いる</short-name>
+  <short-name>SCR19: 状況の変化を引き起こすことのないように、select要素のonchangeイベントを用いる</short-name>
   <applicability>
     <p>スクリプトをサポートするHTML及びXHTML。この実装方法では、JavaScript 1.4 の try/catch 構文を用いる。</p>
   </applicability>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="FLASH24">
-  <short-name>利用者がデフォルトの制限時間を延長できるようにする</short-name>
+  <short-name>FLASH24： 利用者がデフォルトの制限時間を延長できるようにする</short-name>
   <applicability>
     <ul>
 <li><p>Adobe Flash Professional バージョン MX 以降</p></li>

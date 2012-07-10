@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G177">
-  <short-name>テキストの修正候補を提示する</short-name>
+  <short-name>G177: テキストの修正候補を提示する</short-name>
   <applicability>
     <p>フォーマット、値及び又は入力のタイプに制限があり、利用者のデータ入力を受け付けるコンテンツ</p>
   </applicability>

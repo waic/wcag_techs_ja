@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="C9">
-  <short-name>CSS を用いて、装飾目的の画像を付加する</short-name>
+  <short-name>C9: CSS を用いて、装飾目的の画像を付加する</short-name>
   <applicability>
     <p>画像を表示させるためにCSSが利用可能なウェブコンテンツ技術</p>
   </applicability>
@@ -134,7 +134,7 @@ height: 100%;
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1998/REC-CSS2-19980512/colors.html#propdef-background" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">background property in the CSS 2.0 specification</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/global.html#adef-background" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 specificationには、body要素のbackground属性は非推奨であると記述されている。</loc>には、<code>body</code>要素の<code>background</code>属性は非推奨であると記述されている。</p>
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/global.html#adef-background" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 specification</loc>には、<code>body</code>要素の<code>background</code>属性は非推奨であると記述されている。</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mezzoblue.com/tests/revised-image-replacement/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Revised Image Replacement</loc></p>

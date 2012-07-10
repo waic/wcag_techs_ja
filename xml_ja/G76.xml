@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technique id="G76">
-  <short-name>自動的に更新するのではなく、利用者がコンテンツの更新を要求するメカニズムを提供する</short-name>
+  <short-name>G76: 自動的に更新するのではなく、利用者がコンテンツの更新を要求するメカニズムを提供する</short-name>
   <applicability>
     <p>自動更新をサポートする全てのウェブコンテンツ技術又はウェブコンテンツ技術の組み合わせ
                     </p>
@@ -30,9 +30,7 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/xpedio/groups/public/documents/PublicWebsite/public_refreshandtimeouts.hcsp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Time outs and page refreshes, by the Web Access&#13;
-                                    Centre of the Royal National Institute of the Blind (RNIB),&#13;
-                                    provides rationale and techniques.</loc>, by the Web Access&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/xpedio/groups/public/documents/PublicWebsite/public_refreshandtimeouts.hcsp" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Time outs and page refreshes</loc>, by the Web Access&#13;
                                     Centre of the Royal National Institute of the Blind (RNIB),&#13;
                                     provides rationale and techniques.</p>
         </item>
