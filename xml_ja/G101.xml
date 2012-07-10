@@ -8,9 +8,10 @@
     <success-criterion idref="meaning-idioms"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、一般的ではない、又は限定された用途で用いられているあらゆる単語の定義を提供することである。</p>
-	<p>単語が、一般的ではない、又は限定された用途で用いられているのは、次のような場合である:</p>
-	<ul>
+  <description>
+    <p>この実装方法の目的は、一般的ではない、又は限定された用途で用いられているあらゆる単語の定義を提供することである。</p>
+    <p>単語が、一般的ではない、又は限定された用途で用いられているのは、次のような場合である:</p>
+    <ul>
 <li>
 			<p>辞書にはその単語の定義がいくつかあるが、コンテンツを理解するためには一つの特定の定義が用いらなければならない。</p>
 		</li>
@@ -21,8 +22,9 @@
 			<p>コンテンツ制作者が、コンテンツを理解するために用いられる新しい定義を作り出す。</p>
 		</li>
 	</ul>
-<p>この実装方法は、業界用語、すなわち、特有の専門又は技術分野で用いられる専門用語に対して定義を提供するためにも用いられる。分野外の人には理解できないが、その分野の人には理解できる。</p>
-	<p>この実装方法は慣用表現を定義するためにも用いられる。例えば、同じ言語を話す人でも、特定の地域に住んでいる場合、その地域の人には理解されるが、同じ言語を話す他の地域からの人には理解されない慣用表現を用いるかもしれない。</p></description>
+    <p>この実装方法は、業界用語、すなわち、特有の専門又は技術分野で用いられる専門用語に対して定義を提供するためにも用いられる。分野外の人には理解できないが、その分野の人には理解できる。</p>
+    <p>この実装方法は慣用表現を定義するためにも用いられる。例えば、同じ言語を話す人でも、特定の地域に住んでいる場合、その地域の人には理解されるが、同じ言語を話す他の地域からの人には理解されない慣用表現を用いるかもしれない。</p>
+  </description>
   <examples>
     <eg-group>
       <head>限定された用途で用いられている専門用語</head>
@@ -91,9 +93,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G101.html">G101: Providing the definition of a word or phrase used in an unusual or restricted way | Techniques for WCAG 2.0（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G101.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G101: Providing the definition of a word or phrase used in an unusual or restricted way | Techniques for WCAG 2.0（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

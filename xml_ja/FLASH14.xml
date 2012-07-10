@@ -13,7 +13,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
   <description>
@@ -78,7 +78,7 @@ function clickHandler(e) {
 }</code>
       <description><note><p class="prefix">スクリーンリーダーを使用している利用者のアクセシビリティを向上させるには、説明文のテキストをアクセシブルな説明としてボタン自体に付加する。また、ボタンコンポーネントの MouseEvent.CLICK イベントは、マウスクリックだけではなく Enter キーを押したときにも発生することに注意しなければならない。</p>
 </note>
-<p>この実装方法は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH14/redundant_event_handlers_as3.html">「複数のイベントハンドラを使用してボタンのテキストを更新する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH14/redundant_event_handlers_as3.swf">「複数のイベントハンドラを使用してボタンのテキストを更新する」のソース（英語）</a>をダウンロードすることもできる。</p>
+<p>この実装方法は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH14/redundant_event_handlers_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「複数のイベントハンドラを使用してボタンのテキストを更新する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH14/redundant_event_handlers_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「複数のイベントハンドラを使用してボタンのテキストを更新する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -106,9 +106,9 @@ function clickHandler(e) {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH14.html">FLASH14: Using redundant keyboard and mouse event handlers in Flash（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH14.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH14: Using redundant keyboard and mouse event handlers in Flash（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

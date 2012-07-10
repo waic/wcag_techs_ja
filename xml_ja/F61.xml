@@ -8,9 +8,11 @@
     <success-criterion idref="consistent-behavior-no-extreme-changes-context"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この文書では、<phrase diff="chg">メインの<a href="http://waic.jp/docs/WCAG20/Overview.html#viewportdef">ビューポート</a></phrase>に表示されているコンテンツが自動的に更新され、コンテンツに<phrase diff="chg">ユーザーが</phrase>この振る舞いを停止するための選択肢をがない不適合事例について述べている。</p>
-        <p diff="add">達成基準 3.2.5 の不適合事例となるかどうかを検証するためのチェックポイントが「検証」のセクションで挙げられている。チェックポイント 1. が可能であることが望ましく、コンテンツ制作者がビューポートのコンテンツを生成するコードを確認できることを想定している。</p>
-<p diff="add">しかし、それが可能ではないケースも考えられる（例えば、CMS、djangoやruby-on-railsなどのアプリケーション環境、またはサードパーティによるAjaxやPHPなどのスクリプト言語によって生成されるコンテンツなど）。そのため、チェックポイント 2. がそのような場合の検証のために提示されている。時間枠は指標でしかなく、その他のチェックポイントを満たしていなければ、一定の時間が経過した後に生じるあらゆる変化は不適合事例としてみなすべきである。</p></description>
+  <description>
+    <p>この文書では、<phrase diff="chg">メインの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://waic.jp/docs/WCAG20/Overview.html#viewportdef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ビューポート</loc></phrase>に表示されているコンテンツが自動的に更新され、コンテンツに<phrase diff="chg">ユーザーが</phrase>この振る舞いを停止するための選択肢をがない不適合事例について述べている。</p>
+    <p>達成基準 3.2.5 の不適合事例となるかどうかを検証するためのチェックポイントが「検証」のセクションで挙げられている。チェックポイント 1. が可能であることが望ましく、コンテンツ制作者がビューポートのコンテンツを生成するコードを確認できることを想定している。</p>
+    <p>しかし、それが可能ではないケースも考えられる（例えば、CMS、djangoやruby-on-railsなどのアプリケーション環境、またはサードパーティによるAjaxやPHPなどのスクリプト言語によって生成されるコンテンツなど）。そのため、チェックポイント 2. がそのような場合の検証のために提示されている。時間枠は指標でしかなく、その他のチェックポイントを満たしていなければ、一定の時間が経過した後に生じるあらゆる変化は不適合事例としてみなすべきである。</p>
+  </description>
   <examples>
     <eg-group role="failure">
       <description><p>ニュースサイトで、常に最新の見出しが表示されるように、コンテンツが自動的に更新される。この振る舞いを停止させる選択肢がない。</p>
@@ -53,10 +55,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F61.html">F61: Failure of Success Criterion 3.2.5 due to complete change of main content through an automatic update that the user cannot disable from within the content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F61.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F61: Failure of Success Criterion 3.2.5 due to complete change of main content through an automatic update that the user cannot disable from within the content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

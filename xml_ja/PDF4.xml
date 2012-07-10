@@ -9,23 +9,25 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェント及び支援技術に関する情報は、<a href="pdf_notes.html">PDF テクノロジーノート</a>を参照のこと。</p>
+      <p>ユーザーエージェント及び支援技術に関する情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF テクノロジーノート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、/Artifact タグを使用して、支援技術で無視できるように PDF 文書内の純粋に装飾的な画像をマークする方法を示すことである。これは通常、PDF のオーサリングツールを使用して行う。</p>
-<p>PDF では、一般的にアーティファクトとは、作成されたコンテンツに含まれないグラフィックオブジェクトまたはその他のマーキングを意味する。アーティファクトの例としては、ページのヘッダまたはフッタ情報、ページのセクションを分ける線またはその他のグラフィック、装飾的な画像などがある。</p></description>
+  <description>
+    <p>この実装方法の目的は、/Artifact タグを使用して、支援技術で無視できるように PDF 文書内の純粋に装飾的な画像をマークする方法を示すことである。これは通常、PDF のオーサリングツールを使用して行う。</p>
+    <p>PDF では、一般的にアーティファクトとは、作成されたコンテンツに含まれないグラフィックオブジェクトまたはその他のマーキングを意味する。アーティファクトの例としては、ページのヘッダまたはフッタ情報、ページのセクションを分ける線またはその他のグラフィック、装飾的な画像などがある。</p>
+  </description>
   <examples>
     <eg-group>
       <head>Adobe Acrobat 9 Pro の TouchUp 読み上げ順序ツールを使用して、背景画像をアーティファクトとしてマークする</head>
-      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>TouchUp 読み上げ順序ツールを使用して、画像を「背景」としてマークすることができる。これにより画像は文書のタグ構造から削除される。</p>
 <olist><item><p>Acrobat Pro でアドバンスト &gt; アクセシビリティ &gt; TouchUp 読み上げ順序を選択し、TouchUp 読み上げ順序ツールを開く。</p></item><item><p>文書内の装飾的な画像を選択する。</p></item><item><p>TouchUp 読み上げ順序ツールで、［背景］ボタンをクリックし、選択した画像をタグ構造から削除する。</p></item></olist><p>下のスクリーンショットはこの事例を示している。</p>
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF4/turo_background.gif" alt="スクリーンショット：TouchUp 読み上げ順序ツールを使用して、タグツリーから画像を削除" height="501" width="267"/></p><p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF4/decorative-image.docx">装飾的な画像作成のサンプル (Word ファイル)</a> と <a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF4/decorative-image.pdf">装飾的な画像作成のサンプル (PDF ファイル)</a>がある。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF4/turo_background.gif" alt="スクリーンショット：TouchUp 読み上げ順序ツールを使用して、タグツリーから画像を削除" height="501" width="267"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF4/decorative-image.docx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">装飾的な画像作成のサンプル (Word ファイル)</loc> と <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF4/decorative-image.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">装飾的な画像作成のサンプル (PDF ファイル)</loc>がある。</p>
 </description>
     </eg-group>
     <eg-group>
       <head>/Artifact タグまたはプロパティリストを使用して、画像を PDF 文書内のアーティファクトとしてマークする</head>
-      <description><p>PDF 仕様を使用すると、<a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF 1.7 (ISO 32000-1)</a>の節 14.8.2.2「実際のコンテンツとアーティファクト」（英語）に定義されているように、画像を「アーティファクト」としてマークすることができる。アーティファクトは、/Artifact タグと共に、マークされたコンテンツ順序に含められることで実際のコンテンツと明示的に区別される。</p>
+      <description><p>PDF 仕様を使用すると、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc>の節 14.8.2.2「実際のコンテンツとアーティファクト」（英語）に定義されているように、画像を「アーティファクト」としてマークすることができる。アーティファクトは、/Artifact タグと共に、マークされたコンテンツ順序に含められることで実際のコンテンツと明示的に区別される。</p>
 <p>/Artifact </p>
 </description>
       <code>BMC  ...  EMC</code>
@@ -103,9 +105,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/PDF4.html">PDF4: Hiding decorative images with the Artifact tag in PDF documents（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/PDF4.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF4: Hiding decorative images with the Artifact tag in PDF documents（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

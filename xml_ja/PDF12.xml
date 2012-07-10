@@ -10,14 +10,16 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェント及び支援技術に関する情報は、<a href="pdf_notes.html">PDF テクノロジーノート</a>を参照のこと。</p>
+      <p>ユーザーエージェント及び支援技術に関する情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF テクノロジーノート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、支援技術で PDF コンテンツ内のフォーム・コントロールに関する情報を収集し、そのフォーム・コントロールと対話することである。</p>
-<p>PDF フォーム・コントロールの種類は、テキスト入力フィールド、チェックボックス、ラジオボタン、コンボボックス、リストボックスおよびボタンである。</p>
-<p>名前、役割、状態および値情報をすべてのフォームコンポーネントに提供することにより、障害のある人が使用するスクリーンリーダー、画面拡大ソフトウェア、音声認識ソフトウェアなどの支援技術との互換を可能にする。</p>
-<p>PDF 仕様は、以下の表に示されているように、「<a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF 1.7（ISO 32000-1）</a>」の節 12.7.4「フィールドの種類」（英語）でフォーム・コントロールに対して名前、役割および値が設定される方法を定義する。コメント列では、対応する情報を Adobe Acrobat Pro で表示する方法について説明する。</p>
-<table border="1"><tbody>
+  <description>
+    <p>この実装方法の目的は、支援技術で PDF コンテンツ内のフォーム・コントロールに関する情報を収集し、そのフォーム・コントロールと対話することである。</p>
+    <p>PDF フォーム・コントロールの種類は、テキスト入力フィールド、チェックボックス、ラジオボタン、コンボボックス、リストボックスおよびボタンである。</p>
+    <p>名前、役割、状態および値情報をすべてのフォームコンポーネントに提供することにより、障害のある人が使用するスクリーンリーダー、画面拡大ソフトウェア、音声認識ソフトウェアなどの支援技術との互換を可能にする。</p>
+    <p>PDF 仕様は、以下の表に示されているように、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7（ISO 32000-1）</loc>」の節 12.7.4「フィールドの種類」（英語）でフォーム・コントロールに対して名前、役割および値が設定される方法を定義する。コメント列では、対応する情報を Adobe Acrobat Pro で表示する方法について説明する。</p>
+    <table border="1">
+      <tbody>
 <tr>
 <th scope="col">インタラクティブなフォーム辞書エントリ</th>
 <th scope="col">定義する項目</th>
@@ -48,9 +50,11 @@
 <td>デフォルト値</td>
 <td>Adobe Acrobat では、DV エントリ値はフォーム・コントロールのプロパティダイアログボックスで設定できる。</td>
 </tr>
-</tbody></table>
-<p>以下の表では、Adobe Acrobat Pro を使用して作成される PDF フォーム・コントロールに対して役割、名前、値および状態がどのように定義されるのかを説明する。Adobe LiveCycle Designer には、これらと同様のコントロールと、いくつかの追加のコントロールが用意されている。（後述の事例 2 を参照のこと）。</p>
-<table border="1"><tbody>
+</tbody>
+    </table>
+    <p>以下の表では、Adobe Acrobat Pro を使用して作成される PDF フォーム・コントロールに対して役割、名前、値および状態がどのように定義されるのかを説明する。Adobe LiveCycle Designer には、これらと同様のコントロールと、いくつかの追加のコントロールが用意されている。（後述の事例 2 を参照のこと）。</p>
+    <table border="1">
+      <tbody>
 <tr valign="top">
 <th>PDF フォームエレメント</th>
 <th>役割（FT エントリ）</th>
@@ -110,26 +114,28 @@
 <td>デフォルト値（フィールド辞書の DV エントリ）はプロパティダイアログボックスで設定できる。値はユーザーにより入力される。</td>
 <td>Read Only, Required</td>
 </tr>
-</tbody></table></description>
+</tbody>
+    </table>
+  </description>
   <examples>
     <eg-group>
       <head>Adobe Acrobat 9 Pro を使用してフォームフィールドの名前、役割、値、状態を指定する</head>
-      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>この事例では、説明のためにチェックボックスを使用する。手順はその他のフォーム・コントロールと同様である。フォーム編集モードで、次の操作を行う。</p>
 <olist><item><p>作成または変更するフォームフィールドのコンテキストメニューにアクセスする</p></item><item><p>フォームフィールドの［プロパティ］ダイアログボックスを選択する</p></item><item><p>「ツールヒント」フィールドに値を追加して名前を指定する。これは、コントロールの名前としてアクセシビリティ API により使用され、通常、コントロールの視覚的なラベルとして使用されるテキストと一致するように設定する必要がある</p></item><item><p>［オプション］タブを選択する</p></item><item><p>必要に応じて、デフォルト値とデフォルトの状態を指定する</p></item></olist><p>以下の画像は、［一般］タブが表示されている、チェックボックスのプロパティダイアログボックスを示している（ダイアログボックス内の「名前」フィールドはアクセシビリティでは必要ない）。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/nrv1.jpg" alt="スクリーンショット：チェックボックスの「名前」フィールドと「ツールヒント」フィールドが表示されている、［チェックボックスのプロパティ］ダイアログボックスの［一般］タブ" height="345" width="427"/></p><p>以下の画像は、［オプション］タブが表示されている、［チェックボックスのプロパティ］ダイアログボックスを示している</p>
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/nrv2.jpg" alt="スクリーンショット：チェックボックスの値フィールドと状態フィールドが表示されている、［チェックボックスのプロパティ］ダイアログボックスの［オプション］タブ" height="388" width="348"/></p><p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/form.pdf">Acrobat Pro を使用して名前、役割、値を指定したサンプル（PDFファイル）</a>がある。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/nrv2.jpg" alt="スクリーンショット：チェックボックスの値フィールドと状態フィールドが表示されている、［チェックボックスのプロパティ］ダイアログボックスの［オプション］タブ" height="388" width="348"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/form.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Acrobat Pro を使用して名前、役割、値を指定したサンプル（PDFファイル）</loc>がある。</p>
 </description>
     </eg-group>
     <eg-group>
       <head>Adobe LiveCycle Designer ES 8.2.1 を使用してフォームフィールドの名前、値および状態を指定する</head>
-      <description><p>この事例は Adobe LiveCycle Designer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe LiveCycle Designer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>Adobe LiveCycle Designer では、オブジェクトライブラリを使用してフォームオブジェクトを作成し、オブジェクトパレットを使用してオブジェクトの名前、役割、状態または値を指定する。</p>
 <p>次の画像は、［オブジェクト］パレットを示している。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/lc-objlib.jpg" alt="スクリーンショット：フォームの作成に使用できるフォームオブジェクトが表示されている、LiveCycle Designer オブジェクトライブラリ" height="226" width="611"/></p><p>以下の 3 つの画像は、オブジェクトパレットの各タブを示している。1 つ目の画像では、フィールドの種類（役割）を指定するための「フィールド」タブが開かれている。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/lc-objpal-t.jpg" alt="スクリーンショット：LiveCycle Designer オブジェクトパレットの［フィールド］タブ" height="362" width="252"/></p><p>次の画像は、フィールドに適用できるオプションのある［値］タブを示している。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/lc-objpal-v.jpg" alt="LiveCycle Designer オブジェクトパレットの「値」タブのオプション" height="269" width="242"/></p><p>3つ目の画像は、フィールドの名前を指定する［連結］タブを示している。</p>
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/lc-objpal-b.jpg" alt="LiveCycle Designer オブジェクトパレットの［連結］タブ" height="352" width="253"/></p><p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/form-lc.pdf">LiveCycle Designer を使用して名前、役割、値を指定したサンプル（PDFファイル）</a>がある。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/lc-objpal-b.jpg" alt="LiveCycle Designer オブジェクトパレットの［連結］タブ" height="352" width="253"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF12/form-lc.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">LiveCycle Designer を使用して名前、役割、値を指定したサンプル（PDFファイル）</loc>がある。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -153,7 +159,9 @@ endobj</code>
           <p>Section 12.7.4 (Field Types) of<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/xml/index_arch.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Adobe XML Forms Architecture (XFA)</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/xml/index_arch.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Adobe XML Forms Architecture (XFA)</loc>
+          </p>
         </item>
         <item>
           <p>
@@ -205,9 +213,9 @@ endobj</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/PDF12.html">PDF12: Providing name, role, value information for form fields in PDF documents（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/PDF12.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF12: Providing name, role, value information for form fields in PDF documents（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

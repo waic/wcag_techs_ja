@@ -15,14 +15,11 @@
       <p>ユーザーエージェントは、<code>option</code>要素と<code>optgroup</code>要素に対する<code>label</code>属性のサポートが一貫しておらず、支援技術にも広くサポートされているわけではない。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>
-							この実装方法の目的は、セレクトメニューの中の選択肢をグループ化することである。セレクトメニューは、複数選択式リストやコンボボックスといった、フォーム・コントロールの許容値の一組である。セレクトメニューには、関連する選択肢のグループが含まれることがある。単に「ダミー」の選択肢を使ってこれらのグループを区切るのではなく、セマンティンクに特定すべきである。これによって、ユーザーエージェントは、グループごとに選択肢を閉じておき、利用者が選択肢を素早く拾い読みできるようにしたり、利用者にとって興味のある選択肢がどのグループに属しているのかを示すことができる。また、長い項目を視覚的に分割して、利用者が簡単に自分が選びたい選択肢を発見することにも役立つ。</p>
-          
-					<p>
-							HTMLでは、<code>select</code>要素は複数選択式リストとコンボボックスの両方の生成に利用される。選択肢それぞれは、<code>option</code>要素で示される。選択肢をグループ化するには、<code>optgroup</code>要素の子要素に、関連する<code>option</code>要素を含める。グループに「<code>label</code>」属性でラベル付けすることで、利用者がそのグループに含まれているものは何か予想できるだろう。</p>
-          
-					<p>
-							<code>optgroup</code>要素は<code>select</code>要素の直接の子要素、<code>option</code>要素は<code>optgroup</code>要素の直接の子要素として含めるべきとされる。<code>select</code>要素では、<code>optgroup</code>要素に1つだけ<code>option</code>要素を含めることもできるが、実はこのような利用法がデザインを意図したものでないか、コンテンツ制作者は検討すべきである。<code>optgroup</code>要素を入れ子にはできないので、<code>select</code>要素内では1段階のグループ化しかできない。</p></description>
+  <description>
+    <p>この実装方法の目的は、セレクトメニューの中の選択肢をグループ化することである。セレクトメニューは、複数選択式リストやコンボボックスといった、フォーム・コントロールの許容値の一組である。セレクトメニューには、関連する選択肢のグループが含まれることがある。単に「ダミー」の選択肢を使ってこれらのグループを区切るのではなく、セマンティンクに特定すべきである。これによって、ユーザーエージェントは、グループごとに選択肢を閉じておき、利用者が選択肢を素早く拾い読みできるようにしたり、利用者にとって興味のある選択肢がどのグループに属しているのかを示すことができる。また、長い項目を視覚的に分割して、利用者が簡単に自分が選びたい選択肢を発見することにも役立つ。</p>
+    <p>HTMLでは、<code>select</code>要素は複数選択式リストとコンボボックスの両方の生成に利用される。選択肢それぞれは、<code>option</code>要素で示される。選択肢をグループ化するには、<code>optgroup</code>要素の子要素に、関連する<code>option</code>要素を含める。グループに「<code>label</code>」属性でラベル付けすることで、利用者がそのグループに含まれているものは何か予想できるだろう。</p>
+    <p><code>optgroup</code>要素は<code>select</code>要素の直接の子要素、<code>option</code>要素は<code>optgroup</code>要素の直接の子要素として含めるべきとされる。<code>select</code>要素では、<code>optgroup</code>要素に1つだけ<code>option</code>要素を含めることもできるが、実はこのような利用法がデザインを意図したものでないか、コンテンツ制作者は検討すべきである。<code>optgroup</code>要素を入れ子にはできないので、<code>select</code>要素内では1段階のグループ化しかできない。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>次のコンボボックスは、好きな食べ物のデータをまとめたものである。利用者が好みのものを素早く選択できるように、食べ物の種類によってグループ化してある。</p>
@@ -98,16 +95,24 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/interact/forms.html#edef-SELECT" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML SELECT element</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/interact/forms.html#edef-SELECT" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML SELECT element</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/interact/forms.html#edef-OPTGROUP" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML OPTGROUP element</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/interact/forms.html#edef-OPTGROUP" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML OPTGROUP element</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/techniques/forms/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Creating Accessible Forms</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webaim.org/techniques/forms/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Creating Accessible Forms</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -135,9 +140,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H85.html">H85: Using OPTGROUP to group OPTION elements inside a SELECT（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H85.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H85: Using OPTGROUP to group OPTION elements inside a SELECT（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

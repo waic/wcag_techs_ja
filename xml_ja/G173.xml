@@ -9,10 +9,12 @@
     <success-criterion idref="media-equiv-audio-desc-only"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、映像コンテンツに対して音声ガイドを提供する別のバージョンを用意することによって、目で見ることのできない利用者が視聴覚コンテンツを理解できるようにすることである。</p>
-		<p>今日のユーザーエージェントのほとんどは複数の音声トラックを一つにまとめることができないため、この実装方法では、映像コンテンツのオリジナルの音声トラックと付加的な音声ガイドを1つの音声トラックにまとめた別のバージョンを提供し、音声による追加の情報を同期したメディアに追加する。この追加された情報は、コンテンツを理解するにあたって重要な行動、登場人物、場面の変化、及びスクリーン上のテキスト（キャプション以外の文字）などに焦点を当てたものである。</p>
-		<p>この新しい情報によって、オリジナルの音声トラックに含まれた重要な音声情報が分かりにくくなってしまう（または、うるさい効果音によって新しい情報が不明瞭になってしまう）のでは役に立たないため、新しい情報は会話や効果音の合間に追加される。このため、コンテンツに追加できる情報の量は限られることになる。</p>
-		<p>ムービーに音声ガイドを一次的な音声トラックとして含んだ別のバージョンを提供することによって、発話内容を聞くだけでなく登場人物の発話内容からだけでは伝わらない文脈や映像の他の側面も聞く必要がある全盲の利用者にとって、このコンテンツをアクセシブルなものにすることができる。</p></description>
+  <description>
+    <p>この実装方法の目的は、映像コンテンツに対して音声ガイドを提供する別のバージョンを用意することによって、目で見ることのできない利用者が視聴覚コンテンツを理解できるようにすることである。</p>
+    <p>今日のユーザーエージェントのほとんどは複数の音声トラックを一つにまとめることができないため、この実装方法では、映像コンテンツのオリジナルの音声トラックと付加的な音声ガイドを1つの音声トラックにまとめた別のバージョンを提供し、音声による追加の情報を同期したメディアに追加する。この追加された情報は、コンテンツを理解するにあたって重要な行動、登場人物、場面の変化、及びスクリーン上のテキスト（キャプション以外の文字）などに焦点を当てたものである。</p>
+    <p>この新しい情報によって、オリジナルの音声トラックに含まれた重要な音声情報が分かりにくくなってしまう（または、うるさい効果音によって新しい情報が不明瞭になってしまう）のでは役に立たないため、新しい情報は会話や効果音の合間に追加される。このため、コンテンツに追加できる情報の量は限られることになる。</p>
+    <p>ムービーに音声ガイドを一次的な音声トラックとして含んだ別のバージョンを提供することによって、発話内容を聞くだけでなく登場人物の発話内容からだけでは伝わらない文脈や映像の他の側面も聞く必要がある全盲の利用者にとって、このコンテンツをアクセシブルなものにすることができる。</p>
+  </description>
   <examples/>
   <resources>
     <see-also>
@@ -84,9 +86,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G173.html">G173: Providing a version of a movie with audio descriptions（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G173.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G173: Providing a version of a movie with audio descriptions（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

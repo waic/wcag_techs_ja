@@ -41,8 +41,7 @@
     </ua-issue>
   </ua-issues>
   <description>
-    <p>
-							この実装方法の目的は、ラベルを付けるのが視覚デザイン上そぐわない場合（たとえば、ラベルとなりうるテキストが画面上にない場合）や、ラベルを表示することで混乱を引き起こしてしまう場合に、<code>title</code>属性を利用してフォーム・コントロールにラベルを付けることである。それによって、ユーザーエージェントや支援技術が、<code>title</code>属性を読み上げることができる。</p>
+    <p>この実装方法の目的は、ラベルを付けるのが視覚デザイン上そぐわない場合（たとえば、ラベルとなりうるテキストが画面上にない場合）や、ラベルを表示することで混乱を引き起こしてしまう場合に、<code>title</code>属性を利用してフォーム・コントロールにラベルを付けることである。それによって、ユーザーエージェントや支援技術が、<code>title</code>属性を読み上げることができる。</p>
   </description>
   <examples>
     <eg-group>
@@ -85,10 +84,14 @@ type="text" size="4" value="" &gt;
                     title attribute</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse8.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse8.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -122,9 +125,9 @@ type="text" size="4" value="" &gt;
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H65.html">H65: Using the title attribute to identify form controls when the label element cannot be used（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H65.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H65: Using the title attribute to identify form controls when the label element cannot be used（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

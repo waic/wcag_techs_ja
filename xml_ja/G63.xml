@@ -9,13 +9,10 @@
     <success-criterion idref="navigation-mechanisms-location"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-            これは、達成基準2.4.5の実装に十分なコンテンツを配置するための一連の実装方法のひとつである。サイトマップは、サイトの異なる区分へのリンクを提供するウェブページである。サイト内でサイトマップを利用できるよう、最低でもサイトマップに記載されている全てのページに、サイトマップへのリンクを設ける。</p>
-          
-               <p>サイトマップは次のいくつかの目的に役立つ。
-						</p>
-          
-               <ul>
+  <description>
+    <p>これは、達成基準2.4.5の実装に十分なコンテンツを配置するための一連の実装方法のひとつである。サイトマップは、サイトの異なる区分へのリンクを提供するウェブページである。サイト内でサイトマップを利用できるよう、最低でもサイトマップに記載されている全てのページに、サイトマップへのリンクを設ける。</p>
+    <p>サイトマップは次のいくつかの目的に役立つ。</p>
+    <ul>
 <li>
               
                      <p>サイト全体の概要を提供する。</p>
@@ -33,13 +30,12 @@
             
                   </li>
 </ul>
-<p>サイトマップには、様々なタイプのものがある。最も単純で最も一般的な種類のサイトマップは、それぞれの区分又はサブサイトへのリンクを示した概略である。そのような概略は、サイトのいろいろな区分のページ間のリンクのような、サイト内のより複雑な関係は示さない。大きいサイトへのサイトマップの中には、各区分に関する追加の詳細を示すために展開する見出しを使用しているものもある。</p>
-          
-               <p>サイトマップはサイトのコンテンツと構成について説明する。サイトを更新するときはいつも、サイトマップを更新することが重要である。サイトの全ての区分にリンクしていない、サイトの構成とは異なる構成を提供する、又は、もはや有効ではないリンクを含む、というウェブページは、有効なサイトマップでない。
-</p></description>
+    <p>サイトマップには、様々なタイプのものがある。最も単純で最も一般的な種類のサイトマップは、それぞれの区分又はサブサイトへのリンクを示した概略である。そのような概略は、サイトのいろいろな区分のページ間のリンクのような、サイト内のより複雑な関係は示さない。大きいサイトへのサイトマップの中には、各区分に関する追加の詳細を示すために展開する見出しを使用しているものもある。</p>
+    <p>サイトマップはサイトのコンテンツと構成について説明する。サイトを更新するときはいつも、サイトマップを更新することが重要である。サイトの全ての区分にリンクしていない、サイトの構成とは異なる構成を提供する、又は、もはや有効ではないリンクを含む、というウェブページは、有効なサイトマップでない。</p>
+  </description>
   <examples>
     <eg-group>
-      <description><p>ウェブ・アクセシビリティ・イニシアティブは、ウェブサイトのいろいろな区分を記載した<a href="http://www.w3.org/WAI/sitemap.html">WAIサイトマップ</a>を提供している。サイトマップはウェブサイトのいろいろな区分を示すとともに、それらの区分の下部構造のいくつかを示している。</p>
+      <description><p>ウェブ・アクセシビリティ・イニシアティブは、ウェブサイトのいろいろな区分を記載した<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/WAI/sitemap.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">WAIサイトマップ</loc>を提供している。サイトマップはウェブサイトのいろいろな区分を示すとともに、それらの区分の下部構造のいくつかを示している。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -95,10 +91,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G63.html">G63: Providing a site map（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G63.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G63: Providing a site map（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

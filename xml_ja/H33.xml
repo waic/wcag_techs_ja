@@ -56,9 +56,10 @@
 </ul>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、リンクを説明する追加情報を提供するための、a要素の<code>title</code>属性の利用方法を示すことである。<code>title</code>属性は、リンクの目的を明らかにしたり、詳しく説明したりするのに役立つ追加情報の指定に用いる。もし<code>title</code>属性を通して提供する補足情報が、警告文のように利用者がリンクをたどる前に知っておくべき内容であれば、<code>title</code>属性ではなくリンクテキストとして提供すべきである。</p>
-            
-						<p><code>title</code>属性へのアクセス方法について、ユーザーエージェントごとにサポートが大きく異なるため、コンテンツ制作者はこの実装方法を用いるときは注意を払うべきである。この理由から、コンテンツ制作者は実装方法 <a href="C7.html">C7： CSSを用いて、リンクテキストの一部を非表示にする </a>（CSS）又は <a href="H30.html">H30： a 要素のリンクの目的を説明するテキストリンクを提供する</a>（HTML）を利用することが望ましい。</p></description>
+  <description>
+    <p>この実装方法の目的は、リンクを説明する追加情報を提供するための、a要素の<code>title</code>属性の利用方法を示すことである。<code>title</code>属性は、リンクの目的を明らかにしたり、詳しく説明したりするのに役立つ追加情報の指定に用いる。もし<code>title</code>属性を通して提供する補足情報が、警告文のように利用者がリンクをたどる前に知っておくべき内容であれば、<code>title</code>属性ではなくリンクテキストとして提供すべきである。</p>
+    <p><code>title</code>属性へのアクセス方法について、ユーザーエージェントごとにサポートが大きく異なるため、コンテンツ制作者はこの実装方法を用いるときは注意を払うべきである。この理由から、コンテンツ制作者は実装方法<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="C7.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C7： CSSを用いて、リンクテキストの一部を非表示にする</loc>（CSS）又は<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H30.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H30： a 要素のリンクの目的を説明するテキストリンクを提供する</loc>（HTML）を利用することが望ましい。</p>
+  </description>
   <examples>
     <eg-group>
       <head>リンクの目的を明らかにする</head>
@@ -102,9 +103,9 @@ target="_blank" title="新規ウインドウを開く"&gt;
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H33.html">H33: Supplementing link text with the title attribute（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H33.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H33: Supplementing link text with the title attribute（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

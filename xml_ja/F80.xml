@@ -8,8 +8,10 @@
     <success-criterion idref="visual-audio-contrast-scale"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この不適合の条件の目的は、テキストのサイズ変更が、それに応じてテキストベースのフォーム・コントロールを拡大しない時に発生する問題を説明するものである。テキストは利用者が要求するテキストサイズで表示されないので、利用者がテキストの入力及び入力したものを読むのに苦労するかもしれないことを意味している。</p>
-	<p>テキストベースのフォーム・コントロールは、ボタンと同様に入力ボックス（テキスト及びテキストエリア）を含んでいる。</p></description>
+  <description>
+    <p>この不適合の条件の目的は、テキストのサイズ変更が、それに応じてテキストベースのフォーム・コントロールを拡大しない時に発生する問題を説明するものである。テキストは利用者が要求するテキストサイズで表示されないので、利用者がテキストの入力及び入力したものを読むのに苦労するかもしれないことを意味している。</p>
+    <p>テキストベースのフォーム・コントロールは、ボタンと同様に入力ボックス（テキスト及びテキストエリア）を含んでいる。</p>
+  </description>
   <examples>
     <eg-group role="failure">
       <head>お問い合わせフォーム</head>
@@ -56,9 +58,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F80.html">F80: Failure of Success Criterion 1.4.4 when text-based form controls do not resize when visually rendered text is resized up to 200%（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F80.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F80: Failure of Success Criterion 1.4.4 when text-based form controls do not resize when visually rendered text is resized up to 200%（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

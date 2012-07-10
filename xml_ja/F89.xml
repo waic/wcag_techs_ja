@@ -14,9 +14,11 @@
       <p>代替テキストがないリンクに対しては、支援技術によってさまざまな修復方法が用いられる。例えばHTMLの場合、支援技術は、<code>a</code>要素の <code>title</code> 属性、又は <code>img</code> 要素の <code>src</code> 属性の値を代替テキストの代わりとして用いることがある。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この文書は、画像のような非テキストコンテンツのみで提供されているリンクに対して、その非テキストコンテンツが支援技術によって無視される方法で実装されている不適合事例について述べている。
+  <description>
+    <p>この文書は、画像のような非テキストコンテンツのみで提供されているリンクに対して、その非テキストコンテンツが支援技術によって無視される方法で実装されている不適合事例について述べている。
 リンクはインタラクティブなコントロールであるため、利用者はリンクにタブ移動し、リンクを起動することができる。識別名として用いられるテキストコンテンツがリンク内にない場合、支援技術はリンクに使用する何らかの識別名を見つけるために様々な修復方法を用いる。</p>
-	<p>ページ上でテキスト及び画像の両方が、同じリンク先にリンクするために用いられることがよくある。 これによって、2つの隣接したリンクが同じ識別名を持つときに音声読み上げでは同じ読み上げが繰り返されるため、コンテンツ制作者は画像に対して空のalt属性を提供することによりその冗長性を排除しようとする。困ったことに、この対応が往々にして問題を悪化させることがある。「<a href="H2.html">H2: 隣り合った画像とテキストリンクを同じリンクの中に入れる</a>」(HTML)は、別々のリンク及び望ましくない冗長性を減少させるのに推奨される方法である。</p></description>
+    <p>ページ上でテキスト及び画像の両方が、同じリンク先にリンクするために用いられることがよくある。 これによって、2つの隣接したリンクが同じ識別名を持つときに音声読み上げでは同じ読み上げが繰り返されるため、コンテンツ制作者は画像に対して空のalt属性を提供することによりその冗長性を排除しようとする。困ったことに、この対応が往々にして問題を悪化させることがある。「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H2: 隣り合った画像とテキストリンクを同じリンクの中に入れる</loc>」(HTML)は、別々のリンク及び望ましくない冗長性を減少させるのに推奨される方法である。</p>
+  </description>
   <examples>
     <eg-group role="failure">
       <head>HTML検索結果</head>
@@ -72,9 +74,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F89.html">F89: Failure of 2.4.4, 2.4.9 and 4.1.2 due to using null alt on an image where the image is the only content in a link（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F89.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F89: Failure of 2.4.4, 2.4.9 and 4.1.2 due to using null alt on an image where the image is the only content in a link（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

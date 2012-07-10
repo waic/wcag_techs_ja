@@ -12,12 +12,13 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>ASCII 文字、顔文字、リート語（当て字）が使用されると、アクセシビリティ上の問題が発生することがある。その理由は、文字のグループの見た目によって意味を伝えているからである。
-</p>
-<p>Flash では、このような文字のグループをムービークリップにラップし、アクセシブルな名前を提供することによってアクセシビリティが確保される。ムービークリップの forceSimple プロパティに true を設定することも重要である。この設定により、実際の ASCII 文字は支援技術からアクセス不可になる。</p></description>
+  <description>
+    <p>ASCII 文字、顔文字、リート語（当て字）が使用されると、アクセシビリティ上の問題が発生することがある。その理由は、文字のグループの見た目によって意味を伝えているからである。</p>
+    <p>Flash では、このような文字のグループをムービークリップにラップし、アクセシブルな名前を提供することによってアクセシビリティが確保される。ムービークリップの forceSimple プロパティに true を設定することも重要である。この設定により、実際の ASCII 文字は支援技術からアクセス不可になる。</p>
+  </description>
   <examples>
     <eg-group>
       <head>アクセシビリティパネルを使用して ASCII アートの代替テキストを提供する</head>
@@ -37,7 +38,7 @@
 myASCII.accessibilityProperties = new AccessibilityProperties();
 myASCII.accessibilityProperties.name = "WCAG 2 Rulez";
 myASCII.accessibilityProperties.forceSimple = true;</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH28/ascii_art_alternatives_as3.html">「ActionScript を使用して ASCII アートの代替テキストを提供する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH28/ascii_art_alternatives_as3.html">「ActionScript を使用して ASCII アートの代替テキストを提供する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH28/ascii_art_alternatives_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript を使用して ASCII アートの代替テキストを提供する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH28/ascii_art_alternatives_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript を使用して ASCII アートの代替テキストを提供する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -71,9 +72,9 @@ myASCII.accessibilityProperties.forceSimple = true;</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH28.html">FLASH28: Providing text alternatives for ASCII art, emoticons, and leetspeak in Flash（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH28.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH28: Providing text alternatives for ASCII art, emoticons, and leetspeak in Flash（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

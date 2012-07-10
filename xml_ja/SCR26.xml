@@ -10,9 +10,11 @@
     <success-criterion idref="navigation-mechanisms-focus-visible"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、Document Object Model（DOM）に挿入されたユーザーインタフェースの要素をタブ順序及びスクリーンリーダーの読み上げ順序がユーザーエージェント標準のふるまいによって正しく設定されるような方法で配置することである。この実装方法は、メニューやダイアログのように隠れているものと表示されているもの、全てのユーザーインタフェース要素に利用することができる。</p>
-		<p>スクリーンリーダーの読み上げ順序は、Document Object Model内のHTML又はXHTMLの要素の順序に基づいており、それはタブ順序についても同様である。この実装方法では、新しいコンテンツをDOMのそのトリガーとなる要素の直後に挿入する。トリガーとなる要素は、リンク又はボタンでなければならず、スクリプトはそのonclickイベントにより呼び出されなければならない。これらの要素はもともとフォーカス可能であり、そのonclickイベントはデバイスに依存しない。フォーカスは選択された要素に残り、その後に挿入された新しいコンテンツは、タブ順序及びスクリーンリーダーの読み上げ順序の両方において、次の順番となる。</p>
-		<p>この実装方法は同期された更新にも利用できることに注目して欲しい。（AJAXと呼ばれることのある）非同期の更新では、支援技術に非同期のコンテンツが挿入されたことを通知するために追加の実装方法が必要となる。</p></description>
+  <description>
+    <p>この実装方法の目的は、Document Object Model（DOM）に挿入されたユーザーインタフェースの要素をタブ順序及びスクリーンリーダーの読み上げ順序がユーザーエージェント標準のふるまいによって正しく設定されるような方法で配置することである。この実装方法は、メニューやダイアログのように隠れているものと表示されているもの、全てのユーザーインタフェース要素に利用することができる。</p>
+    <p>スクリーンリーダーの読み上げ順序は、Document Object Model内のHTML又はXHTMLの要素の順序に基づいており、それはタブ順序についても同様である。この実装方法では、新しいコンテンツをDOMのそのトリガーとなる要素の直後に挿入する。トリガーとなる要素は、リンク又はボタンでなければならず、スクリプトはそのonclickイベントにより呼び出されなければならない。これらの要素はもともとフォーカス可能であり、そのonclickイベントはデバイスに依存しない。フォーカスは選択された要素に残り、その後に挿入された新しいコンテンツは、タブ順序及びスクリーンリーダーの読み上げ順序の両方において、次の順番となる。</p>
+    <p>この実装方法は同期された更新にも利用できることに注目して欲しい。（AJAXと呼ばれることのある）非同期の更新では、支援技術に非同期のコンテンツが挿入されたことを通知するために追加の実装方法が必要となる。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>この例では、リンクがクリックされた際にメニューを生成し、そのリンクの後に挿入する。リンクのonclickイベントは新しいメニューのためのIDをパラメータとして渡すShowHideスクリプトを呼び出すために使用される。</p>
@@ -69,9 +71,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR26.html">SCR26: Inserting dynamic content into the Document Object Model immediately following its trigger element（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：中村 精親（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SCR26.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCR26: Inserting dynamic content into the Document Object Model immediately following its trigger element（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：中村 精親（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

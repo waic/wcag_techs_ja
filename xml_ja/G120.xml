@@ -8,12 +8,11 @@
     <success-criterion idref="meaning-pronunciation"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、単語がウェブページの中で少なくとも最初に現れたとき、後ろに読みを提供することにより単語の読み方が分かるようにすることである。</p>
-          
-               <p>同じつづりで異なった読みの単語がウェブページにあるときは、その単語が現れるごとに読みが提供されない場合、この実装方法は読みの提供として適切なものとはならない。</p>
-
-          
-               <p>この実装方法はウェブページで略語の初出時に適用される。複数の資料をひとつのウェブページに結合するとき、それぞれの資料の冒頭で略語の元の語を示す。しかしながら、この場合、元の語を提供するための異なる実装方法を用いる方が、より適切であるかもしれない。</p></description>
+  <description>
+    <p>この実装方法の目的は、単語がウェブページの中で少なくとも最初に現れたとき、後ろに読みを提供することにより単語の読み方が分かるようにすることである。</p>
+    <p>同じつづりで異なった読みの単語がウェブページにあるときは、その単語が現れるごとに読みが提供されない場合、この実装方法は読みの提供として適切なものとはならない。</p>
+    <p>この実装方法はウェブページで略語の初出時に適用される。複数の資料をひとつのウェブページに結合するとき、それぞれの資料の冒頭で略語の元の語を示す。しかしながら、この場合、元の語を提供するための異なる実装方法を用いる方が、より適切であるかもしれない。</p>
+  </description>
   <examples>
     <eg-group>
       <head>Example 1</head>
@@ -52,9 +51,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G120.html">G120: Providing the pronunciation immediately following the word（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G120.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G120: Providing the pronunciation immediately following the word（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

@@ -58,10 +58,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G190.html">G190: Providing a link adjacent to or associated with a non-conforming object that links to a conforming alternate version
-（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G190.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G190: Providing a link adjacent to or associated with a non-conforming object that links to a conforming alternate version&#13;
+（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通株式会社</loc>,<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com/group/fdl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通デザイン株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

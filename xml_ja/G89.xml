@@ -9,9 +9,11 @@
     <success-criterion idref="minimize-error-context-help"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、利用者が入力しなければならないデータ書式の制約を通知することによって、利用者が入力エラーを回避しやすくすることである。これは、書式の特徴を記述するか、入力データに求められる書式の例を提供することによって対処できる。</p>
-	<note><p class="prefix">日付や時刻のように、様々な記述方法があるデータ書式については、利用者にとって最も入力しやすい書式を選択できるオプションを提供するとよい。</p>
-	</note></description>
+  <description>
+    <p>この実装方法の目的は、利用者が入力しなければならないデータ書式の制約を通知することによって、利用者が入力エラーを回避しやすくすることである。これは、書式の特徴を記述するか、入力データに求められる書式の例を提供することによって対処できる。</p>
+    <note><p class="prefix">日付や時刻のように、様々な記述方法があるデータ書式については、利用者にとって最も入力しやすい書式を選択できるオプションを提供するとよい。</p>
+	</note>
+  </description>
   <examples>
     <eg-group>
       <head>事例１</head>
@@ -47,9 +49,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G89.html">G89: Providing expected data format and example（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：田辺　丈士<a href="http://www.uniteair.co.jp/">（ユナイティア株式会社）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G89.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G89: Providing expected data format and example（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：田辺　丈士<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.uniteair.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">（ユナイティア株式会社）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

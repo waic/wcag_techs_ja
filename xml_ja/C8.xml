@@ -9,8 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p>
-この実装方法の目的は、意味の伝わるテキストの流れを維持しながら、スタイルシートによって表示上の文字間隔を調整する方法を示すことである。
+    <p>この実装方法の目的は、意味の伝わるテキストの流れを維持しながら、スタイルシートによって表示上の文字間隔を調整する方法を示すことである。
 文字間隔の量を調整するには、CSSの<code>letter-spacing</code>プロパティを使用する。
 単語の途中に空白文字を入れると意味や発音のされ方が変わってしまうため、間隔の調整はこの方法で行うことが推奨されている。</p>
   </description>
@@ -38,7 +37,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1998/REC-CSS2-19980512/text.html#spacing-props" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: Letter and word spacing</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1998/REC-CSS2-19980512/text.html#spacing-props" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: Letter and word spacing</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -70,9 +71,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C8.html">C8: Using CSS letter-spacing to control spacing within a word（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/C8.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C8: Using CSS letter-spacing to control spacing within a word（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ofujimiki.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">大藤 幹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

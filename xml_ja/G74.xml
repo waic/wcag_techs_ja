@@ -8,11 +8,11 @@
     <success-criterion idref="text-equiv-all"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、利用者を別の場所にジャンプさせることなく長い説明文を提供することである。非テキストコンテンツの内容の一部が失われる恐れがある利用者にとって有益な説明文が、すべての利用者にも見られるようになる。</p>
-          
-               <p>この実装方法によって、長い説明文が標準のプレゼンテーションの一部として提供される（つまり、すべての利用者が受け取ることができる）。説明文は非テキストコンテンツの近くに配置されるが、隣接させる必要はない。例えばグラフの下にキャプションがあり、長い説明文が次の段落で提供されているといった場合である。</p>
-          
-               <p>非テキストコンテンツを閲覧できないときに、どこを探せば良いかわかるように、簡潔な代替テキストの中に長い説明文の場所を示す。</p></description>
+  <description>
+    <p>この実装方法の目的は、利用者を別の場所にジャンプさせることなく長い説明文を提供することである。非テキストコンテンツの内容の一部が失われる恐れがある利用者にとって有益な説明文が、すべての利用者にも見られるようになる。</p>
+    <p>この実装方法によって、長い説明文が標準のプレゼンテーションの一部として提供される（つまり、すべての利用者が受け取ることができる）。説明文は非テキストコンテンツの近くに配置されるが、隣接させる必要はない。例えばグラフの下にキャプションがあり、長い説明文が次の段落で提供されているといった場合である。</p>
+    <p>非テキストコンテンツを閲覧できないときに、どこを探せば良いかわかるように、簡潔な代替テキストの中に長い説明文の場所を示す。</p>
+  </description>
   <examples>
     <eg-group>
       <head>棒グラフ</head>
@@ -48,9 +48,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G74.html">G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="ttp://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G74.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="ttp://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

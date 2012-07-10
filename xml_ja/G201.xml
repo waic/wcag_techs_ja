@@ -72,7 +72,7 @@
                 &lt;/p&gt;
                 &lt;/body&gt;
                 &lt;/html&gt;</code>
-      <description><p>参考：<a href="working-examples/G201/new-window.html">CSSを用いて、新しいウィンドウが開く前に知らせるサンプル：英語</a></p>
+      <description><p>参考：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="working-examples/G201/new-window.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSSを用いて、新しいウィンドウが開く前に知らせるサンプル：英語</loc></p>
 </description>
     </eg-group>
   </examples>
@@ -105,8 +105,8 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G201.html">G201: Giving users advanced warning when opening a new window（英語）</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G201.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G201: Giving users advanced warning when opening a new window（英語）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

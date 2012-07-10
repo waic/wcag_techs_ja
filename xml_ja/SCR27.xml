@@ -8,8 +8,10 @@
     <success-criterion idref="navigation-mechanisms-focus-order"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、コンポーネントを再配置するための極めてユーザブルかつアクセシブルなメカニズムを提供することである。再配置するためのメカニズムのうち、もっとも一般的なものは、コンポーネントに番号をつけることができる設定ページに利用者を送ること、又は、コンポーネントをドラッグアンドドロップして希望する位置へ移動できるようにすることのふたつである。ドラッグアンドドロップの方が、ひとつずつ項目を適当な位置に並べることができ、結果を感覚的に得られるため、はるかにユーザブルな方法である。残念なことに、ドラッグアンドドロップはマウスの利用に頼った方法である。この実装方法は、利用者がコンポーネントのメニューを使って、それらを機器に依存することなく適当な位置に再配置することを可能にする。ドラッグアンドドロップによる再配置機能の代替として、もしくはそれと併用して利用することができる。</p>
-		<p>メニューはリンクリストで、コンテンツを再配置するスクリプトのトリガーとなる、機器に依存しないonclickイベントを使用している。コンテンツは単に視覚的にだけでなく、Document Object Model (DOM)でも再配置されているので、すべての機器向けに正しい順序となっている。</p></description>
+  <description>
+    <p>この実装方法の目的は、コンポーネントを再配置するための極めてユーザブルかつアクセシブルなメカニズムを提供することである。再配置するためのメカニズムのうち、もっとも一般的なものは、コンポーネントに番号をつけることができる設定ページに利用者を送ること、又は、コンポーネントをドラッグアンドドロップして希望する位置へ移動できるようにすることのふたつである。ドラッグアンドドロップの方が、ひとつずつ項目を適当な位置に並べることができ、結果を感覚的に得られるため、はるかにユーザブルな方法である。残念なことに、ドラッグアンドドロップはマウスの利用に頼った方法である。この実装方法は、利用者がコンポーネントのメニューを使って、それらを機器に依存することなく適当な位置に再配置することを可能にする。ドラッグアンドドロップによる再配置機能の代替として、もしくはそれと併用して利用することができる。</p>
+    <p>メニューはリンクリストで、コンテンツを再配置するスクリプトのトリガーとなる、機器に依存しないonclickイベントを使用している。コンテンツは単に視覚的にだけでなく、Document Object Model (DOM)でも再配置されているので、すべての機器向けに正しい順序となっている。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>この例は上下間の再配置を行う。このアプローチはまた、右と左のオプションを追加することで、2次元での再配置にも利用できる。</p>
@@ -129,9 +131,9 @@ ul#swapper ul.menu li a { text-decoration:none; color:black; padding:0 0.1em;
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR27.html">SCR27: Reordering page sections using the Document Object Model（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SCR27.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCR27: Reordering page sections using the Document Object Model（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：辻 勝利（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

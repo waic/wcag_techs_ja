@@ -12,11 +12,11 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
   <description>
-    <p>この実装方法の目的は、スクリプトを使用して点滅を制御し、点滅を5秒以内に停止させることである。ActionScript の <code>setTimeout()</code> メソッドを使用して、ムービークリップの点滅動作を5秒以内に停止させる。</p>
+    <p>この実装方法の目的は、スクリプトを使用して点滅を制御し、点滅を5秒以内に停止させることである。ActionScript の<code>setTimeout()</code>メソッドを使用して、ムービークリップの点滅動作を5秒以内に停止させる。</p>
   </description>
   <examples>
     <eg-group>
@@ -28,7 +28,7 @@ function stopBlinking() {
   var blinkingTextMC = getChildByName('blinkingTextMC');
   blinkingTextMC.gotoAndStop(1);
 }</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH36/control_blinking_with_script_as3.html">「タイムアウト後に点滅を停止させる」のサンプル（英語）</a>で確認できる。<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH36/control_blinking_with_script_as3.swf">「タイムアウト後に点滅を停止させる」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH36/control_blinking_with_script_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「タイムアウト後に点滅を停止させる」のサンプル（英語）</loc>で確認できる。<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH36/control_blinking_with_script_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「タイムアウト後に点滅を停止させる」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -57,9 +57,9 @@ function stopBlinking() {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH36.html">FLASH36: Using scripts to control blinking and stop it in five seconds or less（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH36.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH36: Using scripts to control blinking and stop it in five seconds or less（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

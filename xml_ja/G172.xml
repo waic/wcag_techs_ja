@@ -8,11 +8,13 @@
     <success-criterion idref="visual-audio-contrast-visual-presentation"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、両端揃えをしていないバージョンのページを提供することである。</p>
-	<p>コンテンツ制作者は、レイアウトの目的でテキストを両端揃えにしたいと思う場合があるかもしれない。この場合、テキストの両端揃えを解除する機能を提供すればよい。そのためのコントロールは、探し出しやすく、アクセスしやすいように、ページの先頭の近くにおくとよい。 </p>
-	<note><p class="prefix">この実装方法は、適合していないコンテンツに対して<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>のページを提示するために、スタイルを切り替える実装方法と組み合わせて用いられる。詳細は、「<a href="C29.html">C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</a>」(CSS) 及び「<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>」を参照。</p>
+  <description>
+    <p>この実装方法の目的は、両端揃えをしていないバージョンのページを提供することである。</p>
+    <p>コンテンツ制作者は、レイアウトの目的でテキストを両端揃えにしたいと思う場合があるかもしれない。この場合、テキストの両端揃えを解除する機能を提供すればよい。そのためのコントロールは、探し出しやすく、アクセスしやすいように、ページの先頭の近くにおくとよい。</p>
+    <note><p class="prefix">この実装方法は、適合していないコンテンツに対して<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合している代替バージョン</loc>のページを提示するために、スタイルを切り替える実装方法と組み合わせて用いられる。詳細は、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="C29.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</loc>」(CSS) 及び「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合している代替バージョンを理解する</loc>」を参照。</p>
 
-	</note></description>
+	</note>
+  </description>
   <examples>
     <eg-group>
       <description><p>両端揃えで、元々出版された作業の外観の再現を試みたオンラインの古典小説がサイトにある。「両端揃えを解除する」と書かれたボタンがページの先頭近くにあり、スタイルシートを切り替えるためにスタイルを切り換える実装方法が使用されている。新しいスタイルシートでは、テキストを左揃えで配置する。 </p>
@@ -48,9 +50,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G172.html">G172: Providing a mechanism to remove full justification of text（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G172.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G172: Providing a mechanism to remove full justification of text（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

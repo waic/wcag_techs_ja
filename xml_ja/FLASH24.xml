@@ -12,7 +12,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
   <description>
@@ -61,7 +61,7 @@ function endSession() {
   Alert.show("please log in again",
   "Your session has expired");
 }</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH24/checkbox_for_extending_timelimit_as3.html">「ドロップダウンリストを使用してタイムアウトを変更する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH24/checkbox_for_extending_timelimit_as3.swf">「ドロップダウンリストを使用してタイムアウトを変更する」のソース（英語）</a>をダウンロードすることもできる。なお、このサンプルではデモンストレーションが目的であるため、セッション時間を意図的に短くしてある。コンテンツ制作者は、「<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html">達成基準 2.2.1 （調整可能な制限時間）</a>」の要件を満たすための十分な時間を提供する必要がある。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH24/checkbox_for_extending_timelimit_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ドロップダウンリストを使用してタイムアウトを変更する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH24/checkbox_for_extending_timelimit_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ドロップダウンリストを使用してタイムアウトを変更する」のソース（英語）</loc>をダウンロードすることもできる。なお、このサンプルではデモンストレーションが目的であるため、セッション時間を意図的に短くしてある。コンテンツ制作者は、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">達成基準 2.2.1 （調整可能な制限時間）</loc>」の要件を満たすための十分な時間を提供する必要がある。</p>
 </description>
     </eg-group>
   </examples>
@@ -91,9 +91,9 @@ function endSession() {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH24.html">FLASH24: Allowing the user to extend the default time limit（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH24.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH24: Allowing the user to extend the default time limit（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

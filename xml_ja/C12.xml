@@ -18,8 +18,7 @@
     </ua-issue>
   </ua-issues>
   <description>
-    <p>
-							この実装方法の目的は、ユーザーエージェントがコンテンツを効果的に大きく表示したり小さく表示できるように、比率にもとづく単位でテキストのフォントサイズを指定することである。<code>body</code>要素に対してフォントサイズを指定した場合、より個別的なセレクタで上書きされない限り、他の全ての要素に値が継承される。</p>
+    <p>この実装方法の目的は、ユーザーエージェントがコンテンツを効果的に大きく表示したり小さく表示できるように、比率にもとづく単位でテキストのフォントサイズを指定することである。<code>body</code>要素に対してフォントサイズを指定した場合、より個別的なセレクタで上書きされない限り、他の全ての要素に値が継承される。</p>
   </description>
   <examples>
     <eg-group>
@@ -41,10 +40,14 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Cascading Style Sheets, Level 2 (CSS2), Fonts</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Cascading Style Sheets, Level 2 (CSS2), Fonts</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html#font-size-props" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Font Size Property</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/fonts.html#font-size-props" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2 Font Size Property</loc>
+          </p>
         </item>
         <item>
           <p diff="del">CSS-Discuss Font Size Using Percentages</p>
@@ -74,10 +77,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/C12.html">C12: Using percent for font sizes（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/C12.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C12: Using percent for font sizes（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

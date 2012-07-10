@@ -8,12 +8,11 @@
     <success-criterion idref="navigation-mechanisms-location"/>
   </applies-to>
   <ua-issues/>
-  <description><p>パンくずリストは、コンテンツがどのような構造になっていたのか、及びこれまでにたどってきたウェブページへ戻る方法を、利用者が想起する助けとなり、また一連のウェブページの中で現在位置を特定する。パンくずリストには、利用者がそのウェブページに到達するまでに通ってきた場所、又はサイトの編成における現在のウェブページの位置が表示されている。</p>
-          
-               <p>パンくずリストは、現在のウェブページまでナビゲートする途中にアクセスしたウェブページへのリンクを使って実装される。パンくずリストは、ウェブページ一式の各ウェブページの中で同じ位置に置く。</p>
-
-          
-               <p>目に見える区切り文字でパンくずリストの中の項目を切り離すと、利用者の助けになる。区切り文字の例には「&gt;」、「|」、「/」、及び「::」がある。</p></description>
+  <description>
+    <p>パンくずリストは、コンテンツがどのような構造になっていたのか、及びこれまでにたどってきたウェブページへ戻る方法を、利用者が想起する助けとなり、また一連のウェブページの中で現在位置を特定する。パンくずリストには、利用者がそのウェブページに到達するまでに通ってきた場所、又はサイトの編成における現在のウェブページの位置が表示されている。</p>
+    <p>パンくずリストは、現在のウェブページまでナビゲートする途中にアクセスしたウェブページへのリンクを使って実装される。パンくずリストは、ウェブページ一式の各ウェブページの中で同じ位置に置く。</p>
+    <p>目に見える区切り文字でパンくずリストの中の項目を切り離すと、利用者の助けになる。区切り文字の例には「&gt;」、「|」、「/」、及び「::」がある。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>開発者が、ハイパーリンクを作成する方法を見つけるために、オーサリングツールのメーカーのウェブサイトの中を探している。検索結果を使って、オーサリングツールを使用してハイパーリンクを作成するための詳しい説明があるウェブページへ行く。そのページには、以下のようなリンクでできたパンくずリストがある:</p>
@@ -114,9 +113,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G65.html">G65: Providing a breadcrumb trail（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G65.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G65: Providing a breadcrumb trail（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

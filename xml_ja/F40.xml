@@ -9,8 +9,10 @@
     <success-criterion idref="time-limits-postponed"/>
   </applies-to>
   <ua-issues/>
-  <description><p><code>meta</code> <code>http-equiv</code>の{time-out}; url=...はしばしば、自動的に利用者をリダイレクトする目的で使用される。これが時間をおいて発生した場合、予期しない状況の変化によって利用者の邪魔をする可能性がある。</p>
-		<p>タイムアウトが0に設定されている場合には、<code>meta</code>要素をリダイレクトのために利用することが容認される。なぜなら、リダイレクトが即時に行われるので、状況の変化として知覚できないからである。しかしながら、これを実行するためにはサーバーサイドの実装方法を用いることが望ましい。<a href="SVR1.html">SVR1： クライアントサイドではなく、サーバサイドで自動リダイレクトを実装する</a> (SERVER) 参照のこと。</p></description>
+  <description>
+    <p><code>meta</code><code>http-equiv</code>の{time-out}; url=...はしばしば、自動的に利用者をリダイレクトする目的で使用される。これが時間をおいて発生した場合、予期しない状況の変化によって利用者の邪魔をする可能性がある。</p>
+    <p>タイムアウトが0に設定されている場合には、<code>meta</code>要素をリダイレクトのために利用することが容認される。なぜなら、リダイレクトが即時に行われるので、状況の変化として知覚できないからである。しかしながら、これを実行するためにはサーバーサイドの実装方法を用いることが望ましい。<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="SVR1.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SVR1： クライアントサイドではなく、サーバサイドで自動リダイレクトを実装する</loc>(SERVER) 参照のこと。</p>
+  </description>
   <examples>
     <eg-group role="failure">
       <description><p>以下のページは5秒後にhttp://www.example.com/newpageというURIへリダイレクトされるため、不適合である。</p>
@@ -35,7 +37,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/global.html#h-7.4.4" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 META element</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/global.html#h-7.4.4" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 META element</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -62,9 +66,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F40.html">F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F40.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：辻 勝利（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

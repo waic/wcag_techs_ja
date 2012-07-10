@@ -10,13 +10,11 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントの一部では、link要素で指定された情報を表示するナビゲーションバーが追加できる。MozillaとOperaの現在のバージョンがこの機能を提供する。IE 6.0とFirefox 1.5はこの機能を提供しないが、拡張機能やアドオンを通して利用できることがある。<code>link</code>要素のブラウザサポートに関する詳しい情報は、<a href="http://www.subotnik.net/html/link">The 'link'-Element in (X)HTML：英語</a>を参照。</p>
+      <p>ユーザーエージェントの一部では、link要素で指定された情報を表示するナビゲーションバーが追加できる。MozillaとOperaの現在のバージョンがこの機能を提供する。IE 6.0とFirefox 1.5はこの機能を提供しないが、拡張機能やアドオンを通して利用できることがある。<code>link</code>要素のブラウザサポートに関する詳しい情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.subotnik.net/html/link" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The 'link'-Element in (X)HTML：英語</loc>を参照。</p>
     </ua-issue>
   </ua-issues>
   <description>
-    <p>
-							この実装方法の目的は、用語集の場所を示すメカニズムを提供することである。コンテンツの中にある用語が、別の用語集ページで定義されている場合、用語集を用いるドキュメントの<code>head</code>要素の範囲内に<code>link</code>要素を指定することで、その用語集が参照できる。<code>link</code>要素の<code>rel</code>属性に「glossary」という値を指定し、<code>href</code>属性には用語集ページのURIを指定する。これで、利用者が素早く簡単に用語集にアクセスするのをユーザーエージェントが支援できるようになる。
-							</p>
+    <p>この実装方法の目的は、用語集の場所を示すメカニズムを提供することである。コンテンツの中にある用語が、別の用語集ページで定義されている場合、用語集を用いるドキュメントの<code>head</code>要素の範囲内に<code>link</code>要素を指定することで、その用語集が参照できる。<code>link</code>要素の<code>rel</code>属性に「glossary」という値を指定し、<code>href</code>属性には用語集ページのURIを指定する。これで、利用者が素早く簡単に用語集にアクセスするのをユーザーエージェントが支援できるようになる。</p>
   </description>
   <examples>
     <eg-group>
@@ -28,12 +26,16 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html#edef-LINK" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    LINK element</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html#edef-LINK" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    LINK element</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/types.html#type-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 link&#13;
-                    types</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/types.html#type-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 link&#13;
+                    types</loc>
+          </p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/use-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Use &lt;link&gt;s in your&#13;
@@ -84,9 +86,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H60.html">H60: Using the link element to link to a glossary（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H60.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H60: Using the link element to link to a glossary（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

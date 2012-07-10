@@ -61,9 +61,9 @@ window.open('noscript.html', '_blank', 'height=200,width=150');
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F52.html">F52: Failure of Success Criterion 3.2.1 due to opening a new window as soon as a new page is loaded（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F52.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F52: Failure of Success Criterion 3.2.1 due to opening a new window as soon as a new page is loaded（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

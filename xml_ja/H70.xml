@@ -8,11 +8,10 @@
     <success-criterion idref="navigation-mechanisms-skip"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-							この実装方法の目的は、繰り返しているブロックをグループ化するために、どのようにフレームセットを用いることができるかを示すことである。ユーザーエージェント及び支援技術のほとんどが、フレームからフレームへとナビゲートする手段を提供しているため、要素をまとめるのにフレームを使うことによって、繰り返されているコンテンツのブロックを簡単に通過できるメカニズムを提供することができる。ウェブサイトでフレームセットを用いている場合、コンテンツのブロックそれぞれを別々のフレームにまとめられる。そして、繰り返しているコンテンツのブロックを、各ウェブページのフレームセットの中で、同一のフレームに表示させる。さらに、各<code>flame</code>要素には、そのフレームの内容を説明する<code>title</code>属性を指定しなければならない。フレームに適切なタイトルが付いていれば、ユーザーはフレームのナビゲーション機能を使用してコンテンツのブロック間を簡単に移動することができるようになる。</p>
-          
-					<p>
-							この実装方法は、ページ内のコンテンツを構成するのに既にフレームセットを用いている場合に適している。フレームセットを用いていないウェブページには、他の実装方法を用いることが望ましい。多くの支援技術ユーザーは、フレームの扱いに手間がかかるからである。さらに対応が望まれる実装方法（参考）として、ノーフレーム（<code>noframes</code>要素）を用いる実装方法が、達成基準 4.2.1【訳者：原文では「4.2.1」となっていますが、「1.1.1」が正しいと考えられます。WCAGワーキンググループに確認中です。】にある。</p></description>
+  <description>
+    <p>この実装方法の目的は、繰り返しているブロックをグループ化するために、どのようにフレームセットを用いることができるかを示すことである。ユーザーエージェント及び支援技術のほとんどが、フレームからフレームへとナビゲートする手段を提供しているため、要素をまとめるのにフレームを使うことによって、繰り返されているコンテンツのブロックを簡単に通過できるメカニズムを提供することができる。ウェブサイトでフレームセットを用いている場合、コンテンツのブロックそれぞれを別々のフレームにまとめられる。そして、繰り返しているコンテンツのブロックを、各ウェブページのフレームセットの中で、同一のフレームに表示させる。さらに、各<code>flame</code>要素には、そのフレームの内容を説明する<code>title</code>属性を指定しなければならない。フレームに適切なタイトルが付いていれば、ユーザーはフレームのナビゲーション機能を使用してコンテンツのブロック間を簡単に移動することができるようになる。</p>
+    <p>この実装方法は、ページ内のコンテンツを構成するのに既にフレームセットを用いている場合に適している。フレームセットを用いていないウェブページには、他の実装方法を用いることが望ましい。多くの支援技術ユーザーは、フレームの扱いに手間がかかるからである。さらに対応が望まれる実装方法（参考）として、ノーフレーム（<code>noframes</code>要素）を用いる実装方法が、達成基準 4.2.1【訳者：原文では「4.2.1」となっていますが、「1.1.1」が正しいと考えられます。WCAGワーキンググループに確認中です。】にある。</p>
+  </description>
   <examples>
     <eg-group>
       <head>事例1</head>
@@ -38,7 +37,9 @@
           <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/present/frames.html#h-16.2.2" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The FRAME element</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse4.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Navigation</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/webcourse4.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Navigation</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -69,9 +70,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H70.html">H70: Using frame elements to group blocks of repeated material（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H70.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H70: Using frame elements to group blocks of repeated material（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

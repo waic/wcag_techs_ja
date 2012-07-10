@@ -54,9 +54,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G71.html">G71: Providing a help link on every Web page（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：田辺　丈士<a href="http://www.uniteair.co.jp/">（ユナイティア株式会社）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G71.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G71: Providing a help link on every Web page（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：田辺　丈士<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.uniteair.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">（ユナイティア株式会社）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

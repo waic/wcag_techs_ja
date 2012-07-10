@@ -14,14 +14,11 @@
 									</p>
     </ua-issue>
   </ua-issues>
-  <description><p>
-							この実装方法の目的は、リスト要素を役割に合わせて適切に利用し、関連する項目のリストを生成することである。<code>ol</code>要素は順序のあるリストに、<code>ul</code>要素は順序のないリストに利用する。定義リスト（<code>dl</code>要素）は、用語とその定義をまとめるのに利用する。このようなマークアップを用いることで、リストを読みやすくできるとはいえ、すべてのリストをリスト要素でマークアップする必要はない。たとえば、文章に含まれるカンマ区切りのリストを、リスト要素でマークアップする必要はない。</p>
-          
-					<p>
-							リストの関係を示すためではなく、見た目をリストのようにしたいためにマークアップを用いることで、利用者が情報を利用しにくくなる恐れがある。リストのような見た目にする例としては、リスト項目の最初にアスタリスクを付け、<code>br</code>要素を用いて各リスト項目を分けるといったことが挙げられる。</p>
-          
-					<p>
-							支援技術の中には、利用者をリストからリストへ、またはリスト項目からリスト項目へと誘導する機能を備えているものがある。スタイルシートを利用すれば、リストという役割の整合性を保ったまま、表現を変更することができる。</p></description>
+  <description>
+    <p>この実装方法の目的は、リスト要素を役割に合わせて適切に利用し、関連する項目のリストを生成することである。<code>ol</code>要素は順序のあるリストに、<code>ul</code>要素は順序のないリストに利用する。定義リスト（<code>dl</code>要素）は、用語とその定義をまとめるのに利用する。このようなマークアップを用いることで、リストを読みやすくできるとはいえ、すべてのリストをリスト要素でマークアップする必要はない。たとえば、文章に含まれるカンマ区切りのリストを、リスト要素でマークアップする必要はない。</p>
+    <p>リストの関係を示すためではなく、見た目をリストのようにしたいためにマークアップを用いることで、利用者が情報を利用しにくくなる恐れがある。リストのような見た目にする例としては、リスト項目の最初にアスタリスクを付け、<code>br</code>要素を用いて各リスト項目を分けるといったことが挙げられる。</p>
+    <p>支援技術の中には、利用者をリストからリストへ、またはリスト項目からリスト項目へと誘導する機能を備えているものがある。スタイルシートを利用すれば、リストという役割の整合性を保ったまま、表現を変更することができる。</p>
+  </description>
   <examples>
     <eg-group>
       <head>連続するステップを示すリスト</head>
@@ -68,7 +65,7 @@
 dt{clear:both;font-weight: bold}
 dt span{display: inline-block; width: 70px;}
 dd span{display: inline-block; margin-right: 5px;}</code>
-      <description><p>この事例のサンプルとして、<a href="http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/working-examples/H48/ContactInfoDL.html">定義リストを用いた連絡先情報のサンプル</a>がある。</p>
+      <description><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/working-examples/H48/ContactInfoDL.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">定義リストを用いた連絡先情報のサンプル</loc>がある。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -148,10 +145,10 @@ ul.navigation li {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H48.html">H48: Using ol, ul and dl for lists（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H48.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H48: Using ol, ul and dl for lists（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

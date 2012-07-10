@@ -9,8 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p>
-この実装方法は、CSSの<code>text-align</code>プロパティを使って、テキストのブロックを左または右に揃える方法を説明している。</p>
+    <p>この実装方法は、CSSの<code>text-align</code>プロパティを使って、テキストのブロックを左または右に揃える方法を説明している。</p>
   </description>
   <examples>
     <eg-group>
@@ -57,9 +56,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C19.html">C19: Specifying alignment either to the left OR right in CSS（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/C19.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C19: Specifying alignment either to the left OR right in CSS（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ofujimiki.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">大藤 幹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

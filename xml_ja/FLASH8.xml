@@ -13,13 +13,15 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、関連するフォーム・コントロールをセマンティックにグループ化することである。これにより、利用者が複数のコントロール間の関係を理解し、より早くかつ効率的にフォームを操作することができる。</p>
-<p>Flash では、関連するフォーム・コントロールがグループ化されている場合、グループの名前を各フォーム・コントロールのアクセシブルな名前に追加することで、そのグループを示すことができる。</p>
-<p>コントロールのグループ化は、関係性があるラジオボタンとチェックボックスの場合に最も重要である。ラジオボタンまたはチェックボックスの一式は、それらすべてが単一の名前付きフィールドに値を送信する場合に関係性があるといえる。これらは、選択リストと同じように機能し、ユーザーは複数の選択肢の中からどれかを選択できる。ただし、選択リストが一つのコントロールであるのに対して、ラジオボタンやチェックボックスは複数のコントロールである点が異なる。ラジオボタンやチェックボックスは、複数のコントロールであるため、これらを意味的にグループ化して一つのコントロールとして簡単に扱えるようにすることが特に重要である。多くの場合、ユーザーエージェントは、各コントロールのラベルの前にグループ名を示し、それらが同じグループのものであることをユーザーに知らせる。</p>
-<p>ラジオボタンやチェックボックスの一式ほど密接な関係性があるわけではない他のコントロール一式でも、その一式をグループ化すると便利な場合がある。例えば、ユーザーに住所に関する情報を入力してもらう幾つかのテキストフィールドを「住所」という名前でグループ化することができる。</p></description>
+  <description>
+    <p>この実装方法の目的は、関連するフォーム・コントロールをセマンティックにグループ化することである。これにより、利用者が複数のコントロール間の関係を理解し、より早くかつ効率的にフォームを操作することができる。</p>
+    <p>Flash では、関連するフォーム・コントロールがグループ化されている場合、グループの名前を各フォーム・コントロールのアクセシブルな名前に追加することで、そのグループを示すことができる。</p>
+    <p>コントロールのグループ化は、関係性があるラジオボタンとチェックボックスの場合に最も重要である。ラジオボタンまたはチェックボックスの一式は、それらすべてが単一の名前付きフィールドに値を送信する場合に関係性があるといえる。これらは、選択リストと同じように機能し、ユーザーは複数の選択肢の中からどれかを選択できる。ただし、選択リストが一つのコントロールであるのに対して、ラジオボタンやチェックボックスは複数のコントロールである点が異なる。ラジオボタンやチェックボックスは、複数のコントロールであるため、これらを意味的にグループ化して一つのコントロールとして簡単に扱えるようにすることが特に重要である。多くの場合、ユーザーエージェントは、各コントロールのラベルの前にグループ名を示し、それらが同じグループのものであることをユーザーに知らせる。</p>
+    <p>ラジオボタンやチェックボックスの一式ほど密接な関係性があるわけではない他のコントロール一式でも、その一式をグループ化すると便利な場合がある。例えば、ユーザーに住所に関する情報を入力してもらう幾つかのテキストフィールドを「住所」という名前でグループ化することができる。</p>
+  </description>
   <examples>
     <eg-group>
       <head>ラジオボタンのアクセシブルな名前にグループ名を追加する</head>
@@ -31,7 +33,7 @@
 <pre><code>import fl.accessibility.RadioButtonAccImpl;
 RadioButtonAccImpl.enableAccessibility();</code></pre>
 </note>
-<p>このアプローチの実例については、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/radio_button_group_as3.html">「ラジオボタンのアクセシブルな名前にグループ名を追加する」のサンプル（英語）</a>を参照のこと。<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/radio_button_group_as3.swf">「ラジオボタンのアクセシブルな名前にグループ名を追加する」のソース（英語）</a>をダウンロードすることもできる。</p>
+<p>このアプローチの実例については、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/radio_button_group_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ラジオボタンのアクセシブルな名前にグループ名を追加する」のサンプル（英語）</loc>を参照のこと。<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/radio_button_group_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ラジオボタンのアクセシブルな名前にグループ名を追加する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -189,7 +191,7 @@ RadioButtonAccImpl.enableAccessibility();</code></pre>
   ["TextArea", "コメント"],                        // テキストエリア
 ]);
 addChild(myFieldSet);</code>
-      <description><p>このアプローチの実例については、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/grouped_form_controls.html">「プログラムによってラジオボタンのアクセシブルな名前にグループ名を追加する」のサンプル（英語）</a>を参照のこと。<a href="">「プログラムによってラジオボタンのアクセシブルな名前にグループ名を追加する」のソースはこちらからダウンロードできる。</a></p>
+      <description><p>このアプローチの実例については、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH8/grouped_form_controls.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「プログラムによってラジオボタンのアクセシブルな名前にグループ名を追加する」のサンプル（英語）</loc>を参照のこと。<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「プログラムによってラジオボタンのアクセシブルな名前にグループ名を追加する」のソースはこちらからダウンロードできる。</loc></p>
 <note><p class="prefix">Adobe Flex を使用すれば、&lt;form&gt;, &lt;formitem&gt; および &lt;formheading&gt; 要素を使用して、このタイプの動作を実現できる。</p>
 </note>
 </description>
@@ -218,9 +220,9 @@ addChild(myFieldSet);</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH8.html">FLASH8: Adding a group name to the accessible name of a form control（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH8.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH8: Adding a group name to the accessible name of a form control（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

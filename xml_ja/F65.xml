@@ -8,8 +8,10 @@
     <success-criterion idref="text-equiv-all"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この文書では、画像の代替テキストに関する不適合条件について解説する。画像に対して<code>alt</code>属性が指定されていない場合、支援技術はその画像を識別するための情報やその画像の目的を利用者に対して伝えることができない。</p>
-		<p>支援技術の中には、altテキストが指定されていない場合に画像のファイル名を読み上げて情報を補おうとするものもあるだろう。しかし、多くの理由から単にファイル名に依存するだけでは不十分である。たとえば、画像ファイルにその目的が分かるような分かりやすい名前がついているとは限らず（例：images/nav01.gif）、また技術仕様上もそういった分かりやすいファイル名をつける必要はない。また、altテキストが指定されていない場合でもその画像ファイル名を読み上げない支援技術もあるだろう。</p></description>
+  <description>
+    <p>この文書では、画像の代替テキストに関する不適合条件について解説する。画像に対して<code>alt</code>属性が指定されていない場合、支援技術はその画像を識別するための情報やその画像の目的を利用者に対して伝えることができない。</p>
+    <p>支援技術の中には、altテキストが指定されていない場合に画像のファイル名を読み上げて情報を補おうとするものもあるだろう。しかし、多くの理由から単にファイル名に依存するだけでは不十分である。たとえば、画像ファイルにその目的が分かるような分かりやすい名前がついているとは限らず（例：images/nav01.gif）、また技術仕様上もそういった分かりやすいファイル名をつける必要はない。また、altテキストが指定されていない場合でもその画像ファイル名を読み上げない支援技術もあるだろう。</p>
+  </description>
   <examples>
     <eg-group>
       <head>不適合となる altテキストが存在しない場合</head>
@@ -43,9 +45,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F65.html">F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type "image"（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳： <a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F65.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type "image"（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://NAKANE-Masafumi.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">中根 雅文</loc></item>
     </ulist>
   </translationcredit>
 </technique>

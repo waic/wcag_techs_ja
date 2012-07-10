@@ -12,16 +12,12 @@
 								JAWSの最新版では、<code>scope</code>属性の<code>row</code>と<code>col</code>という値をほとんどサポートしているが、まだいくつかの問題がある。Window-Eyesは<code>scope</code>属性のサポートが一貫していない。これらのスクリーンリーダーの日本語版も同じである。JAWSのバージョン5以前、Window-Eyesの古いバージョンでは<code>scope</code>属性のサポートが一貫していない。</p>
             
 						<p>
-								現時点で、見出しが1行目や1列目にないテーブルについて、さまざまな支援技術で一貫したサポートを確保したい場合は、<a href="H43.html"><em>H43: Using id and headers attributes to associate data cells with header cells in data tables</em></a>にある複雑なテーブルに関する実装方法を採用してもよい。一方、見出しが1行目や1列目にある単純なテーブルについては、<code>th</code>要素と<code>td</code>要素の利用を推奨する。</p></ua-issue>
+								現時点で、見出しが1行目や1列目にないテーブルについて、さまざまな支援技術で一貫したサポートを確保したい場合は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H43.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"><em>H43: Using id and headers attributes to associate data cells with header cells in data tables</em></loc>にある複雑なテーブルに関する実装方法を採用してもよい。一方、見出しが1行目や1列目にある単純なテーブルについては、<code>th</code>要素と<code>td</code>要素の利用を推奨する。</p></ua-issue>
   </ua-issues>
-  <description><p>
-							この実装方法の目的は、<code>scope</code>属性を利用して見出しセルとデータセルを関連付けることである。<code>scope</code>属性を利用するのは、見出しとして利用するあらゆるセルが及ぶ範囲を明確にするためである。範囲とは、そのセルが行、列、行グループ、列グループのどの見出しであるかを特定するものである。<code>row</code>、<code>col</code>、<code>rowgroup</code>、<code>colgroup</code>という値によって範囲を特定することになる。</p>
-          
-					<p>
-							事例 1のように、見出しが1行目や1列目にない単純なテーブルに対してこの実装方法が利用できる。今日のスクリーンリーダーのサポートを考えると、単純なテーブルについて次の2つの状況が当てはまる場合に、この実装方法の利用が示唆される：
-							</p>
-          
-               <ul>
+  <description>
+    <p>この実装方法の目的は、<code>scope</code>属性を利用して見出しセルとデータセルを関連付けることである。<code>scope</code>属性を利用するのは、見出しとして利用するあらゆるセルが及ぶ範囲を明確にするためである。範囲とは、そのセルが行、列、行グループ、列グループのどの見出しであるかを特定するものである。<code>row</code>、<code>col</code>、<code>rowgroup</code>、<code>colgroup</code>という値によって範囲を特定することになる。</p>
+    <p>事例 1のように、見出しが1行目や1列目にない単純なテーブルに対してこの実装方法が利用できる。今日のスクリーンリーダーのサポートを考えると、単純なテーブルについて次の2つの状況が当てはまる場合に、この実装方法の利用が示唆される：</p>
+    <ul>
 <li>
               
 							<p><code>td</code>要素でマークアップしてあるデータセルが、行見出し又は列見出しとしても機能する場合</p>
@@ -33,14 +29,16 @@
             
                   </li>
 </ul>
-<note><p class="prefix">
+    <note><p class="prefix">
 									
 									1行目や1列目に見出しがある単純なテーブルについては、<code>scope</code>属性を指定せずに<code>th</code>要素を利用するだけで十分である。</p>
 			  </note>
-          
-					<note><p class="prefix">
+    <note>
+      <p class="prefix">
 									
-									複雑なテーブルについては、<a href="H43.html"><em>H43: Using id and headers attributes to associate data cells with header cells in data tables</em></a> の通り、<code>id</code>属性と<code>headers</code>属性を利用する。</p></note></description>
+									複雑なテーブルについては、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H43.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"><em>H43: Using id and headers attributes to associate data cells with header cells in data tables</em></loc> の通り、<code>id</code>属性と<code>headers</code>属性を利用する。</p>
+    </note>
+  </description>
   <examples>
     <eg-group>
       <head>単純なスケジュール表</head>
@@ -87,8 +85,10 @@
           <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/tables.html#h-11.2.6" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Table cells: The TH and TD elements</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eramp.com/david/tablesample2.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Assistive technology&#13;
-                    reading tables</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eramp.com/david/tablesample2.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Assistive technology&#13;
+                    reading tables</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -125,9 +125,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H63.html">H63: Using the scope attribute to associate header cells and data cells in data tables（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H63.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H63: Using the scope attribute to associate header cells and data cells in data tables（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

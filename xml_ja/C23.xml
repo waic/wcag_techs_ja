@@ -24,19 +24,16 @@ Firefox及びNetscapeで元々指定されている色が上書きされた場�
 Internet Explorer 6 は、システム設定で同じ色が選択されない限り背景色を上書きしない。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>
-ウェブページの中には、色を用いてコンテンツをグループ分けをしているものもある。
+  <description>
+    <p>ウェブページの中には、色を用いてコンテンツをグループ分けをしているものもある。
 この実装方法の目的は、ウェブページの構成やグループ分けを示す視覚的な情報を残しつつも、メインコンテンツ部分においては特定の文字色と背景色の組み合わせを利用者が選択できるようにすることである。
 利用者がページ上のすべてのテキストの文字色と背景色を上書きした場合、ウェブページの構成とグループ分けに関する情報は失われる可能性があり、そうなるとそのページを利用することも理解することも難しくなる。</p>
-              
-               <p>
-コンテンツ制作者がメインコンテンツ部分の文字色と背景色を指定しなければ、ユーザースタイルシートを使うことなしに、ブラウザでそれらの色を変更することが可能になる。
+    <p>コンテンツ制作者がメインコンテンツ部分の文字色と背景色を指定しなければ、ユーザースタイルシートを使うことなしに、ブラウザでそれらの色を変更することが可能になる。
 主要コンテンツ以外に対して文字色と背景色を指定するということは、ブラウザはそれらの色を変更しないことを意味する。</p>
-              
-               <p>
-この実装方法を使うということは、コンテンツ制作者はメインコンテンツの領域に対してデフォルトの文字色と背景色の組み合わせを使うことになる。
+    <p>この実装方法を使うということは、コンテンツ制作者はメインコンテンツの領域に対してデフォルトの文字色と背景色の組み合わせを使うことになる。
 結果として、配色は利用者の好みの色に設定したユーザーエージェントによって全面的に決められる。
-つまり、利用者のニーズに最も合う色の選択となり、利用者にとって最も読みやすい配色となる。</p></description>
+つまり、利用者のニーズに最も合う色の選択となり、利用者にとって最も読みやすい配色となる。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>
@@ -93,10 +90,10 @@ Internet Explorer 6 は、システム設定で同じ色が選択されない限
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C23.html">C23: Specifying text and background colors of secondary content such as banners, features and navigation in CSS while not specifying text and background colors of the main content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/C23.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C23: Specifying text and background colors of secondary content such as banners, features and navigation in CSS while not specifying text and background colors of the main content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ofujimiki.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">大藤 幹</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

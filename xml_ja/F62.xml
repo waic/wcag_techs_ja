@@ -42,7 +42,7 @@
           <p>同一のドキュメント内にある一意的な識別子を参照する要素又は属性に、対応するid属性値がある。</p>
         </item>
       </olist>
-      <p>DTDによって定義されたXML文書型においては、type ID、IDREF、又はIDREFSの属性が該当する。また、W3CのXMLスキーマによって定義されるXML文書型においては、type ID、IDREF、又はIDREFSの要素又は属性が該当する。（type ID、IDREF、及びIDREFSは、属性にのみ用いるべきだが、<a href="http://www.w3.org/TR/xmlschema-2/#terminology">XML Schema Part 2: Datatypes Second Edition</a>では、要素で用いることも可能である。）その他のスキーマ言語においては、これに対応した、ID及びIDの参照を特定するためのメカニズムをチェックすること。</p>
+      <p>DTDによって定義されたXML文書型においては、type ID、IDREF、又はIDREFSの属性が該当する。また、W3CのXMLスキーマによって定義されるXML文書型においては、type ID、IDREF、又はIDREFSの要素又は属性が該当する。（type ID、IDREF、及びIDREFSは、属性にのみ用いるべきだが、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/xmlschema-2/#terminology" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Schema Part 2: Datatypes Second Edition</loc>では、要素で用いることも可能である。）その他のスキーマ言語においては、これに対応した、ID及びIDの参照を特定するためのメカニズムをチェックすること。</p>
     </procedure>
     <expected-results>
       <ulist>
@@ -54,9 +54,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F62.html">F62: Failure of Success Criterion 1.3.1 and 4.1.1 due to insufficient information in DOM to determine specific relationships in XML（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F62.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F62: Failure of Success Criterion 1.3.1 and 4.1.1 due to insufficient information in DOM to determine specific relationships in XML（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

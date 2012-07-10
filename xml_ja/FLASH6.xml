@@ -12,7 +12,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
   <description>
@@ -64,7 +64,7 @@
           <img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/flash_hotspot_accessibleName.png" alt="画面スクリーンショット 3：アクセシビリティパネルを用いて、ボタンの名前を設定" height="303" width="384"/>
         </p>
       </description>
-      <description><p>この結果は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/invisible_buttons_as_image_map_regions.html">「非表示のボタンを使用してアクセシブルなホットスポットを作成する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/invisible_buttons_as_image_map_regions.swf">「非表示のボタンを使用してアクセシブルなホットスポットを作成する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この結果は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/invisible_buttons_as_image_map_regions.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「非表示のボタンを使用してアクセシブルなホットスポットを作成する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH6/invisible_buttons_as_image_map_regions.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「非表示のボタンを使用してアクセシブルなホットスポットを作成する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -95,9 +95,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH6.html">FLASH6: Creating accessible hotspots using invisible buttons（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH6.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH6: Creating accessible hotspots using invisible buttons（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

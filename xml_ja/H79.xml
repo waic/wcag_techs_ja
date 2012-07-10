@@ -9,8 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p>
-							この実装方法の目的は、リンクとそれを含んでいるデータテーブルの文脈から、リンクの目的を特定することである。文脈とは、そのリンクを含んでいるテーブルセルと、そのセルに関連付けられた見出しセルとの関係を指している。データテーブルの文脈によって、リンクを含んでいるセルが、先祖要素であるブロックレベル要素の中で最もそのリンクに近い場合、リンクテキストだけでは不明瞭なリンクに目的が与えられる。それによって、ユーザーがそのリンクと、そのウェブページ内にある他のリンクとを区別できるようになり、そのリンク先へ移動するかどうかを判断しやすくなる。リンクテキストとして単に目的地のURIを示すだけでは、障害のあるユーザー、特に認知障害のあるユーザーにとってはリンク先の説明として不十分であることに注意すべきである。</p>
+    <p>この実装方法の目的は、リンクとそれを含んでいるデータテーブルの文脈から、リンクの目的を特定することである。文脈とは、そのリンクを含んでいるテーブルセルと、そのセルに関連付けられた見出しセルとの関係を指している。データテーブルの文脈によって、リンクを含んでいるセルが、先祖要素であるブロックレベル要素の中で最もそのリンクに近い場合、リンクテキストだけでは不明瞭なリンクに目的が与えられる。それによって、ユーザーがそのリンクと、そのウェブページ内にある他のリンクとを区別できるようになり、そのリンク先へ移動するかどうかを判断しやすくなる。リンクテキストとして単に目的地のURIを示すだけでは、障害のあるユーザー、特に認知障害のあるユーザーにとってはリンク先の説明として不十分であることに注意すべきである。</p>
   </description>
   <examples>
     <eg-group>
@@ -93,9 +92,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H79.html">H79: Identifying the purpose of a link using link text combined with its enclosing table cell and associated table headings（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H79.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H79: Identifying the purpose of a link using link text combined with its enclosing table cell and associated table headings（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

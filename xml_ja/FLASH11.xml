@@ -12,7 +12,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
   <description>
@@ -22,8 +22,8 @@
     <eg-group>
       <head>非表示の説明を利用者の要求に応じて表示する</head>
       <description><p>この事例では、統計データを含む画像が用いられている。画像には、短い代替テキストが提供されている（「グラフ：一つ以上の障害があることを申告した米国の施設に入っていない16～64歳の人口比率」）。画像の下にあるボタンを押すことによって、ユーザーは統計情報自体の長いテキストの説明を表示することができる。ボタンを押すと、次のように動作する。</p>
-<ulist><item><p>長いテキストの説明を含むムービークリップが表示され、AccessibilityProperties.silent プロパティが false に設定され、支援技術で認識可能となる。そして、そのコンテンツがタブ順序に配置される。</p></item><item><p>元の画像とボタンは、支援技術とタブ順序からは一時的に隠された状態になる。</p></item></ulist><p>画像と説明的なテキストは、<a href="http://webaim.org/techniques/images/longdesc">HTML example for long image descriptions on WebAIM.org：英語</a>から引用した。</p>
-<p>この実装方法の実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH11/long_description_for_image_as3.html">「非表示の説明を利用者の要求に応じて表示する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH11/long_description_for_image_as3.swf">「非表示の説明を利用者の要求に応じて表示する」のソース（英語）</a>をダウンロードすることもできる。</p>
+<ulist><item><p>長いテキストの説明を含むムービークリップが表示され、AccessibilityProperties.silent プロパティが false に設定され、支援技術で認識可能となる。そして、そのコンテンツがタブ順序に配置される。</p></item><item><p>元の画像とボタンは、支援技術とタブ順序からは一時的に隠された状態になる。</p></item></ulist><p>画像と説明的なテキストは、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webaim.org/techniques/images/longdesc" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML example for long image descriptions on WebAIM.org：英語</loc>から引用した。</p>
+<p>この実装方法の実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH11/long_description_for_image_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「非表示の説明を利用者の要求に応じて表示する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH11/long_description_for_image_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「非表示の説明を利用者の要求に応じて表示する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
       <code>import flash.accessibility. *;
 import fl.accessibility.ButtonAccImpl;
@@ -102,9 +102,9 @@ function hideLongDesc() {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH11.html">FLASH11: Providing a longer text description of an object（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH11.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH11: Providing a longer text description of an object（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

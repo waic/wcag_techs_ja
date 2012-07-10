@@ -12,7 +12,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
   <description>
@@ -23,7 +23,7 @@
       <head>コントロールのアクセシブルな名前に「必須」という語を追加する</head>
       <description><p>この事例では、アクセシビリティパネルを使用して、フィールドが「必須」であることを利用者に知らせる方法を示している。</p>
 <olist><item><p>フォーム・コントロールのラベルの近くに、アスタリスク文字などの視覚的なマークを配置する。</p></item><item><p>アクセシビリティパネルを使用して、「名前」フィールドに記述したコントロールのラベルのすぐ後に「（必須）」と記述する。</p></item></olist><p>次のスクリーンショットは、このアプローチについて説明したものである。</p>
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_flash_control.png" alt="画面スクリーンショット：アクセシビリティパネルを用いて、フォーム・コントロールが必須項目であることを明示" height="312" width="546"/></p><p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.html">「コントロールのアクセシブルな名前に「必須」という語を追加する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.swf">「コントロールのアクセシブルな名前に「必須」という語を追加する」のソース（英語）</a>をダウンロードすることもできる。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_flash_control.png" alt="画面スクリーンショット：アクセシビリティパネルを用いて、フォーム・コントロールが必須項目であることを明示" height="312" width="546"/></p><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「コントロールのアクセシブルな名前に「必須」という語を追加する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「コントロールのアクセシブルな名前に「必須」という語を追加する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -48,9 +48,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH10.html">FLASH10: Indicating required form controls in Flash（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH10.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH10: Indicating required form controls in Flash（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

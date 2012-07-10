@@ -8,12 +8,14 @@
     <success-criterion idref="content-structure-separation-programmatic"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、テキストの書式の規則を用いて、関連する項目のシンプルなリストを作ることである。ただし、階層構造になったリストや入れ子のリストは、この実装方法では表現できないため、別のウェブコンテンツ技術を使って表現すべきである。</p>
-		<p>リストは、連続したリスト項目によって構成される。そして、リスト項目は、ラベルで始まる段落である。順不同のリストでは、アスタリスク、ダッシュ、箇条書きの行頭文字などをラベルとして用いる。ただし、同じリスト内では全ての項目に同じラベル文字を使わなければならない。順序付きリストでは、英数字をラベルとして用い、ピリオドや閉じ括弧をつける。ラベルは、次のいずれかの昇順になっていなければならない。</p>
-		<ul>
+  <description>
+    <p>この実装方法の目的は、テキストの書式の規則を用いて、関連する項目のシンプルなリストを作ることである。ただし、階層構造になったリストや入れ子のリストは、この実装方法では表現できないため、別のウェブコンテンツ技術を使って表現すべきである。</p>
+    <p>リストは、連続したリスト項目によって構成される。そして、リスト項目は、ラベルで始まる段落である。順不同のリストでは、アスタリスク、ダッシュ、箇条書きの行頭文字などをラベルとして用いる。ただし、同じリスト内では全ての項目に同じラベル文字を使わなければならない。順序付きリストでは、英数字をラベルとして用い、ピリオドや閉じ括弧をつける。ラベルは、次のいずれかの昇順になっていなければならない。</p>
+    <ul>
 <li><p>数字の場合、数字の順に並んでいなければならない。</p></li>
 			<li><p>アルファベットの場合、アルファベット順又はローマ数字として解釈される際は数字の順に並んでいなければならない。</p></li>
-		</ul></description>
+		</ul>
+  </description>
   <examples>
     <eg-group>
       <head>順不同リスト</head>
@@ -84,9 +86,9 @@ C) 順序付きリスト項目</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/T2.html">T2: Using standard text formatting conventions for lists（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/T2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">T2: Using standard text formatting conventions for lists（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

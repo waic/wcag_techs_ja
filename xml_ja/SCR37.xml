@@ -8,9 +8,10 @@
     <success-criterion idref="navigation-mechanisms-focus-order"/>
   </applies-to>
   <ua-issues/>
-  <description><p>コンテンツ制作者はしばしば、ブラウザによって提供されるポップアップウインドウを使わずに、独自のダイアログを作成したがる。これは通常、ダイアログのコンテンツを<code>div</code>の中に収めて、その<code>div</code>をコンテンツの上にCSSによる重なり順及び絶対配置を用いて配置するというやり方でおこなわれる。</p>
-		<p>これらのダイアログをアクセシブルにするには、いくつかの簡単なルールに従う必要がある。</p>
-		<ol class="enumar">
+  <description>
+    <p>コンテンツ制作者はしばしば、ブラウザによって提供されるポップアップウインドウを使わずに、独自のダイアログを作成したがる。これは通常、ダイアログのコンテンツを<code>div</code>の中に収めて、その<code>div</code>をコンテンツの上にCSSによる重なり順及び絶対配置を用いて配置するというやり方でおこなわれる。</p>
+    <p>これらのダイアログをアクセシブルにするには、いくつかの簡単なルールに従う必要がある。</p>
+    <ol class="enumar">
 <li>
 						<p>リンクやボタンの<code>onclick</code>イベントからダイアログを起動するスクリプトをトリガーにする。</p>
 				</li>
@@ -21,7 +22,8 @@
 						<p>ダイアログのdiv内部のHTMLが、その他のコンテンツと同じアクセシビリティガイドラインの要件を満たしていることを保証する。</p>
 				</li>
 		</ol>
-<p>リンクがダイアログを開閉できたり、キーボードのフォーカスが外れるとダイアログが閉じるようにしたりすることはすばらしいが、必ずしも必要なわけではない。</p></description>
+    <p>リンクがダイアログを開閉できたり、キーボードのフォーカスが外れるとダイアログが閉じるようにしたりすることはすばらしいが、必ずしも必要なわけではない。</p>
+  </description>
   <examples>
     <eg-group>
       <head>ダイアログを開くオプションボタン</head>
@@ -115,7 +117,7 @@ function ResetForm(elem)
 	return false;
 }
 ...</code>
-      <description><p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR37/default.htm">ダイアログを開くオプションボタン</a></p>
+      <description><p>このコードの実装サンプル：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR37/default.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ダイアログを開くオプションボタン</loc></p>
 </description>
     </eg-group>
   </examples>
@@ -185,10 +187,10 @@ function ResetForm(elem)
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR37.html">SCR37: Creating Custom Dialogs in a Device Independent Way（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SCR37.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCR37: Creating Custom Dialogs in a Device Independent Way（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：辻 勝利（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

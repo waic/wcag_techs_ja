@@ -8,14 +8,16 @@
     <success-criterion idref="content-structure-separation-programmatic"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この不適合事例では、レイアウトだけの目的でテーブルが用いられている際に、<code>th</code>要素、<code>summary</code>属性、または<code>caption</code>要素が使用されている場合に発生する不適合について解説する。このような場合、プレゼンテーションを制御するためだけに構造的（又はセマンティックな）マークアップが使われているため不適合となる。HTMLおよびXHTMLの<code>table</code>要素は、データを表現するためのものである。</p>
-		<p>レイアウトテーブルの中で用いられることは少ないが、以下の構造的なマークアップもレイアウトテーブル内で用いられると達成基準1.3.1に不適合となる：</p>
-		<ul>
+  <description>
+    <p>この不適合事例では、レイアウトだけの目的でテーブルが用いられている際に、<code>th</code>要素、<code>summary</code>属性、または<code>caption</code>要素が使用されている場合に発生する不適合について解説する。このような場合、プレゼンテーションを制御するためだけに構造的（又はセマンティックな）マークアップが使われているため不適合となる。HTMLおよびXHTMLの<code>table</code>要素は、データを表現するためのものである。</p>
+    <p>レイアウトテーブルの中で用いられることは少ないが、以下の構造的なマークアップもレイアウトテーブル内で用いられると達成基準1.3.1に不適合となる：</p>
+    <ul>
 <li><p><code>headers</code>属性</p></li>
 			<li><p><code>scope</code>属性</p></li>
 		</ul>
-<p>支援技術は、HTML及びXHTMLのテーブルに含まれる構造的な情報を用いて、利用者に対してデータを論理的な形で伝えるようになっている。<code>th</code>要素は、行や列の見出しを表すために用いられる。スクリーンリーダーを利用している場合、表の中を移動しながら読む時、移動した先のセルの行や列の見出しを読み上げるために<code>th</code>要素の内容が利用される。<code>summary</code>属性は、その表の目的や機能についてのテキストによる説明を提供するために用いられ、利用者はスクリーンリーダーを用いてこの情報を得ることができる。<code>caption</code>要素は表の一部であり、その表を特定する役割を持つ。</p>
-		<p>WCAG 2.0ではレイアウトテーブルの使用を禁じてはいないが、HTMLで定義されているテーブル関聨の要素が持つセマンティックを保持し、プレゼンテーションとコンテンツを分離して記述するコーディング・スタイルを遵守するためにも、CSSによるレイアウトを行うことが推奨される。テーブルレイアウトを行う際には、<code>th</code>要素を用いてはならない。この場合、この表はデータを示しているわけではないから、どのセルも行や列の見出しとしてマークアップする必要はない。同様に、レイアウトテーブルを実現するだけのために用いられている表について、追加の説明を提供する必要はない。<code>summary</code>属性は使用するべきではなく、また<code>summary</code>属性を使って、たとえば「レイアウトテーブル」のような説明を追加するべきではない。このような情報が記述された場合、スクリーンリーダーを使ってコンテンツを利用している利用者に有用な情報が提供されないだけでなく、ナビゲーションの邪魔になる。レイアウトテーブルに値が空の<code>summary</code>属性を指定することは許容されるが、推奨されない。</p></description>
+    <p>支援技術は、HTML及びXHTMLのテーブルに含まれる構造的な情報を用いて、利用者に対してデータを論理的な形で伝えるようになっている。<code>th</code>要素は、行や列の見出しを表すために用いられる。スクリーンリーダーを利用している場合、表の中を移動しながら読む時、移動した先のセルの行や列の見出しを読み上げるために<code>th</code>要素の内容が利用される。<code>summary</code>属性は、その表の目的や機能についてのテキストによる説明を提供するために用いられ、利用者はスクリーンリーダーを用いてこの情報を得ることができる。<code>caption</code>要素は表の一部であり、その表を特定する役割を持つ。</p>
+    <p>WCAG 2.0ではレイアウトテーブルの使用を禁じてはいないが、HTMLで定義されているテーブル関聨の要素が持つセマンティックを保持し、プレゼンテーションとコンテンツを分離して記述するコーディング・スタイルを遵守するためにも、CSSによるレイアウトを行うことが推奨される。テーブルレイアウトを行う際には、<code>th</code>要素を用いてはならない。この場合、この表はデータを示しているわけではないから、どのセルも行や列の見出しとしてマークアップする必要はない。同様に、レイアウトテーブルを実現するだけのために用いられている表について、追加の説明を提供する必要はない。<code>summary</code>属性は使用するべきではなく、また<code>summary</code>属性を使って、たとえば「レイアウトテーブル」のような説明を追加するべきではない。このような情報が記述された場合、スクリーンリーダーを使ってコンテンツを利用している利用者に有用な情報が提供されないだけでなく、ナビゲーションの邪魔になる。レイアウトテーブルに値が空の<code>summary</code>属性を指定することは許容されるが、推奨されない。</p>
+  </description>
   <examples>
     <eg-group>
       <head>不適合となる</head>
@@ -75,9 +77,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F46.html">F46: Failure of Success Criterion 1.3.1 due to using <code>th</code> elements, <code>caption</code> elements, or non-empty <code>summary</code> attributes in layout tables（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳： <a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F46.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F46: Failure of Success Criterion 1.3.1 due to using th elements, caption elements, or non-empty summary attributes in layout tables（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://NAKANE-Masafumi.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">中根 雅文</loc></item>
     </ulist>
   </translationcredit>
 </technique>

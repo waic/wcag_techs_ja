@@ -16,8 +16,8 @@
   <examples>
     <eg-group>
       <head>例１</head>
-      <description><p><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html">ウェブ・コンテンツ・アクセシビリティ・ガイドライン 2.0</a>は、ガイドラインと達成基準の中で使われる用語を定義したドキュメントへのリンク、異なる達成基準をどのように満たすかを説明したドキュメントへのリンク、
-		そのセクションの異なるサブセクションへのリンクを含む各セクションの目次、及び<a href="http://www.w3.org/WAI/WCAG20/from10/comparison/">Comparison of WCAG 1.0 checkpoints to WCAG 2.0（英語）</a>へのリンクを含んでいる。利用者がこのドキュメントを拾い読みするときは、これらのリンクをたどって関連情報を探すことができる。</p>
+      <description><p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブ・コンテンツ・アクセシビリティ・ガイドライン 2.0</loc>は、ガイドラインと達成基準の中で使われる用語を定義したドキュメントへのリンク、異なる達成基準をどのように満たすかを説明したドキュメントへのリンク、
+		そのセクションの異なるサブセクションへのリンクを含む各セクションの目次、及び<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/WAI/WCAG20/from10/comparison/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Comparison of WCAG 1.0 checkpoints to WCAG 2.0（英語）</loc>へのリンクを含んでいる。利用者がこのドキュメントを拾い読みするときは、これらのリンクをたどって関連情報を探すことができる。</p>
 </description>
     </eg-group>
   </examples>
@@ -25,7 +25,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/webarch/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Architecture of the World Wide Web, Volume One</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/webarch/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Architecture of the World Wide Web, Volume One</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -56,9 +58,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G125.html">G125: Providing links to navigate to related Web pages（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：田辺　丈士<a href="http://www.uniteair.co.jp/">（ユナイティア株式会社）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G125.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G125: Providing links to navigate to related Web pages（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：田辺　丈士<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.uniteair.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">（ユナイティア株式会社）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

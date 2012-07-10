@@ -29,7 +29,7 @@
     </eg-group>
     <eg-group>
       <head>ナビゲーション・リンクのブロックが複数あるHTMLページ</head>
-      <description><p>この事例では、各セクションの冒頭の見出し要素（<a href="H69.html">実装方法 H69</a>）、及びそれぞれのセクションの最後までスキップするリンクの両方が用いられている。利用するユーザーエージェントの能力に依存するが、これによってキーボード・ナビゲーション又は見出しナビゲーションを用いて、繰り返されるコンテンツのブロックをスキップすることができる。
+      <description><p>この事例では、各セクションの冒頭の見出し要素（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H69.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">実装方法 H69</loc>）、及びそれぞれのセクションの最後までスキップするリンクの両方が用いられている。利用するユーザーエージェントの能力に依存するが、これによってキーボード・ナビゲーション又は見出しナビゲーションを用いて、繰り返されるコンテンツのブロックをスキップすることができる。
               </p>
 </description>
       <code/>
@@ -42,7 +42,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/skipnav.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Skip Navigation Links</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/skipnav.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Skip Navigation Links</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -80,9 +82,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="G123.html">G123： Adding a link at the beginning of a block of repeated content to go to the end of the block（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="G123.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G123： Adding a link at the beginning of a block of repeated content to go to the end of the block（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

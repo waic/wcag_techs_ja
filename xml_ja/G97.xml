@@ -8,15 +8,12 @@
     <success-criterion idref="meaning-located"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、ウェブページの中で略語が最初に現れたとき、元の語を略語に関連付けることで、略語の元の語を分かるようにすることである。ウェブページで最初の使用箇所を探すことで、すべての略語の元の語を見つけることができる。</p>
-          
-               <p><phrase diff="add">英語では、</phrase>単語、句または名前を、略語、頭文字語、頭字語、又は他の短縮表記によって短くするときは、省略された表記を提供する前に完全な表記を提供する。こうすることで、テキストが読みやすくなり、多くのスタイルガイドでも勧められている。<phrase diff="add">その他の言語では異なる慣習があることもある。</phrase></p>
-
-          
-               <p>略語の中には、元の語より説明を必要とするものがあることに注意する。そのような略語には、この実装方法は適切ではない。</p>
-          
-               <p>この実装方法はウェブページで略語の初出時に適用される。複数の資料をひとつのウェブページに結合するとき、それぞれの資料の冒頭で略語の元の語が示される。しかしながら、この場合、元の語を提供するための異なる実装方法を使うことが、より適切であるかもしれない。
-</p></description>
+  <description>
+    <p>この実装方法の目的は、ウェブページの中で略語が最初に現れたとき、元の語を略語に関連付けることで、略語の元の語を分かるようにすることである。ウェブページで最初の使用箇所を探すことで、すべての略語の元の語を見つけることができる。</p>
+    <p><phrase diff="add">英語では、</phrase>単語、句または名前を、略語、頭文字語、頭字語、又は他の短縮表記によって短くするときは、省略された表記を提供する前に完全な表記を提供する。こうすることで、テキストが読みやすくなり、多くのスタイルガイドでも勧められている。<phrase diff="add">その他の言語では異なる慣習があることもある。</phrase></p>
+    <p>略語の中には、元の語より説明を必要とするものがあることに注意する。そのような略語には、この実装方法は適切ではない。</p>
+    <p>この実装方法はウェブページで略語の初出時に適用される。複数の資料をひとつのウェブページに結合するとき、それぞれの資料の冒頭で略語の元の語が示される。しかしながら、この場合、元の語を提供するための異なる実装方法を使うことが、より適切であるかもしれない。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>「国際連合難民高等弁務官事務所(UNHCR)は、1950年に難民の保護と支援を提供するために設立された。」</p>
@@ -29,7 +26,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chicagomanualofstyle.org/CMS_FAQ/Abbreviations/Abbreviations_questions01.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Chicago Manual of Style - Q&amp;A - Abbreviations</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.chicagomanualofstyle.org/CMS_FAQ/Abbreviations/Abbreviations_questions01.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Chicago Manual of Style - Q&amp;A - Abbreviations</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -66,10 +65,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G97.html">G97: Providing the abbreviation immediately following the expanded form（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G97.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G97: Providing the abbreviation immediately following the expanded form（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

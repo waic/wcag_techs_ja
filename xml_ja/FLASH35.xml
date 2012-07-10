@@ -12,7 +12,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
   <description>
@@ -74,7 +74,7 @@ function moveText() {
 
 //スクロールを開始する
 toggleScroll(false);</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH35/pause_scrolling_as3.html">「スクロールの一時停止と再開を行うためのトグルボタン」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH35/pause_scrolling_as3.swf">「スクロールの一時停止と再開を行うためのトグルボタン」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH35/pause_scrolling_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「スクロールの一時停止と再開を行うためのトグルボタン」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH35/pause_scrolling_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「スクロールの一時停止と再開を行うためのトグルボタン」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -108,9 +108,9 @@ toggleScroll(false);</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH35.html">FLASH35: Using script to scroll Flash content, and providing a mechanism to pause it（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH35.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH35: Using script to scroll Flash content, and providing a mechanism to pause it（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

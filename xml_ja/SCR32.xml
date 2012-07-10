@@ -9,8 +9,10 @@
     <success-criterion idref="minimize-error-suggestions"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、クライアントサイドでフォームフィールドの検証に失敗したときにエラーメッセージを表示する方法について説明することである。アンカー要素はリスト中でエラーメッセージを表示させる際に使用され、検証が必要なフィールドの上に挿入される。フォーカスをエラーメッセージの場所に移し、利用者の注意を引くために、アンカー要素がエラーメッセージに使用される。アンカー要素の<code>href</code>は、エラーがみつかったフィールドへのページ内リンクを含む。</p>
-		<p>配置されたアプリケーションにおいて、もしJavaScriptが無効になっていれば、クライアントサイドの検証は行われない。そのため、この実装方法はスクリプトが適合性において信頼できる、又はサーバーサイドの検証技術があらゆるエラーを発見し、エラーを含むフィールドの情報とともにページを返すように用いられている場合のみ、十分であるといえる。</p></description>
+  <description>
+    <p>この実装方法の目的は、クライアントサイドでフォームフィールドの検証に失敗したときにエラーメッセージを表示する方法について説明することである。アンカー要素はリスト中でエラーメッセージを表示させる際に使用され、検証が必要なフィールドの上に挿入される。フォーカスをエラーメッセージの場所に移し、利用者の注意を引くために、アンカー要素がエラーメッセージに使用される。アンカー要素の<code>href</code>は、エラーがみつかったフィールドへのページ内リンクを含む。</p>
+    <p>配置されたアプリケーションにおいて、もしJavaScriptが無効になっていれば、クライアントサイドの検証は行われない。そのため、この実装方法はスクリプトが適合性において信頼できる、又はサーバーサイドの検証技術があらゆるエラーを発見し、エラーを含むフィールドの情報とともにページを返すように用いられている場合のみ、十分であるといえる。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>この事例は必須のフィールドを検証し、さらに特定の書式が必要なフィールドを検証する。エラーがみつかったとき、スクリプトはエラーメッセージの一覧をDOMに挿入し、フォーカスをそこへ移動する。</p>
@@ -371,7 +373,7 @@ function checkOptional(bValid, strValue, arClass)
 
    return bValid;
    }</code>
-      <description><p>このコードの実装サンプルは、PHP、JavaScript、CSS及びXHTMLで実装されている：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR32/index.php">フォーム検証の例</a></p>
+      <description><p>このコードの実装サンプルは、PHP、JavaScript、CSS及びXHTMLで実装されている：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR32/index.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">フォーム検証の例</loc></p>
 </description>
     </eg-group>
   </examples>
@@ -418,9 +420,9 @@ function checkOptional(bValid, strValue, arClass)
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR32.html">SCR32: Providing client-side validation and adding error text via the DOM（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SCR32.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCR32: Providing client-side validation and adding error text via the DOM（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：辻 勝利（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

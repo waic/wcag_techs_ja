@@ -15,22 +15,23 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、フォーム・コンポーネントに label プロパティを設定することによって、フォーム・コンポーネントにラベルテキストを明示的に関連付けることを目的としている。このプロパティを設定することにより、コンポーネントの隣にラベルが視覚的に配置されるようになり、支援技術に対してラベルテキストが提示されるようになる。</p>
-
-<p>label プロパティをサポートするコンポーネントは以下のとおりである。</p>
-<ul>
-<li><p> <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/Button.html">Button</a> </p></li>
-<li><p> <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/CheckBox.html">CheckBox</a> </p></li>
-<li><p> <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/RadioButton.html">RadioButton</a> </p></li>
+  <description>
+    <p>この実装方法の目的は、フォーム・コンポーネントに label プロパティを設定することによって、フォーム・コンポーネントにラベルテキストを明示的に関連付けることを目的としている。このプロパティを設定することにより、コンポーネントの隣にラベルが視覚的に配置されるようになり、支援技術に対してラベルテキストが提示されるようになる。</p>
+    <p>label プロパティをサポートするコンポーネントは以下のとおりである。</p>
+    <ul>
+<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/Button.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Button</loc> </p></li>
+<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/CheckBox.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CheckBox</loc> </p></li>
+<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/RadioButton.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">RadioButton</loc> </p></li>
 </ul>
-<p>その他のコンポーネントについては、手動でフォーム・コンポーネントの隣にラベルテキストを配置する必要がある。これらのコンポーネントについては、以下のいずれかのアプローチを用いて、フォーム・コンポーネントにラベルテキストを関連付けることができる。</p>
-<ul>
-<li><p> <a href="http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/FLASH25">FLASH25： アクセシブルな名前を設定することによって、フォーム・コントロールにラベルを付ける</a> (Flash)</p></li>
-<li><p> <a href="http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/FLASH32">FLASH32： 自動ラベル機能を使用してフォーム・コントロールにテキストラベルを関連付ける</a> (Flash)</p></li>
-</ul></description>
+    <p>その他のコンポーネントについては、手動でフォーム・コンポーネントの隣にラベルテキストを配置する必要がある。これらのコンポーネントについては、以下のいずれかのアプローチを用いて、フォーム・コンポーネントにラベルテキストを関連付けることができる。</p>
+    <ul>
+<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/FLASH25" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH25： アクセシブルな名前を設定することによって、フォーム・コントロールにラベルを付ける</loc> (Flash)</p></li>
+<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/FLASH32" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH32： 自動ラベル機能を使用してフォーム・コントロールにテキストラベルを関連付ける</loc> (Flash)</p></li>
+</ul>
+  </description>
   <examples>
     <eg-group>
       <head>コンポーネントインスペクタパネルを使用してラベルを設定する</head>
@@ -66,7 +67,7 @@ myRadioButton.label = "Male";
 myRadioButton.x = 10;
 myRadioButton.y = 60;
 addChild(myRadioButton);</code>
-      <description><p>この実例は、 <a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH29/setting_label_property_as3.html">「ActionScript 3.0 を使用して、Button、CheckBox、RadioButton の各コンポーネントのラベルを設定する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH29/setting_label_property_as3.swf">「ActionScript 3.0 を使用して、Button、CheckBox、RadioButton の各コンポーネントのラベルを設定する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH29/setting_label_property_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript 3.0 を使用して、Button、CheckBox、RadioButton の各コンポーネントのラベルを設定する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH29/setting_label_property_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript 3.0 を使用して、Button、CheckBox、RadioButton の各コンポーネントのラベルを設定する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -93,9 +94,9 @@ addChild(myRadioButton);</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH29.html">FLASH29: Setting the label property for form components（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH29.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH29: Setting the label property for form components（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

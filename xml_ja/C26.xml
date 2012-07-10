@@ -8,17 +8,15 @@
     <success-criterion idref="visual-audio-contrast-visual-presentation"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-										コンテンツ制作者には、横スクロールが必要なレイアウトを用いなければならない状況があるかもしれない。その場合、利用者が1行のテキストを読むのに横スクロールしないですむレイアウトに変換するオプションをコンテンツ内で提供するとよい。標準的なスタイル切り替え技術を用いることで、これが実現できるだろう。</p>
-                
-								<p>
-										コンテンツのアクセスには横スクロールが必要だが、1行のテキストを読むには横スクロールの必要がない、という方法でレイアウトしてもよいことに注目すべきである。</p>
-                
-								<p>
-										例えば、全体としては横スクロールが必要なスプレッドシートでも、ひとつひとつの列を個別に読むのに横スクロールの必要がなければ容認できる。（すなわち、他の列を読む際にはスクロールが必要だが、ひとつひとつの列の左端又は右端を読むにはスクロールの必要がない、ということ。筆者は、完全に明快な方法で、このことを説明するのは難しいと思っている。）</p>
-                
-								<note><p class="prefix">
-												この実装方法は、非適合コンテンツに対する<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>のページを提供するために、スタイル切り替え手法と組み合わせて用いることができる。詳細な情報は、<a href="C29.html"><em>C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</em></a>、及び、<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照のこと。</p></note></description>
+  <description>
+    <p>コンテンツ制作者には、横スクロールが必要なレイアウトを用いなければならない状況があるかもしれない。その場合、利用者が1行のテキストを読むのに横スクロールしないですむレイアウトに変換するオプションをコンテンツ内で提供するとよい。標準的なスタイル切り替え技術を用いることで、これが実現できるだろう。</p>
+    <p>コンテンツのアクセスには横スクロールが必要だが、1行のテキストを読むには横スクロールの必要がない、という方法でレイアウトしてもよいことに注目すべきである。</p>
+    <p>例えば、全体としては横スクロールが必要なスプレッドシートでも、ひとつひとつの列を個別に読むのに横スクロールの必要がなければ容認できる。（すなわち、他の列を読む際にはスクロールが必要だが、ひとつひとつの列の左端又は右端を読むにはスクロールの必要がない、ということ。筆者は、完全に明快な方法で、このことを説明するのは難しいと思っている。）</p>
+    <note>
+      <p class="prefix">
+												この実装方法は、非適合コンテンツに対する<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合している代替バージョン</loc>のページを提供するために、スタイル切り替え手法と組み合わせて用いることができる。詳細な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="C29.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"><em>C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</em></loc>、及び、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合している代替バージョンを理解する</loc>を参照のこと。</p>
+    </note>
+  </description>
   <examples>
     <eg-group>
       <description><p>
@@ -73,9 +71,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/C26.html">C26: Providing options within the content to switch to a layout that does not require the user to scroll horizontally to read a line of text（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/C26.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C26: Providing options within the content to switch to a layout that does not require the user to scroll horizontally to read a line of text（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

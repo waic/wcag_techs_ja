@@ -8,14 +8,11 @@
     <success-criterion idref="content-structure-separation-programmatic"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-							この実装方法の目的は、（データテーブル内の）各データセルを適切な見出しセルと関連付けることである。まず、各データセル（<code>td</code>要素）に<code>headers</code>属性を付加する。次に、データセルの見出しとなるセルには<code>id</code>属性を指定する。データセルの<code>headers</code>属性で指定するのは、関連付けられる見出しセルの<code>id</code>属性値であり、2つ以上の<code>id</code>を含める場合はスペース区切りで列挙する。</p>
-          
-					<p>
-							この実装方法は、データセルを2つ以上の行見出し及び（又は）列見出しに関連付ける場合に利用する。こうすることで、<code>th</code>要素のみ、または<code>th</code>要素に<code>scope</code>属性を付けただけでは、データセルと見出しセルの関係が複雑すぎて定義できない場合でも、スクリーンリーダーは各データセルと関連付けられている見出しセルを読み上げることができる。また、表現形式が変わったとしても、これらの複雑な関係を知覚しやすくなる。</p>
-          
-					<p>
-							この実装方法を、レイアウトテーブルに利用することは推奨しない。なぜなら、レイアウトのためにテーブルを利用する際には、意味がないにも関らず何らかの関係性を示してしまうことになるからである。</p></description>
+  <description>
+    <p>この実装方法の目的は、（データテーブル内の）各データセルを適切な見出しセルと関連付けることである。まず、各データセル（<code>td</code>要素）に<code>headers</code>属性を付加する。次に、データセルの見出しとなるセルには<code>id</code>属性を指定する。データセルの<code>headers</code>属性で指定するのは、関連付けられる見出しセルの<code>id</code>属性値であり、2つ以上の<code>id</code>を含める場合はスペース区切りで列挙する。</p>
+    <p>この実装方法は、データセルを2つ以上の行見出し及び（又は）列見出しに関連付ける場合に利用する。こうすることで、<code>th</code>要素のみ、または<code>th</code>要素に<code>scope</code>属性を付けただけでは、データセルと見出しセルの関係が複雑すぎて定義できない場合でも、スクリーンリーダーは各データセルと関連付けられている見出しセルを読み上げることができる。また、表現形式が変わったとしても、これらの複雑な関係を知覚しやすくなる。</p>
+    <p>この実装方法を、レイアウトテーブルに利用することは推奨しない。なぜなら、レイアウトのためにテーブルを利用する際には、意味がないにも関らず何らかの関係性を示してしまうことになるからである。</p>
+  </description>
   <examples>
     <eg-group>
       <head>行見出しが複数あるテーブル</head>
@@ -116,9 +113,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H43.html">H43: Using id and headers attributes to associate data cells with header cells in data tables（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H43.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H43: Using id and headers attributes to associate data cells with header cells in data tables（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

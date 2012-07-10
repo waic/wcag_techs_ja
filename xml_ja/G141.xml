@@ -8,9 +8,10 @@
     <success-criterion idref="navigation-mechanisms-headings"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、それぞれのセクションにそれを識別できる見出しがついているようにすることである。<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#content-structure-separation-programmatic">達成基準1.3.1</a>では見出しがプログラムで解釈可能な方法でマークアップされていることを要求している。</p>
-          
-               <p>HTMLにおいては、これは見出し要素(h1, h2, h3, h4, h5, h6)によって実現されうる。これによりユーザーエージェントは自動的にセクションの見出しを識別できる。他のウェブコンテンツ技術では、また異なる方法で見出しを識別する。ページ内の移動と文書の全体的構造の理解を助けるには、コンテンツ制作者は見出しを適切にネストさせるべきである(たとえばh1にはh2が続き、h2にはh2かh3が続き、h3にはh3またはh4が続き……といったように)。</p></description>
+  <description>
+    <p>この実装方法の目的は、それぞれのセクションにそれを識別できる見出しがついているようにすることである。<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#content-structure-separation-programmatic" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">達成基準1.3.1</loc>では見出しがプログラムで解釈可能な方法でマークアップされていることを要求している。</p>
+    <p>HTMLにおいては、これは見出し要素(h1, h2, h3, h4, h5, h6)によって実現されうる。これによりユーザーエージェントは自動的にセクションの見出しを識別できる。他のウェブコンテンツ技術では、また異なる方法で見出しを識別する。ページ内の移動と文書の全体的構造の理解を助けるには、コンテンツ制作者は見出しを適切にネストさせるべきである(たとえばh1にはh2が続き、h2にはh2かh3が続き、h3にはh3またはh4が続き……といったように)。</p>
+  </description>
   <examples>
     <eg-group>
       <head>HTMLのページを構造化するために用いられた見出し</head>
@@ -38,7 +39,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -68,9 +71,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G121.html">G121: Linking to pronunciations（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.argv.org/">井上浩一（ARGV）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/G121.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G121: Linking to pronunciations（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.argv.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">井上浩一（ARGV）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

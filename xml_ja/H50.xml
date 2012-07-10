@@ -8,13 +8,10 @@
     <success-criterion idref="navigation-mechanisms-skip"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-							この実装方法の目的は、リンクを論理的な一組にグループ化する方法を示すことである。リンクを論理的な一組（たとえば、サイト内の各ページに設置するナビゲーションバーやメインメニュー）にグループ化する場合、それらはひとつの単位としてマークアップされるべきである。通常、ナビゲーションバーは、利用者がページ上で遭遇する最初のものである。目の見える利用者はナビゲーションパーツを無視でき、そのページのコンテンツから読み始めることがある。しかし、スクリーンリーダーの利用者は、興味のあるコンテンツを読み始める前に、ナビゲーションバーに含まれるリンクテキストそれぞれの読み上げを聞かなければならない。スクリーンリーダーの利用者がナビゲーションバーを飛ばしたり、そこに含まれる全てのリンクの読み上げを回避したりできるようにする、コンテンツのマークアップの方法は何通りかある。</p>
-          
-					<p>
-						次のメカニズム（上から好ましい順）のどれかを利用して、リンクをグループ化する：</p>
-          
-               <ul>
+  <description>
+    <p>この実装方法の目的は、リンクを論理的な一組にグループ化する方法を示すことである。リンクを論理的な一組（たとえば、サイト内の各ページに設置するナビゲーションバーやメインメニュー）にグループ化する場合、それらはひとつの単位としてマークアップされるべきである。通常、ナビゲーションバーは、利用者がページ上で遭遇する最初のものである。目の見える利用者はナビゲーションパーツを無視でき、そのページのコンテンツから読み始めることがある。しかし、スクリーンリーダーの利用者は、興味のあるコンテンツを読み始める前に、ナビゲーションバーに含まれるリンクテキストそれぞれの読み上げを聞かなければならない。スクリーンリーダーの利用者がナビゲーションバーを飛ばしたり、そこに含まれる全てのリンクの読み上げを回避したりできるようにする、コンテンツのマークアップの方法は何通りかある。</p>
+    <p>次のメカニズム（上から好ましい順）のどれかを利用して、リンクをグループ化する：</p>
+    <ul>
 <li>
               
 							<p>
@@ -30,7 +27,8 @@
 							</p>
             
                   </li>
-</ul></description>
+</ul>
+  </description>
   <examples>
     <eg-group>
       <head>リンクのグループ化にリストを利用</head>
@@ -86,15 +84,21 @@ ul.navigation li {
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/lists.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 lists</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/lists.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 lists</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#edef-MAP" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    MAP element</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#edef-MAP" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    MAP element</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/global.html#adef-title" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    title attribute</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/global.html#adef-title" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    title attribute</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -120,9 +124,9 @@ ul.navigation li {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H50.html">H50: Using structural elements to group links（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H50.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H50: Using structural elements to group links（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

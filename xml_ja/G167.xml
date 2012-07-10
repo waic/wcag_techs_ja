@@ -8,9 +8,12 @@
     <success-criterion idref="minimize-error-cues"/>
   </applies-to>
   <ua-issues/>
-  <description><p>テキストフィールド上である機能を実行するボタンがあり、ボタンは明確にラベル付けされていて、テキストフィールドと隣り合って表示される場合、ボタンはテキストフィールドに対するラベルとしての役割も果たす。このラベルは、ページ上に新たな反復的なテキストを追加することなく、利用者がこのテキストフィールドの目的を理解するのを助ける。一つのテキストフィールドをラベル付けするボタンは通常はテキストフィールドの後に置かれる。</p>
-                
-               <note><p class="prefix"><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-rsv">達成基準4.1.2</a>を満たすため、このボタンはプログラムで解釈可能な識別名（name）を持っていなければならない。</p></note></description>
+  <description>
+    <p>テキストフィールド上である機能を実行するボタンがあり、ボタンは明確にラベル付けされていて、テキストフィールドと隣り合って表示される場合、ボタンはテキストフィールドに対するラベルとしての役割も果たす。このラベルは、ページ上に新たな反復的なテキストを追加することなく、利用者がこのテキストフィールドの目的を理解するのを助ける。一つのテキストフィールドをラベル付けするボタンは通常はテキストフィールドの後に置かれる。</p>
+    <note>
+      <p class="prefix"><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-rsv" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">達成基準4.1.2</loc>を満たすため、このボタンはプログラムで解釈可能な識別名（name）を持っていなければならない。</p>
+    </note>
+  </description>
   <examples>
     <eg-group>
       <head>検索機能</head>
@@ -53,9 +56,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G167.html">G167: Using an adjacent button to label the purpose of a field（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.argv.org/">井上浩一（ARGV）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G167.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G167: Using an adjacent button to label the purpose of a field（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.argv.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">井上浩一（ARGV）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

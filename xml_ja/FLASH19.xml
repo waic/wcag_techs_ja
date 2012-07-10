@@ -12,11 +12,13 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、ユーザーにインタラクションを完了させるための時間が終了することを通知することである。スクリプトで制限時間のある機能を提供している場合、スクリプトを用いて、ユーザーに制限時間が間もなく終了することを警告し、制限時間の延長を要求できるメカニズムを提供することが可能である。少なくとも制限時間の 20 秒前に、制限時間が間もなく終了することを通知して時間の延長が必要かどうかを利用者に確認する確認ダイアログをスクリプトにより提供する。利用者が「はい」と回答した場合は、制限時間をリセットする。利用者が「いいえ」と回答した場合、または応答がない場合は、制限時間の終了が認められる。</p>
-<p>この実装方法では、setTimeout() メソッドで制限時間を設定する。例えば、制限時間を 60 秒にする場合、40 秒の制限時間を設定し（目的のタイムアウトよりも 20 秒前）、確認ダイアログを表示するという方法がある。この確認ダイアログで、残りの 20 秒間のタイムアウトを新たに設定する。利用者がより長い時間を必要としている場合は、新しいタイムアウトを設定する。ただし、20 秒間の「制限時間の猶予期間」が終了すると（つまり 60 秒が経過すると）、元々の設計で 60 秒の制限時間が終了するときに想定されている動作が実行される。</p></description>
+  <description>
+    <p>この実装方法の目的は、ユーザーにインタラクションを完了させるための時間が終了することを通知することである。スクリプトで制限時間のある機能を提供している場合、スクリプトを用いて、ユーザーに制限時間が間もなく終了することを警告し、制限時間の延長を要求できるメカニズムを提供することが可能である。少なくとも制限時間の 20 秒前に、制限時間が間もなく終了することを通知して時間の延長が必要かどうかを利用者に確認する確認ダイアログをスクリプトにより提供する。利用者が「はい」と回答した場合は、制限時間をリセットする。利用者が「いいえ」と回答した場合、または応答がない場合は、制限時間の終了が認められる。</p>
+    <p>この実装方法では、setTimeout() メソッドで制限時間を設定する。例えば、制限時間を 60 秒にする場合、40 秒の制限時間を設定し（目的のタイムアウトよりも 20 秒前）、確認ダイアログを表示するという方法がある。この確認ダイアログで、残りの 20 秒間のタイムアウトを新たに設定する。利用者がより長い時間を必要としている場合は、新しいタイムアウトを設定する。ただし、20 秒間の「制限時間の猶予期間」が終了すると（つまり 60 秒が経過すると）、元々の設計で 60 秒の制限時間が終了するときに想定されている動作が実行される。</p>
+  </description>
   <examples>
     <eg-group>
       <head>ActionScript を使用してタイムアウトに到達する前に制限時間の延長機能を提供する</head>
@@ -58,8 +60,8 @@ function handleAlertClick(e) {
   if (e &amp;&amp; e.detail &amp;&amp; e.detail == Alert.YES)
   resetTimeout();
 }</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH19/timeout_extension_as2.html">「ActionScript を使用してタイムアウトに到達する前に制限時間の延長機能を提供する」のサンプル（英語）</a>で確認できる。また、<a href="working-examples/FLASH19/timeout_extension_as2.swf">「ActionScript を使用してタイムアウトに到達する前に制限時間の延長機能を提供する」のソース（英語）</a>をダウンロードすることもできる。
-For a demonstration, see a <a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH19/timeout_extension_as2.html">working example of Using ActionScript to offer a time limit extension before the timeout expires</a>. The <a href="working-examples/FLASH19/timeout_extension_as2.swf">source of Using ActionScript to offer a time limit extension before the timeout expires</a> is available.</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH19/timeout_extension_as2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript を使用してタイムアウトに到達する前に制限時間の延長機能を提供する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="working-examples/FLASH19/timeout_extension_as2.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript を使用してタイムアウトに到達する前に制限時間の延長機能を提供する」のソース（英語）</loc>をダウンロードすることもできる。
+For a demonstration, see a <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH19/timeout_extension_as2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">working example of Using ActionScript to offer a time limit extension before the timeout expires</loc>. The <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="working-examples/FLASH19/timeout_extension_as2.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">source of Using ActionScript to offer a time limit extension before the timeout expires</loc> is available.</p>
 </description>
     </eg-group>
   </examples>
@@ -85,9 +87,9 @@ For a demonstration, see a <a href="http://www.w3.org/TR/WCAG-TECHS/working-exam
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH19.html">FLASH19: Providing a script that warns the user a time limit is about to expire and provides a way to extend it（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH19.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH19: Providing a script that warns the user a time limit is about to expire and provides a way to extend it（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

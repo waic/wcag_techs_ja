@@ -8,16 +8,17 @@
     <success-criterion idref="meaning-pronunciation"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、標準的な発音区別符号をオンにしたりオフにできるメカニズムを利用者に提供することである。</p>
-                
-								<p>単語の発音を正しく示したり、単語同士の区別に役立つように、多くの言語で発音区別符号が利用されている。一部の言語は、母音、重子音、母音や子音の欠落を示したり、他の目的のために発音区別符号を用いている。発音区別符号がなくてもテキストを読むことはできるが、発音区別符号の追加によって読解可能性（リーダビリティ：Readability）を改善できる。</p></description>
+  <description>
+    <p>この実装方法の目的は、標準的な発音区別符号をオンにしたりオフにできるメカニズムを利用者に提供することである。</p>
+    <p>単語の発音を正しく示したり、単語同士の区別に役立つように、多くの言語で発音区別符号が利用されている。一部の言語は、母音、重子音、母音や子音の欠落を示したり、他の目的のために発音区別符号を用いている。発音区別符号がなくてもテキストを読むことはできるが、発音区別符号の追加によって読解可能性（リーダビリティ：Readability）を改善できる。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>あるハワイ語で書かれたウェブページには、初期状態で発音区別符号が表示されているが、次のような発音区別符号の表示レベルを利用者が選択できるリンクが提供されている：</p>
 <ulist><item><p>発音区別符号を表示しない</p></item><item><p>ʻokina（オキナ）の記号（‘）は表示するが、長音記号は表示しない</p></item><item><p>全ての発音区別符号を表示する</p></item></ulist><p>訪問者が好みのレベルを選択すれば、その設定はセッションクッキーに保存される。同じセッションの間、後に見る全てのページはクッキーにアクセスをしつづけ、選択したレベルに合わせて発音区別符号が表示されたり非表示になる。</p>
 <p>サーバサイドでは、コンテンツには全ての発音区別符号が含まれている。訪問者が発音区別符号を少なくするか全くない選択肢を選べば、サーバサイドで設定の通りに発音区別符号を置き換えたり取り除いてからページを表示する。
 												</p>
-<p><a href="http://www.hawaii.edu/site/info/diacritics.php">Hawaiian language online</a>がその例である。</p>
+<p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hawaii.edu/site/info/diacritics.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Hawaiian language online</loc>がその例である。</p>
 </description>
     </eg-group>
   </examples>
@@ -52,9 +53,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G86.html"> G86: Providing a text summary that requires reading ability less advanced than the upper secondary education level（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/G86.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G86: Providing a text summary that requires reading ability less advanced than the upper secondary education level（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

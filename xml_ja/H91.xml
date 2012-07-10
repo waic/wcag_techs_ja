@@ -9,21 +9,21 @@
     <success-criterion idref="ensure-compat-rsv"/>
   </applies-to>
   <ua-issues/>
-  <description><p>&#13;
-										この実装方法の目的は、インタラクティブなユーザーインターフェイスを構成する要素のキーボード操作及び支援技術との相互運用性を提供するために、標準的なHTMLのフォーム・コントロール及びリンク要素を用いることである。</p>&#13;
-                &#13;
-								<p>&#13;
-										ユーザーエージェントは、HTMLのフォーム・コントロール及びリンクのキーボード操作を提供している。さらに、ユーザーエージェントは、フォーム・コントロール及びリンクを、アクセシビリティAPIに結び付けている。支援技術は、アクセシビリティAPIを利用して、役割（Role）、識別名（Name）、状態（State）、値（Value）といった適切なアクセシビリティ情報を抽出し、それらをユーザーに提供している。役割はHTMLの要素によって提供され、名前はその要素に関連付けられているテキストによって提供される。値及び状態が適切な要素は、複合的なメカニズムを通じて、それらの値及び状態も支援技術に提示している。</p>&#13;
-                &#13;
-								<p>&#13;
-										必須の属性を通じてテキストがすでにコントロールと関連付けられている場合もある。たとえば、送信ボタンは、<code>button</code>要素内のテキスト又は画像の「<code>alt</code>」属性を識別名として用いている。フォーム・コントロールの場合は、<code>label</code>要素又は「<code>title</code>」属性が用いられる。次の表は、HTMLのフォーム・コントロール及びリンクの役割、識別名、値、状態がどのように決定されるかを示したものである。</p>&#13;
-                &#13;
-								<table border="1" cellpadding="5" summary="Table describing how the role, name, value and state are determined for HTML links and form controls."><thead><tr><th>HTML要素</th>
+  <description>
+    <p>この実装方法の目的は、インタラクティブなユーザーインターフェイスを構成する要素のキーボード操作及び支援技術との相互運用性を提供するために、標準的なHTMLのフォーム・コントロール及びリンク要素を用いることである。</p>
+    <p>ユーザーエージェントは、HTMLのフォーム・コントロール及びリンクのキーボード操作を提供している。さらに、ユーザーエージェントは、フォーム・コントロール及びリンクを、アクセシビリティAPIに結び付けている。支援技術は、アクセシビリティAPIを利用して、役割（Role）、識別名（Name）、状態（State）、値（Value）といった適切なアクセシビリティ情報を抽出し、それらをユーザーに提供している。役割はHTMLの要素によって提供され、名前はその要素に関連付けられているテキストによって提供される。値及び状態が適切な要素は、複合的なメカニズムを通じて、それらの値及び状態も支援技術に提示している。</p>
+    <p>必須の属性を通じてテキストがすでにコントロールと関連付けられている場合もある。たとえば、送信ボタンは、<code>button</code>要素内のテキスト又は画像の「<code>alt</code>」属性を識別名として用いている。フォーム・コントロールの場合は、<code>label</code>要素又は「<code>title</code>」属性が用いられる。次の表は、HTMLのフォーム・コントロール及びリンクの役割、識別名、値、状態がどのように決定されるかを示したものである。</p>
+    <table border="1" cellpadding="5" summary="Table describing how the role, name, value and state are determined for HTML links and form controls.">
+      <thead>
+        <tr><th>HTML要素</th>
 <th>役割<br/>（Role）</th>
 <th>識別名<br/>（Name）</th>
 <th>値<br/>（Value）</th>
 <th>状態<br/>（State）</th>
-</tr></thead><tbody><tr><td> &lt;a&gt; </td>
+</tr>
+      </thead>
+      <tbody>
+        <tr><td> &lt;a&gt; </td>
 <td>リンク</td>
 <td>&#13;
 										<code>&lt;a&gt;</code>要素の<code>title</code>属性、画像リンクの場合は<code>alt</code>属性。<br/>テキストと画像の<code>alt</code>属性を両方が提供されている場合は、両者を結合する。</td>
@@ -33,7 +33,8 @@
                                 &#13;
                             &#13;
 												</td>
-</tr><tr><td> &lt;button&gt;</td>
+</tr>
+        <tr><td> &lt;button&gt;</td>
 <td>プッシュボタン</td>&#13;
 												<td>
 <code>&lt;button&gt;</code>要素内のテキスト又は<code>title</code>属性</td>
@@ -41,7 +42,8 @@
 <td>&#13;
                             &#13;
 												</td>
-</tr><tr><td> &lt;fieldset&gt; </td>
+</tr>
+        <tr><td> &lt;fieldset&gt; </td>
 <td>グループ化</td>
 <td>
 <code>&lt;legend&gt; </code>要素</td>
@@ -50,7 +52,8 @@
                                 &#13;
                             &#13;
 												</td>
-</tr><tr><td> &lt;input type = "button", "submit", or "reset"&gt; </td>
+</tr>
+        <tr><td> &lt;input type = "button", "submit", or "reset"&gt; </td>
 <td>プッシュボタン</td>
 <td>
 <code>value</code>属性</td>
@@ -58,7 +61,8 @@
 <td>&#13;
                             &#13;
 												</td>
-</tr><tr><td> &lt;input type = "image"&gt; </td>
+</tr>
+        <tr><td> &lt;input type = "image"&gt; </td>
 <td>プッシュボタン</td>
 <td>
 <code>alt</code>属性又は<code>title</code>属性</td>
@@ -67,7 +71,8 @@
                                 &#13;
                             &#13;
 												</td>
-</tr><tr><td> &lt;input type = "text"&gt; </td>
+</tr>
+        <tr><td> &lt;input type = "text"&gt; </td>
 <td>編集可能なテキスト</td>
 <td>そのコントロールに関連付けられた<code>&lt;label&gt;</code>要素又は<code>title</code>属性</td>
 <td>
@@ -75,7 +80,8 @@
 <td>&#13;
                             &#13;
                         </td>
-</tr><tr><td> &lt;input type = "password"&gt; </td>
+</tr>
+        <tr><td> &lt;input type = "password"&gt; </td>
 <td>編集可能なテキスト</td>
 <td>そのコントロールに関連付けられた<code>&lt;label&gt;</code>要素又は<code>title</code>属性</td>
 <td> </td>
@@ -83,19 +89,22 @@
                                 &#13;
                             &#13;
 												</td>
-</tr><tr><td> &lt;input type="checkbox"&gt; </td>
+</tr>
+        <tr><td> &lt;input type="checkbox"&gt; </td>
 <td>チェックボックス</td>
 <td>そのコントロールに関連付けられた<code>&lt;label&gt;</code>要素又は<code>title</code>属性</td>
 <td> </td>
 <td>
 <code>checked</code>属性</td>
-</tr><tr><td> &lt;input type="radio"&gt; </td>
+</tr>
+        <tr><td> &lt;input type="radio"&gt; </td>
 <td>ラジオボタン</td>
 <td>そのコントロールに関連付けられた<code>&lt;label&gt;</code>要素又は<code>title</code>属性</td>
 <td> </td>
 <td>
 <code>checked</code>属性</td>
-</tr><tr><td> &lt;select&gt; </td>
+</tr>
+        <tr><td> &lt;select&gt; </td>
 <td>コンボボックス、リスト、又はドロップダウンリスト</td>
 <td>そのコントロールに関連付けられた<code>&lt;label&gt;</code>要素又は<code>title</code>属性</td>
 <td>
@@ -103,7 +112,8 @@
 <td>&#13;
                             &#13;
 												</td>
-</tr><tr><td> &lt;textarea&gt; </td>
+</tr>
+        <tr><td> &lt;textarea&gt; </td>
 <td>編集可能なテキスト</td>
 <td>そのコントロールに関連付けられた<code>&lt;label&gt;</code>要素又は<code>title</code>属性</td>
 <td>
@@ -111,7 +121,10 @@
 <td>&#13;
                             &#13;
                         </td>
-</tr></tbody></table></description>
+</tr>
+      </tbody>
+    </table>
+  </description>
   <examples>
     <eg-group>
       <head>リンク</head>
@@ -233,13 +246,19 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/aa360193(VS.85).aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">MSDN Accessible DHTML elements</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://msdn.microsoft.com/en-us/library/aa360193(VS.85).aspx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">MSDN Accessible DHTML elements</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="https://wiki.mozilla.org/Accessibility/AT-Windows-API#MSAA_Role_Support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Mozilla Accessibility/AT-Windows-API</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="https://wiki.mozilla.org/Accessibility/AT-Windows-API#MSAA_Role_Support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Mozilla Accessibility/AT-Windows-API</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -269,10 +288,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H91.html">H91: Using HTML form controls and links（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H91.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H91: Using HTML form controls and links（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

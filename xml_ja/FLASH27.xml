@@ -14,11 +14,13 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、ボタンのアクセシブルな名前として説明的なテキストを提供して、ボタンの目的を記述することである。この説明により、利用者はこのボタンとその他の Flash ムービーのボタンを区別でき、このボタンを有効化するかどうかを決定できる。ボタンのアクセシブルな名前として、空の文字列では不十分である。</p>
-<p>テキストラベル付きのボタンの場合、ラベルテキストがボタンのアクセシブルな名前として使用される。画像ベースのボタンでテキストラベルが付いていない場合、このボタンのアクセシブルな名前は、アクセシビリティパネルを使用するか、またはスクリプトによって、別途設定する必要がある。</p></description>
+  <description>
+    <p>この実装方法の目的は、ボタンのアクセシブルな名前として説明的なテキストを提供して、ボタンの目的を記述することである。この説明により、利用者はこのボタンとその他の Flash ムービーのボタンを区別でき、このボタンを有効化するかどうかを決定できる。ボタンのアクセシブルな名前として、空の文字列では不十分である。</p>
+    <p>テキストラベル付きのボタンの場合、ラベルテキストがボタンのアクセシブルな名前として使用される。画像ベースのボタンでテキストラベルが付いていない場合、このボタンのアクセシブルな名前は、アクセシビリティパネルを使用するか、またはスクリプトによって、別途設定する必要がある。</p>
+  </description>
   <examples>
     <eg-group>
       <head>ラベルプロパティを使用してボタンの目的を記述する</head>
@@ -99,9 +101,9 @@ function updateAccName(obj, newName:String) {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH27.html">FLASH27: Providing button labels that describe the purpose of a button（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH27.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH27: Providing button labels that describe the purpose of a button（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

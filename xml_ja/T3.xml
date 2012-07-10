@@ -8,17 +8,19 @@
     <success-criterion idref="content-structure-separation-programmatic"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、テキストの書式の規則を用いて、コンテンツの構造を伝えることである。見出しは、テキスト文書の各セクションの位置を示し、ラベル付けすることで、文書の構成を示すために用いられる。</p>
-		<p>見出しの始まりは、次のものによって示される。</p>
-		<ul>
+  <description>
+    <p>この実装方法の目的は、テキストの書式の規則を用いて、コンテンツの構造を伝えることである。見出しは、テキスト文書の各セクションの位置を示し、ラベル付けすることで、文書の構成を示すために用いられる。</p>
+    <p>見出しの始まりは、次のものによって示される。</p>
+    <ul>
 <li><p>見出しの前にある2行の空白行</p></li>
 		</ul>
-<p>見出しの終わりは、次のものによって示される。</p>
-		<ul>
+    <p>見出しの終わりは、次のものによって示される。</p>
+    <ul>
 <li><p>見出しの後にある1行の空白行</p></li>
 		</ul>
-<p>空白行には、スペースやタブなどの印刷できない文字が任意の個数含まれていて、そのすぐ後に新しい行がある。</p>
-<p diff="add">見出しのプログラム識別は、見出しの前の二行の空行と見出しの後の一行の空行である。テキストの文書では、文書構造として誤って解釈されうる要素をなくして、スクリーンリーダーのために文書構造をプログラムが解釈可能なレイアウトで示さなければならない。このプログラムが解釈可能なレイアウトによって、スクリーンリーダーが見出しであると考えられるテキストの前に空行を二回読み上げることができるようになる。画面拡大ソフトのユーザーは、視覚的に空白があることによって、それが見出しであると解釈できる（または、画面拡大ソフトが空白を特定できるスクリーンリーダーの機能を併せ持っていることもある）。</p></description>
+    <p>空白行には、スペースやタブなどの印刷できない文字が任意の個数含まれていて、そのすぐ後に新しい行がある。</p>
+    <p>見出しのプログラム識別は、見出しの前の二行の空行と見出しの後の一行の空行である。テキストの文書では、文書構造として誤って解釈されうる要素をなくして、スクリーンリーダーのために文書構造をプログラムが解釈可能なレイアウトで示さなければならない。このプログラムが解釈可能なレイアウトによって、スクリーンリーダーが見出しであると考えられるテキストの前に空行を二回読み上げることができるようになる。画面拡大ソフトのユーザーは、視覚的に空白があることによって、それが見出しであると解釈できる（または、画面拡大ソフトが空白を特定できるスクリーンリーダーの機能を併せ持っていることもある）。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>段落の後に2行の空白行があり、それに続いて、見出し、1行の空白行、そして次の段落がある：</p>
@@ -59,10 +61,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/T3.html">T3: Using standard text formatting conventions for headings（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/T3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">T3: Using standard text formatting conventions for headings（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

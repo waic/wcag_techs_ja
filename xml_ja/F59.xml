@@ -8,9 +8,10 @@
     <success-criterion idref="ensure-compat-rsv"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この不適合事例では、ユーザーインタフェース・コントロールを生成するために汎用的なHTML要素を用いたとき、どのようにしてコントロールが支援技術に対してアクセシブルでなくなるかを示している。コンポーネントについての情報を利用者に伝達する際、支援技術は、コンポーネントのロール及びカレント・ステートの情報に依存している。多くのHTML要素は、リンク、ボタン、テキストフィールドなどといった明確なロールを持っている。div 及び span などの汎用的な要素は、事前に定義されたロールがない。これらの汎用的な要素が、HTMLでユーザーインタフェース・コントロールを生成するために使用されると、支援技術は、コントロールを表現したり、コントロールとやり取りしたりするために必要な情報を得られないかもしれない。</p>
-	<p>完全にアクセシブルなユーザーインタフェース・コントロールを生成するための必要なロール及びステートについての情報を提供するメカニズムを記述している仕様へのリンクについては、下記の参考リソースの項目を参照のこと。/p&gt;
-</p></description>
+  <description>
+    <p>この不適合事例では、ユーザーインタフェース・コントロールを生成するために汎用的なHTML要素を用いたとき、どのようにしてコントロールが支援技術に対してアクセシブルでなくなるかを示している。コンポーネントについての情報を利用者に伝達する際、支援技術は、コンポーネントのロール及びカレント・ステートの情報に依存している。多くのHTML要素は、リンク、ボタン、テキストフィールドなどといった明確なロールを持っている。div 及び span などの汎用的な要素は、事前に定義されたロールがない。これらの汎用的な要素が、HTMLでユーザーインタフェース・コントロールを生成するために使用されると、支援技術は、コントロールを表現したり、コントロールとやり取りしたりするために必要な情報を得られないかもしれない。</p>
+    <p>完全にアクセシブルなユーザーインタフェース・コントロールを生成するための必要なロール及びステートについての情報を提供するメカニズムを記述している仕様へのリンクについては、下記の参考リソースの項目を参照のこと。/p&gt;</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>span 及び画像を使用したチェックボックスを生成するため、下記の事例は不適合となる。</p>
@@ -77,9 +78,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F59.html">F59: Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F59.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F59: Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

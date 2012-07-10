@@ -10,7 +10,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p> この文書では、支援技術を含むユーザーエージェントがウェブページを一貫して解釈できるようにすることに対する不適合事例について述べている。曖昧になっていると、支援技術を含む異なるユーザーエージェントで異なった情報を提示してしまう。支援技術の利用者の場合、他のおもなユーザーエージェントの利用者が受け取る以上に異なった情報を受け取ることになる。マークアップ言語の要素や属性の中には一意的な値を持っていることが求められ、これが満たされない場合は結果が不規則であったり、コンテンツが一意的にならなくなる。例えば、ラベルやデータテーブルの見出しによって参照されている、又はフラグメント識別子として使用されている場合にid属性の値が一意的でないと、一般にユーザーエージェントが最も重要な関係（すなわち、どのラベルがどのアイテムに対応するといった場合）を決定するための情報を十分に得られないため問題となる。</p>
+    <p>この文書では、支援技術を含むユーザーエージェントがウェブページを一貫して解釈できるようにすることに対する不適合事例について述べている。曖昧になっていると、支援技術を含む異なるユーザーエージェントで異なった情報を提示してしまう。支援技術の利用者の場合、他のおもなユーザーエージェントの利用者が受け取る以上に異なった情報を受け取ることになる。マークアップ言語の要素や属性の中には一意的な値を持っていることが求められ、これが満たされない場合は結果が不規則であったり、コンテンツが一意的にならなくなる。例えば、ラベルやデータテーブルの見出しによって参照されている、又はフラグメント識別子として使用されている場合にid属性の値が一意的でないと、一般にユーザーエージェントが最も重要な関係（すなわち、どのラベルがどのアイテムに対応するといった場合）を決定するための情報を十分に得られないため問題となる。</p>
   </description>
   <examples>
     <eg-group>
@@ -59,10 +59,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F17.html">F17: Failure of Success Criterion 1.3.1 and 4.1.1 due to insufficient information in DOM to determine one-to-one relationships (e.g., between labels with same id) in HTML
-（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F17.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F17: Failure of Success Criterion 1.3.1 and 4.1.1 due to insufficient information in DOM to determine one-to-one relationships (e.g., between labels with same id) in HTML&#13;
+（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

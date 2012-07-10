@@ -80,7 +80,7 @@ header("Location: http://www.example.com/newUserLogin.php");
                                         Redirection Techniques</loc>by Shailesh N. Humbad.</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://java.sun.com/products/servlet/2.3/javadoc/javax/servlet/http/HttpServletResponse.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Interface javax.servlet.http.HttpServletResponse</loc>in&#13;
+          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://java.sun.com/products/servlet/2.3/javadoc/javax/servlet/http/HttpServletResponse.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Interface javax.servlet.http.HttpServletResponse</loc>in
                                     the Java Servlets 2.3 API documentation.</p>
         </item>
         <item>
@@ -88,12 +88,12 @@ header("Location: http://www.example.com/newUserLogin.php");
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/mod/mod_alias.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Module mod_alias</loc>in the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache HTTP Server&#13;
-                                        Version 2.2 Documentation</loc>describes how redirects can&#13;
+                                        Version 2.2 Documentation</loc>describes how redirects can
                                     be specified in Apache 2.2.</p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/1.3/mod/mod_alias.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Module mod_alias</loc>in the<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/1.3/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache HTTP Server&#13;
-                                        Version 1.3 Documentation</loc>describes how redirects can&#13;
+                                        Version 1.3 Documentation</loc>describes how redirects can
                                     be specified in Apache 1.3.</p>
         </item>
       </ulist>
@@ -125,10 +125,10 @@ header("Location: http://www.example.com/newUserLogin.php");
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SVR1.html">SVR1: Implementing automatic redirects on the server side instead of on the client side（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SVR1.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SVR1: Implementing automatic redirects on the server side instead of on the client side（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -13,26 +13,28 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェント及び支援技術に関する情報は、<a href="pdf_notes.html">PDF テクノロジーノート</a>を参照のこと。</p>
+      <p>ユーザーエージェント及び支援技術に関する情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF テクノロジーノート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、キーボードおよび支援技術のユーザーが認識できるように PDF 文書内のリンクテキストをマークアップする方法を示すことである。つまり、リンクが別の形式で表示されたときに認識可能であるように、リンク情報をプログラム的に利用可能にする。これは通常、PDF のオーサリングツールを使用して行う。</p>
-<p>PDF 文書内のリンクは、そのサブツリー内のリンクタグおよびオブジェクトで表わされ、リンクオブジェクト参照（リンク注釈）と 1 つまたは複数のテキストオブジェクトで構成される。リンクタグ内のテキストオブジェクトまたはオブジェクトは、リンクの名前を提供するために支援技術で使用される。</p>
-<p>WCAG 達成基準に適合するリンクを提供する最も容易な方法は、PDF に変換する前の、文書をオーサリングする段階でリンクを作成することである。</p>
-<p>ただし、元のオーサリングツールを使用してリンクを作成することができない場合もある。そのような場合は、Adobe Acrobat Pro を使用してリンクを作成することができる。ただし、Adobe Acrobat Pro のリンクダイアログボックスを使用して作成したツールヒントは、スクリーンリーダーからアクセスできないため、そのリンクテキストまたはリンクの文脈で目的を明確にすること。</p>
-<p>いかなる場合でも、次の一般的なテクニックで説明されているように、リンクの目的を明確にする必要がある。</p>
-<ul>
+  <description>
+    <p>この実装方法の目的は、キーボードおよび支援技術のユーザーが認識できるように PDF 文書内のリンクテキストをマークアップする方法を示すことである。つまり、リンクが別の形式で表示されたときに認識可能であるように、リンク情報をプログラム的に利用可能にする。これは通常、PDF のオーサリングツールを使用して行う。</p>
+    <p>PDF 文書内のリンクは、そのサブツリー内のリンクタグおよびオブジェクトで表わされ、リンクオブジェクト参照（リンク注釈）と 1 つまたは複数のテキストオブジェクトで構成される。リンクタグ内のテキストオブジェクトまたはオブジェクトは、リンクの名前を提供するために支援技術で使用される。</p>
+    <p>WCAG 達成基準に適合するリンクを提供する最も容易な方法は、PDF に変換する前の、文書をオーサリングする段階でリンクを作成することである。</p>
+    <p>ただし、元のオーサリングツールを使用してリンクを作成することができない場合もある。そのような場合は、Adobe Acrobat Pro を使用してリンクを作成することができる。ただし、Adobe Acrobat Pro のリンクダイアログボックスを使用して作成したツールヒントは、スクリーンリーダーからアクセスできないため、そのリンクテキストまたはリンクの文脈で目的を明確にすること。</p>
+    <p>いかなる場合でも、次の一般的なテクニックで説明されているように、リンクの目的を明確にする必要がある。</p>
+    <ul>
 <li>
-<p> <a href="G53.html">G53: リンクテキストとそれが含まれている文章中のテキストとを組み合わせて、リンクの目的を特定する</a> </p>
+<p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="G53.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G53: リンクテキストとそれが含まれている文章中のテキストとを組み合わせて、リンクの目的を特定する</loc> </p>
 </li>
 <li>
-<p> <a href="G91.html">G91:	リンクの目的を説明したリンクテキストを提供する</a></p>
+<p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="G91.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G91:	リンクの目的を説明したリンクテキストを提供する</loc></p>
 </li>
-</ul></description>
+</ul>
+  </description>
   <examples>
     <eg-group>
       <head>PDF に変換する前に Microsoft Word 2007 でハイパーリンクを作成する</head>
-      <description><p>この事例は Microsoft Word の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Microsoft Word の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>Microsoft Word でハイパーリンクを作成するには、まずリンク先の項目（Web ページなど）を特定する。次に、以下の作業を行う。</p>
 <olist><item><p>次のいずれかの作業を行う</p>
 <ul>
@@ -42,19 +44,19 @@
 <li>
 <p>Ctrl + K キーボードショートカットを使用する</p>
 </li>
-</ul></item><item><p>リボン上にある「挿入」を選択し、リンクツールの「ハイパーリンク」を選択する/p&gt;</p></item><item><p>Ctrl + K キーボードショートカットを使用する</p></item><item><p>ハイパーリンクの挿入ダイアログボックスで、リンク先とリンクテキストを追加する</p></item><item><p>タグ付き PDF としてファイルを保存する（「<a href="pdf_notes.html">PDF テクノロジーノート</a>」を参照のこと）</p></item></olist></description>
+</ul></item><item><p>リボン上にある「挿入」を選択し、リンクツールの「ハイパーリンク」を選択する/p&gt;</p></item><item><p>Ctrl + K キーボードショートカットを使用する</p></item><item><p>ハイパーリンクの挿入ダイアログボックスで、リンク先とリンクテキストを追加する</p></item><item><p>タグ付き PDF としてファイルを保存する（「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF テクノロジーノート</loc>」を参照のこと）</p></item></olist></description>
     </eg-group>
     <eg-group>
       <head>PDF に変換する前に OpenOffice.org Writer 2.2 でハイパーリンクを作成する</head>
-      <description><p>この事例は OpenOffice.org Writer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
-<olist><item><p>［挿入］メニューの［ハイパーリンク］を選択する</p></item><item><p>［ハイパーリンク］ダイアログボックスで、「ハイパーリンクの種類」の「ターゲット」フィールドにリンク先の URI を挿入する</p></item><item><p>「詳細設定」の「テキスト」フィールドにリンクテキストを挿入する（このダイアログボックスを表示する前に、文書のテキストからリンクテキストを選択することもできる。選択したテキストが「テキスト」フィールドに挿入される）</p></item><item><p>タグ付き PDF としてファイルを保存する（「<a href="pdf_notes.html">PDF テクノロジーノート</a>」を参照のこと）</p></item></olist></description>
+      <description><p>この事例は OpenOffice.org Writer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
+<olist><item><p>［挿入］メニューの［ハイパーリンク］を選択する</p></item><item><p>［ハイパーリンク］ダイアログボックスで、「ハイパーリンクの種類」の「ターゲット」フィールドにリンク先の URI を挿入する</p></item><item><p>「詳細設定」の「テキスト」フィールドにリンクテキストを挿入する（このダイアログボックスを表示する前に、文書のテキストからリンクテキストを選択することもできる。選択したテキストが「テキスト」フィールドに挿入される）</p></item><item><p>タグ付き PDF としてファイルを保存する（「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF テクノロジーノート</loc>」を参照のこと）</p></item></olist></description>
     </eg-group>
     <eg-group>
       <head>Adobe Acrobat 9 Pro でリンクの作成ダイアログボックスを使用してハイパーリンクを作成する</head>
-      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <olist><item><p>リンクテキストにするテキストを選択する</p></item><item><p>コンテキストメニューから［リンクの作成］を選択する</p></item></olist><p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF11/capelink1.jpg" alt="スクリーンショット：ハイパーリンクを作成するためにテキストが選択されている PDF 文書。コンテキストメニューで［リンクの作成］が選択されている。" height="467" width="424"/></p><p>3. リンクの作成ダイアログボックスの指示に従い、以下に示されているように、リンクの外観を指定する</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF11/capelink2.jpg" alt="スクリーンショット：リンクの作成ダイアログボックスが開き、「リンクの外観」のオプションが選択されている PDF 文書。" height="406" width="509"/></p><p>「次へ」を選択し、URI を指定する。次の画像は、結果として表示されるハイパーリンクとツールヒントを示している。</p>
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF11/capelink3.jpg" alt="スクリーンショット：リンクの作成ダイアログボックスを使用して作成されたハイパーリンクがあり、マウスオーバーによりツールヒントが表示されている PDF 文書。" height="216" width="460"/></p><p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF11/links.pdf">PDF でハイパーリンクを作成したサンプル（PDFファイル）</a>がある。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF11/capelink3.jpg" alt="スクリーンショット：リンクの作成ダイアログボックスを使用して作成されたハイパーリンクがあり、マウスオーバーによりツールヒントが表示されている PDF 文書。" height="216" width="460"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF11/links.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF でハイパーリンクを作成したサンプル（PDFファイル）</loc>がある。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -199,9 +201,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/PDF11.html">PDF11: Providing links and link text using the /Link structure element in PDF documents（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/PDF11.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF11: Providing links and link text using the /Link structure element in PDF documents（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

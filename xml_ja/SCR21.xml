@@ -13,9 +13,11 @@
       <p>この例は、Windows XP上のIE 6とFirefox 1.5.0.1において、JAWS 7とWindow-Eyes 5.5の両方で正常にテストされた。ページ内に新しいコンテンツが追加されたとき、スクリーンリーダーはそれを自動的に読み上げないことに注意しなければならない。新しいコンテンツを確実に読み上げさせるには、新しい要素にフォーカスを与えるか、又は現在位置よりもあとに追加して、ユーザーがページを読み進めていく際に気がつけるようにする。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、<code>document.write</code>又は<code>object.innerHTML</code>の代わりにDocument Object Model (DOM)の機能を用いて、ページ中にコンテンツを追加することである。<code>document.write()</code>メソッドはXHTMLで正しいMIMEタイプ(application/xhtml+xml)が指定されているときに動作せず、<code>innerHTML</code>プロパティはDOMの仕様ではないため利用すべきでない。もしDOMの機能を利用してコンテンツを追加すれば、ユーザーエージェントはDOMにアクセスしてコンテンツを取り込むことができる。<code>createElement()</code>関数を使ってDOMの中に要素を作成することもできる。<code>createTextNode()</code>は要素に関連付けられたテキストを作成するのに用いられる。<code>appendChild()</code>、 <code>removeChild()</code>、 <code>insertBefore()</code>及び<code>replaceChild()</code>関数は、要素やノードを追加したり削除したりするのに用いられる。その他のDOM関数は、作成された要素に属性を与えるときに使用される。</p>
-  <note><p class="prefix">フォーカス可能な要素を文書に追加するとき、<code>tabindex</code>属性を用いて明示的なタブ順序を指定してはならない。なぜなら、文書の中央にフォーカス可能な要素を追加するときに問題が発生するからである。<code>tabindex</code>属性を明示的に設定しないことで、デフォルトのタブ順序が新しい要素に割り当てられるようにする。</p>
-  </note></description>
+  <description>
+    <p>この実装方法の目的は、<code>document.write</code>又は<code>object.innerHTML</code>の代わりにDocument Object Model (DOM)の機能を用いて、ページ中にコンテンツを追加することである。<code>document.write()</code>メソッドはXHTMLで正しいMIMEタイプ(application/xhtml+xml)が指定されているときに動作せず、<code>innerHTML</code>プロパティはDOMの仕様ではないため利用すべきでない。もしDOMの機能を利用してコンテンツを追加すれば、ユーザーエージェントはDOMにアクセスしてコンテンツを取り込むことができる。<code>createElement()</code>関数を使ってDOMの中に要素を作成することもできる。<code>createTextNode()</code>は要素に関連付けられたテキストを作成するのに用いられる。<code>appendChild()</code>、<code>removeChild()</code>、<code>insertBefore()</code>及び<code>replaceChild()</code>関数は、要素やノードを追加したり削除したりするのに用いられる。その他のDOM関数は、作成された要素に属性を与えるときに使用される。</p>
+    <note><p class="prefix">フォーカス可能な要素を文書に追加するとき、<code>tabindex</code>属性を用いて明示的なタブ順序を指定してはならない。なぜなら、文書の中央にフォーカス可能な要素を追加するときに問題が発生するからである。<code>tabindex</code>属性を明示的に設定しないことで、デフォルトのタブ順序が新しい要素に割り当てられるようにする。</p>
+  </note>
+  </description>
   <examples>
     <eg-group>
       <description><p>この例では、クライアントサイドスクリプトの使用法として、フォームの検証方法を紹介している。もしエラーがみつかれば、適切なエラーメッセージが表示される。この例ではDOM関数を使用し、タイトル、エラーに関する短い説明、及びエラー一覧の順序付リストを含むエラー通知を追加している。タイトルの内容はリンクとして書かれているので、focusメソッドを使って利用者の注意をエラーに向けることができる。個別のリスト項目もまた、リンクとして書かれているので、そのリンク先に移動したときにエラーのあるフォームのフィールドにフォーカスできるように書かれている。</p>
@@ -164,7 +166,7 @@ function focusFormField(objAnchor, objEvent, objForm)
 &lt;/body&gt;
 &lt;/html&gt;</code>
       <description><p>この例はクライアントサイドスクリプトに限定しているため、サーバーサイドの検証によって補完されるべきである。例では、クライアントサイドスクリプトが利用できるときのエラーメッセージの作成に限定される。</p>
-<p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR21/ex1.html">フォームの検証</a> </p>
+<p>このコードの実装サンプル：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR21/ex1.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">フォームの検証</loc> </p>
 </description>
     </eg-group>
   </examples>
@@ -175,7 +177,9 @@ function focusFormField(objAnchor, objEvent, objForm)
           <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.webreference.com/js/column44/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The Document Object Model, More methods</loc>from Webreference.com</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -201,9 +205,9 @@ function focusFormField(objAnchor, objEvent, objForm)
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR21.html">SCR21: Using functions of the Document Object Model (DOM) to add content to a page（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：辻 勝利(<a href="http://www.infoaxia.co.jp/">株式会社ミツエーリンクス</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SCR21.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCR21: Using functions of the Document Object Model (DOM) to add content to a page（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：辻 勝利(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

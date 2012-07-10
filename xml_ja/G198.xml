@@ -8,8 +8,10 @@
     <success-criterion idref="time-limits-required-behaviors"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、指定された制限時間内にタスクを完了できない利用者に対して、制限時間を解除するメカニズムを提供することである。</p>
-		<p>制限時間を解除するメカニズム自体に制限時間が設けられておらず、またウェブページ全体の制限時間前に完了できるようにすることが非常に重要である。そのためには、さまざまな障害のある利用者がすばやく見つけて解除できるように、このメカニズムをページの上部又は上部近くで提供すべきである。</p></description>
+  <description>
+    <p>この実装方法の目的は、指定された制限時間内にタスクを完了できない利用者に対して、制限時間を解除するメカニズムを提供することである。</p>
+    <p>制限時間を解除するメカニズム自体に制限時間が設けられておらず、またウェブページ全体の制限時間前に完了できるようにすることが非常に重要である。そのためには、さまざまな障害のある利用者がすばやく見つけて解除できるように、このメカニズムをページの上部又は上部近くで提供すべきである。</p>
+  </description>
   <examples/>
   <resources/>
   <related-techniques>
@@ -42,9 +44,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G198.html">G198: Providing a way for the user to turn the time limit off（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G198.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G198: Providing a way for the user to turn the time limit off（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

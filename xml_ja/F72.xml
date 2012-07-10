@@ -14,7 +14,7 @@
   <examples>
     <eg-group>
       <head>不適合となる代替テキストのないASCIIアートのチャート</head>
-      <description><p>次のASCIIアートのチャートは、代替テキストがないため、達成基準1.1.1を満たしていない。事実、この不適合となる事例を含んでいるため、このウェブページは適合していないページとなっている。ただし、<a href="#F72-related-techs">ASCIIアートの例をスキップする</a>ことはできる。</p>
+      <description><p>次のASCIIアートのチャートは、代替テキストがないため、達成基準1.1.1を満たしていない。事実、この不適合となる事例を含んでいるため、このウェブページは適合していないページとなっている。ただし、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="#F72-related-techs" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ASCIIアートの例をスキップする</loc>ことはできる。</p>
 </description>
       <code>&lt;pre&gt;
   %   __ __ __ __ __ __ __ __ __ __ __ __ __ __   
@@ -56,9 +56,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F72.html">F72: Failure of Success Criterion 1.1.1 due to using ASCII art without providing a text alternative（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F72.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F72: Failure of Success Criterion 1.1.1 due to using ASCII art without providing a text alternative（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

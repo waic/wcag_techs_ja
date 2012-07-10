@@ -9,15 +9,17 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェント及び支援技術に関する情報は、<a href="pdf_notes.html">PDF テクノロジーノート</a>を参照のこと。</p>
+      <p>ユーザーエージェント及び支援技術に関する情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF テクノロジーノート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、PDF フォームの送信フォームアクションを使用して、ユーザーが明示的に文脈の変更を要求できるメカニズムを提供することがある。送信ボタンの使用目的は、フォームに入力されたデータを送信する HTTP 要求を生成することなので、送信ボタンは文脈を変更するための適切なコントロールである。PDF 文書の送信ボタンは通常、PDF のオーサリングツールを使用して実装される。</p>
-<p>事例 1 および 2 は、特定のオーサリングツールを使用して送信ボタンを追加する方法を示している。同様の機能を実行する PDF ツールは他にも存在する。「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」により提供される機能を参照のこと。</p></description>
+  <description>
+    <p>この実装方法の目的は、PDF フォームの送信フォームアクションを使用して、ユーザーが明示的に文脈の変更を要求できるメカニズムを提供することがある。送信ボタンの使用目的は、フォームに入力されたデータを送信する HTTP 要求を生成することなので、送信ボタンは文脈を変更するための適切なコントロールである。PDF 文書の送信ボタンは通常、PDF のオーサリングツールを使用して実装される。</p>
+    <p>事例 1 および 2 は、特定のオーサリングツールを使用して送信ボタンを追加する方法を示している。同様の機能を実行する PDF ツールは他にも存在する。「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」により提供される機能を参照のこと。</p>
+  </description>
   <examples>
     <eg-group>
       <head>Adobe Acrobat 9 Pro を使用して送信ボタンを追加する</head>
-      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。 他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。 他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <olist><item><p>ツールバーからフォーム &gt; フォームツール &gt; ボタンを選択し、フォーム上にボタンを作成する</p></item><item><p>ボタンのコンテキストメニューから「プロパティ」を選択し、［ボタンのプロパティ］ダイアログボックスを開く</p></item><item><p>［一般］タブで、ボタンのツールヒントを入力する</p></item><item><p>［オプション］タブで、ボタンラベルかアイコンイメージまたはその両方に対して、レイアウトメニューのオプションを選択する。次に、ボタンを送信ボタンとして指定するために「ラベル」ボックスにテキストを入力したり、「アイコンを選択」をクリックして、使用するイメージファイルを配置したりする</p></item><item><p>［アクション］タブで次の操作を行う</p>
 <ul>
 <li>
@@ -35,7 +37,7 @@
     </eg-group>
     <eg-group>
       <head>Adobe LiveCycle Designer ES 8.2.1 を使用して送信ボタンを追加する</head>
-      <description><p>この事例は Adobe LiveCycle Designer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。 他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe LiveCycle Designer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。 他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <olist><item><p>挿入 &gt; 標準メニューで、「HTTP 送信ボタン」項目を選択する</p></item><item><p>「HTTP 送信ボタン」の［オブジェクト］パネルに、フォーム送信処理の URL を挿入する</p></item></olist><p>次の画像は、フォーム・コントロールの一覧が表示されている標準メニューを示している。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF15/http.gif" alt="スクリーンショット：「HTTP 送信ボタン」が選択されている、フォーム・コントロールの一覧が表示されている標準メニュー" height="257" width="399"/></p><p>次の画像は、URL とボタンの外観に関するその他のフィールドが表示されたオブジェクトパネルを示している。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF15/submit-panel.gif" alt="スクリーンショット：URL と送信ボタンの外観およびアクションを指定するためのその他のフィールドが表示されている［オブジェクト］パネル" height="287" width="239"/></p></description>
@@ -51,7 +53,7 @@ this.submitForm({
   cSubmitAs: "FDF" // デフォルト、ここでは不要
 });</code>
       <description><p>次の画像は、このプロセスを示している。</p>
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF15/submit-button1.jpg" alt="スクリーンショット：送信ボタンの［ボタンのプロパティ］ダイアログボックス" height="552" width="587"/></p><p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF15/submit-button3.jpg" alt="スクリーンショット：［ボタンのプロパティ］ダイアログボックスの［アクション］タブに追加された JavaScript" height="443" width="518"/></p><p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF15/submit-button-js.pdf">スクリプトアクションを送信ボタンに追加したサンプル</a>がある。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF15/submit-button1.jpg" alt="スクリーンショット：送信ボタンの［ボタンのプロパティ］ダイアログボックス" height="552" width="587"/></p><p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF15/submit-button3.jpg" alt="スクリーンショット：［ボタンのプロパティ］ダイアログボックスの［アクション］タブに追加された JavaScript" height="443" width="518"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF15/submit-button-js.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">スクリプトアクションを送信ボタンに追加したサンプル</loc>がある。</p>
 </description>
     </eg-group>
   </examples>
@@ -62,10 +64,14 @@ this.submitForm({
           <p>Section 12.7.5.2 (Submit-Form Action) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://kb2.adobe.com/cps/332/332289.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Create submission forms in LiveCycle Designer</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://kb2.adobe.com/cps/332/332289.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Create submission forms in LiveCycle Designer</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/en/xml/xfa_spec_2_5.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Forms Architecture (XFA) Specification Version 2.5</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/en/xml/xfa_spec_2_5.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Forms Architecture (XFA) Specification Version 2.5</loc>
+          </p>
         </item>
         <item>
           <p>
@@ -111,9 +117,9 @@ this.submitForm({
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/PDF15.html">PDF15: Providing submit buttons with the submit-form action in PDF forms（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/PDF15.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF15: Providing submit buttons with the submit-form action in PDF forms（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

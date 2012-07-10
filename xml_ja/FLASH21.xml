@@ -12,12 +12,17 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、データテーブルで視覚的に示されている情報とそれらの関連性を、プログラムが解釈できるようにすることである。具体的には、テーブルの列見出しとそれに対応するデータセルの関連性を支援技術が解釈できるようにする必要がある。Flash では、この実現方法として DataGrid コンポーネントを使用できる。DataGrid コンポーネントでアクセシビリティを有効にした場合、Flash はグリッドの行のアクセシブルな名前を支援技術に渡す際に、各セルの値の前に自動的に列名を付加する。例えば、次のスクリーンショットの行は、スクリーンリーダーによって「13行中の6行目 Name Patty Crawford Bats L Throws L Year Jr Home Whittier, CA」と読み上げられる。</p>&#13;
-<note><p class="prefix">Flash の DataGrid コンポーネントは列見出しのみをサポートし、行見出しはサポートしていない。</p>&#13;
-</note><p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH21/highlighted_row_in_flash_datagrid.png" alt="画面スクリーンショット：6行目が強調表示されたDataGrid コンポーネント" height="283" width="424"/></p></description>
+  <description>
+    <p>この実装方法の目的は、データテーブルで視覚的に示されている情報とそれらの関連性を、プログラムが解釈できるようにすることである。具体的には、テーブルの列見出しとそれに対応するデータセルの関連性を支援技術が解釈できるようにする必要がある。Flash では、この実現方法として DataGrid コンポーネントを使用できる。DataGrid コンポーネントでアクセシビリティを有効にした場合、Flash はグリッドの行のアクセシブルな名前を支援技術に渡す際に、各セルの値の前に自動的に列名を付加する。例えば、次のスクリーンショットの行は、スクリーンリーダーによって「13行中の6行目 Name Patty Crawford Bats L Throws L Year Jr Home Whittier, CA」と読み上げられる。</p>
+    <note><p class="prefix">Flash の DataGrid コンポーネントは列見出しのみをサポートし、行見出しはサポートしていない。</p>
+</note>
+    <p>
+      <img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH21/highlighted_row_in_flash_datagrid.png" alt="画面スクリーンショット：6行目が強調表示されたDataGrid コンポーネント" height="283" width="424"/>
+    </p>
+  </description>
   <examples>
     <eg-group>
       <head>統計データのテーブル</head>
@@ -57,7 +62,7 @@ function bldRosterGrid(dg: DataGrid) {
   dg.columns[4].width = 120;
   dg.move(50, 50);
 };</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH21/using_datagrid_to_associate_headers_with_cells_as3.html">「統計データのテーブル」のサンプル（英語）</a>で確認できる。また、<a href="working-examples/FLASH21/using_datagrid_to_associate_headers_with_cells_as3.swf">「統計データのテーブル」のソース</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH21/using_datagrid_to_associate_headers_with_cells_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「統計データのテーブル」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="working-examples/FLASH21/using_datagrid_to_associate_headers_with_cells_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「統計データのテーブル」のソース</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -95,9 +100,9 @@ function bldRosterGrid(dg: DataGrid) {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH21.html">FLASH21: Using the DataGrid component to associate column headers with cells（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH21.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH21: Using the DataGrid component to associate column headers with cells（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

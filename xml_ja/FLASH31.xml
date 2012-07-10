@@ -12,16 +12,17 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、見た目で表題が提供されている場合に、プログラムによって表題をデータグリッドに関連付けることである。通常、テーブルの表題はテーブルの識別子であり、テーブルのタイトルまたは見出しとして機能する。</p>
-
-<p>Flash には DataGrid コンポーネント用の caption 要素はない。ただし、以下のアプローチによって同じ効果を得ることができる。</p>
-<ol class="enumar">
+  <description>
+    <p>この実装方法の目的は、見た目で表題が提供されている場合に、プログラムによって表題をデータグリッドに関連付けることである。通常、テーブルの表題はテーブルの識別子であり、テーブルのタイトルまたは見出しとして機能する。</p>
+    <p>Flash には DataGrid コンポーネント用の caption 要素はない。ただし、以下のアプローチによって同じ効果を得ることができる。</p>
+    <ol class="enumar">
 <li><p>データグリッドの上にラベルコンポーネントまたはテキストフィールドを配置し、グリッドの表題を設定する。</p></li>
 <li><p>表題のテキストを複製し、グリッドのアクセシブルな名前として追加する。これを行うには、グリッドのアクセシビリティパネルの「名前」フィールドに値を設定するか、またはグリッドの AccessibilityProperties.name プロパティを設定する。</p></li>
-</ol></description>
+</ol>
+  </description>
   <examples>
     <eg-group>
       <head>データグリッドにラベルを関連付ける</head>
@@ -93,7 +94,7 @@ function bldRosterGrid(dg: DataGrid) {
   dg.columns[4].width = 120;
 };</code>
       <description><p>このコード例に関する注記：</p>
-<ulist><item><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH31/datagrid_with_caption_as3.html">「ActiveScript 3 を使用してデータグリッドにキャプションを関連付ける」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH31/datagrid_with_caption_as3.swf">「ActiveScript 3 を使用してデータグリッドにキャプションを関連付ける」のソース（英語）</a>をダウンロードすることもできる。</p></item><item><p>Flash のオーサリングツールのアクセシビリティパネルを使用することによって、データグリッドにアクセシブルな名前を適用することもできる。</p></item><item><p>上記の事例では、データグリッドの表題として使用されるテキストは2回読み上げられる。1回目は視覚に問題のない利用者向けのテキストラベルとして、2回目はデータグリッドのアクセシブルな名前としてである。コンテンツ制作者は、ラベルテキストの <code>silent</code> プロパティを <code>true</code> に設定することによって、読み上げが重複するのを回避することができる。</p></item></ulist></description>
+<ulist><item><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH31/datagrid_with_caption_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActiveScript 3 を使用してデータグリッドにキャプションを関連付ける」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH31/datagrid_with_caption_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActiveScript 3 を使用してデータグリッドにキャプションを関連付ける」のソース（英語）</loc>をダウンロードすることもできる。</p></item><item><p>Flash のオーサリングツールのアクセシビリティパネルを使用することによって、データグリッドにアクセシブルな名前を適用することもできる。</p></item><item><p>上記の事例では、データグリッドの表題として使用されるテキストは2回読み上げられる。1回目は視覚に問題のない利用者向けのテキストラベルとして、2回目はデータグリッドのアクセシブルな名前としてである。コンテンツ制作者は、ラベルテキストの <code>silent</code> プロパティを <code>true</code> に設定することによって、読み上げが重複するのを回避することができる。</p></item></ulist></description>
     </eg-group>
   </examples>
   <resources/>
@@ -118,9 +119,9 @@ function bldRosterGrid(dg: DataGrid) {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH31.html">FLASH31: Specifying caption text for a DataGrid（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH31.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH31: Specifying caption text for a DataGrid（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

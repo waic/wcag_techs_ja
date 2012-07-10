@@ -9,8 +9,10 @@
     <success-criterion idref="keyboard-operation-all-funcs"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、キーボードでアクセス可能なコントロールに加えることで、キーボードでアクセス可能になるスクリプトの関数を呼び出す方法について説明することである。スクリプトによる動きが確実にキーボードから呼び出されるように、それらの動きは「ネイティブに実行可能な」HTML要素（リンク及びボタン）に関連付けられている。これらの要素のonclickイベントは機器に依存していない。「onclick」という表現はマウスに関連付けられているようにも思えるが、onclickイベントは実際のところ、リンク又はボタンのデフォルトの動きにマッピングされている。デフォルトの動きは、利用者がマウスで要素をクリックしたときに発生するが、要素にフォーカスしてEnterキーやスペースキーを押したとき及び、他のアクセシビリティAPI によってトリガーされたときにも発生する。</p>
-		<p>この実装方法はクライアントサイドスクリプトに依存しているが、スクリプトが利用できない環境に対する、代替としての実装又は説明として意味がある。アンカー要素を使ってJavaScriptによるアクションを呼び出すとき、代替としての実装又は説明は<code>href</code>属性によって提供される。ボタンを使用するときは、フォームの送信によって提供される。</p></description>
+  <description>
+    <p>この実装方法の目的は、キーボードでアクセス可能なコントロールに加えることで、キーボードでアクセス可能になるスクリプトの関数を呼び出す方法について説明することである。スクリプトによる動きが確実にキーボードから呼び出されるように、それらの動きは「ネイティブに実行可能な」HTML要素（リンク及びボタン）に関連付けられている。これらの要素のonclickイベントは機器に依存していない。「onclick」という表現はマウスに関連付けられているようにも思えるが、onclickイベントは実際のところ、リンク又はボタンのデフォルトの動きにマッピングされている。デフォルトの動きは、利用者がマウスで要素をクリックしたときに発生するが、要素にフォーカスしてEnterキーやスペースキーを押したとき及び、他のアクセシビリティAPI によってトリガーされたときにも発生する。</p>
+    <p>この実装方法はクライアントサイドスクリプトに依存しているが、スクリプトが利用できない環境に対する、代替としての実装又は説明として意味がある。アンカー要素を使ってJavaScriptによるアクションを呼び出すとき、代替としての実装又は説明は<code>href</code>属性によって提供される。ボタンを使用するときは、フォームの送信によって提供される。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>スクリプトを実行するリンクで、スクリプトをサポートしていないブラウザに対して代替手段を持たないもの。この方法は、スクリプトがアクセシビリティ・サポーテッドな技術に依存しているときのみに使用されるべきである。</p>
@@ -37,7 +39,7 @@ function doStuff()
  }
 &lt;/script&gt;
 &lt;a href="dostuff.htm" onclick="return doStuff();"&gt;do stuff&lt;/a&gt;</code>
-      <description><p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR35/jslink.html">JavaScriptを用いてアクションリンクを作成</a></p>
+      <description><p>このコードの実装サンプル：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR35/jslink.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">JavaScriptを用いてアクションリンクを作成</loc></p>
 </description>
     </eg-group>
     <eg-group>
@@ -52,7 +54,7 @@ function doStuff()
 &lt;form action="doStuff.aspx" onsubmit="return false;"&gt;
  &lt;input type="submit" value="Do Stuff" onclick="doStuff();" /&gt;
 &lt;/form&gt;</code>
-      <description><p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR35/jsbutton.html">JavaScriptを用いてアクションボタンを作成</a></p>
+      <description><p>このコードの実装サンプル：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR35/jsbutton.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">JavaScriptを用いてアクションボタンを作成</loc></p>
 </description>
     </eg-group>
     <eg-group>
@@ -85,16 +87,24 @@ function doStuff()
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/interact/scripts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Scripts</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/interact/scripts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Scripts</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/interact/forms.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Forms</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/interact/forms.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Forms</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Links</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 Links</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/DOM/DOMTR" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Document Object Model (DOM) Technical Reports</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/DOM/DOMTR" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Document Object Model (DOM) Technical Reports</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -203,9 +213,9 @@ function doStuff()
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR35.html">SCR35: Making actions keyboard accessible by using the onclick event of anchors and buttons（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SCR35.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCR35: Making actions keyboard accessible by using the onclick event of anchors and buttons（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：辻 勝利（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

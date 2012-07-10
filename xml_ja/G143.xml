@@ -8,8 +8,10 @@
     <success-criterion idref="text-equiv-all"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、非テキストコンテンツを特定する代替テキストを介して情報を提供することである。これは、<acronym title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</acronym>のテストが、ぼやけた画像又は音声ファイルで提示されるテキストを入力するよう利用者に求めることがしばしばあるためである。この代替テキストによって、利用者は、CAPTCHAがタスクの完了を要求するもので、またそれがどのようなタスクであるかを理解できるようになる。</p>
-		<p>CAPTCHAの代替バージョンがある際には、代替テキストには、その代替バージョンを見つける方法についての説明を含めるべきである。</p></description>
+  <description>
+    <p>この実装方法の目的は、非テキストコンテンツを特定する代替テキストを介して情報を提供することである。これは、<acronym title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</acronym>のテストが、ぼやけた画像又は音声ファイルで提示されるテキストを入力するよう利用者に求めることがしばしばあるためである。この代替テキストによって、利用者は、CAPTCHAがタスクの完了を要求するもので、またそれがどのようなタスクであるかを理解できるようになる。</p>
+    <p>CAPTCHAの代替バージョンがある際には、代替テキストには、その代替バージョンを見つける方法についての説明を含めるべきである。</p>
+  </description>
   <examples/>
   <resources/>
   <related-techniques>
@@ -40,9 +42,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G143.html">G143: Providing a text alternative that describes the purpose of the CAPTCHA（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G143.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G143: Providing a text alternative that describes the purpose of the CAPTCHA（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

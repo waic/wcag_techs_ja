@@ -9,7 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p>この文書は、テキストの代替となる同期したメディアが、元のテキストよりも多くの情報を提供しているが、利用者が元のテキストにはない情報にアクセスするために必要な代替テキストを提供していないという不適合事例について述べている。同期したメディアのほうがテキストよりも効果的なフォーマットである利用者にとっては、テキストの代替となる同期したメディアのほうが利用しやすい。テキストの代替となる同期したメディアは、テキストの代替コンテンツなので、キャプション形式の冗長な代替テキスト、音声による説明又は全文の代替テキストをそれ自身のために用意する必要はない。その元となるテキストよりも多くの情報を同期したメディアが含んでいる場合は、単なるテキストの代替メディアというよりは、それ自体が同期したメディアのコンテンツとなる。こういった場合、キャプションの提供に関しては、<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-captions">達成基準 1.2.2</a>及び <a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-audio-desc">達成基準 1.2.3</a>の要件に従うものとする。</p>
+    <p>この文書は、テキストの代替となる同期したメディアが、元のテキストよりも多くの情報を提供しているが、利用者が元のテキストにはない情報にアクセスするために必要な代替テキストを提供していないという不適合事例について述べている。同期したメディアのほうがテキストよりも効果的なフォーマットである利用者にとっては、テキストの代替となる同期したメディアのほうが利用しやすい。テキストの代替となる同期したメディアは、テキストの代替コンテンツなので、キャプション形式の冗長な代替テキスト、音声による説明又は全文の代替テキストをそれ自身のために用意する必要はない。その元となるテキストよりも多くの情報を同期したメディアが含んでいる場合は、単なるテキストの代替メディアというよりは、それ自体が同期したメディアのコンテンツとなる。こういった場合、キャプションの提供に関しては、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-captions" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">達成基準 1.2.2</loc>及び<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv-audio-desc" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">達成基準 1.2.3</loc>の要件に従うものとする。</p>
   </description>
   <examples/>
   <resources/>
@@ -35,9 +35,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F75.html">F75: Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F75.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F75: Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

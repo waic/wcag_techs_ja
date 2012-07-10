@@ -9,9 +9,11 @@
     <success-criterion idref="media-equiv-text-doc"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、映像しか含まないプレゼンテーションで提示する情報に対して、アクセシブルな代替コンテンツを提供することである。</p>
-			<p>映像しか含まないプレゼンテーションにおいては、アニメーション、テキスト又はグラフィック、また状況及び背景、人物や動物の動き及び表情などを含め、情報はさまざまな方法で提示される。同じ情報をアクセシブルな形式で提示するために、この実装方法では、収録済の映像しか含まないコンテンツと同じストーリーを伝えて同じ情報を提示するドキュメントを作成する。この実装方法において、そのドキュメントはコンテンツの長い説明としての役割を果たし、重要な情報のすべてとプレゼンテーションの一部である風景、動き、表情などの説明を含んでいる。</p>
-			<p>映像しか含まないコンテンツを制作する初めの段階で台本を用いている場合には、それを手始めにすることができる。しかし、制作及び編集過程において、コンテンツの内容が台本からいくぶん変わってしまうことがよくある。この実装方法で台本を用いる際は、もともとの台本を映像しか含まないプレゼンテーションの最終版の内容に合わせて修正する必要がある。</p></description>
+  <description>
+    <p>この実装方法の目的は、映像しか含まないプレゼンテーションで提示する情報に対して、アクセシブルな代替コンテンツを提供することである。</p>
+    <p>映像しか含まないプレゼンテーションにおいては、アニメーション、テキスト又はグラフィック、また状況及び背景、人物や動物の動き及び表情などを含め、情報はさまざまな方法で提示される。同じ情報をアクセシブルな形式で提示するために、この実装方法では、収録済の映像しか含まないコンテンツと同じストーリーを伝えて同じ情報を提示するドキュメントを作成する。この実装方法において、そのドキュメントはコンテンツの長い説明としての役割を果たし、重要な情報のすべてとプレゼンテーションの一部である風景、動き、表情などの説明を含んでいる。</p>
+    <p>映像しか含まないコンテンツを制作する初めの段階で台本を用いている場合には、それを手始めにすることができる。しかし、制作及び編集過程において、コンテンツの内容が台本からいくぶん変わってしまうことがよくある。この実装方法で台本を用いる際は、もともとの台本を映像しか含まないプレゼンテーションの最終版の内容に合わせて修正する必要がある。</p>
+  </description>
   <examples/>
   <resources/>
   <related-techniques>
@@ -59,9 +61,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G159.html">G159: Providing an alternative for time-based media for video-only content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G159.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G159: Providing an alternative for time-based media for video-only content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

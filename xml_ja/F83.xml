@@ -9,9 +9,10 @@
     <success-criterion idref="visual-audio-contrast7"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この不適合事例は、弱視の利用者が背景画像の上に表示されているテキストを読むことができない場合に関するものである。背景画像とテキストのコントラストが十分ではない時、背景画像はテキストと混同し、正確に読むことを困難にさせることがある。</p>
-          
-               <p>達成基準1.4.3と1.4.6を満たすためには、テキストとその背景画像の間に十分なコントラストを確保しなければならない。画像に対して、これはテキストの背後にあってテキストにとても似ている画像の一部とテキストの間に十分なコントラストが必要であることを意味している。</p></description>
+  <description>
+    <p>この不適合事例は、弱視の利用者が背景画像の上に表示されているテキストを読むことができない場合に関するものである。背景画像とテキストのコントラストが十分ではない時、背景画像はテキストと混同し、正確に読むことを困難にさせることがある。</p>
+    <p>達成基準1.4.3と1.4.6を満たすためには、テキストとその背景画像の間に十分なコントラストを確保しなければならない。画像に対して、これはテキストの背後にあってテキストにとても似ている画像の一部とテキストの間に十分なコントラストが必要であることを意味している。</p>
+  </description>
   <examples>
     <eg-group role="failure">
       <description><p>黒いテキストが黒い線の画像と重なっている。その線は文字の背景にあり、F'sをまるでE'sのように見せている。</p>
@@ -45,10 +46,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F83.html">F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)
-（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F83.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)&#13;
+（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通株式会社</loc>,<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com/group/fdl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通デザイン株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

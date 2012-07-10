@@ -9,8 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p>
-							この実装方法の目的は、入れ子になった表記方向が含まれるテキストについて、インライン要素の<code>dir</code>属性で方向の変化を指定することである。入れ子になったテキストの表記方向とは、たとえば英語のパラグラフで、文章が次々と続いている中にヘブライ語の引用文が含まれるといった、表記方向の異なるテキストが混在したテキストの表記方向のことである。表記方向の異なるテキストが混在し、スペースや句読点が含まれていると、<a href="http://www.w3.org/International/articles/inline-bidi-markup/">Unicodeの双方向アルゴリズム</a>だけでは望ましくない結果になってしまうので、テキストを<code>span</code>要素や他のインライン要素で囲み、<code>dir</code>属性を指定する必要がある。この実装方法の考え方は、<a href="http://www.w3.org/International/articles/inline-bidi-markup/">What you need to know about the bidi algorithm and inline markup</a> で説明されている。</p>
+    <p>この実装方法の目的は、入れ子になった表記方向が含まれるテキストについて、インライン要素の<code>dir</code>属性で方向の変化を指定することである。入れ子になったテキストの表記方向とは、たとえば英語のパラグラフで、文章が次々と続いている中にヘブライ語の引用文が含まれるといった、表記方向の異なるテキストが混在したテキストの表記方向のことである。表記方向の異なるテキストが混在し、スペースや句読点が含まれていると、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/inline-bidi-markup/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Unicodeの双方向アルゴリズム</loc>だけでは望ましくない結果になってしまうので、テキストを<code>span</code>要素や他のインライン要素で囲み、<code>dir</code>属性を指定する必要がある。この実装方法の考え方は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/inline-bidi-markup/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">What you need to know about the bidi algorithm and inline markup</loc>で説明されている。</p>
   </description>
   <examples>
     <eg-group>
@@ -36,11 +35,15 @@ dir="rtl"&gt;<span dir="rtl">פעילות הבינאום, W3C</span>&lt;/span&gt
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/dirlang.html#blocklevel-bidi" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Inheritance of text direction information</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/dirlang.html#blocklevel-bidi" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Inheritance of text direction information</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/i18n-html-tech-bidi/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authoring Techniques for&#13;
-                    XHTML &amp; HTML Internationalization: Handling Bidirectional Text 1.0</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/i18n-html-tech-bidi/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authoring Techniques for&#13;
+                    XHTML &amp; HTML Internationalization: Handling Bidirectional Text 1.0</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -73,9 +76,9 @@ dir="rtl"&gt;<span dir="rtl">פעילות הבינאום, W3C</span>&lt;/span&gt
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H56.html">H56: Using the dir attribute on an inline element to resolve problems with nested directional runs（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H56.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H56: Using the dir attribute on an inline element to resolve problems with nested directional runs（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

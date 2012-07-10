@@ -8,9 +8,11 @@
     <success-criterion idref="cc1"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、ウェブページの適合している代替バージョンの設定を利用者が選択できるメカニズムを提供することである。</p>
-		<p>利用者が適合している代替バージョンを見ることができるような設定を提供するにはいくつかの方法が可能である。一般的な方法としては、ウェブサーバがページを修正する、又は利用者を代替バージョンにリダイレクトするのに使うセッション又は永続的なクッキーを設定するサーバサイドのプロセスのトリガーとなるリンクを提供する方法がある。他の方法には、利用者がウェブページ又はサービスにアクセスする際にサインインするシステムへのログイン情報の一部として利用者ごとの選択肢を提供する方法がある。</p>
-		<p>不適合なページで提供されるメカニズムは、代替バージョンを必要とする利用者が、それを探して利用するためにアクセシブルである必要がある。そのメカニズム自体は宣言しているアクセシビリティレベルに適合しているべきである。</p></description>
+  <description>
+    <p>この実装方法の目的は、ウェブページの適合している代替バージョンの設定を利用者が選択できるメカニズムを提供することである。</p>
+    <p>利用者が適合している代替バージョンを見ることができるような設定を提供するにはいくつかの方法が可能である。一般的な方法としては、ウェブサーバがページを修正する、又は利用者を代替バージョンにリダイレクトするのに使うセッション又は永続的なクッキーを設定するサーバサイドのプロセスのトリガーとなるリンクを提供する方法がある。他の方法には、利用者がウェブページ又はサービスにアクセスする際にサインインするシステムへのログイン情報の一部として利用者ごとの選択肢を提供する方法がある。</p>
+    <p>不適合なページで提供されるメカニズムは、代替バージョンを必要とする利用者が、それを探して利用するためにアクセシブルである必要がある。そのメカニズム自体は宣言しているアクセシビリティレベルに適合しているべきである。</p>
+  </description>
   <examples>
     <eg-group>
       <head>事例1：ユーザー設定を保存するためにセッション又は永続的なクッキーを設定する</head>
@@ -66,7 +68,9 @@ if(isset($site_pref)) {
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://php.net/setcookie" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Setting and using cookies in PHP</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://php.net/setcookie" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Setting and using cookies in PHP</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -109,9 +113,9 @@ if(isset($site_pref)) {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SVR4.html">SVR4: Allowing users to provide preferences for the display of conforming alternate versions（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：中村 精親（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SVR4.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SVR4: Allowing users to provide preferences for the display of conforming alternate versions（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：中村 精親（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

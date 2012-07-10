@@ -13,7 +13,7 @@
     </ua-issue>
   </ua-issues>
   <description>
-    <p>この文書では、ラジオボタン、チェックボックス、又はセレクトリストの項目のステータスを変更することによって新しいウィンドウが開く場合に発生する不適合事例について解説する。要素が選択された時、状況の変化（フォームの送信、新しいページを開く、新しいウィンドウ）を引き起こす<code>input</code>要素を生成するために、スクリプトを使用することができる。開発者は代わりに送信ボタンを使用するか（<a href="G80.html">G80： 状況の変化を開始する実行ボタンを提供する</a>を参照）、又はそこで起こる動作を明確に示す必要がある。</p>
+    <p>この文書では、ラジオボタン、チェックボックス、又はセレクトリストの項目のステータスを変更することによって新しいウィンドウが開く場合に発生する不適合事例について解説する。要素が選択された時、状況の変化（フォームの送信、新しいページを開く、新しいウィンドウ）を引き起こす<code>input</code>要素を生成するために、スクリプトを使用することができる。開発者は代わりに送信ボタンを使用するか（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="G80.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G80： 状況の変化を開始する実行ボタンを提供する</loc>を参照）、又はそこで起こる動作を明確に示す必要がある。</p>
   </description>
   <examples>
     <eg-group role="failure">
@@ -67,9 +67,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F37.html">F37: Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the status of a radio button, check box or select list is changed（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：中村 浩佳（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F37.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F37: Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the status of a radio button, check box or select list is changed（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：中村 浩佳（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -13,14 +13,16 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
     <ua-issue>
       <p>JAWS 8.0 以降は、言語属性に基づいて自動的に言語を変更するように設定することができる。ただし自動的に切り替えることができるのは、プライマリコードで指定される主要言語のみである。言語のサブコードによって地域的に変異した言語が指定されている場合、JAWS は設定されているデフォルトの主要言語を使用する。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、Flash が含まれるページの HTML 要素または object 要素に lang 属性または xml:lang 属性（またはその両方）を指定することによって、Flash コンテンツのデフォルトの言語を特定することである。埋め込まれた Flash コンテンツは、この方法で指定された言語を継承する。Web ページ全体で 1 つの言語を使用する場合は、ページの HTML 要素に lang 属性および xml:lang 属性を指定することができる。これについては、「<a href="http://www.ciaj.or.jp/access/web/docs/WCAG-TECHS/H57.html">H57： html要素の言語属性を用いる</a>」で説明されている。</p>
-<p>Flash は HTML 要素または object 要素から言語を継承する。したがって、Flash コンテンツ内のすべてのテキストは、そのようにして継承された言語であると想定される。これは、ある言語のページに別の言語の Flash オブジェクトを配置すること、また、異なる言語の複数の Flash オブジェクトを配置することが可能であることを意味する。ただし、この実装方法を使用して、<em>一つの Flash オブジェクト内で</em>コンテンツの言語（人間が使用する言語）を変更するように指定することはできない。</p></description>
+  <description>
+    <p>この実装方法の目的は、Flash が含まれるページの HTML 要素または object 要素に lang 属性または xml:lang 属性（またはその両方）を指定することによって、Flash コンテンツのデフォルトの言語を特定することである。埋め込まれた Flash コンテンツは、この方法で指定された言語を継承する。Web ページ全体で 1 つの言語を使用する場合は、ページの HTML 要素に lang 属性および xml:lang 属性を指定することができる。これについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG-TECHS/H57.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H57： html要素の言語属性を用いる</loc>」で説明されている。</p>
+    <p>Flash は HTML 要素または object 要素から言語を継承する。したがって、Flash コンテンツ内のすべてのテキストは、そのようにして継承された言語であると想定される。これは、ある言語のページに別の言語の Flash オブジェクトを配置すること、また、異なる言語の複数の Flash オブジェクトを配置することが可能であることを意味する。ただし、この実装方法を使用して、<em>一つの Flash オブジェクト内で</em>コンテンツの言語（人間が使用する言語）を変更するように指定することはできない。</p>
+  </description>
   <examples>
     <eg-group>
       <head>埋め込まれた Flash 内でページ全体の言語を使用する</head>
@@ -55,12 +57,12 @@
     &lt;/object&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH13/language_en.html">「埋め込まれた Flash 内でページ全体の言語を使用する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH13/languages.swf">「埋め込まれた Flash 内でページ全体の言語を使用する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH13/language_en.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「埋め込まれた Flash 内でページ全体の言語を使用する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH13/languages.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「埋め込まれた Flash 内でページ全体の言語を使用する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
     <eg-group>
       <head>埋め込まれた Flash のみに言語を適用する</head>
-      <description><p>この事例では、Flash ムービーのコンテンツをフランス語に定義する。Flash ムービーは、<a href="http://code.google.com/p/swfobject/wiki/documentation#How_to_embed_Flash_Player_content_using_SWFObject_static_publish">SWFObject による静的なパブリッシュ手法（英語）</a>を使用して埋め込まれている。この手法では 二つのネストした object 要素が使用され、外側の要素は Internet Explorer 向け、内側の要素はその他のブラウザ向けである。このため、lang 属性および xml:lang 属性を二つ追加する必要がある。</p>
+      <description><p>この事例では、Flash ムービーのコンテンツをフランス語に定義する。Flash ムービーは、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://code.google.com/p/swfobject/wiki/documentation#How_to_embed_Flash_Player_content_using_SWFObject_static_publish" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SWFObject による静的なパブリッシュ手法（英語）</loc>を使用して埋め込まれている。この手法では 二つのネストした object 要素が使用され、外側の要素は Internet Explorer 向け、内側の要素はその他のブラウザ向けである。このため、lang 属性および xml:lang 属性を二つ追加する必要がある。</p>
 </description>
       <code>&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
   height="420" id="myMovie" lang="fr" width="780" xml:lang="fr"&gt;
@@ -128,9 +130,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH13.html">FLASH13: Using HTML language attributes to specify language in Flash content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH13.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH13: Using HTML language attributes to specify language in Flash content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

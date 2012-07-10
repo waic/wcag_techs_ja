@@ -9,8 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p>
-							この実装方法の目的は、その語句の定義を伴って語句が用いられている箇所のマーク付けに<code>dfn</code>要素を用いることである。<code>dfn</code>要素は、囲んだ用語の定義対象であることを示すのに用いる。言い換えれば、その語句がその場所で定義されている場合に、その用語の存在をマーク付けするのである。ただし、用語を囲むのであって、定義を囲むわけではないことに注意すること。この実装方法は、定義方法に関する<a href="G112.html">G112: インラインの定義を用いる</a>とともに用いられる。</p>
+    <p>この実装方法の目的は、その語句の定義を伴って語句が用いられている箇所のマーク付けに<code>dfn</code>要素を用いることである。<code>dfn</code>要素は、囲んだ用語の定義対象であることを示すのに用いる。言い換えれば、その語句がその場所で定義されている場合に、その用語の存在をマーク付けするのである。ただし、用語を囲むのであって、定義を囲むわけではないことに注意すること。この実装方法は、定義方法に関する<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="G112.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G112: インラインの定義を用いる</loc>とともに用いられる。</p>
   </description>
   <examples>
     <eg-group>
@@ -62,9 +61,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H54.html">H54: Using the dfn element to identify the defining instance of a word（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H54.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H54: Using the dfn element to identify the defining instance of a word（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

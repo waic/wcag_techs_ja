@@ -10,12 +10,13 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェント及び支援技術に関する情報は、<a href="pdf_notes.html">PDF テクノロジーノート</a>を参照のこと。</p>
+      <p>ユーザーエージェント及び支援技術に関する情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF テクノロジーノート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、支援技術で認識されるように PDF 文書内の見出しをマークアップする方法を示すことである。これは通常、PDF のオーサリングツールを使用して行う。</p>
-<p>見出しマークアップは次の目的のために使用できる。</p>
-<ul>
+  <description>
+    <p>この実装方法の目的は、支援技術で認識されるように PDF 文書内の見出しをマークアップする方法を示すことである。これは通常、PDF のオーサリングツールを使用して行う。</p>
+    <p>見出しマークアップは次の目的のために使用できる。</p>
+    <ul>
 <li>
 <p>メインコンテンツの開始を示す</p>
 </li>
@@ -29,24 +30,25 @@
 <p>視覚的な見出しの外観のある図（テキストを含む）をマークアップする</p>
 </li>
 </ul>
-<p>ウェブコンテンツ技術によっては、見出しで論理階層を定義するよう設計されている。見出しの順序のスキップレベルで、文書の構造が適切に熟慮されている、または意味よりも視覚的な表現のために特定の見出しが選択されているという印象が形成される場合がある。作成者は、見出しを階層的に組み込むことが推奨される。</p>
-<p>見出しでコンテンツの重要なセクションの始まりが示されるので、支援技術のユーザーは見出しのリストにアクセスして、適切な見出しに直接ジャンプし、コンテンツを読み始めることができる。見出しでコンテンツを「ざっと読み」、興味のあるコンテンツに直接移動できるこの機能は、そうしなければコンテンツへのアクセスが遅くなってしまうユーザーにとって、操作が非常にスピードアップする。</p>
-<p>例えば HTML 文書では、H1 ～ H6 の HTML タグを正しく使用することで、HTML の見出しが、正しくタグ付けされた PDF の見出しに変換される。見出しの使用方法については、一般的な実装方法として「<a href="G141.html">G141：見出しを用いてウェブページを構造化する</a>」を参照のこと。</p></description>
+    <p>ウェブコンテンツ技術によっては、見出しで論理階層を定義するよう設計されている。見出しの順序のスキップレベルで、文書の構造が適切に熟慮されている、または意味よりも視覚的な表現のために特定の見出しが選択されているという印象が形成される場合がある。作成者は、見出しを階層的に組み込むことが推奨される。</p>
+    <p>見出しでコンテンツの重要なセクションの始まりが示されるので、支援技術のユーザーは見出しのリストにアクセスして、適切な見出しに直接ジャンプし、コンテンツを読み始めることができる。見出しでコンテンツを「ざっと読み」、興味のあるコンテンツに直接移動できるこの機能は、そうしなければコンテンツへのアクセスが遅くなってしまうユーザーにとって、操作が非常にスピードアップする。</p>
+    <p>例えば HTML 文書では、H1 ～ H6 の HTML タグを正しく使用することで、HTML の見出しが、正しくタグ付けされた PDF の見出しに変換される。見出しの使用方法については、一般的な実装方法として「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="G141.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G141：見出しを用いてウェブページを構造化する</loc>」を参照のこと。</p>
+  </description>
   <examples>
     <eg-group>
       <head>Adobe Acrobat 9 Pro を使用して、PDF 文書内のタグ付き見出しを追加または変更する</head>
-      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 </description>
     </eg-group>
     <eg-group>
       <head>PDF 変換時に正しいタグ付き見出しのある Microsoft Word 文書を作成する</head>
-      <description><p>この事例は Microsoft Word の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Microsoft Word の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>スタイルを使用して、見出しの書式（見出し 1、見出し 2、見出し 3 など）を作成する。スタイルが論理的な構成になるようにする（見出し 2 が見出し 1 より後に来るようにするなど）。</p>
 </description>
     </eg-group>
     <eg-group>
       <head>OpenOffice.org Writer 2.2 で PDF 変換時に正しいタグ付き見出しがある文書を作成する</head>
-      <description><p>この事例は OpenOffice.org Writer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は OpenOffice.org Writer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>スタイルを使用して、見出しの書式（見出し 1、見出し 2、見出し 3 など）を作成する。スタイルが論理的な構成になるようにする（見出し 2 が見出し 1 より後に来るようにするなど）。</p>
 <p>次の手順に従い、PDF としてエクスポートする。</p>
 <olist><item><p>ファイルメニューの「PDF としてエクスポート」を選択する</p></item><item><p>初めて PDF としてエクスポートする場合には、オプションダイアログボックスが表示される</p></item><item><p>「タグ付き PDF」を選択して、［エクスポート］を押下する</p></item></olist><p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF9/openofficecooking.jpg" alt="スクリーンショット：OpenOffice.org Writer で見出しスタイルを選択し、PDF にエクスポートする。" height="380" width="628"/></p></description>
@@ -125,10 +127,14 @@ ET				% テキストオブジェクトの終わり</code>
           <p>Section 14.8.4.3.2 (Paragraphlike Elements) in<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://pdf.editme.com/Headings" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF Standards: Headings</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://pdf.editme.com/Headings" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF Standards: Headings</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://accessdp.wordpress.com/fixing-pdfs-for-accessibility/headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF	Accessibility Documentation:headings</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://accessdp.wordpress.com/fixing-pdfs-for-accessibility/headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF	Accessibility Documentation:headings</loc>
+          </p>
         </item>
         <item>
           <p>
@@ -184,9 +190,9 @@ ET				% テキストオブジェクトの終わり</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/PDF9.html">PDF9: Providing headings by marking content with heading tags in PDF documents（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/PDF9.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF9: Providing headings by marking content with heading tags in PDF documents（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

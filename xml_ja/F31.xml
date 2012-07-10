@@ -8,9 +8,12 @@
     <success-criterion idref="consistent-behavior-consistent-functionality"/>
   </applies-to>
   <ua-issues/>
-  <description><p>異なるウェブページ上にある同じ機能のコンポーネントは、一貫して同じラベルが用いられているとより容易に認知されやすくなる。名称に一貫性がない場合、利用者が混乱してしまうことがある。</p>
-          
-               <note><p class="prefix">「一貫性を保った」代替テキストが常に「同一のもの」であるとは限らない。例えば、次のページへのリンクになっている矢印の画像がウェブページの一番下にある。代替テキストは「4ページへ」となっている。当然、これと全く同じ代替テキストを次のウェブページで繰り返すことは適切でない。「5ページへ」とする方が適切である。これらの代替テキストは同一のものではないが、一貫性を保っており、この達成基準の不適合事例とはならない。</p></note></description>
+  <description>
+    <p>異なるウェブページ上にある同じ機能のコンポーネントは、一貫して同じラベルが用いられているとより容易に認知されやすくなる。名称に一貫性がない場合、利用者が混乱してしまうことがある。</p>
+    <note>
+      <p class="prefix">「一貫性を保った」代替テキストが常に「同一のもの」であるとは限らない。例えば、次のページへのリンクになっている矢印の画像がウェブページの一番下にある。代替テキストは「4ページへ」となっている。当然、これと全く同じ代替テキストを次のウェブページで繰り返すことは適切でない。「5ページへ」とする方が適切である。これらの代替テキストは同一のものではないが、一貫性を保っており、この達成基準の不適合事例とはならない。</p>
+    </note>
+  </description>
   <examples>
     <eg-group role="failure">
       <description><p>同じ機能のコンポーネントに対して一貫性のないラベルを使用している例で最もよく見かけるのは、どちらも同じ機能であるのに、あるページでは「検索」という名称のボタンを使用し、別のページでは「探す」という名称のボタンを使用している場合である。</p>
@@ -40,9 +43,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F31.html">F31: Failure of Success Criterion 3.2.4 due to using two different labels for the same function on different Web pages within a set of Web pages 英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F31.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F31: Failure of Success Criterion 3.2.4 due to using two different labels for the same function on different Web pages within a set of Web pages 英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

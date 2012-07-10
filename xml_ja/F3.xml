@@ -8,14 +8,16 @@
     <success-criterion idref="text-equiv-all"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-CSSのbackground-imageプロパティを使用すると、HTMLのコードとは無関係に、CSSでドキュメントに画像を組み込むことができる。
+  <description>
+    <p>CSSのbackground-imageプロパティを使用すると、HTMLのコードとは無関係に、CSSでドキュメントに画像を組み込むことができる。
 しかし、CSSのbackground-imageプロパティは装飾のために使用するものであるため、CSSで組み込まれる画像に代替テキストを付けることはできない。
 代替テキストは、重要な情報を伝える画像を見ることのできない人にとって必須のものである。
 したがって、このプロパティを重要な情報を伝える画像を追加するために使用した場合は不適合となる。</p>
-          
-               <note><p class="prefix">
-背景画像の中に情報を組み込むことは、読みやすくする目的で背景を変えている人や、OSのハイコントラスト・モードの利用者に対しても問題を引き起こす。これらの利用者は、代替テキストが存在しないことで背景画像に含まれている情報を失うことになる。</p></note></description>
+    <note>
+      <p class="prefix">
+背景画像の中に情報を組み込むことは、読みやすくする目的で背景を変えている人や、OSのハイコントラスト・モードの利用者に対しても問題を引き起こす。これらの利用者は、代替テキストが存在しないことで背景画像に含まれている情報を失うことになる。</p>
+    </note>
+  </description>
   <examples>
     <eg-group role="failure">
       <description><p>
@@ -95,9 +97,9 @@ ul#booklist li.outstock {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F3.html">F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ofujimiki.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">大藤 幹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

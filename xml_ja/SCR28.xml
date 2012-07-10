@@ -8,9 +8,11 @@
     <success-criterion idref="navigation-mechanisms-skip"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法は、繰り返される構成要素を利用者のコントロールの下でメニューを展開したり折りたたんだりできるメニューの中に置くことで、その構成要素をスキップできるようにする。利用者は、メニューを折りたたむことで繰り返される構成要素をスキップできる。利用者は、メニューの要素を隠したり削除したりするユーザーインターフェースを呼び出すことができる。関連情報には、ナビゲーションをスキップするメカニズムを提供するために利用できるメニュー、ツールバー及びツリーの実装方法をいくつか挙げている。</p>
-		<note><p class="prefix">類似の方法は、サーバーサイドスクリプティングを用いて修正後のウェブページを読み込むことでも実装できる。</p>
-		</note></description>
+  <description>
+    <p>この実装方法は、繰り返される構成要素を利用者のコントロールの下でメニューを展開したり折りたたんだりできるメニューの中に置くことで、その構成要素をスキップできるようにする。利用者は、メニューを折りたたむことで繰り返される構成要素をスキップできる。利用者は、メニューの要素を隠したり削除したりするユーザーインターフェースを呼び出すことができる。関連情報には、ナビゲーションをスキップするメカニズムを提供するために利用できるメニュー、ツールバー及びツリーの実装方法をいくつか挙げている。</p>
+    <note><p class="prefix">類似の方法は、サーバーサイドスクリプティングを用いて修正後のウェブページを読み込むことでも実装できる。</p>
+		</note>
+  </description>
   <examples>
     <eg-group>
       <description><p>ウェブページの先頭にあるナビゲーションリンクは、すべてHTML、CSS及びJavaScriptを用いて実装されているメニュー項目である。ナビゲーションバーが展開しているとき、ナビゲーションのリンクは利用可能になっている。ナビゲーションバーがたたまれているとき、リンクは利用不可能である。</p>
@@ -36,7 +38,7 @@
   &lt;/ul&gt;
 
 ...</code>
-      <description><p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR28/toggle-navbar.html">ナビゲーションバーをリンクで切り替える</a></p>
+      <description><p>このコードの実装サンプル：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR28/toggle-navbar.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ナビゲーションバーをリンクで切り替える</loc></p>
 </description>
     </eg-group>
     <eg-group>
@@ -59,7 +61,7 @@
   &lt;/div&gt;
 
 ...</code>
-      <description><p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR28/toggle-toc.html">目次をボタンで切り替える</a></p>
+      <description><p>このコードの実装サンプル：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SCR28/toggle-toc.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">目次をボタンで切り替える</loc></p>
 </description>
     </eg-group>
   </examples>
@@ -67,10 +69,14 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bobbyvandersluis.com/articles/unobtrusive_show_hide/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Unobtrusive show/hide behavior reloaded</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bobbyvandersluis.com/articles/unobtrusive_show_hide/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Unobtrusive show/hide behavior reloaded</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.dustindiaz.com/seven-togglers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Seven ways to toggle an element with JavaScript</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.dustindiaz.com/seven-togglers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Seven ways to toggle an element with JavaScript</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -105,9 +111,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR28.html">SCR28: Using an expandable and collapsible menu to bypass block of content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SCR28.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCR28: Using an expandable and collapsible menu to bypass block of content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：辻 勝利（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

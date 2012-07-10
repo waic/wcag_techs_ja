@@ -9,13 +9,12 @@
     <success-criterion idref="minimize-error-reversible-all"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、取消不可能なトランザクションが完了する前に、利用者に入力が正しく行われていることを確認するための手段を提供することである。法的義務の生じるもの、金銭的取引、データ変更、試験の回答の送信などにおいては、「取消不可能」なトランザクションが発生することがある。従って、トランザクションが確定してしまうと利用者が間違いを修正する機会がなくなるので、データの送信時に間違いがないことが重要となる。</p>
-          
-               <p>簡潔な1ページのフォームでは、送信前に利用者がフォームの内容を容易に見直すことができる。複数のウェブページにまたがるフォームでは、トランザクションが確定する前に複数のステップで利用者からデータを取得している。トランザクションを確定する以前のステップで入力したデータの全てを利用者が覚えているわけではない。</p>
-          
-               <p>一つの方法としては、個々のステップの結果をキャッシュし、利用者が思い通りに戻ったり、先に行ったりして入力したデータを見直せるようにすることが考えられる。別の方法としては、トランザクションの最終確定の前に利用者が見直しを行えるようにするために、全てのステップで収集した全てのデータの一覧を提供する。</p>
-          
-               <p>トランザクションを確定する最終ステップが始まる前に、入力したデータを見直して確認することを促す案内を提供する。そして、利用者が確認を行うとトランザクションが完了するようにする。</p></description>
+  <description>
+    <p>この実装方法の目的は、取消不可能なトランザクションが完了する前に、利用者に入力が正しく行われていることを確認するための手段を提供することである。法的義務の生じるもの、金銭的取引、データ変更、試験の回答の送信などにおいては、「取消不可能」なトランザクションが発生することがある。従って、トランザクションが確定してしまうと利用者が間違いを修正する機会がなくなるので、データの送信時に間違いがないことが重要となる。</p>
+    <p>簡潔な1ページのフォームでは、送信前に利用者がフォームの内容を容易に見直すことができる。複数のウェブページにまたがるフォームでは、トランザクションが確定する前に複数のステップで利用者からデータを取得している。トランザクションを確定する以前のステップで入力したデータの全てを利用者が覚えているわけではない。</p>
+    <p>一つの方法としては、個々のステップの結果をキャッシュし、利用者が思い通りに戻ったり、先に行ったりして入力したデータを見直せるようにすることが考えられる。別の方法としては、トランザクションの最終確定の前に利用者が見直しを行えるようにするために、全てのステップで収集した全てのデータの一覧を提供する。</p>
+    <p>トランザクションを確定する最終ステップが始まる前に、入力したデータを見直して確認することを促す案内を提供する。そして、利用者が確認を行うとトランザクションが完了するようにする。</p>
+  </description>
   <examples/>
   <resources/>
   <related-techniques>
@@ -49,10 +48,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G98.html">G98: Providing the ability for the user to review and correct answers before submitting（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G98.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G98: Providing the ability for the user to review and correct answers before submitting（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

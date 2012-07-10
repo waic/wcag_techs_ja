@@ -8,9 +8,11 @@
     <success-criterion idref="ensure-compat-rsv"/>
   </applies-to>
   <ua-issues/>
-  <description><p>これは、複数のテキストフィールドから成るフォームの入力項目で、その一部又は全部に識別名がないことによる達成基準4.1.2の不適合事例について述べている。多くの場合、複数のテキストフィールドから成るフォームの入力項目の全体に対してラベルが1つあり、そのラベルが最初のテキストフィールドに対してプログラム的に関連付けられているか、又はどのテキストフィールドに対してもプログラム的に関連付けられていない必要がある。</p>
-<note><p class="prefix">識別名は、必ずしも視覚的に表示しなければならないわけではないが、支援技術に対しては明示されている必要がある。</p>
-</note></description>
+  <description>
+    <p>これは、複数のテキストフィールドから成るフォームの入力項目で、その一部又は全部に識別名がないことによる達成基準4.1.2の不適合事例について述べている。多くの場合、複数のテキストフィールドから成るフォームの入力項目の全体に対してラベルが1つあり、そのラベルが最初のテキストフィールドに対してプログラム的に関連付けられているか、又はどのテキストフィールドに対してもプログラム的に関連付けられていない必要がある。</p>
+    <note><p class="prefix">識別名は、必ずしも視覚的に表示しなければならないわけではないが、支援技術に対しては明示されている必要がある。</p>
+</note>
+  </description>
   <examples>
     <eg-group>
       <head>不適合となる</head>
@@ -120,10 +122,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F86.html">F86: Failure of Success Criterion 4.1.2 due to not providing names for each part of a multi-part form field, such as a US telephone number（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F86.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F86: Failure of Success Criterion 4.1.2 due to not providing names for each part of a multi-part form field, such as a US telephone number（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

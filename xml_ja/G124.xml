@@ -21,7 +21,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/skipnav.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Skip Navigation Links</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.jimthatcher.com/skipnav.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Skip Navigation Links</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -59,10 +61,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G117.html">G117: Using text to convey information that is conveyed by variations in presentation of text
-（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G117.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G117: Using text to convey information that is conveyed by variations in presentation of text&#13;
+（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通株式会社</loc>,<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com/group/fdl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通デザイン株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

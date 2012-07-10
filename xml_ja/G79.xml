@@ -8,9 +8,9 @@
     <success-criterion idref="meaning-supplements"/>
   </applies-to>
   <ua-issues/>
-  <description><p>書かれたテキストの言葉を読んで理解するのが難しい利用者には、テキストの音読を聞くのが非常に役立つことがある。現在このような代替バージョンは、録音した肉声又は合成音声を用いて提供できる。例えば、コンテンツ制作者がテキストを合成音声に変換し、その音声バージョンを音声ファイルとして保存できる製品がたくさんある。音声バージョンへのリンクは、コンテンツ内で提供すればよい。制作コストは、使用する声の品質や、テキストを頻繁に変更するかどうかによって異なる。</p>
-          
-               <ul>
+  <description>
+    <p>書かれたテキストの言葉を読んで理解するのが難しい利用者には、テキストの音読を聞くのが非常に役立つことがある。現在このような代替バージョンは、録音した肉声又は合成音声を用いて提供できる。例えば、コンテンツ制作者がテキストを合成音声に変換し、その音声バージョンを音声ファイルとして保存できる製品がたくさんある。音声バージョンへのリンクは、コンテンツ内で提供すればよい。制作コストは、使用する声の品質や、テキストを頻繁に変更するかどうかによって異なる。</p>
+    <ul>
 <li>
               
 							<p>短いテキスト及び静的なテキストコンテンツの音声バージョン
@@ -53,7 +53,8 @@
 							<p>ページをよく変更する場合や、利用者の選択によってテキストコンテンツが変わる場合は、サーバサイドで処理する方法が最もよいだろう。サーバサイドで処理するツールの中には、利用者が興味のあるテキストを選択し、聞くことができるものがある。通常は、利用者がテキストから音声への変換を開始するボタンを押せば読み上げられる。</p>
             
                   </li>
-</ul></description>
+</ul>
+  </description>
   <examples>
     <eg-group>
       <head>政府機関のウェブサイト</head>
@@ -83,9 +84,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G79.html"> G79: Providing a spoken version of the text（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/G79.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G79: Providing a spoken version of the text（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

@@ -8,9 +8,10 @@
     <success-criterion idref="media-equiv-sign"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、耳が聞こえないか、またはそうでなくとも、視聴覚コンテンツにおいて発話を聞くことに問題のある利用者に、コンテンツを閲覧できる方法を提供することである。この実装方法では、発話と重要な音の全てがキャプション領域に表示される手話通訳の映像によって入手できる。</p>
-          
-               <p>SMIL 1.0 では、2つの映像のために別々の領域を定義できる。2つの映像再生が同期していて、画面の一つの領域に本編のビデオを表示し、もう一つの領域に本編に対する手話通訳の映像を表示する。</p></description>
+  <description>
+    <p>この実装方法の目的は、耳が聞こえないか、またはそうでなくとも、視聴覚コンテンツにおいて発話を聞くことに問題のある利用者に、コンテンツを閲覧できる方法を提供することである。この実装方法では、発話と重要な音の全てがキャプション領域に表示される手話通訳の映像によって入手できる。</p>
+    <p>SMIL 1.0 では、2つの映像のために別々の領域を定義できる。2つの映像再生が同期していて、画面の一つの領域に本編のビデオを表示し、もう一つの領域に本編に対する手話通訳の映像を表示する。</p>
+  </description>
   <examples>
     <eg-group>
       <head>QuickTimeプレーヤーでの SMIL 1.0 による手話通訳のサンプル</head>
@@ -73,16 +74,24 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-smil/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL) 1.0</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-smil/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL) 1.0</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL 2.0)</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Synchronized Multimedia Integration Language (SMIL 2.0)</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL-access/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessibility Features of SMIL</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/SMIL-access/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessibility Features of SMIL</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/richmedia/tutorials/smiltemplates.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NCAM Rich Media Accessibility, Accessible SMIL Templates</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/richmedia/tutorials/smiltemplates.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">NCAM Rich Media Accessibility, Accessible SMIL Templates</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -115,9 +124,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SM13.html">SM13: Providing sign language interpretation through synchronized video streams in SMIL 1.0（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SM13.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SM13: Providing sign language interpretation through synchronized video streams in SMIL 1.0（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

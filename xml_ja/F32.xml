@@ -8,11 +8,11 @@
     <success-criterion idref="content-structure-separation-sequence"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この文書は、単語を視覚的にフォーマットするために、単語の中でスペース、タブ文字、改行文字又は行送り文字のような空白文字を用いると、それらを意味のある並びとして適切に提示するのが困難になるという不適合事例について解説する。文字間を制御するために空白文字を挿入すると、単語の解釈を変えてしまうかもしれないし、それが一つの単語であるとプログラムで解釈できないようにしてしまうことがある。</p>
-          
-               <p>頭文字語の文字間に空白文字を挿入することはこの不適合事例には当たらない。空白文字が頭文字語の解釈を変える訳ではないし、むしろ理解しやすくするかもしれないからである。</p>
-          
-               <p>単語間のスペースを利用して視覚的なフォーマットを行うことはこの不適合事例には当たらない。空白文字が単語の解釈を変えることはないからである。</p></description>
+  <description>
+    <p>この文書は、単語を視覚的にフォーマットするために、単語の中でスペース、タブ文字、改行文字又は行送り文字のような空白文字を用いると、それらを意味のある並びとして適切に提示するのが困難になるという不適合事例について解説する。文字間を制御するために空白文字を挿入すると、単語の解釈を変えてしまうかもしれないし、それが一つの単語であるとプログラムで解釈できないようにしてしまうことがある。</p>
+    <p>頭文字語の文字間に空白文字を挿入することはこの不適合事例には当たらない。空白文字が頭文字語の解釈を変える訳ではないし、むしろ理解しやすくするかもしれないからである。</p>
+    <p>単語間のスペースを利用して視覚的なフォーマットを行うことはこの不適合事例には当たらない。空白文字が単語の解釈を変えることはないからである。</p>
+  </description>
   <examples>
     <eg-group>
       <head>不適合となる 単語の途中に空白を挿入することによる不適合</head>
@@ -72,9 +72,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F32.html">F32: Failure of Success Criterion 1.3.2 due to using white space characters to control spacing within a word（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.argv.org/">井上浩一（ARGV）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F32.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F32: Failure of Success Criterion 1.3.2 due to using white space characters to control spacing within a word（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.argv.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">井上浩一（ARGV）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

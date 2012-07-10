@@ -8,20 +8,19 @@
     <success-criterion idref="time-limits-pause"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、点滅するコンテンツをユーザーエージェントの機能を使用して止めることができるようにすることである。特定のウェブコンテンツ技術では、ユーザーエージェントによって利用者がアニメーションを止めることができる。利用者がこの機能を実行するとき、点滅も含めたすべてのアニメーションは停止する。<phrase diff="add">この機能は、WCAGに適合したインタラクティブなコントロール、又は明記されたキーボード・ショートカットのいずれかによって提供することが可能である。</phrase></p>
-                
-               <p>利用者がアニメーションを止めるための一般的な方法は、Escapeキーを押すことである。そのキーを押すためのイベントキューの中で先行するプロセスがない限り、動きのあるアニメーションや点滅しているコンテンツを停止するコマンドとして動作する。</p>
-                
-               <p>一般的にこれが機能するとされているウェブコンテンツ技術：</p>
-                
-               <ul>
+  <description>
+    <p>この実装方法の目的は、点滅するコンテンツをユーザーエージェントの機能を使用して止めることができるようにすることである。特定のウェブコンテンツ技術では、ユーザーエージェントによって利用者がアニメーションを止めることができる。利用者がこの機能を実行するとき、点滅も含めたすべてのアニメーションは停止する。<phrase diff="add">この機能は、WCAGに適合したインタラクティブなコントロール、又は明記されたキーボード・ショートカットのいずれかによって提供することが可能である。</phrase></p>
+    <p>利用者がアニメーションを止めるための一般的な方法は、Escapeキーを押すことである。そのキーを押すためのイベントキューの中で先行するプロセスがない限り、動きのあるアニメーションや点滅しているコンテンツを停止するコマンドとして動作する。</p>
+    <p>一般的にこれが機能するとされているウェブコンテンツ技術：</p>
+    <ul>
 <li>
                      <p>Graphics Interchange Format(<acronym title="Graphics Interchange Format">GIF</acronym>)</p>
 </li>
 <li>
   <p>Animated Portable Network Graphics(<acronym title="Animated Portable Network Graphics">APNG</acronym>)</p>
 </li>
-</ul></description>
+</ul>
+  </description>
   <examples/>
   <resources/>
   <related-techniques/>
@@ -49,11 +48,11 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G187.html">G187: Using a technology to include blinking content that can be turned off via the user agent
-（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G187.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G187: Using a technology to include blinking content that can be turned off via the user agent&#13;
+（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通株式会社</loc>,<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com/group/fdl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通デザイン株式会社</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

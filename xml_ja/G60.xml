@@ -8,12 +8,13 @@
     <success-criterion idref="visual-audio-contrast-dis-audio"/>
   </applies-to>
   <ua-issues/>
-  <description><p> この実装方法の目的は、スクリーンリーダーの利用者が、コンテンツで再生される音によって邪魔されて
+  <description>
+    <p>この実装方法の目的は、スクリーンリーダーの利用者が、コンテンツで再生される音によって邪魔されて
 			スクリーンリーダーを使えないことがないようにして、コンテンツ制作者がウェブページ上で音を再生できるようにすることである。
 			さらに、音を制御するコントロールを置かなくてもよいようにすることも目的の一つである。スクリーンリーダーの利用者が、
 			（スクリーンリーダーの音が聞こえないために）コントロールを探せないという問題が起こらないようにすることである。</p>
-          
-               <p> この実装方法はシンプルで、音を3秒又はそれより短く再生し、自動的に停止するようにすればよい。</p></description>
+    <p>この実装方法はシンプルで、音を3秒又はそれより短く再生し、自動的に停止するようにすればよい。</p>
+  </description>
   <examples/>
   <resources>
     <see-also>
@@ -44,9 +45,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G60.html">G60: Playing a sound that turns off automatically within three seconds（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G60.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G60: Playing a sound that turns off automatically within three seconds（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

@@ -10,13 +10,14 @@
     <success-criterion idref="navigation-mechanisms-link"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-この実装方法の目的は、リンク先を説明するテキストを<code>a</code> 要素のコンテンツとして提供することにより、リンクの目的を説明することである。
+  <description>
+    <p>この実装方法の目的は、リンク先を説明するテキストを<code>a</code>要素のコンテンツとして提供することにより、リンクの目的を説明することである。
 その説明により、利用者はこのリンクとウェブページ内にある他のリンクとの違いが区別でき、利用者がリンクをたどるかどうかを決定するのを助ける。
 一般的に、遷移先のURIでは、そのリンクの目的を説明したことにはならない。</p>
-<p>画像がリンクの唯一のコンテンツであるとき、画像の代替テキストがそのリンクに固有の機能を説明している。</p>
-<p>リンクのコンテンツがテキスト及び一つ又はそれ以上の画像を含むとき、テキストがリンクの目的を十分に説明しているならば、画像の代替テキストは空にする。(<a href="H67.html">H67: 支援技術が無視すべき画像の img 要素で、alt 属性値を空にして、title 属性を付与しない</a> (HTML)を参照。) 
-画像がリンクの目的以外にも情報を伝えるときには、画像に適切な代替テキストも付与しなければならない。</p></description>
+    <p>画像がリンクの唯一のコンテンツであるとき、画像の代替テキストがそのリンクに固有の機能を説明している。</p>
+    <p>リンクのコンテンツがテキスト及び一つ又はそれ以上の画像を含むとき、テキストがリンクの目的を十分に説明しているならば、画像の代替テキストは空にする。(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H67.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H67: 支援技術が無視すべき画像の img 要素で、alt 属性値を空にして、title 属性を付与しない</loc>(HTML)を参照。) 
+画像がリンクの目的以外にも情報を伝えるときには、画像に適切な代替テキストも付与しなければならない。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p><code>a</code> HTMLにおいて、<code>a</code>要素のテキストコンテンツを用いてリンクの目的を説明する。</p>
@@ -64,8 +65,10 @@ HOMEページ
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#h-13.8" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 &#13;
-  - how to specify alt text</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#h-13.8" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 &#13;
+  - how to specify alt text</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -105,9 +108,9 @@ HOMEページ
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H30.html">H30: Providing link text that describes the purpose of a link for anchor elements（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/H30.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H30: Providing link text that describes the purpose of a link for anchor elements（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

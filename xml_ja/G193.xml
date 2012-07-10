@@ -8,9 +8,12 @@
     <success-criterion idref="minimize-error-context-help"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、ウェブページを利用する際の支援となるマルチメディアのアバターを使ったヘルプを提供することである。アバターを使ったヘルプは、テキストを読むことが難しい認知障害のある利用者に特に役立つ。また、視覚情報を利用することで、提示された題材に集中するのに役立つことがある。</p>
-                
-               <note><p class="prefix">マルチメディアのアバターは<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv">ガイドライン 1.2</a>の関連する達成基準も満たさなければならない。</p></note></description>
+  <description>
+    <p>この実装方法の目的は、ウェブページを利用する際の支援となるマルチメディアのアバターを使ったヘルプを提供することである。アバターを使ったヘルプは、テキストを読むことが難しい認知障害のある利用者に特に役立つ。また、視覚情報を利用することで、提示された題材に集中するのに役立つことがある。</p>
+    <note>
+      <p class="prefix">マルチメディアのアバターは<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#media-equiv" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ガイドライン 1.2</loc>の関連する達成基準も満たさなければならない。</p>
+    </note>
+  </description>
   <examples/>
   <resources/>
   <related-techniques>
@@ -40,9 +43,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G193.html">G193: Providing help by an assistant in the Web page（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G193.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G193: Providing help by an assistant in the Web page（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

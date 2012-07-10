@@ -11,8 +11,10 @@
     <ua-issue><p>SMIL 1.0でキャプションを示す世界共通の標準フォーマットは存在しない。さまざまなユーザーエージェントが、さまざまなキャプションのフォーマットをサポートしている。キャプションのテキストストリームには、テキストストリームのsrc引数として、サポートされているフォーマットのファイルが提供されなければならない。</p>
 		<p>QuickTimeは、QTTextキャプションファイルをサポートしている。RealPlayer や GRiNSなどのRealベースのプレーヤーは、RealTextキャプションファイルをサポートしている。WindowsMediaは、SAMIファイルをサポートしているが、SMILをサポートしていない。Flashは、特定のファイル形式をサポートしていないが、XMLベースのキャプションファイルを解析することが可能でああり、実際にFLVPlaybackコンポーネントのSMILに対するサポートは、movie/server urlのようなパラメータ又は&lt;switch&gt;タグで指定されたmulti-bandwidthを検出するようになっている。</p></ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、耳の聞こえない利用者や視聴覚素材の会話の聞き取りが困難な利用者が、その素材を見て理解できるようにすることである。この実装方法では、会話と重要な音をすべて、画面上のキャプション領域に表示されるテキストストリームで提供する。</p>
-		<p>SMIL 1.0では、映像とキャプションに別々の領域を定義することができる。キャプションと映像の再生は同期されて、キャプションのテキストが画面上のある領域に表示される間、それに対応する映像が別の領域に表示される。</p></description>
+  <description>
+    <p>この実装方法の目的は、耳の聞こえない利用者や視聴覚素材の会話の聞き取りが困難な利用者が、その素材を見て理解できるようにすることである。この実装方法では、会話と重要な音をすべて、画面上のキャプション領域に表示されるテキストストリームで提供する。</p>
+    <p>SMIL 1.0では、映像とキャプションに別々の領域を定義することができる。キャプションと映像の再生は同期されて、キャプションのテキストが画面上のある領域に表示される間、それに対応する映像が別の領域に表示される。</p>
+  </description>
   <examples>
     <eg-group>
       <head>Quicktimeプレーヤー向けのSMIL 1.0のキャプションの例</head>
@@ -159,9 +161,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SM11.html">SM11: Providing captions through synchronized text streams in SMIL 1.0（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SM11.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SM11: Providing captions through synchronized text streams in SMIL 1.0（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

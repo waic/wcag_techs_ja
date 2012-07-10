@@ -12,10 +12,12 @@
       <p>一部のユーザーエージェントでHTTPリファラヘッダをサポートしていなかったり、送信しないように設定されていたり、又はプロキシやファイアウォールにより取り除かれたりすることがあるため、一部のユーザーはこの実装方法で実装されている場合には不適合なコンテンツへのアクセスができなくなる可能性がある。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、不適合及び適合したバージョンが両方提供されているときに、利用者がコンテンツのアクセシブルなバージョンを取得できることを保証することである。</p>
-		<p><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#cc1">適合要件 1</a>は、「<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>」がある限り、不適合なページが適合の範囲内に含まれることを認めている。コンテンツ制作者にとって、不適合なコンテンツの中から適合しているコンテンツへのアクセシビリティ・サポーテッドなリンクを含むことは常に可能とはいえない。そこで、不適合のバージョンへは適合しているページからしか到達できないようにするために、コンテンツ制作者はサーバサイドのスクリプト技術（例：PHP、ASP、JSP）に依存しなければならなくなる。</p>
-		<p>この実装方法は、不適合のコンテンツへは、適合しているページからしか到達できないことを保証するための、<code>HTTP referer</code>により提供される情報の利用方法について説明する。<code>HTTP referer</code>ヘッダはユーザーエージェントによって設定され、（もしあれば）ユーザーエージェントが不適合なページを参照する際のページのURIを含む。</p>
-		<p>この方法を実装するために、コンテンツ制作者は不適合なページそれぞれについて、コンテンツの適合しているバージョンのURIを特定する。ページの不適合なバージョンへのリクエストを受け取った際に、サーバは<code>HTTP referer</code>ヘッダの値と、適合しているバージョンのURIを比較して、不適合バージョンへのリンクが適合しているバージョンからのものであるかどうかを判断する。不適合バージョンは<code>HTTP referer</code>が不適合バージョンのURIと一致したときにだけ提供される。それ以外の時には、利用者はコンテンツの適合したバージョンへとリダイレクトされる。HTTPリファラヘッダ内のURIを比較する際に、URI中にクエリーやtargetのような関連のない変化も考慮に入れる必要があることに注意すべきである。</p></description>
+  <description>
+    <p>この実装方法の目的は、不適合及び適合したバージョンが両方提供されているときに、利用者がコンテンツのアクセシブルなバージョンを取得できることを保証することである。</p>
+    <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#cc1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合要件 1</loc>は、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合している代替バージョン</loc>」がある限り、不適合なページが適合の範囲内に含まれることを認めている。コンテンツ制作者にとって、不適合なコンテンツの中から適合しているコンテンツへのアクセシビリティ・サポーテッドなリンクを含むことは常に可能とはいえない。そこで、不適合のバージョンへは適合しているページからしか到達できないようにするために、コンテンツ制作者はサーバサイドのスクリプト技術（例：PHP、ASP、JSP）に依存しなければならなくなる。</p>
+    <p>この実装方法は、不適合のコンテンツへは、適合しているページからしか到達できないことを保証するための、<code>HTTP referer</code>により提供される情報の利用方法について説明する。<code>HTTP referer</code>ヘッダはユーザーエージェントによって設定され、（もしあれば）ユーザーエージェントが不適合なページを参照する際のページのURIを含む。</p>
+    <p>この方法を実装するために、コンテンツ制作者は不適合なページそれぞれについて、コンテンツの適合しているバージョンのURIを特定する。ページの不適合なバージョンへのリクエストを受け取った際に、サーバは<code>HTTP referer</code>ヘッダの値と、適合しているバージョンのURIを比較して、不適合バージョンへのリンクが適合しているバージョンからのものであるかどうかを判断する。不適合バージョンは<code>HTTP referer</code>が不適合バージョンのURIと一致したときにだけ提供される。それ以外の時には、利用者はコンテンツの適合したバージョンへとリダイレクトされる。HTTPリファラヘッダ内のURIを比較する際に、URI中にクエリーやtargetのような関連のない変化も考慮に入れる必要があることに注意すべきである。</p>
+  </description>
   <examples>
     <eg-group>
       <head>インタラクティブな物理プロセスのデモ</head>
@@ -66,7 +68,7 @@ else  {
 header("Location: conforming.php");
 }
 ?&gt;</code>
-      <description><p>このコードの実装サンプル：<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SVR3/non-conforming.php">SVR3の実装サンプル</a></p>
+      <description><p>このコードの実装サンプル：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/SVR3/non-conforming.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SVR3の実装サンプル</loc></p>
 </description>
     </eg-group>
   </examples>
@@ -91,14 +93,14 @@ header("Location: conforming.php");
         <item><p>開いたページが次のうちの一つである：</p>
 						<ol class="enumla">
 <li>
-										<p>不適合のコンテンツの<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合する代替バージョン</a></p>
+										<p>不適合のコンテンツの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合する代替バージョン</loc></p>
 								</li>
 								<li>
 										<p>適合する代替バージョンと不適合のコンテンツ双方へのリンクを含むページ</p>
 								</li>
 						</ol></item>
         <item>
-          <p>不適合のコンテンツの<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合する代替バージョン</a></p>
+          <p>不適合のコンテンツの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合する代替バージョン</loc></p>
         </item>
         <item>
           <p>適合する代替バージョンと不適合のコンテンツ双方へのリンクを含むページ</p>
@@ -116,9 +118,9 @@ header("Location: conforming.php");
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SVR3.html">SVR3: Using HTTP referer to ensure that the only way to access non-conforming content is from conforming content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：中村 精親（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SVR3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SVR3: Using HTTP referer to ensure that the only way to access non-conforming content is from conforming content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：中村 精親（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

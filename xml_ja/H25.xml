@@ -8,8 +8,10 @@
     <success-criterion idref="navigation-mechanisms-title"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、フレームセットの個々のフレームに含まれるものを含む全てのHTML及びXHTMLドキュメントにおいて、<code>head</code> 要素のセクション内で<code>title</code> 属性を用いてドキュメントの目的を簡単な文言で定義することである。これにより、ページの本文でオリエンテーション情報を探すことなく、利用者はサイト内の自分のいる場所を素早く見つけることができる。</p>
-	<p>ドキュメント内で一度しか現れない(必須の) <code>title</code> 要素は、ほとんど全てのHTML及びXHTMLの要素で利用されるかもしれない <code>title</code> 属性と異なることに注意する。</p></description>
+  <description>
+    <p>この実装方法の目的は、フレームセットの個々のフレームに含まれるものを含む全てのHTML及びXHTMLドキュメントにおいて、<code>head</code>要素のセクション内で<code>title</code>属性を用いてドキュメントの目的を簡単な文言で定義することである。これにより、ページの本文でオリエンテーション情報を探すことなく、利用者はサイト内の自分のいる場所を素早く見つけることができる。</p>
+    <p>ドキュメント内で一度しか現れない(必須の)<code>title</code>要素は、ほとんど全てのHTML及びXHTMLの要素で利用されるかもしれない<code>title</code>属性と異なることに注意する。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>この事例はドキュメントのタイトルを定義している。</p>
@@ -61,9 +63,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H25.html">H25: Providing a title using the title element（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/H25.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H25: Providing a title using the title element（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -9,13 +9,12 @@
     <success-criterion idref="minimize-error-cues"/>
   </applies-to>
   <ua-issues/>
-  <description><p> この実装方法の目的は、フォーム・コントロールを変更すると状況にどのような変化が起こるかについての情報を、利用者に提供することである。
+  <description>
+    <p>この実装方法の目的は、フォーム・コントロールを変更すると状況にどのような変化が起こるかについての情報を、利用者に提供することである。
 			   フォーム・コントロールの値を変更すると状況に変化が起こる場合が一般的ではないため、変化が起こる場合は、コンテンツ制作者は利用者が振る舞いに気づくように事前に説明をしておくことが重要である。
 			   可能であれば、変化についての説明とフォームのコントロール自身をプログラム的に関連づけておくとよい。</p>
-            
-               <p>次に示すのは、さまざまな状況における説明の提供方法の例である。</p>
-            
-               <ul>
+    <p>次に示すのは、さまざまな状況における説明の提供方法の例である。</p>
+    <ul>
 <li>
                      <p>設定変更によって状況の変化が生じるインタフェース要素よりも音声読み上げ順序が前になるように、ウェブページ上で説明を提供する。</p>
                   </li>
@@ -26,7 +25,8 @@
 <li>
                      <p>設定変更によって状況に変化が生じるユーザインタフェース要素のあるウェブアプリケーションを利用する前に、利用者がトレーニングを受けなければならないようなイントラネットの場合、そのトレーニングの一部として説明が示されている。</p>
                   </li>
-</ul></description>
+</ul>
+  </description>
   <examples/>
   <resources/>
   <related-techniques>
@@ -59,9 +59,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G13.html">G13: Describing what will happen before a change to a form control that causes a change of context to occur is made（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G13.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G13: Describing what will happen before a change to a form control that causes a change of context to occur is made（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

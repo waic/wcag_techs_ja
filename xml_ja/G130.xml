@@ -8,12 +8,11 @@
     <success-criterion idref="navigation-mechanisms-descriptive"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、ウェブ・コンテンツ内の見出しがコンテンツの内容を表すようなものにすることである。コンテンツの内容が分かるような見出しやタイトル（「<a href="G88.html">G88: ウェブページに対して、コンテンツの内容が分かるページタイトルを提供する</a>」参照）を用いることで、利用者に対してコンテンツの概要と構成を提示することができる。内容を表す見出しをつけることで、そのセクション（節）のウェブページ中の位置づけと、他のセクションとの関係を明確にすることができる。</p>
-          
-<p>内容を表す見出しがあれば、利用者は目的のコンテンツを見つけることや、ウェブページ内のどの部分を読んでいるのかを知ることが容易になる。</p>
-          
-<p>コンテンツ制作者は、最も重要な情報を各見出しの先頭に配置することを検討すると良いだろう。これによって、利用者は斜め読みをして必要な情報を見つけることが容易になる。特に、見出しから見出しへのナビゲーションが可能なブラウザや支援技術を用いている場合には有効である。
-</p></description>
+  <description>
+    <p>この実装方法の目的は、ウェブ・コンテンツ内の見出しがコンテンツの内容を表すようなものにすることである。コンテンツの内容が分かるような見出しやタイトル（「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="G88.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G88: ウェブページに対して、コンテンツの内容が分かるページタイトルを提供する</loc>」参照）を用いることで、利用者に対してコンテンツの概要と構成を提示することができる。内容を表す見出しをつけることで、そのセクション（節）のウェブページ中の位置づけと、他のセクションとの関係を明確にすることができる。</p>
+    <p>内容を表す見出しがあれば、利用者は目的のコンテンツを見つけることや、ウェブページ内のどの部分を読んでいるのかを知ることが容易になる。</p>
+    <p>コンテンツ制作者は、最も重要な情報を各見出しの先頭に配置することを検討すると良いだろう。これによって、利用者は斜め読みをして必要な情報を見つけることが容易になる。特に、見出しから見出しへのナビゲーションが可能なブラウザや支援技術を用いている場合には有効である。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>災害対策を示すHTMLページで、以下のような見出しが使われている:</p>
@@ -33,7 +32,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/headings/quick-tips-for-accessible-headings/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Quick tips for accessible headings</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -61,9 +62,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F65.html">F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type "image"（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳： <a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F65.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type "image"（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://NAKANE-Masafumi.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">中根 雅文</loc></item>
     </ulist>
   </translationcredit>
 </technique>

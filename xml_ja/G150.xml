@@ -8,9 +8,10 @@
     <success-criterion idref="media-equiv-live-audio-only"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、耳の聞こえない利用者がリアルタイムの音声の放送にアクセスできるようにすることである。間違いを修正する、聞きなおす、又は言葉が正しく再現できているかを誰かに確認する時間がほとんどないため、リアルタイムの代替物を制作することは困難である。また、音声の放送が非常に速く流れている場合は、情報を簡略化したり、言い換えたりすることも困難である。</p>
-          
-               <p>リアルタイムのタイピングによるテキスト入力技術には、速記及び高速タイピングがある。復唱して音声認識入力する方法（話を聞き取って、注意深く復唱し、復唱する話者の音声認識トレーニングをしたコンピュータで入力する）は、現在では電話伝送サービスに使用されており、将来的にはキャプション制作に使用されるかもしれない。いずれは修正機能付きの音声認識入力も可能になるだろう。</p></description>
+  <description>
+    <p>この実装方法の目的は、耳の聞こえない利用者がリアルタイムの音声の放送にアクセスできるようにすることである。間違いを修正する、聞きなおす、又は言葉が正しく再現できているかを誰かに確認する時間がほとんどないため、リアルタイムの代替物を制作することは困難である。また、音声の放送が非常に速く流れている場合は、情報を簡略化したり、言い換えたりすることも困難である。</p>
+    <p>リアルタイムのタイピングによるテキスト入力技術には、速記及び高速タイピングがある。復唱して音声認識入力する方法（話を聞き取って、注意深く復唱し、復唱する話者の音声認識トレーニングをしたコンピュータで入力する）は、現在では電話伝送サービスに使用されており、将来的にはキャプション制作に使用されるかもしれない。いずれは修正機能付きの音声認識入力も可能になるだろう。</p>
+  </description>
   <examples/>
   <resources/>
   <related-techniques>
@@ -40,10 +41,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G150.html">G150: Providing text based alternatives for live audio-only content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G150.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G150: Providing text based alternatives for live audio-only content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

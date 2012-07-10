@@ -8,9 +8,10 @@
     <success-criterion idref="navigation-mechanisms-title"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、各ウェブページにコンテンツの内容が分かるページタイトルをつけることである。コンテンツの内容が分かるページタイトルがあると、利用者は目的のコンテンツを見つけたり、サイト内で現在位置を確認したり、コンテンツを見てまわったりすることができる。コンテンツの内容が分かるページタイトルによって、利用者は、どのようなウェブページを利用してるのかを容易に特定することができ、その上、別のウェブページに移動したときもすぐにそのことが分かる。また、タイトルにより、利用者は、コンテンツを読んだり、又は解釈したりしなくてもウェブページを特定することができる。また、正確で内容が分かるページタイトルが、サイトマップ又は検索結果のリストにあれば、利用者は必要とするコンテンツをより速く特定することができる。そして、コンテンツの内容が分かるページタイトルがリンクテキストに用いられていれば、利用者は興味のあるコンテンツに、より正確にたどり着くことができる。</p>
-	<p>各ウェブページのタイトルは次の要件を満たすべきである：</p>
-	<ul>
+  <description>
+    <p>この実装方法の目的は、各ウェブページにコンテンツの内容が分かるページタイトルをつけることである。コンテンツの内容が分かるページタイトルがあると、利用者は目的のコンテンツを見つけたり、サイト内で現在位置を確認したり、コンテンツを見てまわったりすることができる。コンテンツの内容が分かるページタイトルによって、利用者は、どのようなウェブページを利用してるのかを容易に特定することができ、その上、別のウェブページに移動したときもすぐにそのことが分かる。また、タイトルにより、利用者は、コンテンツを読んだり、又は解釈したりしなくてもウェブページを特定することができる。また、正確で内容が分かるページタイトルが、サイトマップ又は検索結果のリストにあれば、利用者は必要とするコンテンツをより速く特定することができる。そして、コンテンツの内容が分かるページタイトルがリンクテキストに用いられていれば、利用者は興味のあるコンテンツに、より正確にたどり着くことができる。</p>
+    <p>各ウェブページのタイトルは次の要件を満たすべきである：</p>
+    <ul>
 <li>
 			<p>そのウェブページの主題を特定している。</p>
 		</li>
@@ -21,15 +22,16 @@
 			<p>簡潔である。</p>
 		</li>
 	</ul>
-<p>次のようなページタイトルはさらに有益である。</p>
-	<ul>
+    <p>次のようなページタイトルはさらに有益である。</p>
+    <ul>
 <li>
 			<p>どのサイト又は他のどのリソースに属しているかを特定している。</p>
 		</li>
 		<li>
 			<p>ウェブページが属するサイト又はその他のリソースの中において、他に同じものがない。</p>
 		</li>
-	</ul></description>
+	</ul>
+  </description>
   <examples>
     <eg-group>
       <head>例1：最も重要な識別情報を初めに記載するページタイトル</head>
@@ -44,7 +46,7 @@
     </eg-group>
     <eg-group>
       <head>例3：3つの部分から成る、コンテンツの内容が分かるページタイトルが付与されたウェブページ</head>
-      <description><p>ウェブページでは、クローズド・キャプションを作成するためのガイドラインと提案を提供している。 そのウェブページは、大きいサイトの中の「サブサイト」である。ページタイトルはダッシュで3つの部分に分けて示されている。ページタイトルの最初の部分は組織名、2つ目はウェブページが属するサブサイト名、そして3つ目はウェブページ自体を特定している（具体例としては、<a href="http://main.wgbh.org/wgbh/pages/mag/services/captioning/faq/sugg-styles-conv-faq.html">WGBH – Media Access Group – Captioning FAQ</a>を参照。)</p>
+      <description><p>ウェブページでは、クローズド・キャプションを作成するためのガイドラインと提案を提供している。 そのウェブページは、大きいサイトの中の「サブサイト」である。ページタイトルはダッシュで3つの部分に分けて示されている。ページタイトルの最初の部分は組織名、2つ目はウェブページが属するサブサイト名、そして3つ目はウェブページ自体を特定している（具体例としては、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://main.wgbh.org/wgbh/pages/mag/services/captioning/faq/sugg-styles-conv-faq.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">WGBH – Media Access Group – Captioning FAQ</loc>を参照。)</p>
 </description>
     </eg-group>
     <eg-group>
@@ -82,9 +84,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G88.html">G88: Providing descriptive titles for Web pages（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：田辺　丈士<a href="http://www.uniteair.co.jp/">（ユナイティア株式会社）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G88.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G88: Providing descriptive titles for Web pages（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：田辺　丈士<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.uniteair.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">（ユナイティア株式会社）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

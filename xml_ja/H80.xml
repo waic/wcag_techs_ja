@@ -12,11 +12,13 @@
       <p>JAWSでこの実装方法を利用するためのコマンドは、「JAWSキー+T」である。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>
-							この実装方法の目的は、リンクとその直前にある見出しの文脈から、リンクの目的を特定することである。直前にある見出しは、リンクテキストだけでは不明瞭なリンクに文脈を提供する。それによって、ユーザーがそのリンクと、そのウェブページ内にある他のリンクとを区別できるようになり、そのリンク先へ移動するかどうかを判断しやすくなる。</p>
-          
-					<note><p class="prefix">
-									 可能なかぎり、文脈による補足を必要とせずにリンクの目的が特定できるリンクテキストを提供すべきである。</p></note></description>
+  <description>
+    <p>この実装方法の目的は、リンクとその直前にある見出しの文脈から、リンクの目的を特定することである。直前にある見出しは、リンクテキストだけでは不明瞭なリンクに文脈を提供する。それによって、ユーザーがそのリンクと、そのウェブページ内にある他のリンクとを区別できるようになり、そのリンク先へ移動するかどうかを判断しやすくなる。</p>
+    <note>
+      <p class="prefix">
+									 可能なかぎり、文脈による補足を必要とせずにリンクの目的が特定できるリンクテキストを提供すべきである。</p>
+    </note>
+  </description>
   <examples>
     <eg-group>
       <head>複数のホテルに関する情報のブロック</head>
@@ -91,9 +93,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H80.html">H80: Identifying the purpose of a link using link text combined with the preceding heading element（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H80.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H80: Identifying the purpose of a link using link text combined with the preceding heading element（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

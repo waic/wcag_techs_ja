@@ -8,11 +8,13 @@
     <success-criterion idref="visual-audio-contrast-visual-presentation"/>
   </applies-to>
   <ua-issues/>
-  <description><p>多くの認知障害を持つ人々は行間がシングル・スペースに設定されたテキストを読む事が困難である。行の高さを増やすボタンは彼らが内容を読む助けとなる。段落の間が離れている状態を維持するためには、段落間の幅は、行送り幅の少なくとも1.5倍の高さになるように広げられるべきである。</p>
-	<note><p class="prefix">
-		この実装方法は、非適合コンテンツに対して、<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョンのページ</a>を提供するための、スタイルスイッチの実装方法と組み合わせて用いることができる。詳細は、<a href="C29.html">C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</a> (CSS)、及び<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照のこと。
+  <description>
+    <p>多くの認知障害を持つ人々は行間がシングル・スペースに設定されたテキストを読む事が困難である。行の高さを増やすボタンは彼らが内容を読む助けとなる。段落の間が離れている状態を維持するためには、段落間の幅は、行送り幅の少なくとも1.5倍の高さになるように広げられるべきである。</p>
+    <note><p class="prefix">
+		この実装方法は、非適合コンテンツに対して、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合している代替バージョンのページ</loc>を提供するための、スタイルスイッチの実装方法と組み合わせて用いることができる。詳細は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="C29.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する</loc> (CSS)、及び<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合している代替バージョンを理解する</loc>を参照のこと。
 		</p>
-	</note></description>
+	</note>
+  </description>
   <examples>
     <eg-group>
       <description><p>ページを変更するための標準的なスタイル・スイッチングを用いる。スタイルシートを切り替えるためのボタン又はリンクをページに用意する。新しいスタイルシートには、行送りを広げるルールと段落の間隔を広げるクラスが含まれている。
@@ -25,7 +27,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/cognitive-impairment.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Developing sites for users with Cognitive disabilities and learning difficulties</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/cognitive-impairment.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Developing sites for users with Cognitive disabilities and learning difficulties</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -64,9 +68,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G188.html">G188: Providing a button on the page to increase line spaces and paragraph spaces（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.uniteair.co.jp/">田辺　丈士（ユナイティア株式会社）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G188.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G188: Providing a button on the page to increase line spaces and paragraph spaces（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.uniteair.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">田辺　丈士（ユナイティア株式会社）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

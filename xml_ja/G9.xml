@@ -8,14 +8,18 @@
     <success-criterion idref="media-equiv-real-time-captions"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、音声を聞くことができない利用者がリアルタイムに同期したメディア放送にアクセスできるようにすることである。間違いを訂正するか、二度聞き又は単語が正確に再現されていることを確認するため誰かに意見を聞く時間がほとんどないので、正確なリアルタイムのキャプションを作成することはより困難である。情報があまりに速く流れている時は、簡略化又は言い換えもさらに困難である。</p>
-	<p>リアルタイムのタイピングテキスト入力技術には、速記及び高速タイピング技術を使用するものが存在する。復唱による音声・テキスト変換（人が音声を聞き、彼らの音声を覚えこませたコンピューターへ慎重に復唱する）は、今日の電話リレーサービスで使用されており、将来的にはキャプション作成に使用されるかもしれない。ゆくゆくは補正機能を持つ音声・テキスト変換が可能になるだろう。</p></description>
+  <description>
+    <p>この実装方法の目的は、音声を聞くことができない利用者がリアルタイムに同期したメディア放送にアクセスできるようにすることである。間違いを訂正するか、二度聞き又は単語が正確に再現されていることを確認するため誰かに意見を聞く時間がほとんどないので、正確なリアルタイムのキャプションを作成することはより困難である。情報があまりに速く流れている時は、簡略化又は言い換えもさらに困難である。</p>
+    <p>リアルタイムのタイピングテキスト入力技術には、速記及び高速タイピング技術を使用するものが存在する。復唱による音声・テキスト変換（人が音声を聞き、彼らの音声を覚えこませたコンピューターへ慎重に復唱する）は、今日の電話リレーサービスで使用されており、将来的にはキャプション作成に使用されるかもしれない。ゆくゆくは補正機能を持つ音声・テキスト変換が可能になるだろう。</p>
+  </description>
   <examples/>
   <resources>
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webaim.org/products/captioncaster/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CaptionCaster</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webaim.org/products/captioncaster/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CaptionCaster</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -44,9 +48,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G9.html">G9: Creating captions for live synchronized media（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G9.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G9: Creating captions for live synchronized media（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

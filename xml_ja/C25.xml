@@ -8,17 +8,16 @@
     <success-criterion idref="visual-audio-contrast-visual-presentation"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-この実装方法が意図するのは、ボーダー（境界）やレイアウトはCSSを用いて指定するが、文字色と背景色については利用者のブラウザやOSの設定に従って表示できるように指定しないでおく、ということである。
+  <description>
+    <p>この実装方法が意図するのは、ボーダー（境界）やレイアウトはCSSを用いて指定するが、文字色と背景色については利用者のブラウザやOSの設定に従って表示できるように指定しないでおく、ということである。
 これによって利用者は、自分が見たい色でテキストを見ることができるようになり、同時に、テキストの段組、セクションの周りのボーダー、又はメニューとメインコンテンツの領域を区切る縦線といったレイアウトやページデザインの外観は保つことができるようになる。
 また、ページにJavaScriptのポップアップ・ボックス又はドロップダウン・メニューが含まれている場合に色が上書きされるという、一部のブラウザで起こる表示の問題も回避することができる。</p>
-                
-               <p>
-ボーダーやレイアウトを示す表示は、文字色と背景色に関する柔軟性と同様に、認知障害のある多くの人にとって役に立つ。
+    <p>ボーダーやレイアウトを示す表示は、文字色と背景色に関する柔軟性と同様に、認知障害のある多くの人にとって役に立つ。
 しかし、状況によってはこれら2つのニーズは相容れないこともある。それは、利用者がブラウザ上でコンテンツ制作者が選択した文字色と背景色を上書きする必要があるとき、ブラウザがボーダーやレイアウトまでも取り除いてしまうような場合である。
 これは、ページがシングルカラムでひとつのブロックが他のブロックの下に表示されることを意味し、そうなると、不必要な余白ができ、テキストの1行の長さが長くなってしまう。
 また、ポップアップ・ボックスの背景が透過して、ページ上のテキストの上にボックスのテキストが重なってしまったり、ドロップダウン・メニューが透過するかダークグレーの背景になってしまったりすることを意味する。 
-コンテンツ制作者が文字色と背景色を一切指定せず、その一方でボーダーの色やレイアウトを指定した場合、一般的なブラウザのほとんどでは、（コンテンツ制作者が指定した）CSSの他の宣言に影響を与えずにテキストと背景の色を変更することができる。</p></description>
+コンテンツ制作者が文字色と背景色を一切指定せず、その一方でボーダーの色やレイアウトを指定した場合、一般的なブラウザのほとんどでは、（コンテンツ制作者が指定した）CSSの他の宣言に影響を与えずにテキストと背景の色を変更することができる。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>
@@ -73,10 +72,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C25.html">C25: Specifying borders and layout in CSS to delineate areas of a Web page while not specifying text and text-background colors（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/C25.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C25: Specifying borders and layout in CSS to delineate areas of a Web page while not specifying text and text-background colors（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ofujimiki.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">大藤 幹</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -40,7 +40,7 @@
     </eg-group>
     <eg-group>
       <head>不適合となる 定義リストの使用</head>
-      <description><p>HTML及びびXHTMLでは、定義リストによって用語とその定義との関連性を提供することができる。したがって、理論上は定義部分に置かれたリンクはその用語部分を文脈として利用できるはずである。ところが、定義リストに対するサポートは著しく進んでおらず、今日の支援技術の利用者が定義リストのみを用いて文脈を発見する手段はない。定義リストは、連想的な関係を提供するのに有用なメカニズムであるが、現時点において<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html">達成基準2.4.4</a>を満たすことができる実装方法ではない。</p>
+      <description><p>HTML及びびXHTMLでは、定義リストによって用語とその定義との関連性を提供することができる。したがって、理論上は定義部分に置かれたリンクはその用語部分を文脈として利用できるはずである。ところが、定義リストに対するサポートは著しく進んでおらず、今日の支援技術の利用者が定義リストのみを用いて文脈を発見する手段はない。定義リストは、連想的な関係を提供するのに有用なメカニズムであるが、現時点において<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">達成基準2.4.4</loc>を満たすことができる実装方法ではない。</p>
 </description>
       <code>&lt;dl&gt;
     &lt;dt&gt;ハリー・ポッターと秘密の部屋&lt;/dt&gt;
@@ -79,9 +79,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F63.html">F63: Failure of Success Criterion 2.4.4 due to providing link context only in content that is not related to the link（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.argv.org/">井上浩一（ARGV）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F63.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F63: Failure of Success Criterion 2.4.4 due to providing link context only in content that is not related to the link（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.argv.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">井上浩一（ARGV）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

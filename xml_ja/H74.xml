@@ -9,7 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p> この実装方法の目的は、支援技術がコンテンツを解析するときに生じる（ことで知られている）キーエラーを回避することである。
+    <p>この実装方法の目的は、支援技術がコンテンツを解析するときに生じる（ことで知られている）キーエラーを回避することである。
 			   このエラーは、コンテンツが、仕様に準じて用いられていない開始タグや終了タグを含むときに起こる。
 			   HTMLあるいはXHTMLのメカニズムをウェブコンテンツ技術やウェブコンテンツ技術のバージョンを特定するために用いたり、
 			   このようなタイプのエラーがないようにウェブページを制作したりすることで回避できる。
@@ -35,8 +35,8 @@
     <eg-group>
       <head>検証のフレームワークを用いる</head>
       <description><p> ウェブサイトが静的なページではなく、HTMLあるいはXHTMLのページが動的に生成されるときは、
-					 コンテンツ開発者は<a href="http://xhtmlunit.sourceforge.net/">XHTMLUnit</a>や
-                  <a href="http://xmltestsuite.sourceforge.net/">XML Test Suite</a>
+					 コンテンツ開発者は<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://xhtmlunit.sourceforge.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XHTMLUnit</loc>や
+                  <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://xmltestsuite.sourceforge.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XML Test Suite</loc>
 				  あるいは類似のフレームワークを用いて生成されるXHTMLコードのチェックを行うことができる。</p>
 </description>
     </eg-group>
@@ -81,9 +81,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H74.html">H74: Ensuring that opening and closing tags are used according to specification（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/H74.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H74: Ensuring that opening and closing tags are used according to specification（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

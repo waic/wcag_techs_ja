@@ -8,10 +8,10 @@
     <success-criterion idref="consistent-behavior-unpredictable-change"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、 <code>select</code> 要素の値を選択することで意図せずアクションが実行されるのではなく、アクションの実行を利用者が制御できるようにすることである。利用者は、アクションが実行されるとは思わずに、 <code>select</code> 要素にどんな値があるのかを調べたり、間違って意図しない値を選んだりするかもしれない。利用者が自分の選択に納得したとき、アクションを実行するボタンを選択できるようにする。</p>
-
-          
-               <p><code>select</code> 要素の選択肢の操作によって(フォームの)コントロールの値が変化する場合、キーボードで <code>select</code> 要素の値を選んでいる利用者に対して特に重要である。</p></description>
+  <description>
+    <p>この実装方法の目的は、<code>select</code>要素の値を選択することで意図せずアクションが実行されるのではなく、アクションの実行を利用者が制御できるようにすることである。利用者は、アクションが実行されるとは思わずに、<code>select</code>要素にどんな値があるのかを調べたり、間違って意図しない値を選んだりするかもしれない。利用者が自分の選択に納得したとき、アクションを実行するボタンを選択できるようにする。</p>
+    <p><code>select</code>要素の選択肢の操作によって(フォームの)コントロールの値が変化する場合、キーボードで<code>select</code>要素の値を選んでいる利用者に対して特に重要である。</p>
+  </description>
   <examples>
     <eg-group>
       <head>カレンダー</head>
@@ -51,7 +51,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cs.tut.fi/~jkorpela/forms/navmenu.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Jukka Korpela: Navigational pulldown menus in HTML</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cs.tut.fi/~jkorpela/forms/navmenu.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Jukka Korpela: Navigational pulldown menus in HTML</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -83,9 +85,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H84.html">H84: Using a button with a select element to perform an action（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H84.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H84: Using a button with a select element to perform an action（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

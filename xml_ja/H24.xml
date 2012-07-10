@@ -36,8 +36,7 @@
 </ul></ua-issue>
   </ua-issues>
   <description>
-    <p>
-							この実装方法の目的は、イメージマップ上の選択可能領域と同じ役割を果たす代替テキストを提供することである。イメージマップは、<code>area</code>要素によって定義された選択可能領域によって分割されている1枚の画像である。各領域は、他のウェブページや、現在のウェブページ内の他の場所へのリンクである。各<code>area</code>要素の<code>alt</code>属性は、その画像の選択可能領域と同じ目的を果たすものである。</p>
+    <p>この実装方法の目的は、イメージマップ上の選択可能領域と同じ役割を果たす代替テキストを提供することである。イメージマップは、<code>area</code>要素によって定義された選択可能領域によって分割されている1枚の画像である。各領域は、他のウェブページや、現在のウェブページ内の他の場所へのリンクである。各<code>area</code>要素の<code>alt</code>属性は、その画像の選択可能領域と同じ目的を果たすものである。</p>
   </description>
   <examples>
     <eg-group>
@@ -57,12 +56,16 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#h-13.6.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    client-side image maps</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#h-13.6.1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    client-side image maps</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#h-13.8" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 -&#13;
-                    how to specify alt text</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#h-13.8" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 -&#13;
+                    how to specify alt text</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -96,9 +99,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H24.html">H24: Providing text alternatives for the area elements of image maps（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H24.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H24: Providing text alternatives for the area elements of image maps（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

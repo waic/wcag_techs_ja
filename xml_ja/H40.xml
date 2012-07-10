@@ -8,16 +8,11 @@
     <success-criterion idref="meaning-idioms"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-							この実装方法の目的は、語句の定義を定義リストの形式で提供することである。定義リストは<code>dl</code>要素を用いてマークアップし、その中では用語それぞれを別の<code>dt</code>要素に含め、直後の<code>dd</code>要素に定義を含める。<code>title</code>属性を用いて、定義リストに関する補足情報を提供することもできる。</p>
-          
-					<p>
-							<code>dl</code>要素、<code>dt</code>要素、<code>dd</code>要素を用いることで、表現形式が変更されても、用語と定義の関係が保持され、リスト全体がひとつの単位として扱われる。
-							</p>
-          
-					<p>
-							定義リストの最も簡単な利用法は、アルファベット順に定義を並べることであり、その典型的な例は定義リストを用語集に用いることである。
-							</p></description>
+  <description>
+    <p>この実装方法の目的は、語句の定義を定義リストの形式で提供することである。定義リストは<code>dl</code>要素を用いてマークアップし、その中では用語それぞれを別の<code>dt</code>要素に含め、直後の<code>dd</code>要素に定義を含める。<code>title</code>属性を用いて、定義リストに関する補足情報を提供することもできる。</p>
+    <p><code>dl</code>要素、<code>dt</code>要素、<code>dd</code>要素を用いることで、表現形式が変更されても、用語と定義の関係が保持され、リスト全体がひとつの単位として扱われる。</p>
+    <p>定義リストの最も簡単な利用法は、アルファベット順に定義を並べることであり、その典型的な例は定義リストを用語集に用いることである。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>
@@ -46,8 +41,10 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/lists.html#edef-DL" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Definition&#13;
-                    lists: the DL, DT, and DD elements</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/lists.html#edef-DL" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Definition&#13;
+                    lists: the DL, DT, and DD elements</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -81,9 +78,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H40.html">H40: Using definition lists（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H40.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H40: Using definition lists（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

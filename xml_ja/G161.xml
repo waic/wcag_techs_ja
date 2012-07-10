@@ -8,16 +8,13 @@
     <success-criterion idref="navigation-mechanisms-mult-loc"/>
   </applies-to>
   <ua-issues/>
-  <description><p>あなたのウェブページを探す検索機能を提供するのは、コンテンツを見つける方法を利用者に提供するデザインの戦略である。利用者は、ウェブサイトの構造を理解したり、サイト内を見て回ったりする必要なく、特定の単語又は句で検索することでコンテンツの場所を特定することができる。 これは、特に大きいサイトで、より迅速に又はより簡単にコンテンツを見つける方法である。</p>
-              
-               <p>いくつかの検索企業は、彼らの検索アプリケーションの無償利用をサイトに提供している。検索エンジンはあなた自身のサーバーにインストールして利用できる。いくつかのウェブ・ホスティング企業は、顧客がウェブページに含めることができる検索スクリプトを提供している。また、ほとんどのサービスが、より高度な特徴を持つそれらツールの有償バージョンを提供している。</p>
-
-              
-               <p>用語をスペルチェックし、用語の異なった語尾を含み(ステミング)、異なった用語の使用(同義語)を考慮する検索機能を実装すると、検索機能のアクセシビリティはさらに増すだろう。</p>
-              
-               <p>検索の機能性は、普通は検索ワードのためのテキストフィールド及び検索を開始するためのボタンを含むウェブページの単純なフォーム、又は検索フォームを含むページへのリンクを追加することによって、高めることができる。もちろん、検索フォーム自体もアクセシブルでなければならない。</p>
-              
-               <p>外部検索の検索エンジンの結果を最適化するのに使用され、また内部検索エンジンもサポートしており、それらをより効果的にする実装方法: キーワード、<code>META</code>タグ、およびアクセシブルなナビゲーション構造を使用する。検索サイトは、検索のために最適化されたコンテンツをどう作成するかのガイダンスを提供している。例えば、<a href="http://help.live.com/help.aspx?mkt=en-us&amp;project=wl_webmasters">Microsoft's Guidelines for successful indexing</a>、<a href="http://support.google.com/webmasters/bin/topic.py?hl=en&amp;topic=28800&amp;from=8522&amp;rd=1">Creating a Google-friendly site</a>、及び<a href="http://help.yahoo.com/l/us/yahoo/search/basics/basics-18.html">Yahoo! Search Content Quality Guidelines</a>である。</p></description>
+  <description>
+    <p>あなたのウェブページを探す検索機能を提供するのは、コンテンツを見つける方法を利用者に提供するデザインの戦略である。利用者は、ウェブサイトの構造を理解したり、サイト内を見て回ったりする必要なく、特定の単語又は句で検索することでコンテンツの場所を特定することができる。 これは、特に大きいサイトで、より迅速に又はより簡単にコンテンツを見つける方法である。</p>
+    <p>いくつかの検索企業は、彼らの検索アプリケーションの無償利用をサイトに提供している。検索エンジンはあなた自身のサーバーにインストールして利用できる。いくつかのウェブ・ホスティング企業は、顧客がウェブページに含めることができる検索スクリプトを提供している。また、ほとんどのサービスが、より高度な特徴を持つそれらツールの有償バージョンを提供している。</p>
+    <p>用語をスペルチェックし、用語の異なった語尾を含み(ステミング)、異なった用語の使用(同義語)を考慮する検索機能を実装すると、検索機能のアクセシビリティはさらに増すだろう。</p>
+    <p>検索の機能性は、普通は検索ワードのためのテキストフィールド及び検索を開始するためのボタンを含むウェブページの単純なフォーム、又は検索フォームを含むページへのリンクを追加することによって、高めることができる。もちろん、検索フォーム自体もアクセシブルでなければならない。</p>
+    <p>外部検索の検索エンジンの結果を最適化するのに使用され、また内部検索エンジンもサポートしており、それらをより効果的にする実装方法: キーワード、<code>META</code>タグ、およびアクセシブルなナビゲーション構造を使用する。検索サイトは、検索のために最適化されたコンテンツをどう作成するかのガイダンスを提供している。例えば、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.live.com/help.aspx?mkt=en-us&amp;project=wl_webmasters" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Microsoft's Guidelines for successful indexing</loc>、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://support.google.com/webmasters/bin/topic.py?hl=en&amp;topic=28800&amp;from=8522&amp;rd=1" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Creating a Google-friendly site</loc>、及び<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.yahoo.com/l/us/yahoo/search/basics/basics-18.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Yahoo! Search Content Quality Guidelines</loc>である。</p>
+  </description>
   <examples>
     <eg-group>
       <head>ショッピングサイト</head>
@@ -34,19 +31,29 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webdesign.about.com/od/administration/a/aa091399.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Searching Your Site</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://webdesign.about.com/od/administration/a/aa091399.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Searching Your Site</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bravenet.com/webtools/search2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Bravenet Site Search</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.bravenet.com/webtools/search2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Bravenet Site Search</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.freefind.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FreeFind</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.freefind.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FreeFind</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.google.com/coop/cse/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Google Custom Search Engine</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.google.com/coop/cse/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Google Custom Search Engine</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.picosearch.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pico Search</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.picosearch.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Pico Search</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -88,9 +95,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G161.html">G161: Providing a search function to help users find content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G161.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G161: Providing a search function to help users find content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

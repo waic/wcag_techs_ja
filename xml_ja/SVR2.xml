@@ -8,8 +8,10 @@
     <success-criterion idref="cc1"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、コンテンツの不適合なバージョンも利用可能な場合に、利用者が常にアクセシブルなバージョンにアクセスできることを保証することである。WCAGに適合していないフォーマットでコンテンツが提供される際でも、アクセシブルではないコンテンツの代替バージョンが提供されていれば、そのサイト全体が適合していることになる。適合要件 4は代替バージョンが不適合なコンテンツ又はそのURIからたどることができることを要求している。</p>
-		<p>不適合のコンテンツの中からアクセシブルなリンクを提供することは常に可能ではないため、この実装方法では制作者が不適合のコンテンツにその代替バージョンとして提供されるURI、又は不適合のバージョンと代替バージョン双方へのリンクを含むページからしかアクセスできないようにするためにApacheのモジュール「mod_access」を使う方法について説明する。</p></description>
+  <description>
+    <p>この実装方法の目的は、コンテンツの不適合なバージョンも利用可能な場合に、利用者が常にアクセシブルなバージョンにアクセスできることを保証することである。WCAGに適合していないフォーマットでコンテンツが提供される際でも、アクセシブルではないコンテンツの代替バージョンが提供されていれば、そのサイト全体が適合していることになる。適合要件 4は代替バージョンが不適合なコンテンツ又はそのURIからたどることができることを要求している。</p>
+    <p>不適合のコンテンツの中からアクセシブルなリンクを提供することは常に可能ではないため、この実装方法では制作者が不適合のコンテンツにその代替バージョンとして提供されるURI、又は不適合のバージョンと代替バージョン双方へのリンクを含むページからしかアクセスできないようにするためにApacheのモジュール「mod_access」を使う方法について説明する。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>次の.htaccessファイルは、「accessible.html」からのリクエストではない限り、「inaccessible.html」から「accessible.html」へのリダイレクトを要求するApacheのmod_redirectモジュールを使用している。</p>
@@ -53,13 +55,19 @@ ErrorDocument 403 http://example.com/documents/index.html</code>
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/mod/mod_env.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Module mod_env</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/mod/mod_env.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Module mod_env</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/howto/auth.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authentication, Authorization and Access Control</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.2/howto/auth.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Authentication, Authorization and Access Control</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.0/howto/htaccess.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Tutorial: .htaccess files</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://httpd.apache.org/docs/2.0/howto/htaccess.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Apache Tutorial: .htaccess files</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -83,14 +91,14 @@ ErrorDocument 403 http://example.com/documents/index.html</code>
         <item><p>結果となるページが次のうちのひとつである：</p>
 						<ol class="enumla">
 <li>
-										<p>不適合のコンテンツの<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合する代替バージョン</a></p>
+										<p>不適合のコンテンツの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合する代替バージョン</loc></p>
 								</li>
 								<li>
 										<p>適合する代替バージョンと不適合のコンテンツ双方へのリンクを含むページ</p>
 								</li>
 						</ol></item>
         <item>
-          <p>不適合のコンテンツの<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合する代替バージョン</a></p>
+          <p>不適合のコンテンツの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合する代替バージョン</loc></p>
         </item>
         <item>
           <p>適合する代替バージョンと不適合のコンテンツ双方へのリンクを含むページ</p>
@@ -108,9 +116,9 @@ ErrorDocument 403 http://example.com/documents/index.html</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SVR2.html">SVR2: Using .htaccess to ensure that the only way to access non-conforming content is from conforming content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：中村 精親（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SVR2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SVR2: Using .htaccess to ensure that the only way to access non-conforming content is from conforming content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：中村 精親（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -18,16 +18,17 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェント及び支援技術に関する情報は、<a href="pdf_notes.html">PDF テクノロジーノート</a>を参照のこと。</p>
+      <p>ユーザーエージェント及び支援技術に関する情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF テクノロジーノート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、支援技術のユーザーがフォーム・コントロールのラベルを認識し、フォーム・コントロールの使用方法を理解できるようにすることである。</p>
-<p>フォーム・コントロールを使用すると、ユーザーは、情報を入力したり選択肢を指定したりして PDF 文書を操作してから、送信して処理することができる。支援技術のユーザーは、視力のあるユーザーと同様に、フォームフィールドを認識して理解し、選択を行い、フォームに入力し、フォームを送信できなければならない。フォームのアクセシビリティを確保するには、各フォーム・コントロールの目的を示す、理解可能なラベルが不可欠である。</p>
-<p>フォームの入力では通常、必要な情報とフォームの入力方法をユーザーが理解できるように、ラベルと説明文が提供される。これらのラベルが、対応するフィールドとプログラムで関連付けられていないと、支援技術で正しく関連付けを行うことができず、ユーザーがフォームの入力方法を理解できないことがある。</p>
-<p>インタラクティブなフォームが含まれている文書を Adobe Acrobat Pro を使用して作成することで、プログラムで関連付けられた、フィールドの目的を示すラベルを付けることができ、フォームのアクセシビリティとユーザビリティが確保される。</p>
-<p>プログラムで関連付けられたラベルがない場合には、支援技術が使用するヒューリスティック手法によって、テキストラベルが使用される場合がある。フィールド辞書の TU エントリ（ツールヒント）が、プログラムで関連付けられたラベルである（以下の事例 3 と、<a href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">PDF 1.7（ISO 32000-1）</a>の表 220 を参照のこと）。そのため、各フィールドにツールヒントを追加し、支援技術が解釈できるラベルを提供する。</p>
-<div id="">
-<a name="PDF10_placement-rules"/>
+  <description>
+    <p>この実装方法の目的は、支援技術のユーザーがフォーム・コントロールのラベルを認識し、フォーム・コントロールの使用方法を理解できるようにすることである。</p>
+    <p>フォーム・コントロールを使用すると、ユーザーは、情報を入力したり選択肢を指定したりして PDF 文書を操作してから、送信して処理することができる。支援技術のユーザーは、視力のあるユーザーと同様に、フォームフィールドを認識して理解し、選択を行い、フォームに入力し、フォームを送信できなければならない。フォームのアクセシビリティを確保するには、各フォーム・コントロールの目的を示す、理解可能なラベルが不可欠である。</p>
+    <p>フォームの入力では通常、必要な情報とフォームの入力方法をユーザーが理解できるように、ラベルと説明文が提供される。これらのラベルが、対応するフィールドとプログラムで関連付けられていないと、支援技術で正しく関連付けを行うことができず、ユーザーがフォームの入力方法を理解できないことがある。</p>
+    <p>インタラクティブなフォームが含まれている文書を Adobe Acrobat Pro を使用して作成することで、プログラムで関連付けられた、フィールドの目的を示すラベルを付けることができ、フォームのアクセシビリティとユーザビリティが確保される。</p>
+    <p>プログラムで関連付けられたラベルがない場合には、支援技術が使用するヒューリスティック手法によって、テキストラベルが使用される場合がある。フィールド辞書の TU エントリ（ツールヒント）が、プログラムで関連付けられたラベルである（以下の事例 3 と、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7（ISO 32000-1）</loc>の表 220 を参照のこと）。そのため、各フィールドにツールヒントを追加し、支援技術が解釈できるラベルを提供する。</p>
+    <div id="">
+<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>
 <h4>配置ルール</h4>
 <p>次の表は、Adobe LiveCycle によってデフォルトでラベルが配置される場所を規定する、配置ルールを示している。これらのルールでは、テキストの方向が左から右であることが前提になっている。特定のフォームでデフォルトとは異なる配置が必要な場合（テキストの方向が右から左の言語の PDF に対応する場合など）については、以下の事例 2 の「<em>フォームラベルの位置を変更する</em>」を参照のこと。一般的に作成者は、特定のフォームの要件を満たすために、ラベルの配置について検討すべきである。</p>
 <table border="1" cellpadding="2"><tbody>
@@ -66,22 +67,23 @@
 <td>LiveCycle では、ラベルは自動的にボタン上に配置される。手動で位置を設定する必要はない。ボタンの目的がラベルテキストに適切に記述されていることを確認する。 </td>
 </tr>
 </tbody></table>
-</div></description>
+</div>
+  </description>
   <examples>
     <eg-group>
       <head>Adobe Acrobat 9 Pro のフォームツールを使用してラベルを付ける</head>
-      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>解説に記載されているように、オーサリングツールで追加され PDF に変換されたテキストラベルは、フィールドに視覚的に関連付けられていても、プログラムで関連付けられていないため、ツールヒントを提供する必要がある。</p>
 <olist><item><p>［フォーム］メニューで［フィールドを追加または編集］を選択する</p></item><item><p>編集するフィールドのコンテキストメニューから［プロパティ］ダイアログボックスを選択する</p></item><item><p>［プロパティ］ダイアログボックスの［一般］タブで、「ツールヒント」フィールドにフォームフィールドの説明を入力する</p></item><item><p>すべてのフォームフィールドについて同じ操作を繰り返す</p></item></olist><p>次の画像は、［プロパティ］ダイアログボックスの「ツールヒント」フィールドに説明が入力された状態を示している。</p>
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form5.jpg" alt="スクリーンショット：フォームフィールドのプロパティダイアログボックス。フィールドで要求される形式を含む簡単な説明を入力すると、ツールヒントとして表示される。" height="503" width="525"/></p><p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form">フォームツールを使用してラベルを表示させるサンプル（PDFフォーム）</a>がある。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form5.jpg" alt="スクリーンショット：フォームフィールドのプロパティダイアログボックス。フィールドで要求される形式を含む簡単な説明を入力すると、ツールヒントとして表示される。" height="503" width="525"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">フォームツールを使用してラベルを表示させるサンプル（PDFフォーム）</loc>がある。</p>
 </description>
     </eg-group>
     <eg-group>
       <head>Adobe LiveCycle Designer ES 8.2.1 でフォーム・コントロールにラベルを付ける</head>
-      <description><p>この事例は Adobe LiveCycle Designer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe LiveCycle Designer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>LiveCycle Designer には、説明的なテキストやラベルをフォームエレメントに関連付けるためのいくつかのオプションがある。</p>
 <p>視力のあるユーザーまたはロービジョンのユーザーの場合は、コントロールのすぐ近くにラベルを正しく配置することが重要である。スクリーンリーダーのユーザーの場合は、ラベルがフォーム・コントロールとプログラムで関連付けられていることと、スクリーンリーダーのユーザーがすぐにフォームに入力して送信できるだけの十分な情報が提供されていることを確認する必要もある。</p>
-<p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form-lc">LiveCycle Designer でラベルを入力するサンプル（PDFフォーム）</a>がある。</p>
+<p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form-lc" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">LiveCycle Designer でラベルを入力するサンプル（PDFフォーム）</loc>がある。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -133,10 +135,14 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 1.7 (ISO 32000-1)</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/xml/index_arch.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Adobe XML Forms Architecture (XFA)</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://partners.adobe.com/public/developer/xml/index_arch.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Adobe XML Forms Architecture (XFA)</loc>
+          </p>
         </item>
         <item>
           <p>
@@ -187,9 +193,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/PDF10.html">PDF10: Providing labels for interactive form controls in PDF documents（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/PDF10.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF10: Providing labels for interactive form controls in PDF documents（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

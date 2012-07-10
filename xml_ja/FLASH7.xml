@@ -13,13 +13,15 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、前後の文脈を把握しなくても理解できるように、利用者がボタンなどのコントロールのラベルに付加情報を追加できるようにすることである。</p>
-<p>コントロールの前後にある文脈をわざわざ把握しなくてもすむように、コントロールのラベルによって十分な情報が提供されることを望む利用者がいる。その一方で、すべてのボタンに文脈を含む情報があるのはあまりにも冗長であり、サイトの利便性を低下させると考えるユーザーもいる。また、支援技術の利用者からワーキンググループに寄せられるフィードバックでも、どちらが好ましいかについて意見が分かれている。この実装方法は、ユーザー自身が好むほうを選択できるようにするものである。</p>
-<p>ページの先頭近くにページ上のコントロールのラベルを拡張するためのコントロールを配置し、前後の文脈を加味しなくてもコントロールの目的を理解できるようにする。必ずコントロールの目的をラベルから直接理解できるようにすることが必要である。</p>
-<p>この実装方法によってコントロールのラベルが拡張されるのは、現在参照しているページのみである。ただし、サイト全体で1回選択すればすむように、cookie やサーバー側のユーザープロファイルにこの設定を保存しておく方法もある。場合によっては、そのほうが望ましいかもしれない。</p></description>
+  <description>
+    <p>この実装方法の目的は、前後の文脈を把握しなくても理解できるように、利用者がボタンなどのコントロールのラベルに付加情報を追加できるようにすることである。</p>
+    <p>コントロールの前後にある文脈をわざわざ把握しなくてもすむように、コントロールのラベルによって十分な情報が提供されることを望む利用者がいる。その一方で、すべてのボタンに文脈を含む情報があるのはあまりにも冗長であり、サイトの利便性を低下させると考えるユーザーもいる。また、支援技術の利用者からワーキンググループに寄せられるフィードバックでも、どちらが好ましいかについて意見が分かれている。この実装方法は、ユーザー自身が好むほうを選択できるようにするものである。</p>
+    <p>ページの先頭近くにページ上のコントロールのラベルを拡張するためのコントロールを配置し、前後の文脈を加味しなくてもコントロールの目的を理解できるようにする。必ずコントロールの目的をラベルから直接理解できるようにすることが必要である。</p>
+    <p>この実装方法によってコントロールのラベルが拡張されるのは、現在参照しているページのみである。ただし、サイト全体で1回選択すればすむように、cookie やサーバー側のユーザープロファイルにこの設定を保存しておく方法もある。場合によっては、そのほうが望ましいかもしれない。</p>
+  </description>
   <examples>
     <eg-group>
       <head>ActionScript を使用してボタンのラベルに文脈の情報を直接追加する</head>
@@ -37,7 +39,7 @@ function clickHandler(e) {
   btn4.label = btn1.selected? "2010年版パンフレット Word版": "Word";
   btn4.width = btn1.selected? 200: 100;
 }</code>
-      <description><p>この結果は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH7/change_button_label.html">「ボタンのラベルにコンテキスト情報を追加する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH7/change_button_label.swf">「ボタンのラベルにコンテキスト情報を追加する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この結果は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH7/change_button_label.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ボタンのラベルにコンテキスト情報を追加する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH7/change_button_label.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ボタンのラベルにコンテキスト情報を追加する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -56,9 +58,9 @@ function clickHandler(e) {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH7.html">FLASH7: Using scripting to change control labels（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH7.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH7: Using scripting to change control labels（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

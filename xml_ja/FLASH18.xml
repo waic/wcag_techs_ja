@@ -12,11 +12,13 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、Flash ムービーの読み込み時に自動的に開始される音声を、利用者がオフにできるようにすることである。音声をオフにするコントロールは、利用者が素早く簡単に見つけられるようにページの先頭近くに置く必要がある。これは、スクリーンリーダー、画面拡大ソフト、スイッチメカニズムなどの支援技術を利用するユーザーにも利用しないユーザー（認知障害、学習障害、言語障害のあるユーザー）にも役立つ。</p>
-<p>この実装方法では、自動的に再生される音声を利用者がオフにできるようにするコントロールをコンテンツ制作者が実装する。アクセシビリティを最大化するためには、 Flash ムービーではなく HTML 文書にコントロールを追加する。HTML コントロールは、ExternalInterface クラスを通じて Flash ムービーと通信する。つまり、ユーザーは Flash コンテンツを操作しなくても、音声の再生を制御できるということである。実際のコンテンツでこの方法が適していない場合は、Flash コンテンツの内部にコントロールを配置することができる。その場合、このコントロールはキーボードで操作できるようにし、またタブ順序と読み上げ順序の最初に配置し、再生中の音声をオフにできることを明確に示すラベルを付ける。</p></description>
+  <description>
+    <p>この実装方法の目的は、Flash ムービーの読み込み時に自動的に開始される音声を、利用者がオフにできるようにすることである。音声をオフにするコントロールは、利用者が素早く簡単に見つけられるようにページの先頭近くに置く必要がある。これは、スクリーンリーダー、画面拡大ソフト、スイッチメカニズムなどの支援技術を利用するユーザーにも利用しないユーザー（認知障害、学習障害、言語障害のあるユーザー）にも役立つ。</p>
+    <p>この実装方法では、自動的に再生される音声を利用者がオフにできるようにするコントロールをコンテンツ制作者が実装する。アクセシビリティを最大化するためには、 Flash ムービーではなく HTML 文書にコントロールを追加する。HTML コントロールは、ExternalInterface クラスを通じて Flash ムービーと通信する。つまり、ユーザーは Flash コンテンツを操作しなくても、音声の再生を制御できるということである。実際のコンテンツでこの方法が適していない場合は、Flash コンテンツの内部にコントロールを配置することができる。その場合、このコントロールはキーボードで操作できるようにし、またタブ順序と読み上げ順序の最初に配置し、再生中の音声をオフにできることを明確に示すラベルを付ける。</p>
+  </description>
   <examples>
     <eg-group>
       <head>Flash 内に音声を停止するボタンを提供する</head>
@@ -60,7 +62,7 @@
     }
   }
 }</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH18/control_to_toggle_audio_as3.html">「Flash 内に音声を停止するボタンを提供する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH18/control_to_toggle_audio_as3.swf">「Flash 内に音声を停止するボタンを提供する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH18/control_to_toggle_audio_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「Flash 内に音声を停止するボタンを提供する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH18/control_to_toggle_audio_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「Flash 内に音声を停止するボタンを提供する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -143,7 +145,7 @@
       example to work&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH18/html_control_to_toggle_audio_as3.html">「Flash オブジェクトの前に音声を停止するボタンを提供する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH18/html_control_to_toggle_audio_as3.zip">「Flash オブジェクトの前に音声を停止するボタンを提供する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH18/html_control_to_toggle_audio_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「Flash オブジェクトの前に音声を停止するボタンを提供する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH18/html_control_to_toggle_audio_as3.zip" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「Flash オブジェクトの前に音声を停止するボタンを提供する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -180,9 +182,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH18.html">FLASH18: Providing a control to turn off sounds that play automatically in Flash（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH18.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH18: Providing a control to turn off sounds that play automatically in Flash（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

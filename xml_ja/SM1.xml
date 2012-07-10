@@ -10,11 +10,13 @@
     <success-criterion idref="media-equiv-extended-ad"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、会話の合間に入れられるよりも多くの音声ガイドを、視聴覚素材に付加することである。</p>
-		<p>SMIL 1.0 にはこれを達成する簡単な方法がないが、連続して順番に再生される複数のファイルに、音声ファイル及び映像ファイルを分割することによって実装できる。この方法によって追加した音声ガイドは、視聴覚コンテンツが停止している間に再生される。映像ファイルの最後のフレームは、画面に表示されたまま一時停止し、その間に音声ファイルが再生される。</p>
-		<p>これにより、映像は最初から最後まで再生されるように見えながらも、ところどころで停止して、その間に長めの音声ガイドが提供される。そして、音声ガイドが終了すると、映像の再生が自動的に再開する。</p>
-		<p>この拡張した音声ガイドのオン／オフを操作するには、スクリプトを使用して、拡張した音声ガイドを含んだSMILスクリプト及び含まないSMILスクリプトの2つの間で切り替えることによって実装できる。又は、スクリプトを使用して、拡張した音声ガイドをSMILファイルに追加したりSMILファイルから削除したりすることもできる。そうすることで、映像クリップは、単純に順序どおり再生されることになる。</p>
-		<p>スクリプトが使用できない場合は、2つのバージョンの映像を提供することによって可能となる。つまり、1つは拡張した音声ガイドを含んだバージョン、もう1つは含まないバージョンを提供するのである。</p></description>
+  <description>
+    <p>この実装方法の目的は、会話の合間に入れられるよりも多くの音声ガイドを、視聴覚素材に付加することである。</p>
+    <p>SMIL 1.0 にはこれを達成する簡単な方法がないが、連続して順番に再生される複数のファイルに、音声ファイル及び映像ファイルを分割することによって実装できる。この方法によって追加した音声ガイドは、視聴覚コンテンツが停止している間に再生される。映像ファイルの最後のフレームは、画面に表示されたまま一時停止し、その間に音声ファイルが再生される。</p>
+    <p>これにより、映像は最初から最後まで再生されるように見えながらも、ところどころで停止して、その間に長めの音声ガイドが提供される。そして、音声ガイドが終了すると、映像の再生が自動的に再開する。</p>
+    <p>この拡張した音声ガイドのオン／オフを操作するには、スクリプトを使用して、拡張した音声ガイドを含んだSMILスクリプト及び含まないSMILスクリプトの2つの間で切り替えることによって実装できる。又は、スクリプトを使用して、拡張した音声ガイドをSMILファイルに追加したりSMILファイルから削除したりすることもできる。そうすることで、映像クリップは、単純に順序どおり再生されることになる。</p>
+    <p>スクリプトが使用できない場合は、2つのバージョンの映像を提供することによって可能となる。つまり、1つは拡張した音声ガイドを含んだバージョン、もう1つは含まないバージョンを提供するのである。</p>
+  </description>
   <examples>
     <eg-group>
       <head>拡張した音声ガイドのあるSMIL 1.0の映像、メインのメディアを4箇所で停止して拡張した音声ガイドを挿入している</head>
@@ -120,9 +122,9 @@ xmlns="http://www.w3.org/TR/REC-smil" qt:time-slider="true"&gt;
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SM1.html">SM1: Adding extended audio description in SMIL 1.0（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SM1.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SM1: Adding extended audio description in SMIL 1.0（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

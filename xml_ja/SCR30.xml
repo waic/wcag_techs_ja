@@ -9,10 +9,12 @@
     <success-criterion idref="navigation-mechanisms-link"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、リンクが文脈以外でも理解可能になるように、追加情報をリンクテキストに加えることを利用者が選択できるようにすることである。</p>
-		<p>一部の利用者は、リンクの文脈を参照する必要がないように、リンクがすべてを含んでいることを好む。別の利用者は、それぞれのリンクに文脈に関する情報が含まれていると、反復されてサイトの使い勝手が低下すると感じている。支援技術の利用者の間では、どちらが好ましいかに関して、ワーキンググループへのフィードバックは分かれている。この実装方法は、利用者自身にとって良い方法を選ぶことを可能にする。</p>
-		<p>どのようなリンクの目的を理解する場合でも追加の文脈が必要とならないようにするため、そのページのリンクのリンクテキストを展開するページの先頭近くにリンクが提供される。展開されるリンクの目的がそのリンクテキストから、常に直接理解可能でなければならない。</p>
-		<p>この実装方法では、現在表示されているページのリンクだけを展開する。利用者がそのサイトに対して1度だけ設定を行えば良いようにするために、設定情報をCookie又はサーバーサイドの利用者プロファイルに保存することも可能であり、場合によってはそれが望ましい。</p></description>
+  <description>
+    <p>この実装方法の目的は、リンクが文脈以外でも理解可能になるように、追加情報をリンクテキストに加えることを利用者が選択できるようにすることである。</p>
+    <p>一部の利用者は、リンクの文脈を参照する必要がないように、リンクがすべてを含んでいることを好む。別の利用者は、それぞれのリンクに文脈に関する情報が含まれていると、反復されてサイトの使い勝手が低下すると感じている。支援技術の利用者の間では、どちらが好ましいかに関して、ワーキンググループへのフィードバックは分かれている。この実装方法は、利用者自身にとって良い方法を選ぶことを可能にする。</p>
+    <p>どのようなリンクの目的を理解する場合でも追加の文脈が必要とならないようにするため、そのページのリンクのリンクテキストを展開するページの先頭近くにリンクが提供される。展開されるリンクの目的がそのリンクテキストから、常に直接理解可能でなければならない。</p>
+    <p>この実装方法では、現在表示されているページのリンクだけを展開する。利用者がそのサイトに対して1度だけ設定を行えば良いようにするために、設定情報をCookie又はサーバーサイドの利用者プロファイルに保存することも可能であり、場合によってはそれが望ましい。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>この例では、JavaScript を用いて直接リンクのテキストに文脈上の情報を追加する。linkクラスはどのテキストを追加するかを決定する。「リンクを展開する」リンクが選択されたとき、ページ内のそれぞれのリンクにテキストを追加すべきかがテストされる。</p>
@@ -95,9 +97,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR30.html">SCR30: Using scripts to change the link text（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SCR30.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCR30: Using scripts to change the link text（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：辻 勝利（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

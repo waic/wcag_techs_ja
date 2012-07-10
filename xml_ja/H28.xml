@@ -40,12 +40,10 @@
 </ul>
     </ua-issue>
   </ua-issues>
-  <description><p>
-							この実装方法の目的は、<code>abbr</code>要素と<code>acronym</code>要素を用いることで、略語に対して元の語又は定義を提供することである</p>
-          
-					<p>
-							<code>abbr</code>要素は、頭字語や頭文字語を含むあらゆる略語に用いてよい。HTML及びXHTMLでは、頭文字語や頭字語は<code>acronym</code>要素を用いてマークアップすることもできる。XHTML 2.0では、<code>acronym</code>要素を廃止し、より一般的な<code>abbr</code>要素の利用が提案されている。
-							</p></description>
+  <description>
+    <p>この実装方法の目的は、<code>abbr</code>要素と<code>acronym</code>要素を用いることで、略語に対して元の語又は定義を提供することである</p>
+    <p><code>abbr</code>要素は、頭字語や頭文字語を含むあらゆる略語に用いてよい。HTML及びXHTMLでは、頭文字語や頭字語は<code>acronym</code>要素を用いてマークアップすることもできる。XHTML 2.0では、<code>acronym</code>要素を廃止し、より一般的な<code>abbr</code>要素の利用が提案されている。</p>
+  </description>
   <examples>
     <eg-group>
       <head>abbr要素を用いて略語の元の語を示す</head>
@@ -71,12 +69,16 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/text.html#edef-ABBR" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 ABBR&#13;
-                    element</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/text.html#edef-ABBR" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 ABBR&#13;
+                    element</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/xhtml2/mod-text.html#sec_9.1." xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XHTML 2.0 abbr&#13;
-                    element</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/xhtml2/mod-text.html#sec_9.1." xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">XHTML 2.0 abbr&#13;
+                    element</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -104,9 +106,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H28.html">H28: Providing definitions for abbreviations by using the abbr and acronym elements（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H28.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H28: Providing definitions for abbreviations by using the abbr and acronym elements（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

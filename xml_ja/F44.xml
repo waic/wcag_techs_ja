@@ -8,13 +8,11 @@
     <success-criterion idref="navigation-mechanisms-focus-order"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この文書は、タブ順序がコンテンツの論理的な関係性及び順序に従っていない不適合事例について述べている。</p>
-          
-               <p>リンク及びフォーム要素のようなフォーカス可能な要素には、<code>tabindex</code>属性がある。要素は、<code>tabindex</code>属性の値が小さいものから大きいものへという順序でフォーカスを受け取る。
-			   <code>tabindex</code>属性の値が、コンテンツ内での関係性及び順序とは異なる順序で割り当てられていると、もはやタブ順序はコンテンツの関係性及び順序に従っていないことになる。</p>
-          
-               <p>この不適合事例は、以前より<code>tabindex</code>属性が用いられてきたページを編集する際に最もよく起こる。コンテンツが編集されているのに、
-			   <code>tabindex</code>属性がコンテンツの変更に応じて更新されていないと、タブ順序及びコンテンツの順序が一致しなくなる。</p></description>
+  <description>
+    <p>この文書は、タブ順序がコンテンツの論理的な関係性及び順序に従っていない不適合事例について述べている。</p>
+    <p>リンク及びフォーム要素のようなフォーカス可能な要素には、<code>tabindex</code>属性がある。要素は、<code>tabindex</code>属性の値が小さいものから大きいものへという順序でフォーカスを受け取る。<code>tabindex</code>属性の値が、コンテンツ内での関係性及び順序とは異なる順序で割り当てられていると、もはやタブ順序はコンテンツの関係性及び順序に従っていないことになる。</p>
+    <p>この不適合事例は、以前より<code>tabindex</code>属性が用いられてきたページを編集する際に最もよく起こる。コンテンツが編集されているのに、<code>tabindex</code>属性がコンテンツの変更に応じて更新されていないと、タブ順序及びコンテンツの順序が一致しなくなる。</p>
+  </description>
   <examples>
     <eg-group role="failure">
       <description><p>次の事例は、代替のタブ順序を指定するためにtabindexを誤って用いている。</p>
@@ -65,10 +63,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F44.html">F44: Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that does not preserve meaning and operability（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F44.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F44: Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that does not preserve meaning and operability（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -8,18 +8,20 @@
     <success-criterion idref="content-structure-separation-programmatic"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、プレーンテキストのドキュメントにおいて、段落であることが分かるようにすることである。段落は、まとまりのあるテキストのブロックで、例えば、関連する複数の文章によって1つのトピックを形成したり、より大きなトピックの中でまとまりのある一部分を形成したりするものである。</p>
-		<p>段落の始まりは、次のものによって示される。</p>
-		<ul>
+  <description>
+    <p>この実装方法の目的は、プレーンテキストのドキュメントにおいて、段落であることが分かるようにすることである。段落は、まとまりのあるテキストのブロックで、例えば、関連する複数の文章によって1つのトピックを形成したり、より大きなトピックの中でまとまりのある一部分を形成したりするものである。</p>
+    <p>段落の始まりは、次のものによって示される。</p>
+    <ul>
 <li><p>コンテンツの始まり（つまり、その段落が文書内で最初のコンテンツとなっている）、又は</p></li>
 			<li><p>段落のテキストの前にある1行の空白行</p></li>
 		</ul>
-<p>段落の終わりは、次のものによって示される。</p>
-		<ul>
+    <p>段落の終わりは、次のものによって示される。</p>
+    <ul>
 <li><p>コンテンツの終わり（つまり、その段落が文書内で最後のコンテンツとなっている）、又は</p></li>
 			<li><p>段落のテキストの後にある1行もしくは複数の空白行</p></li>
 		</ul>
-<p>空白行には、何もないか、又はスペースやタブなどの印刷できない文字が含まれていて、そのすぐ後に新しい行がある。</p></description>
+    <p>空白行には、何もないか、又はスペースやタブなどの印刷できない文字が含まれていて、そのすぐ後に新しい行がある。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>2つの段落。それぞれが1行の空白行で始まり、1行の空白行で終わっている。</p>
@@ -58,9 +60,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/T1.html">T1: Using standard text formatting conventions for paragraphs（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/T1.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">T1: Using standard text formatting conventions for paragraphs（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

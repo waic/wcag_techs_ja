@@ -8,17 +8,16 @@
     <success-criterion idref="ensure-compat-rsv"/>
   </applies-to>
   <ua-issues/>
-  <description><p> この実装方法の目的は、支援技術がウェブコンテンツを理解できるようにすることである。そうすることで、代替のユーザーインタフェースを通して利用者に等価の情報を伝えることができ、
+  <description>
+    <p>この実装方法の目的は、支援技術がウェブコンテンツを理解できるようにすることである。そうすることで、代替のユーザーインタフェースを通して利用者に等価の情報を伝えることができ、
 また支援技術を通してコントロールを操作することができるようになる。</p>
-          
-               <p> この実装方法は、これらのプロパティを支援技術に明示するために、標準で、文書化され、かつサポート
+    <p>この実装方法は、これらのプロパティを支援技術に明示するために、標準で、文書化され、かつサポート
 された機能を使用することを前提にしている。それは標準的なブラウザにおいてこれら標準的なコントロールは仕様にそっているからである。</p>
-          
-               <p>HTMLに対してはこれらの条件が当てはまる。他のウェブコンテンツ技術に対しても当てはまるかもしれない。</p>
-          
-               <p> 構成要素がアクセシビリティをサポートしている時でさえ、コンテンツ制作者によって提供される情報は必要不可欠である。
+    <p>HTMLに対してはこれらの条件が当てはまる。他のウェブコンテンツ技術に対しても当てはまるかもしれない。</p>
+    <p>構成要素がアクセシビリティをサポートしている時でさえ、コンテンツ制作者によって提供される情報は必要不可欠である。
 例えば、コントロールは識別名を提供する能力を持っているかもしれないが、コンテンツ制作者はそれでも名前を提供しなければならない。
-また一方、それは固定の役割のある標準的な構成要素であるため、役割の属性はすでに提供されているかもしれない。</p></description>
+また一方、それは固定の役割のある標準的な構成要素であるため、役割の属性はすでに提供されているかもしれない。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>HTML又はXHTMLで書かれたウェブページは標準的なフォーム・コントロールを使用し、タイトル属性を使用して
@@ -59,9 +58,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G108.html">G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G108.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通株式会社</loc>,<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com/group/fdl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通デザイン株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

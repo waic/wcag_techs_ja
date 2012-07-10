@@ -10,7 +10,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
   <description>
@@ -79,15 +79,21 @@
     &lt;/div&gt;
   &lt;/body&gt;
 &lt;/tt&gt;</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH9/adding_captions_to_Flash_video_as3.html">「Timed Textのキャプションファイルを Flash に追加する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH9/adding_captions_to_Flash_video_as3.zip">「Timed Textのキャプションファイルを Flash に追加する」のサンプルをダウンロード</a>することもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH9/adding_captions_to_Flash_video_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「Timed Textのキャプションファイルを Flash に追加する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH9/adding_captions_to_Flash_video_as3.zip" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「Timed Textのキャプションファイルを Flash に追加する」のサンプルをダウンロード</loc>することもできる。</p>
 </description>
     </eg-group>
   </examples>
   <resources>
     <see-also>
-      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines</loc></p>
-      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.buraks.com/captionate/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://www.buraks.com/captionate/</loc></p>
-      <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/AudioVideo/TT/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://www.w3.org/AudioVideo/TT/</loc></p>
+      <p>
+        <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://ncam.wgbh.org/invent_build/web_multimedia/tools-guidelines</loc>
+      </p>
+      <p>
+        <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.buraks.com/captionate/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://www.buraks.com/captionate/</loc>
+      </p>
+      <p>
+        <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/AudioVideo/TT/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">http://www.w3.org/AudioVideo/TT/</loc>
+      </p>
     </see-also>
   </resources>
   <related-techniques>
@@ -116,9 +122,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH9.html">FLASH9: Applying captions to prerecorded synchronized media（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH9.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH9: Applying captions to prerecorded synchronized media（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

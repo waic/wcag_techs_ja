@@ -12,12 +12,14 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、支援技術による読み上げが可能になるように Flash 内の非テキストオブジェクトをマークする方法を示すことである。</p>
+  <description>
+    <p>この実装方法の目的は、支援技術による読み上げが可能になるように Flash 内の非テキストオブジェクトをマークする方法を示すことである。</p>
     <p>Flash Player は、非テキストオブジェクトについて、アクセシビリティオブジェクト内の名前プロパティを使用した代替テキストをサポートしている。この代替テキストは ActionScript または Flash オーサリングツールで定義することができる。</p>
-    <p>オブジェクトがコンテンツを理解する上で重要な語句を含んでいる場合は、名前プロパティにそれらの語句を含める必要がある。これにより、名前プロパティがオブジェクトと同等の機能をページ上で果たすことが可能になる。名前プロパティにはオブジェクトの見た目の特徴を記述するのではなく、オブジェクトの意味を伝える必要があることに注意する。</p></description>
+    <p>オブジェクトがコンテンツを理解する上で重要な語句を含んでいる場合は、名前プロパティにそれらの語句を含める必要がある。これにより、名前プロパティがオブジェクトと同等の機能をページ上で果たすことが可能になる。名前プロパティにはオブジェクトの見た目の特徴を記述するのではなく、オブジェクトの意味を伝える必要があることに注意する。</p>
+  </description>
   <examples>
     <eg-group>
       <head>シンボル（グラフィック、ボタン、ムービークリップ）に代替テキストを適用する</head>
@@ -75,9 +77,9 @@ print_btn.accessibilityProperties.name = "印刷する";</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH1.html">FLASH1: Setting the name property for a non-text object（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH1.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH1: Setting the name property for a non-text object（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

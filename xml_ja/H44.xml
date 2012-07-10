@@ -47,19 +47,12 @@
                      </li>
 </ul></ua-issue>
   </ua-issues>
-  <description><p>
-							この実装方法の目的は、フォーム・コントロールとラベルを明示的に関連付けるために、<code>label</code>要素を利用することである。ラベルは、<code>label</code>要素の<code>for</code>属性によって特定のフォーム・コントロールと結びつけることができる。この場合、<code>for</code>属性値はフォーム・コントロールの<code>id</code>属性値と同じでなければならない。</p>
-          
-					<p>
-							<code>id</code>属性が<code>name</code>属性と同じ値で、両方とも指定しなければならない場合でも、その<code>id</code>はそのウェブページ内で一意的なものとして、重複して使用してはならない。</p>
-            
-						<p>
-						この実装方法は、<code>label</code>要素が見えているかどうか、つまりCSSで非表示にしているかどうかに関わらず、達成基準 1.1.1、1.3.1、4.1.2を満たすことができる。しかし、達成基準 3.3.2では、<code>label</code>要素を入力フィールドの理解に役立てたい全ての利用者のために、見える状態にしておかなければならない、としている。</p>
-          
-					<p>
-							<code>input</code>要素の<code>type="checkbox"</code>と<code>type="radio"</code>では、<code>label</code>要素をその後に配置することに注意する。</p>
-          
-					<note><p class="prefix">
+  <description>
+    <p>この実装方法の目的は、フォーム・コントロールとラベルを明示的に関連付けるために、<code>label</code>要素を利用することである。ラベルは、<code>label</code>要素の<code>for</code>属性によって特定のフォーム・コントロールと結びつけることができる。この場合、<code>for</code>属性値はフォーム・コントロールの<code>id</code>属性値と同じでなければならない。</p>
+    <p><code>id</code>属性が<code>name</code>属性と同じ値で、両方とも指定しなければならない場合でも、その<code>id</code>はそのウェブページ内で一意的なものとして、重複して使用してはならない。</p>
+    <p>この実装方法は、<code>label</code>要素が見えているかどうか、つまりCSSで非表示にしているかどうかに関わらず、達成基準 1.1.1、1.3.1、4.1.2を満たすことができる。しかし、達成基準 3.3.2では、<code>label</code>要素を入力フィールドの理解に役立てたい全ての利用者のために、見える状態にしておかなければならない、としている。</p>
+    <p><code>input</code>要素の<code>type="checkbox"</code>と<code>type="radio"</code>では、<code>label</code>要素をその後に配置することに注意する。</p>
+    <note><p class="prefix">
 									明示的なラベルを利用する要素は次の通りである：</p>
 <ul>
 <li>
@@ -149,7 +142,8 @@
 								<p>スクリプトボタン（<code>button</code>要素又は<code>&lt;input type="button"&gt;</code>）</p>
               
                      </li>
-</ul></note></description>
+</ul></note>
+  </description>
   <examples>
     <eg-group>
       <head>テキスト入力フィールド</head>
@@ -166,7 +160,7 @@
     <eg-group>
       <head>ラジオボタンのグループ</head>
       <description><p>関連するラジオボタンの小さなグループについて、簡単な説明が付けてあり、さらに個々の要素にラベルが付けてある。</p>
-<note>ラジオボタンの数が多く、それらの関連付けや操作説明を必要とする場合は、<a href="H71.html"><em>H71:  Providing a description for groups of form controls using fieldset and legend elements</em></a> の方法を考慮すべきである。</note>
+<note>ラジオボタンの数が多く、それらの関連付けや操作説明を必要とする場合は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H71.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"><em>H71:  Providing a description for groups of form controls using fieldset and legend elements</em></loc> の方法を考慮すべきである。</note>
 </description>
       <code>&lt;h1&gt;ドーナツ&lt;/h1&gt;
 
@@ -190,10 +184,14 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/interact/forms.html#h-17.9" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 form labels</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/interact/forms.html#h-17.9" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 form labels</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.usability.com.au/resources/wcag2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Accessible Forms using WCAG 2.0</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -243,9 +241,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H44.html">H44: Using label elements to associate text labels with form controls（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H44.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H44: Using label elements to associate text labels with form controls（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

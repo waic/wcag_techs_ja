@@ -13,7 +13,7 @@
     </ua-issue>
   </ua-issues>
   <description>
-    <p>CSSの<code>:before</code> と<code>:after</code> の擬似要素が、要素のドキュメントツリーコンテンツの前及び後のコンテンツの位置を指定している。そして、<code>content</code>プロパティが、それらの擬似要素とあわせて、何が挿入されるかを指定している。スタイル情報をカスタマイズしたり完全にオフにしたりして、自分のニーズに合わせてコンテンツを閲覧している利用者の場合、CSSを用いて挿入されている情報に支援技術がアクセスできないことがある。そのため、これらのプロパティを使って非装飾的なコンテンツを挿入するのは、不適合となる。</p>
+    <p>CSSの<code>:before</code>と<code>:after</code>の擬似要素が、要素のドキュメントツリーコンテンツの前及び後のコンテンツの位置を指定している。そして、<code>content</code>プロパティが、それらの擬似要素とあわせて、何が挿入されるかを指定している。スタイル情報をカスタマイズしたり完全にオフにしたりして、自分のニーズに合わせてコンテンツを閲覧している利用者の場合、CSSを用いて挿入されている情報に支援技術がアクセスできないことがある。そのため、これらのプロパティを使って非装飾的なコンテンツを挿入するのは、不適合となる。</p>
   </description>
   <examples>
     <eg-group>
@@ -90,9 +90,9 @@ q:after  { content: close-quote }</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F87.html">F87: Failure of 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F87.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F87: Failure of 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

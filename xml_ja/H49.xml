@@ -27,11 +27,10 @@
 </ul>
     </ua-issue>
   </ua-issues>
-  <description><p>
-							この実装方法の目的は、強調または特別なテキストのマークアップをするとき、プログラムで解釈可能なようにする方法を示すことである。また、強調または特別なテキストのマークアップにセマンティックなマークアップを用いることで、その文書に構造を与えることができる。例えば、ユーザーエージェントは、構造が異なるものは異なる視覚表現にしたり、聴覚表現で異なる声やピッチにしたりすることで、利用者の構造の理解を促すことができる。 </p>
-          
-					<p>
-							大部分のユーザーエージェントは、セマンティックなマークアップによって特定されたテキストを、ほかとは別の見た目にする。支援技術の中には、セマンティックなマークアップを適切に用いることで、コンテンツの特性を決定するためのメカニズムを提供するものもある。</p></description>
+  <description>
+    <p>この実装方法の目的は、強調または特別なテキストのマークアップをするとき、プログラムで解釈可能なようにする方法を示すことである。また、強調または特別なテキストのマークアップにセマンティックなマークアップを用いることで、その文書に構造を与えることができる。例えば、ユーザーエージェントは、構造が異なるものは異なる視覚表現にしたり、聴覚表現で異なる声やピッチにしたりすることで、利用者の構造の理解を促すことができる。</p>
+    <p>大部分のユーザーエージェントは、セマンティックなマークアップによって特定されたテキストを、ほかとは別の見た目にする。支援技術の中には、セマンティックなマークアップを適切に用いることで、コンテンツの特性を決定するためのメカニズムを提供するものもある。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>
@@ -84,8 +83,10 @@ we can never do anything good in the world.&lt;/q&gt;"と述べている。&lt;/
           <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html4/struct/text.html#h-9.2.3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Subscripts and superscripts: the SUB and SUP elements</loc></p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/fixing-ie-quotes.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Fixing Quotes in&#13;
-                    Internet Explorer</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/fixing-ie-quotes.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Fixing Quotes in&#13;
+                    Internet Explorer</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -118,9 +119,9 @@ we can never do anything good in the world.&lt;/q&gt;"と述べている。&lt;/
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H49.html">H49: Using semantic markup to mark emphasized or special text（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H49.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H49: Using semantic markup to mark emphasized or special text（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

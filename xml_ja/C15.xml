@@ -26,12 +26,11 @@ Windows版のOpera 9.02は、1行の入力フィールド、複数行の入力�
 Windows版のFirefox 2.0とOpera 9.02、SeaMonkey 1.1は、フォームのラベルに対する隣接兄弟セレクタにも対応している。Windows版のFirefox 1.5、Internet Explorer 6.0とそれ以前のバージョンは、フォームのラベルに対する隣接兄弟セレクタには対応していない。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>
-この実装方法の目的は、インタラクティブな要素がフォーカスされたとき、又は利用者がポインティングデバイスを使ってカーソルを上にのせたときに、スタイルシートを使って視覚的なフィードバックを返すようにすることで視覚表現がどれだけ強調されるのかを示すことである。
+  <description>
+    <p>この実装方法の目的は、インタラクティブな要素がフォーカスされたとき、又は利用者がポインティングデバイスを使ってカーソルを上にのせたときに、スタイルシートを使って視覚的なフィードバックを返すようにすることで視覚表現がどれだけ強調されるのかを示すことである。
 フォーカスされた要素又はカーソルが上にのせられた要素をハイライトすることで、その要素がインタラクティブであること、又はインタラクティブな要素の範囲内であるなどの情報を提供することができる。</p>
-            
-               <p>
-複数のモードに対して視覚的なフィードバックを返すことが可能な場合もある。通常、それは要素の上にカーソルをのせるためにマウスを使ったり、又は要素にタブで移動するためのキーボードを使ったりする場合である。</p></description>
+    <p>複数のモードに対して視覚的なフィードバックを返すことが可能な場合もある。通常、それは要素の上にカーソルをのせるためにマウスを使ったり、又は要素にタブで移動するためのキーボードを使ったりする場合である。</p>
+  </description>
   <examples>
     <eg-group>
       <head>: リンク要素</head>
@@ -91,10 +90,14 @@ Windows版のFirefox 2.0とOpera 9.02、SeaMonkey 1.1は、フォームのラベ
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: 5.11.3 The dynamic pseudo-classes: :hover, :active, and :focus</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: 5.11.3 The dynamic pseudo-classes: :hover, :active, and :focus</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/selector.html#adjacent-selectors" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: 5.7 Adjacent sibling selectors</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/CSS2/selector.html#adjacent-selectors" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSS 2.0: 5.7 Adjacent sibling selectors</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -135,9 +138,9 @@ Windows版のFirefox 2.0とOpera 9.02、SeaMonkey 1.1は、フォームのラベ
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/C15.html">C15: Using CSS to change the presentation of a user interface component when it receives focus（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.ofujimiki.jp/">大藤 幹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/C15.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">C15: Using CSS to change the presentation of a user interface component when it receives focus（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ofujimiki.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">大藤 幹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

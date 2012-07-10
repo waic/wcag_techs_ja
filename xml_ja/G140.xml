@@ -10,13 +10,11 @@
     <success-criterion idref="visual-audio-contrast-text-images"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、表現的なエンコーディングからコンテンツの構造的なエンコーディングを論理的に分離することによって、支援技術のコンテンツとのインタラクションを容易にすることである。構造的なエンコーディングとは、見出し、段落、リスト、テーブルなどの要素を指定することであり、そういった目的のために用意されたウェブコンテンツ技術の機能を使用することによって行われる。一方、表現的なエンコーディングとは、書体、色、サイズ、位置、ボーダーのような書式効果の指定であり、ウェブコンテンツ技術の機能によってもサポートされている。</p>
-          
-               <p>表現的な特性は視覚的に構造を暗示する、つまり利用者は用いられている書式設定の慣例から、見出し、段落、リストなどを判断できる。その一方で、これらの特性は、支援技術によるそのページとの効果的なインタラクションに十分なほど曖昧さのないように構造をエンコードしているわけではない。分離した構造、機能そして表現のレイヤーを提供することにより、書式設定によって暗示された意味を構造のレイヤーを通してプログラムが解釈できるようになる。</p>
-          
-               <p>この実装方法を用いることによって、ユーザーエージェントでは次のことが可能になる：</p>
-          
-               <ul>
+  <description>
+    <p>この実装方法の目的は、表現的なエンコーディングからコンテンツの構造的なエンコーディングを論理的に分離することによって、支援技術のコンテンツとのインタラクションを容易にすることである。構造的なエンコーディングとは、見出し、段落、リスト、テーブルなどの要素を指定することであり、そういった目的のために用意されたウェブコンテンツ技術の機能を使用することによって行われる。一方、表現的なエンコーディングとは、書体、色、サイズ、位置、ボーダーのような書式効果の指定であり、ウェブコンテンツ技術の機能によってもサポートされている。</p>
+    <p>表現的な特性は視覚的に構造を暗示する、つまり利用者は用いられている書式設定の慣例から、見出し、段落、リストなどを判断できる。その一方で、これらの特性は、支援技術によるそのページとの効果的なインタラクションに十分なほど曖昧さのないように構造をエンコードしているわけではない。分離した構造、機能そして表現のレイヤーを提供することにより、書式設定によって暗示された意味を構造のレイヤーを通してプログラムが解釈できるようになる。</p>
+    <p>この実装方法を用いることによって、ユーザーエージェントでは次のことが可能になる：</p>
+    <ul>
 <li>
               
                      <p>セクションの並び替え、又はセクションのリストやリンクのリストの生成のように、コンテンツの既存の構造をベースにした意味ある構造の変換を実行する。</p>
@@ -32,7 +30,8 @@
                      <p>構造の特性に付随した代替の表現ルールを代用することによって、コンテンツの表現を改良する。</p>
             
                   </li>
-</ul></description>
+</ul>
+  </description>
   <examples>
     <eg-group>
       <head>: CSS付きのHTML</head>
@@ -73,11 +72,11 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G140.html">G140: Separating information and structure from presentation to enable different presentations
-（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G140.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G140: Separating information and structure from presentation to enable different presentations&#13;
+（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通株式会社</loc>,<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com/group/fdl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通デザイン株式会社</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

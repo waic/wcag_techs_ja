@@ -9,22 +9,18 @@
     <success-criterion idref="ensure-compat-rsv"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、HTML及びXHTMLをそれぞれの仕様に準じて用いることである。
+  <description>
+    <p>この実装方法の目的は、HTML及びXHTMLをそれぞれの仕様に準じて用いることである。
 			   技術仕様では、そのウェブコンテンツ技術の意味及び機能の適切な取扱方法を定めている。
 			   仕様に記述されている通りにHTML及びXHTMLの機能を用いることによって、支援技術を含むユーザーエージェントが、
 			   コンテンツ制作者の意図通りで互いに相互運用性のある機能を提示することが可能となる。</p>
-                
-                
-               <p>この文書を記述した時点では、HTML及びXHTMLの妥当なバージョンは、HTML 4.01 及び XHTML 1.0である。
+    <p>この文書を記述した時点では、HTML及びXHTMLの妥当なバージョンは、HTML 4.01 及び XHTML 1.0である。
 			   HTML 4.01は、HTMLの最も成熟したバージョンであり、特定のアクセシビリティ機能を提供し、
 			   ユーザーエージェントによって広くサポートされている。XHTML 1.0は、HTML 4.01と同じ機能を提供しているが、
 			   XML構造を用いており、HTMLの構造よりも厳密な構文となっている。HTML及びXHTMLの最新バージョンは、まだ未成熟であり
 			   、ユーザーエージェントにもまだ広くサポートされていないのが現状である。</p>
-                
-                
-               <p>HTML及びXHTMLを仕様に準じて用いるにあたり、幾つかの留意すべき点がある。</p>
-                
-               <ol class="enumar">
+    <p>HTML及びXHTMLを仕様に準じて用いるにあたり、幾つかの留意すべき点がある。</p>
+    <ol class="enumar">
 <li>
                      <p>
                         <strong>仕様で定められている機能だけを用いる：</strong>HTMLでは、ウェブページで用いることのできる要素、属性及び属性値の一式を定義している。
@@ -51,7 +47,8 @@
 						意図された文書の表現となるようにユーザーエージェントがコンテンツを処理できるようにするためにある。HTML及びXHTMLの仕様における構造のルールに従うことが、
 						仕様に準じてそれらのウェブコンテンツ技術を用いる上で重要なことの一つである。</p>
                   </li>
-</ol></description>
+</ol>
+  </description>
   <examples/>
   <resources>
     <see-also>
@@ -90,9 +87,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H88.html">H88: Using HTML according to spec（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/H88.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H88: Using HTML according to spec（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

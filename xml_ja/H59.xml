@@ -17,14 +17,14 @@
 <li>
 										 <p>ユーザーエージェントの一部は、link要素で指定されている情報を表示する追加的なナビゲーションバーを提供する。MozillaとOperaの現在のバージョンがこの機能を提供する。IE 6.0とFirefox 1.5はこの機能を提供しないが、拡張機能やアドオンを通して利用できることがある。</p>
             
-						<p><code>link</code>要素のブラウザサポートに関する詳しい情報は、<a href="http://www.subotnik.net/html/link">(X)HTMLにおける「link」要素（英語）</a>を参照。</p>
+						<p><code>link</code>要素のブラウザサポートに関する詳しい情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.subotnik.net/html/link" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">(X)HTMLにおける「link」要素（英語）</loc>を参照。</p>
                      </li>
 </ul>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、link要素を用いて、あるHTMLページがウェブページ一式の中でどのような位置にあるのかを示すメタデータを提供する方法、及び利用者がウェブページ一式の中で特定のコンテンツを発見することを支援する方法について解説することである。rel属性の値が、どのような関係性が定義されているのかを示し、href属性がその関係を持つドキュメントへのリンクを提供する。複数のlink要素を用いることで、複数の関係を示すこともできる。<code>rel</code>属性の値としては、以下のようなものが有用である:</p>
-          
-               <ul>
+  <description>
+    <p>この実装方法の目的は、link要素を用いて、あるHTMLページがウェブページ一式の中でどのような位置にあるのかを示すメタデータを提供する方法、及び利用者がウェブページ一式の中で特定のコンテンツを発見することを支援する方法について解説することである。rel属性の値が、どのような関係性が定義されているのかを示し、href属性がその関係を持つドキュメントへのリンクを提供する。複数のlink要素を用いることで、複数の関係を示すこともできる。<code>rel</code>属性の値としては、以下のようなものが有用である:</p>
+    <ul>
 <li>
               
 							<p>Start：複数のドキュメントの中の最初のドキュメントへのリンク</p>
@@ -50,7 +50,8 @@
 							<p>Index：現在のドキュメントに対して索引を提供するドキュメントへのリンク</p>
             
                   </li>
-</ul></description>
+</ul>
+  </description>
   <examples>
     <eg-group>
       <description><p>オンライン書籍の第2章のウェブページがあり、<code>head</code>要素セクションに次のリンクが含まれている。</p>
@@ -65,16 +66,22 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html#edef-LINK" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    LINK element</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/struct/links.html#edef-LINK" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    LINK element</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/types.html#type-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 link&#13;
-                    types</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/REC-html40/types.html#type-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01 link&#13;
+                    types</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://cdn.mozdev.org/linkToolbar/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Link Toolbar extension for&#13;
-                  Firefox</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://cdn.mozdev.org/linkToolbar/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Link Toolbar extension for&#13;
+                  Firefox</loc>
+          </p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/QA/Tips/use-links" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Use &lt;link&gt;s in your&#13;
@@ -85,7 +92,9 @@
                     Document Relationship</loc>from Web Design Group</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.subotnik.net/html/link" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The 'link'-Element in (X)HTML</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.subotnik.net/html/link" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">The 'link'-Element in (X)HTML</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -136,9 +145,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H59.html">H59: Using the link element and navigation tools（英語）</a></item>
-      <item>日本語訳監修：<a href="http://NAKANE-Masafumi.jp/">中根 雅文</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H59.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H59: Using the link element and navigation tools（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://NAKANE-Masafumi.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">中根 雅文</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

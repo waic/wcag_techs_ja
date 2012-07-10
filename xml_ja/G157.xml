@@ -27,25 +27,38 @@
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.captionedtext.com/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Captioned Text</loc>(provider for relay conference captioning)</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.google.com/Top/Arts/Television/Closed_Captioning/Service_Providers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Google Directory of Closed Caption Service Providers</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.google.com/Top/Arts/Television/Closed_Captioning/Service_Providers/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Google Directory of Closed Caption Service Providers</loc>
+          </p>
         </item>
         <item>
           <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://en.wikipedia.org/wiki/Communication_Access_Real-Time_Translation" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Wikipedia entry for CART</loc>(variously Computer Assisted Real-time Captioning or Communication Access Real-time Translation)</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.captions.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Closed Captioning Web</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.captions.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Closed Captioning Web</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cartinfo.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Communication Access Information Center</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cartinfo.org/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Communication Access Information Center</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://onlineconferencingsystems.com/vpat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">IDEAL Conference</loc><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/resources/accessibility/tools/vpat/acrobatconnect_508.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Acrobat Connect</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://onlineconferencingsystems.com/vpat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">IDEAL Conference</loc>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/resources/accessibility/tools/vpat/acrobatconnect_508.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Acrobat Connect</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://onlineconferencingsystems.com/vpat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">IDEAL Conference</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://onlineconferencingsystems.com/vpat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">IDEAL Conference</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/resources/accessibility/tools/vpat/acrobatconnect_508.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Acrobat Connect</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/resources/accessibility/tools/vpat/acrobatconnect_508.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Acrobat Connect</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -77,9 +90,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G157.html">G157: Incorporating a live audio captioning service into a Web page（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G157.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G157: Incorporating a live audio captioning service into a Web page（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

@@ -12,11 +12,13 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法は、支援技術が無視できるように画像にマークを付ける方法を示すことである。</p>
-<p>Flash Player では、以下の事例に示すように、アクセシビリティオブジェクトの silent プロパティを使用すると、どのグラフィックを支援技術に認識させるかをコンテンツ制作者が制御できる。</p></description>
+  <description>
+    <p>この実装方法は、支援技術が無視できるように画像にマークを付ける方法を示すことである。</p>
+    <p>Flash Player では、以下の事例に示すように、アクセシビリティオブジェクトの silent プロパティを使用すると、どのグラフィックを支援技術に認識させるかをコンテンツ制作者が制御できる。</p>
+  </description>
   <examples>
     <eg-group>
       <head>Flash Professional のオーサリングツールでグラフィックを非表示にする</head>
@@ -86,9 +88,9 @@ _root.decorative_mc._accProps.silent = true;</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH3.html">FLASH3: Marking objects in Flash so that they can be ignored by AT（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH3: Marking objects in Flash so that they can be ignored by AT（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

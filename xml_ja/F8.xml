@@ -8,9 +8,10 @@
     <success-criterion idref="media-equiv-captions"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この文書では、キャプションを含む全てのウェブコンテンツ技術に対する不適合事例について述べている。「キャプション」が（逐語的、又は要点のいずれかで）全ての発話内容、及び全ての重要な音を含んでいない場合、その「キャプション」は実質的にキャプションとはいえない。</p>
-          
-               <p> 注記：キャプションでは、読みやすくするため、また見る人に非常に速く読ませるのを強いることのないように、発話内容を簡略化することがある。これは標準的な手法であり、無効なキャプションとはならない。</p></description>
+  <description>
+    <p>この文書では、キャプションを含む全てのウェブコンテンツ技術に対する不適合事例について述べている。「キャプション」が（逐語的、又は要点のいずれかで）全ての発話内容、及び全ての重要な音を含んでいない場合、その「キャプション」は実質的にキャプションとはいえない。</p>
+    <p>注記：キャプションでは、読みやすくするため、また見る人に非常に速く読ませるのを強いることのないように、発話内容を簡略化することがある。これは標準的な手法であり、無効なキャプションとはならない。</p>
+  </description>
   <examples>
     <eg-group>
       <head>不適合事例　1</head>
@@ -44,10 +45,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F8.html">F8: Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important
-                    sound effects（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F8.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F8: Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important&#13;
+                    sound effects（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

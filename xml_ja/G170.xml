@@ -8,9 +8,10 @@
     <success-criterion idref="visual-audio-contrast-dis-audio"/>
   </applies-to>
   <ua-issues/>
-  <description><p><br/>この実装方法の目的は、ページが読みこまれたときに自動的に開始する音声を、利用者が停止できるようにすることである。利用者が容易に素早く見つけることができるように、音声を停止するコントロールはページの先頭付近に配置しなければならない。これは、支援技術(スクリーンリーダー、画面拡大ツール、入力装置(スイッチ)など）を利用する人々及びそうでない人々(認知、学習及び言語障害のある人々)の役に立つ。</p>&#13;
-                &#13;
-               <p>この実装方法では、コンテンツ制作者は、自動的に再生されたあらゆる音声を利用者が停止できるコントロールを組み込む。コントロールは、キーボードで操作が可能で、タブと読み込みの順序が早くなるよう配置され、再生されている音声を停止することを示すよう明確にラベルづけされていなければならない。</p></description>
+  <description>
+    <p><br/>この実装方法の目的は、ページが読みこまれたときに自動的に開始する音声を、利用者が停止できるようにすることである。利用者が容易に素早く見つけることができるように、音声を停止するコントロールはページの先頭付近に配置しなければならない。これは、支援技術(スクリーンリーダー、画面拡大ツール、入力装置(スイッチ)など）を利用する人々及びそうでない人々(認知、学習及び言語障害のある人々)の役に立つ。</p>
+    <p>この実装方法では、コンテンツ制作者は、自動的に再生されたあらゆる音声を利用者が停止できるコントロールを組み込む。コントロールは、キーボードで操作が可能で、タブと読み込みの順序が早くなるよう配置され、再生されている音声を停止することを示すよう明確にラベルづけされていなければならない。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>ウェブページは、草刈り機のエンジンを修理する方法を示す動画と音声トラックを含む、時間の経過に伴って変化するメディア・プレゼンテーションがある。ページは「一時停止」と「停止」というふたつのボタンを含んでおり、時間の経過に伴って変化するメディアが再生されるとき、これらは利用者にコントロールを提供する。</p>
@@ -55,9 +56,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G170.html">G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/G170.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

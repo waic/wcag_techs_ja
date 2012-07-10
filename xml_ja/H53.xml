@@ -15,8 +15,7 @@
     </ua-issue>
   </ua-issues>
   <description>
-    <p>
-							この実装方法の目的は、<code>object</code>要素によってレンダリングされるコンテンツに対して、代替テキストを提供することである。<code>object</code>要素のボディは、そのオブジェクトに関する完全な代替テキストを提供するのに用いられるか、または追加的な非テキストコンテンツを代替テキストとともに含むことがある。</p>
+    <p>この実装方法の目的は、<code>object</code>要素によってレンダリングされるコンテンツに対して、代替テキストを提供することである。<code>object</code>要素のボディは、そのオブジェクトに関する完全な代替テキストを提供するのに用いられるか、または追加的な非テキストコンテンツを代替テキストとともに含むことがある。</p>
   </description>
   <examples>
     <eg-group>
@@ -42,12 +41,16 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#edef-OBJECT" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
-                    OBJECT element</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/objects.html#edef-OBJECT" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">HTML 4.01&#13;
+                    OBJECT element</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/object-paranoia.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Object&#13;
-                  Paranoia</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://juicystudio.com/article/object-paranoia.php" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Object&#13;
+                  Paranoia</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -75,9 +78,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H53.html">H53: Using the body of the object element（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H53.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H53: Using the body of the object element（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

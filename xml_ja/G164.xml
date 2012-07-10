@@ -9,9 +9,10 @@
     <success-criterion idref="minimize-error-reversible-all"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、注文を変更又はキャンセルできる猶予期間を提供することによって、利用者が誤った注文をしてしまった際にその内容を変更又はキャンセルできるようにすることである。一般的には、契約又は注文は法的な義務であり、キャンセルすることができない。しかしながら、ウェブサイトにおいては、この機能を提供し、利用者が注文内容を間違えてしまった際には、注文を変更又はキャンセルできるようにすることが可能である。</p>
-                
-               <p>ウェブコンテンツでは、フォームを送信した後、キャンセル可能期間がどのくらいなのか、及びどのような手続きで注文をキャンセルするかを利用者に伝える必要がある。注文をキャセルする手続きがオンラインでは利用できない場合もあり得る。例えば、ウェブページ上に記載された住所宛に書面による通知が必要な場合である。</p></description>
+  <description>
+    <p>この実装方法の目的は、注文を変更又はキャンセルできる猶予期間を提供することによって、利用者が誤った注文をしてしまった際にその内容を変更又はキャンセルできるようにすることである。一般的には、契約又は注文は法的な義務であり、キャンセルすることができない。しかしながら、ウェブサイトにおいては、この機能を提供し、利用者が注文内容を間違えてしまった際には、注文を変更又はキャンセルできるようにすることが可能である。</p>
+    <p>ウェブコンテンツでは、フォームを送信した後、キャンセル可能期間がどのくらいなのか、及びどのような手続きで注文をキャンセルするかを利用者に伝える必要がある。注文をキャセルする手続きがオンラインでは利用できない場合もあり得る。例えば、ウェブページ上に記載された住所宛に書面による通知が必要な場合である。</p>
+  </description>
   <examples>
     <eg-group>
       <head>オンラインショッピング</head>
@@ -52,10 +53,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G164.html">G164: Providing a stated period of time after submission of the form when the order can be updated or canceled by the user（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>修正：2012年4月25日（情報通信アクセス協議会「<a href="http://www.ciaj.or.jp/access/web/activities/wg2/">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</a>」）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G164.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G164: Providing a stated period of time after submission of the form when the order can be updated or canceled by the user（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>修正：2012年4月25日（情報通信アクセス協議会「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/activities/wg2/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">ウェブアクセシビリティ基盤委員会（WAIC） 実装ワーキンググループ（WG2）</loc>」）</item>
     </ulist>
   </translationcredit>
 </technique>

@@ -13,8 +13,7 @@
     </ua-issue>
   </ua-issues>
   <description>
-    <p>
-							この実装方法の目的は、短い代替テキストでは画像の機能や情報が十分に伝達できない場合に、<code>longdesc</code>属性でのファイル指定によって情報を提供することである。<code>longdesc</code>属性には<acronym title="Unifrom Resource Identifier">URI</acronym>を指定する。これは非テキストコンテンツの詳しい説明を含む目的地を意味する。</p>
+    <p>この実装方法の目的は、短い代替テキストでは画像の機能や情報が十分に伝達できない場合に、<code>longdesc</code>属性でのファイル指定によって情報を提供することである。<code>longdesc</code>属性には<acronym title="Unifrom Resource Identifier">URI</acronym>を指定する。これは非テキストコンテンツの詳しい説明を含む目的地を意味する。</p>
   </description>
   <examples>
     <eg-group>
@@ -25,7 +24,9 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/articles/too-much-accessibility/too-much-accessibility-the-rise-and-fall-of-the-longdesc/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Too much accessibility - the rise and fall of the LONGDESC</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.rnib.org.uk/wacblog/articles/too-much-accessibility/too-much-accessibility-the-rise-and-fall-of-the-longdesc/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Too much accessibility - the rise and fall of the LONGDESC</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -67,9 +68,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H45.html">H45: Using longdesc（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H45.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H45: Using longdesc（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

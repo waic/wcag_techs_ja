@@ -8,11 +8,11 @@
     <success-criterion idref="cc1"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、本来のコンテンツ又は利用者が特定のURIに訪れた時に遭遇するデフォルトのコンテンツがWCAGに適合していない場合、利用者がWCAGに適合している代替コンテンツにアクセスできるようにすることである。代替ページ又は適合している代替バージョンは、適合するためにいくつかのデザイン又は機能的な譲歩を作る可能性があるが、適合している代替バージョンにするためには定義において記された要件を満たさなければならない。「適合している代替バージョン」の定義とは：</p>
-            
-<dl>
+  <description>
+    <p>この実装方法の目的は、本来のコンテンツ又は利用者が特定のURIに訪れた時に遭遇するデフォルトのコンテンツがWCAGに適合していない場合、利用者がWCAGに適合している代替コンテンツにアクセスできるようにすることである。代替ページ又は適合している代替バージョンは、適合するためにいくつかのデザイン又は機能的な譲歩を作る可能性があるが、適合している代替バージョンにするためには定義において記された要件を満たさなければならない。「適合している代替バージョン」の定義とは：</p>
+    <dl>
 <dt class="label">
-<a name="conforming-alternate-versiondef" id="conforming-alternate-versiondef"> </a>適合している代替バージョン</dt>
+<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"/>適合している代替バージョン</dt>
 	<dd>
 <p>以下の事項を満たすバージョンのことを指す：</p>
 		<ol class="enumar">
@@ -35,10 +35,11 @@
 <p class="prefix">適合していないバージョンと同じように自由に利用可能であるかぎり、適合した代替バージョンは、適合宣言の対象のウェブページ群に含まれている必要はなく、元のウェブページと同じウェブサイト上で提供されている必要もない。</p>
 <p class="prefix">代替バージョンは、元のウェブページを補助して理解を高める補足的なコンテンツと混同されないようにすべきである。</p>
 <p class="prefix">コンテンツ内で利用者が設定を行うことで適合したバージョンが作り出される仕組みは、その利用者の設定に用いられている手法がアクセシビリティ・サポーテッドであるかぎり、代替バージョンへの移動メカニズムとして条件を満たしているといえる。</p></note>
-<p class="circref"><a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照のこと。</p>
+<p class="circref"><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合している代替バージョンを理解する</loc>を参照のこと。</p>
 </dd>
 </dl>
-<p>この実装方法を使用している際、ページの最初に代替コンテンツへのWCAGに適合したリンクを配置することで、利用者がそのリンクをすぐに見つけることができ、適合した代替バージョンに移動することができるようになる。利用者がどこからそのサイトに入ったかに関係なく、利用者が常に代替バージョンを見つけることができるようにするためには、特定のレベルで適合していないページには適合している代替バージョンへのリンクを含めることである。</p></description>
+    <p>この実装方法を使用している際、ページの最初に代替コンテンツへのWCAGに適合したリンクを配置することで、利用者がそのリンクをすぐに見つけることができ、適合した代替バージョンに移動することができるようになる。利用者がどこからそのサイトに入ったかに関係なく、利用者が常に代替バージョンを見つけることができるようにするためには、特定のレベルで適合していないページには適合している代替バージョンへのリンクを含めることである。</p>
+  </description>
   <examples/>
   <resources/>
   <related-techniques>
@@ -54,7 +55,7 @@
           <p>そのページには、適合している代替バージョンへのリンクがある。</p>
         </item>
         <item>
-          <p>代替バージョンが、オリジナルページの<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>であり、かつ要求された適合レベルでWCAG2.0に適合している。</p>
+          <p>代替バージョンが、オリジナルページの<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">適合している代替バージョン</loc>であり、かつ要求された適合レベルでWCAG2.0に適合している。</p>
         </item>
       </olist>
     </procedure>
@@ -69,10 +70,10 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G136.html">G136: Providing a link at the beginning of a nonconforming Web page that points to a conforming alternate version
-（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G136.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G136: Providing a link at the beginning of a nonconforming Web page that points to a conforming alternate version&#13;
+（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通株式会社</loc>,<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com/group/fdl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通デザイン株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

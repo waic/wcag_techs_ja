@@ -9,23 +9,21 @@
     <success-criterion idref="seizure-three-times"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、明るく、その面積が大きいと発作を起こすといわれている速度で閃光を放つことを防ぐことである。
+  <description>
+    <p>この実装方法の目的は、明るく、その面積が大きいと発作を起こすといわれている速度で閃光を放つことを防ぐことである。
 			   面積を拡大して見ている利用者もいるので、この実装方法ではコンテンツのサイズの大きさに関係なく、1秒間に3回より少ない閃光しか
 			   用いてはいけないとしている。</p>
-          
-               <note><p class="prefix">注記１：この実装方法は、等級 Aの達成基準より厳しくなっている。
+    <note>
+      <p class="prefix">注記１：この実装方法は、等級 Aの達成基準より厳しくなっている。
 				 しかし、検証は簡単で、等級Aの達成基準を満たしていることの検証にも用いることができる。
 				 等級Aの達成基準に適合していない閾値の場合、1秒間に3.5回以上の閃光があるからである。多くのコンテンツには閃光を放つものはなく、
 				 点滅があるコンテンツでも一部稀な場合を除いてこれほど速く点滅しない。よって、達成基準で示されているより複雑な検証を実行しなくてもすむようにするために、
-				 この実装方法にあるようにコンテンツが1秒間に1、2回、あるいは最大でも3回までしか閃光を放たないようにしておくとよい。</p></note>
-          
-               <p>
-            
-                  <strong>3.5回の閃光又は7回の遷移の事例：</strong>
-          
-               </p>
-          
-               <ul>
+				 この実装方法にあるようにコンテンツが1秒間に1、2回、あるいは最大でも3回までしか閃光を放たないようにしておくとよい。</p>
+    </note>
+    <p>
+      <strong>3.5回の閃光又は7回の遷移の事例：</strong>
+    </p>
+    <ul>
 <li>
               
                      <p>始まりが暗い色－明るい色－暗い色－明るい色－暗い色－明るい色－暗い色－明るい色で終わる、又は</p>
@@ -36,13 +34,16 @@
                      <p>始まりが明るい色－暗い色－明るい色－暗い色－明るい色－暗い色－明るい色－暗い色で終わる</p>
             
                   </li>
-</ul></description>
+</ul>
+  </description>
   <examples/>
   <resources>
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://trace.wisc.edu/peat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Trace Center Photosensitive Epilepsy Analysis Tool (PEAT)</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://trace.wisc.edu/peat/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Trace Center Photosensitive Epilepsy Analysis Tool (PEAT)</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -73,9 +74,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/G19.html">G19: Ensuring that no component of the content flashes more than three times in any 1-second period（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/G19.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G19: Ensuring that no component of the content flashes more than three times in any 1-second period（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

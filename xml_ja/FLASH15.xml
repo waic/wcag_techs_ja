@@ -13,42 +13,53 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、Flash ムービー内の各要素にタブインデックス（tabIndex）値を割り当てることによって音声読み上げ順序を制御することである。</p>&#13;
-<p>タブ順序とは、利用者が Tab キーを押したときに、オブジェクトが入力フォーカスを受け取る順序である。音声読み上げ順序にフォーカスを受け取ることのできない要素が含まれているのと同様に、タブ順序には必ずしも音声読み上げ順序と同じ要素が含まれているわけではない。しかし、音声読み上げ順序とタブ順序は、どちらもタブインデックスの値を用いて制御することが可能である。</p>&#13;
-<p>Flash Player では、デフォルトのタブインデックスの順序（左から右、上から下）が使用される。</p>&#13;
-<p>カスタムの音声読み上げ順序を作成するには、ActionScript またはアクセシビリティパネルを使用して、ステージ上の各インスタンスにタブインデックス値を割り当てる。フォーカスを受け取ることが可能なオブジェクトだけではなく、アクセシビリティを有効にするすべてのオブジェクトに対してタブインデックス値を作成する。例えば、ユーザーはダイナミックテキストにタブ移動することはできないが、ダイナミックテキストにもタブインデックスを設定する必要がある。</p>&#13;
-<p>キーボード操作のナビゲーションのために、次のオブジェクトに対して、アクセシビリティパネルを使用してカスタムのタブインデックス値を指定することができる。</p>&#13;
-<ul><li><p>ダイナミックテキスト</p></li>&#13;
-<li><p>入力テキスト</p></li>&#13;
-<li><p>ボタン</p></li>&#13;
-<li><p>ムービークリップ（コンパイルしたムービークリップを含む）</p></li>&#13;
-<li><p>コンポーネントと</p></li>&#13;
-<li><p>スクリーン</p></li>&#13;
-</ul><p>Tab キーによるフォーカス移動は、タブインデックス値の最も小さいところからスタートする。Tab キーによるフォーカス移動が最も大きなタブインデックス値のオブジェクトに達すると、フォーカスはまた最も小さいタブインデックス値のオブジェクトに戻る。タブインデックス値が指定されているオブジェクトをドキュメント内または別のドキュメントへ移動させる際には、Flashはタブインデックス属性値を保持している。そのため、タブインデックス値の重複（例えば、ステージ上にある二つの異なるオブジェクトが同じタブインデックス値を持っていないか）をチェックして、必要に応じて修正する必要がある。フレーム内の複数のオブジェクトに同じタブインデックス値が設定されている場合は、Flash はオブジェクトがステージ上に配置された順序に従う</p>&#13;
-<p>アクセシビリティパネルを使用してタブインデックス値を追加するには、ステージ上のアクセシビリティが有効なすべてのオブジェクトに対して以下の手順を実行する。</p>&#13;
-<ol class="enumar"><li><p>要素をクリックして選択する。</p></li>&#13;
-<li><p>アクセシビリティパネルで、「タブインデックス」フィールドに数値を入力する。この値には、選択されているオブジェクトの読み上げ順序を示す正の整数（最大 65535）を指定する必要がある。タブインデックスに小さい値が設定された要素が先に、大きい値が設定された要素が後に読み上げられる。フレーム内の複数のオブジェクトに同じタブインデックスが設定されている場合は、Flash はオブジェクトがステージ上に配置されている順序に従う。</p></li>&#13;
-<li><p>現在定義されているタブ順序を表示するには、［表示］&gt;［タブ順序の表示］を選択する。個々のオブジェクトの左上にタブインデックスの数値が表示される。</p></li>&#13;
-</ol><note><p class="prefix">ActionScript のコードを用いて、キーボード操作のナビゲーションのためにタブ順序のインデックスを作成することもできる。</p>&#13;
-</note><p>上記の手順を以下のスクリーンショットで示す。</p>&#13;
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/ac_show_tab_order_view.png" alt="画面スクリーンショット：タブ順序を視覚化" height="232" width="214"/></p>&#13;
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/setting_tabindex_in_accessibility_panel.png" alt="画面スクリーンショット：アクセシビリティパネルでタブインデックス値を設定" height="319" width="281"/></p>&#13;
-<note><p class="prefix">現在の Flash Player では、FLA ファイル内のすべてのオブジェクトをタブインデックス値のリストに追加する必要はない。すべてのオブジェクトにタブインデックスを指定しなくても、スクリーンリーダーは各オブジェクトを正しく読み上げる。</p>&#13;
-</note></description>
+  <description>
+    <p>この実装方法の目的は、Flash ムービー内の各要素にタブインデックス（tabIndex）値を割り当てることによって音声読み上げ順序を制御することである。</p>
+    <p>タブ順序とは、利用者が Tab キーを押したときに、オブジェクトが入力フォーカスを受け取る順序である。音声読み上げ順序にフォーカスを受け取ることのできない要素が含まれているのと同様に、タブ順序には必ずしも音声読み上げ順序と同じ要素が含まれているわけではない。しかし、音声読み上げ順序とタブ順序は、どちらもタブインデックスの値を用いて制御することが可能である。</p>
+    <p>Flash Player では、デフォルトのタブインデックスの順序（左から右、上から下）が使用される。</p>
+    <p>カスタムの音声読み上げ順序を作成するには、ActionScript またはアクセシビリティパネルを使用して、ステージ上の各インスタンスにタブインデックス値を割り当てる。フォーカスを受け取ることが可能なオブジェクトだけではなく、アクセシビリティを有効にするすべてのオブジェクトに対してタブインデックス値を作成する。例えば、ユーザーはダイナミックテキストにタブ移動することはできないが、ダイナミックテキストにもタブインデックスを設定する必要がある。</p>
+    <p>キーボード操作のナビゲーションのために、次のオブジェクトに対して、アクセシビリティパネルを使用してカスタムのタブインデックス値を指定することができる。</p>
+    <ul>
+<li><p>ダイナミックテキスト</p></li>
+<li><p>入力テキスト</p></li>
+<li><p>ボタン</p></li>
+<li><p>ムービークリップ（コンパイルしたムービークリップを含む）</p></li>
+<li><p>コンポーネントと</p></li>
+<li><p>スクリーン</p></li>
+</ul>
+    <p>Tab キーによるフォーカス移動は、タブインデックス値の最も小さいところからスタートする。Tab キーによるフォーカス移動が最も大きなタブインデックス値のオブジェクトに達すると、フォーカスはまた最も小さいタブインデックス値のオブジェクトに戻る。タブインデックス値が指定されているオブジェクトをドキュメント内または別のドキュメントへ移動させる際には、Flashはタブインデックス属性値を保持している。そのため、タブインデックス値の重複（例えば、ステージ上にある二つの異なるオブジェクトが同じタブインデックス値を持っていないか）をチェックして、必要に応じて修正する必要がある。フレーム内の複数のオブジェクトに同じタブインデックス値が設定されている場合は、Flash はオブジェクトがステージ上に配置された順序に従う</p>
+    <p>アクセシビリティパネルを使用してタブインデックス値を追加するには、ステージ上のアクセシビリティが有効なすべてのオブジェクトに対して以下の手順を実行する。</p>
+    <ol class="enumar">
+<li><p>要素をクリックして選択する。</p></li>
+<li><p>アクセシビリティパネルで、「タブインデックス」フィールドに数値を入力する。この値には、選択されているオブジェクトの読み上げ順序を示す正の整数（最大 65535）を指定する必要がある。タブインデックスに小さい値が設定された要素が先に、大きい値が設定された要素が後に読み上げられる。フレーム内の複数のオブジェクトに同じタブインデックスが設定されている場合は、Flash はオブジェクトがステージ上に配置されている順序に従う。</p></li>
+<li><p>現在定義されているタブ順序を表示するには、［表示］&gt;［タブ順序の表示］を選択する。個々のオブジェクトの左上にタブインデックスの数値が表示される。</p></li>
+</ol>
+    <note><p class="prefix">ActionScript のコードを用いて、キーボード操作のナビゲーションのためにタブ順序のインデックスを作成することもできる。</p>
+</note>
+    <p>上記の手順を以下のスクリーンショットで示す。</p>
+    <p>
+      <img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/ac_show_tab_order_view.png" alt="画面スクリーンショット：タブ順序を視覚化" height="232" width="214"/>
+    </p>
+    <p>
+      <img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/setting_tabindex_in_accessibility_panel.png" alt="画面スクリーンショット：アクセシビリティパネルでタブインデックス値を設定" height="319" width="281"/>
+    </p>
+    <note><p class="prefix">現在の Flash Player では、FLA ファイル内のすべてのオブジェクトをタブインデックス値のリストに追加する必要はない。すべてのオブジェクトにタブインデックスを指定しなくても、スクリーンリーダーは各オブジェクトを正しく読み上げる。</p>
+</note>
+  </description>
   <examples>
     <eg-group>
       <head>タブインデックスを使用して列の構造をナビゲートする</head>
       <description><p>この事例には、列としてグループ化された動的な TextField インスタンスが含まれている。列の構造に従って読み上げ順序が設定されるようにする。TextField インスタンスには、テキストコンテンツに応じたタブインデックス値が指定されている（例えば、テキスト「Sample text 3」が格納されている TextField にはタブインデックス値 3 が設定されている）。また、タブインデックス値を設定していない TextField が 1 つ追加されている。このフィールドには、テキスト「Not in tab order」が格納されている。このフィールドは見かけ上は「Sample text 2」と「Sample text 3」の間に配置されているが、タブインデックス値が割り当てられていないため、カスタムタブ順序の中では最後に配置される。</p>
-<p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/custom_reading_order_as3.html">「タブインデックスを使用して列の構造をナビゲートする」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/custom_reading_order_as3.swf">「タブインデックスを使用して列の構造をナビゲートする」のソース（英語）</a>をダウンロードすることもできる。</p>
+<p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/custom_reading_order_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「タブインデックスを使用して列の構造をナビゲートする」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/custom_reading_order_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「タブインデックスを使用して列の構造をナビゲートする」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
     <eg-group>
       <head>2カラムレイアウトでタブ順序を制御する</head>
       <description><p>この事例では、Flash ベースのフォームが2カラムでレイアウトされている。タブ順序がカラム構造に従うようにするには、アクセシビリティパネルを用いて各フォーム・コントロールにタブインデックス値を割り当てる。</p>
-<p>この実例は、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/custom_tab_order_as3.html">「2カラムレイアウトでタブ順序を制御する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/custom_tab_order_as3.swf">「2カラムレイアウトでタブ順序を制御する」のソース（英語）</a>をダウンロードすることもできる。</p>
+<p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/custom_tab_order_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「2カラムレイアウトでタブ順序を制御する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH15/custom_tab_order_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「2カラムレイアウトでタブ順序を制御する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -95,9 +106,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH15.html">FLASH15: Using the tabIndex property to specify a logical reading order and a logical tab order in Flash（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH15.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH15: Using the tabIndex property to specify a logical reading order and a logical tab order in Flash（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

@@ -13,7 +13,7 @@
     </ua-issue>
   </ua-issues>
   <description>
-    <p><code>blink</code> 要素は正式なHTML又はXHTMLの仕様の一部ではないが、多くのユーザーエージェントによりサポートされている。要素内のあらゆるテキストが予め決定された周期で点滅する。これは、利用者が中断することはできず、また環境設定によって無効にすることもできない。ウェブページが表示されている限り、点滅は続くことになる。そのため、点滅が3秒より長く続く可能性があることから、<code>blink</code> を用いているコンテンツは達成基準を満たしていないことになる。</p>
+    <p><code>blink</code>要素は正式なHTML又はXHTMLの仕様の一部ではないが、多くのユーザーエージェントによりサポートされている。要素内のあらゆるテキストが予め決定された周期で点滅する。これは、利用者が中断することはできず、また環境設定によって無効にすることもできない。ウェブページが表示されている限り、点滅は続くことになる。そのため、点滅が3秒より長く続く可能性があることから、<code>blink</code>を用いているコンテンツは達成基準を満たしていないことになる。</p>
   </description>
   <examples>
     <eg-group role="failure">
@@ -42,9 +42,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F47.html">F47: Failure of Success Criterion 2.2.2 due to using the blink element（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：鈴木 邦和(<a href="http://www.oki.com/jp/">沖電気工業株式会社</a>)</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F47.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F47: Failure of Success Criterion 2.2.2 due to using the blink element（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：鈴木 邦和(<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.oki.com/jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">沖電気工業株式会社</loc>)</item>
     </ulist>
   </translationcredit>
 </technique>

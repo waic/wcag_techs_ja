@@ -13,7 +13,7 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
   <description>
@@ -23,7 +23,7 @@
     <eg-group>
       <head>ムービークリップをボタンとして使用する</head>
       <description><p>この事例では、カスタムムービークリップをボタンとして使用する。キーボードでの操作を可能にするため、tabEnabled を使用してムービークリップをタブの順序に配置する。さらに、カスタムボタンがマウスクリックとスペースバーの打鍵の両方に反応するように、冗長なイベントハンドラを追加する。最後に、ムービークリップの AccessibilityProperties オブジェクトを使用して、カスタムボタンにアクセシブルな名前を付ける。これにより、支援技術でボタンのラベルを認識できるようになる。</p>
-<p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH22/event_handlers_to_static_objects_as3.html">「ムービークリップをボタンとして使用する」のサンプル（英語）</a>で確認できる。 <a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH22/event_handlers_to_static_objects_as3.swf">「ムービークリップをボタンとして使用する」のソース（英語）</a>をダウンロードすることもできる。</p>
+<p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH22/event_handlers_to_static_objects_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ムービークリップをボタンとして使用する」のサンプル（英語）</loc>で確認できる。 <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH22/event_handlers_to_static_objects_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ムービークリップをボタンとして使用する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 <note><p class="prefix">カスタムボタンはボタンではなくフォーカス可能なグラフィックとして認識されるので、汎用のムービークリップを使用することは一般的に推奨されない。代わりに、標準の Flash の Button コンポーネントを使用するか、「button」タイプの新規シンボルを作成することが望ましい。</p>
 </note>
 </description>
@@ -86,9 +86,9 @@ function updateAccName(mc: MovieClip) {
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH22.html">FLASH22: Adding keyboard-accessible actions to static elements（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH22.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH22: Adding keyboard-accessible actions to static elements（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

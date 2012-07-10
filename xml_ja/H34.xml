@@ -8,14 +8,12 @@
     <success-criterion idref="content-structure-separation-sequence"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、HTMLの双方向性アルゴリズムが望ましくない結果を生じるとき時に、それを無効にするためにUnicode制御文字のright-to-left markとleft-to-right markを用いることである。たとえば、スペース又は句読点のようなニュートラルな文字が異なる方向性のテキストの間に置かれている
-時に必要となることがある。この実装方法で用いられているコンセプトは、W3C文書の「<a href="http://www.w3.org/International/articles/inline-bidi-markup/">
-What you need to know about the bidi algorithm and inline markup（双方向アルゴリズムとインラインマークアップを知るために必要なこと）</a>」に書かれている。</p>
-          
-               <p>Unicode 制御文字のright-to-left mark及びleft-to-right markは、以下に示すように、
+  <description>
+    <p>この実装方法の目的は、HTMLの双方向性アルゴリズムが望ましくない結果を生じるとき時に、それを無効にするためにUnicode制御文字のright-to-left markとleft-to-right markを用いることである。たとえば、スペース又は句読点のようなニュートラルな文字が異なる方向性のテキストの間に置かれている
+時に必要となることがある。この実装方法で用いられているコンセプトは、W3C文書の「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/inline-bidi-markup/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">What you need to know about the bidi algorithm and inline markup（双方向アルゴリズムとインラインマークアップを知るために必要なこと）</loc>」に書かれている。</p>
+    <p>Unicode 制御文字のright-to-left mark及びleft-to-right markは、以下に示すように、
 そのまま、又は文字符号か数字符号の参照によって挿入することが可能である。</p>
-          
-               <ul>
+    <ul>
 <li>
               
                      <p>left-to-right mark（LRM）: &amp;lrm; 又は &amp;#x200e; (U+200E)</p>
@@ -27,7 +25,8 @@ What you need to know about the bidi algorithm and inline markup（双方向ア�
             
                   </li>
 </ul>
-<p><acronym title="bidirectional">双方向性</acronym>のアルゴリズムが原因で、ソースコード編集者は期待通りに文字符号や数字符号の参照を表示できないことがある。</p></description>
+    <p><acronym title="bidirectional">双方向性</acronym>のアルゴリズムが原因で、ソースコード編集者は期待通りに文字符号や数字符号の参照を表示できないことがある。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>この事例では、英語の文章の間にあるアラビア語のフレーズを示している。感嘆符はアラビア語のフレーズの一部であり、その左側にあるべきである。それはアラビア文字とラテン文字の間であり、段落全体の方向が<acronym title="left-to-right">LTR</acronym>（左から右）であるため、双方向性のアルゴリズムはアラビア語のフレーズの右側に感嘆符を置いている。</p>
@@ -58,11 +57,15 @@ What you need to know about the bidi algorithm and inline markup（双方向ア�
           </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/inline-bidi-markup/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">What you&#13;
-                    need to know about the bidi algorithm and inline markup</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/inline-bidi-markup/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">What you&#13;
+                    need to know about the bidi algorithm and inline markup</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/geo/html-tech/tech-bidi.html#bidisource" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Problems with bidirectional source text</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/geo/html-tech/tech-bidi.html#bidisource" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Problems with bidirectional source text</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -94,10 +97,10 @@ What you need to know about the bidi algorithm and inline markup（双方向ア�
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/H34.html">H34: Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction inline
-（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://jp.fujitsu.com">富士通株式会社</a>, <a href="http://jp.fujitsu.com/group/fdl/">富士通デザイン株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/H34.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H34: Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction inline&#13;
+（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通株式会社</loc>,<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://jp.fujitsu.com/group/fdl/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">富士通デザイン株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

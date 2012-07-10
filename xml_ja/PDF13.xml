@@ -10,23 +10,25 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェント及び支援技術に関する情報は、<a href="pdf_notes.html">PDF テクノロジーノート</a>を参照のこと。</p>
+      <p>ユーザーエージェント及び支援技術に関する情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF テクノロジーノート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、タグのプロパティリストにある /Alt エントリを通じて、代替リンクテキストを提供することである。これは通常必要ないものであるが、特にスクリーンリーダーのユーザー用に視覚的リンクテキスト以外の追加情報が必要になる場合がある。スクリーンリーダーは視覚的リンクテキストを読み上げることができるが、PDF 文書内のリンクのスクリーンテキストを意味のある代替テキストに置き換えることで、リンクをよりアクセシブルなものにすることができる。</p>
-<p>PDF 文書内のリンクは、そのサブツリー内のリンクタグおよびオブジェクトで表わされ、リンクオブジェクト参照（リンク注釈）と 1 つまたは複数のテキストオブジェクトで構成される。リンクタグ内のテキストオブジェクトまたはオブジェクトは、リンクの名前を提供するために支援技術で使用される。</p>
-<p>コンテンツ制作者は、リンクタグに対して /Alt エントリを提供することにより、デフォルトリンクテキストを置き換えることができる。リンクタグに /Alt エントリがある場合、スクリーンリーダーはリンクタグ内の視覚的テキストオブジェクトの値を無視し、リンクテキストに /Alt エントリ値を使用する。</p>
-<p>WCAG 2.0 達成基準に適合する、文脈に依存しないリンクテキストを提供する最も容易な方法は、PDF に変換する前の、文書をオーサリングする段階でリンクを作成することである。元のオーサリングツールを使用してリンクを作成することができない場合もある。Adobe Acrobat Pro を使用して PDF 文書を編集する場合、アクセシブルなリンクを作成する最善の方法は、「リンクの作成」コマンドを使用することである。</p>
-<p>コンテンツ制作者は、リンクの前後にあるスクリーンテキストの文脈において代替テキストが意味をなしていることを確認する必要がある。</p></description>
+  <description>
+    <p>この実装方法の目的は、タグのプロパティリストにある /Alt エントリを通じて、代替リンクテキストを提供することである。これは通常必要ないものであるが、特にスクリーンリーダーのユーザー用に視覚的リンクテキスト以外の追加情報が必要になる場合がある。スクリーンリーダーは視覚的リンクテキストを読み上げることができるが、PDF 文書内のリンクのスクリーンテキストを意味のある代替テキストに置き換えることで、リンクをよりアクセシブルなものにすることができる。</p>
+    <p>PDF 文書内のリンクは、そのサブツリー内のリンクタグおよびオブジェクトで表わされ、リンクオブジェクト参照（リンク注釈）と 1 つまたは複数のテキストオブジェクトで構成される。リンクタグ内のテキストオブジェクトまたはオブジェクトは、リンクの名前を提供するために支援技術で使用される。</p>
+    <p>コンテンツ制作者は、リンクタグに対して /Alt エントリを提供することにより、デフォルトリンクテキストを置き換えることができる。リンクタグに /Alt エントリがある場合、スクリーンリーダーはリンクタグ内の視覚的テキストオブジェクトの値を無視し、リンクテキストに /Alt エントリ値を使用する。</p>
+    <p>WCAG 2.0 達成基準に適合する、文脈に依存しないリンクテキストを提供する最も容易な方法は、PDF に変換する前の、文書をオーサリングする段階でリンクを作成することである。元のオーサリングツールを使用してリンクを作成することができない場合もある。Adobe Acrobat Pro を使用して PDF 文書を編集する場合、アクセシブルなリンクを作成する最善の方法は、「リンクの作成」コマンドを使用することである。</p>
+    <p>コンテンツ制作者は、リンクの前後にあるスクリーンテキストの文脈において代替テキストが意味をなしていることを確認する必要がある。</p>
+  </description>
   <examples>
     <eg-group>
       <head>Adobe Acrobat 9 Pro を使用して代替リンクテキストを追加する</head>
-      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。 他のソフトウェアツールのリストについては、「<a href="pdf_notes.html#pdf_notes_acc-sup_files_applications">アクセシビリティがサポートされている PDF オーサリングツール</a>」を参照のこと。</p>
+      <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。 他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>以下の画像は、Oracle Open Office から PDF に変換される文書を示している。視覚的リンクテキストは、リンク先の URL であることに注意すること。スクリーンリーダーはリンクテキストとして URI 全体を読み上げる。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF13/link-alt1.jpg" alt="スクリーンショット：リンクテキストとしてリンク URI が含まれている文書" height="165" width="550"/></p><p>支援技術向けに、よりアクセシブルなリンクテキストを作成するには、以下の操作を行う。</p>
 <olist><item><p>［表示］メニューから、ナビゲーションパネル &gt; タグを選択して［タグ］パネルを開く</p></item><item><p>タグツリー内でLinkタグを見つけ、そのリンクのコンテキストメニューにアクセスして、［プロパティ］を選択する。</p></item><item><p>［TouchUp のプロパティ］ダイアログボックスの［タグ］タブにある「代替テキスト」フィールドに、代替テキストを入力する。スクリーンリーダーは、URI 全体ではなくこのテキストを読み上げる</p></item></olist><p>次の画像は、［タグ］パネル内でのLinkタグの構造を示している</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF13/link-alt2.jpg" alt="スクリーンショット：タグパネル内のリンクタグ構造" height="400" width="577"/></p><p>最後の画像は、Linkタグの［TouchUp のプロパティ］ダイアログボックス内で指定されている代替テキストを示している。スクリーンリーダーはリンクテキストとして代替テキストを読み上げる。</p>
-<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF13/link-alt3.jpg" alt="スクリーンショット：［TouchUp のプロパティ］ダイアログボックスで指定された新しい代替テキスト 'Boston Globe technology page'" height="479" width="784"/></p><p>この事例のサンプルとして、<a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF13/link-text.odt">代替リンクテキストを追加したサンプル (OpenDocument テキスト ファイル)</a> と <a href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF13/link-text-oo.pdf">代替リンクテキストを追加したサンプル (PDF ファイル)</a>がある。</p>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF13/link-alt3.jpg" alt="スクリーンショット：［TouchUp のプロパティ］ダイアログボックスで指定された新しい代替テキスト 'Boston Globe technology page'" height="479" width="784"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF13/link-text.odt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">代替リンクテキストを追加したサンプル (OpenDocument テキスト ファイル)</loc> と <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF13/link-text-oo.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">代替リンクテキストを追加したサンプル (PDF ファイル)</loc>がある。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -115,9 +117,9 @@ endobj</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/PDF13.html">PDF13: Providing replacement text using the /Alt entry for links in PDF documents（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/PDF13.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF13: Providing replacement text using the /Alt entry for links in PDF documents（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

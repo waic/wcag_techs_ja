@@ -11,7 +11,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p><code>meta</code> <code>http-equiv</code>のリフレッシュは、定期的にページを更新したり、利用者を別のページにリダイレクトしたりするためにしばしば用いられる。もし時間間隔が短すぎると、全盲の人はスクリーンリーダーでページを読み終わらないうちに、予期せずページが更新されてしまい、スクリーンリーダーがページの先頭から読み上げてしまう。目の見える利用者も、予期しないリフレッシュによって混乱させられる。</p>
+    <p><code>meta</code><code>http-equiv</code>のリフレッシュは、定期的にページを更新したり、利用者を別のページにリダイレクトしたりするためにしばしば用いられる。もし時間間隔が短すぎると、全盲の人はスクリーンリーダーでページを読み終わらないうちに、予期せずページが更新されてしまい、スクリーンリーダーがページの先頭から読み上げてしまう。目の見える利用者も、予期しないリフレッシュによって混乱させられる。</p>
   </description>
   <examples>
     <eg-group role="failure">
@@ -68,9 +68,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F41.html">F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：辻 勝利（<a href="http://www.mitsue.co.jp/">株式会社ミツエーリンクス</a>）</item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F41.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：辻 勝利（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.mitsue.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社ミツエーリンクス</loc>）</item>
     </ulist>
   </translationcredit>
 </technique>

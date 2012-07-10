@@ -9,8 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p>この文書では、エラーの通知以外で、利用者のテキストフィールドへの入力に反応して新しいウィンドウが開く不適合事例について述べている。
-                    </p>
+    <p>この文書では、エラーの通知以外で、利用者のテキストフィールドへの入力に反応して新しいウィンドウが開く不適合事例について述べている。</p>
   </description>
   <examples>
     <eg-group>
@@ -55,9 +54,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/F60.html">F60: Failure of Success Criterion 3.2.5 due to launching a new window when a user enters text into an input field（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/F60.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">F60: Failure of Success Criterion 3.2.5 due to launching a new window when a user enters text into an input field（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
     </ulist>
   </translationcredit>
 </technique>

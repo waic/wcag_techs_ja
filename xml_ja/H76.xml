@@ -8,12 +8,10 @@
     <success-criterion idref="consistent-behavior-no-extreme-changes-context"/>
   </applies-to>
   <ua-issues/>
-  <description><p>
-							この実装方法の目的は、クライアントサイドで利用可能なリダイレクトを、利用者を混乱させることなく用いることである。リダイレクトはサーバサイドで実装するほうが望ましいが（<a href="SVR1.html">SVR1: クライアントサイドではなく、サーバサイドで自動リダイレクトを実装する</a>［サーバ］を参照）、コンテンツ制作者がサーバサイド技術を管理しているとは限らない。</p>
-          
-					<p>
-							HTML及びXHTMLでは、<code>meta</code>要素に<code>http-equiv</code>属性には「Refresh」という値、<code>content</code>属性の値には「0」（ゼロ秒を意味する）を、ブラウザが要求すべきURIを後に伴って指定することができる。重要なのは、新たなページを読み込む前にコンテンツが表示されるのを避けるために、タイムアウトをゼロに設定することである。リダイレクトのコードを指定したページには、リダイレクトに関する情報のみを含めるべきである。
-							</p></description>
+  <description>
+    <p>この実装方法の目的は、クライアントサイドで利用可能なリダイレクトを、利用者を混乱させることなく用いることである。リダイレクトはサーバサイドで実装するほうが望ましいが（<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="SVR1.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SVR1: クライアントサイドではなく、サーバサイドで自動リダイレクトを実装する</loc>［サーバ］を参照）、コンテンツ制作者がサーバサイド技術を管理しているとは限らない。</p>
+    <p>HTML及びXHTMLでは、<code>meta</code>要素に<code>http-equiv</code>属性には「Refresh」という値、<code>content</code>属性の値には「0」（ゼロ秒を意味する）を、ブラウザが要求すべきURIを後に伴って指定することができる。重要なのは、新たなページを読み込む前にコンテンツが表示されるのを避けるために、タイムアウトをゼロに設定することである。リダイレクトのコードを指定したページには、リダイレクトに関する情報のみを含めるべきである。</p>
+  </description>
   <examples>
     <eg-group>
       <code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;    
@@ -60,9 +58,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H76.html">H76: Using meta refresh to create an instant client-side redirect（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H76.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H76: Using meta refresh to create an instant client-side redirect（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

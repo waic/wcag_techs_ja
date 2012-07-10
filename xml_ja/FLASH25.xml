@@ -14,14 +14,15 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<a href="flash.html#flash_ua_support">Flashのユーザーエージェントによるサポート</a>を参照のこと。</p>
+      <p>ユーザーエージェントによるサポートに関する全般的な情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="flash.html#flash_ua_support" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Flashのユーザーエージェントによるサポート</loc>を参照のこと。</p>
     </ua-issue>
   </ua-issues>
-  <description><p>この実装方法の目的は、Flash で提供されるフォーム・コンポーネントに組み込むアクセシブルな名前を設定することである。ラジオボタン、チェックボックス、ボタンなど、コンポーネントによっては自身に固有な「ラベル」プロパティが既に与えられているが、その他のコンポーネントについては、コンテンツ制作者がコンポーネントのアクセシブルな名前となるラベルテキストを指定する必要がある。そのためには、アクセシビリティパネルを使用するか（オーサリング中にステージ上にコンポーネントを配置する場合）、スクリプトを使用する（実行時に動的にコンポーネントを生成する場合）。</p>
-<p>ActionScript 2</p>
-<p>ActionScript 2 では、コンポーネントの <code>_accProps</code> プロパティにアクセシブルな名前を設定する必要がある。このプロパティはオブジェクトでなければならない。プロパティがまだ設定されていない場合は、コンテンツ制作者がカスタムオブジェクトを作成して <code>_accProps</code> プロパティに割り当てる必要がある。場合によっては、1 つのオブジェクトに対し、アクセシブルな名前を指定する <code>_accProps.name</code> を含む複数のアクセシビリティ関連プロパティがある。<code>_accProps</code> プロパティを変更した場合、コンテンツ制作者は、<code>Accessibility.UpdateProperties()</code> を呼び出してその変更を有効にする必要がある。MSAA に対応していない環境でエラーが発生するのを防ぐため、<code>Accessibility.UpdateProperties()</code> を呼び出す前に <var>System.capabilities.hasAccessibility</var> フラグを確認することを推奨する。</p>
-<p>ActionScript 2 には、以下のアクセシブルなコンポーネントが用意されている。</p>
-<ul>
+  <description>
+    <p>この実装方法の目的は、Flash で提供されるフォーム・コンポーネントに組み込むアクセシブルな名前を設定することである。ラジオボタン、チェックボックス、ボタンなど、コンポーネントによっては自身に固有な「ラベル」プロパティが既に与えられているが、その他のコンポーネントについては、コンテンツ制作者がコンポーネントのアクセシブルな名前となるラベルテキストを指定する必要がある。そのためには、アクセシビリティパネルを使用するか（オーサリング中にステージ上にコンポーネントを配置する場合）、スクリプトを使用する（実行時に動的にコンポーネントを生成する場合）。</p>
+    <p>ActionScript 2</p>
+    <p>ActionScript 2 では、コンポーネントの<code>_accProps</code>プロパティにアクセシブルな名前を設定する必要がある。このプロパティはオブジェクトでなければならない。プロパティがまだ設定されていない場合は、コンテンツ制作者がカスタムオブジェクトを作成して<code>_accProps</code>プロパティに割り当てる必要がある。場合によっては、1 つのオブジェクトに対し、アクセシブルな名前を指定する<code>_accProps.name</code>を含む複数のアクセシビリティ関連プロパティがある。<code>_accProps</code>プロパティを変更した場合、コンテンツ制作者は、<code>Accessibility.UpdateProperties()</code>を呼び出してその変更を有効にする必要がある。MSAA に対応していない環境でエラーが発生するのを防ぐため、<code>Accessibility.UpdateProperties()</code>を呼び出す前に<var>System.capabilities.hasAccessibility</var>フラグを確認することを推奨する。</p>
+    <p>ActionScript 2 には、以下のアクセシブルなコンポーネントが用意されている。</p>
+    <ul>
 <li><p> SimpleButton </p></li>
 <li><p> CheckBox </p></li>
 <li><p> RadioButton </p></li>
@@ -34,17 +35,18 @@
 <li><p> Alert </p></li>
 <li><p> DataGrid </p></li>
 </ul>
-<p>ActionScript 3</p>
-<p>ActionScript 3 では、コンポーネントの <code>accessibilityProperties</code> プロパティにアクセシブルな名前を設定する必要がある。このプロパティは <code>flash.accessibility.AccessibilityProperties</code> のインスタンスでなければならない。プロパティがまだ設定されていない場合は、コンテンツ制作者が新しい <code>accessibilityProperties</code> インスタンスを作成して <code>accessibilityProperties</code> プロパティに割り当てる必要がある。場合によっては、1 つのオブジェクトに対し、アクセシブルな名前を指定する <code>accessibilityProperties.name</code> を含む複数のアクセシビリティ関連プロパティがある。<code>accessibilityProperties</code> プロパティを変更した場合、コンテンツ制作者は、<code>flash.accessibility.AccessibilityProperties()</code>を呼び出してその変更を有効にする必要がある。MSAA に対応していない環境でエラーが発生するのを防ぐため、<code>Accessibility.UpdateProperties()</code> を呼び出す前に <var>flash.system.capabilities.hasAccessibility</var> フラグを確認することを推奨する。</p>
-<p>ActionScript 3 には、以下のアクセシブルなコンポーネントが用意されている。</p>
-<ul>
+    <p>ActionScript 3</p>
+    <p>ActionScript 3 では、コンポーネントの<code>accessibilityProperties</code>プロパティにアクセシブルな名前を設定する必要がある。このプロパティは<code>flash.accessibility.AccessibilityProperties</code>のインスタンスでなければならない。プロパティがまだ設定されていない場合は、コンテンツ制作者が新しい<code>accessibilityProperties</code>インスタンスを作成して<code>accessibilityProperties</code>プロパティに割り当てる必要がある。場合によっては、1 つのオブジェクトに対し、アクセシブルな名前を指定する<code>accessibilityProperties.name</code>を含む複数のアクセシビリティ関連プロパティがある。<code>accessibilityProperties</code>プロパティを変更した場合、コンテンツ制作者は、<code>flash.accessibility.AccessibilityProperties()</code>を呼び出してその変更を有効にする必要がある。MSAA に対応していない環境でエラーが発生するのを防ぐため、<code>Accessibility.UpdateProperties()</code>を呼び出す前に<var>flash.system.capabilities.hasAccessibility</var>フラグを確認することを推奨する。</p>
+    <p>ActionScript 3 には、以下のアクセシブルなコンポーネントが用意されている。</p>
+    <ul>
 <li><p> Button </p></li>
 <li><p> CheckBox </p></li>
 <li><p> ComboBox </p></li>
 <li><p> List </p></li>
 <li><p> RadioButton </p></li>
 <li><p> TileList </p></li>
-</ul></description>
+</ul>
+  </description>
   <examples>
     <eg-group>
       <head>アクセシビリティパネルを使用してコンポーネントのアクセシブルな名前を設定する</head>
@@ -70,7 +72,7 @@ if (System.capabilities.hasAccessibility) {
   my_list._accProps.name = "Staff Members";
   Accessibility.updateProperties();
 }</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH25/accessible_name_for_form_components_as2.html">「ActionScript 2.0 を使用してアクセシブルな名前を設定する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH25/accessible_name_for_form_components_as2.swf">「ActionScript 2.0 を使用してアクセシブルな名前を設定する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH25/accessible_name_for_form_components_as2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript 2.0 を使用してアクセシブルな名前を設定する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH25/accessible_name_for_form_components_as2.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript 2.0 を使用してアクセシブルな名前を設定する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
     <eg-group>
@@ -98,7 +100,7 @@ if (Capabilities.hasAccessibility) {
   Accessibility.updateProperties();
 }
 addChild(my_list);</code>
-      <description><p>この実例は、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH25/accessible_name_for_form_components_as3.html">「ActionScript 3.0 を使用してアクセシブルな名前を設定する」のサンプル（英語）</a>で確認できる。また、<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH25/accessible_name_for_form_components_as3.swf">「ActionScript 3.0 を使用してアクセシブルな名前を設定する」のソース（英語）</a>をダウンロードすることもできる。</p>
+      <description><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH25/accessible_name_for_form_components_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript 3.0 を使用してアクセシブルな名前を設定する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH25/accessible_name_for_form_components_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActionScript 3.0 を使用してアクセシブルな名前を設定する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
   </examples>
@@ -128,9 +130,9 @@ addChild(my_list);</code>
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/FLASH25.html">FLASH25: Labeling a form control by setting its accessible name（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.adobe.com/jp/accessibility/">アドビ システムズ 株式会社</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/FLASH25.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH25: Labeling a form control by setting its accessible name（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/jp/accessibility/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アドビ システムズ 株式会社</loc></item>
     </ulist>
   </translationcredit>
 </technique>

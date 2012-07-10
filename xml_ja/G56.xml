@@ -9,7 +9,7 @@
   </applies-to>
   <ua-issues/>
   <description>
-    <p>この実装方法の目的は、聴覚に問題を持つ利用者が主音声を理解しづらくならないように、コンテンツ制作者が音声に背景音を入れられるようにすることである。前景にある主音声を背景音より20デジベル大きくすることで、その主音声は背景音よりも4倍大きいことになる。デシベル（dB）に関する情報は、<a href="http://trace.wisc.edu/docs/2004-About-dB/index.htm">About Decibels：英語</a>を参照のこと。</p>
+    <p>この実装方法の目的は、聴覚に問題を持つ利用者が主音声を理解しづらくならないように、コンテンツ制作者が音声に背景音を入れられるようにすることである。前景にある主音声を背景音より20デジベル大きくすることで、その主音声は背景音よりも4倍大きいことになる。デシベル（dB）に関する情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://trace.wisc.edu/docs/2004-About-dB/index.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">About Decibels：英語</loc>を参照のこと。</p>
   </description>
   <examples>
     <eg-group>
@@ -28,7 +28,7 @@
 								</p>
 <exsubhead>音声サンプル</exsubhead><p>
                   
-									<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/G56/Good-contrast.mp3">音声サンプル：前景音声が背景音楽よりも20デシベル大きい（mp3形式）</a>
+									<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/G56/Good-contrast.mp3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">音声サンプル：前景音声が背景音楽よりも20デシベル大きい（mp3形式）</loc>
               
                      </p>
 <p>音声サンプル（十分なコントラスト）のトランスクリプト：</p>
@@ -41,7 +41,7 @@
       <description><exsubhead>不適合となる音声サンプル</exsubhead><p>この事例では、ナレーターの音声と背景音楽があり、主音声は背景音楽よりも20デシベル以上は大きくない。主音声（前景）は-18デシベル、音楽（背景）は-16デシベルで録音しているため、前景は背景よりも2デシベルしか大きくない。</p>
 <p>
                   
-									<a href="http://www.w3.org/TR/WCAG-TECHS/working-examples/G56/Bad-contrast.mp3">音声サンプル：前景音声と背景音楽の差が20デシベル未満である（mp3形式）</a>
+									<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/G56/Bad-contrast.mp3" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">音声サンプル：前景音声と背景音楽の差が20デシベル未満である（mp3形式）</loc>
               
                      </p>
 <p>音声サンプル（不十分なコントラスト）のトランスクリプト：</p>
@@ -58,7 +58,9 @@
                                         Decibels</loc>by Gregg Vanderheiden</p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eramp.com/david/audio_contrast_general_techs.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Audio creation / contrast tutorial</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eramp.com/david/audio_contrast_general_techs.htm" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Audio creation / contrast tutorial</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -95,9 +97,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G56.html"> G56: Mixing audio files so that non-speech sounds are at least 20 decibels lower than the speech audio content（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/G56.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G56: Mixing audio files so that non-speech sounds are at least 20 decibels lower than the speech audio content（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

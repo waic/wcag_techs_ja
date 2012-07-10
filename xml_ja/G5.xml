@@ -16,10 +16,14 @@
     <see-also>
       <ulist>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www-128.ibm.com/developerworks/webservices/library/ws-restvsoap/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Resource-Oriented vs. Activity-Oriented Web Services</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www-128.ibm.com/developerworks/webservices/library/ws-restvsoap/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Resource-Oriented vs. Activity-Oriented Web Services</loc>
+          </p>
         </item>
         <item>
-          <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.useit.com/alertbox/designmistakes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Top Ten Web Design Mistakes of 2005</loc></p>
+          <p>
+            <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.useit.com/alertbox/designmistakes.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Top Ten Web Design Mistakes of 2005</loc>
+          </p>
         </item>
       </ulist>
     </see-also>
@@ -49,9 +53,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/G5.html"> G5: Allowing users to complete an activity without any time limit（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://www.cybergarden.net/">益子 貴寛（株式会社サイバーガーデン）</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/G5.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">G5: Allowing users to complete an activity without any time limit（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.cybergarden.net/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">益子 貴寛（株式会社サイバーガーデン）</loc></item>
     </ulist>
   </translationcredit>
 </technique>

@@ -8,9 +8,10 @@
     <success-criterion idref="time-limits-postponed"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、メッセージ(アラート)を含むダイアログを利用者に表示することである。アラートが表示されたとき、それがフォーカスされると、利用者はそれを閉じるためにダイアログのOKボタンを押さなければならない。これらのアラートにフォーカスが移ってしまうと、特に、緊急ではない情報に使用されたとき、利用者の気が散ってしまうかもしれない。今日の名言、役に立つ小技、又は特定のイベントまでのカウントダウンなど、緊急ではない目的のアラートは、利用者がウェブページに提供された選択肢でそれらを有効にすることなしには現れないようにする。</p>
-          
-               <p>この実装方法では、アラートを表示するかどうかの利用者の選択を保存するJavaScriptのグローバル変数に割り当てる。初期値はfalseにする。 ラッパー関数は、アラートを表示する前にこの変数の値をチェックするために作成される。alert() 関数を直接呼び出すよりもむしろ、アラートを表示するすべての呼び出しをこのラッパー関数にかけるようにする。ページの上部には、ページでのアラートの表示を利用者が有効にするためのボタンを提供する。この実装方法は訪問ベースで1回の訪問ごとに作動する。ページが読みこまれるたび、アラートは無効にされ、利用者は手動でそれらを有効にしなければならない。あるいは、コンテンツ制作者は、利用者の選択をセッションを越えて保存するためにクッキーを使用することができる。</p></description>
+  <description>
+    <p>この実装方法の目的は、メッセージ(アラート)を含むダイアログを利用者に表示することである。アラートが表示されたとき、それがフォーカスされると、利用者はそれを閉じるためにダイアログのOKボタンを押さなければならない。これらのアラートにフォーカスが移ってしまうと、特に、緊急ではない情報に使用されたとき、利用者の気が散ってしまうかもしれない。今日の名言、役に立つ小技、又は特定のイベントまでのカウントダウンなど、緊急ではない目的のアラートは、利用者がウェブページに提供された選択肢でそれらを有効にすることなしには現れないようにする。</p>
+    <p>この実装方法では、アラートを表示するかどうかの利用者の選択を保存するJavaScriptのグローバル変数に割り当てる。初期値はfalseにする。 ラッパー関数は、アラートを表示する前にこの変数の値をチェックするために作成される。alert() 関数を直接呼び出すよりもむしろ、アラートを表示するすべての呼び出しをこのラッパー関数にかけるようにする。ページの上部には、ページでのアラートの表示を利用者が有効にするためのボタンを提供する。この実装方法は訪問ベースで1回の訪問ごとに作動する。ページが読みこまれるたび、アラートは無効にされ、利用者は手動でそれらを有効にしなければならない。あるいは、コンテンツ制作者は、利用者の選択をセッションを越えて保存するためにクッキーを使用することができる。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p>以下のスクリプトは、利用者が「アラートを利用する」というボタンを選択するなら、10秒ごとにアラートボックスに名言を表示する。利用者は再び「アラートを利用しない」を選択することで、名言のアラートボックスを非表示にすることができる。</p>
@@ -52,7 +53,7 @@ showQuotes();
 アラートを利用する&lt;/button&gt;&lt;br /&gt;
 &lt;button id="disableBtn" type="button" onclick="modifyAlerts(false);"&gt;
 アラートを利用しない&lt;/button&gt;&lt;/p&gt;</code>
-      <description><p>このコードを実装したサンプル： <a href="working-examples/SCR14/enablealerts.html">アラートの実装例</a></p>
+      <description><p>このコードを実装したサンプル： <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="working-examples/SCR14/enablealerts.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アラートの実装例</loc></p>
 </description>
     </eg-group>
   </examples>
@@ -84,9 +85,9 @@ showQuotes();
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG20-TECHS/SCR14.html">SCR14: Using scripts to make nonessential alerts optional（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.infoaxia.co.jp/">植木 真（株式会社インフォアクシア）</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/SCR14.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">SCR14: Using scripts to make nonessential alerts optional（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.infoaxia.co.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">植木 真（株式会社インフォアクシア）</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
     </ulist>
   </translationcredit>
 </technique>

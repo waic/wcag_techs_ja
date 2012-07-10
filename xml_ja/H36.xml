@@ -8,10 +8,10 @@
     <success-criterion idref="text-equiv-all"/>
   </applies-to>
   <ua-issues/>
-  <description><p>この実装方法の目的は、<code>type</code> 属性が「image」である <code>input</code> 要素において、 <code>input</code> 要素の <code>alt</code> 属性を機能的なラベルを提供するのに使用することである。このラベルは、画像の説明をするのではなく、ボタンの機能を説明する。もしそのページに、それぞれ異なる結果につながる複数の送信/実行ボタンがあるならば、ラベルは特に重要である。</p>
-
-          
-               <p><code>input</code> 要素は、多くの種類のフォームのコントロールを作成するのに使用される。HTML及びXHTMLのDTDでは、これら全てで<code>alt</code> 属性を用いることができるが、本来は画像の送信/実行ボタンだけに使用すべきである。ユーザーエージェントでは、他の種類のフォームのコントロールでの<code>alt</code>属性の使用をサポートしていないため、これらのコントロールをラベル付けするために他のメカニズムを用いている。</p></description>
+  <description>
+    <p>この実装方法の目的は、<code>type</code>属性が「image」である<code>input</code>要素において、<code>input</code>要素の<code>alt</code>属性を機能的なラベルを提供するのに使用することである。このラベルは、画像の説明をするのではなく、ボタンの機能を説明する。もしそのページに、それぞれ異なる結果につながる複数の送信/実行ボタンがあるならば、ラベルは特に重要である。</p>
+    <p><code>input</code>要素は、多くの種類のフォームのコントロールを作成するのに使用される。HTML及びXHTMLのDTDでは、これら全てで<code>alt</code>属性を用いることができるが、本来は画像の送信/実行ボタンだけに使用すべきである。ユーザーエージェントでは、他の種類のフォームのコントロールでの<code>alt</code>属性の使用をサポートしていないため、これらのコントロールをラベル付けするために他のメカニズムを用いている。</p>
+  </description>
   <examples>
     <eg-group>
       <description><p><code>alt</code> 属性がある <code>input</code> 要素</p>
@@ -48,9 +48,9 @@
   </tests>
   <translationcredit>
     <ulist>
-      <item>原文：<a href="http://www.w3.org/TR/WCAG-TECHS/H36.html">H36: Using alt attributes on images used as submit buttons（英語）</a></item>
-      <item>日本語訳監修：<a href="http://www.hitachi.co.jp/design/index.html">株式会社日立製作所デザイン本部</a></item>
-      <item>日本語訳：<a href="http://storywriter.jp/">羽山 祥樹</a></item>
+      <item>原文：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/H36.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">H36: Using alt attributes on images used as submit buttons（英語）</loc></item>
+      <item>日本語訳監修：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.hitachi.co.jp/design/index.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">株式会社日立製作所デザイン本部</loc></item>
+      <item>日本語訳：<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://storywriter.jp/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">羽山 祥樹</loc></item>
     </ulist>
   </translationcredit>
 </technique>
