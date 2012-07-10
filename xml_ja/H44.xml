@@ -60,7 +60,7 @@
 							<code>input</code>要素の<code>type="checkbox"</code>と<code>type="radio"</code>では、<code>label</code>要素をその後に配置することに注意する。</p>
           
 					<note><p class="prefix">
-									<em>注記 1：</em>明示的なラベルを利用する要素は次の通りである：</p>
+									明示的なラベルを利用する要素は次の通りである：</p>
 <ul>
 <li>
                 
@@ -127,7 +127,7 @@
 							</li>
 </ul>
 <p class="prefix">
-									<em>注記 2：</em>次の場合には、<code>label</code>要素は利用<strong>しない</strong>。これらの要素に対するラベルは、<code>value</code>属性（送信ボタン及びリセットボタン）、<code>alt</code>属性（画像ボタン）、又は要素それ自体の内容（汎用ボタン）を介して提供されるからである。</p>
+									次の場合には、<code>label</code>要素は利用<strong>しない</strong>。これらの要素に対するラベルは、<code>value</code>属性（送信ボタン及びリセットボタン）、<code>alt</code>属性（画像ボタン）、又は要素それ自体の内容（汎用ボタン）を介して提供されるからである。</p>
 <ul>
 <li>
                 
@@ -166,7 +166,7 @@
     <eg-group>
       <head>ラジオボタンのグループ</head>
       <description><p>関連するラジオボタンの小さなグループについて、簡単な説明が付けてあり、さらに個々の要素にラベルが付けてある。</p>
-<note><em>注記：</em>ラジオボタンの数が多く、それらの関連付けや操作説明を必要とする場合は、<a href="H71.html"><em>H71:  Providing a description for groups of form controls using fieldset and legend elements</em></a> の方法を考慮すべきである。</note>
+<note>ラジオボタンの数が多く、それらの関連付けや操作説明を必要とする場合は、<a href="H71.html"><em>H71:  Providing a description for groups of form controls using fieldset and legend elements</em></a> の方法を考慮すべきである。</note>
 </description>
       <code>&lt;h1&gt;ドーナツ&lt;/h1&gt;
 

@@ -35,7 +35,7 @@
 </description>
       <code>&lt;label for="firstname"&gt;名前（必須）:&lt;/label&gt; 
 &lt;input type="text" name="firstname" id="firstname" /&gt;</code>
-      <description><note><p class="prefix"><em>注記：</em>英語では、必須項目の "required" を略して "req." とするコンテンツ制作者もいるが、この略語は分かりにくいという報告がある。</p>
+      <description><note><p class="prefix">英語では、必須項目の "required" を略して "req." とするコンテンツ制作者もいるが、この略語は分かりにくいという報告がある。</p>
 </note>
 </description>
     </eg-group>

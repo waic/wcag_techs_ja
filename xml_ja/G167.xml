@@ -10,7 +10,7 @@
   <ua-issues/>
   <description><p>テキストフィールド上である機能を実行するボタンがあり、ボタンは明確にラベル付けされていて、テキストフィールドと隣り合って表示される場合、ボタンはテキストフィールドに対するラベルとしての役割も果たす。このラベルは、ページ上に新たな反復的なテキストを追加することなく、利用者がこのテキストフィールドの目的を理解するのを助ける。一つのテキストフィールドをラベル付けするボタンは通常はテキストフィールドの後に置かれる。</p>
                 
-               <note><p class="prefix"><em>注記: </em><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-rsv">達成基準4.1.2</a>を満たすため、このボタンはプログラムで解釈可能な識別名（name）を持っていなければならない。</p></note></description>
+               <note><p class="prefix"><a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#ensure-compat-rsv">達成基準4.1.2</a>を満たすため、このボタンはプログラムで解釈可能な識別名（name）を持っていなければならない。</p></note></description>
   <examples>
     <eg-group>
       <head>検索機能</head>

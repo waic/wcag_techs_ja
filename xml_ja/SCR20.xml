@@ -72,7 +72,7 @@ onmouseout="swapImageOff('menu')" onblur="swapImageOff('menu')"&gt;
 </description>
       <code>&lt;img onclick="nextPage();" onkeypress="nextPage();" tabindex="0" src="arrow.gif" 
 alt="次のページへ移動"&gt;</code>
-      <description><note><p class="prefix"><em>注記：</em>この例では<code>img</code>要素にtabindexを用いている。現時点では（文法的に）妥当ではないが、この機能を実装するための古典的なテクニックとして用いられている。<phrase diff="add">このようなカスタム・コントロールでは、コントロールの役割（role）と状態（state）を支援技術に引き渡すためにWAI-ARIAも用いるべきである。</phrase></p>
+      <description><note><p class="prefix">この例では<code>img</code>要素にtabindexを用いている。現時点では（文法的に）妥当ではないが、この機能を実装するための古典的なテクニックとして用いられている。<phrase diff="add">このようなカスタム・コントロールでは、コントロールの役割（role）と状態（state）を支援技術に引き渡すためにWAI-ARIAも用いるべきである。</phrase></p>
 				</note>
 </description>
     </eg-group>

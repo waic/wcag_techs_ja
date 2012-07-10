@@ -16,7 +16,7 @@
                <p>「画像の置き換え」の実装方法は、さまざまなユーザーエージェント、構成、及び支援技術の課題との互換性（詳細は「参照リソース」を参照）に取り組むために多様なものが開発されてきた。コンテンツ制作者がテキストの置き換えのために用いる数々のアプローチがある一方、その実装方法がスクリプト、CSS、画像（又はそれらの組み合わせ）をオフにした場合に正確に動作するかどうか、支援技術との互換性を考慮することは重要である。すべての場合において動作する単一の解決法を見出すことは難しいので、この実装方法は、利用者が画像置き換えの実装方法を含んでいない表現へ切り替えることのできるコントロールを用いることを推奨している。
 </p>
                 
-               <note><p class="prefix"><em>注意：</em>この実装方法は、非適合コンテンツのための<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>のページを提示するために、スタイル切り替えの実装方法との組み合わせで用いることができる。更なる情報として <a href="C29.html">C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する </a>と<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照。</p>
+               <note><p class="prefix">この実装方法は、非適合コンテンツのための<a href="http://www.ciaj.or.jp/access/web/docs/WCAG20/Overview.html#conforming-alternate-versiondef">適合している代替バージョン</a>のページを提示するために、スタイル切り替えの実装方法との組み合わせで用いることができる。更なる情報として <a href="C29.html">C29: スタイル・スイッチャーを用いて、適合している代替バージョンを提供する </a>と<a href="http://www.ciaj.or.jp/access/web/docs/UNDERSTANDING-WCAG20/conformance.html#uc-conforming-alt-versions-head">適合している代替バージョンを理解する</a>を参照。</p>
                </note></description>
   <examples>
     <eg-group>

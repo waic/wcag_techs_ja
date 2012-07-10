@@ -82,7 +82,7 @@
   &lt;/fieldset&gt;
   &lt;/form&gt;</code>
       <description><note><p class="prefix">
-										<em>注記：</em> 関連するチェックボックスのグループも同じように動作するが、ユーザーが1つ以上のフィールドを選べる点がラジオボタンとは異なる。</p></note>
+										 関連するチェックボックスのグループも同じように動作するが、ユーザーが1つ以上のフィールドを選べる点がラジオボタンとは異なる。</p></note>
 </description>
     </eg-group>
     <eg-group>

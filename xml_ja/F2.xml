@@ -28,7 +28,7 @@
  &lt;p&gt;この章では、この製品の詳しい使い方について
  ........
  &lt;/p&gt;</code>
-      <description><note><p class="prefix"><em>注記: </em>この事例で用いるべき適切な手法は、HTMLの<code>h1</code>要素を対象にしたCSSを用いて見た目を制御する方法である。</p>
+      <description><note><p class="prefix">この事例で用いるべき適切な手法は、HTMLの<code>h1</code>要素を対象にしたCSSを用いて見た目を制御する方法である。</p>
 </note>
 </description>
     </eg-group>

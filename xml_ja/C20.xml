@@ -20,7 +20,7 @@
       <description><p>
 この例では、<code>div</code>要素の幅はスタイルシートでem単位で指定されている。</p>
 <note><p class="prefix">
-<em>注記：</em>CSSプロパティの<code>max-width</code>は、Internet Explorer 6 以前のバージョンではサポートされていない。</p></note>
+CSSプロパティの<code>max-width</code>は、Internet Explorer 6 以前のバージョンではサポートされていない。</p></note>
 </description>
       <code>#main_content {max-width: 70em}</code>
       <description><p>

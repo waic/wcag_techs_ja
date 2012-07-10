@@ -85,7 +85,7 @@
 </ul>
 <note><p class="prefix">"^"記号は指数演算子である。</p></note>
 </li></ul>
-<note><p class="prefix"><em>注意：</em>エイリアス文字では文字の端から2ピクセルの部分の相対輝度の値を使用する。</p>
+<note><p class="prefix">エイリアス文字では文字の端から2ピクセルの部分の相対輝度の値を使用する。</p>
 
 </note></item>
         <item><p>色の相対輝度 L = 0.2126 * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> と定義されている。この場合の<strong>R</strong>, <strong>G</strong> 及び <strong>B</strong> は：</p>

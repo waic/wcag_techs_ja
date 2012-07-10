@@ -20,7 +20,7 @@
           
                <p>HTML 4.01では、各要素の<code>lang</code>属性を用いる。text/htmlとして提供されるXHTMLでは、各要素の<code>lang</code>属性と<code>xml:lang</code>属性を用いることでXHTMLの仕様を満たし、またHTMLに対する後方互換性を保持する。application/xhtml+xml として提供されるXHTMLの場合は、各要素の<code>xml:lang</code>属性を用いる。</p>
           
-               <note><p class="prefix"><em>注記: </em> HTMLでは<code>lang</code>属性のみを使用できる。XHTML 1.0.では移行措置として両方の属性を使用できる。XHTML 1.1ではxml:lang属性のみを使用できる。</p></note>
+               <note><p class="prefix"> HTMLでは<code>lang</code>属性のみを使用できる。XHTML 1.0.では移行措置として両方の属性を使用できる。XHTML 1.1ではxml:lang属性のみを使用できる。</p></note>
           
           
                <p><code>lang</code>及び<code>xml:lang</code>属性に指定できる値については、以下に示す参考リソースに示されている。言語タグは、言語を表すプライマリー・コードと、その言語が使用される地域や記述に用いる文字コードなどを表すサブ・コードから成っている。サブ・コードの指定は任意で、指定する場合にはプライマリー・コードに続けてハイフンを記述し、その後に記述する。たとえば、プライマリー・コード「en」は英語を示し、「en-gb」と「en-us」はそれぞれイギリス英語とアメリカ英語を示す。この実装方法において、プライマリー・コードの使用は重要である。サブ・コードの使用は任意だが、状況によっては有用なものになり得る。</p></description>
