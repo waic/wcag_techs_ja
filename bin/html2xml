@@ -120,8 +120,14 @@ html.css( '.diff-delete > span', '.diff-delete > p' ).each{|e|
 	e.parent.replace( %Q|<#{replace_element e} diff="del">#{e.inner_html}</#{replace_element e}>| )
 }
 html.css( 'div.note' ).each{|div| div.replace( %Q|<note>#{div.inner_html}</note>| ) }
+html.css( 'em' ).each{|em|
+	if /\A注.*[:：]\s*\Z/ =~ em.text
+		em.replace '' # delete <note>'s heading
+	else
+		# CODE ME: <em>の特殊な使われ方への対応
+	end
+}
 
-### CODE ME: <em>注記: </em>は削除?
 ### CODE ME: <a>の変換もここでする?
 
 xml = Nokogiri::XML::Builder.new do |x|
