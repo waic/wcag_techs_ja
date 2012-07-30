@@ -118,8 +118,8 @@ html.css( 'div.note' ).each{|div| div.replace( %Q|<note>#{div.inner_html}</note>
 html.css( 'em' ).each{|em|
 	if /\A注.*[:：]\s*\Z/ =~ em.text
 		em.replace '' # delete <note>'s heading
-	else
-		# CODE ME: <em>の特殊な使われ方への対応
+	elsif em.parent.name == 'a'
+		em.parent.replace %Q|<specref ref="#{em.parent.attr('href').sub( /\.html/, '' )}"/>|
 	end
 }
 html.css( 'a' ).each{|a|
