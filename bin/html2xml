@@ -67,13 +67,13 @@ def make_see_also( x, see_also )
 				x.head {
 					x.text e.text.strip
 				}
-			when 'ul'
+			when 'ulist'
 				x.ulist {
-					e.css( 'li' ).each{|li|
-						diff_class = get_diff_class( li.css( 'div' )[0] )
+					e.css( 'item' ).each{|item|
+						diff_class = get_diff_class( item.css( 'div' )[0] )
 						x.item( diff_class ) {
-							x.p( li.css( 'p' ).first.attributes.empty? ? diff_class : li.css( 'p' ).first.attributes ) {
-								paragraph( x, li.css( 'p' ) )
+							x.p( item.css( 'p' ).first.attributes.empty? ? diff_class : item.css( 'p' ).first.attributes ) {
+								paragraph( x, item.css( 'p' ) )
 							}
 						}
 					}
@@ -125,8 +125,14 @@ html.css( 'em' ).each{|em|
 html.css( 'a' ).each{|a|
 	a.replace( %Q|<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="#{a.attr( 'href' )}" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">#{a.inner_html.strip}</loc>| )
 }
-
-### CODE ME: <ul><ol>の一括置換も?
+2.times{ # loop for 2 depth
+	html.css( 'ul', 'ol' ).each{|list|
+		list.children.each{|li|
+			li.replace( %Q|<item>#{li.inner_html.strip}</item>| ) if li.name == 'li'
+		}
+		list.replace( %Q|<#{list.name[0]}list>#{list.inner_html.strip}</#{list.name[0]}list>| )
+	}
+}
 
 xml = Nokogiri::XML::Builder.new do |x|
 	x.technique( id: tech_id ) {
@@ -139,7 +145,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 		}
 		x.__send__( :'applies-to' ) {
 			[].tap{|ids|
-				html.css( 'p.referenced + ul > li loc' ).each do |a|
+				html.css( 'p.referenced + ulist > item loc' ).each do |a|
 					next if a.attr( 'href' ) !~ /#/
 					ids << a.attr( 'href' ).sub( /\A.*#/, '' )
 				end
@@ -198,18 +204,10 @@ xml = Nokogiri::XML::Builder.new do |x|
 										x << e.to_html.strip + "\n"
 									when 'note'
 										x << e.to_html.strip + "\n"
-									when 'ul'
-										x.ulist {
-											e.css( 'li' ).each do |li|
-												x.item{ x << li.inner_html.strip }
-											end
-										}
-									when 'ol'
-										x.olist {
-											e.css( 'li' ).each do |li|
-												x.item{ x << li.inner_html.strip }
-											end
-										}
+									when 'ulist'
+										x << e.to_html.strip + "\n"
+									when 'olist'
+										x << e.to_html.strip + "\n"
 									when 'img'
 										x.graphic(
 											'xmlns:xlink' => "http://www.w3.org/1999/xlink",
@@ -259,7 +257,7 @@ xml = Nokogiri::XML::Builder.new do |x|
 			make_see_also( x, see_also ) unless see_also.empty?
 		}
 		x.__send__( :'related-techniques' ) {
-			html.css( "##{tech_id}-related-techs + div.textbody li loc" ).each{|a|
+			html.css( "##{tech_id}-related-techs + div.textbody item loc" ).each{|a|
 				x.relatedtech( idref: a.attr( 'href' ).sub( /\.html$/, '' ))
 			}
 		}
@@ -285,37 +283,19 @@ xml = Nokogiri::XML::Builder.new do |x|
 				x << note.to_html if note
 
 				procedure.each{|e|
-					case e.node_name
-					when 'ol'
-						x.olist {
-							e.css( 'li' ).each{|li|
-								x.item { x << li.inner_html.strip }
-							}
-						}
-					else
-						x << e.to_html.strip
-					end
+					x << e.to_html.strip
 				}
 			}
 			x.__send__( :'expected-results' ) {
 				result.each{|e|
-					case e.node_name
-					when 'ul'
-						x.ulist {
-							e.css( 'li' ).each{|li|
-								x.item { x << li.inner_html.strip }
-							}
-						}
-					else
-						x << e.to_html.strip
-					end
+					x << e.to_html.strip
 				}
 			}
 		}
 		x.translationcredit {
 			x.ulist {
-				html.css( 'div.annotation li' ).each{|li|
-					x.item { paragraph( x, li ) }
+				html.css( 'div.annotation item' ).each{|item|
+					x.item { paragraph( x, item ) }
 				}
 			}
 		}
