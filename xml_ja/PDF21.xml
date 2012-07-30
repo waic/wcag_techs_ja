@@ -18,20 +18,20 @@
     <p>一部の支援技術では、ユーザーはリスト間または項目間を移動できる。リストがリストタグで正しく書式設定されていない場合、ユーザーはリストコンテンツを理解するのが難しくなる。</p>
     <p>PDF コンテンツ内にリストを作成する最も簡単な方法は、オーサリングツール（Microsoft Word や OpenOffice.org Writer など）のリストマークアップを使用して正しく書式設定することである。ただし、ソースファイルやオーサリングツールを利用できない場合は、Adobe Acrobat Pro の TouchUp 読み上げ順序ツールおよびタグパネルを使用できる。</p>
     <p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">PDF 仕様</loc>は、節 14.8.4.3.3「リストエレメント」（英語）でリスト構造を定義している（リストエレメント）。PDF 文書のリストの構造タイプを以下に示す。</p>
-    <ul>
-<li>
-<p> L - リストタグ（1 つ以上の LI タグを含む）</p>
-</li>
-<li>
-<p> LI - リスト項目タグ。リスト項目タグには、Lbl タグと LBody タグを含めることができる</p>
-</li>
-<li>
-<p> Lbl - リスト項目ラベル。項目番号や行頭文字などの識別情報を含む</p>
-</li>
-<li>
-<p> LBody - リスト項目本体。リスト項目コンテンツを含む。ネストされたリストの場合には、追加のリストタグツリーを含むことがある</p>
-</li>
-</ul>
+    <ulist>
+      <item>
+        <p> L - リストタグ（1 つ以上の LI タグを含む）</p>
+      </item>
+      <item>
+        <p> LI - リスト項目タグ。リスト項目タグには、Lbl タグと LBody タグを含めることができる</p>
+      </item>
+      <item>
+        <p> Lbl - リスト項目ラベル。項目番号や行頭文字などの識別情報を含む</p>
+      </item>
+      <item>
+        <p> LBody - リスト項目本体。リスト項目コンテンツを含む。ネストされたリストの場合には、追加のリストタグツリーを含むことがある</p>
+      </item>
+    </ulist>
   </description>
   <examples>
     <eg-group>
@@ -52,7 +52,8 @@
     <eg-group>
       <head>Adobe Acrobat 9 Pro を使用して、リストを正しく書式設定する</head>
       <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。 他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
-<olist><item><p>表示 &gt; ナビゲーションパネル... &gt; タグ</p></item><item><p>文書内のリストを検査して、書式設定に誤りがないかどうかを確認する。</p></item></olist><p>次の画像では、3番目のリストがテキストとして書式設定されている。このリスト項目は改行によってのみ分割されている。そのため、支援技術では、ユーザーに対してこれをリストとして分かりやすく表現できない。</p>
+<olist><item><p>表示 &gt; ナビゲーションパネル... &gt; タグ</p></item><item><p>文書内のリストを検査して、書式設定に誤りがないかどうかを確認する。</p></item></olist>
+<p>次の画像では、3番目のリストがテキストとして書式設定されている。このリスト項目は改行によってのみ分割されている。そのため、支援技術では、ユーザーに対してこれをリストとして分かりやすく表現できない。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF21/unformattedlist.jpg" alt="スクリーンショット：タグパネルでは、書式設定に誤りのあるリストは、リストタグの下にネストされるのではなく、Textbodyタグの下にテキストとして表示される。" height="427" width="550"/></p><p>リストを修復するには、［タグ］パネルを使用してコンテンツ内にリストタグを作成する。</p>
 <p>次の画像は、結果として作成された、正しく書式設定された最初のリスト項目を示している。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF21/listrepair.jpg" alt="スクリーンショット：［タグ］パネルで、リストタグの下に正しくネストされた最初のリスト項目" height="448" width="556"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF21/lists.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Acrobat Pro でリストが適切に書式設定されたサンプル（PDFファイル）</loc>がある。</p>
@@ -183,32 +184,7 @@ endobj</code>
     <procedure>
       <olist>
         <item><p>PDF 文書内のリストについて、次のいずれかの方法で確認する。</p>
-<ul>
-<li>
-<p>PDF 文書をスクリーンリーダーで読み上げ、コンテンツが 1 行単位で読み上げられるときにリストが正しく読み上げられる</p>
-</li>
-<li>
-<p>リストを表示できるツールを使用して PDF 文書を開くと、リストを表示してリストが正しく構造化されている</p>
-</li>
-<li>
-<p>タグツリーを検査すると、リストが PDF 仕様に基づいて構造化されている</p>
-</li>
-<li>
-<p>アクセシビリティ API を通じて文書を表示するツールを使用して、リストが正しく構造化されていることを確認する</p>
-</li>
-</ul></item>
-        <item>
-          <p>PDF 文書をスクリーンリーダーで読み上げ、コンテンツが 1 行単位で読み上げられるときにリストが正しく読み上げられる</p>
-        </item>
-        <item>
-          <p>リストを表示できるツールを使用して PDF 文書を開くと、リストを表示してリストが正しく構造化されている</p>
-        </item>
-        <item>
-          <p>タグツリーを検査すると、リストが PDF 仕様に基づいて構造化されている</p>
-        </item>
-        <item>
-          <p>アクセシビリティ API を通じて文書を表示するツールを使用して、リストが正しく構造化されていることを確認する</p>
-        </item>
+<ulist><item><p>PDF 文書をスクリーンリーダーで読み上げ、コンテンツが 1 行単位で読み上げられるときにリストが正しく読み上げられる</p></item><item><p>リストを表示できるツールを使用して PDF 文書を開くと、リストを表示してリストが正しく構造化されている</p></item><item><p>タグツリーを検査すると、リストが PDF 仕様に基づいて構造化されている</p></item><item><p>アクセシビリティ API を通じて文書を表示するツールを使用して、リストが正しく構造化されていることを確認する</p></item></ulist></item>
       </olist>
     </procedure>
     <expected-results>

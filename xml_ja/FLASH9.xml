@@ -2,9 +2,7 @@
 <technique id="FLASH9">
   <short-name>FLASH9： 収録済みの同期したメディアにキャプションを提供する</short-name>
   <applicability><p>Adobe Flashをベースにしたコンテンツ</p>
-<ul>
-<li><p>Adobe Flash CS3 以降</p></li>
-</ul></applicability>
+<ulist><item><p>Adobe Flash CS3 以降</p></item></ulist></applicability>
   <applies-to>
     <success-criterion idref="media-equiv-captions"/>
   </applies-to>
@@ -19,22 +17,8 @@
   <examples>
     <eg-group>
       <head>Timed Textのキャプションファイルを Flash に追加する</head>
-      <description>
-        <olist>
-          <item>
-            <p>外部ツール（Magpie やシンプルなテキストエディタなど）を使用して、Timed Textを用いたキャプションの XML ファイルを作成する。ビデオコンテンツを停止して再生し、音声情報の適切な部分（会話、重要な背景音、イベントサウンドなど）ごとに開始と終了のタイムコードおよび代替テキストを挿入する。Magpie のようなツールにはこの作業を簡単に行うことができる高度な機能がある。これに対し、テキストエディタでは次のキャプション文書の例に示すようにメディアプレーヤーからタイムコードを読み取って XML に含める必要がある。</p>
-          </item>
-          <item>
-            <p>Flash では、ステージに FLVPlayback コンポーネントの新しいインスタンスを作成し、［コンポーネントインスペクタ］パネルまたは［パラメータ］パネルを使用して contentPath 値を flv ビデオファイルに設定する。</p>
-          </item>
-          <item>
-            <p>CC（クローズドキャプション）ボタンを含むスキンを使用するように「Skin」パラメータを設定する。</p>
-          </item>
-          <item>
-            <p>さらに、コンポーネントのリストから FLVPlayback キャプションコンポーネントのインスタンスを作成する。［コンポーネントインスペクタ］パネルで、「Source」パラメータをTimed TextのXMLファイルの名前に設定する。キャプションは、プレーヤーのフレームの下部に自動的に配置される。</p>
-          </item>
-        </olist>
-      </description>
+      <description><olist><item><p>外部ツール（Magpie やシンプルなテキストエディタなど）を使用して、Timed Textを用いたキャプションの XML ファイルを作成する。ビデオコンテンツを停止して再生し、音声情報の適切な部分（会話、重要な背景音、イベントサウンドなど）ごとに開始と終了のタイムコードおよび代替テキストを挿入する。Magpie のようなツールにはこの作業を簡単に行うことができる高度な機能がある。これに対し、テキストエディタでは次のキャプション文書の例に示すようにメディアプレーヤーからタイムコードを読み取って XML に含める必要がある。</p></item><item><p>Flash では、ステージに FLVPlayback コンポーネントの新しいインスタンスを作成し、［コンポーネントインスペクタ］パネルまたは［パラメータ］パネルを使用して contentPath 値を flv ビデオファイルに設定する。</p></item><item><p>CC（クローズドキャプション）ボタンを含むスキンを使用するように「Skin」パラメータを設定する。</p></item><item><p>さらに、コンポーネントのリストから FLVPlayback キャプションコンポーネントのインスタンスを作成する。［コンポーネントインスペクタ］パネルで、「Source」パラメータをTimed TextのXMLファイルの名前に設定する。キャプションは、プレーヤーのフレームの下部に自動的に配置される。</p></item></olist>
+</description>
       <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 
 &lt;tt xml:lang="en" xmlns="http://www.w3.org/2006/04/ttaf1"

@@ -2,10 +2,14 @@
 <technique id="FLASH34">
   <short-name>FLASH34： スクリーンリーダー検出機能を使用して、自動的に再生される音声をオフにする</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="visual-audio-contrast-dis-audio"/>
@@ -120,9 +124,11 @@
       </olist>
     </procedure>
     <expected-results>
-      <ol class="enumar">
-<li><p>3. を満たしている。</p></li>
-</ol>
+      <olist>
+        <item>
+          <p>3. を満たしている。</p>
+        </item>
+      </olist>
       <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>

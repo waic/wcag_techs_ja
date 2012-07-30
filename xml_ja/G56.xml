@@ -14,13 +14,8 @@
   <examples>
     <eg-group>
       <head>暴動の様子を伝えるアナウンサー</head>
-      <description>
-        <ulist>
-          <item>
-            <p>アナウンサーが暴動の様子を伝えている。暴動場面の音量をアナウンサーの音量よりも20デシベル小さく調整してから、その場面とアナウンサーとを編集で重ねている。</p>
-          </item>
-        </ulist>
-      </description>
+      <description><ulist><item><p>アナウンサーが暴動の様子を伝えている。暴動場面の音量をアナウンサーの音量よりも20デシベル小さく調整してから、その場面とアナウンサーとを編集で重ねている。</p></item></ulist>
+</description>
     </eg-group>
     <eg-group>
       <head>事例2：ナレーターの音声と背景音楽との十分な音声コントラスト</head>

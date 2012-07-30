@@ -16,33 +16,8 @@
       <description><p>次に挙げるのは、ページタイトルとはいえない文言の例である：</p>
 <ulist><item><p>オーサリングツールの初期設定のページタイトル。例えば、</p>
                   
-                           <ul>
-<li>
-                      
-                                 <p>"ここにHTMLドキュメントのタイトルを入れてください"</p>
-                    
-                              </li>
-<li>
-                      
-                                 <p>"無題ドキュメント"</p>
-                    
-                              </li>
-<li>
-                      
-                                 <p>"タイトルなし"</p>
-                    
-                              </li>
-<li>
-                      
-                                 <p>"無題ページ"</p>
-                    
-                              </li>
-<li>
-                      
-                                 <p>"新しいページ 1"</p>
-                    
-                              </li>
-</ul></item><item><p>"ここにHTMLドキュメントのタイトルを入れてください"</p></item><item><p>"無題ドキュメント"</p></item><item><p>"タイトルなし"</p></item><item><p>"無題ページ"</p></item><item><p>"新しいページ 1"</p></item><item><p>それぞれの内容を示していないファイル名。例えば、"report.html"又は"spk12.html"など。</p></item><item><p>空の（又は、意味のない）テキスト</p></item><item><p>埋め草又はプレースホルダーのテキスト</p></item></ulist></description>
+                           <ulist><item><p>"ここにHTMLドキュメントのタイトルを入れてください"</p></item><item><p>"無題ドキュメント"</p></item><item><p>"タイトルなし"</p></item><item><p>"無題ページ"</p></item><item><p>"新しいページ 1"</p></item></ulist></item><item><p>それぞれの内容を示していないファイル名。例えば、"report.html"又は"spk12.html"など。</p></item><item><p>空の（又は、意味のない）テキスト</p></item><item><p>埋め草又はプレースホルダーのテキスト</p></item></ulist>
+</description>
     </eg-group>
     <eg-group role="failure">
       <description><p>テンプレートを用いて生成されたサイトにおいて、サイトの各ページに同じページタイトルがついている。

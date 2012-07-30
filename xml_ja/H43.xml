@@ -68,32 +68,7 @@
         </item>
         <item><p>データテーブルでは、<code>id</code>属性または<code>headers</code>属性を指定しているあらゆるセルについて：</p>
                 
-                        <ol class="enumla">
-<li>
-                    
-										<p>データセルの<code>headers</code>属性で指定した各<code>id</code>が、見出しセルの<code>id</code>属性値と一致している。</p>
-                  
-                           </li>
-<li>
-                    
-										<p>データセルの<code>headers</code>属性で、そのデータセルと関連付けられた全ての見出しの<code>id</code>属性値を指定している。</p>
-                  
-                           </li>
-<li>
-                    
-										<p>全ての<code>id</code>が一意的であり、重複して使用していない（つまり、ページの中で2つ以上の要素が同じ<code>id</code>を持つことはできない）。</p>
-                  
-                           </li>
-</ol></item>
-        <item>
-          <p>データセルの<code>headers</code>属性で指定した各<code>id</code>が、見出しセルの<code>id</code>属性値と一致している。</p>
-        </item>
-        <item>
-          <p>データセルの<code>headers</code>属性で、そのデータセルと関連付けられた全ての見出しの<code>id</code>属性値を指定している。</p>
-        </item>
-        <item>
-          <p>全ての<code>id</code>が一意的であり、重複して使用していない（つまり、ページの中で2つ以上の要素が同じ<code>id</code>を持つことはできない）。</p>
-        </item>
+                        <olist><item><p>データセルの<code>headers</code>属性で指定した各<code>id</code>が、見出しセルの<code>id</code>属性値と一致している。</p></item><item><p>データセルの<code>headers</code>属性で、そのデータセルと関連付けられた全ての見出しの<code>id</code>属性値を指定している。</p></item><item><p>全ての<code>id</code>が一意的であり、重複して使用していない（つまり、ページの中で2つ以上の要素が同じ<code>id</code>を持つことはできない）。</p></item></olist></item>
       </olist>
     </procedure>
     <expected-results>

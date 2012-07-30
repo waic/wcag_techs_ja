@@ -18,24 +18,24 @@
   <description>
     <p>この実装方法の目的は、文字サイズが縮小・拡大されるのに従って、適切に拡大・縮小するように要素のサイズ及びポジションを定めることである。</p>
     <p>ここに要素のサイズとポジションを決めるJavaScriptの4つプロパティがある：</p>
-    <ul>
-<li>
-                     <p>
+    <ulist>
+      <item>
+        <p>
                         <code>offsetHeight</code> （ピクセルでの要素の高さ）</p>
-                  </li>
-<li>
-                     <p>
+      </item>
+      <item>
+        <p>
                         <code>offsetWidth</code> （ピクセルでの要素の幅）</p>
-                  </li>
-<li>
-                     <p>
+      </item>
+      <item>
+        <p>
                         <code>offsetLeft</code> （ピクセルでの親要素（offsetParent）の左からの距離）</p>
-                  </li>
-<li>
-                     <p>
+      </item>
+      <item>
+        <p>
                         <code>offsetTop</code> （ピクセルでの親要素（offsetParent）の上からの距離）</p>
-                  </li>
-</ul>
+      </item>
+    </ulist>
     <p><code>offsetHeight</code>や<code>offsetWidth</code>を用いて高さや幅を定めることは簡単である、しかし、オブジェクトの左とトップの位置を絶対配置の値として定める時、親要素を考える必要がある。下記において、<code>calculatePosition</code>関数は、要素におけるすべての親ノードの最終的な値が決定するまで繰り返されている。
                  その関数は<code>objElement</code>（当該の要素の名前）とオフセットプロパティ（<code>offsetLeft</code>又は<code>offsetTop</code>）の2つの引数を取っている。</p>
   </description>

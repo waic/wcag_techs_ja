@@ -2,10 +2,14 @@
 <technique id="FLASH25">
   <short-name>FLASH25： アクセシブルな名前を設定することによって、フォーム・コントロールにラベルを付ける</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="text-equiv-all"/>
@@ -22,36 +26,71 @@
     <p>ActionScript 2</p>
     <p>ActionScript 2 では、コンポーネントの<code>_accProps</code>プロパティにアクセシブルな名前を設定する必要がある。このプロパティはオブジェクトでなければならない。プロパティがまだ設定されていない場合は、コンテンツ制作者がカスタムオブジェクトを作成して<code>_accProps</code>プロパティに割り当てる必要がある。場合によっては、1 つのオブジェクトに対し、アクセシブルな名前を指定する<code>_accProps.name</code>を含む複数のアクセシビリティ関連プロパティがある。<code>_accProps</code>プロパティを変更した場合、コンテンツ制作者は、<code>Accessibility.UpdateProperties()</code>を呼び出してその変更を有効にする必要がある。MSAA に対応していない環境でエラーが発生するのを防ぐため、<code>Accessibility.UpdateProperties()</code>を呼び出す前に<var>System.capabilities.hasAccessibility</var>フラグを確認することを推奨する。</p>
     <p>ActionScript 2 には、以下のアクセシブルなコンポーネントが用意されている。</p>
-    <ul>
-<li><p> SimpleButton </p></li>
-<li><p> CheckBox </p></li>
-<li><p> RadioButton </p></li>
-<li><p> Label </p></li>
-<li><p> TextInput </p></li>
-<li><p> TextArea </p></li>
-<li><p> ComboBox </p></li>
-<li><p> ListBox </p></li>
-<li><p> Window </p></li>
-<li><p> Alert </p></li>
-<li><p> DataGrid </p></li>
-</ul>
+    <ulist>
+      <item>
+        <p> SimpleButton </p>
+      </item>
+      <item>
+        <p> CheckBox </p>
+      </item>
+      <item>
+        <p> RadioButton </p>
+      </item>
+      <item>
+        <p> Label </p>
+      </item>
+      <item>
+        <p> TextInput </p>
+      </item>
+      <item>
+        <p> TextArea </p>
+      </item>
+      <item>
+        <p> ComboBox </p>
+      </item>
+      <item>
+        <p> ListBox </p>
+      </item>
+      <item>
+        <p> Window </p>
+      </item>
+      <item>
+        <p> Alert </p>
+      </item>
+      <item>
+        <p> DataGrid </p>
+      </item>
+    </ulist>
     <p>ActionScript 3</p>
     <p>ActionScript 3 では、コンポーネントの<code>accessibilityProperties</code>プロパティにアクセシブルな名前を設定する必要がある。このプロパティは<code>flash.accessibility.AccessibilityProperties</code>のインスタンスでなければならない。プロパティがまだ設定されていない場合は、コンテンツ制作者が新しい<code>accessibilityProperties</code>インスタンスを作成して<code>accessibilityProperties</code>プロパティに割り当てる必要がある。場合によっては、1 つのオブジェクトに対し、アクセシブルな名前を指定する<code>accessibilityProperties.name</code>を含む複数のアクセシビリティ関連プロパティがある。<code>accessibilityProperties</code>プロパティを変更した場合、コンテンツ制作者は、<code>flash.accessibility.AccessibilityProperties()</code>を呼び出してその変更を有効にする必要がある。MSAA に対応していない環境でエラーが発生するのを防ぐため、<code>Accessibility.UpdateProperties()</code>を呼び出す前に<var>flash.system.capabilities.hasAccessibility</var>フラグを確認することを推奨する。</p>
     <p>ActionScript 3 には、以下のアクセシブルなコンポーネントが用意されている。</p>
-    <ul>
-<li><p> Button </p></li>
-<li><p> CheckBox </p></li>
-<li><p> ComboBox </p></li>
-<li><p> List </p></li>
-<li><p> RadioButton </p></li>
-<li><p> TileList </p></li>
-</ul>
+    <ulist>
+      <item>
+        <p> Button </p>
+      </item>
+      <item>
+        <p> CheckBox </p>
+      </item>
+      <item>
+        <p> ComboBox </p>
+      </item>
+      <item>
+        <p> List </p>
+      </item>
+      <item>
+        <p> RadioButton </p>
+      </item>
+      <item>
+        <p> TileList </p>
+      </item>
+    </ulist>
   </description>
   <examples>
     <eg-group>
       <head>アクセシビリティパネルを使用してコンポーネントのアクセシブルな名前を設定する</head>
       <description><p>コンポーネントコントロールを追加してラベルを付ける手順は次の通りである。</p>
-<olist><item><p>コンポーネントパネルからコンポーネントをステージへドラッグするか、スクリプトを使用して新しいインスタンスを作成する。</p></item><item><p>新しく作成したコンポーネントインスタンスを選択した状態で、対応するラベルテキストをアクセシビリティパネルの「名前」フィールドに入力する。</p></item></olist></description>
+<olist><item><p>コンポーネントパネルからコンポーネントをステージへドラッグするか、スクリプトを使用して新しいインスタンスを作成する。</p></item><item><p>新しく作成したコンポーネントインスタンスを選択した状態で、対応するラベルテキストをアクセシビリティパネルの「名前」フィールドに入力する。</p></item></olist>
+</description>
     </eg-group>
     <eg-group>
       <head>ActionScript 2.0 を使用してアクセシブルな名前を設定する</head>

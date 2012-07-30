@@ -2,10 +2,14 @@
 <technique id="FLASH18">
   <short-name>FLASH18： Flash で自動的に再生される音声をオフにするコントロールを提供する</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="visual-audio-contrast-dis-audio"/>

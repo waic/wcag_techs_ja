@@ -12,23 +12,19 @@
 								JAWSの最新版では、<code>scope</code>属性の<code>row</code>と<code>col</code>という値をほとんどサポートしているが、まだいくつかの問題がある。Window-Eyesは<code>scope</code>属性のサポートが一貫していない。これらのスクリーンリーダーの日本語版も同じである。JAWSのバージョン5以前、Window-Eyesの古いバージョンでは<code>scope</code>属性のサポートが一貫していない。</p>
             
 						<p>
-								現時点で、見出しが1行目や1列目にないテーブルについて、さまざまな支援技術で一貫したサポートを確保したい場合は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H43.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"><em>H43: Using id and headers attributes to associate data cells with header cells in data tables</em></loc>にある複雑なテーブルに関する実装方法を採用してもよい。一方、見出しが1行目や1列目にある単純なテーブルについては、<code>th</code>要素と<code>td</code>要素の利用を推奨する。</p></ua-issue>
+								現時点で、見出しが1行目や1列目にないテーブルについて、さまざまな支援技術で一貫したサポートを確保したい場合は、<specref ref="H43"/>にある複雑なテーブルに関する実装方法を採用してもよい。一方、見出しが1行目や1列目にある単純なテーブルについては、<code>th</code>要素と<code>td</code>要素の利用を推奨する。</p></ua-issue>
   </ua-issues>
   <description>
     <p>この実装方法の目的は、<code>scope</code>属性を利用して見出しセルとデータセルを関連付けることである。<code>scope</code>属性を利用するのは、見出しとして利用するあらゆるセルが及ぶ範囲を明確にするためである。範囲とは、そのセルが行、列、行グループ、列グループのどの見出しであるかを特定するものである。<code>row</code>、<code>col</code>、<code>rowgroup</code>、<code>colgroup</code>という値によって範囲を特定することになる。</p>
     <p>事例 1のように、見出しが1行目や1列目にない単純なテーブルに対してこの実装方法が利用できる。今日のスクリーンリーダーのサポートを考えると、単純なテーブルについて次の2つの状況が当てはまる場合に、この実装方法の利用が示唆される：</p>
-    <ul>
-<li>
-              
-							<p><code>td</code>要素でマークアップしてあるデータセルが、行見出し又は列見出しとしても機能する場合</p>
-            
-                  </li>
-<li>
-              
-							<p><code>th</code>要素ではなく<code>td</code>要素でマークアップしてある見出しセルがある場合、コンテンツ制作者は、CSSでコントロールする方法があるがそれを採用せず、<code>th</code>要素の表示特性を避けるために<code>td</code>要素でマークアップすることがある。</p>
-            
-                  </li>
-</ul>
+    <ulist>
+      <item>
+        <p><code>td</code>要素でマークアップしてあるデータセルが、行見出し又は列見出しとしても機能する場合</p>
+      </item>
+      <item>
+        <p><code>th</code>要素ではなく<code>td</code>要素でマークアップしてある見出しセルがある場合、コンテンツ制作者は、CSSでコントロールする方法があるがそれを採用せず、<code>th</code>要素の表示特性を避けるために<code>td</code>要素でマークアップすることがある。</p>
+      </item>
+    </ulist>
     <note><p class="prefix">
 									
 									1行目や1列目に見出しがある単純なテーブルについては、<code>scope</code>属性を指定せずに<code>th</code>要素を利用するだけで十分である。</p>
@@ -36,7 +32,7 @@
     <note>
       <p class="prefix">
 									
-									複雑なテーブルについては、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H43.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"><em>H43: Using id and headers attributes to associate data cells with header cells in data tables</em></loc> の通り、<code>id</code>属性と<code>headers</code>属性を利用する。</p>
+									複雑なテーブルについては、<specref ref="H43"/> の通り、<code>id</code>属性と<code>headers</code>属性を利用する。</p>
     </note>
   </description>
   <examples>
@@ -79,7 +75,7 @@
     <see-also>
       <ulist>
         <item>
-          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-scope " xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Table Cells: scope attribute</loc></p>
+          <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-scope%20" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Table Cells: scope attribute</loc></p>
         </item>
         <item>
           <p>HTML 4.01<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/html401/struct/tables.html#h-11.2.6" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Table cells: The TH and TD elements</loc></p>

@@ -2,14 +2,14 @@
 <technique id="PDF10">
   <short-name>PDF10：PDF 文書内のインタラクティブなフォーム・コントロールにラベルを付ける</short-name>
   <applicability>
-    <ul>
-<li>
-<p>フォームが含まれているタグ付き PDF 文書</p>
-</li>
-<li>
-<p>Adobe LiveCycle Designer で作成された PDF フォーム</p>
-</li>
-</ul>
+    <ulist>
+      <item>
+        <p>フォームが含まれているタグ付き PDF 文書</p>
+      </item>
+      <item>
+        <p>Adobe LiveCycle Designer で作成された PDF フォーム</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="content-structure-separation-programmatic"/>
@@ -74,7 +74,8 @@
       <head>Adobe Acrobat 9 Pro のフォームツールを使用してラベルを付ける</head>
       <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>解説に記載されているように、オーサリングツールで追加され PDF に変換されたテキストラベルは、フィールドに視覚的に関連付けられていても、プログラムで関連付けられていないため、ツールヒントを提供する必要がある。</p>
-<olist><item><p>［フォーム］メニューで［フィールドを追加または編集］を選択する</p></item><item><p>編集するフィールドのコンテキストメニューから［プロパティ］ダイアログボックスを選択する</p></item><item><p>［プロパティ］ダイアログボックスの［一般］タブで、「ツールヒント」フィールドにフォームフィールドの説明を入力する</p></item><item><p>すべてのフォームフィールドについて同じ操作を繰り返す</p></item></olist><p>次の画像は、［プロパティ］ダイアログボックスの「ツールヒント」フィールドに説明が入力された状態を示している。</p>
+<olist><item><p>［フォーム］メニューで［フィールドを追加または編集］を選択する</p></item><item><p>編集するフィールドのコンテキストメニューから［プロパティ］ダイアログボックスを選択する</p></item><item><p>［プロパティ］ダイアログボックスの［一般］タブで、「ツールヒント」フィールドにフォームフィールドの説明を入力する</p></item><item><p>すべてのフォームフィールドについて同じ操作を繰り返す</p></item></olist>
+<p>次の画像は、［プロパティ］ダイアログボックスの「ツールヒント」フィールドに説明が入力された状態を示している。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form5.jpg" alt="スクリーンショット：フォームフィールドのプロパティダイアログボックス。フィールドで要求される形式を含む簡単な説明を入力すると、ツールヒントとして表示される。" height="503" width="525"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF10/form" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">フォームツールを使用してラベルを表示させるサンプル（PDFフォーム）</loc>がある。</p>
 </description>
     </eg-group>
@@ -166,20 +167,7 @@
           <p>各フォーム・コントロールについて、コントロールに関連付けられた正しい位置にラベルが配置されている</p>
         </item>
         <item><p>各フォーム・コントロールについて、次のいずれかの方法で、名前がコントロールにプログラムで関連付けられていることを確認する</p>
-<ul>
-<li>
-<p>コントロールに関連付けられている名前を表示できるツールを使用して PDF 文書を開き、名前がコントロールに正しく関連付けられていることを確認する</p>
-</li>
-<li>
-<p>アクセシビリティ API を通じて文書を表示するツールを使用して、名前がコントロールに正しく関連付けられていることを確認する</p>
-</li>
-</ul></item>
-        <item>
-          <p>コントロールに関連付けられている名前を表示できるツールを使用して PDF 文書を開き、名前がコントロールに正しく関連付けられていることを確認する</p>
-        </item>
-        <item>
-          <p>アクセシビリティ API を通じて文書を表示するツールを使用して、名前がコントロールに正しく関連付けられていることを確認する</p>
-        </item>
+<ulist><item><p>コントロールに関連付けられている名前を表示できるツールを使用して PDF 文書を開き、名前がコントロールに正しく関連付けられていることを確認する</p></item><item><p>アクセシビリティ API を通じて文書を表示するツールを使用して、名前がコントロールに正しく関連付けられていることを確認する</p></item></ulist></item>
       </olist>
     </procedure>
     <expected-results>

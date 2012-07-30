@@ -10,47 +10,35 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <ul>
-<li>
-									<p>link要素について、ユーザーエージェントと支援技術のサポートが一貫していない。</p>
-                     </li>
-<li>
-										 <p>ユーザーエージェントの一部は、link要素で指定されている情報を表示する追加的なナビゲーションバーを提供する。MozillaとOperaの現在のバージョンがこの機能を提供する。IE 6.0とFirefox 1.5はこの機能を提供しないが、拡張機能やアドオンを通して利用できることがある。</p>
+      <ulist>
+        <item>
+          <p>link要素について、ユーザーエージェントと支援技術のサポートが一貫していない。</p>
+        </item>
+        <item><p>ユーザーエージェントの一部は、link要素で指定されている情報を表示する追加的なナビゲーションバーを提供する。MozillaとOperaの現在のバージョンがこの機能を提供する。IE 6.0とFirefox 1.5はこの機能を提供しないが、拡張機能やアドオンを通して利用できることがある。</p>
             
-						<p><code>link</code>要素のブラウザサポートに関する詳しい情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.subotnik.net/html/link" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">(X)HTMLにおける「link」要素（英語）</loc>を参照。</p>
-                     </li>
-</ul>
+						<p><code>link</code>要素のブラウザサポートに関する詳しい情報は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.subotnik.net/html/link" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">(X)HTMLにおける「link」要素（英語）</loc>を参照。</p></item>
+      </ulist>
     </ua-issue>
   </ua-issues>
   <description>
     <p>この実装方法の目的は、link要素を用いて、あるHTMLページがウェブページ一式の中でどのような位置にあるのかを示すメタデータを提供する方法、及び利用者がウェブページ一式の中で特定のコンテンツを発見することを支援する方法について解説することである。rel属性の値が、どのような関係性が定義されているのかを示し、href属性がその関係を持つドキュメントへのリンクを提供する。複数のlink要素を用いることで、複数の関係を示すこともできる。<code>rel</code>属性の値としては、以下のようなものが有用である:</p>
-    <ul>
-<li>
-              
-							<p>Start：複数のドキュメントの中の最初のドキュメントへのリンク</p>
-            
-                  </li>
-<li>
-              
-							<p>Next：一連のドキュメントにおける次のドキュメントへのリンク</p>
-            
-                  </li>
-<li>
-              
-							<p>Prev：一連のドキュメントにおける前のドキュメントへのリンク</p>
-            
-                  </li>
-<li>
-              
-							<p>Contents：目次の役割を果たすドキュメントへのリンク</p>
-            
-                  </li>
-<li>
-              
-							<p>Index：現在のドキュメントに対して索引を提供するドキュメントへのリンク</p>
-            
-                  </li>
-</ul>
+    <ulist>
+      <item>
+        <p>Start：複数のドキュメントの中の最初のドキュメントへのリンク</p>
+      </item>
+      <item>
+        <p>Next：一連のドキュメントにおける次のドキュメントへのリンク</p>
+      </item>
+      <item>
+        <p>Prev：一連のドキュメントにおける前のドキュメントへのリンク</p>
+      </item>
+      <item>
+        <p>Contents：目次の役割を果たすドキュメントへのリンク</p>
+      </item>
+      <item>
+        <p>Index：現在のドキュメントに対して索引を提供するドキュメントへのリンク</p>
+      </item>
+    </ulist>
   </description>
   <examples>
     <eg-group>
@@ -114,24 +102,7 @@
         </item>
         <item><p>その文書の<code>head</code>要素セクション内のナビゲーションに関する各<code>link</code>要素に、少なくとも以下が指定されている：</p>
                 
-                        <ol class="enumla">
-<li>
-                    
-										<p>リンクタイプを特定するための<code>rel</code>属性</p>
-                  
-                           </li>
-<li>
-                    
-										<p>該当するリソースの場所を示すための妥当な<code>href</code>属性</p>
-                  
-                           </li>
-</ol></item>
-        <item>
-          <p>リンクタイプを特定するための<code>rel</code>属性</p>
-        </item>
-        <item>
-          <p>該当するリソースの場所を示すための妥当な<code>href</code>属性</p>
-        </item>
+                        <olist><item><p>リンクタイプを特定するための<code>rel</code>属性</p></item><item><p>該当するリソースの場所を示すための妥当な<code>href</code>属性</p></item></olist></item>
       </olist>
     </procedure>
     <expected-results>

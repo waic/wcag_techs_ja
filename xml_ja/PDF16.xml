@@ -20,7 +20,8 @@
     <eg-group>
       <head>Adobe Acrobat 9 Pro を使用して、デフォルト文書言語を指定するために /Lang エントリを追加する</head>
       <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。 他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
-<olist><item><p>Adobe Acrobat Pro で文書を開く</p></item><item><p>［ファイル］メニューで［プロパティ］を選択する</p></item><item><p>［プロパティ］ダイアログボックスで、［アドバンスト］タブを選択する</p></item><item><p>「読み上げオプション」フィールドで「言語」コンボボックスからデフォルトの言語を選択する</p></item></olist><p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF16/docprop.gif" alt="スクリーンショット：Adobe Acrobat の［プロパティ］ダイアログボックスでデフォルト言語を指定" height="322" width="263"/></p><note><p class="prefix">Acrobat には 16 種類のプリセット言語が用意されている。一覧にない言語（ロシア語など）を指定する必要がある場合は、言語の名前ではなくその言語の ISO 639 コードを入力する必要がある。</p>
+<olist><item><p>Adobe Acrobat Pro で文書を開く</p></item><item><p>［ファイル］メニューで［プロパティ］を選択する</p></item><item><p>［プロパティ］ダイアログボックスで、［アドバンスト］タブを選択する</p></item><item><p>「読み上げオプション」フィールドで「言語」コンボボックスからデフォルトの言語を選択する</p></item></olist>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF16/docprop.gif" alt="スクリーンショット：Adobe Acrobat の［プロパティ］ダイアログボックスでデフォルト言語を指定" height="322" width="263"/></p><note><p class="prefix">Acrobat には 16 種類のプリセット言語が用意されている。一覧にない言語（ロシア語など）を指定する必要がある場合は、言語の名前ではなくその言語の ISO 639 コードを入力する必要がある。</p>
 </note>
 <p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF16/language-en.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Acrobat Pro を使用して /Lang エントリを追加したサンプル（PDFファイル）</loc>がある。</p>
 </description>
@@ -87,32 +88,7 @@ Acrobat® 9 Pro Accessibility Guide: Creating Accessible PDF from Microsoft®	Wo
     <procedure>
       <olist>
         <item><p>次のいずれかにより、文書のデフォルト言語が正しく指定されていることを確認する。</p>
-<ul>
-<li>
-<p>PDF 文書をスクリーンリーダーで読み上げると、正しい自然言語でテキストが読み上げられる</p>
-</li>
-<li>
-<p>PDF エディタを使用して、言語がデフォルト文書言語に設定されていることを確認する</p>
-</li>
-<li>
-<p>文書カタログ内の /Lang エントリ値を表示できるツールを使用して PDF 文書を開き、言語設定を表示する</p>
-</li>
-<li>
-<p>アクセシビリティ API を通じて文書を表示するツールを使用して、言語がデフォルト言語に設定されていることを確認する</p>
-</li>
-</ul></item>
-        <item>
-          <p>PDF 文書をスクリーンリーダーで読み上げると、正しい自然言語でテキストが読み上げられる</p>
-        </item>
-        <item>
-          <p>PDF エディタを使用して、言語がデフォルト文書言語に設定されていることを確認する</p>
-        </item>
-        <item>
-          <p>文書カタログ内の /Lang エントリ値を表示できるツールを使用して PDF 文書を開き、言語設定を表示する</p>
-        </item>
-        <item>
-          <p>アクセシビリティ API を通じて文書を表示するツールを使用して、言語がデフォルト言語に設定されていることを確認する</p>
-        </item>
+<ulist><item><p>PDF 文書をスクリーンリーダーで読み上げると、正しい自然言語でテキストが読み上げられる</p></item><item><p>PDF エディタを使用して、言語がデフォルト文書言語に設定されていることを確認する</p></item><item><p>文書カタログ内の /Lang エントリ値を表示できるツールを使用して PDF 文書を開き、言語設定を表示する</p></item><item><p>アクセシビリティ API を通じて文書を表示するツールを使用して、言語がデフォルト言語に設定されていることを確認する</p></item></ulist></item>
       </olist>
     </procedure>
     <expected-results>

@@ -2,10 +2,14 @@
 <technique id="FLASH16">
   <short-name>FLASH16： 標準コンポーネントに対するクリックイベントを使用して、アクションをキーボードによって操作可能にする</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="keyboard-operation-keyboard-operable"/>

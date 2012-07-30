@@ -15,19 +15,8 @@
   <examples>
     <eg-group>
       <head>不適合となる例</head>
-      <description>
-        <ulist>
-          <item>
-            <p>一意的ではないid属性の値。</p>
-          </item>
-          <item>
-            <p>SVGドキュメントが、（代替テキストを提供するための）title要素をドキュメント内の他の場所で再び用いるために、すべてのtitle要素にid属性を付けている。しかし、あるtitle要素のid属性値がドキュメント内の他の場所でも用いられているため、曖昧なドキュメントになってしまっている。</p>
-          </item>
-          <item>
-            <p>DAISYドキュメントが、caption要素のimgref属性を用いて、画像のキャプションを示している。しかし、imgref属性値がそのキャプションが関連付けられるべき画像のimg要素のid属性を参照していないため、ユーザーエージェントはその画像のキャプションを見つけることができない。</p>
-          </item>
-        </ulist>
-      </description>
+      <description><ulist><item><p>一意的ではないid属性の値。</p></item><item><p>SVGドキュメントが、（代替テキストを提供するための）title要素をドキュメント内の他の場所で再び用いるために、すべてのtitle要素にid属性を付けている。しかし、あるtitle要素のid属性値がドキュメント内の他の場所でも用いられているため、曖昧なドキュメントになってしまっている。</p></item><item><p>DAISYドキュメントが、caption要素のimgref属性を用いて、画像のキャプションを示している。しかし、imgref属性値がそのキャプションが関連付けられるべき画像のimg要素のid属性を参照していないため、ユーザーエージェントはその画像のキャプションを見つけることができない。</p></item></ulist>
+</description>
     </eg-group>
   </examples>
   <resources/>

@@ -15,19 +15,8 @@
   <examples>
     <eg-group>
       <head>不適合事例</head>
-      <description>
-        <ulist>
-          <item>
-            <p> 存在しないidを参照している、<code>for</code>属性値が<code>idref</code>である<code>label</code>要素</p>
-          </item>
-          <item>
-            <p>一意的でない<code>id</code>属性値</p>
-          </item>
-          <item>
-            <p>一意的でない<code>accesskey</code>属性値</p>
-          </item>
-        </ulist>
-      </description>
+      <description><ulist><item><p> 存在しないidを参照している、<code>for</code>属性値が<code>idref</code>である<code>label</code>要素</p></item><item><p>一意的でない<code>id</code>属性値</p></item><item><p>一意的でない<code>accesskey</code>属性値</p></item></ulist>
+</description>
     </eg-group>
   </examples>
   <resources/>

@@ -74,16 +74,8 @@
         </item>
         <item><p>表形式の情報それぞれについて：</p>
 								
-                        <ol class="enumla"><li>
-                    
-										<p>
-												テーブルを、少なくとも<code>table</code>、<code>tr</code>、<code>th</code>、<code>td</code>要素を使ってマークアップしている。</p>
-                  
-                           </li></ol></item>
-        <item>
-          <p>
-												テーブルを、少なくとも<code>table</code>、<code>tr</code>、<code>th</code>、<code>td</code>要素を使ってマークアップしている。</p>
-        </item>
+                        <olist><item><p>
+												テーブルを、少なくとも<code>table</code>、<code>tr</code>、<code>th</code>、<code>td</code>要素を使ってマークアップしている。</p></item></olist></item>
       </olist>
     </procedure>
     <expected-results>

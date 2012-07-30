@@ -9,15 +9,15 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <ul>
-<li>
-									<p>
+      <ulist>
+        <item>
+          <p>
 											この実装方法は、支援技術が十分にサポートしていないものである。HTML仕様書は、アプレットに対する代替テキストはその要素が描画できないときに表示される、と説明している。そのため、ユーザーエージェントがJavaアプレットをサポートしていないか、Javaアプレットが読み込み中止に設定されていないかぎり、<code>applet</code>要素のボディにある代替テキストはユーザーに提供されない。</p>
-                     </li>
-<li>
-										 <p>Windows用のIE 6と、Windowsで動作するFirefox 1.5とOpera 9とでは、<code>applet</code>要素の代替テキストの扱いが異なる。IEは<code>applet</code>要素のボディに含まれるテキストを表示するが、<code>alt</code>属性は表示しない。一方、FirefoxとOperaは、<code>alt</code>属性を表示するが、ボディに含まれるテキストは表示しない。</p>
-                     </li>
-</ul>
+        </item>
+        <item>
+          <p>Windows用のIE 6と、Windowsで動作するFirefox 1.5とOpera 9とでは、<code>applet</code>要素の代替テキストの扱いが異なる。IEは<code>applet</code>要素のボディに含まれるテキストを表示するが、<code>alt</code>属性は表示しない。一方、FirefoxとOperaは、<code>alt</code>属性を表示するが、ボディに含まれるテキストは表示しない。</p>
+        </item>
+      </ulist>
     </ua-issue>
   </ua-issues>
   <description>

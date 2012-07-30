@@ -2,10 +2,14 @@
 <technique id="FLASH23">
   <short-name>FLASH23： データグリッドに要約を追加する</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="content-structure-separation-programmatic"/>
@@ -24,7 +28,8 @@
     <eg-group>
       <head>アクセシビリティパネルを使用してデータグリッドに一覧を追加する</head>
       <description><p>ここでは、Flash Professional でコンポーネントパネルからステージに追加されるデータグリッドの例を示す。データグリッドの要約を提供するために、Flash のアクセシビリティパネルの「説明」フィールドを使用する。</p>
-<olist><item><p>新しい Flash ファイル（.fla）を作成するか、既存のファイルを開いてデータグリッドを挿入する。</p></item><item><p>ウィンドウメニューから Flash のコンポーネントパネルを開く。</p></item><item><p>データグリッドコンポーネントをステージ上にドラッグし、目的の位置に配置する。</p></item><item><p>データグリッドコンポーネントを選択し、アクセシビリティパネルを使用して、データグリッドの要約を「説明」フィールドに追加する。</p></item></olist></description>
+<olist><item><p>新しい Flash ファイル（.fla）を作成するか、既存のファイルを開いてデータグリッドを挿入する。</p></item><item><p>ウィンドウメニューから Flash のコンポーネントパネルを開く。</p></item><item><p>データグリッドコンポーネントをステージ上にドラッグし、目的の位置に配置する。</p></item><item><p>データグリッドコンポーネントを選択し、アクセシビリティパネルを使用して、データグリッドの要約を「説明」フィールドに追加する。</p></item></olist>
+</description>
     </eg-group>
     <eg-group>
       <head>ActionScript 3 を使用してデータグリッドに一覧を追加する</head>

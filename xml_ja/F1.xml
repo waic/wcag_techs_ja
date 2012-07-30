@@ -85,7 +85,8 @@
      left: 5em 
 }</code>
       <description><p>このコンテンツの場合は、テーブル又は定義リストのように、意味のある要素を用いたほうがよいだろう。</p>
-<ulist><item><p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/F1/cssposfailure.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSSによる配置の失敗例</loc></p></item><item><p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/F1/cssposfailurenostyle.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSSによる配置の失敗例：スタイルを外したバージョン</loc></p></item></ulist></description>
+<ulist><item><p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/F1/cssposfailure.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSSによる配置の失敗例</loc></p></item><item><p><loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/F1/cssposfailurenostyle.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CSSによる配置の失敗例：スタイルを外したバージョン</loc></p></item></ulist>
+</description>
     </eg-group>
   </examples>
   <resources/>

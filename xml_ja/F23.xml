@@ -15,22 +15,12 @@
   </description>
   <examples>
     <eg-group role="failure">
-      <description>
-        <ulist>
-          <item>
-            <p> 絶え間なくBGMを再生しているサイト。</p>
-          </item>
-        </ulist>
-      </description>
+      <description><ulist><item><p> 絶え間なくBGMを再生しているサイト。</p></item></ulist>
+</description>
     </eg-group>
     <eg-group role="failure">
-      <description>
-        <ulist>
-          <item>
-            <p> 停止するまでに3秒よりも長く続くナレーションがあり、それを停止させるメカニズムのないサイト。 </p>
-          </item>
-        </ulist>
-      </description>
+      <description><ulist><item><p> 停止するまでに3秒よりも長く続くナレーションがあり、それを停止させるメカニズムのないサイト。 </p></item></ulist>
+</description>
     </eg-group>
   </examples>
   <resources/>

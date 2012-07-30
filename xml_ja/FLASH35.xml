@@ -2,10 +2,14 @@
 <technique id="FLASH35">
   <short-name>FLASH35： スクリプトを使用して、 Flash コンテンツをスクロールする、およびそれを停止するメカニズムを提供する</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="time-limits-pause"/>

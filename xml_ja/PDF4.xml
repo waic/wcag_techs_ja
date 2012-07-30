@@ -21,7 +21,8 @@
       <head>Adobe Acrobat 9 Pro の TouchUp 読み上げ順序ツールを使用して、背景画像をアーティファクトとしてマークする</head>
       <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>TouchUp 読み上げ順序ツールを使用して、画像を「背景」としてマークすることができる。これにより画像は文書のタグ構造から削除される。</p>
-<olist><item><p>Acrobat Pro でアドバンスト &gt; アクセシビリティ &gt; TouchUp 読み上げ順序を選択し、TouchUp 読み上げ順序ツールを開く。</p></item><item><p>文書内の装飾的な画像を選択する。</p></item><item><p>TouchUp 読み上げ順序ツールで、［背景］ボタンをクリックし、選択した画像をタグ構造から削除する。</p></item></olist><p>下のスクリーンショットはこの事例を示している。</p>
+<olist><item><p>Acrobat Pro でアドバンスト &gt; アクセシビリティ &gt; TouchUp 読み上げ順序を選択し、TouchUp 読み上げ順序ツールを開く。</p></item><item><p>文書内の装飾的な画像を選択する。</p></item><item><p>TouchUp 読み上げ順序ツールで、［背景］ボタンをクリックし、選択した画像をタグ構造から削除する。</p></item></olist>
+<p>下のスクリーンショットはこの事例を示している。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF4/turo_background.gif" alt="スクリーンショット：TouchUp 読み上げ順序ツールを使用して、タグツリーから画像を削除" height="501" width="267"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF4/decorative-image.docx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">装飾的な画像作成のサンプル (Word ファイル)</loc> と <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF4/decorative-image.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">装飾的な画像作成のサンプル (PDF ファイル)</loc>がある。</p>
 </description>
     </eg-group>
@@ -60,38 +61,7 @@
     <procedure>
       <olist>
         <item><p>純粋に装飾的な画像について、次のいずれかの方法を使用して確認すると、アーティファクトとしてマークされている。</p>
-<ul>
-<li>
-<p>PDF 文書をスクリーンリーダーで読み上げた際に、コンテンツが1行単位で読み上げられるときに装飾的な画像が読み上げられない</p>
-</li>
-<li>
-<p>PDF エディターを使用して、装飾的な画像がアーティファクトとしてマークされていることを確認する</p>
-</li>
-<li>
-<p>文書を折り返し表示にすると、装飾的な画像がページに表示されない</p>
-</li>
-<li>
-<p>/Artifact エントリまたはプロパティリストを表示できるツール（aDesigner など）を使用して PDF 文書を開き、装飾的な画像がアーティファクトとしてマークされていることを確認する</p>
-</li>
-<li>
-<p>アクセシビリティ API を通じて文書を表示するツールを使用して、装飾的な画像が API を通じて表示されていないことを確認する</p>
-</li>
-</ul></item>
-        <item>
-          <p>PDF 文書をスクリーンリーダーで読み上げた際に、コンテンツが1行単位で読み上げられるときに装飾的な画像が読み上げられない</p>
-        </item>
-        <item>
-          <p>PDF エディターを使用して、装飾的な画像がアーティファクトとしてマークされていることを確認する</p>
-        </item>
-        <item>
-          <p>文書を折り返し表示にすると、装飾的な画像がページに表示されない</p>
-        </item>
-        <item>
-          <p>/Artifact エントリまたはプロパティリストを表示できるツール（aDesigner など）を使用して PDF 文書を開き、装飾的な画像がアーティファクトとしてマークされていることを確認する</p>
-        </item>
-        <item>
-          <p>アクセシビリティ API を通じて文書を表示するツールを使用して、装飾的な画像が API を通じて表示されていないことを確認する</p>
-        </item>
+<ulist><item><p>PDF 文書をスクリーンリーダーで読み上げた際に、コンテンツが1行単位で読み上げられるときに装飾的な画像が読み上げられない</p></item><item><p>PDF エディターを使用して、装飾的な画像がアーティファクトとしてマークされていることを確認する</p></item><item><p>文書を折り返し表示にすると、装飾的な画像がページに表示されない</p></item><item><p>/Artifact エントリまたはプロパティリストを表示できるツール（aDesigner など）を使用して PDF 文書を開き、装飾的な画像がアーティファクトとしてマークされていることを確認する</p></item><item><p>アクセシビリティ API を通じて文書を表示するツールを使用して、装飾的な画像が API を通じて表示されていないことを確認する</p></item></ulist></item>
       </olist>
     </procedure>
     <expected-results>

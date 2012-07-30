@@ -13,18 +13,14 @@
 時に必要となることがある。この実装方法で用いられているコンセプトは、W3C文書の「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/International/articles/inline-bidi-markup/" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">What you need to know about the bidi algorithm and inline markup（双方向アルゴリズムとインラインマークアップを知るために必要なこと）</loc>」に書かれている。</p>
     <p>Unicode 制御文字のright-to-left mark及びleft-to-right markは、以下に示すように、
 そのまま、又は文字符号か数字符号の参照によって挿入することが可能である。</p>
-    <ul>
-<li>
-              
-                     <p>left-to-right mark（LRM）: &amp;lrm; 又は &amp;#x200e; (U+200E)</p>
-            
-                  </li>
-<li>
-              
-                     <p>right-to-left mark（RLM）: &amp;rlm; 又は &amp;#x200f; (U+200F)</p>
-            
-                  </li>
-</ul>
+    <ulist>
+      <item>
+        <p>left-to-right mark（LRM）: &amp;lrm; 又は &amp;#x200e; (U+200E)</p>
+      </item>
+      <item>
+        <p>right-to-left mark（RLM）: &amp;rlm; 又は &amp;#x200f; (U+200F)</p>
+      </item>
+    </ulist>
     <p><acronym title="bidirectional">双方向性</acronym>のアルゴリズムが原因で、ソースコード編集者は期待通りに文字符号や数字符号の参照を表示できないことがある。</p>
   </description>
   <examples>

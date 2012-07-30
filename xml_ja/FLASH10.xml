@@ -2,10 +2,14 @@
 <technique id="FLASH10">
   <short-name>FLASH10： Flashでフォーム・コントロールが必須項目であることを示す</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="minimize-error-cues"/>
@@ -22,7 +26,8 @@
     <eg-group>
       <head>コントロールのアクセシブルな名前に「必須」という語を追加する</head>
       <description><p>この事例では、アクセシビリティパネルを使用して、フィールドが「必須」であることを利用者に知らせる方法を示している。</p>
-<olist><item><p>フォーム・コントロールのラベルの近くに、アスタリスク文字などの視覚的なマークを配置する。</p></item><item><p>アクセシビリティパネルを使用して、「名前」フィールドに記述したコントロールのラベルのすぐ後に「（必須）」と記述する。</p></item></olist><p>次のスクリーンショットは、このアプローチについて説明したものである。</p>
+<olist><item><p>フォーム・コントロールのラベルの近くに、アスタリスク文字などの視覚的なマークを配置する。</p></item><item><p>アクセシビリティパネルを使用して、「名前」フィールドに記述したコントロールのラベルのすぐ後に「（必須）」と記述する。</p></item></olist>
+<p>次のスクリーンショットは、このアプローチについて説明したものである。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_flash_control.png" alt="画面スクリーンショット：アクセシビリティパネルを用いて、フォーム・コントロールが必須項目であることを明示" height="312" width="546"/></p><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「コントロールのアクセシブルな名前に「必須」という語を追加する」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH10/required_form_fields_as2.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「コントロールのアクセシブルな名前に「必須」という語を追加する」のソース（英語）</loc>をダウンロードすることもできる。</p>
 </description>
     </eg-group>
@@ -32,10 +37,14 @@
   <tests>
     <procedure>
       <p>Flash ムービーに含まれる必須項目のフォーム・コントロールごとに、次のことを確認する。</p>
-      <ul>
-<li><p>必須項目であることが視覚的に示されている。</p></li>
-<li><p>必須項目であることが、アクセシビリティパネルの「名前」フィールドを使用してテキストで記述されている。</p></li>
-</ul>
+      <ulist>
+        <item>
+          <p>必須項目であることが視覚的に示されている。</p>
+        </item>
+        <item>
+          <p>必須項目であることが、アクセシビリティパネルの「名前」フィールドを使用してテキストで記述されている。</p>
+        </item>
+      </ulist>
     </procedure>
     <expected-results>
       <ulist>

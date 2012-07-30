@@ -2,10 +2,14 @@
 <technique id="FLASH28">
   <short-name>FLASH28： Flash で ASCII アート、顔文字、リート語の代替テキストを提供する</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="text-equiv-all"/>
@@ -24,16 +28,15 @@
       <head>アクセシビリティパネルを使用して ASCII アートの代替テキストを提供する</head>
       <description><p>この事例には、当て字を使用した ASCII アートによる語が含まれている（テキストは「WCAG 2 rulez」を表している）。次の手順で、このテキストのアクセシビリティを確保する。</p>
 <olist><item><p>ムービークリップインスタンスに ASCII 文字を配置する。</p></item><item><p>テキストが配置されたムービークリップインスタンスを選択し、アクセシビリティパネルで次の変更を行う。</p>
-<ul>
-<li><p>ASCII アートに対して、当て字を使用していない意味のある代替テキストを追加する（「WCAG 2 RULEZ」など）。</p></li>
-<li><p>「子オブジェクトをアクセス可能にする」チェックボックスをオフにし、ASCII 文字がスクリーンリーダーによって読み上げられないようにする。</p></li>
-</ul></item><item><p>ASCII アートに対して、当て字を使用していない意味のある代替テキストを追加する（「WCAG 2 RULEZ」など）。</p></item><item><p>「子オブジェクトをアクセス可能にする」チェックボックスをオフにし、ASCII 文字がスクリーンリーダーによって読み上げられないようにする。</p></item></olist><p>上記の手順を次のスクリーンショットで示す。</p>
+<ulist><item><p>ASCII アートに対して、当て字を使用していない意味のある代替テキストを追加する（「WCAG 2 RULEZ」など）。</p></item><item><p>「子オブジェクトをアクセス可能にする」チェックボックスをオフにし、ASCII 文字がスクリーンリーダーによって読み上げられないようにする。</p></item></ulist></item></olist>
+<p>上記の手順を次のスクリーンショットで示す。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH28/ascii_art_alternative.png" alt="画面スクリーンショット：アクセシビリティパネルを用いて、ASCIIアートの代替テキストを提供" height="308" width="695"/></p></description>
     </eg-group>
     <eg-group>
       <head>ActionScript を使用して ASCII アートの代替テキストを提供する</head>
       <description><p>この事例では、Flash Professional のオーサリングツールのアクセシビリティパネルの代わりに ActionScript を使用している。それ以外は事例 1 と同じである。</p>
-<olist><item><p>ムービークリップインスタンスに ASCII 文字を配置する。</p></item><item><p>ムービークリップインスタンスのインスタンス名（myASCII など）を指定する。</p></item><item><p>ムービークリップにアクセシブルな名前を設定し、ムービークリップ内部のテキストをアクセス不可にするために forceSimple プロパティを true に設定する。</p></item></olist></description>
+<olist><item><p>ムービークリップインスタンスに ASCII 文字を配置する。</p></item><item><p>ムービークリップインスタンスのインスタンス名（myASCII など）を指定する。</p></item><item><p>ムービークリップにアクセシブルな名前を設定し、ムービークリップ内部のテキストをアクセス不可にするために forceSimple プロパティを true に設定する。</p></item></olist>
+</description>
       <code>// 'myASCII' はムービーのメインのタイムライン上に置かれたムービークリップインスタンスである
 myASCII.accessibilityProperties = new AccessibilityProperties();
 myASCII.accessibilityProperties.name = "WCAG 2 Rulez";

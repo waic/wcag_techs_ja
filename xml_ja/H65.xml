@@ -12,32 +12,16 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <ul>
-<li>
-                
-								<p>
+      <ulist>
+        <item>
+          <p>
 										ユーザーエージェントは、<code>title</code>要素が指定してある<code>input</code>要素にマウスオーバーしたときに、ツールチップを表示するだろう。</p>
-              
-                     </li>
-<li>
-                
-								<p>
+        </item>
+        <item><p>
 										JAWSとWindow-Eyesでは、フォーム・コントロールがフォーカスを受けとったとき、<code>label</code>要素が指定されていなければ、<code>title</code>属性の内容を読み上げる。</p>
                 
-                        <ul>
-<li>
-                    
-										<p>JAWS 6.0以降では、<code>label</code>要素と<code>title</code>属性に異なる内容が指定されている場合、両方を読み上げるように設定できる。しかし、この設定方法を知っているユーザーは非常に少ない。</p>
-                  
-                           </li>
-<li>
-                    
-										<p>Window-Eyes 5.5には、フォーカスを受けとったアイテムの追加情報（<code>title</code>属性を含む）を読み上げるホットキー（insert＋E）がある。</p>
-                  
-                           </li>
-</ul>
-</li>
-</ul>
+                        <ulist><item><p>JAWS 6.0以降では、<code>label</code>要素と<code>title</code>属性に異なる内容が指定されている場合、両方を読み上げるように設定できる。しかし、この設定方法を知っているユーザーは非常に少ない。</p></item><item><p>Window-Eyes 5.5には、フォーカスを受けとったアイテムの追加情報（<code>title</code>属性を含む）を読み上げるホットキー（insert＋E）がある。</p></item></ulist></item>
+      </ulist>
     </ua-issue>
   </ua-issues>
   <description>

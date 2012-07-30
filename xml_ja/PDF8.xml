@@ -23,7 +23,8 @@
       <head>Adobe Acrobat 9 Pro のタグパネルを使用して、略語に /E エントリを追加する</head>
       <description><p>この事例は Adobe Acrobat Pro の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
 <p>タグ付き PDF 文書で次の手順を実行する。</p>
-<olist><item><p>表示 &gt; ナビゲーションパネル &gt; タグを使用して［タグ］パネルを選択する</p></item><item><p>最初に出現する、拡張が必要な略語化されたテキストを選択する。選択したテキストが大きなタグの一部である場合には、［タグ］パネルのオプションメニューの「選択範囲からタグを作成」を選択し、新しい Span タグを作成する。この事例では、（LBody タグ内の）「WCAG2」というテキストが Span タグで囲まれている。</p></item><item><p>［タグ］パネルで、拡張されたテキストのコンテキストメニューから「プロパティ」を選択し、Span タグの［TouchUp のプロパティ］ダイアログボックスを開く。</p></item><item><p>［TouchUp のプロパティ］ダイアログボックスの［コンテンツ］タブに拡張テキストを入力し、最初に選択したテキストを入力する。</p></item></olist><p>次の画像はこの実装方法を示している。</p>
+<olist><item><p>表示 &gt; ナビゲーションパネル &gt; タグを使用して［タグ］パネルを選択する</p></item><item><p>最初に出現する、拡張が必要な略語化されたテキストを選択する。選択したテキストが大きなタグの一部である場合には、［タグ］パネルのオプションメニューの「選択範囲からタグを作成」を選択し、新しい Span タグを作成する。この事例では、（LBody タグ内の）「WCAG2」というテキストが Span タグで囲まれている。</p></item><item><p>［タグ］パネルで、拡張されたテキストのコンテキストメニューから「プロパティ」を選択し、Span タグの［TouchUp のプロパティ］ダイアログボックスを開く。</p></item><item><p>［TouchUp のプロパティ］ダイアログボックスの［コンテンツ］タブに拡張テキストを入力し、最初に選択したテキストを入力する。</p></item></olist>
+<p>次の画像はこの実装方法を示している。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF8/abbr.jpg" alt="スクリーンショット：［タグ］パネルを使用して、略語に拡張テキストを追加。「WCAG2.0」というテキストを選択して、それに対する Span タグを作成し、［TouchUp のプロパティ］ダイアログボックスで「WCAG2.0」の拡張として、拡張テキスト「Web Content Accessibility Guidelines (WCAG) 2.0」を入力する。" height="662" width="521"/></p><p>この事例のサンプルとして、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF8/headers-definitions.docx" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">略語の定義を提供するサンプル (Word ファイル)</loc>、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF8/headers-definitions.odt" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">略語の定義を提供するサンプル (OpenDocument テキスト ファイル)</loc> と <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF8/headers-definitions.pdf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">略語の定義を提供するサンプル (PDF ファイル)</loc>がある。</p>
 </description>
     </eg-group>
@@ -98,38 +99,7 @@
     <procedure>
       <olist>
         <item><p>次のいずれかの方法で、最初に出現した、拡張が必要な略語に /E エントリがタグによって指定されていること、また略語と拡張テキストの両方が入力されていることを確認する。</p>
-<ul>
-<li>
-<p>Windows では、Microsoft の Inspect.exe ツール、または MSAA インターフェイスの検査が可能なその他のツールを使用して、文書ツリー内の略語のテキストを特定し、略語の値が拡張テキスト内にあることを確認する</p>
-</li>
-<li>
-<p>PDF エディターでは、略語であるテキストのタグを特定し、対応するタグのプロパティの「拡張テキスト」フィールドにより、各略語に拡張や定義が提供されていることを確認する</p>
-</li>
-<li>
-<p>PDF 文書をスクリーンリーダーで読み上げると、コンテンツが 1 行単位で読み上げられるときに、最初に出現した略語および拡張テキストが読み上げられる</p>
-</li>
-<li>
-<p>/E エントリの値を表示できるツール（aDesigner など）を使用して PDF 文書を開き、GUI サマリを表示して、略語の拡張テキストを読んで確認する</p>
-</li>
-<li>
-<p>アクセシビリティ API を通じて文書を表示するツールを使用して、略語の拡張テキストが正しく実装されていることを確認する</p>
-</li>
-</ul></item>
-        <item>
-          <p>Windows では、Microsoft の Inspect.exe ツール、または MSAA インターフェイスの検査が可能なその他のツールを使用して、文書ツリー内の略語のテキストを特定し、略語の値が拡張テキスト内にあることを確認する</p>
-        </item>
-        <item>
-          <p>PDF エディターでは、略語であるテキストのタグを特定し、対応するタグのプロパティの「拡張テキスト」フィールドにより、各略語に拡張や定義が提供されていることを確認する</p>
-        </item>
-        <item>
-          <p>PDF 文書をスクリーンリーダーで読み上げると、コンテンツが 1 行単位で読み上げられるときに、最初に出現した略語および拡張テキストが読み上げられる</p>
-        </item>
-        <item>
-          <p>/E エントリの値を表示できるツール（aDesigner など）を使用して PDF 文書を開き、GUI サマリを表示して、略語の拡張テキストを読んで確認する</p>
-        </item>
-        <item>
-          <p>アクセシビリティ API を通じて文書を表示するツールを使用して、略語の拡張テキストが正しく実装されていることを確認する</p>
-        </item>
+<ulist><item><p>Windows では、Microsoft の Inspect.exe ツール、または MSAA インターフェイスの検査が可能なその他のツールを使用して、文書ツリー内の略語のテキストを特定し、略語の値が拡張テキスト内にあることを確認する</p></item><item><p>PDF エディターでは、略語であるテキストのタグを特定し、対応するタグのプロパティの「拡張テキスト」フィールドにより、各略語に拡張や定義が提供されていることを確認する</p></item><item><p>PDF 文書をスクリーンリーダーで読み上げると、コンテンツが 1 行単位で読み上げられるときに、最初に出現した略語および拡張テキストが読み上げられる</p></item><item><p>/E エントリの値を表示できるツール（aDesigner など）を使用して PDF 文書を開き、GUI サマリを表示して、略語の拡張テキストを読んで確認する</p></item><item><p>アクセシビリティ API を通じて文書を表示するツールを使用して、略語の拡張テキストが正しく実装されていることを確認する</p></item></ulist></item>
       </olist>
     </procedure>
     <expected-results>

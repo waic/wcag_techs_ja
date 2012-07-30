@@ -21,7 +21,8 @@
       <description><p>この事例には、2つのselect要素がある。最初のselect要素でアイテムが選択されたとき、二つめのselect要素の選択肢が適切に更新される。最初のselect要素には、大陸のリストがある。そして、二つめのselect要素には、選択された大陸に位置する国々の一部のリストがある。onchangeイベントは、大陸の選択に連動している。大陸の選択が変わると、国の選択肢は、ドキュメント・オブジェクト・モデル(DOM)を通してJavaScriptを用いて変更される。必要であるすべてのデータ、国と大陸のリスト、はウェブページの中に含まれている。</p>
 <p>以下のコードの概要：</p>
 <ulist><item><p>トリガーとなるselect要素の大陸ごとの国々のリストを含むcountryLists配列
-                                    </p></item><item><p>大陸のselect要素のonchangeイベントによって呼ばれるcountryChange() 関数</p></item><item><p>ウェブページの本文のselect要素を作成するXHTMLコード</p></item></ulist></description>
+                                    </p></item><item><p>大陸のselect要素のonchangeイベントによって呼ばれるcountryChange() 関数</p></item><item><p>ウェブページの本文のselect要素を作成するXHTMLコード</p></item></ulist>
+</description>
       <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt; 

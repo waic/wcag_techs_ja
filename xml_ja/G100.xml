@@ -13,20 +13,9 @@
   </description>
   <examples>
     <eg-group>
-      <description>
-        <ulist>
-          <item>
-            <p>モナリザの絵には「モナリザ。レオナルド・ダ･ビンチ作」という代替テキスト がある。</p>
-          </item>
-          <item>
-            <p>音声ファイルには「テルミンを演奏している5人の小学生」という代替テキストがある。
-                                    </p>
-          </item>
-          <item>
-            <p>有名なモダンアートの作品には「赤、青、及び黄色。ピエト　モンドリアン作」という表題が付けられている。</p>
-          </item>
-        </ulist>
-      </description>
+      <description><ulist><item><p>モナリザの絵には「モナリザ。レオナルド・ダ･ビンチ作」という代替テキスト がある。</p></item><item><p>音声ファイルには「テルミンを演奏している5人の小学生」という代替テキストがある。
+                                    </p></item><item><p>有名なモダンアートの作品には「赤、青、及び黄色。ピエト　モンドリアン作」という表題が付けられている。</p></item></ulist>
+</description>
     </eg-group>
   </examples>
   <resources/>

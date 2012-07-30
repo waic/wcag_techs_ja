@@ -2,10 +2,14 @@
 <technique id="FLASH19">
   <short-name>FLASH19： スクリプトを用いて、ユーザーに制限時間が間もなく終了することを警告し、制限時間を延長する方法を提供する</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="time-limits-required-behaviors"/>

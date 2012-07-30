@@ -2,10 +2,14 @@
 <technique id="FLASH31">
   <short-name>FLASH31： データグリッドの表題を指定する</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="content-structure-separation-programmatic"/>
@@ -18,16 +22,21 @@
   <description>
     <p>この実装方法の目的は、見た目で表題が提供されている場合に、プログラムによって表題をデータグリッドに関連付けることである。通常、テーブルの表題はテーブルの識別子であり、テーブルのタイトルまたは見出しとして機能する。</p>
     <p>Flash には DataGrid コンポーネント用の caption 要素はない。ただし、以下のアプローチによって同じ効果を得ることができる。</p>
-    <ol class="enumar">
-<li><p>データグリッドの上にラベルコンポーネントまたはテキストフィールドを配置し、グリッドの表題を設定する。</p></li>
-<li><p>表題のテキストを複製し、グリッドのアクセシブルな名前として追加する。これを行うには、グリッドのアクセシビリティパネルの「名前」フィールドに値を設定するか、またはグリッドの AccessibilityProperties.name プロパティを設定する。</p></li>
-</ol>
+    <olist>
+      <item>
+        <p>データグリッドの上にラベルコンポーネントまたはテキストフィールドを配置し、グリッドの表題を設定する。</p>
+      </item>
+      <item>
+        <p>表題のテキストを複製し、グリッドのアクセシブルな名前として追加する。これを行うには、グリッドのアクセシビリティパネルの「名前」フィールドに値を設定するか、またはグリッドの AccessibilityProperties.name プロパティを設定する。</p>
+      </item>
+    </olist>
   </description>
   <examples>
     <eg-group>
       <head>データグリッドにラベルを関連付ける</head>
       <description><p>ここでは、Flash Professional でコンポーネントパネルからステージに追加されるデータグリッドの例を示す。また、コンポーネントパネルから表題となるテキストを格納するためのラベル要素も追加される。この表題は Flash のアクセシビリティパネルで使用され、データグリッドのアクセシビリティ用の名前として機能する。</p>
-<ulist><item><p>新しい Flash ファイル（.fla）を作成するか、既存のファイルを開いてデータグリッドを挿入する。</p></item><item><p>ウィンドウメニューから Flash のコンポーネントパネルを開く。</p></item><item><p>データグリッドコンポーネントをステージ上にドラッグし、目的の位置に配置する。</p></item><item><p>ラベルコンポーネントをステージ上にドラッグし、目的の位置に配置する。</p></item><item><p>ラベルコンポーネントにテキストを追加する。</p></item><item><p>データグリッドコンポーネントを選択し、アクセシビリティパネルを使用して、データグリッドの「名前」フィールドにラベルコンポーネントで使用しているのと同じテキストを追加する。</p></item></ulist></description>
+<ulist><item><p>新しい Flash ファイル（.fla）を作成するか、既存のファイルを開いてデータグリッドを挿入する。</p></item><item><p>ウィンドウメニューから Flash のコンポーネントパネルを開く。</p></item><item><p>データグリッドコンポーネントをステージ上にドラッグし、目的の位置に配置する。</p></item><item><p>ラベルコンポーネントをステージ上にドラッグし、目的の位置に配置する。</p></item><item><p>ラベルコンポーネントにテキストを追加する。</p></item><item><p>データグリッドコンポーネントを選択し、アクセシビリティパネルを使用して、データグリッドの「名前」フィールドにラベルコンポーネントで使用しているのと同じテキストを追加する。</p></item></ulist>
+</description>
     </eg-group>
     <eg-group>
       <head>ActiveScript 3 を使用してデータグリッドにキャプションを関連付ける</head>
@@ -94,7 +103,8 @@ function bldRosterGrid(dg: DataGrid) {
   dg.columns[4].width = 120;
 };</code>
       <description><p>このコード例に関する注記：</p>
-<ulist><item><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH31/datagrid_with_caption_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActiveScript 3 を使用してデータグリッドにキャプションを関連付ける」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH31/datagrid_with_caption_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActiveScript 3 を使用してデータグリッドにキャプションを関連付ける」のソース（英語）</loc>をダウンロードすることもできる。</p></item><item><p>Flash のオーサリングツールのアクセシビリティパネルを使用することによって、データグリッドにアクセシブルな名前を適用することもできる。</p></item><item><p>上記の事例では、データグリッドの表題として使用されるテキストは2回読み上げられる。1回目は視覚に問題のない利用者向けのテキストラベルとして、2回目はデータグリッドのアクセシブルな名前としてである。コンテンツ制作者は、ラベルテキストの <code>silent</code> プロパティを <code>true</code> に設定することによって、読み上げが重複するのを回避することができる。</p></item></ulist></description>
+<ulist><item><p>この実例は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH31/datagrid_with_caption_as3.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActiveScript 3 を使用してデータグリッドにキャプションを関連付ける」のサンプル（英語）</loc>で確認できる。また、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/WCAG-TECHS/working-examples/FLASH31/datagrid_with_caption_as3.swf" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">「ActiveScript 3 を使用してデータグリッドにキャプションを関連付ける」のソース（英語）</loc>をダウンロードすることもできる。</p></item><item><p>Flash のオーサリングツールのアクセシビリティパネルを使用することによって、データグリッドにアクセシブルな名前を適用することもできる。</p></item><item><p>上記の事例では、データグリッドの表題として使用されるテキストは2回読み上げられる。1回目は視覚に問題のない利用者向けのテキストラベルとして、2回目はデータグリッドのアクセシブルな名前としてである。コンテンツ制作者は、ラベルテキストの <code>silent</code> プロパティを <code>true</code> に設定することによって、読み上げが重複するのを回避することができる。</p></item></ulist>
+</description>
     </eg-group>
   </examples>
   <resources/>

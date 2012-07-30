@@ -41,7 +41,8 @@
     <eg-group>
       <head>OpenOffice.org Writer 2.2 を使用して生成した PDF 文書内の画像に /Alt エントリを追加する</head>
       <description><p>この事例は Open Office.org Writer の場合を示している。同様の機能を実行するソフトウェアツールは他にも存在する。他のソフトウェアツールのリストについては、「<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="pdf_notes.html#pdf_notes_acc-sup_files_applications" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">アクセシビリティがサポートされている PDF オーサリングツール</loc>」を参照のこと。</p>
-<olist><item><p>画像のコンテキストメニューから［図］を選択する。</p></item><item><p>［オプション］タブを選択する。</p></item><item><p>［代替（テキストのみ）］テキストボックスに代替テキストを入力し、［OK］をクリックする。</p></item></olist><p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF1/ooalt.jpg" alt="スクリーンショット：［図］ダイアログの［オプション］タブ" height="439" width="556"/></p></description>
+<olist><item><p>画像のコンテキストメニューから［図］を選択する。</p></item><item><p>［オプション］タブを選択する。</p></item><item><p>［代替（テキストのみ）］テキストボックスに代替テキストを入力し、［OK］をクリックする。</p></item></olist>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/PDF1/ooalt.jpg" alt="スクリーンショット：［図］ダイアログの［オプション］タブ" height="439" width="556"/></p></description>
     </eg-group>
     <eg-group>
       <head>/Alt エントリを使用して PDF 文書内の画像に代替テキストを追加する</head>
@@ -90,32 +91,7 @@ Reference 1.6, 10.8.2 Alternate Descriptions</loc>
     <procedure>
       <olist>
         <item><p>次のいずれかの方法で、等価テキストを必要とする画像に /Alt エントリがタグで囲まれていることを確認する：</p>
-<ul>
-<li>
-<p>PDF 文書をスクリーンリーダーで読み上げ、非テキストオブジェクトにタブ移動するときに代替テキストが読み上げられる（タブ移動が可能な場合）。または、コンテンツが 1 行単位で読み上げられるときに代替テキストが読み上げられる。</p>
-</li>
-<li>
-<p>PDF エディターを使用して、画像ごとに代替テキストが表示させる。</p>
-</li>
-<li>
-<p>/Alt エントリの値を表示できるツール（aDesigner など）を使用して PDF 文書を開き、GUI サマリを表示して、画像の代替テキストを読む。</p>
-</li>
-<li>
-<p>アクセシビリティ API を通じて文書を表示するツールを使用して、必要な代替テキストが画像に適用されていることを確認する。</p>
-</li>
-</ul></item>
-        <item>
-          <p>PDF 文書をスクリーンリーダーで読み上げ、非テキストオブジェクトにタブ移動するときに代替テキストが読み上げられる（タブ移動が可能な場合）。または、コンテンツが 1 行単位で読み上げられるときに代替テキストが読み上げられる。</p>
-        </item>
-        <item>
-          <p>PDF エディターを使用して、画像ごとに代替テキストが表示させる。</p>
-        </item>
-        <item>
-          <p>/Alt エントリの値を表示できるツール（aDesigner など）を使用して PDF 文書を開き、GUI サマリを表示して、画像の代替テキストを読む。</p>
-        </item>
-        <item>
-          <p>アクセシビリティ API を通じて文書を表示するツールを使用して、必要な代替テキストが画像に適用されていることを確認する。</p>
-        </item>
+<ulist><item><p>PDF 文書をスクリーンリーダーで読み上げ、非テキストオブジェクトにタブ移動するときに代替テキストが読み上げられる（タブ移動が可能な場合）。または、コンテンツが 1 行単位で読み上げられるときに代替テキストが読み上げられる。</p></item><item><p>PDF エディターを使用して、画像ごとに代替テキストが表示させる。</p></item><item><p>/Alt エントリの値を表示できるツール（aDesigner など）を使用して PDF 文書を開き、GUI サマリを表示して、画像の代替テキストを読む。</p></item><item><p>アクセシビリティ API を通じて文書を表示するツールを使用して、必要な代替テキストが画像に適用されていることを確認する。</p></item></ulist></item>
       </olist>
     </procedure>
     <expected-results>

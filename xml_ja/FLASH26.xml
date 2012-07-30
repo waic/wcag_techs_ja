@@ -2,10 +2,14 @@
 <technique id="FLASH26">
   <short-name>FLASH26： Flash ビデオに音声ガイドを提供する</short-name>
   <applicability>
-    <ul>
-<li><p> Flash CS3 and higher </p></li>
-<li><p> ActionScript 3.0 and higher </p></li>
-</ul>
+    <ulist>
+      <item>
+        <p> Flash CS3 and higher </p>
+      </item>
+      <item>
+        <p> ActionScript 3.0 and higher </p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="media-equiv-audio-desc"/>

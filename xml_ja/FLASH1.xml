@@ -2,10 +2,14 @@
 <technique id="FLASH1">
   <short-name>FLASH1： 非テキストオブジェクトに名前プロパティを設定する</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-		<li><p>Adobe Flex</p></li>
-	</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="text-equiv-all"/>
@@ -24,7 +28,8 @@
     <eg-group>
       <head>シンボル（グラフィック、ボタン、ムービークリップ）に代替テキストを適用する</head>
       <description><p>Flash Professional のオーサリングツールのアクセシビリティパネルを使用すると、コンテンツ制作者は、支援技術にアクセシビリティ情報を提供したり、Flash の個々のオブジェクトや Flash アプリケーション全体に対してアクセシビリティ関連オプションを設定できる。</p>
-<olist><item><p>非テキストオブジェクトに代替テキストを適用する際には、代替テキストをシンボルとしてムービーのライブラリに保存する必要がある。Flash ではグラフィックシンボル用の代替テキストを使用することはできない。グラフィックをムービークリップまたはボタンシンボルに変換するか、これらに保存する必要がある。</p></item><item><p>アプリケーションメニューで［ウィンドウ］&gt;［他のパネル］&gt;［アクセシビリティ］を選択するか、ショートカットキーの Alt+F11 を使用してアクセシビリティパネルを表示する。「オブジェクトをアクセス可能にする」チェックボックスがオンになっていることを確認する。</p></item><item><p>ムービーステージ上で非テキストインスタンスを選択すると、アクセシビリティパネル内のフィールドが編集可能になる。</p></item><item><p>「名前」フィールドに、シンボルの目的を的確に説明した意味のある代替テキストを入力する。</p></item></olist><p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH1/acc_name_scrn.jpg" alt="画面スクリーンショット：Flash オーサリング環境のアクセシビリティパネル" height="218" width="541"/></p></description>
+<olist><item><p>非テキストオブジェクトに代替テキストを適用する際には、代替テキストをシンボルとしてムービーのライブラリに保存する必要がある。Flash ではグラフィックシンボル用の代替テキストを使用することはできない。グラフィックをムービークリップまたはボタンシンボルに変換するか、これらに保存する必要がある。</p></item><item><p>アプリケーションメニューで［ウィンドウ］&gt;［他のパネル］&gt;［アクセシビリティ］を選択するか、ショートカットキーの Alt+F11 を使用してアクセシビリティパネルを表示する。「オブジェクトをアクセス可能にする」チェックボックスがオンになっていることを確認する。</p></item><item><p>ムービーステージ上で非テキストインスタンスを選択すると、アクセシビリティパネル内のフィールドが編集可能になる。</p></item><item><p>「名前」フィールドに、シンボルの目的を的確に説明した意味のある代替テキストを入力する。</p></item></olist>
+<p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH1/acc_name_scrn.jpg" alt="画面スクリーンショット：Flash オーサリング環境のアクセシビリティパネル" height="218" width="541"/></p></description>
     </eg-group>
     <eg-group>
       <head>ActionScript 2.0 でプログラムによる代替テキストを適用する</head>

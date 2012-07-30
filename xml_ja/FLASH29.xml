@@ -2,10 +2,14 @@
 <technique id="FLASH29">
   <short-name>FLASH29： フォーム・コンポーネントに label プロパティを設定する</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="text-equiv-all"/>
@@ -21,21 +25,32 @@
   <description>
     <p>この実装方法の目的は、フォーム・コンポーネントに label プロパティを設定することによって、フォーム・コンポーネントにラベルテキストを明示的に関連付けることを目的としている。このプロパティを設定することにより、コンポーネントの隣にラベルが視覚的に配置されるようになり、支援技術に対してラベルテキストが提示されるようになる。</p>
     <p>label プロパティをサポートするコンポーネントは以下のとおりである。</p>
-    <ul>
-<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/Button.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Button</loc> </p></li>
-<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/CheckBox.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CheckBox</loc> </p></li>
-<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/RadioButton.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">RadioButton</loc> </p></li>
-</ul>
+    <ulist>
+      <item>
+        <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/Button.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">Button</loc></p>
+      </item>
+      <item>
+        <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/CheckBox.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">CheckBox</loc></p>
+      </item>
+      <item>
+        <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/fl/controls/RadioButton.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">RadioButton</loc></p>
+      </item>
+    </ulist>
     <p>その他のコンポーネントについては、手動でフォーム・コンポーネントの隣にラベルテキストを配置する必要がある。これらのコンポーネントについては、以下のいずれかのアプローチを用いて、フォーム・コンポーネントにラベルテキストを関連付けることができる。</p>
-    <ul>
-<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/FLASH25" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH25： アクセシブルな名前を設定することによって、フォーム・コントロールにラベルを付ける</loc> (Flash)</p></li>
-<li><p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/FLASH32" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH32： 自動ラベル機能を使用してフォーム・コントロールにテキストラベルを関連付ける</loc> (Flash)</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/FLASH25" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH25： アクセシブルな名前を設定することによって、フォーム・コントロールにラベルを付ける</loc> (Flash)</p>
+      </item>
+      <item>
+        <p> <loc xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.w3.org/TR/2010/NOTE-WCAG20-TECHS-20101014/FLASH32" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest">FLASH32： 自動ラベル機能を使用してフォーム・コントロールにテキストラベルを関連付ける</loc> (Flash)</p>
+      </item>
+    </ulist>
   </description>
   <examples>
     <eg-group>
       <head>コンポーネントインスペクタパネルを使用してラベルを設定する</head>
-      <description><olist><item><p>コンポーネントパネルから Button、CheckBox、RadioButton のいずれかのコンポーネントをステージにドラッグしてムービーに追加する。</p></item><item><p>コンポーネントを選択した状態で、「ウィンドウ」メニューまたは Shift + F7 ショートカットを使用して、コンポーネントインスペクタパネルを開く。</p></item><item><p>コンポーネントインスペクタの「パラメータ」タブで、「label」パラメータにラベルテキストを入力する。</p></item></olist><p>下のスクリーンショットはこの実装方法を示している。</p>
+      <description><olist><item><p>コンポーネントパネルから Button、CheckBox、RadioButton のいずれかのコンポーネントをステージにドラッグしてムービーに追加する。</p></item><item><p>コンポーネントを選択した状態で、「ウィンドウ」メニューまたは Shift + F7 ショートカットを使用して、コンポーネントインスペクタパネルを開く。</p></item><item><p>コンポーネントインスペクタの「パラメータ」タブで、「label」パラメータにラベルテキストを入力する。</p></item></olist>
+<p>下のスクリーンショットはこの実装方法を示している。</p>
 <p><img class="eximg" src="http://www.w3.org/TR/WCAG20-TECHS/working-examples/FLASH29/component_inspector_label.png" alt="画面スクリーンショット：コンポーネントインスペクタパネルで、コンポーネントのラベルを設定" height="349" width="513"/></p></description>
     </eg-group>
     <eg-group>
@@ -86,9 +101,11 @@ addChild(myRadioButton);</code>
       </olist>
     </procedure>
     <expected-results>
-      <ol class="enumar">
-<li><p>1. を満たしている。</p></li>
-</ol>
+      <olist>
+        <item>
+          <p>1. を満たしている。</p>
+        </item>
+      </olist>
       <p>注意： この実装方法が「達成基準を満たすことのできる実装方法」の一つである場合、このチェックポイントや判定基準を満たしていなければ、それはこの実装方法が正しく用いられていないことを意味するが、必ずしも達成基準を満たしていないことにはならない。場合によっては、別の実装方法によってその達成基準が満たされていることもありうる。</p>
     </expected-results>
   </tests>

@@ -14,19 +14,8 @@
     <ua-issue><p>
 								HTML及びXHTML仕様書では、暗示的なラベルと明示的なラベルの両方を認めている。しかし、支援技術の一部は、暗示的なラベル（たとえば、<code>&lt;label&gt;First name &lt;input type="text" name="firstname"&gt;&lt;/label&gt;</code>）を正確に処理できない。【訳注：なお、暗示的なラベルとは、ラベルとフォーム・コントロールを単に<code>label</code>要素で囲んだだけのものである。一方、明示的なラベルとは、<code>label</code>要素の<code>for</code>属性に、フォーム・コントロールの<code>id</code>属性値と同じ値を指定することで、両者を明確に関連付けたものである。】</p>
             
-                  <ul>
-<li>
-                
-								<p>
-										JAWS 7.10の動作を、Windows XPのInternet Explorer 6.0とFirefox 1.5で検証した。テキストフィールドに付けたラベルは、明示的なラベルでも暗示的なラベルでも、バーチャルPCカーソルとフォーム読み上げモードの両方で読み上げられた。ただし、フォーム読み上げモードでは、チェックボックスとラジオボタンに付けた暗示的なラベルは読み上げられなかった。</p>
-              
-                     </li>
-<li>
-                
-								<p>Window-Eyes 5.5の動作を、Windows XPのInternet Explorer 6.0とFirefox 1.5で検証した。フォームフィールドの明示的なラベルは常に読み上げられたが、ブラウズONモードでは暗示的なラベルは読み上げられなかった。ただし、ブラウズOFFモードでコントロールからコントロールへと移動したときは、暗示的なラベルでも読み上げられた。</p>
-              
-                     </li>
-</ul></ua-issue>
+                  <ulist><item><p>
+										JAWS 7.10の動作を、Windows XPのInternet Explorer 6.0とFirefox 1.5で検証した。テキストフィールドに付けたラベルは、明示的なラベルでも暗示的なラベルでも、バーチャルPCカーソルとフォーム読み上げモードの両方で読み上げられた。ただし、フォーム読み上げモードでは、チェックボックスとラジオボタンに付けた暗示的なラベルは読み上げられなかった。</p></item><item><p>Window-Eyes 5.5の動作を、Windows XPのInternet Explorer 6.0とFirefox 1.5で検証した。フォームフィールドの明示的なラベルは常に読み上げられたが、ブラウズONモードでは暗示的なラベルは読み上げられなかった。ただし、ブラウズOFFモードでコントロールからコントロールへと移動したときは、暗示的なラベルでも読み上げられた。</p></item></ulist></ua-issue>
     <ua-issue>
       <p>
 								ユーザーエージェントは、<code>title</code>属性が指定してある<code>input</code>要素にマウスオーバーしたときに、ツールチップを表示するようである。支援技術は<code>title</code>属性を抽出し、多くのグラフィカルブラウザは<code>title</code>属性をツールチップで表示する。ただし、キーボード操作ではツールチップを開けないため、視力はあるがマウスではなくキーボードを使っている利用者は、現状ではツールチップの情報を利用できない恐れがある。</p>
@@ -34,18 +23,7 @@
     <ua-issue><p>
 								JAWSとWindow-Eyesでは、フォーム・コントロールがフォーカスを受けたとき、もしラベルが指定されていなければ、<code>title</code>属性を読み上げる。</p>
             
-                  <ul>
-<li>
-                
-								<p>JAWS 6.0以降では、<code>label</code>要素と<code>title</code>属性が異なるとき、その両方を読み上げるように設定できる。しかし、この設定方法に気づいているユーザーは非常に少ない。</p>
-              
-                     </li>
-<li>
-                
-								<p>Window-Eyes 5.5には、（title属性を含む）フォーカスされた項目の追加情報を読み上げるホットキー（ins+E）がある。</p>
-              
-                     </li>
-</ul></ua-issue>
+                  <ulist><item><p>JAWS 6.0以降では、<code>label</code>要素と<code>title</code>属性が異なるとき、その両方を読み上げるように設定できる。しかし、この設定方法に気づいているユーザーは非常に少ない。</p></item><item><p>Window-Eyes 5.5には、（title属性を含む）フォーカスされた項目の追加情報を読み上げるホットキー（ins+E）がある。</p></item></ulist></ua-issue>
   </ua-issues>
   <description>
     <p>この実装方法の目的は、フォーム・コントロールとラベルを明示的に関連付けるために、<code>label</code>要素を利用することである。ラベルは、<code>label</code>要素の<code>for</code>属性によって特定のフォーム・コントロールと結びつけることができる。この場合、<code>for</code>属性値はフォーム・コントロールの<code>id</code>属性値と同じでなければならない。</p>
@@ -54,95 +32,37 @@
     <p><code>input</code>要素の<code>type="checkbox"</code>と<code>type="radio"</code>では、<code>label</code>要素をその後に配置することに注意する。</p>
     <note><p class="prefix">
 									明示的なラベルを利用する要素は次の通りである：</p>
-<ul>
-<li>
-                
-                        <p>
+<ulist><item><p>
                   
                            <code>input type="text"</code>
                 
-                        </p>
-              
-                     </li>
-<li>
-                
-                        <p>
+                        </p></item><item><p>
                   
                            <code>input type="checkbox"</code>
                 
-                        </p>
-              
-                     </li>
-<li>
-                
-                        <p>
+                        </p></item><item><p>
                   
                            <code>input type="radio"</code>
                 
-                        </p>
-              
-                     </li>
-<li>
-                
-                        <p>
+                        </p></item><item><p>
                   
                            <code>input type="file"</code>
                 
-                        </p>
-              
-                     </li>
-<li>
-                
-                        <p>
+                        </p></item><item><p>
                   
                            <code>input type="password"</code>
                 
-                        </p>
-              
-                     </li>
-<li>
-                
-                        <p>
+                        </p></item><item><p>
                   
                            <code>textarea</code>
                 
-                        </p>
-              
-                     </li>
-<li>
-                
-                        <p>
+                        </p></item><item><p>
                   
                            <code>select</code>
                 
-                        </p>
-              
-							</li>
-</ul>
-<p class="prefix">
+                        </p></item></ulist><p class="prefix">
 									次の場合には、<code>label</code>要素は利用<strong>しない</strong>。これらの要素に対するラベルは、<code>value</code>属性（送信ボタン及びリセットボタン）、<code>alt</code>属性（画像ボタン）、又は要素それ自体の内容（汎用ボタン）を介して提供されるからである。</p>
-<ul>
-<li>
-                
-								<p>送信及びリセットボタン（<code>input type="submit"</code>又は<code>input type="reset"</code>）</p>
-              
-                     </li>
-<li>
-                
-								<p>画像ボタン（<code>input type="image"</code>）</p>
-              
-                     </li>
-<li>
-                
-								<p>隠しフィールド（<code>input type="hidden"</code>）</p>
-								
-                     </li>
-<li>
-                
-								<p>スクリプトボタン（<code>button</code>要素又は<code>&lt;input type="button"&gt;</code>）</p>
-              
-                     </li>
-</ul></note>
+<ulist><item><p>送信及びリセットボタン（<code>input type="submit"</code>又は<code>input type="reset"</code>）</p></item><item><p>画像ボタン（<code>input type="image"</code>）</p></item><item><p>隠しフィールド（<code>input type="hidden"</code>）</p></item><item><p>スクリプトボタン（<code>button</code>要素又は<code>&lt;input type="button"&gt;</code>）</p></item></ulist></note>
   </description>
   <examples>
     <eg-group>
@@ -160,7 +80,7 @@
     <eg-group>
       <head>ラジオボタンのグループ</head>
       <description><p>関連するラジオボタンの小さなグループについて、簡単な説明が付けてあり、さらに個々の要素にラベルが付けてある。</p>
-<note>ラジオボタンの数が多く、それらの関連付けや操作説明を必要とする場合は、<loc xmlns:xlink="http://www.w3.org/1999/xlink" href="H71.html" xlink:type="simple" xlink:show="replace" xlink:actuate="onRequest"><em>H71:  Providing a description for groups of form controls using fieldset and legend elements</em></loc> の方法を考慮すべきである。</note>
+<note>ラジオボタンの数が多く、それらの関連付けや操作説明を必要とする場合は、<specref ref="H71"/> の方法を考慮すべきである。</note>
 </description>
       <code>&lt;h1&gt;ドーナツ&lt;/h1&gt;
 

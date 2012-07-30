@@ -9,22 +9,22 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <ul>
-<li>
-									<p>
+      <ulist>
+        <item>
+          <p>
 											セマンティックな要素の中には、支援技術によって十分にサポートされていないものもある。サポートが限られる要素として、<code>code</code>、<code>del</code>、<code>dfn</code>、<code>ins</code>、<code>kbd</code>、<code>s</code>、<code>sub</code>、<code>sup</code>、<code>tt</code>、<code>q</code>がよく知られている。これらの要素について、コンテンツ制作者には次を考慮することが推奨される。すなわち、利用者が内容を理解するために、またセマンティクスの理解が求められる部分ではその情報をテキストで提供するために、マークアップのセマンティックな意味に利用者がアクセスできる方法で、これらの要素を利用することである。</p>
-                     </li>
-<li>
-										 <p>スクリーンリーダーの大部分が、<code>em</code>、<code>strong</code>、<code>b</code>、<code>i</code>について、自動的に通知をしない。</p>
-                     </li>
-<li>
-										 <p>
+        </item>
+        <item>
+          <p>スクリーンリーダーの大部分が、<code>em</code>、<code>strong</code>、<code>b</code>、<code>i</code>について、自動的に通知をしない。</p>
+        </item>
+        <item>
+          <p>
 												JAWSは、<code>blockquote</code>及び<code>cite</code>をサポートしている。Window-Eyesは、<code>blockquote</code>、<code>q</code>及び<code>cite</code>をサポートしている。</p>
-                     </li>
-<li>
-										 <p>Firefox 1.0以降、Opera 7.54以降、Mozilla 1.7.3以降（以上、Windows版）は、<code>q</code>要素の前後に自動的に引用符を生成するが、Windows用Internet Explorer 6は生成しない。</p>
-                     </li>
-</ul>
+        </item>
+        <item>
+          <p>Firefox 1.0以降、Opera 7.54以降、Mozilla 1.7.3以降（以上、Windows版）は、<code>q</code>要素の前後に自動的に引用符を生成するが、Windows用Internet Explorer 6は生成しない。</p>
+        </item>
+      </ulist>
     </ua-issue>
   </ua-issues>
   <description>

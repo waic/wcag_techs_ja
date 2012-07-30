@@ -9,35 +9,35 @@
   </applies-to>
   <ua-issues>
     <ua-issue>
-      <ul>
-<li>
-									<p>
+      <ulist>
+        <item>
+          <p>
 											支援技術によって、<code>title</code>属性の音声読み上げのサポートレベルが異なる。支援技術の一部は、title属性を通じて提供される情報に利用者がアクセスする機能を実装していない。</p>
-                     </li>
-<li>
-										 <p>この実装方法に<code>title</code> 属性を組み合わせて実装する場合は、<code>title</code> 属性がアクセシビリティ・サポーテッドでなければらない。 <code>title</code>属性がアクセシビリティ・サポーテッドとなるためには、全てのキーボード利用者が（音声読み上げソフトウェアを利用しているかどうかに関わらず）<code>title</code>属性の内容を利用できなければならない。</p>
-                     </li>
-<li>
-										 <p>
+        </item>
+        <item>
+          <p>この実装方法に<code>title</code> 属性を組み合わせて実装する場合は、<code>title</code> 属性がアクセシビリティ・サポーテッドでなければらない。 <code>title</code>属性がアクセシビリティ・サポーテッドとなるためには、全てのキーボード利用者が（音声読み上げソフトウェアを利用しているかどうかに関わらず）<code>title</code>属性の内容を利用できなければならない。</p>
+        </item>
+        <item>
+          <p>
 												 JAWS 6.2以降とWindow-Eyes 5.0以降は、<code>abbr</code>要素と<code>acronym</code>要素をサポートしている。これらの要素が現れるたびに、title属性を読み上げるように設定できるが、初期設定ではオフであり、利用者が設定をオンにすることも稀である。</p>
-                     </li>
-<li>
-										 <p>
+        </item>
+        <item>
+          <p>
 												 グラフィカルユーザーエージェントの多くは、<code>abbr</code>要素や<code>acronym</code>要素でマーク付けしたテキストに、点線で下線を引いたり点線で囲んで描画する。加えて、要素にマウスオーバーしたときは、元の語句をツールチップで表示する。
                       </p>
-                     </li>
-<li>
-                        <p>
+        </item>
+        <item>
+          <p>
 												 Internet Explorer 7以前では、<code>abbr</code>要素でマーク付けした内容には、どのようなスタイルも追加されない。Internet Explorer 6以前では、その項目にマウスオーバーしても、元の語句はツールチップとして表示されない。
 										 		</p>
-                     </li>
-<li>
-                        <p>
+        </item>
+        <item>
+          <p>
 												 特定のユーザーエージェントや支援技術では、<code>abbr</code>要素と<code>acronym</code>要素が利用者に対して同じ方法で表現される。
 												
                       </p>
-                     </li>
-</ul>
+        </item>
+      </ulist>
     </ua-issue>
   </ua-issues>
   <description>

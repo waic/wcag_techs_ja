@@ -2,10 +2,14 @@
 <technique id="FLASH22">
   <short-name>FLASH22： キーボードで操作可能なアクションを静的エレメントに追加する</short-name>
   <applicability>
-    <ul>
-<li><p>Adobe Flash Professional バージョン MX 以降</p></li>
-<li><p>Adobe Flex</p></li>
-</ul>
+    <ulist>
+      <item>
+        <p>Adobe Flash Professional バージョン MX 以降</p>
+      </item>
+      <item>
+        <p>Adobe Flex</p>
+      </item>
+    </ulist>
   </applicability>
   <applies-to>
     <success-criterion idref="keyboard-operation-keyboard-operable"/>
